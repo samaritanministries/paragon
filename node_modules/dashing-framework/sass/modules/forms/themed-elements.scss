@@ -1,0 +1,481 @@
+/* Form Variables
+  =========================================================================== */
+//Custom checkbox color theme
+$checkbox--active: $blue !default; //Color of checkbox when checked
+$checkbox--icon: $white !default; //Color of check icon when checked
+$checkbox--focus: $blue-300 !default; //Color of border around checkbox when focused
+$checkbox--disabled: $gray-150 !default; //Color of checkbox when checked and disabled
+$checkbox--icon-disabled: $gray-500 !default; //Color of check icon when checked and disabled
+
+//Custom radio button color theme
+$radio--active: $blue !default; //Color of radio button when checked
+$radio--icon: $white !default; //Color of radio icon when checked
+$radio--focus: $blue-300 !default; //Color of border around radio when focused
+$radio--disabled: $gray-150 !default; //Color of radio when checked and disabled
+$radio--icon-disabled: $gray-500 !default; //Color of radio icon when checked and disabled
+
+//Switch color theme
+$switch--on: $blue !default; //Color of switch when on
+$switch--off: $gray-250 !default; //Color of switch when off
+
+/* Custom Checkboxes
+  ================================================== */
+.checkbox--custom,
+.radio--custom {
+  display: flex;
+
+  input { // Places the input behind the label so it doesn't overlay text
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  label {
+    @include user-select(none);
+    align-items: baseline;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $font-size-normal;
+    font-weight: normal;
+    margin: 0.2rem 0;
+    @supports(display: flex) { display: flex; }
+
+    &:before {
+      border: 2px solid $gray-200;
+      display: inline-block; //required for IE11
+      color: transparent;
+      height: 20px; width: 20px;
+      margin-right: 0.5rem;
+    }
+  }
+
+
+
+  &.inline {
+    display: inline-block;
+    margin-right: 1rem;
+    .label:before {
+      display: inline-block;
+    }
+  }
+}
+
+.checkbox--custom {
+
+  //Label Styles
+  label {
+    //Checkbox Styles
+    &:before {
+      content: '\e835';
+      border-radius: 5px;
+      font-family: 'dashing-icons';
+      font-size: 12px;
+      padding: 2px;
+    }
+  }
+
+  @media #{$phone} {
+    margin: 0.2rem 0 0 0; //gives proper spacing for touch
+
+    label:not(.card) { //mobile-optimized large checkboxes if not inside a card-checkbox
+      margin: 0.4rem 0 0.25rem 0;
+      &:before {
+        border-radius: 8px;
+        font-size: 16px;
+        height: 32px; width: 32px;
+        margin-top: 2px;
+        margin-right: 0.5rem;
+        padding: 6px;
+      }
+    }
+  }
+
+  &.inline label:before { margin-right: 0.3rem; }
+
+  //Checkbox Hover
+  input:hover ~ label { //Text Hover
+    color: rgba($black, .6);
+    &:before { //Checkbox Hover
+      color: $gray-200;
+    }
+  }
+
+  //Checkbox Active
+  input:checked ~ label:before, input:active ~ label:before {
+    color: $checkbox--icon;
+    background-color: $checkbox--active;
+    border: 2px solid $checkbox--active;
+  }
+
+  //Checkbox Focus
+  input:focus ~ label:before { box-shadow: 0 0 0 2px $checkbox--focus; }
+
+  //Disabled Checkbox
+  input[disabled] ~ label,
+  input[disabled]:active ~ label,
+  input[disabled]:checked ~ label {
+    cursor: default;
+    pointer-events: none;
+    &:before {
+      border-color: $checkbox--disabled;
+      background-color: $checkbox--disabled;
+    }
+  }
+
+  //Disabled Checkbox Icon
+  input[disabled]:active ~ label,
+  input[disabled]:checked ~ label {
+    &:before { color: $checkbox--icon-disabled; }
+  }
+
+  &.has-error,
+  .has-error & {
+    label:before { border: 2px solid $red-400; }
+    input:hover ~ label {
+      color: rgba($red, .6); //Text Hover
+      &:before { color: $red-200; } //Checkbox Hover
+    }
+
+    //Checkbox Active
+    input:checked ~ label:before, input:active ~ label:before {
+      color: $white; //Checkbox Icon
+      background-color: $red-500; // Checkbox Active
+      border: 2px solid $red-500; // Checkbox Active
+    }
+
+    //Checkbox Focus
+    input:focus ~ label:before { box-shadow: 0 0 0 2px $red-200; }
+  }
+
+  &.has-warning,
+  .has-warning & {
+    label:before { border: 2px solid $orange-400; }
+    input:hover ~ label {
+      color: rgba($orange, .6); //Text Hover
+      &:before { color: $orange-300; } //Checkbox Hover
+    }
+
+    //Checkbox Active
+    input:checked ~ label:before, input:active ~ label:before {
+      color: $white; //Checkbox Icon
+      background-color: $orange-400; // Checkbox Active
+      border: 2px solid $orange-400; // Checkbox Active
+    }
+
+    //Checkbox Focus
+    input:focus ~ label:before { box-shadow: 0 0 0 2px $orange-200; }
+  }
+}
+
+/* Custom Radio Buttons
+  ================================================== */
+//Wrapper for Custom Radio Buttons
+.radio--custom  {
+
+  //Label Styles
+  label { //Position Styles
+    // position: relative;
+
+    //Radio Button Styles
+    &:before {
+      content: '•';
+      border-radius: 50px;
+      font-size: 1.7rem;
+      line-height: 12px;
+      padding: 0 4px;
+
+      @media #{$tablet} { font-size: 1.5rem; }
+    }
+  }
+
+  @media #{$phone} {
+    label:not(.card) { //mobile-optimized large radio buttons if not inside a card-radio
+      &:before {
+        font-size: 3rem;
+        line-height: 20px;
+        padding: 0 7px;
+        height: 32px; width: 32px;
+      }
+    }
+  }
+
+  @-moz-document url-prefix() { //Target Firefox radio button
+    label:before {
+      font-size: 1.6rem;
+    }
+
+    @media #{$phone} {
+      label:not(.card) { //mobile-optimized large checkboxes if not inside a card-checkbox
+        &:before {
+          line-height: 20px;
+          padding: 0 7px;
+          font-size: 3rem;
+          height: 32px; width: 32px;
+        }
+      }
+    }
+  }
+
+  //Radio Hover
+  input:hover:not(:checked) ~ label { //Text Hover
+    color: rgba($black, .6);
+    &:before { //Button Hover
+      color: $gray-200;
+    }
+  }
+
+  //Radio Active
+  input:checked ~ label {
+    &:before {
+      color: $white;
+    }
+  }
+
+  input:checked ~ label {
+    &:before {
+      background-color: $radio--active;
+      border-color: $radio--active;
+      color: $white;
+    }
+  }
+
+  //Radio Focus
+  input:focus ~ label:before { box-shadow: 0 0 0 2px $radio--focus; }
+
+  //Disabled Radio Button
+  input[disabled] ~ label,
+  input[disabled]:active ~ label,
+  input[disabled]:checked ~ label {
+    cursor: default;
+    pointer-events: none;
+    &:before {
+      border-color: $radio--disabled;
+      background-color: $radio--disabled;
+    }
+  }
+
+  //Disabled Radio Icon
+  input[disabled]:active ~ label,
+  input[disabled]:checked ~ label {
+    &:before { color: $radio--icon-disabled; }
+  }
+
+  &.has-error,
+  .has-error & {
+    label:before { border: 2px solid $red-400; }
+    input:hover:not(:checked) ~ label {
+      color: rgba($red, .6); //Text Hover
+      &:before { color: $red-200; } //Button Hover
+    }
+    input:checked ~ label:before {
+      background-color: $red-500;
+      border-color: $red-500;
+      color: $white;
+    }
+    input:focus ~ label:before { box-shadow: 0 0 0 2px $red-200; }
+  }
+
+  &.has-warning,
+  .has-warning & {
+    label:before { border: 2px solid $orange-400; }
+    input:hover:not(:checked) ~ label {
+      color: rgba($orange, .6); //Text Hover
+      &:before { color: $orange-300; } //Button Hover
+    }
+    input:checked ~ label:before {
+      background-color: $orange-400;
+      border-color: $orange-400;
+      color: $white;
+    }
+    input:focus ~ label:before { box-shadow: 0 0 0 2px $orange-200; }
+  }
+}
+
+/* Custom Range Slider
+  ================================================== */
+.range--custom {
+  width: 10rem;
+  margin: 0 auto;
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    background: none;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    margin: 0;
+    min-height: 2.5rem;
+    outline: none;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    background-color: $gray-200;
+    border-radius: 30px;
+    height: 0.5rem;
+    &:active { background-color: $gray-250; }
+  }
+
+  input[type="range"]::-moz-range-track {
+    border: inherit;
+    background-color: $gray-200;
+    border-radius: 30px;
+    height: 0.5rem;
+    &:active { background-color: $gray-250; }
+  }
+
+  input[type=range]::-moz-focus-outer { border: 0; }
+
+  input[type="range"]::-ms-track {
+    border: inherit;
+    color: transparent; /* don't drawn vertical reference line */
+    background: transparent;
+  }
+
+  input[type="range"]::-ms-fill-lower,
+  input[type="range"]::-ms-fill-upper {
+    background: transparent;
+  }
+
+  input[type="range"]::-ms-tooltip {
+    display: none;
+  }
+
+  //THUMB
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: $white;
+    border: 2px solid $gray-200;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    margin-top: -5px;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    background-color: $white;
+    border: 2px solid $gray-200;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+  }
+
+  input[type="range"]::-ms-thumb {
+    -webkit-appearance: none;
+    background-color: $white;
+    border: 2px solid $gray-200;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Custom File Upload
+  ================================================== */
+.file-custom {
+  float: left;
+  .file-custom--button {
+    @extend .button;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+
+  & ~ input[type="file"] { display: none; }
+}
+
+/* Custom Toggle Switch
+================================================== */
+
+.switch {
+  @include user-select(none);
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  .switch--checkbox { display: none; }
+
+  //Inactive state
+  .switch--label {
+    border-radius: 50px;
+    background-color: $switch--off;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  label + & {
+    top: 6px;
+    margin-left: 0.2rem;
+  }
+
+  &.switch--has-text {
+    .onoffswitch-inner:before {
+      content: "on";
+      padding-left: 0.5rem;
+    }
+
+    .onoffswitch-inner:after {
+      content: "inactive";
+      float: right;
+      padding-right: 0.5rem;
+    }
+  }
+
+  //Toggle transition
+  .switch--inner {
+    @include transition(all 0.05s ease-in 0s);
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    &:before, &:after {
+      color: $white;
+      display: block;
+      float: left;
+      height: 2rem;
+      padding: 0;
+      line-height: 26px;
+      font-size: .8rem;
+      text-transform: uppercase;
+      width: 50%;
+    }
+
+    //Active
+    &:before {
+      background-color: $switch--on;
+      content: "";
+    }
+
+    &:after {
+      background-color: $switch--off;
+      content: "";
+    }
+  }
+
+  //Inactive circle position
+  .switch--handle {
+    @include transition(all 0.05s ease-in 0s);
+    background-color: $white;
+    border-radius: 50%;
+    display: block;
+    margin: 3px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 25px;
+    width: 19px;
+  }
+
+  .switch--checkbox:checked +
+  .switch--label .switch--inner {
+    margin-left: 0;
+  }
+
+  //Active circle position
+  .switch--checkbox:checked +
+  .switch--label .switch--handle {
+    right: 0;
+  }
+}

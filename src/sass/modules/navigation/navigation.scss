@@ -1,0 +1,228 @@
+$menu-height-condensed: 4.6rem; //Use this if you do not have navigation within your header
+$menu-height-expanded: 7.05rem; //Use this if you have navigation within your header
+$menu-color: $gray-100 !default; //Override this variable to change the color of your header
+
+@function auto-color($color) {
+  @if (lightness($color) > 60) { @return $gray-900; }
+  @else { @return $white; }
+}
+
+.app-menu {
+  background-color: rgba($menu-color, 0.97);
+  box-shadow: 0 2px 6px $gray-200;
+  height: auto !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  .app-context {
+    max-width: $global-content-width;
+    margin: auto;
+    padding: 1rem;
+
+    //Every App should include an App Title
+    .app-title {
+      color: auto-color($menu-color);
+      font-size: $font-size-medium;
+      font-weight: 600;
+
+      a {
+        color: auto-color($menu-color);
+        &:hover { color: rgba(auto-color($menu-color), .60); }
+
+        //Use to apply a clickable style to your App Title
+        &.app-title--has-breadcrumb {
+          color: rgba(auto-color($menu-color), .50);
+          cursor: pointer;
+          transition: $global-transition;
+          &:hover { color: rgba(auto-color($menu-color), 1); }
+        }
+      }
+
+      //Auto-colors the button and dashing-icon
+      .button--navigation {
+        @extend .button--small;
+        @extend .button--smooth;
+        @extend .dashing-icon;
+        @include button(darken($menu-color, 8%), auto-color($menu-color));
+        padding: 0.4rem 0.55rem !important;
+        position: relative;
+        top: -3px;
+        margin-right: 0.5rem;
+        text-decoration: none;
+        &:before {
+          content: '\e82a';
+          color: auto-color($menu-color) !important;
+          margin-right: 0.35rem;
+        }
+        &:after { content: 'Back'; }
+      }
+    }
+
+    ul.header-description {
+      color: auto-color($menu-color);
+      float: right;
+      position: relative;
+      top: -1.4rem;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        text-align: right;
+        display: inline-block;
+        font-weight: 600;
+        margin-right: 1rem;
+
+        &:last-of-type { margin-right: 0; }
+
+        .header-description--label,
+        .header-description--content { display: block; }
+        .header-description--label { font-size: $font-size-xsmall; }
+        .header-description--content { font-size: $font-size-medium; }
+      }
+    }
+  }
+
+  .app-navigation {
+    @extend %remove-list-style;
+    @extend %clearfix;
+    max-width: $global-content-width;
+    margin: auto;
+    overflow: hidden;
+    overflow-x: auto;
+    padding: 0 1rem;
+    white-space: nowrap;
+
+    li, a {
+      border-bottom: 4px solid transparent;
+      padding-bottom: 0.5rem;
+    }
+
+    li {
+      display: inline-block;
+      float: none;
+
+      &.active a,
+      a.active,
+      &.is-active a,
+      a.is-active {
+        color: auto-color($menu-color) !important;
+        border-bottom: 4px solid !important;
+      }
+
+      a {
+        @extend %action;
+        color: rgba(auto-color($menu-color), .60);
+        font-size: $font-size-normal;
+        line-height: 0.9rem;
+        margin: 0;
+        margin-right: 1.2rem !important; //Ignores first-of-type and last-of-type margin default to %actions
+        transition: $global-transition;
+
+        &:hover {
+          color: auto-color($menu-color);
+          .dashing-icon {
+            opacity: 1;
+          }
+        }
+
+        .dashing-icon { //TODO add support to dashing
+          opacity: .6;
+          transition: $global-transition;
+        }
+      }
+    }
+  }
+
+  .dashing-icon--new-tab:before {
+    color: rgba(auto-color($menu-color), .90);
+  }
+
+  .dashing-icon--arrow-right:before {
+    color: rgba(auto-color($menu-color), .50);
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+  }
+
+  //Add this class to your app-menu if you do not have navigation items
+  &.condensed {
+    height: $menu-height-condensed;
+  }
+
+  //Add this class to your app-menu if you have navigation items
+  &.expanded {
+    height: $menu-height-expanded;
+  }
+
+  &.fixed {
+    position: fixed;
+  }
+
+  //Positioning for main button icon element
+  .button--icon--main {
+    position: absolute;
+    right: 1rem;
+    bottom: -1.5rem;
+    @media screen and (min-width: #{$global-content-width}) {
+      right:calc(50% - (#{$global-content-width}/2) - 0.4rem);
+    }
+  }
+}
+
+//Use .has-search to add a search bar to the navigation
+.app-menu {
+    &.has-search {
+        .app-context {
+            padding: 0.5rem 1rem;
+            @media #{$tablet} {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .app-title {
+            display: inline-block;
+        }
+
+        .search-input {
+            padding-top: 0.5rem;
+
+            @media #{$tablet} {
+                margin-left: auto;
+                padding-top: 0rem;
+                width: auto;
+            }
+        }
+
+        fieldset input[type="text"] {
+            border-color: transparent;
+        }
+    }
+}
+//This sets padding of your app content relative to the size of your app-menu
+.app-menu.has-search ~ .app-content {
+    padding-top: 5.75rem;
+    @media #{$tablet} {
+        padding-top: 3.75rem;
+    }
+}
+
+.app-menu.expanded.has-search ~ .app-content {
+    padding-top: 8rem;
+    @media #{$tablet} {
+        padding-top: 5.75rem;
+    }
+}
+
+.app-menu ~ .app-content {
+  padding-top: $menu-height-condensed;
+}
+
+.app-menu.expanded ~ .app-content {
+  padding-top: $menu-height-expanded;
+}

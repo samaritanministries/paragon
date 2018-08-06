@@ -1,0 +1,104 @@
+/* Setup Utility Classes
+  =========================================================================== */
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  @media #{$tablet} { font-size: 105%; }
+  @media #{$desktop} { font-size: 110%; }
+}
+
+/* Grid Styles
+  =========================================================================== */
+
+.row {
+  @extend %clearfix;
+  margin: auto;
+  max-width: $global-content-width;
+  padding-left: $grid-gutter;
+  width: 100%;
+
+  &.row--nested {
+    padding-left: 0;
+  }
+}
+
+//Every column should be placed within a ".row".
+.column {
+  padding: $grid-gutter;
+  padding-left: 0 !important;
+
+  &.column--nested { //When nesting columns within other containers (cards, containers, modals, etc.) use the ".nested" class to remove some unnecessary padding
+    padding-top: calc((#{$grid-gutter}) / 2);
+    padding-bottom: calc((#{$grid-gutter}) / 2);
+    @media #{$phone} { padding-right: 0; }
+    @media #{$tablet} { &:last-of-type { padding-right: 0; } }
+  }
+
+  &.column--full,
+  &.column--three-fourths,
+  &.column--two-thirds,
+  &.column--half,
+  &.column--third,
+  &.column--fourth,
+  &.column--sixth,
+  &.column--eighth {
+    width: 100%;
+  }
+
+  @media #{$tablet} {
+    float: left;
+
+    &.flow-opposite { float: right; }
+
+    &.column--full {
+      float: none;
+      width: 100%;
+    }
+
+    &.column--three-fourths { width: 75%; }
+    &.column--two-thirds { width: 66.666%; }
+    &.column--half { width: 50%; }
+    &.column--third { width: 33.333%; }
+    &.column--fourth { width: 25%; }
+    &.column--sixth { width: 16.666%; }
+    &.column--eighth { width: 12.5%; }
+  }
+}
+
+
+/* Flex Mixins
+  =========================================================================== */
+
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+  flex-grow: $grow;
+}
+
+@mixin flex($item) {
+  -webkit-flex: $item;
+  -moz-box-flex: $item;
+  flex: $item;
+}
+
+/* Flex Styles
+  =========================================================================== */
+
+.row-flex {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  .column-flex {
+    @include flex(1);
+    margin: $grid-gutter;
+  }
+}

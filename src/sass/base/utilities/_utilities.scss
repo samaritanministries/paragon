@@ -1,0 +1,49 @@
+/* Core Utility Classes
+  =========================================================================== */
+
+.hide, .hidden, .is-hidden { display: none !important; }
+
+//Hide on mobile
+.mobile-hide, .is-hidden_phone { @include hide-on('phone', $display: block); }
+.mobile-hide-inline, .is-hidden--inline_phone { @include hide-on('phone', $display: inline); }
+
+//Hide on tablet
+.tablet-hide, .is-hidden_tablet { @include hide-on('tablet', $display: block); }
+.tablet-hide-inline, .is-hidden--inline_tablet { @include hide-on('tablet', $display: inline); }
+
+//Hide on desktop
+.desktop-hide, .is-hidden_desktop { @media #{$desktop} { display: none; } }
+
+//Add pointer cursor
+.pointer, .selectable { cursor: pointer !important; }
+
+//Remove margin
+.remove-margin, .no-margin { margin: 0 !important; }
+.remove-margin--top, .no-margin--top { margin-top: 0 !important; }
+.remove-margin--right, .no-margin--right { margin-right: 0 !important; }
+.remove-margin--bottom, .no-margin--bottom { margin-bottom: 0 !important; }
+.remove-margin--left, .no-margin--left { margin-left: 0 !important; }
+
+//Remove padding
+.remove-padding, .no-padding { padding: 0 !important; }
+.remove-padding--top, .no-padding--top { padding-top: 0 !important; }
+.remove-padding--right, .no-padding--right { padding-right: 0 !important; }
+.remove-padding--bottom, .no-padding--bottom { padding-bottom: 0 !important; }
+.remove-padding--left, .no-padding--left { padding-left: 0 !important; }
+
+.remove-border { border: none !important; }
+.float-left { float: left !important; }
+.float-right { float: right !important; }
+.float-none { float: none !important; }
+.fixed { position: fixed !important; }
+.relative { position: relative !important; }
+
+.text-color--white { color: $white; }
+.text-color--black { color: $black; }
+.text-color--gray, .text-color--grey { color: $gray; }
+.text-color--blue { color: $blue; }
+.text-color--green { color: $green; }
+.text-color--orange { color: $orange; }
+.text-color--purple { color: $purple; }
+.text-color--red { color: $red; }
+.text-color--yellow { color: $yellow; }

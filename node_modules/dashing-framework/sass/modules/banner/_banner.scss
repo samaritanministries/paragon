@@ -1,0 +1,73 @@
+/* Banner Styles
+  =========================================================================== */
+.page-banner {
+  background-color: $gray-150;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  h4 {
+    color: $gray-700;
+    margin-top: 0.5rem;
+  }
+
+  .button--banner {
+    @include button($gray-400, $white);
+    @extend %button--smooth;
+    position: absolute;
+    top: 2.15rem;
+    right: 1rem;
+  }
+}
+
+.card-banner {
+  align-items: baseline;
+  background-color: #D4D4D4;
+  display: flex;
+  padding: $grid-gutter;
+  margin: 0 -#{$grid-gutter};
+
+  &.has-button {
+    padding: $grid-gutter/2 $grid-gutter;
+    align-items: center;
+    button { white-space: nowrap; }
+    p { margin-right: $grid-gutter; }
+  }
+
+  a {
+    border-bottom: solid 2px;
+    color: inherit;
+    cursor: pointer;
+
+    &:hover {
+    opacity: 0.6;
+    transition: all 50ms ease-in-out;
+    }
+  }
+
+  &.has-success,
+  &.has-error {
+    p { color: $white; }
+    .dashing-icon:before { color: $white;}
+  }
+
+  &.has-warning {
+    p { color: $black; }
+    .dashing-icon:before { color: $black;}
+  }
+
+  &.has-success { background-color: $green; }
+  &.has-warning { background-color: $orange; }
+  &.has-error   { background-color: $red; }
+
+  .dashing-icon { margin-right: 0.5rem; }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+  }
+}

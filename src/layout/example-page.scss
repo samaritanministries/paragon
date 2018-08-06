@@ -1,0 +1,70 @@
+.example-sidebar {
+  background-color: white;
+  line-height: 2rem;
+  border-right: 2px solid #d4d4d4;
+
+  .logo {
+    height: 81px;
+    width: 170px;
+    text-align: center;
+    background-color: white;
+    margin: 1rem auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+  }
+
+  a {
+    padding-left: 0.5rem;
+    display: block;
+    color: #24292C;
+  }
+  .active {
+    color: white;
+    background-color: #3F70C9;
+    border-radius: 5px;
+  }
+
+  .react-sanfona-item-title {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 0.7rem 1rem;
+    border-top: 2px solid #d4d4d4;
+    border-bottom: 2px solid #d4d4d4;
+    margin-top: -2px !important;
+    i { margin-left: auto; }
+  }
+
+  .menu-group {
+    padding: 1rem;
+    background-color: #ededed;
+    display: block;
+  }
+}
+
+.subnav {
+  background-color: #3F70C9;
+  margin-left: -1rem;
+  box-shadow: 0 2px 6px #d4d4d4;
+  h1 {
+    color: white;
+    padding: 2rem 4rem;
+  }
+  .subnav-links {
+    margin: 0 4rem;
+    padding-bottom: 0.55rem;
+    a {
+      text-transform: uppercase;
+      color: white;
+      margin-right: 1rem;
+      padding-bottom: 0.3rem;
+      &.active {
+        border-bottom: 4px solid white;
+      }
+    }
+  }
+}
+
+.content-container {
+  margin: 1rem 4rem 1rem 3rem;
+}

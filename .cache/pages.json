@@ -1,0 +1,42 @@
+[
+    {
+        "componentChunkName": "component---cache-dev-404-page-js",
+        "jsonName": "dev-404-page-5f9",
+        "path": "/dev-404-page/"
+    },
+    {
+        "componentChunkName": "component---src-pages-404-js",
+        "jsonName": "404-22d",
+        "path": "/404/"
+    },
+    {
+        "componentChunkName": "component---src-pages-actions-code-js",
+        "jsonName": "actions-code-8d6",
+        "path": "/actions/code/"
+    },
+    {
+        "componentChunkName": "component---src-pages-actions-guidelines-js",
+        "jsonName": "actions-guidelines-701",
+        "path": "/actions/guidelines/"
+    },
+    {
+        "componentChunkName": "component---src-pages-banner-code-js",
+        "jsonName": "banner-code-f1b",
+        "path": "/banner/code/"
+    },
+    {
+        "componentChunkName": "component---src-pages-banner-guidelines-js",
+        "jsonName": "banner-guidelines-d2e",
+        "path": "/banner/guidelines/"
+    },
+    {
+        "componentChunkName": "component---src-pages-index-js",
+        "jsonName": "index",
+        "path": "/"
+    },
+    {
+        "componentChunkName": "component---src-pages-404-js",
+        "jsonName": "404-html-516",
+        "path": "/404.html"
+    }
+]

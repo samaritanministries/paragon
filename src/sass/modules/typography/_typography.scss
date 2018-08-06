@@ -1,0 +1,80 @@
+/* Typography Variables
+  =========================================================================== */
+
+$font-size-xlarge:      1.953rem; //35px
+$font-size-large:       1.563rem; //28px
+$font-size-medium:      1.25rem;  //23px
+$font-size-normal:      1rem;     //18px
+$font-size-small:       0.9rem;   //16px
+$font-size-xsmall:      0.8rem;   //14px
+
+$font-weight-normal:    400;
+$font-weight-semibold:  600;
+
+$font-family-header:    "Source Sans Pro", sans-serif;
+$font-family-body:      "Source Sans Pro", sans-serif;
+
+/* Typography Utility Classes
+  =========================================================================== */
+
+.text-align-center, .center-align, .align-center { text-align: center !important; }
+.text-align-left, .left-align, .align-left { text-align: left !important; }
+.text-align-right, .right-align, .align-right { text-align: right !important; }
+
+.no-wrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.break-word { word-wrap: break-word; }
+
+/* Typography Styles
+  =========================================================================== */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: $gray-100;
+  font-family: $font-family-body;
+  font-size: $font-size-normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $gray-900;
+  font-family: $font-family-header;
+  font-weight: $font-weight-semibold;
+  margin: 0;
+}
+
+h1, .font-size--xlarge    { font-size: $font-size-xlarge; }
+h2, .font-size--large     { font-size: $font-size-large; }
+h3, .font-size--medium    { font-size: $font-size-medium; }
+h4, .font-size--normal    { font-size: $font-size-normal; }
+small, .font-size--small  { font-size: $font-size-small; }
+.font-size--xsmall        { font-size: $font-size-xsmall; }
+
+a {
+  color: $blue;
+  cursor: pointer;
+  font-weight: $font-weight-semibold;
+  outline: none;
+  text-decoration: none;
+
+  &:hover, &:focus { color: $blue-400; }
+}
+
+p {
+  color: $gray-900;
+  color: $brand-black;
+  font-size: $font-size-normal;
+  line-height: 1.25rem;
+}
+
+
+strong, .strong {
+  font-weight: $font-weight-semibold;
+}
