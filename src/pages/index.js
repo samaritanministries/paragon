@@ -2,12 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import Sidebar from '../components/sidebar'
 
-const IndexPage = () => (
-  <Layout>
-    <h1>Welcome</h1>
-    <img src="" alt="Dash the Donkey" />
-  </Layout>
-)
 
-export default IndexPage
+export default ({children}) => (
+  <div>
+    <Layout>
+      {children}
+    </Layout>
+  </div>
+);

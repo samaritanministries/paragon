@@ -4,9 +4,8 @@ import Helmet from 'react-helmet'
 import { StaticQuery } from "gatsby"
 
 import Header from './header'
-import Sidebar from './sidebar'
 import '../sass/dashing.scss'
-import '../layout/example-page.scss'
+import '../sass/example-page.scss'
 
 const Layout = ({ children, data }) => (
 
@@ -29,12 +28,11 @@ const Layout = ({ children, data }) => (
             { name: 'keywords', content: 'example, pages' },
           ]}
         />
-        <div class="grid" style={{ height: `100vh`, width: `100vw` }}>
-          <Sidebar />
+
           <div class="grid--three-fourths">
             {children}
           </div>
-        </div>
+
       </>
     )}
   />
