@@ -1,9 +1,7 @@
 import React from 'react'
 
-const AppContent = ({children}) => (
+export default ({children}) => (
   <section class="content-container">
     {children}
   </section>
 )
-
-export default AppContent

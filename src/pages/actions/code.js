@@ -5,7 +5,7 @@ import Layout from '../../components/layout'
 import SubNav from '../../components/subnavigation'
 import AppContent from '../../components/appcontent'
 
-const ActionsCode = () => (
+export default () => (
   <Layout>
     <header class="subnav">
       <h1>Actions</h1>
@@ -23,5 +23,3 @@ const ActionsCode = () => (
     </AppContent>
   </Layout>
 )
-
-export default ActionsCode

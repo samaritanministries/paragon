@@ -24,6 +24,10 @@
     border-radius: 5px;
   }
 
+  .react-sanfona-item {
+    position: relative;
+  }
+
   .react-sanfona-item-title {
     display: flex;
     align-items: center;
@@ -32,7 +36,23 @@
     border-top: 2px solid #d4d4d4;
     border-bottom: 2px solid #d4d4d4;
     margin-top: -2px !important;
-    i { margin-left: auto; }
+  }
+
+  .react-sanfona-item-body-wrapper {
+    i:before {
+      position: absolute;
+      top: 1.3rem;
+      right: 1rem;
+      content: '\e82e';
+    }
+  }
+
+  .react-sanfona-item-expanded {
+    .react-sanfona-item-body-wrapper  {
+      i:before {
+        content: '\e800' !important;
+      }
+    }
   }
 
   .menu-group {
@@ -67,4 +87,8 @@
 
 .content-container {
   margin: 1rem 4rem 1rem 3rem;
+}
+
+.react-sanfona-item-body > [aria-current="page"] {
+  max-height: none;
 }

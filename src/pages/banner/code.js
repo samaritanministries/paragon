@@ -5,7 +5,7 @@ import Layout from '../../components/layout'
 import SubNav from '../../components/subnavigation'
 import AppContent from '../../components/appcontent'
 
-const BannerCode = () => (
+export default () => (
   <Layout>
     <header class="subnav">
       <h1>Banner</h1>
@@ -16,5 +16,3 @@ const BannerCode = () => (
     </AppContent>
   </Layout>
 )
-
-export default BannerCode
