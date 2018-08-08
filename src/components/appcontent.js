@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default ({children}) => (
-  <section class="content-container">
+  <section className="content-container">
     {children}
   </section>
 )

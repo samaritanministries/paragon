@@ -12,5 +12,5 @@
 
  exports.onRouteUpdate = ({ location }) => {
   console.log('new pathname', location.pathname)
-  //this.closest('.react-sanfona-item').addClass('react-sanfona-item-expanded')
+  //document.getElementsByClassName('active').parent().parent().parent().addClass('react-sanfona-item-expanded');
 }

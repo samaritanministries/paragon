@@ -38,15 +38,15 @@
     margin-top: -2px !important;
   }
 
+// Sidebar Icon arrow //
   .react-sanfona-item-body-wrapper {
     i:before {
       position: absolute;
-      top: 1.3rem;
+      top: 1.35rem;
       right: 1rem;
       content: '\e82e';
     }
   }
-
   .react-sanfona-item-expanded {
     .react-sanfona-item-body-wrapper  {
       i:before {
