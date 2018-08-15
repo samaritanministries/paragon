@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Sidebar from './sidebar'
-import '../sass/dashing.scss'
 import '../sass/example-page.scss'
 
 export default ({ children }) => (

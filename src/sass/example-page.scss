@@ -1,21 +1,34 @@
+@import 'dashing';
+
+$sidebar-width:  13rem;
+
 .example-sidebar {
-  display: none;
-  width: 13rem;
-  background-color: white;
+  width: $sidebar-width;
+  background-color: $white;
   line-height: 2rem;
-  border-right: 2px solid #d4d4d4;
+  border-right: 2px solid $gray-200;
   position: fixed;
   top: 0;
   bottom: 0;
-  @media all and (min-width: 40em) {
-    display: block;
+  left: -#{$sidebar-width};
+  transition: left 0.3s;
+  overflow-y: auto;
+  @media #{$tablet} {
+    left: 0rem;
+  }
+  &.show {
+    @media #{$phone} {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      border-right: none;
+      left: 0rem;
+    }
   }
 
   .logo {
     height: 81px;
     width: 170px;
     text-align: center;
-    background-color: white;
+    background-color: $white;
     margin: 1rem auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 1rem;
@@ -24,11 +37,11 @@
   a {
     padding-left: 0.5rem;
     display: block;
-    color: #24292C;
+    color: $gray-900c;
   }
   .active {
-    color: white;
-    background-color: #3F70C9;
+    color: $white;
+    background-color: $blue;
     border-radius: 5px;
   }
 
@@ -39,10 +52,10 @@
   .react-sanfona-item-title {
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: $white;
     padding: 0.7rem 1rem;
-    border-top: 2px solid #d4d4d4;
-    border-bottom: 2px solid #d4d4d4;
+    border-top: 2px solid $gray-200;
+    border-bottom: 2px solid $gray-200;
     margin-top: -2px !important;
   }
 
@@ -65,7 +78,7 @@
 
   .menu-group {
     padding: 1rem;
-    background-color: #ededed;
+    background-color: $gray-100;
     display: block;
   }
 }
@@ -77,10 +90,10 @@
 }
 
 .subnav {
-  background-color: #3F70C9;
-  box-shadow: 0 2px 6px #d4d4d4;
+  background-color: $blue;
+  box-shadow: 0 2px 6px $gray-200;
   h1 {
-    color: white;
+    color: $white;
     padding: 2rem 3rem;
   }
   .subnav-links {
@@ -102,14 +115,33 @@
   margin: 1rem 3rem;
 }
 
-.button--sidebar-icon {
-  border-radius: 0 5px 5px 0;
-  position: absolute;
-  top: 1.2rem;
-  left: 0;
-  transition: all 0.3s !important;
-  z-index: 2;
-  @media all and (min-width: 40em) {
-    display: none;
+//Sidebar Icon
+.mobile-sidebar {
+  .button--sidebar-icon {
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 1.9rem;
+    left: 0;
+    transition: left 0.3s;
+    z-index: 2;
+    padding: 0.8rem 0.9rem;
+    @media #{$tablet} {
+      display: none;
+    }
+    i {
+      margin: 0;
+        &:not(.dashing-icon--close) {
+        background-image: url("../img/menu.svg");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        height: 18px;
+        width: 16px;
+      }
+    }
+  }
+  &.expanded {
+    .button--sidebar-icon { left: $sidebar-width; }
   }
 }
