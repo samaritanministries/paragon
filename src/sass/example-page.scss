@@ -1,7 +1,15 @@
 .example-sidebar {
+  display: none;
+  width: 13rem;
   background-color: white;
   line-height: 2rem;
   border-right: 2px solid #d4d4d4;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  @media all and (min-width: 40em) {
+    display: block;
+  }
 
   .logo {
     height: 81px;
@@ -62,16 +70,21 @@
   }
 }
 
+.app-content {
+  @media all and (min-width: 40em) {
+    margin-left: 13rem;
+  }
+}
+
 .subnav {
   background-color: #3F70C9;
-  margin-left: -1rem;
   box-shadow: 0 2px 6px #d4d4d4;
   h1 {
     color: white;
-    padding: 2rem 4rem;
+    padding: 2rem 3rem;
   }
   .subnav-links {
-    margin: 0 4rem;
+    margin: 0 3rem;
     padding-bottom: 0.55rem;
     a {
       text-transform: uppercase;
@@ -86,9 +99,17 @@
 }
 
 .content-container {
-  margin: 1rem 4rem 1rem 3rem;
+  margin: 1rem 3rem;
 }
 
-.react-sanfona-item-body > [aria-current="page"] {
-  max-height: none;
+.button--sidebar-icon {
+  border-radius: 0 5px 5px 0;
+  position: absolute;
+  top: 1.2rem;
+  left: 0;
+  transition: all 0.3s !important;
+  z-index: 2;
+  @media all and (min-width: 40em) {
+    display: none;
+  }
 }
