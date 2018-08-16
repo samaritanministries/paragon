@@ -10,29 +10,49 @@
         "path": "/404/"
     },
     {
-        "componentChunkName": "component---src-pages-actions-code-js",
-        "jsonName": "actions-code-8d6",
-        "path": "/actions/code/"
+        "componentChunkName": "component---src-pages-components-actions-code-js",
+        "jsonName": "components-actions-code-c1d",
+        "path": "/components/actions/code/"
     },
     {
-        "componentChunkName": "component---src-pages-actions-guidelines-js",
-        "jsonName": "actions-guidelines-701",
-        "path": "/actions/guidelines/"
+        "componentChunkName": "component---src-pages-components-actions-guidelines-js",
+        "jsonName": "components-actions-guidelines-135",
+        "path": "/components/actions/guidelines/"
     },
     {
-        "componentChunkName": "component---src-pages-banner-code-js",
-        "jsonName": "banner-code-f1b",
-        "path": "/banner/code/"
+        "componentChunkName": "component---src-pages-components-banner-code-js",
+        "jsonName": "components-banner-code-5df",
+        "path": "/components/banner/code/"
     },
     {
-        "componentChunkName": "component---src-pages-banner-guidelines-js",
-        "jsonName": "banner-guidelines-d2e",
-        "path": "/banner/guidelines/"
+        "componentChunkName": "component---src-pages-components-banner-guidelines-js",
+        "jsonName": "components-banner-guidelines-c76",
+        "path": "/components/banner/guidelines/"
+    },
+    {
+        "componentChunkName": "component---src-pages-get-started-js",
+        "jsonName": "get-started-dd9",
+        "path": "/get-started/"
     },
     {
         "componentChunkName": "component---src-pages-index-js",
         "jsonName": "index",
         "path": "/"
+    },
+    {
+        "componentChunkName": "component---src-pages-resources-js",
+        "jsonName": "resources-fb7",
+        "path": "/resources/"
+    },
+    {
+        "componentChunkName": "component---src-pages-style-color-js",
+        "jsonName": "style-color-127",
+        "path": "/style/color/"
+    },
+    {
+        "componentChunkName": "component---src-pages-style-typography-js",
+        "jsonName": "style-typography-873",
+        "path": "/style/typography/"
     },
     {
         "componentChunkName": "component---src-pages-404-js",

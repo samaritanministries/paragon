@@ -15,7 +15,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "db9b7420a4693a87f11b9a503c4e5d2f",
+        "contentDigest": "2a3cf53178430418fa0257c0f2116f3a",
         "description": "Plugin dev-404-page",
         "owner": "internal-data-bridge"
       }
@@ -615,12 +615,12 @@
       "host": "localhost",
       "pathPrefix": "/gatsby2",
       "polyfill": true,
-      "buildTime": "2018-08-15T14:48:54.794Z",
+      "buildTime": "2018-08-16T16:22:44.535Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "1d47fd00a830bcd6083b81359cc8055e",
+        "contentDigest": "c4134f27b7ac4f2610d7130ab2aaad35",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -640,87 +640,107 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "1c497bd22b5e07b4c889b26c3626ab2d",
+        "contentDigest": "fb6e42e194191d81481403165cb7bea8",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
     },
-    "SitePage /actions/code/": {
-      "jsonName": "actions-code-8d6",
-      "internalComponentName": "ComponentActionsCode",
-      "path": "/actions/code/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/actions/code.js",
-      "componentChunkName": "component---src-pages-actions-code-js",
+    "SitePage /components/actions/code/": {
+      "jsonName": "components-actions-code-c1d",
+      "internalComponentName": "ComponentComponentsActionsCode",
+      "path": "/components/actions/code/",
+      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/code.js",
+      "componentChunkName": "component---src-pages-components-actions-code-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/actions/code.js",
-      "id": "SitePage /actions/code/",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/code.js",
+      "id": "SitePage /components/actions/code/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "0431f4ce544c3eff4e5b0993baf75689",
+        "contentDigest": "a4ef83e1a4b14a2a2ccc48cfc1959e97",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
     },
-    "SitePage /actions/guidelines/": {
-      "jsonName": "actions-guidelines-701",
-      "internalComponentName": "ComponentActionsGuidelines",
-      "path": "/actions/guidelines/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/actions/guidelines.js",
-      "componentChunkName": "component---src-pages-actions-guidelines-js",
+    "SitePage /components/actions/guidelines/": {
+      "jsonName": "components-actions-guidelines-135",
+      "internalComponentName": "ComponentComponentsActionsGuidelines",
+      "path": "/components/actions/guidelines/",
+      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/guidelines.js",
+      "componentChunkName": "component---src-pages-components-actions-guidelines-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/actions/guidelines.js",
-      "id": "SitePage /actions/guidelines/",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/guidelines.js",
+      "id": "SitePage /components/actions/guidelines/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "9f9ec3db5fef2788e13b856fea7edb5b",
+        "contentDigest": "a002221a1b9c762c416ed6388d0a59c1",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
     },
-    "SitePage /banner/code/": {
-      "jsonName": "banner-code-f1b",
-      "internalComponentName": "ComponentBannerCode",
-      "path": "/banner/code/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/banner/code.js",
-      "componentChunkName": "component---src-pages-banner-code-js",
+    "SitePage /components/banner/code/": {
+      "jsonName": "components-banner-code-5df",
+      "internalComponentName": "ComponentComponentsBannerCode",
+      "path": "/components/banner/code/",
+      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/code.js",
+      "componentChunkName": "component---src-pages-components-banner-code-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/banner/code.js",
-      "id": "SitePage /banner/code/",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/code.js",
+      "id": "SitePage /components/banner/code/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "f170a5e2a080cee9c3ecc68d26a4e84b",
+        "contentDigest": "f11910c46f1697b22e3757513f3422ad",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
     },
-    "SitePage /banner/guidelines/": {
-      "jsonName": "banner-guidelines-d2e",
-      "internalComponentName": "ComponentBannerGuidelines",
-      "path": "/banner/guidelines/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/banner/guidelines.js",
-      "componentChunkName": "component---src-pages-banner-guidelines-js",
+    "SitePage /components/banner/guidelines/": {
+      "jsonName": "components-banner-guidelines-c76",
+      "internalComponentName": "ComponentComponentsBannerGuidelines",
+      "path": "/components/banner/guidelines/",
+      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/guidelines.js",
+      "componentChunkName": "component---src-pages-components-banner-guidelines-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/banner/guidelines.js",
-      "id": "SitePage /banner/guidelines/",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/guidelines.js",
+      "id": "SitePage /components/banner/guidelines/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "5aaa8753cc0a1a02c8d6e0e35f0752f1",
+        "contentDigest": "fb49e8211b42d933af1dc156ea55566b",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /get-started/": {
+      "jsonName": "get-started-dd9",
+      "internalComponentName": "ComponentGetStarted",
+      "path": "/get-started/",
+      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/get-started.js",
+      "componentChunkName": "component---src-pages-get-started-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/get-started.js",
+      "id": "SitePage /get-started/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "0a563e0ad872ef7a8ca9337c28875e68",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -740,7 +760,67 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "bce6c63f331d025ed094bc0eff322184",
+        "contentDigest": "190127dba431bc81535ee893b6be72b6",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /resources/": {
+      "jsonName": "resources-fb7",
+      "internalComponentName": "ComponentResources",
+      "path": "/resources/",
+      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/resources.js",
+      "componentChunkName": "component---src-pages-resources-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/resources.js",
+      "id": "SitePage /resources/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "6528a6f6dbac7252565aa43b2368bdb6",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /style/color/": {
+      "jsonName": "style-color-127",
+      "internalComponentName": "ComponentStyleColor",
+      "path": "/style/color/",
+      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/color.js",
+      "componentChunkName": "component---src-pages-style-color-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/color.js",
+      "id": "SitePage /style/color/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "db5e8a7be89220b98f0dd419ee6a79f3",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /style/typography/": {
+      "jsonName": "style-typography-873",
+      "internalComponentName": "ComponentStyleTypography",
+      "path": "/style/typography/",
+      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/typography.js",
+      "componentChunkName": "component---src-pages-style-typography-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/typography.js",
+      "id": "SitePage /style/typography/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "97251b91d610991469c0870c2c8559c7",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -760,7 +840,7 @@
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "c8bfc8997588711b9e401435bd4c7710",
+        "contentDigest": "a6e5f5a628d4e3fc81ef213ea11e7cc6",
         "description": "Plugin prod-404",
         "owner": "internal-data-bridge"
       }
@@ -775,18 +855,18 @@
     "connections": {}
   },
   "jsonDataPaths": {
-    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-actions-code-c1d": "251/path---components-actions-code-c-1-d-831-NZuapzHg3X9TaN1iIixfv1W23E",
     "404-22d": "44/path---404-22-d-bce-NZuapzHg3X9TaN1iIixfv1W23E",
-    "actions-636": "409/path---actions-636-c17-NZuapzHg3X9TaN1iIixfv1W23E",
-    "sq--src-components-layout-js": 755544856,
-    "actions-code-8d6": "978/path---actions-code-8-d-6-dd8-NZuapzHg3X9TaN1iIixfv1W23E",
-    "404-html-516": "164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E",
+    "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-actions-guidelines-135": "474/path---components-actions-guidelines-135-caa-NZuapzHg3X9TaN1iIixfv1W23E",
+    "get-started-dd9": "23/path---get-started-dd-9-eea-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-banner-guidelines-c76": "716/path---components-banner-guidelines-c-76-140-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-banner-code-5df": "912/path---components-banner-code-5-df-c60-NZuapzHg3X9TaN1iIixfv1W23E",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
-    "actions-code-0-7ba": "978/path---actions-code-0-7-ba-56e-NZuapzHg3X9TaN1iIixfv1W23E",
-    "actions-guidelines-701": "928/path---actions-guidelines-701-5de-NZuapzHg3X9TaN1iIixfv1W23E",
-    "banner-guidelines-d2e": "549/path---banner-guidelines-d-2-e-06c-NZuapzHg3X9TaN1iIixfv1W23E",
-    "banner-code-f1b": "785/path---banner-code-f-1-b-4e7-NZuapzHg3X9TaN1iIixfv1W23E",
-    "sq--src-pages-index-js": 755544856
+    "style-typography-873": "469/path---style-typography-873-9bb-NZuapzHg3X9TaN1iIixfv1W23E",
+    "style-color-127": "115/path---style-color-127-d74-NZuapzHg3X9TaN1iIixfv1W23E",
+    "resources-fb7": "29/path---resources-fb-7-e03-NZuapzHg3X9TaN1iIixfv1W23E",
+    "404-html-516": "164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {
     "/Users/aknobloch/Workspaces/Personal/Dashby/.cache/dev-404-page.js": {
@@ -797,25 +877,41 @@
       "query": "",
       "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/404.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/actions/code.js": {
+    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/code.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/actions/code.js"
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/code.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/actions/guidelines.js": {
+    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/guidelines.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/actions/guidelines.js"
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/guidelines.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/banner/code.js": {
+    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/code.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/banner/code.js"
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/code.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/banner/guidelines.js": {
+    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/guidelines.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/banner/guidelines.js"
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/guidelines.js"
+    },
+    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/get-started.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/get-started.js"
     },
     "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/index.js": {
       "query": "",
       "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/index.js"
+    },
+    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/resources.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/resources.js"
+    },
+    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/color.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/color.js"
+    },
+    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/typography.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/typography.js"
     }
   },
   "staticQueryComponents": {}

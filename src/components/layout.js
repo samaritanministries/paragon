@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Sidebar from './sidebar'
-import '../sass/example-page.scss'
+import '../sass/example-page/example-page.scss'
 
 export default ({ children }) => (
   <div style={{ height: "100vh" }}>

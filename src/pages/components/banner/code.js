@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../../components/layout'
-import SubNav from '../../components/subnavigation'
-import AppContent from '../../components/appcontent'
+import Layout from '../../../components/layout'
+import SubNav from '../../../components/subnavigation'
+import AppContent from '../../../components/appcontent'
 
 export default () => (
   <Layout>
@@ -11,7 +11,7 @@ export default () => (
       <SubNav />
     </header>
     <AppContent>
-      <p>Some Banner Guidelines</p>
+      <p>Some Banner Code</p>
     </AppContent>
   </Layout>
 )

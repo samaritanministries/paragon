@@ -1,0 +1,280 @@
+@import '../dashing';
+@import 'prism';
+
+$sidebar-width:  13rem;
+
+body {
+  background-color: $white;
+}
+
+.example-sidebar {
+  width: $sidebar-width;
+  background-color: $gray-100;
+  line-height: 2rem;
+  border-right: 2px solid $gray-200;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -#{$sidebar-width};
+  transition: right 0.3s;
+  overflow-y: auto;
+  @media #{$tablet} {
+    left: 0rem;
+  }
+  &.show {
+    @media #{$phone} {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      border: none;
+      right: 0rem;
+    }
+  }
+
+  .logo {
+    height: 81px;
+    width: 170px;
+    text-align: center;
+    background-color: $white;
+    margin: 1rem auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+  }
+
+  a {
+    padding-left: 0.5rem;
+    display: block;
+    color: $gray-700;
+  }
+  .active {
+    color: $white;
+    background-color: $blue;
+    border-radius: 5px;
+  }
+
+  .react-sanfona-item {
+    position: relative;
+    h3 {
+      margin-bottom: -2px;
+    }
+    &.react-sanfona-item-expanded {
+      h3 { margin-bottom: 0; }
+    }
+  }
+
+  .react-sanfona-item-title {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    padding: 0.3rem 1rem;
+    border-top: 2px solid $gray-200;
+    font-size: 1.1rem;
+  }
+
+// Sidebar Icon arrow //
+  .react-sanfona-item-body-wrapper {
+    i:before {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      content: '\e82e';
+    }
+  }
+  .react-sanfona-item-expanded {
+    .react-sanfona-item-body-wrapper  {
+      i:before {
+        content: '\e800' !important;
+      }
+    }
+  }
+
+  .menu-group {
+    padding: 0.5rem 1rem;
+    background-color: $gray-100;
+    display: block;
+    line-height: 1.9rem;
+    font-size: 0.9rem;
+    border-top: 2px solid $gray-200;
+  }
+}
+
+.app-content {
+  background-color: $white;
+  @media all and (min-width: 40em) {
+    margin-left: 13rem;
+  }
+}
+
+.subnav {
+  background-color: $blue;
+  box-shadow: 0 2px 6px $gray-200;
+  h1 {
+    max-width: $global-content-width;
+    margin: auto;
+    color: $white;
+    padding: 2rem 0;
+    padding-left: 1rem;
+  }
+  .subnav-links {
+    max-width: $global-content-width;
+    margin: auto;
+    padding-bottom: 0.55rem;
+    padding-left: 1rem;
+    a {
+      text-transform: uppercase;
+      color: white;
+      margin-right: 1rem;
+      padding-bottom: 0.3rem;
+      &.active {
+        border-bottom: 4px solid white;
+      }
+    }
+  }
+}
+
+//Sidebar Icon
+.mobile-sidebar {
+  .button--sidebar-icon {
+    border-radius: 5px 0 0 5px;
+    background-color: $gray-100;
+    position: absolute;
+    top: 1.9rem;
+    right: 0;
+    transition: right 0.3s;
+    z-index: 2;
+    padding: 0.8rem 0.9rem;
+    @media #{$tablet} {
+      display: none;
+    }
+    i {
+      margin: 0;
+        &:not(.dashing-icon--close) {
+        background-image: url("../../img/menu.svg");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        height: 18px;
+        width: 16px;
+      }
+    }
+  }
+  &.expanded {
+    .button--sidebar-icon { right: $sidebar-width; }
+  }
+}
+
+//code toggle
+.code-toggle {
+  background-color: $gray-150;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  transition: all .2s ease-in-out;
+
+  .icon--code {
+    background-image: url(../../img/icon--code_light.svg);
+    width: 16px;
+    height: 16px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0 0.1rem -0.1rem 0;
+  }
+
+  &:hover {
+    background-color: #313538;
+    &:after { color: $white; }
+    .icon--code {
+      background-image: url(../../img/icon--code.svg);
+    }
+  }
+
+  &:after {
+    content: "Show Code";
+    color: $gray-900;
+  }
+
+  &.is-open {
+    background-color: #313538;
+    border-radius: 0;
+    .icon--code { background-image: url(../../img/icon--code.svg); }
+    &:after {
+      color: $white;
+      content: "Hide Code";
+    }
+  }
+
+  & ~ pre {
+    display: none;
+  }
+}
+
+.code {
+  display: none;
+  overflow: hidden;
+   &.show {
+     display: block;
+   }
+}
+
+h2 {
+  .button--copy-link {
+    &:after {
+      content: "Copy Link";
+    }
+      width: 100px;
+      pointer-events: initial;
+      transition: all 0.25s;
+      opacity: 1;
+      text-align: left;
+
+    @media #{$tablet} {
+      width: 0px;
+      overflow: hidden;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  &:hover,
+  &:active {
+      .button--copy-link {
+        &:active,
+        &:focus {
+          &:after {
+            content: "Copied";
+          }
+          color: $green-500;
+        }
+      width: 100px;
+      pointer-events: initial;
+      // transition: all 0.5s;
+      opacity: 1;
+    }
+  }
+}
+
+blockquote {
+  border-left: 4px solid $gray;
+  margin: 0 0 2rem 0;
+  padding-left: 1rem;
+
+  strong {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: #232323;
+  }
+
+  &.tips { border-left: 4px solid $green; }
+  .tips-list {
+    margin: -1.3rem 0 0 0;
+    padding-left: 2rem;
+  }
+  &.warning { border-left: 4px solid $orange; }
+  &.caution { border-left: 4px solid $red; }
+  &.related { border-left: 4px solid $blue; }
+}

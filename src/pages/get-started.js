@@ -6,12 +6,11 @@ import AppContent from '../components/appcontent'
 export default () => (
   <Layout>
     <header className="subnav">
-      <h1>Dashby</h1>
+      <h1>Get Started</h1>
     </header>
     <AppContent>
       <div className="row">
         <div className="column column--full">
-
         </div>
       </div>
     </AppContent>
