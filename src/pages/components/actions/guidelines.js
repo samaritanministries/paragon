@@ -11,9 +11,9 @@ export default () => (
       <SubNav />
     </header>
     <AppContent>
-      <div class="row">
-        <div class="column column--full">
-        <h3>Guidelines</h3>
+      <div className="row">
+        <div className="column column--full">
+        <h2>Guidelines</h2>
         </div>
       </div>
     </AppContent>

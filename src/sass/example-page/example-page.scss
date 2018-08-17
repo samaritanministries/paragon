@@ -18,6 +18,7 @@ body {
   right: -#{$sidebar-width};
   transition: right 0.3s;
   overflow-y: auto;
+  z-index: 1;
   @media #{$tablet} {
     left: 0rem;
   }

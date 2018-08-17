@@ -1,6 +1,6 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-import { Link } from 'gatsby'
 import { Accordion, AccordionItem } from 'react-sanfona'
 import logo from "../img/dash-donkey.svg";
 
@@ -19,6 +19,14 @@ class Sidebar extends React.Component {
   }
 
   render() {
+
+    const isActiveTest = (match, location) => {
+      // if (!match) {
+      //   return false
+      // }
+      console.log()
+      //return location.pathname.includes(this.props.children)
+    }
 
     return (
 
@@ -40,9 +48,9 @@ class Sidebar extends React.Component {
             <i className="dashing-icon"></i>
 
               <div className="menu-group">
-                <Link exact to="/" activeClassName="active">Principles</Link>
-                <Link exact to="/get-started" activeClassName="active">Get Started</Link>
-                <Link exact to="/resources" activeClassName="active">Resources</Link>
+                <NavLink exact to="/" activeClassName="active">Principles</NavLink>
+                <NavLink exact to="/get-started" activeClassName="active">Get Started</NavLink>
+                <NavLink exact to="/resources" activeClassName="active">Resources</NavLink>
               </div>
 
             </AccordionItem>
@@ -51,8 +59,8 @@ class Sidebar extends React.Component {
             <i className="dashing-icon"></i>
 
             <div className="menu-group">
-              <Link strict to="/style/color" activeClassName="active">Color</Link>
-              <Link strict to="/style/typography" activeClassName="active">Typography</Link>
+              <NavLink strict to="/style/color" activeClassName="active">Color</NavLink>
+              <NavLink strict to="/style/typography" activeClassName="active">Typography</NavLink>
             </div>
 
             </AccordionItem>
@@ -61,13 +69,13 @@ class Sidebar extends React.Component {
             <i className="dashing-icon"></i>
 
             <div className="menu-group">
-              <Link strict to="/components/actions/code" activeClassName="active" title="Actions">Actions</Link>
-              <Link strict to="/components/banner/code" activeClassName="active">Banner</Link>
-              <Link strict to="/components/cards/code" activeClassName="active">Cards</Link>
-              <Link strict to="/components/checkboxes/code" activeClassName="active">Checkboxes</Link>
-              <Link strict to="/components/clippy/code" activeClassName="active">Clippy</Link>
-              <Link strict to="/components/footer/code" activeClassName="active">Footer</Link>
-              <Link strict to="/components/forms/code" activeClassName="active">Forms</Link>
+              <NavLink strict to="/components/actions/code" isActive={isActiveTest} activeClassName="active" title="actions">Actions</NavLink>
+              <NavLink strict to="/components/banner/code" isActive={isActiveTest} activeClassName="active">Banner</NavLink>
+              <NavLink strict to="/components/cards/code" isActive={isActiveTest} activeClassName="active">Cards</NavLink>
+              <NavLink strict to="/components/checkboxes/code" isActive={isActiveTest} activeClassName="active">Checkboxes</NavLink>
+              <NavLink strict to="/components/clippy/code" isActive={isActiveTest} activeClassName="active">Clippy</NavLink>
+              <NavLink strict to="/components/footer/code" isActive={isActiveTest} activeClassName="active">Footer</NavLink>
+              <NavLink strict to="/components/forms/code" isActive={isActiveTest} activeClassName="active">Forms</NavLink>
             </div>
 
             </AccordionItem>

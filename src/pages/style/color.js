@@ -9,7 +9,10 @@ export default () => (
       <h1>Color</h1>
     </header>
     <AppContent>
-      <p>Some Stuff</p>
+      <div className="row">
+        <div className="column column--full">
+        </div>
+      </div>
     </AppContent>
   </Layout>
 )
