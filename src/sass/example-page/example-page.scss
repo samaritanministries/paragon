@@ -30,6 +30,8 @@ body {
     }
   }
 
+  ul { margin: 0; padding: 0; }
+
   .logo {
     height: 81px;
     width: 170px;
@@ -51,49 +53,29 @@ body {
     border-radius: 5px;
   }
 
-  .react-sanfona-item {
-    position: relative;
-    h3 {
-      margin-bottom: -2px;
-    }
-    &.react-sanfona-item-expanded {
-      h3 { margin-bottom: 0; }
-    }
-  }
-
-  .react-sanfona-item-title {
+  .group-title {
     display: flex;
     align-items: center;
     background-color: $white;
     padding: 0.3rem 1rem;
     border-top: 2px solid $gray-200;
     font-size: 1.1rem;
-  }
+    position: relative;
+    i.dashing-icon {
 
-// Sidebar Icon arrow //
-  .react-sanfona-item-body-wrapper {
-    i:before {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      content: '\e82e';
-    }
-  }
-  .react-sanfona-item-expanded {
-    .react-sanfona-item-body-wrapper  {
-      i:before {
-        content: '\e800' !important;
-      }
     }
   }
 
   .menu-group {
     padding: 0.5rem 1rem;
     background-color: $gray-100;
-    display: block;
+    display: none;
     line-height: 1.9rem;
     font-size: 0.9rem;
     border-top: 2px solid $gray-200;
+    &.expanded {
+      display: block;
+    }
   }
 }
 
