@@ -53,6 +53,11 @@ body {
     border-radius: 5px;
   }
 
+  .group-container {
+    position: relative;
+    cursor: pointer;
+  }
+
   .group-title {
     display: flex;
     align-items: center;
@@ -60,12 +65,13 @@ body {
     padding: 0.3rem 1rem;
     border-top: 2px solid $gray-200;
     font-size: 1.1rem;
-    position: relative;
-    i.dashing-icon {
-
-    }
   }
 
+  i.dashing-icon::before {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
   .menu-group {
     padding: 0.5rem 1rem;
     background-color: $gray-100;

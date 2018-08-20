@@ -17,6 +17,10 @@ class Sidebar extends React.Component {
     this.toggleStyle = this.toggleStyle.bind(this);
   }
 
+  componentDidMount() {
+    this.loadStateWithLocalStorage();
+  }
+
    handleClick() {
     this.setState(prevState => ({
       showSidebar: !prevState.showSidebar
@@ -27,18 +31,41 @@ class Sidebar extends React.Component {
     this.setState(prevState => ({
       showDashing: !prevState.showDashing
     }));
+    localStorage.setItem("showDashing", JSON.stringify(!this.state.showDashing));
   }
 
   toggleComponents() {
     this.setState(prevState => ({
       showComponents: !prevState.showComponents
     }));
+    localStorage.setItem("showComponents", JSON.stringify(!this.state.showComponents));
   }
 
   toggleStyle() {
     this.setState(prevState => ({
       showStyle: !prevState.showStyle
     }));
+    localStorage.setItem("showStyle", JSON.stringify(!this.state.showStyle));
+  }
+
+  loadStateWithLocalStorage() {
+    // for all items in state
+    for (let key in this.state) {
+      // if the key exists in localStorage
+      if (localStorage.hasOwnProperty(key)) {
+        // get the key's value from localStorage
+        let value = localStorage.getItem(key);
+
+        // parse the localStorage string and setState
+        try {
+          value = JSON.parse(value);
+          this.setState({ [key]: value });
+        } catch (e) {
+          // handle empty string
+          this.setState({ [key]: value });
+        }
+      }
+    }
   }
 
   render() {
@@ -60,8 +87,8 @@ class Sidebar extends React.Component {
               <img src={logo} alt="Dash the Donkey" style={{ width: "8rem" }}/>
             </div>
 
-            <div style={{ cursor: "pointer" }} onClick={this.toggleDashing}>
-              <h4 className="group-title">Dashing</h4>
+            <div className="group-container">
+              <h4 className="group-title" onClick={this.toggleDashing}>Dashing</h4>
               <i className={this.state.showDashing ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className={this.state.showDashing ? 'menu-group expanded' : 'menu-group'}>
@@ -71,22 +98,22 @@ class Sidebar extends React.Component {
               </div>
             </div>
 
-            <div style={{ cursor: "pointer" }} onClick={this.toggleComponents}>
-              <h4 className="group-title">Style</h4>
-              <i className={this.state.showComponents ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
+            <div className="group-container">
+              <h4 className="group-title" onClick={this.toggleStyle}>Style</h4>
+              <i className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
-              <div className={this.state.showComponents ? 'menu-group expanded' : 'menu-group'}>
+              <div className={this.state.showStyle ? 'menu-group expanded' : 'menu-group'}>
                 <NavLink strict to="/style/color" activeClassName="active">Color</NavLink>
                 <NavLink strict to="/style/typography" activeClassName="active">Typography</NavLink>
               </div>
             </div>
 
-            <div style={{ cursor: "pointer" }} onClick={this.toggleStyle}>
+            <div className="group-container">
 
-              <h4 className="group-title">Components</h4>
-              <i className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
+              <h4 className="group-title" onClick={this.toggleComponents}>Components</h4>
+              <i className={this.state.showComponents ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
-              <div className={this.state.showStyle ? 'menu-group expanded' : 'menu-group'}>
+              <div className={this.state.showComponents ? 'menu-group expanded' : 'menu-group'}>
                 <NavLink strict to="/components/actions/code" activeClassName="active" title="actions">Actions</NavLink>
                 <NavLink strict to="/components/banner/code" activeClassName="active">Banner</NavLink>
                 <NavLink strict to="/components/cards/code" activeClassName="active">Cards</NavLink>
