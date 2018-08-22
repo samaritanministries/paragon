@@ -611,12 +611,12 @@
       "host": "localhost",
       "pathPrefix": "/gatsby2",
       "polyfill": true,
-      "buildTime": "2018-08-22T19:00:12.806Z",
+      "buildTime": "2018-08-22T20:29:03.186Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "0a5496fd9a5379c6550e8a447fa45023",
+        "contentDigest": "03a652445c4c8573f27858f0764bc6f0",
         "type": "Site",
         "owner": "internal-data-bridge"
       }

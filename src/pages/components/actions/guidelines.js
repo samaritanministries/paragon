@@ -8,7 +8,7 @@ export default () => (
   <Layout>
     <header className="subnav">
       <h1>Actions</h1>
-      <SubNav />
+      <SubNav pageName="actions"/>
     </header>
     <AppContent>
       <div className="row">

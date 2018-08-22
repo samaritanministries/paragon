@@ -4,11 +4,12 @@ import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 
-export default ({ location }) => (
+
+export default () => (
   <Layout>
     <header className="subnav">
       <h1>Actions</h1>
-      <SubNav location={location.pathname}/>
+      <SubNav pageName="actions"/>
     </header>
     <AppContent>
         <div className="row">
@@ -527,7 +528,7 @@ Button
     </div>
   </div>
   <div className="code-toggle"><i className="icon--code"></i></div>
-<pre><code className="language-scss">// Round Button Theme (Default)
+<pre><code className="language-scss">{/* Round Button Theme (Default)*/}
 
 
 </code>
