@@ -2,7 +2,7 @@ const React = require(`react`)
 const fs = require(`fs`)
 const { join } = require(`path`)
 const { renderToString, renderToStaticMarkup } = require(`react-dom/server`)
-const { StaticRouter, Route } = require(`react-router-dom`)
+const { ServerLocation, Router } = require(`@reach/router`)
 const { get, merge, isObject, flatten, uniqBy } = require(`lodash`)
 
 const apiRunner = require(`./api-runner-ssr`)
@@ -90,6 +90,24 @@ export default (pagePath, callback) => {
     bodyProps = merge({}, bodyProps, props)
   }
 
+  const getHeadComponents = () => headComponents
+
+  const replaceHeadComponents = components => {
+    headComponents = components
+  }
+
+  const getPreBodyComponents = () => preBodyComponents
+
+  const replacePreBodyComponents = components => {
+    preBodyComponents = components
+  }
+
+  const getPostBodyComponents = () => postBodyComponents
+
+  const replacePostBodyComponents = components => {
+    postBodyComponents = components
+  }
+
   const page = getPage(pagePath)
 
   let dataAndContext = {}
@@ -107,29 +125,52 @@ export default (pagePath, callback) => {
     }
   }
 
-  const AltStaticRouter = apiRunner(`replaceStaticRouterComponent`)[0]
+  class RouteHandler extends React.Component {
+    render() {
+      const props = {
+        ...this.props,
+        ...dataAndContext,
+        pathContext: dataAndContext.pageContext,
+      }
 
-  apiRunner(`replaceStaticRouterComponent`)
+      const pageElement = createElement(
+        syncRequires.components[page.componentChunkName],
+        props
+      )
 
-  const bodyComponent = createElement(
-    AltStaticRouter || StaticRouter,
-    {
-      basename: pathPrefix.slice(0, -1),
-      location: {
-        pathname: pagePath,
+      const wrappedPage = apiRunner(
+        `wrapPageElement`,
+        { element: pageElement, props },
+        pageElement,
+        ({ result }) => {
+          return { element: result, props }
+        }
+      ).pop()
+
+      return wrappedPage
+    }
+  }
+
+  const routerElement = createElement(
+    ServerLocation,
+    { url: `${pathPrefix}${pagePath}` },
+    createElement(
+      Router,
+      {
+        baseuri: pathPrefix.slice(0, -1),
       },
-      context: {},
-    },
-    createElement(Route, {
-      // eslint-disable-next-line react/display-name
-      render: routeProps =>
-        createElement(syncRequires.components[page.componentChunkName], {
-          ...routeProps,
-          ...dataAndContext,
-          pathContext: dataAndContext.pageContext,
-        }),
-    })
+      createElement(RouteHandler, { path: `/*` })
+    )
   )
+
+  const bodyComponent = apiRunner(
+    `wrapRootElement`,
+    { element: routerElement },
+    routerElement,
+    ({ result }) => {
+      return { element: result }
+    }
+  ).pop()
 
   // Let the site or plugin render the page component.
   apiRunner(`replaceRenderer`, {
@@ -268,6 +309,15 @@ export default (pagePath, callback) => {
         )
       }
     })
+
+  apiRunner(`onPreRenderHTML`, {
+    getHeadComponents,
+    replaceHeadComponents,
+    getPreBodyComponents,
+    replacePreBodyComponents,
+    getPostBodyComponents,
+    replacePostBodyComponents,
+  })
 
   // Add page metadata for the current page
   const windowData = `/*<![CDATA[*/window.page=${JSON.stringify(page)};${

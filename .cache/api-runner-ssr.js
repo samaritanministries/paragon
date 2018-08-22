@@ -1,8 +1,8 @@
 var plugins = [{
-      plugin: require('/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/aknobloch/Workspaces/dashby/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
+      plugin: require('/Users/aknobloch/Workspaces/dashby/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
       options: {"plugins":[],"fonts":["open sans:600,400,300"]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
@@ -20,7 +20,7 @@ var plugins = [{
 const apis = require(`./api-ssr-docs`)
 
 // Run the specified API in any plugins that have implemented it
-module.exports = (api, args, defaultReturn) => {
+module.exports = (api, args, defaultReturn, argTransform) => {
   if (!apis[api]) {
     console.log(`This API doesn't exist`, api)
   }
@@ -32,6 +32,9 @@ module.exports = (api, args, defaultReturn) => {
       return undefined
     }
     const result = plugin.plugin[api](args, plugin.options)
+    if (result && argTransform) {
+      args = argTransform({ args, result })
+    }
     return result
   })
 

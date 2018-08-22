@@ -4,24 +4,24 @@
       "jsonName": "dev-404-page-5f9",
       "internalComponentName": "ComponentDev404Page",
       "path": "/dev-404-page/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/.cache/dev-404-page.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/.cache/dev-404-page.js",
       "componentChunkName": "component---cache-dev-404-page-js",
       "context": {},
       "pluginCreator___NODE": "Plugin dev-404-page",
       "pluginCreatorId": "Plugin dev-404-page",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/.cache/dev-404-page.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/.cache/dev-404-page.js",
       "id": "SitePage /dev-404-page/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "1285ff5b57f4e7fac969f0955f580795",
+        "contentDigest": "723d43a58253abc4eb3198d8bff1cecf",
         "description": "Plugin dev-404-page",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin dev-404-page": {
-      "resolve": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "resolve": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby/dist/internal-plugins/dev-404-page",
       "id": "Plugin dev-404-page",
       "name": "dev-404-page",
       "version": "1.0.0",
@@ -33,7 +33,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "pluginFilepath": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby/dist/internal-plugins/dev-404-page",
       "packageJson": {
         "name": "dev-404-page",
         "description": "Internal plugin to add a 404 page in development with helpful information",
@@ -50,13 +50,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "eadd6a2eeb845d029cb52ddd1cd9a3ac",
+        "contentDigest": "293cc0d11f0a335e230460f1aac8144c",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin load-babel-config": {
-      "resolve": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "resolve": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby/dist/internal-plugins/load-babel-config",
       "id": "Plugin load-babel-config",
       "name": "load-babel-config",
       "version": "1.0.0",
@@ -64,11 +64,11 @@
         "plugins": []
       },
       "nodeAPIs": [
-        "onCreateBabelConfig"
+        "onPreBootstrap"
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "pluginFilepath": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby/dist/internal-plugins/load-babel-config",
       "packageJson": {
         "name": "load-babel-config",
         "description": "Internal plugin that handles loading Babel configs",
@@ -85,13 +85,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "375cda6c4ce977d8f949d669036fb505",
+        "contentDigest": "812f874753ae53a6442245242259f388",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin internal-data-bridge": {
-      "resolve": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "resolve": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
       "id": "Plugin internal-data-bridge",
       "name": "internal-data-bridge",
       "version": "1.0.0",
@@ -104,7 +104,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "pluginFilepath": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
       "packageJson": {
         "name": "internal-data-bridge",
         "description": "An internal Gatsby plugin which creates data nodes from internal data",
@@ -121,13 +121,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "13f5d724eb994afe402bb671fe7ff8ba",
+        "contentDigest": "6b1ae1f3bb31c6701587ebaaaee0aa56",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin prod-404": {
-      "resolve": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "resolve": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby/dist/internal-plugins/prod-404",
       "id": "Plugin prod-404",
       "name": "prod-404",
       "version": "1.0.0",
@@ -139,7 +139,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "pluginFilepath": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby/dist/internal-plugins/prod-404",
       "packageJson": {
         "name": "prod-404",
         "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
@@ -156,13 +156,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "5ee86fb0752b7ae7de8f62d9cdfb8701",
+        "contentDigest": "53cc6d3d58c2e818ef3a92219b54dfb3",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin query-runner": {
-      "resolve": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "resolve": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby/dist/internal-plugins/query-runner",
       "id": "Plugin query-runner",
       "name": "query-runner",
       "version": "1.0.0",
@@ -174,7 +174,7 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "pluginFilepath": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby/dist/internal-plugins/query-runner",
       "packageJson": {
         "name": "query-runner",
         "description": "Internal plugin for running queries",
@@ -191,16 +191,16 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "900c4a642e6454b929bf8a5d650ff819",
+        "contentDigest": "d44ab90db328413df2ba1f2b9045f588",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-sass": {
-      "resolve": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby-plugin-sass",
+      "resolve": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby-plugin-sass",
       "id": "Plugin gatsby-plugin-sass",
       "name": "gatsby-plugin-sass",
-      "version": "2.0.0-beta.6",
+      "version": "2.0.0-rc.0",
       "pluginOptions": {
         "plugins": []
       },
@@ -209,11 +209,11 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby-plugin-sass",
+      "pluginFilepath": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby-plugin-sass",
       "packageJson": {
         "name": "gatsby-plugin-sass",
         "description": "Gatsby plugin to handle scss/sass files",
-        "version": "2.0.0-beta.6",
+        "version": "2.0.0-rc.0",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -266,16 +266,16 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "b56d7a3a36a6fc3ed9317bdff7b26ef4",
+        "contentDigest": "ea21476ef46ad3210039242ecc1f43bd",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-react-helmet": {
-      "resolve": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby-plugin-react-helmet",
+      "resolve": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby-plugin-react-helmet",
       "id": "Plugin gatsby-plugin-react-helmet",
       "name": "gatsby-plugin-react-helmet",
-      "version": "3.0.0-beta.4",
+      "version": "3.0.0-rc.0",
       "pluginOptions": {
         "plugins": []
       },
@@ -284,11 +284,11 @@
       "ssrAPIs": [
         "onRenderBody"
       ],
-      "pluginFilepath": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby-plugin-react-helmet",
+      "pluginFilepath": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby-plugin-react-helmet",
       "packageJson": {
         "name": "gatsby-plugin-react-helmet",
         "description": "Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.",
-        "version": "3.0.0-beta.4",
+        "version": "3.0.0-rc.0",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -347,13 +347,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "c62ae7a366f9ea3b14888da107010c8f",
+        "contentDigest": "8fb9658a5fc6679726039f20dee4bbf0",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-google-fonts": {
-      "resolve": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby-plugin-google-fonts",
+      "resolve": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby-plugin-google-fonts",
       "id": "Plugin gatsby-plugin-google-fonts",
       "name": "gatsby-plugin-google-fonts",
       "version": "0.0.4",
@@ -368,7 +368,7 @@
       "ssrAPIs": [
         "onRenderBody"
       ],
-      "pluginFilepath": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby-plugin-google-fonts",
+      "pluginFilepath": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby-plugin-google-fonts",
       "packageJson": {
         "name": "gatsby-plugin-google-fonts",
         "description": "Bring Google Fonts to Gatsby",
@@ -395,13 +395,13 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "2ac5d3023e7178e33811405c839d1ffb",
+        "contentDigest": "cc2a2fd80a4f108b5288b81c5a043600",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin default-site-plugin": {
-      "resolve": "/Users/aknobloch/Workspaces/Personal/Dashby",
+      "resolve": "/Users/aknobloch/Workspaces/dashby",
       "id": "Plugin default-site-plugin",
       "name": "default-site-plugin",
       "version": "b0235d6008ca1d4090a949e996125c97",
@@ -414,7 +414,7 @@
         "onRouteUpdate"
       ],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/aknobloch/Workspaces/Personal/Dashby",
+      "pluginFilepath": "/Users/aknobloch/Workspaces/dashby",
       "packageJson": {
         "name": "gatsby-starter-default",
         "description": "Gatsby default starter",
@@ -434,10 +434,6 @@
             "version": "next"
           },
           {
-            "name": "gatsby-link",
-            "version": "^1.6.46"
-          },
-          {
             "name": "gatsby-plugin-google-fonts",
             "version": "0.0.4"
           },
@@ -447,11 +443,11 @@
           },
           {
             "name": "gatsby-plugin-react-next",
-            "version": "^1.0.11"
+            "version": "next"
           },
           {
             "name": "gatsby-plugin-sass",
-            "version": "^2.0.0-beta.6"
+            "version": "next"
           },
           {
             "name": "node-sass",
@@ -481,7 +477,7 @@
         "devDependencies": [
           {
             "name": "gatsby",
-            "version": "^2.0.0-beta.9"
+            "version": "next"
           },
           {
             "name": "node-sass",
@@ -507,19 +503,19 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "cf8d4c0f61a28889eb0df8c3b96222dd",
+        "contentDigest": "0e06aa2f63b84dbfa8f485b03447e8e8",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
     },
     "Plugin gatsby-plugin-page-creator": {
-      "resolve": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby-plugin-page-creator",
+      "resolve": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby-plugin-page-creator",
       "id": "Plugin gatsby-plugin-page-creator",
       "name": "gatsby-plugin-page-creator",
-      "version": "2.0.0-beta.5",
+      "version": "2.0.0-rc.0",
       "pluginOptions": {
         "plugins": [],
-        "path": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages",
+        "path": "/Users/aknobloch/Workspaces/dashby/src/pages",
         "pathCheck": false
       },
       "nodeAPIs": [
@@ -527,11 +523,11 @@
       ],
       "browserAPIs": [],
       "ssrAPIs": [],
-      "pluginFilepath": "/Users/aknobloch/Workspaces/Personal/Dashby/node_modules/gatsby-plugin-page-creator",
+      "pluginFilepath": "/Users/aknobloch/Workspaces/dashby/node_modules/gatsby-plugin-page-creator",
       "packageJson": {
         "name": "gatsby-plugin-page-creator",
         "description": "Gatsby plugin that automatically creates pages from React components in specified directories",
-        "version": "2.0.0-beta.5",
+        "version": "2.0.0-rc.0",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -602,7 +598,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "e21976c5ffdbc73bb1c805f6c278f917",
+        "contentDigest": "e68cd790dba5b6a154d7f4a38f710d7a",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -615,12 +611,12 @@
       "host": "localhost",
       "pathPrefix": "/gatsby2",
       "polyfill": true,
-      "buildTime": "2018-08-20T19:59:44.581Z",
+      "buildTime": "2018-08-22T19:00:12.806Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "530531c176d9263323ff739d8099a5b3",
+        "contentDigest": "0a5496fd9a5379c6550e8a447fa45023",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -629,18 +625,18 @@
       "jsonName": "404-22d",
       "internalComponentName": "Component404",
       "path": "/404/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/404.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/404.js",
       "componentChunkName": "component---src-pages-404-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/404.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/404.js",
       "id": "SitePage /404/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "9903ad2d5016a188908d72104592f9b3",
+        "contentDigest": "ad4f95ec299245fbfc9b60544dd2ec7c",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -649,18 +645,18 @@
       "jsonName": "components-actions-code-c1d",
       "internalComponentName": "ComponentComponentsActionsCode",
       "path": "/components/actions/code/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/code.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/actions/code.js",
       "componentChunkName": "component---src-pages-components-actions-code-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/code.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/actions/code.js",
       "id": "SitePage /components/actions/code/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "a283f7cf03f91a2113676a14c70a85b2",
+        "contentDigest": "2523330938c378f235a2d1023d6da224",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -669,18 +665,18 @@
       "jsonName": "components-actions-guidelines-135",
       "internalComponentName": "ComponentComponentsActionsGuidelines",
       "path": "/components/actions/guidelines/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/guidelines.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/actions/guidelines.js",
       "componentChunkName": "component---src-pages-components-actions-guidelines-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/guidelines.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/actions/guidelines.js",
       "id": "SitePage /components/actions/guidelines/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "a57a5ceba5bae44e77879b2e194ef100",
+        "contentDigest": "aa960637f960122e17ea390314863e16",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -689,18 +685,18 @@
       "jsonName": "components-banner-code-5df",
       "internalComponentName": "ComponentComponentsBannerCode",
       "path": "/components/banner/code/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/code.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/banner/code.js",
       "componentChunkName": "component---src-pages-components-banner-code-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/code.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/banner/code.js",
       "id": "SitePage /components/banner/code/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "2fd924e3f16925cb472a77d7dcfb62b5",
+        "contentDigest": "824e3c31f407aaf923409686c059b035",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -709,18 +705,18 @@
       "jsonName": "components-banner-guidelines-c76",
       "internalComponentName": "ComponentComponentsBannerGuidelines",
       "path": "/components/banner/guidelines/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/guidelines.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/banner/guidelines.js",
       "componentChunkName": "component---src-pages-components-banner-guidelines-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/guidelines.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/banner/guidelines.js",
       "id": "SitePage /components/banner/guidelines/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "8f9f208d6f990c32add294f855c7e685",
+        "contentDigest": "8c8b9d39309c33343e59efaccbba0683",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -729,18 +725,18 @@
       "jsonName": "get-started-dd9",
       "internalComponentName": "ComponentGetStarted",
       "path": "/get-started/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/get-started.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/get-started.js",
       "componentChunkName": "component---src-pages-get-started-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/get-started.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/get-started.js",
       "id": "SitePage /get-started/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "2376cf9e1527fb9603d42babe2724087",
+        "contentDigest": "230dad311b2ccf75bdf893aedb35bb75",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -749,18 +745,18 @@
       "jsonName": "index",
       "internalComponentName": "ComponentIndex",
       "path": "/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/index.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/index.js",
       "componentChunkName": "component---src-pages-index-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/index.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/index.js",
       "id": "SitePage /",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "8cc6b04906e6c5941f7d7a456d34892d",
+        "contentDigest": "d609eee3b02733208a2d94d87edd3f3a",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -769,18 +765,18 @@
       "jsonName": "resources-fb7",
       "internalComponentName": "ComponentResources",
       "path": "/resources/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/resources.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/resources.js",
       "componentChunkName": "component---src-pages-resources-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/resources.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/resources.js",
       "id": "SitePage /resources/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "c839fa155f89b1123401a286db827030",
+        "contentDigest": "0dd3e4ca96815309429dbb5d575b8f89",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -789,18 +785,18 @@
       "jsonName": "style-color-127",
       "internalComponentName": "ComponentStyleColor",
       "path": "/style/color/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/color.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/style/color.js",
       "componentChunkName": "component---src-pages-style-color-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/color.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/style/color.js",
       "id": "SitePage /style/color/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "9281a8c5acc303267b2bf10df6aa13fb",
+        "contentDigest": "7a3abf4c744889926186cd8c89b03ccf",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -809,18 +805,18 @@
       "jsonName": "style-typography-873",
       "internalComponentName": "ComponentStyleTypography",
       "path": "/style/typography/",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/typography.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/style/typography.js",
       "componentChunkName": "component---src-pages-style-typography-js",
       "context": {},
       "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
       "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/typography.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/style/typography.js",
       "id": "SitePage /style/typography/",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "849ceea4e71f7cfd3bbd902e46d5b913",
+        "contentDigest": "1aba49d36914c41c94294f9fd35bbc61",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -829,18 +825,18 @@
       "jsonName": "404-html-516",
       "internalComponentName": "Component404Html",
       "path": "/404.html",
-      "component": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/404.js",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/404.js",
       "componentChunkName": "component---src-pages-404-js",
       "context": {},
       "pluginCreator___NODE": "Plugin prod-404",
       "pluginCreatorId": "Plugin prod-404",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/404.js",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/404.js",
       "id": "SitePage /404.html",
       "parent": "SOURCE",
       "children": [],
       "internal": {
         "type": "SitePage",
-        "contentDigest": "3f0c21b1e1007a22c453adef8f85c8fe",
+        "contentDigest": "15978bed066f89b03b92c3f128af0c78",
         "description": "Plugin prod-404",
         "owner": "internal-data-bridge"
       }
@@ -848,70 +844,70 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "7b36d90c210728f38c8a8cf94a687ab6"
+    "PLUGINS_HASH": "9cac57f580bafab2c84b77432261db40"
   },
   "componentDataDependencies": {
     "nodes": {},
     "connections": {}
   },
   "jsonDataPaths": {
-    "components-actions-code-c1d": "251/path---components-actions-code-c-1-d-831-NZuapzHg3X9TaN1iIixfv1W23E",
     "404-22d": "44/path---404-22-d-bce-NZuapzHg3X9TaN1iIixfv1W23E",
     "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-actions-code-c1d": "251/path---components-actions-code-c-1-d-831-NZuapzHg3X9TaN1iIixfv1W23E",
     "components-actions-guidelines-135": "474/path---components-actions-guidelines-135-caa-NZuapzHg3X9TaN1iIixfv1W23E",
-    "get-started-dd9": "23/path---get-started-dd-9-eea-NZuapzHg3X9TaN1iIixfv1W23E",
     "components-banner-guidelines-c76": "716/path---components-banner-guidelines-c-76-140-NZuapzHg3X9TaN1iIixfv1W23E",
     "components-banner-code-5df": "912/path---components-banner-code-5-df-c60-NZuapzHg3X9TaN1iIixfv1W23E",
+    "get-started-dd9": "23/path---get-started-dd-9-eea-NZuapzHg3X9TaN1iIixfv1W23E",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
-    "style-color-127": "115/path---style-color-127-d74-NZuapzHg3X9TaN1iIixfv1W23E",
     "resources-fb7": "29/path---resources-fb-7-e03-NZuapzHg3X9TaN1iIixfv1W23E",
-    "style-typography-873": "469/path---style-typography-873-9bb-NZuapzHg3X9TaN1iIixfv1W23E",
-    "404-html-516": "164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E"
+    "style-color-127": "115/path---style-color-127-d74-NZuapzHg3X9TaN1iIixfv1W23E",
+    "404-html-516": "164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E",
+    "style-typography-873": "469/path---style-typography-873-9bb-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {
-    "/Users/aknobloch/Workspaces/Personal/Dashby/.cache/dev-404-page.js": {
+    "/Users/aknobloch/Workspaces/dashby/.cache/dev-404-page.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/.cache/dev-404-page.js"
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/.cache/dev-404-page.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/404.js": {
+    "/Users/aknobloch/Workspaces/dashby/src/pages/404.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/404.js"
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/404.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/code.js": {
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/actions/code.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/code.js"
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/actions/code.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/guidelines.js": {
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/actions/guidelines.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/actions/guidelines.js"
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/actions/guidelines.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/code.js": {
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/banner/code.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/code.js"
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/banner/code.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/guidelines.js": {
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/banner/guidelines.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/components/banner/guidelines.js"
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/banner/guidelines.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/get-started.js": {
+    "/Users/aknobloch/Workspaces/dashby/src/pages/get-started.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/get-started.js"
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/get-started.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/index.js": {
+    "/Users/aknobloch/Workspaces/dashby/src/pages/index.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/index.js"
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/index.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/resources.js": {
+    "/Users/aknobloch/Workspaces/dashby/src/pages/resources.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/resources.js"
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/resources.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/color.js": {
+    "/Users/aknobloch/Workspaces/dashby/src/pages/style/color.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/color.js"
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/style/color.js"
     },
-    "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/typography.js": {
+    "/Users/aknobloch/Workspaces/dashby/src/pages/style/typography.js": {
       "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/Personal/Dashby/src/pages/style/typography.js"
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/style/typography.js"
     }
   },
   "staticQueryComponents": {}

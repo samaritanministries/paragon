@@ -1,4 +1,4 @@
 module.exports = [{
-      plugin: require('/Users/aknobloch/Workspaces/Personal/Dashby/gatsby-browser'),
+      plugin: require('/Users/aknobloch/Workspaces/dashby/gatsby-browser.js'),
       options: {"plugins":[]},
     }]

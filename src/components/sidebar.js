@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from "gatsby"
 
 import logo from "../img/dash-donkey.svg";
 
@@ -92,9 +92,9 @@ class Sidebar extends React.Component {
               <i className={this.state.showDashing ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className={this.state.showDashing ? 'menu-group expanded' : 'menu-group'}>
-                <NavLink exact to="/" activeClassName="active">Principles</NavLink>
-                <NavLink exact to="/get-started" activeClassName="active">Get Started</NavLink>
-                <NavLink exact to="/resources" activeClassName="active">Resources</NavLink>
+                <Link to="/" activeClassName="active">Principles</Link>
+                <Link to="/get-started" activeClassName="active">Get Started</Link>
+                <Link to="/resources" activeClassName="active">Resources</Link>
               </div>
             </div>
 
@@ -103,8 +103,8 @@ class Sidebar extends React.Component {
               <i className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className={this.state.showStyle ? 'menu-group expanded' : 'menu-group'}>
-                <NavLink strict to="/style/color" activeClassName="active">Color</NavLink>
-                <NavLink strict to="/style/typography" activeClassName="active">Typography</NavLink>
+                <Link to="/style/color" activeClassName="active">Color</Link>
+                <Link to="/style/typography" activeClassName="active">Typography</Link>
               </div>
             </div>
 
@@ -114,13 +114,13 @@ class Sidebar extends React.Component {
               <i className={this.state.showComponents ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className={this.state.showComponents ? 'menu-group expanded' : 'menu-group'}>
-                <NavLink strict to="/components/actions/code" activeClassName="active" title="actions">Actions</NavLink>
-                <NavLink strict to="/components/banner/code" activeClassName="active">Banner</NavLink>
-                <NavLink strict to="/components/cards/code" activeClassName="active">Cards</NavLink>
-                <NavLink strict to="/components/checkboxes/code" activeClassName="active">Checkboxes</NavLink>
-                <NavLink strict to="/components/clippy/code" activeClassName="active">Clippy</NavLink>
-                <NavLink strict to="/components/footer/code" activeClassName="active">Footer</NavLink>
-                <NavLink strict to="/components/forms/code" activeClassName="active">Forms</NavLink>
+                <Link to="/components/actions/code" activeClassName="active" title="actions">Actions</Link>
+                <Link to="/components/banner/code" activeClassName="active">Banner</Link>
+                <Link to="/components/cards/code" activeClassName="active">Cards</Link>
+                <Link to="/components/checkboxes/code" activeClassName="active">Checkboxes</Link>
+                <Link to="/components/clippy/code" activeClassName="active">Clippy</Link>
+                <Link to="/components/footer/code" activeClassName="active">Footer</Link>
+                <Link to="/components/forms/code" activeClassName="active">Forms</Link>
               </div>
 
             </div>
