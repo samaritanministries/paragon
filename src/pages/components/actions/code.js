@@ -4,12 +4,14 @@ import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 
+const currentPageName = "Actions";
+const currentPageNameLower = currentPageName.toLowerCase();
 
 export default () => (
   <Layout>
     <header className="subnav">
-      <h1>Actions</h1>
-      <SubNav pageName="actions"/>
+    <h1>{currentPageName}</h1>
+    <SubNav pageName={currentPageNameLower}/>
     </header>
     <AppContent>
         <div className="row">

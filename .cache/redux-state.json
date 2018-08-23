@@ -470,6 +470,10 @@
             "version": "^5.2.0"
           },
           {
+            "name": "react-router-dom",
+            "version": "^4.3.1"
+          },
+          {
             "name": "react-sanfona",
             "version": "^1.2.2"
           }
@@ -611,12 +615,12 @@
       "host": "localhost",
       "pathPrefix": "/gatsby2",
       "polyfill": true,
-      "buildTime": "2018-08-22T20:29:03.186Z",
+      "buildTime": "2018-08-23T14:03:02.283Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "03a652445c4c8573f27858f0764bc6f0",
+        "contentDigest": "96b6cbdb4328a33bdc14db1225569daf",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -717,6 +721,206 @@
       "internal": {
         "type": "SitePage",
         "contentDigest": "8c8b9d39309c33343e59efaccbba0683",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/cards/code/": {
+      "jsonName": "components-cards-code-f61",
+      "internalComponentName": "ComponentComponentsCardsCode",
+      "path": "/components/cards/code/",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/code.js",
+      "componentChunkName": "component---src-pages-components-cards-code-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/code.js",
+      "id": "SitePage /components/cards/code/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "aa30cc56857da21fab6087effaea43a7",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/cards/guidelines/": {
+      "jsonName": "components-cards-guidelines-647",
+      "internalComponentName": "ComponentComponentsCardsGuidelines",
+      "path": "/components/cards/guidelines/",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/guidelines.js",
+      "componentChunkName": "component---src-pages-components-cards-guidelines-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/guidelines.js",
+      "id": "SitePage /components/cards/guidelines/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "66f9037296950d1421ca6493259de769",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/checkboxes/code/": {
+      "jsonName": "components-checkboxes-code-7d8",
+      "internalComponentName": "ComponentComponentsCheckboxesCode",
+      "path": "/components/checkboxes/code/",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/code.js",
+      "componentChunkName": "component---src-pages-components-checkboxes-code-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/code.js",
+      "id": "SitePage /components/checkboxes/code/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "8db604723170be5b7c24eed4131a387e",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/checkboxes/guidelines/": {
+      "jsonName": "components-checkboxes-guidelines-045",
+      "internalComponentName": "ComponentComponentsCheckboxesGuidelines",
+      "path": "/components/checkboxes/guidelines/",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/guidelines.js",
+      "componentChunkName": "component---src-pages-components-checkboxes-guidelines-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/guidelines.js",
+      "id": "SitePage /components/checkboxes/guidelines/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "19032e310db3576d4225504a9c0fd69f",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/clippy/code/": {
+      "jsonName": "components-clippy-code-52c",
+      "internalComponentName": "ComponentComponentsClippyCode",
+      "path": "/components/clippy/code/",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/code.js",
+      "componentChunkName": "component---src-pages-components-clippy-code-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/code.js",
+      "id": "SitePage /components/clippy/code/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "b5d195697ff477e6618bd7acf6b38ff5",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/clippy/guidelines/": {
+      "jsonName": "components-clippy-guidelines-fbb",
+      "internalComponentName": "ComponentComponentsClippyGuidelines",
+      "path": "/components/clippy/guidelines/",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/guidelines.js",
+      "componentChunkName": "component---src-pages-components-clippy-guidelines-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/guidelines.js",
+      "id": "SitePage /components/clippy/guidelines/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "bd54d4fa079c626eb108cb5822667eb0",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/footer/code/": {
+      "jsonName": "components-footer-code-c30",
+      "internalComponentName": "ComponentComponentsFooterCode",
+      "path": "/components/footer/code/",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/code.js",
+      "componentChunkName": "component---src-pages-components-footer-code-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/code.js",
+      "id": "SitePage /components/footer/code/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "ab823b059a256b07f5403942ce336c0e",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/footer/guidelines/": {
+      "jsonName": "components-footer-guidelines-d50",
+      "internalComponentName": "ComponentComponentsFooterGuidelines",
+      "path": "/components/footer/guidelines/",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/guidelines.js",
+      "componentChunkName": "component---src-pages-components-footer-guidelines-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/guidelines.js",
+      "id": "SitePage /components/footer/guidelines/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "f1c33368a0c501e6efbc62ae2b7669f1",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/forms/code/": {
+      "jsonName": "components-forms-code-b1e",
+      "internalComponentName": "ComponentComponentsFormsCode",
+      "path": "/components/forms/code/",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/code.js",
+      "componentChunkName": "component---src-pages-components-forms-code-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/code.js",
+      "id": "SitePage /components/forms/code/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "6d039b7eacb10e2b5a04271da6bd6fbf",
+        "description": "Plugin gatsby-plugin-page-creator",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /components/forms/guidelines/": {
+      "jsonName": "components-forms-guidelines-79a",
+      "internalComponentName": "ComponentComponentsFormsGuidelines",
+      "path": "/components/forms/guidelines/",
+      "component": "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/guidelines.js",
+      "componentChunkName": "component---src-pages-components-forms-guidelines-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin gatsby-plugin-page-creator",
+      "pluginCreatorId": "Plugin gatsby-plugin-page-creator",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/guidelines.js",
+      "id": "SitePage /components/forms/guidelines/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "d463270efcc9eb2cbb8620d096f2d00e",
         "description": "Plugin gatsby-plugin-page-creator",
         "owner": "internal-data-bridge"
       }
@@ -844,7 +1048,7 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "9cac57f580bafab2c84b77432261db40"
+    "PLUGINS_HASH": "607ca4c4973e5bfe1b5a57bc10a92323"
   },
   "componentDataDependencies": {
     "nodes": {},
@@ -862,7 +1066,19 @@
     "resources-fb7": "29/path---resources-fb-7-e03-NZuapzHg3X9TaN1iIixfv1W23E",
     "style-color-127": "115/path---style-color-127-d74-NZuapzHg3X9TaN1iIixfv1W23E",
     "404-html-516": "164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E",
-    "style-typography-873": "469/path---style-typography-873-9bb-NZuapzHg3X9TaN1iIixfv1W23E"
+    "style-typography-873": "469/path---style-typography-873-9bb-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-cards-code-f61": "892/path---components-cards-code-f-61-f74-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-cards-guidelines-647": "790/path---components-cards-guidelines-647-16e-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-checkboxes-guidelines-045": "337/path---components-checkboxes-guidelines-045-474-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-checkboxes-code-7d8": "20/path---components-checkboxes-code-7-d-8-8a2-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-clippy-code-52c": "406/path---components-clippy-code-52-c-5a6-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-clippy-guidelines-fbb": "544/path---components-clippy-guidelines-fbb-186-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-footer-guidelines-fc3": "657/path---components-footer-guidelines-fc-3-5fe-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-footer-code-0d1": "370/path---components-footer-code-0-d-1-bab-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-forms-guidelines-79a": "241/path---components-forms-guidelines-79-a-85f-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-forms-code-b1e": "461/path---components-forms-code-b-1-e-387-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-footer-code-c30": "105/path---components-footer-code-c-30-c11-NZuapzHg3X9TaN1iIixfv1W23E",
+    "components-footer-guidelines-d50": "676/path---components-footer-guidelines-d-50-dc2-NZuapzHg3X9TaN1iIixfv1W23E"
   },
   "components": {
     "/Users/aknobloch/Workspaces/dashby/.cache/dev-404-page.js": {
@@ -908,6 +1124,46 @@
     "/Users/aknobloch/Workspaces/dashby/src/pages/style/typography.js": {
       "query": "",
       "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/style/typography.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/code.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/code.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/guidelines.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/guidelines.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/code.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/code.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/guidelines.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/guidelines.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/guidelines.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/guidelines.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/code.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/code.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/code.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/code.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/guidelines.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/guidelines.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/code.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/code.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/guidelines.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/guidelines.js"
     }
   },
   "staticQueryComponents": {}

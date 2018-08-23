@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 
 import logo from "../img/dash-donkey.svg";
 
@@ -66,6 +66,10 @@ class Sidebar extends React.Component {
         }
       }
     }
+  }
+
+  isLinkActive() {
+    return true
   }
 
   render() {
