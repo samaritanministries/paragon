@@ -454,6 +454,10 @@
             "version": "^4.9.0"
           },
           {
+            "name": "prismjs",
+            "version": "^1.15.0"
+          },
+          {
             "name": "react",
             "version": "^16.4.1"
           },
@@ -468,6 +472,10 @@
           {
             "name": "react-helmet",
             "version": "^5.2.0"
+          },
+          {
+            "name": "react-prism",
+            "version": "^4.3.2"
           },
           {
             "name": "react-router-dom",
@@ -615,12 +623,12 @@
       "host": "localhost",
       "pathPrefix": "/gatsby2",
       "polyfill": true,
-      "buildTime": "2018-08-23T14:03:02.283Z",
+      "buildTime": "2018-08-23T18:21:29.475Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "96b6cbdb4328a33bdc14db1225569daf",
+        "contentDigest": "5fc8b26d1617f405815b831428586864",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -1048,7 +1056,7 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "607ca4c4973e5bfe1b5a57bc10a92323"
+    "PLUGINS_HASH": "3ce752b5e5d0a763d418cd74e4c53367"
   },
   "componentDataDependencies": {
     "nodes": {},
@@ -1105,6 +1113,46 @@
       "query": "",
       "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/banner/guidelines.js"
     },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/code.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/code.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/guidelines.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/guidelines.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/code.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/code.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/guidelines.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/guidelines.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/code.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/code.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/guidelines.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/guidelines.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/code.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/code.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/guidelines.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/guidelines.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/code.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/code.js"
+    },
+    "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/guidelines.js": {
+      "query": "",
+      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/guidelines.js"
+    },
     "/Users/aknobloch/Workspaces/dashby/src/pages/get-started.js": {
       "query": "",
       "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/get-started.js"
@@ -1124,46 +1172,6 @@
     "/Users/aknobloch/Workspaces/dashby/src/pages/style/typography.js": {
       "query": "",
       "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/style/typography.js"
-    },
-    "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/code.js": {
-      "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/code.js"
-    },
-    "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/guidelines.js": {
-      "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/cards/guidelines.js"
-    },
-    "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/code.js": {
-      "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/code.js"
-    },
-    "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/guidelines.js": {
-      "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/checkboxes/guidelines.js"
-    },
-    "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/guidelines.js": {
-      "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/guidelines.js"
-    },
-    "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/code.js": {
-      "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/clippy/code.js"
-    },
-    "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/code.js": {
-      "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/code.js"
-    },
-    "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/guidelines.js": {
-      "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/forms/guidelines.js"
-    },
-    "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/code.js": {
-      "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/code.js"
-    },
-    "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/guidelines.js": {
-      "query": "",
-      "componentPath": "/Users/aknobloch/Workspaces/dashby/src/pages/components/footer/guidelines.js"
     }
   },
   "staticQueryComponents": {}

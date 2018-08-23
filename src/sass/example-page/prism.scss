@@ -106,7 +106,7 @@ pre[class*="language-"] {
 	padding: 1rem;
 	margin: 0 0 1rem 0;
 	overflow: auto;
-	border-radius: 0.3rem;
+	border-radius: 0 0 0.3rem 0.3rem;
 
 	&:before {
 		content: "";
@@ -122,6 +122,10 @@ pre[class*="language-"] {
 
 .example-container ~ pre[class*="language-"]:first-of-type {
 	border-radius: 0 0 0.3rem 0.3rem;
+}
+
+pre.language-html.show {
+	display: block;
 }
 
 pre.language-html:before {
