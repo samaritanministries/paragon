@@ -57,8 +57,8 @@ export default () => (
               </div>
             </div>
             <CodeToggle>
-{`<button className="button button--primary button--small">Small Button</button>
-<button className="button button--secondary button--small">Small Button</button>`}
+{`<button class="button button--primary button--small">Small Button</button>
+<button class="button button--secondary button--small">Small Button</button>`}
             </CodeToggle>
           </div>
         </div>
@@ -73,8 +73,8 @@ export default () => (
               </div>
             </div>
             <CodeToggle>
-{`<button className="button button--primary button--large">Large Button</button>
-<button className="button button--secondary button--large">Large Button</button>`}
+{`<button class="button button--primary button--large">Large Button</button>
+<button class="button button--secondary button--large">Large Button</button>`}
             </CodeToggle>
           </div>
         </div>
@@ -89,8 +89,8 @@ export default () => (
   </div>
 </div>
 <CodeToggle>
-{`<button className="button button--primary button--border">Border Button</button>
-<button className="button button--secondary button--border">Border Button</button>`}
+{`<button class="button button--primary button--border">Border Button</button>
+<button class="button button--secondary button--border">Border Button</button>`}
 </CodeToggle>
 </div>
 </div>
@@ -105,8 +105,8 @@ export default () => (
   </div>
 </div>
 <CodeToggle>
-{`<button className="button button--primary button--transparent">Transparent Button</button>
-<button className="button button--secondary button--transparent">Transparent Button</button>`}
+{`<button class="button button--primary button--transparent">Transparent Button</button>
+<button class="button button--secondary button--transparent">Transparent Button</button>`}
 </CodeToggle>
 </div>
 </div>
@@ -126,13 +126,13 @@ export default () => (
   </div>
 </div>
 <CodeToggle>
-{`<button className="button button--blue">Blue Button</button>
-<button className="button button--gray">Gray Button</button>
-<button className="button button--green">Green Button</button>
-<button className="button button--orange">Orange Button</button>
-<button className="button button--purple">Purple Button</button>
-<button className="button button--red">Red Button</button>
-<button className="button button--white">White Button</button>`}
+{`<button class="button button--blue">Blue Button</button>
+<button class="button button--gray">Gray Button</button>
+<button class="button button--green">Green Button</button>
+<button class="button button--orange">Orange Button</button>
+<button class="button button--purple">Purple Button</button>
+<button class="button button--red">Red Button</button>
+<button class="button button--white">White Button</button>`}
 </CodeToggle>
 </div>
 </div>
@@ -152,13 +152,13 @@ export default () => (
     </div>
   </div>
   <CodeToggle>
-{`<button className="button button--blue button--border">Blue Button</button>
-<button className="button button--gray button--border">Gray Button</button>
-<button className="button button--green button--border">Green Button</button>
-<button className="button button--orange button--border">Orange Button</button>
-<button className="button button--purple button--border">Purple Button</button>
-<button className="button button--red button--border">Red Button</button>
-<button className="button button--white button--border">White Button</button>`}
+{`<button class="button button--blue button--border">Blue Button</button>
+<button class="button button--gray button--border">Gray Button</button>
+<button class="button button--green button--border">Green Button</button>
+<button class="button button--orange button--border">Orange Button</button>
+<button class="button button--purple button--border">Purple Button</button>
+<button class="button button--red button--border">Red Button</button>
+<button class="button button--white button--border">White Button</button>`}
   </CodeToggle>
 </div>
 </div>
@@ -180,13 +180,13 @@ export default () => (
   </div>
   <CodeToggle>
 {`<!-- Blue Button with Add Icon -->
-<button className="button button--primary">
-  <i className="dashing-icon dashing-icon--add"></i>
+<button class="button button--primary">
+  <i class="dashing-icon dashing-icon--add"></i>
   Button
 </button>
 <!-- Gray Button with Close Icon -->
-<button className="button button--secondary">
-  <i className="dashing-icon dashing-icon--close"></i>
+<button class="button button--secondary">
+  <i class="dashing-icon dashing-icon--close"></i>
   Button
 </button>`}
 </CodeToggle>
@@ -210,13 +210,13 @@ export default () => (
   </div>
   <CodeToggle>
 {`<!-- Blue Border Button with Edit Icon -->
-<button className="button button--blue button--border">
-  <i className="dashing-icon dashing-icon--pencil"></i>
+<button class="button button--blue button--border">
+  <i class="dashing-icon dashing-icon--pencil"></i>
   Button
 </button>
 <!-- Gray Border Button with Help Icon -->
-<button className="button button--gray button--border">
-  <i className="dashing-icon dashing-icon--question-filled"></i>
+<button class="button button--gray button--border">
+  <i class="dashing-icon dashing-icon--question-filled"></i>
   Button
 </button>`}
 </CodeToggle>
@@ -240,14 +240,14 @@ export default () => (
   </div>
   <CodeToggle>
 {`<!-- Blue Transparent Button with Search Icon -->
-<button className="button button--primary button--transparent">
-  <i className="dashing-icon dashing-icon--search"></i>
+<button class="button button--primary button--transparent">
+  <i class="dashing-icon dashing-icon--search"></i>
   Button
 </button>
 <!-- Gray Transparent Button with New-Tab Icon -->
-<button className="button button--secondary button--transparent">
+<button class="button button--secondary button--transparent">
   Button
-  <i className="dashing-icon dashing-icon--new-tab flow-opposite"></i>
+  <i class="dashing-icon dashing-icon--new-tab flow-opposite"></i>
 </button>`}
 </CodeToggle>
 </div>
@@ -268,12 +268,12 @@ export default () => (
   </div>
   <CodeToggle>
 {`<!-- Blue Icon Button with Add Icon -->
-<button className="button button--icon button--primary">
-  <i className="dashing-icon dashing-icon--add dashing-icon--white"></i>
+<button class="button button--icon button--primary">
+  <i class="dashing-icon dashing-icon--add dashing-icon--white"></i>
 </button>
 <!-- Red Icon Button with Trash Icon -->
-<button className="button button--icon button--red">
-  <i className="dashing-icon dashing-icon--trash dashing-icon--white"></i>
+<button class="button button--icon button--red">
+  <i class="dashing-icon dashing-icon--trash dashing-icon--white"></i>
 </button>`}
 </CodeToggle>
 </div>
@@ -297,18 +297,18 @@ export default () => (
   </div>
   <CodeToggle>
 {`<!-- Small Blue Icon Button with Add Icon -->
-<button className="button button--primary button--icon button--icon--small">
-  <i className="dashing-icon dashing-icon--add dashing-icon--white"></i>
+<button class="button button--primary button--icon button--icon--small">
+  <i class="dashing-icon dashing-icon--add dashing-icon--white"></i>
 </button>
 
 <!-- Small Red Icon Button with Trash Icon -->
-<button className="button button--red button--icon button--icon--small">
-  <i className="dashing-icon dashing-icon--trash dashing-icon--white"></i>
+<button class="button button--red button--icon button--icon--small">
+  <i class="dashing-icon dashing-icon--trash dashing-icon--white"></i>
 </button>
 
 <!-- Small Transparent Icon Button with Help Icon -->
-<button className="button button--transparent button--icon button--icon--small">
-  <i className="dashing-icon dashing-icon--question-filled dashing-icon--gray"></i>
+<button class="button button--transparent button--icon button--icon--small">
+  <i class="dashing-icon dashing-icon--question-filled dashing-icon--gray"></i>
 </button>`}
 </CodeToggle>
 </div>
@@ -326,8 +326,8 @@ export default () => (
   </div>
   <CodeToggle>
 {`<!-- Blue Main Icon Button with Add Icon -->
-<button className="button button--icon button--icon--main button--primary">
-  <i className="dashing-icon dashing-icon--add dashing-icon--white"></i>
+<button class="button button--icon button--icon--main button--primary">
+  <i class="dashing-icon dashing-icon--add dashing-icon--white"></i>
 </button>`}</CodeToggle>
 </div>
 </div>
@@ -355,16 +355,16 @@ export default () => (
 </div>
 <CodeToggle>
 {`<!-- Blue Toggle Button -->
-<ul className="button-group button-group--blue">
-  <li className="button--radio">
+<ul class="button-group button-group--blue">
+  <li class="button--radio">
     <input type="radio" name="options-blue" id="blue1" defaultChecked />
     <label htmlFor="blue1" className="button">Left</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-blue" id="blue2" />
     <label htmlFor="blue2" className="button">Middle</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-blue" id="blue3" />
     <label htmlFor="blue3" className="button">Right</label>
   </li>
@@ -411,34 +411,34 @@ export default () => (
 </div>
 <CodeToggle>
 {`<!-- Green Toggle Border Button -->
-<ul className="button-group button-group--green button-group--border">
-  <li className="button--radio">
+<ul class="button-group button-group--green button-group--border">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green1" defaultChecked />
-    <label htmlFor="green1" className="button">1</label>
+    <label htmlFor="green1" class="button">1</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green2" />
-    <label htmlFor="green2" className="button">2</label>
+    <label htmlFor="green2" class="button">2</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green3" />
-    <label htmlFor="green3" className="button">3</label>
+    <label htmlFor="green3" class="button">3</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green4" />
-    <label htmlFor="green4" className="button">4</label>
+    <label htmlFor="green4" class="button">4</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green5" />
-    <label htmlFor="green5" className="button">5</label>
+    <label htmlFor="green5" class="button">5</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green6" />
-    <label htmlFor="green6" className="button">6</label>
+    <label htmlFor="green6" class="button">6</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green7" />
-    <label htmlFor="green7" className="button">7</label>
+    <label htmlFor="green7" class="button">7</label>
   </li>
 </ul>`}</CodeToggle>
 </div>
@@ -467,18 +467,18 @@ export default () => (
 </div>
 <CodeToggle>
 {`<!-- Green Toggle Border Button -->
-<ul className="button-group button-group--vertical button-group--gray button-group--border">
-  <li className="button--radio">
+<ul class="button-group button-group--vertical button-group--gray button-group--border">
+  <li class="button--radio">
     <input type="radio" name="options-gray" id="toggle-gray1" defaultChecked />
-    <label htmlFor="toggle-gray1" className="button">Top</label>
+    <label htmlFor="toggle-gray1" class="button">Top</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-gray" id="toggle-gray2" />
-    <label htmlFor="toggle-gray2" className="button">Middle</label>
+    <label htmlFor="toggle-gray2" class="button">Middle</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-gray" id="toggle-gray3" />
-    <label htmlFor="toggle-gray3" className="button">Bottom</label>
+    <label htmlFor="toggle-gray3" class="button">Bottom</label>
   </li>
 </ul>
 
@@ -500,9 +500,9 @@ export default () => (
     </div>
   </div>
   <CodeToggle>
-{`<button className="button button--round">Round Button</button>
-<button className="button button--smooth">Smooth Button</button>
-<button className="button button--square">Square Button</button>`}
+{`<button class="button button--round">Round Button</button>
+<button class="button button--smooth">Smooth Button</button>
+<button class="button button--square">Square Button</button>`}
   </CodeToggle>
 </div>
 </div>

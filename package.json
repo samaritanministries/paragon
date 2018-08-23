@@ -13,12 +13,10 @@
     "node-sass": "^4.9.0",
     "prismjs": "^1.15.0",
     "react": "^16.4.1",
-    "react-accessible-accordion": "^2.4.4",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-prism": "^4.3.2",
-    "react-router-dom": "^4.3.1",
-    "react-sanfona": "^1.2.2"
+    "react-router-dom": "^4.3.1"
   },
   "keywords": [
     "gatsby"
