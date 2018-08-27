@@ -91,33 +91,33 @@ class Sidebar extends React.Component {
               <img src={logo} alt="Dash the Donkey" style={{ width: "8rem" }}/>
             </div>
 
-            <div className="group-container">
+            <div className={this.state.showDashing ? 'group-container expanded' : 'group-container'}>
               <h4 className="group-title" onClick={this.toggleDashing}>Dashing</h4>
               <i className={this.state.showDashing ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
-              <div className={this.state.showDashing ? 'menu-group expanded' : 'menu-group'}>
+              <div className="menu-group">
                 <Link to="/" activeClassName="active">Principles</Link>
                 <Link to="/get-started" activeClassName="active">Get Started</Link>
                 <Link to="/resources" activeClassName="active">Resources</Link>
               </div>
             </div>
 
-            <div className="group-container">
+            <div className={this.state.showStyle ? 'group-container expanded' : 'group-container'}>
               <h4 className="group-title" onClick={this.toggleStyle}>Style</h4>
               <i className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
-              <div className={this.state.showStyle ? 'menu-group expanded' : 'menu-group'}>
+              <div className="menu-group">
                 <Link to="/style/color" activeClassName="active">Color</Link>
                 <Link to="/style/typography" activeClassName="active">Typography</Link>
               </div>
             </div>
 
-            <div className="group-container">
+            <div className={this.state.showComponents ? 'group-container expanded' : 'group-container'}>
 
               <h4 className="group-title" onClick={this.toggleComponents}>Components</h4>
               <i className={this.state.showComponents ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
-              <div className={this.state.showComponents ? 'menu-group expanded' : 'menu-group'}>
+              <div className="menu-group">
                 <Link to="/components/actions/code" activeClassName="active" title="actions">Actions</Link>
                 <Link to="/components/banner/code" activeClassName="active">Banner</Link>
                 <Link to="/components/cards/code" activeClassName="active">Cards</Link>

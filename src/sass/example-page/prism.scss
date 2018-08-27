@@ -107,6 +107,7 @@ pre[class*="language-"] {
 	margin: 0 0 1rem 0;
 	overflow: auto;
 	border-radius: 0 0 0.3rem 0.3rem;
+	display: none;
 
 	&:before {
 		content: "";
@@ -118,14 +119,14 @@ pre[class*="language-"] {
 		position: absolute;
 		top: 0.5rem; right: 0.5rem;
 	}
+
+	&.show {
+		display: block;
+	}
 }
 
 .example-container ~ pre[class*="language-"]:first-of-type {
 	border-radius: 0 0 0.3rem 0.3rem;
-}
-
-pre.language-html.show {
-	display: block;
 }
 
 pre.language-html:before {

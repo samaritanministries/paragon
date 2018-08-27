@@ -358,15 +358,15 @@ export default () => (
 <ul class="button-group button-group--blue">
   <li class="button--radio">
     <input type="radio" name="options-blue" id="blue1" defaultChecked />
-    <label htmlFor="blue1" className="button">Left</label>
+    <label for="blue1" class="button">Left</label>
   </li>
   <li class="button--radio">
     <input type="radio" name="options-blue" id="blue2" />
-    <label htmlFor="blue2" className="button">Middle</label>
+    <label for="blue2" class="button">Middle</label>
   </li>
   <li class="button--radio">
     <input type="radio" name="options-blue" id="blue3" />
-    <label htmlFor="blue3" className="button">Right</label>
+    <label for="blue3" class="button">Right</label>
   </li>
 </ul>`}</CodeToggle>
 </div>
@@ -414,31 +414,31 @@ export default () => (
 <ul class="button-group button-group--green button-group--border">
   <li class="button--radio">
     <input type="radio" name="options-green" id="green1" defaultChecked />
-    <label htmlFor="green1" class="button">1</label>
+    <label for="green1" class="button">1</label>
   </li>
   <li class="button--radio">
     <input type="radio" name="options-green" id="green2" />
-    <label htmlFor="green2" class="button">2</label>
+    <label for="green2" class="button">2</label>
   </li>
   <li class="button--radio">
     <input type="radio" name="options-green" id="green3" />
-    <label htmlFor="green3" class="button">3</label>
+    <label for="green3" class="button">3</label>
   </li>
   <li class="button--radio">
     <input type="radio" name="options-green" id="green4" />
-    <label htmlFor="green4" class="button">4</label>
+    <label for="green4" class="button">4</label>
   </li>
   <li class="button--radio">
     <input type="radio" name="options-green" id="green5" />
-    <label htmlFor="green5" class="button">5</label>
+    <label for="green5" class="button">5</label>
   </li>
   <li class="button--radio">
     <input type="radio" name="options-green" id="green6" />
-    <label htmlFor="green6" class="button">6</label>
+    <label for="green6" class="button">6</label>
   </li>
   <li class="button--radio">
     <input type="radio" name="options-green" id="green7" />
-    <label htmlFor="green7" class="button">7</label>
+    <label for="green7" class="button">7</label>
   </li>
 </ul>`}</CodeToggle>
 </div>
@@ -470,15 +470,15 @@ export default () => (
 <ul class="button-group button-group--vertical button-group--gray button-group--border">
   <li class="button--radio">
     <input type="radio" name="options-gray" id="toggle-gray1" defaultChecked />
-    <label htmlFor="toggle-gray1" class="button">Top</label>
+    <label for="toggle-gray1" class="button">Top</label>
   </li>
   <li class="button--radio">
     <input type="radio" name="options-gray" id="toggle-gray2" />
-    <label htmlFor="toggle-gray2" class="button">Middle</label>
+    <label for="toggle-gray2" class="button">Middle</label>
   </li>
   <li class="button--radio">
     <input type="radio" name="options-gray" id="toggle-gray3" />
-    <label htmlFor="toggle-gray3" class="button">Bottom</label>
+    <label for="toggle-gray3" class="button">Bottom</label>
   </li>
 </ul>
 

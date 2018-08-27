@@ -56,6 +56,17 @@ body {
   .group-container {
     position: relative;
     cursor: pointer;
+
+    &:last-of-type {
+      border-bottom: 2px solid $gray-200;
+    }
+
+    &.expanded {
+      .menu-group { display: block; }
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
   }
 
   .group-title {
@@ -193,10 +204,6 @@ body {
       color: $white;
       content: "Hide Code";
     }
-  }
-
-  & ~ pre {
-    display: none;
   }
 }
 
