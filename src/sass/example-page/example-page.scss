@@ -1,10 +1,17 @@
 @import '../dashing';
+@import 'color';
+@import 'typography';
+@import 'image';
 @import 'prism';
 
 $sidebar-width:  13rem;
 
 body {
   background-color: $white;
+}
+
+.content-container {
+  margin-top: 1rem;
 }
 
 .example-sidebar {

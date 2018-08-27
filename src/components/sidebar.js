@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import $ from 'jquery';
 
 import logo from "../img/dash-donkey.svg";
 
@@ -19,6 +20,12 @@ class Sidebar extends React.Component {
 
   componentDidMount() {
     this.loadStateWithLocalStorage();
+    // var loc = window.location.href;
+    // $(".menu-group a").each(function() {
+    //     if (loc.indexOf($(this).document.title) != -1) {
+    //         $(this).addClass("current");
+    //     }
+    // });
   }
 
    handleClick() {
@@ -107,8 +114,8 @@ class Sidebar extends React.Component {
               <i className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
-                <Link to="/style/color" activeClassName="active">Color</Link>
-                <Link to="/style/typography" activeClassName="active">Typography</Link>
+                <Link to="/style/color/code" activeClassName="active">Color</Link>
+                <Link to="/style/typography/code" activeClassName="active">Typography</Link>
               </div>
             </div>
 
