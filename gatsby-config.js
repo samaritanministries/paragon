@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby2',
+    title: 'Dashby',
+    description: `Style Framework for Samaritan Ministries`
   },
   plugins: [
     `gatsby-plugin-sass`,

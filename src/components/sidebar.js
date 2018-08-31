@@ -20,12 +20,15 @@ class Sidebar extends React.Component {
 
   componentDidMount() {
     this.loadStateWithLocalStorage();
-    // var loc = window.location.href;
-    // $(".menu-group a").each(function() {
-    //     if (loc.indexOf($(this).document.title) != -1) {
-    //         $(this).addClass("current");
-    //     }
-    // });
+
+    var url = window.location.href;
+
+    $(".menu-group a").each(function() {
+      var sidebarText = $(this).text().toLowerCase()
+        if (url.includes(sidebarText)) {
+          $(this).addClass("active");
+        }
+    });
   }
 
    handleClick() {
@@ -104,8 +107,8 @@ class Sidebar extends React.Component {
 
               <div className="menu-group">
                 <Link to="/" activeClassName="active">Principles</Link>
-                <Link to="/get-started" activeClassName="active">Get Started</Link>
-                <Link to="/resources" activeClassName="active">Resources</Link>
+                <Link to="/get-started">Get Started</Link>
+                <Link to="/resources">Resources</Link>
               </div>
             </div>
 
@@ -114,8 +117,8 @@ class Sidebar extends React.Component {
               <i className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
-                <Link to="/style/color/code" activeClassName="active">Color</Link>
-                <Link to="/style/typography/code" activeClassName="active">Typography</Link>
+                <Link to="/style/color/code">Color</Link>
+                <Link to="/style/typography/code">Typography</Link>
               </div>
             </div>
 
@@ -125,13 +128,13 @@ class Sidebar extends React.Component {
               <i className={this.state.showComponents ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
-                <Link to="/components/actions/code" activeClassName="active" title="actions">Actions</Link>
-                <Link to="/components/banner/code" activeClassName="active">Banner</Link>
-                <Link to="/components/cards/code" activeClassName="active">Cards</Link>
-                <Link to="/components/checkboxes/code" activeClassName="active">Checkboxes</Link>
-                <Link to="/components/clippy/code" activeClassName="active">Clippy</Link>
-                <Link to="/components/footer/code" activeClassName="active">Footer</Link>
-                <Link to="/components/forms/code" activeClassName="active">Forms</Link>
+                <Link to="/components/actions/code">Actions</Link>
+                <Link to="/components/banner/code">Banner</Link>
+                <Link to="/components/cards/code">Cards</Link>
+                <Link to="/components/checkboxes/code">Checkboxes</Link>
+                <Link to="/components/clippy/code">Clippy</Link>
+                <Link to="/components/footer/code">Footer</Link>
+                <Link to="/components/forms/code">Forms</Link>
               </div>
 
             </div>
