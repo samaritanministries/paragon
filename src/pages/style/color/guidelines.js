@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import $ from 'jquery';
+//import $ from 'jquery';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -9,15 +10,32 @@ import AppContent from '../../../components/appcontent'
 const currentPageName = "Color";
 const currentPageNameLower = currentPageName.toLowerCase();
 
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-}
+// function copyToClipboard(element) {
+//   // var $temp = $("<input>");
+//   // $("body").append($temp);
+//   // $temp.val($(element).text()).select();
+//   // document.execCommand("copy");
+//   var copiedText = document.getElementById("#ui-blue")
+//   copiedText.text().select();
+//   document.execCommand("copy");
+// }
+
+// componentDidMount() {
+//   // $('.allowCopy').click(function() {
+//   //      $(this).focus();
+//   //      $(this).select();
+//   //      document.execCommand('copy');
+//   // });
+// }
+
+
 
 class ColorGuidelines extends React.Component {
+
+    state = {
+      value: '',
+      copied: false,
+    };
 
     render() {
 
@@ -65,7 +83,9 @@ class ColorGuidelines extends React.Component {
               <span id="ui-blue" style={{ display: "none" }}>#3F70C9</span>
               <label>Usage</label>
               <span>Action, Active</span>
-              <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#ui-blue')">click to copy</button>
+              <CopyToClipboard text="#3F70C9" onCopy={() => this.setState({copied: true})}>
+                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
+              </CopyToClipboard>
             </div>
           </div>
         </div>
@@ -92,7 +112,9 @@ class ColorGuidelines extends React.Component {
               <label>Usage</label>
               <span>Success, Submit, New </span>
               <span id="ui-green" style={{ display: "none" }}>#09AA66</span>
-              <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#ui-green')">click to copy</button>
+              <CopyToClipboard text="#09AA66" onCopy={() => this.setState({copied: true})}>
+                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
+              </CopyToClipboard>
             </div>
           </div>
         </div>
@@ -119,7 +141,9 @@ class ColorGuidelines extends React.Component {
               <label>Usage</label>
               <span>Warning, Problem </span>
               <span id="ui-orange" style={{ display: "none" }}>#FFA11F</span>
-              <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#ui-orange')">click to copy</button>
+              <CopyToClipboard text="#FFA11F" onCopy={() => this.setState({copied: true})}>
+                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
+              </CopyToClipboard>
             </div>
           </div>
         </div>
@@ -146,7 +170,9 @@ class ColorGuidelines extends React.Component {
               <label>Usage</label>
               <span>Error, Danger </span>
               <span id="ui-red" style={{ display: "none" }}>#DA3D30</span>
-              <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#ui-red')">click to copy</button>
+              <CopyToClipboard text="#DA3D30" onCopy={() => this.setState({copied: true})}>
+                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
+              </CopyToClipboard>
             </div>
           </div>
         </div>
@@ -173,7 +199,9 @@ class ColorGuidelines extends React.Component {
               <label>Usage</label>
               <span>Login, Samaritan </span>
               <span id="ui-purple" style={{ display: "none" }}>#9F65AE</span>
-              <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#ui-purple')">click to copy</button>
+              <CopyToClipboard text="#9F65AE" onCopy={() => this.setState({copied: true})}>
+                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
+              </CopyToClipboard>
             </div>
           </div>
         </div>
@@ -200,7 +228,9 @@ class ColorGuidelines extends React.Component {
               <label>Usage</label>
               <span>Secondary, Standard </span>
               <span id="ui-gray" style={{ display: "none" }}>#D4D4D4</span>
-              <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#ui-gray')">click to copy</button>
+              <CopyToClipboard text="#D4D4D4" onCopy={() => this.setState({copied: true})}>
+                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
+              </CopyToClipboard>
             </div>
           </div>
         </div>
@@ -220,9 +250,11 @@ class ColorGuidelines extends React.Component {
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--gray-500">Gray</div>
               <div className="card-color--small color--gray-50">
-                <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-50')">click to copy</button>
-                </div>
+                <CopyToClipboard text="#F2F2F2">
+                  <div className="color-swatch">
+                    <button className="button button--small button--transparent button--white button--copy">click to copy</button>
+                  </div>
+                </CopyToClipboard>
                 <div className="color-text">
                   <div className="color-detail">
                     <label>HEX Code</label>

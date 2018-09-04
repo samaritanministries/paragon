@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
 
 import Sidebar from './sidebar'
 import '../sass/example-page/example-page.scss'

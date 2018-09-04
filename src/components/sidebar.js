@@ -21,8 +21,8 @@ class Sidebar extends React.Component {
   componentDidMount() {
     this.loadStateWithLocalStorage();
 
+    //Loop through sidebar links and see if active
     var url = window.location.href;
-
     $(".menu-group a").each(function() {
       var sidebarText = $(this).text().toLowerCase()
         if (url.includes(sidebarText)) {
@@ -78,10 +78,6 @@ class Sidebar extends React.Component {
     }
   }
 
-  isLinkActive() {
-    return true
-  }
-
   render() {
 
     return (
@@ -107,7 +103,7 @@ class Sidebar extends React.Component {
 
               <div className="menu-group">
                 <Link to="/" activeClassName="active">Principles</Link>
-                <Link to="/get-started">Get Started</Link>
+                <Link to="/get-started" activeClassName="active">Get Started</Link>
                 <Link to="/resources">Resources</Link>
               </div>
             </div>
