@@ -272,6 +272,10 @@ blockquote {
     color: #232323;
   }
 
+  p {
+    margin-top: 0.5rem;
+  }
+
   &.tips { border-left: 4px solid $green; }
   .tips-list {
     margin: -1.3rem 0 0 0;
@@ -280,4 +284,46 @@ blockquote {
   &.warning { border-left: 4px solid $orange; }
   &.caution { border-left: 4px solid $red; }
   &.related { border-left: 4px solid $blue; }
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  width: 50px;
+}
+
+//Banner
+.banner-container {
+  .card-banner {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+//Cards
+.card--example-footer {
+  border-radius: 0 0 10px 10px;
+  margin: 0;
+}
+
+.card--example-titles {
+  margin: 0;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+  flex-grow: 1;
+  h3 {
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+}
+
+//Checkboxes
+
+.example--checkbox {
+  display: inline-flex;
+  margin-right: 2rem;
+  line-height: 1.5rem;
 }
