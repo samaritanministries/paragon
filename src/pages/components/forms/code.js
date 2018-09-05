@@ -14,7 +14,11 @@ export default () => (
       <SubNav pageName={currentPageNameLower}/>
     </header>
     <AppContent>
-      <p>Some Banner Code</p>
+      <div className="row">
+        <div className="column column--full">
+
+        </div>
+      </div>
     </AppContent>
   </Layout>
 )
