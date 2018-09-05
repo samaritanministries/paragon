@@ -25,7 +25,7 @@ export default () => (
     		  <fieldset class="column column--third">
     		    <label>Checkboxes</label>
     		    <div class="checkbox--custom">
-    		      <input type="checkbox" id="dashing-checkbox1--custom"/>
+    		      <input type="checkbox" id="dashing-checkbox1--custom" defaultChecked={true}/>
     		      <label for="dashing-checkbox1--custom">Option 1</label>
     		    </div>
     		    <div class="checkbox--custom">
@@ -41,7 +41,7 @@ export default () => (
     		  <fieldset class="column column--full">
     		    <label>Disabled Checkbox</label>
     		    <div class="checkbox--custom">
-    		      <input type="checkbox" id="dashing-checkbox--custom-disabled" disabled checked/>
+    		      <input type="checkbox" id="dashing-checkbox--custom-disabled" disabled defaultChecked={true}/>
     		      <label for="dashing-checkbox--custom-disabled">Disabled</label>
     		    </div>
     		    <div class="checkbox--custom">
@@ -53,7 +53,7 @@ export default () => (
     		  <fieldset class="column column--full has-error">
     		    <label>Checkboxes with Errors</label>
     		    <div class="checkbox--custom">
-    		      <input type="checkbox" id="dashing-checkbox--error1"/>
+    		      <input type="checkbox" id="dashing-checkbox--error1" defaultChecked={true}/>
     		      <label for="dashing-checkbox--error1">Option 1</label>
     		    </div>
     		    <div class="checkbox--custom">
@@ -69,7 +69,7 @@ export default () => (
     		  <fieldset class="column column--full has-warning">
     		    <label>Checkboxes with Warnings</label>
     		    <div class="checkbox--custom">
-    		      <input type="checkbox" id="dashing-checkbox--warning1" />
+    		      <input type="checkbox" id="dashing-checkbox--warning1" defaultChecked={true}/>
     		      <label for="dashing-checkbox--warning1">Option 1</label>
     		    </div>
     		    <div class="checkbox--custom">
@@ -85,7 +85,7 @@ export default () => (
     		  <fieldset class="column column--full">
     		    <label>Inline Checkboxes</label>
     		    <div class="checkbox--custom inline">
-    		      <input type="checkbox" id="dashing-checkbox--custom-inline1" />
+    		      <input type="checkbox" id="dashing-checkbox--custom-inline1" defaultChecked={true}/>
     		      <label for="dashing-checkbox--custom-inline1">Option 1</label>
     		    </div>
     		    <div class="checkbox--custom inline">
@@ -195,7 +195,7 @@ $checkbox--icon-disabled: $gray-500 !default; //Color of check icon when checked
     		  <fieldset class="column column--full">
     		    <label>Checkbox Card</label>
     		    <div class="checkbox-card">
-    		      <input type="checkbox" name="checkbox-inline" id="checkbox-inline1" />
+    		      <input type="checkbox" name="checkbox-inline" id="checkbox-inline1" defaultChecked={true}/>
     		      <label for="checkbox-inline1" class="card">Option 1</label>
     		    </div>
     		    <div class="checkbox-card">
@@ -239,7 +239,7 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox`}
     			<fieldset class="column column--full">
     				<label>Small Checkbox Card</label>
     				<div class="checkbox-card checkbox-card--small">
-    					<input type="checkbox" name="checkbox-small" id="checkbox-small1" />
+    					<input type="checkbox" name="checkbox-small" id="checkbox-small1" defaultChecked={true}/>
     					<label for="checkbox-small1" class="card">Option 1</label>
     				</div>
     				<div class="checkbox-card checkbox-card--small">
@@ -277,7 +277,7 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox`}
     		  <fieldset class="column column--half">
     		    <label>Block Checkbox Card</label>
     		    <div class="checkbox-card is-block">
-    		      <input type="checkbox" name="checkbox-block" id="checkbox-block1" />
+    		      <input type="checkbox" name="checkbox-block" id="checkbox-block1" defaultChecked={true}/>
     		      <label for="checkbox-block1" class="card">Option 1</label>
     		    </div>
     		    <div class="checkbox-card is-block">
