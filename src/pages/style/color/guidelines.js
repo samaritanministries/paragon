@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-//import $ from 'jquery';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import $ from 'jquery';
+//import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -10,32 +10,20 @@ import AppContent from '../../../components/appcontent'
 const currentPageName = "Color";
 const currentPageNameLower = currentPageName.toLowerCase();
 
-// function copyToClipboard(element) {
-//   // var $temp = $("<input>");
-//   // $("body").append($temp);
-//   // $temp.val($(element).text()).select();
-//   // document.execCommand("copy");
-//   var copiedText = document.getElementById("#ui-blue")
-//   copiedText.text().select();
-//   document.execCommand("copy");
-// }
-
-// componentDidMount() {
-//   // $('.allowCopy').click(function() {
-//   //      $(this).focus();
-//   //      $(this).select();
-//   //      document.execCommand('copy');
-//   // });
-// }
-
-
-
 class ColorGuidelines extends React.Component {
 
-    state = {
-      value: '',
-      copied: false,
-    };
+  constructor(props) {
+    super(props);
+    this.copyToClipboard = this.copyToClipboard.bind(this);
+  }
+
+  copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+  }
 
     render() {
 
@@ -83,9 +71,7 @@ class ColorGuidelines extends React.Component {
               <span id="ui-blue" style={{ display: "none" }}>#3F70C9</span>
               <label>Usage</label>
               <span>Action, Active</span>
-              <CopyToClipboard text="#3F70C9" onCopy={() => this.setState({copied: true})}>
-                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
-              </CopyToClipboard>
+              <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#ui-blue')}>click to copy</button>
             </div>
           </div>
         </div>
@@ -112,9 +98,7 @@ class ColorGuidelines extends React.Component {
               <label>Usage</label>
               <span>Success, Submit, New </span>
               <span id="ui-green" style={{ display: "none" }}>#09AA66</span>
-              <CopyToClipboard text="#09AA66" onCopy={() => this.setState({copied: true})}>
-                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
-              </CopyToClipboard>
+              <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#ui-green')}>click to copy</button>
             </div>
           </div>
         </div>
@@ -141,9 +125,7 @@ class ColorGuidelines extends React.Component {
               <label>Usage</label>
               <span>Warning, Problem </span>
               <span id="ui-orange" style={{ display: "none" }}>#FFA11F</span>
-              <CopyToClipboard text="#FFA11F" onCopy={() => this.setState({copied: true})}>
-                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
-              </CopyToClipboard>
+              <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#ui-orange')}>click to copy</button>
             </div>
           </div>
         </div>
@@ -170,9 +152,7 @@ class ColorGuidelines extends React.Component {
               <label>Usage</label>
               <span>Error, Danger </span>
               <span id="ui-red" style={{ display: "none" }}>#DA3D30</span>
-              <CopyToClipboard text="#DA3D30" onCopy={() => this.setState({copied: true})}>
-                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
-              </CopyToClipboard>
+              <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#ui-red')}>click to copy</button>
             </div>
           </div>
         </div>
@@ -199,9 +179,7 @@ class ColorGuidelines extends React.Component {
               <label>Usage</label>
               <span>Login, Samaritan </span>
               <span id="ui-purple" style={{ display: "none" }}>#9F65AE</span>
-              <CopyToClipboard text="#9F65AE" onCopy={() => this.setState({copied: true})}>
-                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
-              </CopyToClipboard>
+              <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#ui-purple')}>click to copy</button>
             </div>
           </div>
         </div>
@@ -228,9 +206,7 @@ class ColorGuidelines extends React.Component {
               <label>Usage</label>
               <span>Secondary, Standard </span>
               <span id="ui-gray" style={{ display: "none" }}>#D4D4D4</span>
-              <CopyToClipboard text="#D4D4D4" onCopy={() => this.setState({copied: true})}>
-                <button className="button button--small button--transparent button--white button--copy">click to copy</button>
-              </CopyToClipboard>
+              <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#ui-gray')}>click to copy</button>
             </div>
           </div>
         </div>
@@ -250,11 +226,11 @@ class ColorGuidelines extends React.Component {
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--gray-500">Gray</div>
               <div className="card-color--small color--gray-50">
-                <CopyToClipboard text="#F2F2F2">
+
                   <div className="color-swatch">
-                    <button className="button button--small button--transparent button--white button--copy">click to copy</button>
+                    <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-50')}>click to copy</button>
                   </div>
-                </CopyToClipboard>
+
                 <div className="color-text">
                   <div className="color-detail">
                     <label>HEX Code</label>
@@ -270,7 +246,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-100">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-100')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-100')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -287,7 +263,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-150">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-150')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-150')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -304,7 +280,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-200">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-200')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-200')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -321,7 +297,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-250">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-250')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-250')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -338,7 +314,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-300">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-300')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-300')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -355,7 +331,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-400">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-400')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-400')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -372,7 +348,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-500">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-500')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-500')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -389,7 +365,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-600">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-600')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-600')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -406,7 +382,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-700">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-700')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-700')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -423,7 +399,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-800">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-800')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-800')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -440,7 +416,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-900">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-900')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-900')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -465,7 +441,7 @@ class ColorGuidelines extends React.Component {
               <div className="card--header card--header--color has-border color--gray-500c">Cool Gray</div>
               <div className="card-color--small color--gray-50c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-50c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-50c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -482,7 +458,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-100c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-100c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-100c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -499,7 +475,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-150c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-150c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-150c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -516,7 +492,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-200c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-200c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-200c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -533,7 +509,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-250c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-250c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-250c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -550,7 +526,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-300c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-300c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-300c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -567,7 +543,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-400c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-400c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-400c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -584,7 +560,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-500c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-500c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-500c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -601,7 +577,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-600c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-600c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-600c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -618,7 +594,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-700c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-700c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-700c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -635,7 +611,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-800c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-800c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-800c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -652,7 +628,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--gray-900c">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--gray-900c')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--gray-900c')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -677,7 +653,7 @@ class ColorGuidelines extends React.Component {
               <div className="card--header card--header--color has-border color--blue">Blue</div>
               <div className="card-color--small color--blue-50">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--blue-50')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--blue-50')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -694,7 +670,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--blue-100">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--blue-100')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--blue-100')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -711,7 +687,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--blue-200">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--blue-200')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--blue-200')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -728,7 +704,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--blue-300">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--blue-300')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--blue-300')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -745,7 +721,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--blue-400">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--blue-400')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--blue-400')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -762,7 +738,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--blue-500">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--blue-500')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--blue-500')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -779,7 +755,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--blue-600">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--blue-600')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--blue-600')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -796,7 +772,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--blue-700">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--blue-700')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--blue-700')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -813,7 +789,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--blue-800">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--blue-800')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--blue-800')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -830,7 +806,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--blue-900">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--blue-900')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--blue-900')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -855,7 +831,7 @@ class ColorGuidelines extends React.Component {
               <div className="card--header card--header--color has-border color--green">Green</div>
               <div className="card-color--small color--green-50">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--green-50')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--green-50')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -872,7 +848,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--green-100">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--green-100')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--green-100')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -889,7 +865,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--green-200">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--green-200')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--green-200')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -906,7 +882,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--green-300">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--green-300')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--green-300')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -923,7 +899,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--green-400">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--green-400')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--green-400')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -940,7 +916,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--green-500">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--green-500')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--green-500')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -957,7 +933,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--green-600">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--green-600')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--green-600')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -974,7 +950,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--green-700">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--green-700')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--green-700')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -991,7 +967,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--green-800">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--green-800')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--green-800')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1008,7 +984,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--green-900">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--green-900')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--green-900')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1033,7 +1009,7 @@ class ColorGuidelines extends React.Component {
               <div className="card--header card--header--color has-border color--orange">Orange</div>
               <div className="card-color--small color--orange-50">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--orange-50')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--orange-50')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1050,7 +1026,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--orange-100">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--orange-100')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--orange-100')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1067,7 +1043,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--orange-200">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--orange-200')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--orange-200')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1084,7 +1060,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--orange-300">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--orange-300')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--orange-300')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1101,7 +1077,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--orange-400">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--orange-400')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--orange-400')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1118,7 +1094,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--orange-500">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--orange-500')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--orange-500')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1135,7 +1111,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--orange-600">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--orange-600')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--orange-600')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1152,7 +1128,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--orange-700">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--orange-700')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--orange-700')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1169,7 +1145,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--orange-800">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--orange-800')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--orange-800')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1186,7 +1162,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--orange-900">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--orange-900')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--orange-900')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1211,7 +1187,7 @@ class ColorGuidelines extends React.Component {
               <div className="card--header card--header--color has-border color--red">Red</div>
               <div className="card-color--small color--red-50">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--red-50')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--red-50')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1228,7 +1204,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--red-100">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--red-100')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--red-100')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1245,7 +1221,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--red-200">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--red-200')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--red-200')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1262,7 +1238,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--red-300">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--red-300')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--red-300')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1279,7 +1255,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--red-400">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--red-400')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--red-400')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1296,7 +1272,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--red-500">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--red-500')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--red-500')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1313,7 +1289,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--red-600">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--red-600')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--red-600')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1330,7 +1306,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--red-700">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--red-700')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--red-700')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1347,7 +1323,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--red-800">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--red-800')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--red-800')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1364,7 +1340,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--red-900">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--red-900')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--red-900')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1389,7 +1365,7 @@ class ColorGuidelines extends React.Component {
               <div className="card--header card--header--color has-border color--purple">Purple</div>
               <div className="card-color--small color--purple-50">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--purple-50')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--purple-50')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1406,7 +1382,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--purple-100">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--purple-100')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--purple-100')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1423,7 +1399,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--purple-200">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--purple-200')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--purple-200')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1440,7 +1416,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--purple-300">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--purple-300')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--purple-300')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1457,7 +1433,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--purple-400">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--purple-400')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--purple-400')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1474,7 +1450,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--purple-500">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--purple-500')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--purple-500')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1491,7 +1467,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--purple-600">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--purple-600')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--purple-600')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1508,7 +1484,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--purple-700">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--purple-700')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--purple-700')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1525,7 +1501,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--purple-800">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--purple-800')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--purple-800')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
@@ -1542,7 +1518,7 @@ class ColorGuidelines extends React.Component {
 
               <div className="card-color--small color--purple-900">
                 <div className="color-swatch">
-                  <button className="button button--small button--transparent button--white button--copy" onClick="copyToClipboard('#color--purple-900')">click to copy</button>
+                  <button className="button button--small button--transparent button--white button--copy" onClick={() => this.copyToClipboard('#color--purple-900')}>click to copy</button>
                 </div>
                 <div className="color-text">
                   <div className="color-detail">
