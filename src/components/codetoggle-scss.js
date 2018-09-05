@@ -1,7 +1,7 @@
 import React from 'react'
 import Prism from 'prismjs';
 
-class CodeToggle extends React.Component {
+class CodeToggleSCSS extends React.Component {
 
   constructor(props) {
     super(props);
@@ -26,13 +26,10 @@ class CodeToggle extends React.Component {
   render() {
 
     return (
-      <div className={this.state.showCode ? 'group-open' : ''}>
-        <div onClick={this.toggleCode} className={this.state.showCode ? 'code-toggle is-open' : 'code-toggle'}><i className="icon--code"></i></div>
-        <pre className={this.state.showCode ? 'language-html show' : 'language-html'}>
-          <code className="language-html">{this.props.children}</code>
-        </pre>
-      </div>
+      <pre className="language-scss">
+        <code className="language-scss">{this.props.children}</code>
+      </pre>
     )
   }
 }
-export default CodeToggle;
+export default CodeToggleSCSS;

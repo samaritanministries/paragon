@@ -31,7 +31,7 @@ export default () => (
       <div className="row">
         <div className="column column--full">
           <h2 className="has-number has-number--two">Type Structure</h2>
-          <p>Keeping a well structured typographic scale is extremely important for legibility and hierarchy in your type. While following a certain scale will never replace the eye of a designer,  it is considered responsible design to showcase rationale behind your design choices. Our typographic structure is loosely based on a <a href="http://alistapart.com/article/more-meaningful-typography">major third scale (1:1.25 ratio)</a>, providing a comfortable range between the h1 and small elements.</p>
+          <p>Keeping a well structured typographic scale is extremely important for legibility and hierarchy in your type. While following a certain scale will never replace the eye of a designer,  it is considered responsible design to showcase rationale behind your design choices. Our typographic structure is loosely based on a <a href="http://alistapart.com/article/more-meaningful-typography" target="_blank" rel="noopener noreferrer">major third scale (1:1.25 ratio)</a>, providing a comfortable range between the h1 and small elements.</p>
 
           <div className="table--container has-border is-hidden_tablet is-hidden_desktop" style={{ marginBottom: "2rem" }}>
             <table className="table has-dividers">
@@ -159,7 +159,7 @@ export default () => (
 
         </div>
       </div>
-      
+
   </AppContent>
 </Layout>
 )

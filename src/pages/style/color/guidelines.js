@@ -38,17 +38,11 @@ class ColorGuidelines extends React.Component {
       <div className="row">
         <div className="column column--full">
           <p className="intro">Samaritan UI elements that are used to display or contain textual content are required to meet <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head" target="_blank" rel="noopener noreferrer">WCAG Contrast Level AA</a> standards. Samaritan Brand and UI Themes have been tested against both Level AA and Level AAA standards.</p>
-        </div>
-      </div>
 
-      <div className="row">
-        <div className="column column--full">
           <h2 className="has-number has-number--one no-margin--top">UI Theme</h2>
           <p>Use the UI Theme when interacting with actionable items such as buttons, links and clickable banners.</p>
         </div>
-      </div>
 
-      <div className="row">
         <div className="column column--half">
           <div className="card card-color--large relative color--ui-blue">
             <div className="color-left">
@@ -216,12 +210,8 @@ class ColorGuidelines extends React.Component {
           <p style={{ marginBottom: "0.5rem" }}>When adjusting the color of your type, be sure to provide clear contrast between text and background colors. Review <a href="{{ site.url }}/product/principles/accessibility/">accessibility guidelines</a> for more information.</p>
           <Link className="button button--border button--smooth" to="accessibility">Review Guideline</Link>
         </blockquote>
-      </div>
 
-      <div className="row">
-        <div className="column column--full">
         {/* GRAY THEME */}
-        <div className="row">
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--gray-500">Gray</div>
@@ -432,10 +422,8 @@ class ColorGuidelines extends React.Component {
               </div>
             </div>
           </div>
-        </div>
 
         {/* COOL GRAY THEME */}
-        <div className="row">
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--gray-500c">Cool Gray</div>
@@ -644,10 +632,8 @@ class ColorGuidelines extends React.Component {
               </div>
             </div>
           </div>
-        </div>
 
         {/* BLUE THEME */}
-        <div className="row">
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--blue">Blue</div>
@@ -822,10 +808,8 @@ class ColorGuidelines extends React.Component {
               </div>
             </div>
           </div>
-        </div>
 
         {/* GREEN THEME */}
-        <div className="row">
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--green">Green</div>
@@ -1000,10 +984,9 @@ class ColorGuidelines extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+
 
         {/* ORANGE THEME */}
-        <div className="row">
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--orange">Orange</div>
@@ -1178,10 +1161,8 @@ class ColorGuidelines extends React.Component {
               </div>
             </div>
           </div>
-        </div>
 
         {/* RED THEME */}
-        <div className="row">
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--red">Red</div>
@@ -1356,10 +1337,9 @@ class ColorGuidelines extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+
 
         {/* PURPLE THEME */}
-        <div className="row">
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--purple">Purple</div>
@@ -1534,8 +1514,6 @@ class ColorGuidelines extends React.Component {
               </div>
             </div>
           </div>
-        </div>
-        </div>
       </div>
 
     </AppContent>
