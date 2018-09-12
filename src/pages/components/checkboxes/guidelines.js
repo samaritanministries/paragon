@@ -23,11 +23,11 @@ export default () => (
           <div className="image-container double-padding">
             <fieldset className="column column--full">
               <div className="example--checkbox">
-                <input type="checkbox" id="dashing-checkbox--custom-inline1" />
+                <input type="checkbox" id="dashing-checkbox--custom-inline1" defaultChecked={true}/>
                 <label for="dashing-checkbox--custom-inline1">Default Checkbox</label>
               </div>
               <div className="checkbox--custom inline">
-                <input type="checkbox" id="dashing-checkbox--custom-inline2" checked="checked"/>
+                <input type="checkbox" id="dashing-checkbox--custom-inline2" defaultChecked={true}/>
                 <label for="dashing-checkbox--custom-inline2">Dashing Checkbox</label>
               </div>
             </fieldset>
@@ -47,7 +47,7 @@ export default () => (
                     <i className="dashing-icon dashing-icon--alert-filled dashing-icon--red"></i>
                   </div>
                   <div className="checkbox--custom">
-                    <input type="checkbox" id="dashing-checkbox--positivelanguage1" checked/>
+                    <input type="checkbox" id="dashing-checkbox--positivelanguage1" defaultChecked={true}/>
                     <label for="dashing-checkbox--positivelanguage1">No note was received</label>
                   </div>
                 </div>
@@ -56,7 +56,7 @@ export default () => (
                     <i className="dashing-icon dashing-icon--checkmark-filled dashing-icon--green"></i>
                   </div>
                   <div className="checkbox--custom">
-                    <input type="checkbox" id="dashing-checkbox--positivelanguage2" checked/>
+                    <input type="checkbox" id="dashing-checkbox--positivelanguage2" defaultChecked={true}/>
                     <label for="dashing-checkbox--positivelanguage2">I received a note</label>
                   </div>
                 </div>
@@ -68,7 +68,7 @@ export default () => (
             <div className="image-container double-padding">
               <fieldset className="column column--full">
                 <div className="checkbox--custom">
-                  <input type="checkbox" id="dashing-checkbox--save-changes1" checked/>
+                  <input type="checkbox" id="dashing-checkbox--save-changes1" defaultChecked={true}/>
                   <label for="dashing-checkbox--save-changes1">Opt-in to Paperless Notifications</label>
                 </div>
                 <button className="button--smooth" style={{ marginTop: "1rem" }}>Save Settings</button>
@@ -84,7 +84,7 @@ export default () => (
               <div className="row">
                 <div className="column column--third">
                   <div className="checkbox-card" style={{ display: "block" }}>
-                    <input type="checkbox" name="checkbox-inline" id="checkbox-inline1" checked/>
+                    <input type="checkbox" name="checkbox-inline" id="checkbox-inline1" defaultChecked={true}/>
                     <label for="checkbox-inline1" className="card" style={{ display: "block" }}>
                       <span style={{ display: "inline-table" }}>
                         <span style={{ fontSize: "1rem", display: "block" }}>Ryan Fitz</span>
