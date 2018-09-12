@@ -80,12 +80,13 @@ $tablet:        "all and (min-width: 40em)" !default;
 
 code[class*="language-"],
 pre[class*="language-"] {
+	transition: line-height 0.3s;
 	border-radius: 5px;
   color: $white;
   font-family: monaco, 'Inconsolata', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
-  line-height: 1.4rem;
+	line-height: 0rem;
   padding: 0;
   top: 0;
   position: relative;
@@ -99,6 +100,9 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+	&.show {
+		line-height: 1.4rem;
+	}
 }
 
 /* Code blocks */
@@ -107,7 +111,8 @@ pre[class*="language-"] {
 	margin: 0 0 1rem 0;
 	overflow: auto;
 	border-radius: 0 0 0.3rem 0.3rem;
-	display: none;
+	top: -2rem;
+  z-index: -1;
 
 	&:before {
 		content: "";
@@ -121,7 +126,8 @@ pre[class*="language-"] {
 	}
 
 	&.show {
-		display: block;
+		top: 0;
+    z-index: 1;
 	}
 }
 
