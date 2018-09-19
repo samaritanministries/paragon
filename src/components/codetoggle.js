@@ -29,7 +29,7 @@ class CodeToggle extends React.Component {
       <div className={this.state.showCode ? 'group-open' : ''}>
         <div onClick={this.toggleCode} className={this.state.showCode ? 'code-toggle is-open' : 'code-toggle'}><i className="icon--code"></i></div>
         <pre className={this.state.showCode ? 'language-html show' : 'language-html'}>
-          <code className="language-html">{this.props.children}</code>
+          <code className={this.state.showCode ? 'language-html show' : 'language-html'}>{this.props.children}</code>
         </pre>
       </div>
     )

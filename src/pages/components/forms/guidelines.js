@@ -4,7 +4,7 @@ import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 
-const currentPageName = "Footer";
+const currentPageName = "Forms";
 const currentPageNameLower = currentPageName.toLowerCase();
 
 export default () => (
@@ -14,7 +14,11 @@ export default () => (
       <SubNav pageName={currentPageNameLower}/>
     </header>
     <AppContent>
-      <p>Some Banner Guidelines</p>
+      <div className="row">
+        <div className="column column--full">
+
+        </div>
+      </div>
     </AppContent>
   </Layout>
 )
