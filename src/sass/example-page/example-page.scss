@@ -356,3 +356,31 @@ blockquote {
   margin: 0;
 }
 .column--nested.column--example { margin: 0; }
+
+//Icons Example Page
+.example--container {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.example--icon-container {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0.5rem;
+  width: 6rem;
+  height: 6rem;
+  padding: 1rem 0.2rem;
+  text-align: center;
+}
+
+.example--icon-container:hover { background-color: #E0E0E0; }
+.example--icon-container .dashing-icon:before { font-size: 32px; }
+
+.example--caption {
+  color: #555555;
+  display: block;
+  font-size: 12px;
+  margin-top: 1rem;
+}
