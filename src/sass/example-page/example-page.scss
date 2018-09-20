@@ -3,6 +3,7 @@
 @import 'typography';
 @import 'image';
 @import 'prism';
+@import 'example-css-grid';
 
 $sidebar-width:  13rem;
 
@@ -333,3 +334,25 @@ blockquote {
   margin-right: 2rem;
   line-height: 1.5rem;
 }
+
+//Grid Example Styles
+.row--example {
+  background-color: rgba(157, 192, 255, 0.5);
+  margin: 2rem auto;
+}
+.column--example {
+  font-size: 16px;
+  text-align: center;
+}
+.grid--example {
+  background-color: #6A8DD3;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+.column--nested .grid--example { background-color: #2DB16C; }
+.row--example.row--nested {
+  background-color: rgba(45, 177, 108, 0.4);
+  margin: 0;
+}
+.column--nested.column--example { margin: 0; }
