@@ -219,6 +219,9 @@ body {
   ~.language-scss {
     display: block;
   }
+  ~.language-scss code[class*="language-"] {
+    display: block;
+  }
 }
 
 .code {
