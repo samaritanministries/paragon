@@ -7,6 +7,10 @@ const SubNav = ({ pageName, sectionName }) => {
     sectionName = "components"
   }
 
+  if (pageName === "css grid") {
+    pageName = "css-grid"
+  }
+
   const getPageName = pageName;
   const getSectionName = sectionName;
 

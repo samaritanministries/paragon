@@ -25,7 +25,9 @@ class Sidebar extends React.Component {
     var url = window.location.href;
     $(".menu-group a").each(function() {
       var sidebarText = $(this).text().toLowerCase()
-        if (url.includes(sidebarText)) {
+        if (url.includes("css-grid")) {
+          $('#css-grid').addClass("active");
+        } else if ((url.includes(sidebarText))) {
           $(this).addClass("active");
         }
     });
@@ -131,6 +133,8 @@ class Sidebar extends React.Component {
                 <Link to="/components/clippy/code">Clippy</Link>
                 <Link to="/components/footer/code">Footer</Link>
                 <Link to="/components/forms/code">Forms</Link>
+                <Link to="/components/css-grid/code" id="css-grid">CSS Grid</Link>
+                <Link to="/components/grid/code">Grid</Link>
               </div>
 
             </div>
