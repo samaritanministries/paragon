@@ -122,10 +122,13 @@ pre[class*="language-"] {
 		top: 0.5rem; right: 0.5rem;
 	}
 }
-
-.example-container ~ pre[class*="language-"]:first-of-type {
-	border-radius: 0 0 0.3rem 0.3rem;
+pre.language-scss {
+	border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
 }
+
+// .example-container ~ pre[class*="language-"]:first-of-type {
+// 	border-radius: 0 0 0.3rem 0.3rem;
+// }
 
 pre.language-html:before {
   content: "html";

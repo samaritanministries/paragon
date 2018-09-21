@@ -406,4 +406,14 @@ blockquote {
   +.group-open .language-html {
     display: none;
   }
+  +.group-open +.language-scss {
+    border-radius: 0 0 0.3rem 0.3rem;
+  }
+}
+
+//Radio
+.example--radio {
+  display: inline-block;
+  margin-right: 2rem;
+  line-height: 1.5rem;
 }
