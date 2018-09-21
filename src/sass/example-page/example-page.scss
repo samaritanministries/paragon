@@ -401,3 +401,9 @@ blockquote {
     color: #FFFFFF;
   }
 }
+
+.hide-HTML-code {
+  +.group-open .language-html {
+    display: none;
+  }
+}

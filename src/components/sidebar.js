@@ -27,6 +27,8 @@ class Sidebar extends React.Component {
       var sidebarText = $(this).text().toLowerCase()
         if (url.includes("css-grid")) {
           $('#css-grid').addClass("active");
+        } else if (url.includes("progress-stepper")) {
+          $('#progress-stepper').addClass("active");
         } else if ((url.includes(sidebarText))) {
           $(this).addClass("active");
         }
@@ -138,6 +140,7 @@ class Sidebar extends React.Component {
                 <Link to="/components/icons/code">Icons</Link>
                 <Link to="/components/lists/code">Lists</Link>
                 <Link to="/components/navigation/code">Navigation</Link>
+                <Link to="/components/progress-stepper/code" id="progress-stepper">Progress Stepper</Link>
               </div>
 
             </div>
