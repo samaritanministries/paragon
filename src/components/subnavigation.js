@@ -6,11 +6,13 @@ const SubNav = ({ pageName, sectionName }) => {
   if (sectionName == null) {
     sectionName = "components"
   }
-
+  //For Component Names with a space
   if (pageName === "css grid") {
     pageName = "css-grid"
   } else if (pageName === "progress stepper") {
     pageName = "progress-stepper"
+  } else if (pageName === "radio buttons") {
+    pageName = "radio-buttons"
   }
 
   const getPageName = pageName;
