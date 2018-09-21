@@ -9,6 +9,8 @@ const SubNav = ({ pageName, sectionName }) => {
 
   if (pageName === "css grid") {
     pageName = "css-grid"
+  } else if (pageName === "progress stepper") {
+    pageName = "progress-stepper"
   }
 
   const getPageName = pageName;
