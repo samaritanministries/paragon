@@ -387,3 +387,17 @@ blockquote {
   font-size: 12px;
   margin-top: 1rem;
 }
+
+//Navigation
+.example-page--app-navigation {
+  li a {
+    color: #FFFFFF !important;
+    opacity: 0.7;
+    &.active { border-bottom-color: #FFFFFF; opacity: 1; color: #FFFFFF !important; }
+  }
+}
+.example-button--navigation {
+  &::before {
+    color: #FFFFFF;
+  }
+}
