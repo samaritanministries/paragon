@@ -216,10 +216,10 @@ body {
 }
 
 .group-open {
-  ~.language-scss {
+  +.language-scss {
     display: block;
   }
-  ~.language-scss code[class*="language-"] {
+  +.language-scss code[class*="language-"] {
     display: block;
   }
 }
