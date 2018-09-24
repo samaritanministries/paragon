@@ -146,7 +146,8 @@ class Sidebar extends React.Component {
                 <Link to="/components/radio-buttons/code" id="radio-buttons">Radio Buttons</Link>
                 <Link to="/components/spinner/code">Spinner</Link>
                 <Link to="/components/tables/code">Tables</Link>
-
+                <Link to="/components/tags/code">Tags</Link>
+                <Link to="/components/toggle/code">Toggle</Link>
               </div>
 
             </div>
