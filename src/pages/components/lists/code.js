@@ -38,10 +38,10 @@ export default () => (
 </ol>`}
           </CodeToggle>
 
-          <h2 class="example-header">Custom Colored Lists <button class="button button--transparent button--copy-link" data-id="copyurl" id="ordered-lists" /></h2>
-          <div class="row example-container">
-            <div class="column column--full" style={{ overflow: "auto" }}>
-              <ol class="ordered-list--custom ordered-list--sharing-blue">
+          <h2 className="example-header">Custom Colored Lists <button className="button button--transparent button--copy-link" data-id="copyurl" id="ordered-lists" /></h2>
+          <div className="row example-container">
+            <div className="column column--full" style={{ overflow: "auto" }}>
+              <ol className="ordered-list--custom ordered-list--sharing-blue">
                 <li>This is a custom colored list item</li>
               </ol>
             </div>

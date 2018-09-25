@@ -18,15 +18,15 @@ export default () => (
     <AppContent>
       <div className="row">
         <div className="column column--full">
-        <h2 class="example-header no-margin--top">Custom Toggle Switch <button class="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Toggle_Switch" /></h2>
-        <div class="row example-container">
-          <fieldset class="column column--full">
-            <label class="inline" for="switch1">Switch</label>
-            <div class="switch">
-              <input name="switch" type="checkbox" class="switch--checkbox" id="switch1" />
-              <label class="switch--label" for="switch1">
-                <span class="switch--inner"></span>
-                <span class="switch--handle"></span>
+        <h2 className="example-header no-margin--top">Custom Toggle Switch <button className="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Toggle_Switch" /></h2>
+        <div className="row example-container">
+          <fieldset className="column column--full">
+            <label className="inline" htmlFor="switch1">Switch</label>
+            <div className="switch">
+              <input name="switch" type="checkbox" className="switch--checkbox" id="switch1" />
+              <label className="switch--label" htmlFor="switch1">
+                <span className="switch--inner"></span>
+                <span className="switch--handle"></span>
               </label>
             </div>
           </fieldset>

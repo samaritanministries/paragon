@@ -24,11 +24,11 @@ export default () => (
             <fieldset className="column column--full">
               <div className="example--checkbox">
                 <input type="checkbox" id="dashing-checkbox--custom-inline1" defaultChecked={true}/>
-                <label for="dashing-checkbox--custom-inline1">Default Checkbox</label>
+                <label htmlFor="dashing-checkbox--custom-inline1">Default Checkbox</label>
               </div>
               <div className="checkbox--custom inline">
                 <input type="checkbox" id="dashing-checkbox--custom-inline2" defaultChecked={true}/>
-                <label for="dashing-checkbox--custom-inline2">Dashing Checkbox</label>
+                <label htmlFor="dashing-checkbox--custom-inline2">Dashing Checkbox</label>
               </div>
             </fieldset>
           </div>
@@ -48,7 +48,7 @@ export default () => (
                   </div>
                   <div className="checkbox--custom">
                     <input type="checkbox" id="dashing-checkbox--positivelanguage1" defaultChecked={true}/>
-                    <label for="dashing-checkbox--positivelanguage1">No note was received</label>
+                    <label htmlFor="dashing-checkbox--positivelanguage1">No note was received</label>
                   </div>
                 </div>
                 <div className="flex-container">
@@ -57,7 +57,7 @@ export default () => (
                   </div>
                   <div className="checkbox--custom">
                     <input type="checkbox" id="dashing-checkbox--positivelanguage2" defaultChecked={true}/>
-                    <label for="dashing-checkbox--positivelanguage2">I received a note</label>
+                    <label htmlFor="dashing-checkbox--positivelanguage2">I received a note</label>
                   </div>
                 </div>
               </fieldset>
@@ -69,7 +69,7 @@ export default () => (
               <fieldset className="column column--full">
                 <div className="checkbox--custom">
                   <input type="checkbox" id="dashing-checkbox--save-changes1" defaultChecked={true}/>
-                  <label for="dashing-checkbox--save-changes1">Opt-in to Paperless Notifications</label>
+                  <label htmlFor="dashing-checkbox--save-changes1">Opt-in to Paperless Notifications</label>
                 </div>
                 <button className="button--smooth" style={{ marginTop: "1rem" }}>Save Settings</button>
               </fieldset>
@@ -85,7 +85,7 @@ export default () => (
                 <div className="column column--third">
                   <div className="checkbox-card" style={{ display: "block" }}>
                     <input type="checkbox" name="checkbox-inline" id="checkbox-inline1" defaultChecked={true}/>
-                    <label for="checkbox-inline1" className="card" style={{ display: "block" }}>
+                    <label htmlFor="checkbox-inline1" className="card" style={{ display: "block" }}>
                       <span style={{ display: "inline-table" }}>
                         <span style={{ fontSize: "1rem", display: "block" }}>Ryan Fitz</span>
                         <span style={{ fontSize: "0.8rem", display: "block" }}>Primary</span>
@@ -107,7 +107,7 @@ export default () => (
                   <div className="column column--third">
                   <div className="checkbox-card" style={{ display: "block" }}>
                     <input type="checkbox" name="checkbox-inline" id="checkbox-inline3" />
-                    <label for="checkbox-inline3" className="card" style={{ display: "block" }}>
+                    <label htmlFor="checkbox-inline3" className="card" style={{ display: "block" }}>
                       <span style={{ display: "inline-table" }}>
                         <span style={{ fontSize: "1rem", display: "block" }}>Jackson Fitz</span>
                         <span style={{ fontSize: "0.8rem", display: "block" }}>Son</span>

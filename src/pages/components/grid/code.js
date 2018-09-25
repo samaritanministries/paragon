@@ -226,36 +226,36 @@ export default () => (
 </div>`}
           </CodeToggle>
 
-          <h2 class="example-header">Nested Grid Example <button class="button button--transparent button--copy-link" data-id="copyurl" id="Nested_Grid_Example" /></h2>
+          <h2 className="example-header">Nested Grid Example <button className="button button--transparent button--copy-link" data-id="copyurl" id="Nested_Grid_Example" /></h2>
           <p>Use the nested grid when stacking cards, which will give you a consistent gutter all around.</p>
-          <div class="row example-container">
-            <div class="column column--full">
-              <div class="row row--nested">
-                <div class="column column--fourth column--nested column--example">
-                  <div class="card remove-margin" style={{ padding: "1rem"}}>box</div>
+          <div className="row example-container">
+            <div className="column column--full">
+              <div className="row row--nested">
+                <div className="column column--fourth column--nested column--example">
+                  <div className="card remove-margin" style={{ padding: "1rem"}}>box</div>
                 </div>
-                <div class="column column--fourth column--nested column--example">
-                  <div class="card remove-margin" style={{ padding: "1rem"}}>box</div>
+                <div className="column column--fourth column--nested column--example">
+                  <div className="card remove-margin" style={{ padding: "1rem"}}>box</div>
                 </div>
-                <div class="column column--fourth column--nested column--example">
-                  <div class="card remove-margin" style={{ padding: "1rem"}}>box</div>
+                <div className="column column--fourth column--nested column--example">
+                  <div className="card remove-margin" style={{ padding: "1rem"}}>box</div>
                 </div>
-                <div class="column column--fourth column--nested column--example">
-                  <div class="card remove-margin" style={{ padding: "1rem"}}>box</div>
+                <div className="column column--fourth column--nested column--example">
+                  <div className="card remove-margin" style={{ padding: "1rem"}}>box</div>
                 </div>
               </div>
-              <div class="row row--nested">
-                <div class="column column--fourth column--nested column--example">
-                  <div class="card remove-margin" style={{ padding: "1rem"}}>box</div>
+              <div className="row row--nested">
+                <div className="column column--fourth column--nested column--example">
+                  <div className="card remove-margin" style={{ padding: "1rem"}}>box</div>
                 </div>
-                <div class="column column--fourth column--nested column--example">
-                  <div class="card remove-margin" style={{ padding: "1rem"}}>box</div>
+                <div className="column column--fourth column--nested column--example">
+                  <div className="card remove-margin" style={{ padding: "1rem"}}>box</div>
                 </div>
-                <div class="column column--fourth column--nested column--example">
-                  <div class="card remove-margin" style={{ padding: "1rem"}}>box</div>
+                <div className="column column--fourth column--nested column--example">
+                  <div className="card remove-margin" style={{ padding: "1rem"}}>box</div>
                 </div>
-                <div class="column column--fourth column--nested column--example">
-                  <div class="card remove-margin" style={{ padding: "1rem"}}>box</div>
+                <div className="column column--fourth column--nested column--example">
+                  <div className="card remove-margin" style={{ padding: "1rem"}}>box</div>
                 </div>
               </div>
             </div>

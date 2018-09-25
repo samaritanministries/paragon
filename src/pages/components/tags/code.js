@@ -18,11 +18,11 @@ export default () => (
     <AppContent>
       <div className="row">
         <div className="column column--full">
-          <h2 class="example-header no-margin--top">Solid Tag <button class="button button--transparent button--copy-link" data-id="copyurl" id="Solid_Tag" /></h2>
-          <div class="row example-container">
-            <div class="column column--full">
-              <a class="tag tag--blue tag--solid" href=" ">Blue Tag</a>
-            <a class="tag tag--gray tag--solid" href=" ">Gray Tag</a>
+          <h2 className="example-header no-margin--top">Solid Tag <button className="button button--transparent button--copy-link" data-id="copyurl" id="Solid_Tag" /></h2>
+          <div className="row example-container">
+            <div className="column column--full">
+              <a className="tag tag--blue tag--solid" href=" ">Blue Tag</a>
+            <a className="tag tag--gray tag--solid" href=" ">Gray Tag</a>
             </div>
           </div>
           <CodeToggle>
@@ -30,11 +30,11 @@ export default () => (
 <a class="tag tag--gray tag--solid">Gray Tag</a>`}
           </CodeToggle>
 
-          <h2 class="example-header">Large Tag <button class="button button--transparent button--copy-link" data-id="copyurl" id="Large_Tag" /></h2>
-  			  <div class="row example-container">
-      			<div class="column column--full ">
-      				<a class="tag tag--blue tag--large" href=" ">Large Blue Tag</a>
-  					  <a class="tag tag--gray tag--large tag--solid" href=" ">Large Gray Tag</a>
+          <h2 className="example-header">Large Tag <button className="button button--transparent button--copy-link" data-id="copyurl" id="Large_Tag" /></h2>
+  			  <div className="row example-container">
+      			<div className="column column--full ">
+      				<a className="tag tag--blue tag--large" href=" ">Large Blue Tag</a>
+  					  <a className="tag tag--gray tag--large tag--solid" href=" ">Large Gray Tag</a>
       			</div>
       		</div>
           <CodeToggle>
@@ -42,20 +42,20 @@ export default () => (
 <a class="tag tag--gray tag--large tag--solid">Large Gray Tag</a>`}
           </CodeToggle>
 
-          <h2 class="example-header">Tag Counters <button class="button button--transparent button--copy-link" data-id="copyurl" id="Tag_Counters" /></h2>
-  				<div class="row example-container">
-      			<div class="column column--full ">
-      				<div class="tag--counter">
-    						<a class="tag tag--blue" href=" ">Blue Tag</a>{/*
-    						*/}<a class="tag tag--blue" href=" ">1</a>
+          <h2 className="example-header">Tag Counters <button className="button button--transparent button--copy-link" data-id="copyurl" id="Tag_Counters" /></h2>
+  				<div className="row example-container">
+      			<div className="column column--full ">
+      				<div className="tag--counter">
+    						<a className="tag tag--blue" href=" ">Blue Tag</a>{/*
+    						*/}<a className="tag tag--blue" href=" ">1</a>
     					</div>
-    					<div class="tag--counter">{/*
-    						*/}<a class="tag tag--gray" href=" ">Gray Tag</a>{/*
-    						*/}<a class="tag tag--gray" href=" ">2</a>
+    					<div className="tag--counter">{/*
+    						*/}<a className="tag tag--gray" href=" ">Gray Tag</a>{/*
+    						*/}<a className="tag tag--gray" href=" ">2</a>
     					</div>
-    					<div class="tag--counter">{/*
-    						*/}<a class="tag tag--blue tag--solid" href=" ">Blue Tag (Solid)</a>{/*
-    						*/}<a class="tag tag--blue tag--solid" href=" ">300</a>
+    					<div className="tag--counter">{/*
+    						*/}<a className="tag tag--blue tag--solid" href=" ">Blue Tag (Solid)</a>{/*
+    						*/}<a className="tag tag--blue tag--solid" href=" ">300</a>
     					</div>
     			  </div>
     		  </div>
@@ -76,11 +76,11 @@ export default () => (
 </div>`}
           </CodeToggle>
 
-          <h2 class="example-header">Tag - No Link <button class="button button--transparent button--copy-link" data-id="copyurl" id="Tag_No_Link" /></h2>
-    			<div class="row example-container">
-        			<div class="column column--full ">
-        				<div class="tag tag--blue tag--no-link tag--solid" href=" ">Blue Tag</div>
-    					<div class="tag tag--gray tag--no-link tag--solid" href=" ">Gray Tag</div>
+          <h2 className="example-header">Tag - No Link <button className="button button--transparent button--copy-link" data-id="copyurl" id="Tag_No_Link" /></h2>
+    			<div className="row example-container">
+        			<div className="column column--full ">
+        				<div className="tag tag--blue tag--no-link tag--solid" href=" ">Blue Tag</div>
+    					<div className="tag tag--gray tag--no-link tag--solid" href=" ">Gray Tag</div>
         			</div>
         		</div>
             <CodeToggle>
@@ -88,24 +88,24 @@ export default () => (
 <a class="tag tag--gray tag--no-link tag--solid">Gray Tag</a>`}
             </CodeToggle>
 
-            <h2 class="example-header">Tag - Colors <button class="button button--transparent button--copy-link" data-id="copyurl" id="Tag_Colors"/></h2>
-			      <div class="row example-container">
-    			     <div class="column column--full">
-        				<a class="tag" href=" ">Default Tag</a>
-      					<a class="tag tag--gray" href=" ">Gray Tag</a>
-      					<a class="tag tag--blue" href=" ">Blue Tag</a>
-      					<a class="tag tag--green" href=" ">Green Tag</a>
-      					<a class="tag tag--orange" href=" ">Orange Tag</a>
-      					<a class="tag tag--purple" href=" ">Purple Tag</a>
-      					<a class="tag tag--red" href=" ">Red Tag</a>
+            <h2 className="example-header">Tag - Colors <button className="button button--transparent button--copy-link" data-id="copyurl" id="Tag_Colors"/></h2>
+			      <div className="row example-container">
+    			     <div className="column column--full">
+        				<a className="tag" href=" ">Default Tag</a>
+      					<a className="tag tag--gray" href=" ">Gray Tag</a>
+      					<a className="tag tag--blue" href=" ">Blue Tag</a>
+      					<a className="tag tag--green" href=" ">Green Tag</a>
+      					<a className="tag tag--orange" href=" ">Orange Tag</a>
+      					<a className="tag tag--purple" href=" ">Purple Tag</a>
+      					<a className="tag tag--red" href=" ">Red Tag</a>
       					<br/>
-      					<a class="tag tag--white tag--solid" href=" ">White Tag</a>
-      					<a class="tag tag--gray tag--solid" href=" ">Gray Tag</a>
-      					<a class="tag tag--blue tag--solid" href=" ">Blue Tag</a>
-      					<a class="tag tag--green tag--solid" href=" ">Green Tag</a>
-      					<a class="tag tag--orange tag--solid" href=" ">Orange Tag</a>
-      					<a class="tag tag--purple tag--solid" href=" ">Purple Tag</a>
-      					<a class="tag tag--red tag--solid" href=" ">Red Tag</a>
+      					<a className="tag tag--white tag--solid" href=" ">White Tag</a>
+      					<a className="tag tag--gray tag--solid" href=" ">Gray Tag</a>
+      					<a className="tag tag--blue tag--solid" href=" ">Blue Tag</a>
+      					<a className="tag tag--green tag--solid" href=" ">Green Tag</a>
+      					<a className="tag tag--orange tag--solid" href=" ">Orange Tag</a>
+      					<a className="tag tag--purple tag--solid" href=" ">Purple Tag</a>
+      					<a className="tag tag--red tag--solid" href=" ">Red Tag</a>
     			    </div>
     		   </div>
            <CodeToggle>
@@ -126,11 +126,11 @@ export default () => (
 <a class="tag tag--red tag--solid">Red Tag</a>`}
            </CodeToggle>
 
-           <h2 class="example-header">Tag - Custom <button class="button button--transparent button--copy-link" data-id="copyurl" id="Tag_Custom" /></h2>
-      			<div class="row example-container hide-HTML-code">
-        			<div class="column column--full ">
-        				<div class="tag plan-1 tag--large tag--no-link" href=" ">Classic</div>
-    					  <div class="tag plan-11 tag--no-link" href=" ">Basic</div>
+           <h2 className="example-header">Tag - Custom <button className="button button--transparent button--copy-link" data-id="copyurl" id="Tag_Custom" /></h2>
+      			<div className="row example-container hide-HTML-code">
+        			<div className="column column--full ">
+        				<div className="tag plan-1 tag--large tag--no-link" href=" ">classNameic</div>
+    					  <div className="tag plan-11 tag--no-link" href=" ">Basic</div>
         			</div>
           	</div>
             <CodeToggle>
