@@ -73,6 +73,7 @@ export default () => (
                   <th>Example</th>
                 </tr>
               </thead>
+              <tbody>
               <tr>
                 <td>$xlarge</td>
                 <td>&lt;h1&gt;</td>
@@ -115,6 +116,7 @@ export default () => (
                 <td>0.8rem</td>
                 <td><fieldset><label>Source Sans Pro</label></fieldset></td>
               </tr>
+              </tbody>
             </table>
           </div>
 

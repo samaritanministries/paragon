@@ -184,16 +184,16 @@ export default () => (
 </div>`}
       </CodeToggle>
 
-      <h2 class="example-header">Dashed Card <button class="button button--transparent button--copy-link" data-id="copyurl" id="Dashed_Card"></button></h2>
-      <div class="row example-container">
-        <div class="column column--full">
-          <div class="card card--dashed">
-            <div class="card--header">
+      <h2 className="example-header">Dashed Card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Dashed_Card"></button></h2>
+      <div className="row example-container">
+        <div className="column column--full">
+          <div className="card card--dashed">
+            <div className="card--header">
               <h3>This is a dashed card</h3>
             </div>
 
-            <div class="card--content">
-              <p class="remove-margin">To use a dashed card, apply <code class="example-text">.card--dashed</code> after <code class="example-text">.card</code>.</p>
+            <div className="card--content">
+              <p className="remove-margin">To use a dashed card, apply <code className="example-text">.card--dashed</code> after <code className="example-text">.card</code>.</p>
             </div>
           </div>
         </div>

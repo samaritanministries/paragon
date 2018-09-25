@@ -19,82 +19,82 @@ export default () => (
     <div className="row">
       <div className="column column--full">
 
-        <h2 class="example-header no-margin--top">Custom Checkboxes <button class="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Checkboxes"></button></h2>
+        <h2 className="example-header no-margin--top">Custom Checkboxes <button className="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Checkboxes"></button></h2>
     		<p>To use custom checkboxes, be sure to include your input <strong>before</strong> your label. Failing to do so will break styles.</p>
-    		<div class="row example-container">
-    		  <fieldset class="column column--third">
+    		<div className="row example-container">
+    		  <fieldset className="column column--third">
     		    <label>Checkboxes</label>
-    		    <div class="checkbox--custom">
+    		    <div className="checkbox--custom">
     		      <input type="checkbox" id="dashing-checkbox1--custom" defaultChecked={true}/>
-    		      <label for="dashing-checkbox1--custom">Option 1</label>
+    		      <label htmlFor="dashing-checkbox1--custom">Option 1</label>
     		    </div>
-    		    <div class="checkbox--custom">
+    		    <div className="checkbox--custom">
     		      <input type="checkbox" id="dashing-checkbox2--custom"/>
-    		      <label for="dashing-checkbox2--custom">Option 2</label>
+    		      <label htmlFor="dashing-checkbox2--custom">Option 2</label>
     		    </div>
-    		    <div class="checkbox--custom">
+    		    <div className="checkbox--custom">
     		      <input type="checkbox" id="dashing-checkbox3--custom"/>
-    		      <label for="dashing-checkbox3--custom">Option 3 is much longer and indents when it goes beyond one line</label>
+    		      <label htmlFor="dashing-checkbox3--custom">Option 3 is much longer and indents when it goes beyond one line</label>
     		    </div>
     		  </fieldset>
 
-    		  <fieldset class="column column--full">
+    		  <fieldset className="column column--full">
     		    <label>Disabled Checkbox</label>
-    		    <div class="checkbox--custom">
+    		    <div className="checkbox--custom">
     		      <input type="checkbox" id="dashing-checkbox--custom-disabled" disabled defaultChecked={true}/>
-    		      <label for="dashing-checkbox--custom-disabled">Disabled</label>
+    		      <label htmlFor="dashing-checkbox--custom-disabled">Disabled</label>
     		    </div>
-    		    <div class="checkbox--custom">
+    		    <div className="checkbox--custom">
     		      <input type="checkbox" id="dashing-checkbox--custom-disabled2" disabled/>
-    		      <label for="dashing-checkbox--custom-disabled2">Disabled</label>
+    		      <label htmlFor="dashing-checkbox--custom-disabled2">Disabled</label>
     		    </div>
     		  </fieldset>
 
-    		  <fieldset class="column column--full has-error">
+    		  <fieldset className="column column--full has-error">
     		    <label>Checkboxes with Errors</label>
-    		    <div class="checkbox--custom">
+    		    <div className="checkbox--custom">
     		      <input type="checkbox" id="dashing-checkbox--error1" defaultChecked={true}/>
-    		      <label for="dashing-checkbox--error1">Option 1</label>
+    		      <label htmlFor="dashing-checkbox--error1">Option 1</label>
     		    </div>
-    		    <div class="checkbox--custom">
+    		    <div className="checkbox--custom">
     		      <input type="checkbox" id="dashing-checkbox--error2" />
-    		      <label for="dashing-checkbox--error2">Option 2</label>
+    		      <label htmlFor="dashing-checkbox--error2">Option 2</label>
     		    </div>
-    		    <div class="checkbox--custom">
+    		    <div className="checkbox--custom">
     		      <input type="checkbox" id="dashing-checkbox--error3" />
-    		      <label for="dashing-checkbox--error3">Option 3</label>
+    		      <label htmlFor="dashing-checkbox--error3">Option 3</label>
     		    </div>
     		  </fieldset>
 
-    		  <fieldset class="column column--full has-warning">
+    		  <fieldset className="column column--full has-warning">
     		    <label>Checkboxes with Warnings</label>
-    		    <div class="checkbox--custom">
+    		    <div className="checkbox--custom">
     		      <input type="checkbox" id="dashing-checkbox--warning1" defaultChecked={true}/>
-    		      <label for="dashing-checkbox--warning1">Option 1</label>
+    		      <label htmlFor="dashing-checkbox--warning1">Option 1</label>
     		    </div>
-    		    <div class="checkbox--custom">
+    		    <div className="checkbox--custom">
     		      <input type="checkbox" id="dashing-checkbox--warning2" />
-    		      <label for="dashing-checkbox--warning2">Option 2</label>
+    		      <label htmlFor="dashing-checkbox--warning2">Option 2</label>
     		    </div>
-    		    <div class="checkbox--custom">
+    		    <div className="checkbox--custom">
     		      <input type="checkbox" id="dashing-checkbox--warning3" />
-    		      <label for="dashing-checkbox--warning3">Option 3</label>
+    		      <label htmlFor="dashing-checkbox--warning3">Option 3</label>
     		    </div>
     		  </fieldset>
 
-    		  <fieldset class="column column--full">
+    		  <fieldset className="column column--full">
     		    <label>Inline Checkboxes</label>
-    		    <div class="checkbox--custom inline">
+    		    <div className="checkbox--custom inline">
     		      <input type="checkbox" id="dashing-checkbox--custom-inline1" defaultChecked={true}/>
-    		      <label for="dashing-checkbox--custom-inline1">Option 1</label>
+    		      <label htmlFor="dashing-checkbox--custom-inline1">Option 1</label>
     		    </div>
-    		    <div class="checkbox--custom inline">
+    		    <div className="checkbox--custom inline">
     		      <input type="checkbox" id="dashing-checkbox--custom-inline2"/>
-    		      <label for="dashing-checkbox--custom-inline2">Option 2</label>
+    		      <label htmlFor="dashing-checkbox--custom-inline2">Option 2</label>
     		    </div>
-    		    <div class="checkbox--custom inline">
+    		    <div className="checkbox--custom inline">
     		      <input type="checkbox" id="dashing-checkbox--custom-inline3"/>
-    		      <label for="dashing-checkbox--custom-inline3">Option 3</label>
+    		      <label htmlFor="dashing-checkbox--custom-inline3">Option 3</label>
     		    </div>
     		  </fieldset>
     		</div>
@@ -189,22 +189,22 @@ $checkbox--disabled: $gray-150 !default; //Color of checkbox when checked and di
 $checkbox--icon-disabled: $gray-500 !default; //Color of check icon when checked and disabled`}
         </CodeToggleSCSS>
 
-        <h2 class="example-header">Default Checkbox Card <button class="button button--transparent button--copy-link" id="Default_Checkbox_Card"></button></h2>
-    		<p>To use smaller checkbox cards apply the <code class="example-text">.checkbox-card--small</code> class to the <code class="example-text">.checkbox-card</code>.</p>
-    		<div class="row example-container">
-    		  <fieldset class="column column--full">
+        <h2 className="example-header">Default Checkbox Card <button className="button button--transparent button--copy-link" id="Default_Checkbox_Card"></button></h2>
+    		<p>To use smaller checkbox cards apply the <code className="example-text">.checkbox-card--small</code> class to the <code className="example-text">.checkbox-card</code>.</p>
+    		<div className="row example-container">
+    		  <fieldset className="column column--full">
     		    <label>Checkbox Card</label>
-    		    <div class="checkbox-card">
+    		    <div className="checkbox-card">
     		      <input type="checkbox" name="checkbox-inline" id="checkbox-inline1" defaultChecked={true}/>
-    		      <label for="checkbox-inline1" class="card">Option 1</label>
+    		      <label htmlFor="checkbox-inline1" className="card">Option 1</label>
     		    </div>
-    		    <div class="checkbox-card">
+    		    <div className="checkbox-card">
     		      <input type="checkbox" name="checkbox-inline" id="checkbox-inline2" />
-    		      <label for="checkbox-inline2" class="card">Option 2</label>
+    		      <label htmlFor="checkbox-inline2" className="card">Option 2</label>
     		    </div>
-    		    <div class="checkbox-card">
+    		    <div className="checkbox-card">
     		      <input type="checkbox" name="checkbox-inline" id="checkbox-inline3" disabled />
-    		      <label for="checkbox-inline3" class="card disabled">Disabled</label>
+    		      <label htmlFor="checkbox-inline3" className="card disabled">Disabled</label>
     		    </div>
     		  </fieldset>
     		</div>
@@ -233,22 +233,22 @@ $card-checkbox--focus: $blue-300 !default; //Color of border around card-checkbo
 $card-checkbox--padding: 1rem !default; //Padding of checkbox`}
         </CodeToggleSCSS>
 
-        <h2 class="example-header">Small Checkbox Card <button class="button button--transparent button--copy-link" data-id="copyurl" id="Small_Checkbox_Card"></button></h2>
-    		<p>To use smaller checkbox cards apply the <code class="example-text">.checkbox-card--small</code> class to the <code class="example-text">.checkbox-card</code>.</p>
-    		<div class="row example-container">
-    			<fieldset class="column column--full">
+        <h2 className="example-header">Small Checkbox Card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Small_Checkbox_Card"></button></h2>
+    		<p>To use smaller checkbox cards apply the <code className="example-text">.checkbox-card--small</code> class to the <code className="example-text">.checkbox-card</code>.</p>
+    		<div className="row example-container">
+    			<fieldset className="column column--full">
     				<label>Small Checkbox Card</label>
-    				<div class="checkbox-card checkbox-card--small">
+    				<div className="checkbox-card checkbox-card--small">
     					<input type="checkbox" name="checkbox-small" id="checkbox-small1" defaultChecked={true}/>
-    					<label for="checkbox-small1" class="card">Option 1</label>
+    					<label htmlFor="checkbox-small1" className="card">Option 1</label>
     				</div>
-    				<div class="checkbox-card checkbox-card--small">
+    				<div className="checkbox-card checkbox-card--small">
     					<input type="checkbox" name="checkbox-small" id="checkbox-small2" />
-    					<label for="checkbox-small2" class="card">Option 2</label>
+    					<label htmlFor="checkbox-small2" className="card">Option 2</label>
     				</div>
-    				<div class="checkbox-card checkbox-card--small">
+    				<div className="checkbox-card checkbox-card--small">
     					<input type="checkbox" name="checkbox-small" id="checkbox-small3" disabled />
-    					<label for="checkbox-small3" class="card disabled">Disabled</label>
+    					<label htmlFor="checkbox-small3" className="card disabled">Disabled</label>
     				</div>
     			</fieldset>
     		</div>
@@ -271,22 +271,22 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox`}
 </fieldset>`}
         </CodeToggle>
 
-        <h2 class="example-header">Block Checkbox Card <button class="button button--transparent button--copy-link" data-id="copyurl" id="Block_Checkbox_Card"></button></h2>
-    		<p>To use block style checkbox cards apply the <code class="example-text">.is-block</code> class to the <code class="example-text">.checkbox-card</code>.</p>
-    		<div class="row example-container">
-    		  <fieldset class="column column--half">
+        <h2 className="example-header">Block Checkbox Card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Block_Checkbox_Card"></button></h2>
+    		<p>To use block style checkbox cards apply the <code className="example-text">.is-block</code> class to the <code className="example-text">.checkbox-card</code>.</p>
+    		<div className="row example-container">
+    		  <fieldset className="column column--half">
     		    <label>Block Checkbox Card</label>
-    		    <div class="checkbox-card is-block">
+    		    <div className="checkbox-card is-block">
     		      <input type="checkbox" name="checkbox-block" id="checkbox-block1" defaultChecked={true}/>
-    		      <label for="checkbox-block1" class="card">Option 1</label>
+    		      <label htmlFor="checkbox-block1" className="card">Option 1</label>
     		    </div>
-    		    <div class="checkbox-card is-block">
+    		    <div className="checkbox-card is-block">
     		      <input type="checkbox" name="checkbox-block" id="checkbox-block2" />
-    		      <label for="checkbox-block2" class="card">Option 2</label>
+    		      <label htmlFor="checkbox-block2" className="card">Option 2</label>
     		    </div>
-    		    <div class="checkbox-card is-block">
+    		    <div className="checkbox-card is-block">
     		      <input type="checkbox" name="checkbox-block" id="checkbox-block3" disabled />
-    		      <label for="checkbox-block3" class="card disabled">Disabled</label>
+    		      <label htmlFor="checkbox-block3" className="card disabled">Disabled</label>
     		    </div>
     		  </fieldset>
     		</div>

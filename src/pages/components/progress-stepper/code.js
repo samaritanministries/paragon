@@ -38,32 +38,32 @@ export default () => (
 $progress-color: $green;`}
           </CodeToggleSCSS>
 
-          <h2 class="example-header">Width Options<button class="button button--transparent button--copy-link" data-id="copyurl" id="Progress_Width" /></h2>
+          <h2 className="example-header">Width Options<button className="button button--transparent button--copy-link" data-id="copyurl" id="Progress_Width" /></h2>
           <p>The width on this progress stepper can be set by an inline style or a class name.</p>
           <ul>
-            <li>Inline width: <code class="example-text">style="width: 50%;"</code></li>
-            <li>Class width: <code class="example-text">class="progress-bar--2of3"</code></li>
+            <li>Inline width: <code className="example-text">style="width: 50%;"</code></li>
+            <li>Class width: <code className="example-text">className="progress-bar--2of3"</code></li>
           </ul>
-          <div class="row example-container">
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "50%" }}></div>
+          <div className="row example-container">
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "50%" }}></div>
               </div>
-              <div class="progress-labels">
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
+              <div className="progress-labels">
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
               </div>
             </div>
 
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar progress-bar--2of3" data-id="progress-stepper"></div>
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar progress-bar--2of3" data-id="progress-stepper"></div>
               </div>
-              <div class="progress-labels">
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
+              <div className="progress-labels">
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
               </div>
             </div>
           </div>
@@ -92,35 +92,35 @@ $progress-color: $green;`}
 </div>`}
           </CodeToggle>
 
-          <h2 class="example-header">Two Steps <button class="button button--transparent button--copy-link" data-id="copyurl" id="Two_Steps" /></h2>
-          <div class="row example-container">
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "25%" }}></div>
+          <h2 className="example-header">Two Steps <button className="button button--transparent button--copy-link" data-id="copyurl" id="Two_Steps" /></h2>
+          <div className="row example-container">
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "25%" }}></div>
               </div>
-              <div class="progress-labels">
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
-              </div>
-            </div>
-
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "75%" }}></div>
-              </div>
-              <div class="progress-labels">
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
+              <div className="progress-labels">
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
               </div>
             </div>
 
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "100%" }}></div>
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "75%" }}></div>
               </div>
-              <div class="progress-labels">
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
+              <div className="progress-labels">
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
+              </div>
+            </div>
+
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "100%" }}></div>
+              </div>
+              <div className="progress-labels">
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
               </div>
             </div>
           </div>
@@ -159,49 +159,49 @@ $progress-color: $green;`}
 </div>`}
           </CodeToggle>
 
-          <h2 class="example-header">Three Steps <button class="button button--transparent button--copy-link" data-id="copyurl" id="Three_Steps" /></h2>
-          <div class="row example-container">
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "16.666%" }}></div>
+          <h2 className="example-header">Three Steps <button className="button button--transparent button--copy-link" data-id="copyurl" id="Three_Steps" /></h2>
+          <div className="row example-container">
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "16.666%" }}></div>
               </div>
-              <div class="progress-labels">
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
-              </div>
-            </div>
-
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "50%" }}></div>
-              </div>
-              <div class="progress-labels">
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
+              <div className="progress-labels">
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
               </div>
             </div>
 
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "83.333%" }}></div>
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "50%" }}></div>
               </div>
-              <div class="progress-labels">
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
+              <div className="progress-labels">
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
               </div>
             </div>
 
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "100%" }}></div>
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "83.333%" }}></div>
               </div>
-              <div class="progress-labels">
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 3</a></div>
+              <div className="progress-labels">
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
+              </div>
+            </div>
+
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "100%" }}></div>
+              </div>
+              <div className="progress-labels">
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 3</a></div>
               </div>
             </div>
           </div>
@@ -255,65 +255,65 @@ $progress-color: $green;`}
 </div>`}
           </CodeToggle>
 
-          <h2 class="example-header">Four Steps <button class="button button--transparent button--copy-link" data-id="copyurl" id="Four_Steps" /></h2>
-          <div class="row example-container">
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "12.5%" }}></div>
+          <h2 className="example-header">Four Steps <button className="button button--transparent button--copy-link" data-id="copyurl" id="Four_Steps" /></h2>
+          <div className="row example-container">
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "12.5%" }}></div>
               </div>
-              <div class="progress-labels">
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 4</a></div>
-              </div>
-            </div>
-
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "37.5%" }}></div>
-              </div>
-              <div class="progress-labels">
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 4</a></div>
+              <div className="progress-labels">
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 4</a></div>
               </div>
             </div>
 
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "62.5%" }}></div>
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "37.5%" }}></div>
               </div>
-              <div class="progress-labels">
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 4</a></div>
-              </div>
-            </div>
-
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "87.5%" }}></div>
-              </div>
-              <div class="progress-labels">
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 3</a></div>
-                <div class="progress-label"><a href="/components/progress-stepper/code">Step 4</a></div>
+              <div className="progress-labels">
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 2</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 4</a></div>
               </div>
             </div>
 
-            <div class="column column--full">
-              <div class="progress">
-                <div class="progress-bar" data-id="progress-stepper" style={{ width: "100%" }}></div>
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "62.5%" }}></div>
               </div>
-              <div class="progress-labels">
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 3</a></div>
-                <div class="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 4</a></div>
+              <div className="progress-labels">
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 3</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 4</a></div>
+              </div>
+            </div>
+
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "87.5%" }}></div>
+              </div>
+              <div className="progress-labels">
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 3</a></div>
+                <div className="progress-label"><a href="/components/progress-stepper/code">Step 4</a></div>
+              </div>
+            </div>
+
+            <div className="column column--full">
+              <div className="progress">
+                <div className="progress-bar" data-id="progress-stepper" style={{ width: "100%" }}></div>
+              </div>
+              <div className="progress-labels">
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 1</a></div>
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 2</a></div>
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 3</a></div>
+                <div className="progress-label progress-label--completed"><a href="/components/progress-stepper/code">Step 4</a></div>
               </div>
             </div>
           </div>

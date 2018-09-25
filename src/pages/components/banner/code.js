@@ -49,19 +49,19 @@ export default () => (
 </div>`}
           </CodeToggle>
 
-          <h2 class="example-header">Default Card Banner <button class="button button--transparent button--copy-link" id="Default_Card_Banner"/></h2>
-          <div class="row example-container">
-            <div class="column column--full">
-              <div class="card no-margin">
-                <div class="card-header">
+          <h2 className="example-header">Default Card Banner <button className="button button--transparent button--copy-link" id="Default_Card_Banner"/></h2>
+          <div className="row example-container">
+            <div className="column column--full">
+              <div className="card no-margin">
+                <div className="card-header">
                   <h3>Default Banner</h3>
                 </div>
-                <div class="card-content">
-                  <div class="card-banner">
+                <div className="card-content">
+                  <div className="card-banner">
                     <p>This is a card banner</p>
                   </div>
                 </div>
-                <div class="card-footer">
+                <div className="card-footer">
                   <p>Use a banner within a card to display additional context</p>
                 </div>
               </div>
@@ -120,20 +120,20 @@ export default () => (
 </div>`}
           </CodeToggle>
 
-          <h2 class="example-header" id="cardBannerWarning">Card Banner with warning <button class="button button--transparent button--copy-link" id="Card_Banner_With_Warning"/></h2>
-          <div class="row example-container">
-            <div class="column column--full">
-              <div class="card no-margin">
-                <div class="card-header">
+          <h2 className="example-header" id="cardBannerWarning">Card Banner with warning <button className="button button--transparent button--copy-link" id="Card_Banner_With_Warning"/></h2>
+          <div className="row example-container">
+            <div className="column column--full">
+              <div className="card no-margin">
+                <div className="card-header">
                   <h3>Warning Banner</h3>
                 </div>
-                <div class="card-content">
-                  <div class="card-banner has-warning">
-                    <i class="dashing-icon dashing-icon--info-filled"></i>
+                <div className="card-content">
+                  <div className="card-banner has-warning">
+                    <i className="dashing-icon dashing-icon--info-filled"></i>
                     <p>You may only submit bill information and upload images for one statement at a time. If you have multiple statements to submit, please enter them separately.</p>
                   </div>
                 </div>
-                <div class="card-footer">
+                <div className="card-footer">
                   <p>Use warning banners to inform your user of potential errors.</p>
                 </div>
               </div>
