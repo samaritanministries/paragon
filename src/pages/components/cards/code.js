@@ -55,7 +55,7 @@ export default () => (
               </div>
 
               <div className="card--content">
-                <p>To center content within a card, apply the <a href="https://github.com/dashframework/dashing/blob/2b4f977910aa2cd9c54309d08aae915af283fda0/sass/modules/typography/_typography.scss#L19-L21" target="_blank" rel="noopener noreferrer">alignment utility className</a> <code className="example-text">.center-align</code> to a <code className="example-text">.card</code> element. If you want more control, apply the utility class to the <code className="example-text">.card--header</code>, <code className="example-text">.card--content</code>, or <code className="example-text">.card--footer</code> elements.</p>
+                <p>To center content within a card, apply the <a href="https://github.com/dashframework/dashing/blob/2b4f977910aa2cd9c54309d08aae915af283fda0/sass/modules/typography/_typography.scss#L19-L21" target="_blank" rel="noopener noreferrer">alignment utility class</a> <code className="example-text">.center-align</code> to a <code className="example-text">.card</code> element. If you want more control, apply the utility class to the <code className="example-text">.card--header</code>, <code className="example-text">.card--content</code>, or <code className="example-text">.card--footer</code> elements.</p>
               </div>
 
               <div className="card--footer">

@@ -32,7 +32,7 @@ export default () => (
 
           <blockquote className="tips" style={{ marginTop: "2rem" }}>
             <strong>Tip: Number of Actions</strong>
-            <p>Be careful to not add to many actions to the card footer. It is recommended to have one primary action and no more than two secondary actions. Follow the <Link to="/product/components/actions/guidelines">button hierarchy</Link> when adding more then one action.</p>
+            <p>Be careful to not add to many actions to the card footer. It is recommended to have one primary action and no more than two secondary actions. Follow the <Link to="/components/actions/guidelines">button hierarchy</Link> when adding more then one action.</p>
           </blockquote>
 
           <h2 className="has-number has-number--two">Card Titles</h2>

@@ -396,10 +396,8 @@ blockquote {
     &.active { border-bottom-color: #FFFFFF; opacity: 1; color: #FFFFFF !important; }
   }
 }
-.example-button--navigation {
-  &::before {
-    color: #FFFFFF;
-  }
+.app-menu .app-context .app-title .button--navigation.example-button--navigation:before {
+  color: #FFFFFF !important;
 }
 
 .hide-HTML-code {

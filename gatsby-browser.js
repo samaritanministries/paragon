@@ -7,10 +7,10 @@
  // You can delete this file if you're not using it
 
  exports.onInitialClientRender = () => {
-  console.log("ReactDOM.render has executed")
+  //console.log("ReactDOM.render has executed")
 }
 
  exports.onRouteUpdate = ({ location }) => {
-  console.log('new pathname', location.pathname)
+  //console.log('new pathname', location.pathname)
   //document.getElementsByClassName('active').parent().parent().parent().addClass('react-sanfona-item-expanded');
 }
