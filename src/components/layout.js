@@ -4,7 +4,7 @@ import Sidebar from './sidebar'
 import '../sass/example-page/example-page.scss'
 
 export default ({ children }) => (
-  <div style={{ height: "100vh" }}>
+  <div >
     <Sidebar />
     <div className="app-content">
       {children}

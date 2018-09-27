@@ -26,7 +26,7 @@ $button-disabled: "&[disabled], &.disabled, &.button--disabled";
   =========================================================================== */
 #{$buttons} {
   @extend %action;
-  @extend %button--round;
+  @extend %button--smooth;
   @include button($background-color: $blue, $color: $white);
 
   -webkit-font-smoothing: auto;
