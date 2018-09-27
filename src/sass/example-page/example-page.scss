@@ -563,3 +563,32 @@ blockquote {
     padding: 2.8rem;
   }
 }
+
+/* Footer
+  ================================================== */
+
+footer {
+  background-color: $gray-50c;
+  float: right;
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+
+  .copyright { font-size: 0.8rem; }
+}
+
+@media #{$tablet} {
+  footer .copyright { display: inline-block; }
+  footer a {
+    margin-left: 2rem;
+    margin-top: 0rem;
+  }
+}
