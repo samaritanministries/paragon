@@ -17,10 +17,6 @@ class SpinnerCode extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
-
-  }
-
    handleClick() {
     this.setState(prevState => ({
       addSpinner: !prevState.addSpinner
