@@ -415,3 +415,27 @@ blockquote {
   margin-right: 2rem;
   line-height: 1.5rem;
 }
+
+/* Follow Message
+  ================================================== */
+
+.follow-message {
+  background-repeat: no-repeat;
+  display: table;
+  width: 100%;
+  background-position: center;
+
+  .follow-message-inner {
+    display: table-cell;
+    font-size: .8rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  @media #{$tablet} {
+    background-image: url("../../img/follow-message.svg");
+    height: 500px;
+    margin-top: -2rem;
+    padding-bottom: 0;
+  }
+}

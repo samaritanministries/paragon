@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
+import StillWorking from '../../../components/stillworking'
 
 const currentPageName = "Clippy";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -14,7 +15,11 @@ export default () => (
       <SubNav pageName={currentPageNameLower}/>
     </header>
     <AppContent>
-      <p>Some Banner Guidelines</p>
+      <div className="row">
+        <div className="column column--full">
+          <StillWorking />
+        </div>
+      </div>
     </AppContent>
   </Layout>
 )
