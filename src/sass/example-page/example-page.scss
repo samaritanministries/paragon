@@ -409,6 +409,13 @@ blockquote {
   }
 }
 
+.show-scss {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    display: block;
+  }
+}
+
 //Radio
 .example--radio {
   display: inline-block;
@@ -437,5 +444,27 @@ blockquote {
     height: 500px;
     margin-top: -2rem;
     padding-bottom: 0;
+  }
+}
+
+/* Intro Page
+  ================================================== */
+
+.intro {
+  .hero {
+    padding: 2rem;
+    margin: 5rem 0 -1rem;
+  }
+
+  .note {
+    border-radius: 5px;
+    background-color: #DCDCDC;
+    color: #555;
+    padding: 1rem;
+  }
+
+  .underline {
+    border-bottom: 2px solid #6E6E6E;
+    padding-bottom: 0.1rem;
   }
 }
