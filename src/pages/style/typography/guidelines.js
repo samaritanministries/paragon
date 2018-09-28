@@ -143,8 +143,8 @@ export default () => (
 
           <blockquote className="related">
             <strong>Related: Provide clear contrast</strong>
-            <p style={{ marginBottom: "0.5rem" }}>When adjusting the color of your type, be sure to provide clear contrast between text and background colors. Review <Link to="../../">accessibility guidelines</Link> for more information.</p>
-            <Link to="../../" className="button button--border button--smooth">Review Guideline</Link>
+            <p style={{ marginBottom: "0.5rem" }}>When adjusting the color of your type, be sure to provide clear contrast between text and background colors. Review <Link to="../style/accessibility">accessibility guidelines</Link> for more information.</p>
+            <Link to="../style/accessibility" className="button button--border button--smooth">Review Guideline</Link>
           </blockquote>
 
         </div>

@@ -207,8 +207,8 @@ class ColorGuidelines extends React.Component {
 
         <blockquote className="related" style={{ display: "inline-block", marginTop: "1rem" }}>
           <strong>Related: Provide clear contrast</strong>
-          <p style={{ marginBottom: "0.5rem" }}>When adjusting the color of your type, be sure to provide clear contrast between text and background colors. Review <a href="{{ site.url }}/product/principles/accessibility/">accessibility guidelines</a> for more information.</p>
-          <Link className="button button--border button--smooth" to="accessibility">Review Guideline</Link>
+          <p style={{ marginBottom: "0.5rem" }}>When adjusting the color of your type, be sure to provide clear contrast between text and background colors. Review <Link to="/style/accessibility">accessibility guidelines</Link> for more information.</p>
+          <Link className="button button--border button--smooth" to="/style/accessibility">Review Guideline</Link>
         </blockquote>
 
         <h2 className="has-number has-number--two">System Theme</h2>

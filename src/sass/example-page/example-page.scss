@@ -292,8 +292,9 @@ blockquote {
 
   &.tips { border-left: 4px solid $green; }
   .tips-list {
-    margin: -1.3rem 0 0 0;
+    margin: -1rem 0 0 0;
     padding-left: 2rem;
+    line-height: 1.5rem;
   }
   &.warning { border-left: 4px solid $orange; }
   &.caution { border-left: 4px solid $red; }
