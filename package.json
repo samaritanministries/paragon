@@ -1,6 +1,6 @@
 {
   "name": "dashing",
-  "description": "Style framework for Dash",
+  "description": "Style Framework for Samaritan Ministries",
   "version": "1.0.0",
   "dependencies": {
     "dashing-framework": "^1.12.1",
@@ -28,13 +28,15 @@
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && master -d public"
   },
   "devDependencies": {
     "gatsby": "next",
     "node-sass": "^4.9.0",
     "prettier": "^1.12.0",
     "sass-loader": "^7.0.3",
-    "webpack": "^4.12.0"
+    "webpack": "^4.12.0",
+    "gh-pages": "^2.0.0"
   },
   "repository": {
     "type": "git",
