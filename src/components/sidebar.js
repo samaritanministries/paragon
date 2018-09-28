@@ -115,10 +115,11 @@ class Sidebar extends React.Component {
             </div>
 
             <div className={this.state.showStyle ? 'group-container expanded' : 'group-container'}>
-              <h4 className="group-title" onClick={this.toggleStyle}>Style</h4>
+              <h4 className="group-title" onClick={this.toggleStyle}>Foundations</h4>
               <i className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
+                <Link to="/style/accessibility">Accessibility</Link>
                 <Link to="/style/color/code">Color</Link>
                 <Link to="/style/typography/code">Typography</Link>
               </div>
