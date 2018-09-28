@@ -211,6 +211,10 @@ class ColorGuidelines extends React.Component {
           <Link className="button button--border button--smooth" to="accessibility">Review Guideline</Link>
         </blockquote>
 
+        <h2 className="has-number has-number--two">System Theme</h2>
+        <p>Use the System Theme when creating new interface elements to keep to a unified pallet.</p>
+
+
         {/* GRAY THEME */}
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>

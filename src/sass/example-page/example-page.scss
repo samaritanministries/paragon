@@ -112,7 +112,6 @@ body {
   background-image: linear-gradient(-45deg, $blue , $purple);
   height: 22rem;
   margin-top: -1rem;
-  padding: 1rem;
   position: relative;
   .splash-image--content {
     display: flex;
@@ -132,14 +131,34 @@ body {
   }
 }
 
+.dashing-description {
+  padding: 1rem 0;
+}
+
 .space-between--principles {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 3rem;
   .principles-icon {
-    height: 120px;
-    width: 120px;
+    display: none;
+    height: 90px;
+    width: 90px;
     background-color: gray;
+    border-radius: 10px;
+    margin-right: 1rem;
+    @extend %shadow-50;
+    &.consistent { background-color: $blue; }
+    &.clean { background-color: $green; }
+    &.confident { background-color: $purple; }
+    @media #{$tablet} {
+      display: block;
+    }
+  }
+  .principles-paragraph {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    margin: 0.5rem 0;
   }
 }
 
