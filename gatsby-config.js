@@ -15,5 +15,5 @@ module.exports = {
      }
    },
   ],
-  pathPrefix: `/dashby`,
+  pathPrefix: `/dashby/`,
 }
