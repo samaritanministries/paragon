@@ -11,6 +11,10 @@ body {
   background-color: $white;
 }
 
+.button--copy-link {
+  display: none;
+}
+
 .content-container {
   margin: 1rem 0 1rem 0;
 }
