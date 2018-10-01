@@ -17,7 +17,7 @@ class CodeToggleSCSS extends React.Component {
 
   componentDidMount() {
     var script = document.createElement('script');
-    script.src = "/prism.js";
+    script.src = "/dashby/prism.js";
     document.getElementsByTagName('head')[0].appendChild(script);
 
     Prism.highlightAll();
