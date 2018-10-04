@@ -1,5 +1,4 @@
 import React from 'react'
-import Prism from 'prismjs';
 
 class CodeToggle extends React.Component {
 
@@ -16,10 +15,7 @@ class CodeToggle extends React.Component {
   }
 
   componentDidMount() {
-    var script = document.createElement('script');
-    script.src = "/prism.js";
-    document.getElementsByTagName('head')[0].appendChild(script);
-
+    var Prism = window.Prism;
     Prism.highlightAll();
   }
 
