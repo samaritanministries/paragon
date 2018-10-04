@@ -1,10 +1,14 @@
 import React from 'react'
+import {Helmet} from "react-helmet";
 
 import Sidebar from './sidebar'
 import '../sass/example-page/example-page.scss'
 
 export default ({ children }) => (
   <div >
+    <Helmet>
+      <script src="/prism.js"></script>
+    </Helmet>
     <Sidebar />
     <div className="app-content">
       {children}
