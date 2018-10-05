@@ -19,6 +19,16 @@ body {
   margin: 1rem 0 1rem 0;
 }
 
+.logo-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 6rem;
+  }
+}
+
 .example-sidebar {
   width: $sidebar-width;
   background-color: $gray-100;
