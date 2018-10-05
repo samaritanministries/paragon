@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import $ from 'jquery';
 
-import logo from "../img/dash-donkey.svg";
+import logo from "../img/Dashing.svg";
 
 class Sidebar extends React.Component {
 
@@ -99,8 +99,8 @@ class Sidebar extends React.Component {
         <div className={this.state.showSidebar ? 'example-sidebar show' : 'example-sidebar'}>
 
           <ul>
-            <div style={{ textAlign: "center" }}>
-              <img src={logo} alt="Dash the Donkey" style={{ width: "8rem" }}/>
+            <div className="logo-container">
+              <img src={logo} alt="Dashing Logo" />
             </div>
 
             <div className={this.state.showDashing ? 'group-container expanded' : 'group-container'}>
