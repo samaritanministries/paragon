@@ -14,6 +14,12 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
     float: none;
     margin: 0;
     padding: $card-checkbox--padding;
+    border: 2px solid transparent;
+    @extend %card-shadow;
+
+    &:hover {
+      @extend %card-shadow--hover;
+    }
 
     &:before {
       display: inline-block;

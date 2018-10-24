@@ -5,9 +5,9 @@
 
 .card {
   background-color: $white;
-  border: 2px solid $gray-200;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 1.5rem auto;
+  @extend %card-shadow;
 
   .card--header, &.card--content, &.card--footer,
   .card-header, &.card-content, &.card-footer {
@@ -22,7 +22,7 @@
     padding: $grid-gutter $grid-gutter 0 $grid-gutter;
     padding-bottom: 0;
     &.has-border {
-      border-bottom: 2px solid $gray-200;
+      border-bottom: 2px solid $gray-100;
       padding-bottom: $grid-gutter;
       +.card--content .card-banner,
       +.card-content .card-banner  {
@@ -41,7 +41,7 @@
   .card-footer {
     padding: 0 $grid-gutter $grid-gutter $grid-gutter;
     &.has-border {
-      border-top: 2px solid $gray-200;
+      border-top: 2px solid $gray-100;
       padding-top: $grid-gutter;
     }
   }
@@ -53,11 +53,11 @@
 
   //Use "is-selectable" to indicate a clickable card, add disabled or is-disabled to fade back the card
   &.is-selectable {
-    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
     &:hover {
-      @extend %shadow-100; //Found in "_setup.scss"
-      border-color: $blue;
+      @extend %card-shadow--hover;
+      background-color: $gray-100;
       cursor: pointer;
     }
   }
@@ -69,11 +69,12 @@
     opacity: 0.4;
     pointer-events: none;
     background-color: $gray-200;
-    border-color: $gray-400;
+    box-shadow: none;
   }
 
   &.card--dashed {
-    border-style: dashed;
+    border: 2px dashed $gray-200;
+    box-shadow: none;
   }
 
   .card--narrow{
