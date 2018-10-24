@@ -3,7 +3,6 @@
   "description": "Style Framework for Samaritan Ministries",
   "version": "1.0.0",
   "dependencies": {
-    "dashing-framework": "^1.12.1",
     "gatsby": "next",
     "gatsby-plugin-google-fonts": "0.0.4",
     "gatsby-plugin-react-helmet": "next",
