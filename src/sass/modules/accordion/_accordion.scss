@@ -1,40 +1,46 @@
 .accordion {
-  border: 2px solid $gray-150;
   border-radius: 5px;
   transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  @extend %shadow-100;
+  @extend %card-shadow;
+
   .accordion--header {
     padding: $grid-gutter;
     display: flex;
     align-items: center;
     cursor: pointer;
+
     i.accordion--arrow {
       transition: transform 0.1s linear;
       @extend .dashing-icon--arrow-right;
       &:before { color: $black; }
     }
+
     .title {
       margin-left: 0.5rem;
     }
+
     .secondary-title {
       margin-left: auto;
     }
+
+    &:focus,
+    &:hover {
+      outline: none;
+    }
+
   }
   .accordion--content {
     display: none;
     padding: $grid-gutter;
-    border-top: 2px solid $gray-150;
+    border-top: 2px solid $gray-100;
   }
+
   &:focus,
   &:hover {
-    //border-color: $blue;
     outline: none;
   }
 
   &.expanded {
-    &:hover {
-      box-shadow: none;
-    }
     .accordion--header i.accordion--arrow { transform: rotate(90deg); }
   }
 }

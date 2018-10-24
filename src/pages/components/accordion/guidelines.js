@@ -5,12 +5,12 @@ import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 import StillWorking from '../../../components/stillworking'
 
-const currentPageName = "Spinner";
+const currentPageName = "Accordion";
 const currentPageNameLower = currentPageName.toLowerCase();
 
 export default () => (
   <Layout>
-    <header className="subnav"> 
+    <header className="subnav">
       <h1>{currentPageName}</h1>
       <SubNav pageName={currentPageNameLower}/>
     </header>

@@ -30,13 +30,14 @@ class AccordionCode extends React.Component {
         <AppContent>
           <div className="row">
             <div className="column column--full">
-              <h2 className="example-header no-margin--top">Accordion <button className="button button--transparent button--copy-link" data-id="copyurl" id="Default_Spinner"/></h2>
+              <h2 className="example-header no-margin--top">Default Accordion <button className="button button--transparent button--copy-link" data-id="copyurl" id="Default_Spinner"/></h2>
               <div className="row example-container">
                 <div className="column column--full">
-                  <div class="accordion" tabindex="0">
-                    <div className="accordion--header" id="toggleAccordion">
+                  <div className="accordion">
+                    <div className="accordion--header" id="toggleAccordion" tabindex="0">
                       <i className="dashing-icon accordion--arrow"></i>
                       <h3 className="title">Accordion Title</h3>
+                      <h3 className="secondary-title">$100.00</h3>
                     </div>
 
                     <div className="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
@@ -45,7 +46,15 @@ class AccordionCode extends React.Component {
                 </div>
               </div>
               <CodeToggle>
-{`<div class="dash-spinner"></div>`}
+{`<div className="accordion">
+  <div className="accordion--header" id="toggleAccordion" tabindex="0">
+    <i className="dashing-icon accordion--arrow"></i>
+    <h3 className="title">Accordion Title</h3>
+  </div>
+
+  <div className="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+
+</div>`}
               </CodeToggle>
 
             </div>
