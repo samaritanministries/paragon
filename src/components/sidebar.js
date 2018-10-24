@@ -131,6 +131,7 @@ class Sidebar extends React.Component {
               <i className={this.state.showComponents ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
+                <Link to="/components/accordion/code">Accordion</Link>
                 <Link to="/components/actions/code">Actions</Link>
                 <Link to="/components/banner/code">Banner</Link>
                 <Link to="/components/cards/code">Cards</Link>
