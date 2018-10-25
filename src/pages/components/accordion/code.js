@@ -34,7 +34,7 @@ class AccordionCode extends React.Component {
               <div className="row example-container">
                 <div className="column column--full">
                   <div className="accordion">
-                    <div className="accordion--header" id="toggleAccordion" tabindex="0">
+                    <div className="accordion--header" id="toggleAccordion" tabIndex="0">
                       <i className="dashing-icon accordion--arrow"></i>
                       <h3 className="title">Accordion Title</h3>
                       <h3 className="secondary-title">$100.00</h3>
