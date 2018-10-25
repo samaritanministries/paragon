@@ -1,5 +1,4 @@
 import React from 'react'
-import Prism from 'prismjs';
 
 import Layout from '../components/layout'
 import AppContent from '../components/appcontent'
@@ -8,10 +7,7 @@ import CodeToggleSCSS from '../components/codetoggle-scss'
 class GetStarted extends React.Component {
 
   componentDidMount() {
-    var script = document.createElement('script');
-    script.src = "/prism.js";
-    document.getElementsByTagName('head')[0].appendChild(script);
-
+    var Prism = window.Prism;
     Prism.highlightAll();
   }
 

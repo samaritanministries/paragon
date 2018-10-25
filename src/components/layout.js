@@ -7,7 +7,7 @@ import '../sass/example-page/example-page.scss'
 export default ({ children }) => (
   <div >
     <Helmet>
-      <script src="/prism.js"></script>
+      <script src="/dashby/static/prism.js" type="application/javascript"></script>
     </Helmet>
     <Sidebar />
     <div className="app-content">
