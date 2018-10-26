@@ -306,6 +306,31 @@ export default () => (
 </div>`}
       </CodeToggle>
 
+      <h2 className="example-header">Card List <button className="button button--transparent button--copy-link" data-id="copyurl" id="Card_List"></button></h2>
+      <div className="row example-container">
+        <div className="column column--full">
+          <div className="card" style={{ overflow: "hidden" }}>
+            <ul className="card--list is-selectable">
+              <li className="space-between"><span>Ryan Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
+              <li className="space-between"><span>Jill Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
+              <li className="space-between"><span>Jackson Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
+              <li className="space-between"><span>Emily Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <CodeToggle>
+{`<div class="card" style="overflow: hidden;" data-id="need">
+  <ul class="card--list is-selectable">
+    <li class="space-between"><span>Ryan Fitz</span><i class="dashing-icon dashing-icon--arrow-right"></i></li>
+    <li class="space-between"><span>Jill Fitz</span><i class="dashing-icon dashing-icon--arrow-right"></i></li>
+    <li class="space-between"><span>Jackson Fitz</span><i class="dashing-icon dashing-icon--arrow-right"></i></li>
+    <li class="space-between"><span>Emily Fitz</span><i class="dashing-icon dashing-icon--arrow-right"></i></li>
+  </ul>
+</div>`}
+      </CodeToggle>
+
       </div>
     </div>
     </AppContent>
