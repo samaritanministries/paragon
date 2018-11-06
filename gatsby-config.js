@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Dashby',
+    title: 'Paragon',
     description: `Style Framework for Samaritan Ministries`
   },
   plugins: [
@@ -15,5 +15,5 @@ module.exports = {
      }
    },
   ],
-  pathPrefix: `/dashby`,
+  pathPrefix: `/paragon`,
 }
