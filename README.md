@@ -1,5 +1,5 @@
-# Dashby
-Dashing Framework example page
+# Paragon
+Paragon Framework example page
 
 ## Install
 
