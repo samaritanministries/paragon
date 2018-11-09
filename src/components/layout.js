@@ -17,7 +17,7 @@ export default ({ children }) => (
         <div className="copyright">
           © 2018 Samaritan Ministries International
         </div>
-        <a href="https://github.com/samaritanministries/dashing" target="_blank" rel="noopener noreferrer">Download on GitHub</a>
+        <a href="https://github.com/samaritanministries/paragon" target="_blank" rel="noopener noreferrer">Download on GitHub</a>
       </footer>
     </div>
   </div>

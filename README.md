@@ -4,6 +4,7 @@ Paragon Framework example page
 ## Install
 
 ```sh
+nvm use 7
 npm install
 ```
 

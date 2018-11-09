@@ -9,11 +9,11 @@ class Sidebar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {showSidebar: false,
-                  showDashing: true,
+                  showParagon: true,
                   showComponents: true,
                   showStyle: true};
     this.handleClick = this.handleClick.bind(this);
-    this.toggleDashing = this.toggleDashing.bind(this);
+    this.toggleParagon = this.toggleParagon.bind(this);
     this.toggleComponents = this.toggleComponents.bind(this);
     this.toggleStyle = this.toggleStyle.bind(this);
   }
@@ -43,11 +43,11 @@ class Sidebar extends React.Component {
     }));
   }
 
-  toggleDashing() {
+  toggleParagon() {
     this.setState(prevState => ({
-      showDashing: !prevState.showDashing
+      showParagon: !prevState.showParagon
     }));
-    localStorage.setItem("showDashing", JSON.stringify(!this.state.showDashing));
+    localStorage.setItem("showParagon", JSON.stringify(!this.state.showParagon));
   }
 
   toggleComponents() {
@@ -100,12 +100,12 @@ class Sidebar extends React.Component {
 
           <ul>
             <div className="logo-container">
-              <img src={logo} alt="Dashing Logo" />
+              <img src={logo} alt="Paragon Logo" />
             </div>
 
-            <div className={this.state.showDashing ? 'group-container expanded' : 'group-container'}>
-              <h4 className="group-title" onClick={this.toggleDashing}>Dashing</h4>
-              <i onClick={this.toggleDashing} className={this.state.showDashing ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
+            <div className={this.state.showParagon ? 'group-container expanded' : 'group-container'}>
+              <h4 className="group-title" onClick={this.toggleParagon}>Paragon</h4>
+              <i className={this.state.showParagon ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
                 <Link to="/" activeClassName="active">Principles</Link>
