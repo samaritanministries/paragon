@@ -17,12 +17,12 @@ export default () => (
               <div className="resource-image"></div>
             </div>
             <div className="card--resource-text">
-              <h3>Dashing Framework</h3>
+              <h3>Paragon Framework</h3>
               <a className="resource-badge" href="https://badge.fury.io/gh/samaritanministries%2Fdashing" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/gh/samaritanministries%2Fdashing.svg" alt="GitHub version" height="18" /></a>
               <p>Style Framework for Samaritan Web Products</p>
             </div>
             <div className="card--resource-buttons">
-              <a className="button button--blue button--border button--smooth" href="https://github.com/samaritanministries/dashing/" target="_blank" rel="noopener noreferrer">View in github<i className="dashing-icon dashing-icon--new-tab flow-opposite"></i></a>
+              <a className="button button--blue button--border button--smooth" href="https://github.com/samaritanministries/paragon/" target="_blank" rel="noopener noreferrer">View in github<i className="dashing-icon dashing-icon--new-tab flow-opposite"></i></a>
             </div>
           </div>
 
