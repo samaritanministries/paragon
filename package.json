@@ -1,7 +1,13 @@
 {
-  "name": "dashing",
-  "description": "Style Framework for Samaritan Ministries",
+  "name": "paragon",
+  "description": "Example Page for Paragon",
   "version": "1.0.0",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
   "dependencies": {
     "gatsby": "next",
     "gatsby-plugin-google-fonts": "0.0.4",
@@ -18,17 +24,6 @@
     "react-prism": "^4.3.2",
     "react-router-dom": "^4.3.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
-  },
   "devDependencies": {
     "gatsby": "next",
     "node-sass": "^4.9.0",
@@ -37,8 +32,13 @@
     "webpack": "^4.12.0",
     "gh-pages": "^2.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/samaritanministries/paragon"
-  }
+  "files": [
+    "src/sass/base",
+    "src/sass/modules",
+    "src/sass/theme",
+    "src/sass/vendor",
+    "src/sass/paragon.scss",
+    "src/sass/package.json",
+    "src/sass/CHANGELOG.md"
+  ]
 }
