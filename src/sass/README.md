@@ -14,9 +14,9 @@ Styling framework
 
 ## Install the Component
 
-The Paragon Framework is delivered as a [npm](https://docs.npmjs.com/cli/install) component.
+The Paragon Framework is delivered as a [npm](https://www.npmjs.com/) component.
 
-1. Install the paragon npm component. This will install the Paragon files in your project's node_modules folder.
+Install the paragon npm component. This will install the Paragon files in your project's node_modules folder.
   ```grunt
   npm i paragon-framework
   ```
@@ -32,8 +32,8 @@ Copy and paste the following code snippet into your project. This will pull in n
 > Note: If you wish to overwrite Paragon styles to add customization your project, skip through this step and head to the [next section](https://github.com/samaritanministries/paragon/#including-custom-styles).
 
 ```scss
-@import "node_modules/paragon-framework/sass/vendor/normalize";
-@import "node_modules/paragon-framework/sass/base/base";
+@import "node_modules/paragon-framework/vendor/normalize";
+@import "node_modules/paragon-framework/base/base";
 @import "node_modules/paragon-framework/sass/modules/modules";
 ```
 
@@ -47,10 +47,10 @@ While the Paragon Style Framework does provide a lot of core modules for you to 
 
 3. Import everything to your main application folder. When you're all finished, it should look something like this:
   ```scss
-  @import "node_modules/paragon-framework/sass/vendor/normalize";
-  @import "node_modules/paragon-framework/sass/base/base";
+  @import "node_modules/paragon-framework/vendor/normalize";
+  @import "node_modules/paragon-framework/base/base";
   @import "theme/theme";
-  @import "node_modules/paragon-framework/sass/modules/modules";
+  @import "node_modules/paragon-framework/modules/modules";
 
   @import "base/base";
   @import "layout/layout";
@@ -60,7 +60,7 @@ While the Paragon Style Framework does provide a lot of core modules for you to 
 
   > Note: By including a theme file, your modules will now look to that for color theming, rather than base.
 
-  ## Setting up your HTML file and importing styles
+## Setting up your HTML file and importing styles
 
   We've provided a starter HTML file to help you get running. Paste this code into your `index.html` file.
 
@@ -85,11 +85,11 @@ While the Paragon Style Framework does provide a lot of core modules for you to 
   </html>
   ```
 
-  ## Found a Bug?
+## Found a Bug?
 
   [Submit an issue](https://github.com/samaritanministries/paragon/issues) if you need help, or [submit a pull request](https://github.com/samaritanministries/paragon/pulls) with your own fixes or changes.
 
-  ## Contributors
+## Contributors
 
   Paragon is a product of Samaritan Ministries International.
 

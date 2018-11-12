@@ -17,17 +17,14 @@ npm i paragon-framework
 git clone https://github.com/samaritanministries/paragon.git
 ```
 
-```bash
-npm install
-```
-
 ### Start in `develop` mode
 
-  Next, move into your new site’s directory and start it up:
+  Next, move into your new site’s directory, run `npm install` and start it up:
 
 ```bash
 cd paragon
+npm install
 gatsby develop
 ```
 
-  Your site is now running at `http://localhost:8000`.
+  The paragon example site is now running at `http://localhost:8000`.

@@ -1,7 +1,7 @@
 {
   "name": "paragon-framework",
   "description": "Style Framework for Samaritan Ministries",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.3",
   "main": "index.js",
   "keywords": [
     "paragon",
@@ -12,10 +12,7 @@
   "bugs": {
     "url": "https://github.com/samaritanministries/paragon/issues"
   },
-  "homepage": "https://github.com/samaritanministries/paragon#readme",
-  "dependencies": {
-    "normalize-scss": "3.0.3"
-  },
+  "homepage": "http://developers.samaritanministries.org/paragon/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samaritanministries/paragon.git"
