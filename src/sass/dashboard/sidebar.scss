@@ -2,13 +2,36 @@
 $animation-time: 0.3s;
 
 //SIDEBAR
+
+.sidebar {
+  float: left;/*fallback*/
+  min-height: calc(100vh - #{$header-height});
+  min-width: $sidebar-width;
+  position: fixed;
+  left: 0;
+  top: $header-height;
+
+  display: none;
+
+  @media #{$tablet} {
+    display: flex;
+  }
+}
+
+.mobile-sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 90%;
+}
+
 .sidebar, .mobile-sidebar { background-color: $sidebar-background; }
 .sidebar-nav, .mobile-sidebar-nav {
   list-style-type: none;
   padding: 0;
 
   li {
-    padding-left: $half-padding;
+    padding-left: $full-padding;
     height: 2.5rem;
     display: flex;
     align-items: center;
@@ -28,7 +51,7 @@ $animation-time: 0.3s;
   }
 }
 
-.sidebar-nav { width: 12rem; }
+.sidebar-nav { width: $sidebar-width; }
 .mobile-sidebar-nav { width: 100%; }
 
 .mobile-overlay {
@@ -90,7 +113,7 @@ $animation-time: 0.3s;
 	padding: $full-padding;
   display: block;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows:1fr auto auto;
+  grid-template-rows: 1fr auto auto;
 
   .profile-image {
     width: 3rem;
