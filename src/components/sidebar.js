@@ -90,7 +90,7 @@ class Sidebar extends React.Component {
 
       <div>
 
-        <div className={this.state.showSidebar ? 'mobile-sidebar expanded' : 'mobile-sidebar'}>
+        <div className={this.state.showSidebar ? 'example-mobile-sidebar expanded' : 'example-mobile-sidebar'}>
           <button className="button--gray button--sidebar-icon" onClick={this.handleClick}>
             <i className={this.state.showSidebar ? 'dashing-icon dashing-icon--close' : 'dashing-icon'}></i>
           </button>
@@ -110,6 +110,7 @@ class Sidebar extends React.Component {
               <div className="menu-group">
                 <Link to="/" activeClassName="active">Principles</Link>
                 <Link to="/get-started" activeClassName="active">Get Started</Link>
+                <Link to="/templates">Templates</Link>
                 <Link to="/resources">Resources</Link>
               </div>
             </div>
