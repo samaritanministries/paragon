@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import AppContent from '../components/appcontent'
@@ -14,7 +13,9 @@ export default () => (
         <div className="column column--full">
 
           <a href="/templates/dashboard" target="_blank" rel="noopener noreferrer">Dashboard</a><br/>
-          <a href="/templates/single-page" target="_blank" rel="noopener noreferrer">Single Page</a>
+          <a href="/templates/single-page" target="_blank" rel="noopener noreferrer">Single Page</a><br/>
+          <a href="/templates/fullscreen" target="_blank" rel="noopener noreferrer">Fullscreen</a><br/>
+          <a href="/templates/mobile" target="_blank" rel="noopener noreferrer">Mobile</a>
 
         </div>
       </div>

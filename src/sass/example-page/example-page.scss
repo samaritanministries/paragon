@@ -13,6 +13,9 @@ body {
   background-color: $white;
 }
 
+//Give example pages gray background
+.app { background-color: $gray-100; }
+
 .button--copy-link {
   display: none;
 }
@@ -627,4 +630,12 @@ footer {
     margin-left: 2rem;
     margin-top: 0rem;
   }
+}
+
+.img-placeholder {
+  background-color: $gray-200;
+  border-color: $gray-200;
+  height: 4rem;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
 }

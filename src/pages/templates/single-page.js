@@ -6,8 +6,8 @@ export default () => (
 	<section class="mobile-overlay is-collapsed">
 		<aside class="mobile-sidebar">
 			<div class="mobile-profile">
-				<a href="./" class="mobile-sidebar--button" id="open-button" ><i class="dashing-icon dashing-icon--close"></i></a>
-				<a href="#" class="mobile-profile--account">
+				<a href="/templates/mobile" class="mobile-sidebar--button" id="open-button" ><i class="dashing-icon dashing-icon--close"></i></a>
+				<a href="/templates/single-page" class="mobile-profile--account">
 					<div class="profile-image"><i class="dashing-icon dashing-icon--face-good"></i></div>
 					<div class="profile-edit"><i class="dashing-icon dashing-icon--pencil"></i></div>
 					<h3 class="profile-name">Nitsua Cholbonk</h3>
@@ -25,7 +25,7 @@ export default () => (
 
 	<div class="grid-phoenix">
 		<header class="header">
-			<a href="./mobile.html" class="mobile-sidebar--button" id="close-button"><i class="dashing-icon dashing-icon--menu"></i></a>
+			<a href="/templates/mobile" class="mobile-sidebar--button" id="close-button"><i class="dashing-icon dashing-icon--menu"></i></a>
 			<div class="logo"><p class="text-color--white">LOGO</p></div>
 			<div class="crumbs">A Title of This Page</div>
 			<div class="alert"><i class="dashing-icon dashing-icon--notification"></i><div class="count">100</div></div>
@@ -38,16 +38,16 @@ export default () => (
 				<p class="subtitle">A Subtle Subtitle</p>
 			</div>
 			<div class="spacer">
-				<a href="./" class="action button button--grey"><i class="dashing-icon dashing-icon--close"></i> close</a>
+				<a href="/templates/single-page" class="action button button--grey"><i class="dashing-icon dashing-icon--close"></i> close</a>
 			</div>
 		</header>
 
 		<aside class="sidebar">
 			<ul class="sidebar-nav">
-				<li><i class="dashing-icon dashing-icon--locked"></i><a>Home</a></li>
-				<li><i class="dashing-icon dashing-icon--locked"></i><a>Wallet</a></li>
-				<li><i class="dashing-icon dashing-icon--locked"></i><a>My Needs</a></li>
-				<li><i class="dashing-icon dashing-icon--locked"></i><a>Sign Out</a></li>
+				<li><i class="dashing-icon dashing-icon--locked"></i><a href="/templates/single-page">Home</a></li>
+				<li><i class="dashing-icon dashing-icon--locked"></i><a href="/templates/single-page">Wallet</a></li>
+				<li><i class="dashing-icon dashing-icon--locked"></i><a href="/templates/single-page">My Needs</a></li>
+				<li><i class="dashing-icon dashing-icon--locked"></i><a href="/templates/single-page">Sign Out</a></li>
 			</ul>
 		</aside>
 
@@ -56,11 +56,6 @@ export default () => (
 				<div class="card">
 					<div class="card--header has-border"><h3>Example Dashing Page</h3></div>
 					<div class="card--content"><p>This example shows a single column layout and various uses.</p>
-						<h4>Other Templates:</h4>
-						<a href="/">Dashboard</a><br/>
-						<a href="/single-page">Single Column Layout in Dashboard</a><br/>
-						<a href="/fullscreen">Fullscreen Layout in Dashboard</a><br/>
-						<a href="/mobile">Open Mobile Menu</a><br/>
 					</div>
 				</div>
 
