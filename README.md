@@ -1,6 +1,9 @@
 # Paragon
 Paragon Framework example page
 
+[![npm version](https://badge.fury.io/js/paragon-framework.svg)](https://badge.fury.io/js/paragon-framework)
+
+
 Below are instructions on how to run and update the Paragon example page. If you would like to just import Paragon into your existing project, navigate to the [paragon npm package](https://www.npmjs.com/package/paragon-framework) or run:
 
 ```bash
