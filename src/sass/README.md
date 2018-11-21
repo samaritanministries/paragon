@@ -34,7 +34,7 @@ Copy and paste the following code snippet into your project. This will pull in n
 ```scss
 @import "node_modules/paragon-framework/vendor/normalize";
 @import "node_modules/paragon-framework/base/base";
-@import "node_modules/paragon-framework/sass/modules/modules";
+@import "node_modules/paragon-framework/modules/modules";
 ```
 
 ### Including Custom Styles
@@ -101,6 +101,6 @@ While the Paragon Style Framework does provide a lot of core modules for you to 
   - [@nevren](https://github.com/Nevren)
   - [@aknobloch3](https://github.com/aknobloch3)
 
-  ## License
+## License
 
   [MIT License](LICENSE.md)

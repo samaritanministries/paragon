@@ -18,7 +18,7 @@ export default () => (
             </div>
             <div className="card--resource-text">
               <h3>Paragon Framework</h3>
-              <a className="resource-badge" href="https://badge.fury.io/gh/samaritanministries%2Fdashing" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/gh/samaritanministries%2Fdashing.svg" alt="GitHub version" height="18" /></a>
+              <a className="resource-badge" href="https://badge.fury.io/gh/samaritanministries%2Fparagon" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/gh/samaritanministries%2Fparagon.svg" alt="GitHub version" height="18" /></a>
               <p>Style Framework for Samaritan Web Products</p>
             </div>
             <div className="card--resource-buttons">
