@@ -52,9 +52,52 @@ export default () => (
     </aside>
 
     <section className="app">
-			<div className="content" style={{maxWidth: `600px`}}>
-	      <h1>Example Dashing Page</h1>
-	      <p>This example shows the dashboard layout. (Sidebar, Header, App, and Mobile Menu) Content starts within this section.</p>
+			<div className="content" style={{maxWidth: `1200px`}}>
+
+				<div className="grid">
+
+					<div className="grid--third">
+						<h2>Funds for Sharing</h2>
+						<p>Funded by you to pay your Share</p>
+
+						<div className="card">
+							<h3>Funds for Sharing</h3>
+							<h1>$615.00</h1>
+							<label>Available Balance</label>
+						</div>
+
+						<h2>Account Details</h2>
+
+						<div className="card">
+							<h3>Bank Account</h3>
+							<hr/>
+							<h3>Monthly Statements</h3>
+						</div>
+
+					</div>
+
+					<div className="grid--two-thirds">
+						<h2>Share History</h2>
+						<p>This is a list of all your transactions</p>
+
+						<div className="card">
+							<ol className="ordered-list--custom">
+								<li>List 1</li>
+								<li>List 1</li>
+								<li>List 1</li>
+								<li>List 1</li>
+								<li>List 1</li>
+								<li>List 1</li>
+								<li>List 1</li>
+								<li>List 1</li>
+								<li>List 1</li>
+							</ol>
+						</div>
+					</div>
+
+				</div>
+
+
 		 </div>
     </section>
   </div>
