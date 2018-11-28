@@ -30,9 +30,9 @@ export default () => (
 
 			<nav class="header-nav">
 				<ul>
-					<li><a className="active">Home</a></li>
-					<li><a>Shares</a></li>
-					<li><a>Bill's</a></li>
+					<li><a href="/" className="active">Home</a></li>
+					<li><a href="/">Shares</a></li>
+					<li><a href="/">Bill's</a></li>
 				</ul>
 			</nav>
 
@@ -49,7 +49,7 @@ export default () => (
       	<a href="/templates/dashboard" class="action button button--grey"><i class="dashing-icon dashing-icon--close"></i> close</a>
 			</div>
 		</header>
-
+	
 		<nav className="sub-nav">
 			<ul>
 				<li><a className="active">Home</a></li>
@@ -68,10 +68,53 @@ export default () => (
     </aside>
 
     <section class="app">
-			<div class="content">
-	      <h1>Example Dashing Page</h1>
-	      <p>This example shows the dashboard layout. (Sidebar, Header, App, and Mobile Menu) Content starts within this section.</p>
+		<div className="content" style={{maxWidth: `1200px`}}>
+
+			<div className="grid grid-padding">
+
+				<div className="grid--third">
+					<h2>Funds for Sharing</h2>
+					<p>Funded by you to pay your Share</p>
+
+					<div className="card">
+						<h3>Funds for Sharing</h3>
+						<h1>$615.00</h1>
+						<label>Available Balance</label>
+					</div>
+
+					<h2>Account Details</h2>
+
+					<div className="card">
+						<h3>Bank Account</h3>
+						<hr/>
+						<h3>Monthly Statements</h3>
+					</div>
+
+				</div>
+
+				<div className="grid--two-thirds">
+					<h2>Share History</h2>
+					<p>This is a list of all your transactions</p>
+
+					<div className="card">
+						<ol className="ordered-list--custom">
+							<li>List 1</li>
+							<li>List 1</li>
+							<li>List 1</li>
+							<li>List 1</li>
+							<li>List 1</li>
+							<li>List 1</li>
+							<li>List 1</li>
+							<li>List 1</li>
+							<li>List 1</li>
+						</ol>
+					</div>
+				</div>
+
 			</div>
+
+
+	 </div>
     </section>
   </main>
 

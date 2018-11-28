@@ -46,7 +46,6 @@ $full-padding: $grid-gutter;//1rem;
   float: right;/*fallback*/
   height: calc(100vh - #{$header-height});
   margin-top: $header-height;
-  padding: 1rem;
   -webkit-overflow-scrolling: touch;
 
   grid-column: 1 / 3;

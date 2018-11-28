@@ -8,12 +8,20 @@ Actual CSS Grid Classes
   	width: 100%;
 }
 
-//Pad the grid
-.grid-layout,
-.grid-padding { @supports(display: grid) { padding: $grid-gutter; } }//Don't let fallbacks add padding, they have enough.
-
 //use grid to make a new 12 column grid
-.grid {//IE and Safari
+.grid {//IE and Safar
+
+	//Pad the grid
+	&.grid-padding {
+		@supports(display: grid) {
+			padding: $grid-gutter;
+			// padding: $grid-gutter 0;
+			// @media #{$tablet}{
+			// 	padding: $grid-gutter;
+			// }
+		}
+	}
+
 	display: block;//For IE and Safari mobile
 	overflow: auto;//For IE and Safari display
 	@supports(display: grid) { display: grid; grid-gap: $grid-gutter; }//For non-fallbacks use grid
@@ -21,7 +29,7 @@ Actual CSS Grid Classes
 	* {
 		@supports(display: grid) { @include grid-column(12); }//By default, content will span all 12 columns
 	}
-	//the unfortunate part of reusing 12 everytime is that it's simply not needed. If you need a half, it seems like repeat(2, 1fr) is more helpful.
+
 	grid-template-columns: repeat(12, 1fr);
 	//12 10 9 8 6 4 3 2
 	.grid--full,          .grid-12  { @include grid-column(12); }

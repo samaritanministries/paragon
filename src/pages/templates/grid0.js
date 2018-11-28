@@ -54,7 +54,7 @@ export default () => (
     <section className="app">
 			<div className="content" style={{maxWidth: `1200px`}}>
 
-				<div className="grid">
+				<div className="grid grid-padding">
 
 					<div className="grid--third">
 						<h2>Funds for Sharing</h2>
