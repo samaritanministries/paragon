@@ -12,7 +12,7 @@ Actual CSS Grid Classes
 .grid-layout,
 .grid-padding { @supports(display: grid) { padding: $grid-gutter; } }//Don't let fallbacks add padding, they have enough.
 
-//select one to start the grid
+//use grid to make a new 12 column grid
 .grid {//IE and Safari
 	display: block;//For IE and Safari mobile
 	overflow: auto;//For IE and Safari display
@@ -21,17 +21,17 @@ Actual CSS Grid Classes
 	* {
 		@supports(display: grid) { @include grid-column(12); }//By default, content will span all 12 columns
 	}
-
-	grid-template-columns: repeat(12, 1fr); 
-	
-	.grid--full 		   { @include grid-column(12); }
-	.grid--five-sixths     { @include grid-column(10); }
-	.grid--three-fourths   { @include grid-column(9); }
-	.grid--two-thirds      { @include grid-column(8); }
-	.grid--half            { @include grid-column(6); }
-	.grid--third           { @include grid-column(4); }
-	.grid--fourth          { @include grid-column(3); }
-	.grid--sixth           { @include grid-column(2); }
+	//the unfortunate part of reusing 12 everytime is that it's simply not needed. If you need a half, it seems like repeat(2, 1fr) is more helpful.
+	grid-template-columns: repeat(12, 1fr);
+	//12 10 9 8 6 4 3 2
+	.grid--full,          .grid-12  { @include grid-column(12); }
+	.grid--five-sixths,   .grid-10  { @include grid-column(10); }
+	.grid--three-fourths, .grid-9   { @include grid-column(9); }
+	.grid--two-thirds,    .grid-8   { @include grid-column(8); }
+	.grid--half,          .grid-6   { @include grid-column(6); }
+	.grid--third,         .grid-4   { @include grid-column(4); }
+	.grid--fourth,        .grid-3   { @include grid-column(3); }
+	.grid--sixth,         .grid-2   { @include grid-column(2); }
 }
 
 .grid { .card { margin: 0; } }

@@ -1,9 +1,14 @@
 //Variables
+$container-colors: $blue;//#413552
 $sidebar-background: #354052;
 $app-background:     #e0e0e0;
 $sidebar-highlight:  #9D6CDE;
 $sidebar-text-color: $white;
 $sidebar-width: 12rem;
+
+$content-width: 1200px;
+
+$header-gradient: linear-gradient(100deg, $blue-600, $blue-800);
 
 $header-padding: 0.5rem;
 $header-height: 5rem;
@@ -13,7 +18,7 @@ $full-padding: $grid-gutter;//1rem;
 //Theme
 // .app    { background-color: $app-background; }
 .header {
-  background-color: $sidebar-background;
+  // background-color: $sidebar-background;
   overflow: hidden;
   z-index: 3;
   display: flex;
@@ -28,13 +33,13 @@ $full-padding: $grid-gutter;//1rem;
   clear: both;/*fallback*/
   height: $header-height;
   max-height: $header-height;
-  margin: 0;
+  // margin: 0;
+
+  max-width: $content-width;
+  margin: auto;
 
   .title, .spacer { display: none; }//hidden unless "fullscreen" is applied
 
-  @media #{$tablet} {
-    background-color: $white;
-  }
 }
 
 .app {
@@ -55,10 +60,10 @@ $full-padding: $grid-gutter;//1rem;
 
 //Structure
 .content {
-  max-width: $global-content-width;
+  max-width: $content-width;
   margin: auto;
   &.content--reader-width {//move this to base?
-    max-width: $global-content-width / 2;
+    max-width: $content-width / 2;
   }
 }
 
@@ -66,6 +71,10 @@ $full-padding: $grid-gutter;//1rem;
   display: grid;
   grid-template-columns: $sidebar-width 1fr;
   margin: 0 auto;
+
+  &.map {
+    grid-template-columns: 1fr $sidebar-width;
+  }
 }
 
 @supports (display: grid) { .grid-phoenix > * { width: auto; } }
@@ -119,5 +128,14 @@ $full-padding: $grid-gutter;//1rem;
 
   .logo, .alert, .profile, .mobile-sidebar--button, .crumbs { display: none; }
   .sidebar { display: none; width: 0rem;}
-  .app { grid-column: 1 / 3; width: 100%; }
+  .app     { grid-column: 1 / 3; width: 100%; }
+}
+
+.map {
+  .sidebar {
+    &.is-hidden {
+      display: none; width: 0rem;
+    }
+  }
+  .app { float: left; grid-column: 1 / 3; width: 100%; }
 }

@@ -8,7 +8,7 @@ $animation-time: 0.3s;
   min-height: calc(100vh - #{$header-height});
   min-width: $sidebar-width;
   position: fixed;
-  left: 0;
+  left: 0;//left or right
   top: $header-height;
 
   display: none;
@@ -163,4 +163,11 @@ $animation-time: 0.3s;
 @supports (display: grid) {
   .mobile-profile--account > * { width: auto; }
   .mobile-profile--account { display: grid; }
+}
+
+.map {
+  .sidebar {
+    left: auto;
+    right: 0;
+  }
 }

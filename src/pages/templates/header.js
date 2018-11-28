@@ -23,12 +23,18 @@ export default () => (
 		</aside>
 	</section>
 
-  <main class="grid-phoenix">
-		<header class="header">
+  <main class="grid-phoenix map">
+		<header class="header header-v2">
 			<a href="/templates/mobile" class="mobile-sidebar--button" id="close-button"><i class="dashing-icon dashing-icon--menu"></i></a>
 			<div class="logo"><p class="text-color--white">LOGO</p></div>
 
-			<span class="crumbs">A Title of This Page</span>
+			<nav class="header-nav">
+				<ul>
+					<li><a className="active">Home</a></li>
+					<li><a>Shares</a></li>
+					<li><a>Bill's</a></li>
+				</ul>
+			</nav>
 
 			<div class="alert"><i class="dashing-icon dashing-icon--notification"></i><div class="count">100</div></div>
 			<div class="profile"><i class="dashing-icon dashing-icon--face-good"></i></div>
@@ -44,7 +50,15 @@ export default () => (
 			</div>
 		</header>
 
-		<aside class="sidebar">
+		<nav className="sub-nav">
+			<ul>
+				<li><a className="active">Home</a></li>
+				<li><a>Shares</a></li>
+				<li><a>Bill's</a></li>
+			</ul>
+		</nav>
+
+		<aside class="sidebar is-hidden">
       <ul class="sidebar-nav">
         <li><i class="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">Home</a></li>
         <li><i class="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">Wallet</a></li>
