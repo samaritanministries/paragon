@@ -79,7 +79,10 @@ export default () => (
 					<div className="card">
 						<h3>Funds for Sharing</h3>
 						<h1>$615.00</h1>
-						<label>Available Balance</label>
+						<p>Available Balance is available. Are you available? ; ) Let's write more here to describe this card.</p>
+						<p>Available Balance is available. Are you available? ; ) Let's write more here to describe this card.</p>
+						<button>Test Button</button>
+						<button>Test Button</button>
 					</div>
 
 					<h2>Account Details</h2>
@@ -88,6 +91,19 @@ export default () => (
 						<h3>Bank Account</h3>
 						<hr/>
 						<h3>Monthly Statements</h3>
+					</div>
+
+					<div className="card grid">
+						<h3 class="grid--half">Funds for Sharing</h3>
+						<h1 class="grid--half">$615.00</h1>
+						<div className="grid--full">
+							<p>Available Balance is available. Are you available? ; ) Let's write more here to describe this card.</p>
+							<p>Available Balance is available.</p>
+						</div>
+						<div className="grid--full">
+							<button>Test Button</button>
+							<button>Test Button</button>
+						</div>
 					</div>
 
 				</div>
