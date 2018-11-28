@@ -44,7 +44,7 @@ $full-padding: $grid-gutter;//1rem;
 
 .app {
   float: right;/*fallback*/
-  height: calc(100vh - #{$header-height});
+  // height: calc(100vh - #{$header-height});
   margin-top: $header-height;
   -webkit-overflow-scrolling: touch;
 
