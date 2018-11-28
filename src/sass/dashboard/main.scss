@@ -8,17 +8,13 @@ $sidebar-width: 12rem;
 
 $content-width: 1200px;
 
-$header-gradient: linear-gradient(100deg, $blue-600, $blue-800);
-
 $header-padding: 0.5rem;
 $header-height: 5rem;
 $half-padding: 0.5rem;
 $full-padding: $grid-gutter;//1rem;
 
 //Theme
-// .app    { background-color: $app-background; }
 .header {
-  // background-color: $sidebar-background;
   overflow: hidden;
   z-index: 3;
   display: flex;
@@ -33,7 +29,6 @@ $full-padding: $grid-gutter;//1rem;
   clear: both;/*fallback*/
   height: $header-height;
   max-height: $header-height;
-  // margin: 0;
 
   max-width: $content-width;
   margin: auto;
@@ -44,7 +39,6 @@ $full-padding: $grid-gutter;//1rem;
 
 .app {
   float: right;/*fallback*/
-  // height: calc(100vh - #{$header-height});
   margin-top: $header-height;
   -webkit-overflow-scrolling: touch;
 
@@ -112,7 +106,6 @@ $full-padding: $grid-gutter;//1rem;
       padding-right: 0.5rem;
 
       &:last-of-type  { flex: 1; justify-content: flex-end; }
-      // &:first-of-type { flex: 1; justify-content: flex-start; padding-left: 0.5rem; }
 
       @media #{$tablet} {
         width: 40rem;
