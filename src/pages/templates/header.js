@@ -49,12 +49,12 @@ export default () => (
       	<a href="/templates/dashboard" class="action button button--grey"><i class="dashing-icon dashing-icon--close"></i> close</a>
 			</div>
 		</header>
-	
+
 		<nav className="sub-nav">
 			<ul>
-				<li><a className="active">Home</a></li>
-				<li><a>Shares</a></li>
-				<li><a>Bill's</a></li>
+				<li><a className="active">Option 1</a></li>
+				<li><a>Option 2</a></li>
+				<li><a>Option 3</a></li>
 			</ul>
 		</nav>
 

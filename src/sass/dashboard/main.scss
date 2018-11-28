@@ -1,5 +1,9 @@
+//--------------------------------\\
+//---------- VARIABLES  ----------\\
+//--------------------------------\\
+
 //Variables
-$container-colors: $blue;//#413552
+$container-colors: transparent;//#413552
 $sidebar-background: #354052;
 $app-background:     #e0e0e0;
 $sidebar-highlight:  #9D6CDE;
@@ -9,7 +13,7 @@ $sidebar-width: 12rem;
 $content-width: 1200px;
 
 $header-padding: 0.5rem;
-$header-height: 5rem;
+$header-height: 4rem;
 $half-padding: 0.5rem;
 $full-padding: $grid-gutter;//1rem;
 
