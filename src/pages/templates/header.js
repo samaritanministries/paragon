@@ -3,32 +3,32 @@ import React from 'react'
 export default () => (
 
 <div>
-	<section class="mobile-overlay is-collapsed">
-		<aside class="mobile-sidebar">
-			<div class="mobile-profile">
-				<a href="/templates/mobile" class="mobile-sidebar--button" id="open-button" ><i class="dashing-icon dashing-icon--close"></i></a>
-        <a href="/templates/dashboard" class="mobile-profile--account">
-          <div class="profile-image"><i class="dashing-icon dashing-icon--face-good"></i></div>
-          <div class="profile-edit"><i class="dashing-icon dashing-icon--pencil"></i></div>
-          <h3 class="profile-name">Nitsua Cholbonk</h3>
-          <span class="profile-email">nitsua.cholbonk@mailinator.com</span>
+	<section className="mobile-overlay is-collapsed">
+		<aside className="mobile-sidebar">
+			<div className="mobile-profile">
+				<a href="/templates/mobile" className="mobile-sidebar--button" id="open-button" ><i className="dashing-icon dashing-icon--close"></i></a>
+        <a href="/templates/dashboard" className="mobile-profile--account">
+          <div className="profile-image"><i className="dashing-icon dashing-icon--face-good"></i></div>
+          <div className="profile-edit"><i className="dashing-icon dashing-icon--pencil"></i></div>
+          <h3 className="profile-name">Nitsua Cholbonk</h3>
+          <span className="profile-email">nitsua.cholbonk@mailinator.com</span>
         </a>
 			</div>
-			<ul class="mobile-sidebar-nav">
-				<li><i class="dashing-icon dashing-icon--locked"></i><a href="/">Dashboard</a></li>
-				<li><i class="dashing-icon dashing-icon--locked"></i><a href="/single-page">Single Column Layout in Dashboard</a></li>
-				<li><i class="dashing-icon dashing-icon--locked"></i><a href="/fullscreen">Fullscreen Layout in Dashboard</a></li>
-				<li><i class="dashing-icon dashing-icon--locked"></i><a href="/mobile">Open Mobile Menu</a></li>
+			<ul className="mobile-sidebar-nav">
+				<li><i className="dashing-icon dashing-icon--locked"></i><a href="/">Dashboard</a></li>
+				<li><i className="dashing-icon dashing-icon--locked"></i><a href="/single-page">Single Column Layout in Dashboard</a></li>
+				<li><i className="dashing-icon dashing-icon--locked"></i><a href="/fullscreen">Fullscreen Layout in Dashboard</a></li>
+				<li><i className="dashing-icon dashing-icon--locked"></i><a href="/mobile">Open Mobile Menu</a></li>
 			</ul>
 		</aside>
 	</section>
 
-  <main class="grid-phoenix map">
-		<header class="header header-v2">
-			<a href="/templates/mobile" class="mobile-sidebar--button" id="close-button"><i class="dashing-icon dashing-icon--menu"></i></a>
-			<div class="logo"><p class="text-color--white">LOGO</p></div>
+  <main className="grid-phoenix map">
+		<header className="header header-v2">
+			<a href="/templates/mobile" className="mobile-sidebar--button" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></a>
+			<div className="logo"><p className="text-color--white">LOGO</p></div>
 
-			<nav class="header-nav">
+			<nav className="header-nav">
 				<ul>
 					<li><a href="/" className="active">Home</a></li>
 					<li><a href="/">Shares</a></li>
@@ -36,17 +36,17 @@ export default () => (
 				</ul>
 			</nav>
 
-			<div class="alert"><i class="dashing-icon dashing-icon--notification"></i><div class="count">100</div></div>
-			<div class="profile"><i class="dashing-icon dashing-icon--face-good"></i></div>
+			<div className="alert"><i className="dashing-icon dashing-icon--notification"></i><div className="count">100</div></div>
+			<div className="profile"><i className="dashing-icon dashing-icon--face-good"></i></div>
 
-			<div class="spacer">
+			<div className="spacer">
 			</div>
-			<div class="title">
+			<div className="title">
 				Example Fullscreen Page
-				<p class="subtitle">A Subtle Subtitle</p>
+				<p className="subtitle">A Subtle Subtitle</p>
 			</div>
-			<div class="spacer">
-      	<a href="/templates/dashboard" class="action button button--grey"><i class="dashing-icon dashing-icon--close"></i> close</a>
+			<div className="spacer">
+      	<a href="/templates/dashboard" className="action button button--grey"><i className="dashing-icon dashing-icon--close"></i> close</a>
 			</div>
 		</header>
 
@@ -58,16 +58,16 @@ export default () => (
 			</ul>
 		</nav>
 
-		<aside class="sidebar is-hidden">
-      <ul class="sidebar-nav">
-        <li><i class="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">Home</a></li>
-        <li><i class="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">Wallet</a></li>
-        <li><i class="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">My Needs</a></li>
-        <li><i class="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">Sign Out</a></li>
+		<aside className="sidebar is-hidden">
+      <ul className="sidebar-nav">
+        <li><i className="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">Home</a></li>
+        <li><i className="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">Wallet</a></li>
+        <li><i className="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">My Needs</a></li>
+        <li><i className="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">Sign Out</a></li>
       </ul>
     </aside>
 
-    <section class="app">
+    <section className="app">
 		<div className="content" style={{maxWidth: `1200px`}}>
 
 			<div className="grid grid-padding">
@@ -94,8 +94,8 @@ export default () => (
 					</div>
 
 					<div className="card grid">
-						<h3 class="grid--half">Funds for Sharing</h3>
-						<h1 class="grid--half">$615.00</h1>
+						<h3 className="grid--half">Funds for Sharing</h3>
+						<h1 className="grid--half">$615.00</h1>
 						<div className="grid--full">
 							<p>Available Balance is available. Are you available? ; ) Let's write more here to describe this card.</p>
 							<p>Available Balance is available.</p>
