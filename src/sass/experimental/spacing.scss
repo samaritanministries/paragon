@@ -16,3 +16,42 @@ $space-m:   1rem;
 $space-l:   1.5rem;
 $space-xl:  2rem;
 $space-xxl: 3rem;
+
+//SPACING UTILITY
+$spaceamounts: (
+  "space-xxs":  #{$space-xxs},
+  "space-xs":   #{$space-xs},
+  "space-s":    #{$space-s},
+  "space-m":    #{$space-m},
+  "space-l":    #{$space-l},
+  "space-xl":   #{$space-xl},
+  "space-xxl":  #{$space-xxl},
+);
+
+$sides: (
+  "": "all",
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right",
+);
+
+@each $space, $space-variable in $spaceamounts {
+  $space-var: if($space == '', '', #{$space-variable});
+
+  @each $prefix, $value in $sides {
+    $property: if($prefix == '', '', -#{$value});
+    .m#{$prefix}-#{$space} { //.mb-space-xs
+      margin#{$property}: #{$space-var}; //margin-bottom: space-xs;
+    }
+
+    .p#{$prefix}-#{$space} { //.p-space-m
+      padding#{$property}: #{$space-var}; //padding: space-m;
+    }
+  }
+}
+
+//input spacing
+fieldset input {
+  margin-bottom: $space-m;
+}

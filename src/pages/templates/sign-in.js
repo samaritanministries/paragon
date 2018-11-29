@@ -4,19 +4,19 @@ export default () => (
 
 	<div className="grid-phoenix fullscreen">
 
-    <section className="app ex-no-color">
-			<div className="content content--reader-width center-align">
+    <section className="app">
+			<div className="content center-align" style={{maxWidth: "400px"}}>
 	      <h1>Sign In</h1>
 	      <p>or <a>create an account</a></p>
+				
 				<fieldset>
 					<label>Email</label>
 					<input type="email" for="email"/>
-				</fieldset>
-				<fieldset>
 					<label>Password</label>
 					<input type="password" for="password"/>
 				</fieldset>
-			  <span className="space-between">
+
+				<span className="space-between">
 					<fieldset className="checkbox--custom">
 				    <input type="checkbox" id="remember-me"/>
 				    <label for="remember-me">Remember me</label>
