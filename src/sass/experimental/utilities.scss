@@ -1,0 +1,18 @@
+$content-s:     350px;
+$content-m:     600px;
+$content-l:     1200px;
+$content-full:  auto;
+
+$widths: (
+  "":         "auto",
+  "-s":  #{$content-s},
+  "-m":  #{$content-m},
+  "-l":  #{$content-l},
+);
+
+@each $width, $width-var in $widths {
+  $max-width: if($width == '', '', #{$width-var});
+  .content#{$width} { //.content-s
+    max-width: #{$max-width}; //max-width: 350px;
+  }
+}

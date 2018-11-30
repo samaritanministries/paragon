@@ -38,137 +38,61 @@ export default () => (
 		</header>
 
 		<section class="app">
-			<div class="content">
+			<div class="content content-l">
 				<h1>Enter Information About Your Membership</h1>
 				<p>Add information below.</p>
 
-				<div class="row">
-					<div class="column column--third float-right">
-						<div class="card no-padding">
-							<div class="card--header has-border">
-								<h3>Your Monthly Share</h3>
-							</div>
-							<div class="card--content">
-								<fieldset>
-									<label>Co-Share</label>
-									<p class="no-margin">None Selected</p>
-								</fieldset>
-								<fieldset>
-									<label>Annual Unshareable Amount</label>
-									<p class="no-margin">$1,000.00</p>
-								</fieldset>
-								<fieldset>
-									<label>Membership Size</label>
-									<p class="no-margin">2 Person Membership</p>
-								</fieldset>
-							</div>
-						</div>
+				<div className="grid grid-padding">
+
+					<div className="grid grid--third card">
+
 					</div>
 
+					<div className="grid grid--two-thirds card">
+						<span class="space-between">
+							<h3>Household Information</h3>
+							<span>Step 1 of 5</span>
+						</span>
 
-					<div class="column column--two-thirds">
-						<div class="card no-padding">
-							<div class="card--header has-border space-between">
-								<h3>Household Information</h3>
-								<span>Step 1 of 5</span>
-							</div>
-							<div class="card--content">
-								<p>Please include every family member in your household, even if not in your membership.</p>
-								<h4>Your Information</h4>
-								<fieldset class="row">
-									<div class="column column--third">
-										<label for="first-name">First Name</label>
-										<input type="text" id="first-name"/>
-									</div>
-									<div class="column column--third">
-										<label for="middle-name">Middle Name</label>
-										<input type="text" id="middle-name"/>
-									</div>
-									<div class="column column--third">
-										<label for="last-name">Last Name</label>
-										<input type="text" id="last-name"/>
-									</div>
-								</fieldset>
-								<fieldset class="row">
-									<div class="column column--third">
-										<label for="date-of-birth">Date of Birth</label>
-										<input type="date" id="date-of-birth"/>
-									</div>
-									<div class="column column--third select--has-icon">
-										<label for="gender">Gender</label>
-										<select id="gender">
-											<option>Male</option>
-											<option>Female</option>
-										</select>
-									</div>
-									<div class="column column--third select--has-icon">
-										<label for="marital-status">Marital Status</label>
-										<select id="marital-status">
-											<option>Married</option>
-											<option>Single</option>
-											<option>Divorced</option>
-										</select>
-									</div>
-								</fieldset>
-							</div>
-						</div>
-					</div>
+						<hr />
 
-					<div class="column column--two-thirds">
-						<div class="accordion">
-						  <div class="accordion--header space-between" id="toggleAccordion" tabindex="0">
-						    <span>
-									<i class="dashing-icon accordion--arrow"></i>
-							    <h3 class="title">Membership Information</h3>
-								</span>
-								<span>Step 2 of 5</span>
-						  </div>
-						  <div class="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-						</div>
-					</div>
+						<p>Please include every family member in your household, even if not in your membership.</p>
+						<h4>Your Information</h4>
 
-					<div class="column column--two-thirds">
-						<div class="accordion">
-						  <div class="accordion--header space-between" id="toggleAccordion" tabindex="0">
-						    <span>
-									<i class="dashing-icon accordion--arrow"></i>
-							    <h3 class="title">Medical History</h3>
-								</span>
-								<span>Step 3 of 5</span>
-						  </div>
-						  <div class="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-						</div>
-					</div>
+						<fieldset class="grid--third">
+							<label for="first-name">First Name</label>
+							<input type="text" id="first-name"/>
+						</fieldset>
+						<fieldset class="grid--third">
+							<label for="middle-name">Middle Name</label>
+							<input type="text" id="middle-name"/>
+						</fieldset>
+						<fieldset class="grid--third">
+							<label for="last-name">Last Name</label>
+							<input type="text" id="last-name"/>
+						</fieldset>
 
-					<div class="column column--two-thirds">
-						<div class="accordion">
-						  <div class="accordion--header space-between" id="toggleAccordion" tabindex="0">
-						    <span>
-									<i class="dashing-icon accordion--arrow"></i>
-							    <h3 class="title">Church Information</h3>
-								</span>
-								<span>Step 4 of 5</span>
-						  </div>
-						  <div class="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-						</div>
-					</div>
-
-					<div class="column column--two-thirds">
-						<div class="accordion">
-						  <div class="accordion--header space-between" id="toggleAccordion" tabindex="0">
-						    <span>
-									<i class="dashing-icon accordion--arrow"></i>
-							    <h3 class="title">Other Information</h3>
-								</span>
-								<span>Step 5 of 5</span>
-						  </div>
-						  <div class="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-						</div>
+						<fieldset class="grid--third">
+							<label for="date-of-birth">Date of Birth</label>
+							<input type="date" id="date-of-birth"/>
+						</fieldset>
+						<fieldset class="grid--third select--has-icon">
+							<label for="gender">Gender</label>
+							<select id="gender">
+								<option>Male</option>
+								<option>Female</option>
+							</select>
+						</fieldset>
+						<fieldset class="grid--third select--has-icon">
+							<label for="marital-status">Marital Status</label>
+							<select id="marital-status">
+								<option>Married</option>
+								<option>Single</option>
+								<option>Divorced</option>
+							</select>
+						</fieldset>
 					</div>
 				</div>
-
-
-
 			</div>
 		</section>
 	</div>
