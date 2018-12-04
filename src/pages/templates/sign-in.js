@@ -5,10 +5,10 @@ export default () => (
 	<div className="grid-phoenix fullscreen">
 
     <section className="app">
-			<div className="content center-align" style={{maxWidth: "400px"}}>
+			<div className="content content-s center-align">
 	      <h1>Sign In</h1>
 	      <p>or <a>create an account</a></p>
-				
+
 				<fieldset>
 					<label>Email</label>
 					<input type="email" for="email"/>

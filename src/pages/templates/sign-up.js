@@ -44,7 +44,11 @@ export default () => (
 
 				<div className="grid grid-padding">
 
-					<div className="grid grid--third card">
+					<div className="grid grid--third">
+						<div className="card"><h3 class="center-align">Your Monthly Share</h3></div>
+
+						<hr />
+
 
 					</div>
 
@@ -90,6 +94,18 @@ export default () => (
 								<option>Single</option>
 								<option>Divorced</option>
 							</select>
+						</fieldset>
+						<fieldset class="grid--two-thirds select--has-icon">
+							<label for="occupation">Occupation</label>
+							<select id="occupation">
+								<option>Accounting</option>
+								<option>Doctor</option>
+								<option>Teacher</option>
+							</select>
+						</fieldset>
+						<fieldset class="grid--third">
+							<label for="ssn">Last 4 Digits of Social</label>
+							<input type="text" id="ssn"/>
 						</fieldset>
 					</div>
 				</div>
