@@ -114,7 +114,7 @@ export default () => (
 							<ol class="ordered-list--custom">
 							  <li className="no-margin"><h3>Membership Size</h3></li>
 								<p>How many people would you like in your membership</p>
-								<fieldset >
+								<div className="memberSelector">
 								  <div class="checkbox-card">
 								    <input type="checkbox" name="memberCheckbox" id="member1"/>
 								    <label for="member1" class="card">Ryan Fitz</label>
@@ -127,11 +127,19 @@ export default () => (
 								    <input type="checkbox" name="memberCheckbox" id="member3" />
 								    <label for="member3" class="card">Jackson Fitz</label>
 								  </div>
-								</fieldset>
+									<div class="checkbox-card">
+								    <input type="checkbox" name="memberCheckbox" id="member4" />
+								    <label for="member4" class="card">Emily Fitz</label>
+								  </div>
+									<div class="checkbox-card">
+								    <input type="checkbox" name="memberCheckbox" id="member5" />
+								    <label for="member5" class="card">Karen Fitz</label>
+								  </div>
+								</div>
 
 								<li className="no-margin mt-space-m"><h3>Co-Share</h3></li>
 								<p>Choose your Co-Share</p>
-								<fieldset>
+								<div className="dialSelctor">
 								  <div class="radio-card">
 								    <input type="radio" name="coShareRadio" id="coShare1"/>
 								    <label for="coShare1" class="card">10% + $2,500 Max</label>
@@ -144,11 +152,11 @@ export default () => (
 								    <input type="radio" name="coShareRadio" id="coShare3" />
 								    <label for="coShare3" class="card">20% + $5,000 Max</label>
 								  </div>
-								</fieldset>
+								</div>
 
 								<li className="no-margin mt-space-m"><h3>Annual Unshareable Amount</h3></li>
 								<p>Select your annual personal responsibility</p>
-								<fieldset>
+								<div className="dialSelctor">
 								  <div class="radio-card">
 								    <input type="radio" name="AUARadio" id="AUA1"/>
 								    <label for="AUA1" class="card">$1,000</label>
@@ -161,7 +169,7 @@ export default () => (
 								    <input type="radio" name="AUARadio" id="AUA3" />
 								    <label for="AUA3" class="card">$5,000</label>
 								  </div>
-								</fieldset>
+								</div>
 
 							  <li className="no-margin mt-space-m"><h3>Start Date</h3></li>
 								<p>When would you like to start your membership?</p>

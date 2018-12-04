@@ -1,0 +1,19 @@
+.dialSelctor, .memberSelector {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: $space-xxl;
+
+  @media #{$desktop} {
+    flex-direction: row;
+  }
+
+  .radio--custom {
+    flex-grow: 1;
+
+    label.card { width: 100%; }
+  }
+  .checkbox-card label.card {
+    width: 100%;
+  }
+}
