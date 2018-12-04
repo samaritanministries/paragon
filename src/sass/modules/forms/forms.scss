@@ -62,6 +62,9 @@ fieldset {
 
   textarea {
     resize: vertical;
+    .grid & {
+      width: 100%; //needed to support css-grid
+    }
   }
 
   select {

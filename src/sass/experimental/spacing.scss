@@ -42,11 +42,11 @@ $sides: (
   @each $prefix, $value in $sides {
     $property: if($prefix == '', '', -#{$value});
     .m#{$prefix}-#{$space} { //.mb-space-xs
-      margin#{$property}: #{$space-var}; //margin-bottom: space-xs;
+      margin#{$property}: #{$space-var} !important; //margin-bottom: space-xs;
     }
 
     .p#{$prefix}-#{$space} { //.p-space-m
-      padding#{$property}: #{$space-var}; //padding: space-m;
+      padding#{$property}: #{$space-var} !important; //padding: space-m;
     }
   }
 }

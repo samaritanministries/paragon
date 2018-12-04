@@ -71,6 +71,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
       font-family: 'dashing-icons';
       font-size: 12px;
       padding: 2px;
+      text-indent: 0;
     }
   }
 
@@ -183,6 +184,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
       font-size: 1.7rem;
       line-height: 12px;
       padding: 0 4px;
+      text-indent: 0;
 
       @media #{$tablet} { font-size: 1.5rem; }
     }
