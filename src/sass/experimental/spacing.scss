@@ -29,11 +29,12 @@ $spaceamounts: (
 );
 
 $sides: (
-  "": "all",
-  "t": "top",
-  "b": "bottom",
-  "l": "left",
-  "r": "right",
+  "":     "all",
+  "t":    "top",
+  "b":    "bottom",
+  "l":    "left",
+  "r":    "right",
+  "auto": "auto",
 );
 
 @each $space, $space-variable in $spaceamounts {
