@@ -41,7 +41,7 @@ $full-padding: $grid-gutter;//1rem;
 
 }
 
-.app {
+.app { //TODO rename this(?)
   float: right;/*fallback*/
   margin-top: $header-height;
   -webkit-overflow-scrolling: touch;
@@ -59,17 +59,17 @@ $full-padding: $grid-gutter;//1rem;
 .content {
   max-width: $content-width;
   margin: auto;
-  &.content--reader-width {//move this to base?
+  &.content--reader-width { //TODO rename this
     max-width: $content-width / 2;
   }
 }
 
-.grid-phoenix {
+.grid-phoenix { //TODO rename this
   display: grid;
   grid-template-columns: $sidebar-width 1fr;
   margin: 0 auto;
 
-  &.map {
+  &.map { //TODO rename this
     grid-template-columns: 1fr $sidebar-width;
   }
 }
@@ -81,7 +81,7 @@ $full-padding: $grid-gutter;//1rem;
 //--------------------------------\\
 //Dashboard for fullscreen processes (add .fullscreen to .grid-phoenix)
 
-.fullscreen {
+.fullscreen { //TODO rename this?
   .header {
     .title {
       display: inline;
@@ -127,7 +127,7 @@ $full-padding: $grid-gutter;//1rem;
   .app     { grid-column: 1 / 3; width: 100%; }
 }
 
-.map {
+.map { //TODO rename this
   .sidebar {
     &.is-hidden {
       display: none; width: 0rem;
