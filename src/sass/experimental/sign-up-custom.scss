@@ -1,4 +1,4 @@
-.dialSelctor, .memberSelector {
+.dialSelctor, .memberSelector { //flex so that cards better align
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -18,11 +18,11 @@
   }
 }
 
-.membershipStartDate {
+.membershipStartDate { //width was broken
   width: calc(100% - 3rem;);
   margin-bottom: $space-m;
   @media #{$tablet} { width: 12rem; }
-  &:after {
+  &:after { //positioning broken
      right: -2rem !important;
      bottom: 1rem !important;
   }
@@ -34,7 +34,7 @@
   height: 5rem;
   max-height: 5rem;
 
-  &::after {
+  &::after { //TODO utilize headerv2 styles
   	content: "";
     box-shadow: $header-shadow;
   	width: 100%;

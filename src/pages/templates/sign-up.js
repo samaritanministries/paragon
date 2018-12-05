@@ -79,7 +79,7 @@ export default () => (
 								<label for="ssn">Last 4 Digits of Social</label>
 								<input type="text" id="ssn"/>
 							</fieldset>
-							<div className="grid--third">
+							<div>
 								<button className="button--gray">+ Add Dependend</button>
 							</div>
 						</div>
