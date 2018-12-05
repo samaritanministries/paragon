@@ -37,6 +37,8 @@ $full-padding: $grid-gutter;//1rem;
   max-width: $content-width;
   margin: auto;
 
+  width: 100%;//IE wants this... okay IE. Here you are.
+
   .title, .spacer { display: none; }//hidden unless "fullscreen" is applied
 
 }
