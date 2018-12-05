@@ -4,10 +4,10 @@ $content-l:     1200px;
 $content-full:  auto;
 
 $widths: (
-  "":         "auto",
-  "-s":  #{$content-s},
-  "-m":  #{$content-m},
-  "-l":  #{$content-l},
+  "-s":     #{$content-s},
+  "-m":     #{$content-m},
+  "-l":     #{$content-l},
+  "-full":  "auto",
 );
 
 @each $width, $width-var in $widths {
