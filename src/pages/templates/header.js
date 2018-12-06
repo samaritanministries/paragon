@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 // The scss needs to be imported here for running 'gatsby build'
 import '../../sass/example-page/example-page.scss'
 
@@ -8,33 +9,33 @@ export default () => (
 	<section className="mobile-overlay is-collapsed">
 		<aside className="mobile-sidebar">
 			<div className="mobile-profile">
-				<a href="/templates/mobile" className="mobile-sidebar--button" id="open-button" ><i className="dashing-icon dashing-icon--close"></i></a>
-        <a href="/templates/dashboard" className="mobile-profile--account">
+				<Link to={"/templates/mobile"} className="mobile-sidebar--button" id="open-button" ><i className="dashing-icon dashing-icon--close"></i></Link>
+        <Link to={"/templates/dashboard"} className="mobile-profile--account">
           <div className="profile-image"><i className="dashing-icon dashing-icon--face-good"></i></div>
           <div className="profile-edit"><i className="dashing-icon dashing-icon--pencil"></i></div>
           <h3 className="profile-name">Nitsua Cholbonk</h3>
           <span className="profile-email">nitsua.cholbonk@mailinator.com</span>
-        </a>
+        </Link>
 			</div>
 			<ul className="mobile-sidebar-nav">
-				<li><i className="dashing-icon dashing-icon--locked"></i><a href="/">Dashboard</a></li>
-				<li><i className="dashing-icon dashing-icon--locked"></i><a href="/single-page">Single Column Layout in Dashboard</a></li>
-				<li><i className="dashing-icon dashing-icon--locked"></i><a href="/fullscreen">Fullscreen Layout in Dashboard</a></li>
-				<li><i className="dashing-icon dashing-icon--locked"></i><a href="/mobile">Open Mobile Menu</a></li>
+				<li><i className="dashing-icon dashing-icon--locked"></i><Link to={"/"}>Dashboard</Link></li>
+				<li><i className="dashing-icon dashing-icon--locked"></i><Link to={"/single-page"}>Single Column Layout in Dashboard</Link></li>
+				<li><i className="dashing-icon dashing-icon--locked"></i><Link to={"/fullscreen"}>Fullscreen Layout in Dashboard</Link></li>
+				<li><i className="dashing-icon dashing-icon--locked"></i><Link to={"/mobile"}>Open Mobile Menu</Link></li>
 			</ul>
 		</aside>
 	</section>
 
-  <main className="grid-phoenix map">
-		<header className="header header-v2">
-			<a href="/templates/mobile" className="mobile-sidebar--button" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></a>
+  <main>
+		<header className="header">
+			<Link to={"/templates/mobile"} className="mobile-sidebar--button" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 			<div className="logo"><p className="text-color--white">LOGO</p></div>
 
 			<nav className="header-nav">
 				<ul>
-					<li><a href="/" className="active">Home</a></li>
-					<li><a href="/">Shares</a></li>
-					<li><a href="/">Bill's</a></li>
+					<li><Link to={"/"} className="active">Home</Link></li>
+					<li><Link to={"/"}>Shares</Link></li>
+					<li><Link to={"/"}>Bill's</Link></li>
 				</ul>
 			</nav>
 
@@ -48,26 +49,17 @@ export default () => (
 				<p className="subtitle">A Subtle Subtitle</p>
 			</div>
 			<div className="spacer">
-      	<a href="/templates/dashboard" className="action button button--grey"><i className="dashing-icon dashing-icon--close"></i> close</a>
+      	<Link to={"/templates/dashboard"} className="action button button--grey"><i className="dashing-icon dashing-icon--close"></i> close</Link>
 			</div>
 		</header>
 
 		<nav className="sub-nav">
 			<ul>
-				<li><a className="active">Option 1</a></li>
-				<li><a>Option 2</a></li>
-				<li><a>Option 3</a></li>
+				<li><Link to={"/"} className="active">Option 1</Link></li>
+				<li><Link to={"/"}>Option 2</Link></li>
+				<li><Link to={"/"}>Option 3</Link></li>
 			</ul>
 		</nav>
-
-		<aside className="sidebar is-hidden">
-      <ul className="sidebar-nav">
-        <li><i className="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">Home</a></li>
-        <li><i className="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">Wallet</a></li>
-        <li><i className="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">My Needs</a></li>
-        <li><i className="dashing-icon dashing-icon--locked"></i><a href="/templates/dashboard">Sign Out</a></li>
-      </ul>
-    </aside>
 
     <section className="app">
 		<div className="content" style={{maxWidth: `1200px`}}>

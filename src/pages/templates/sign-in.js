@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'gatsby'
+// The scss needs to be imported here for running 'gatsby build'
+import '../../sass/example-page/example-page.scss'
 
 export default () => (
 
@@ -7,7 +10,7 @@ export default () => (
     <section className="app">
 			<div className="content content-s center-align">
 	      <h1>Sign In</h1>
-	      <p>or <a>create an account</a></p>
+	      <p>or <Link to={"/"}>create an account</Link></p>
 
 				<fieldset>
 					<label>Email</label>

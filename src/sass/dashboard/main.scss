@@ -17,15 +17,18 @@ $header-height: 4rem;
 $half-padding: 0.5rem;
 $full-padding: $grid-gutter;//1rem;
 
+$header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+$sub-nav-height: calc(#{$header-height} / 2);
+$sub-nav-color: $white;
+$header-gradient: linear-gradient(100deg, $blue-600, $blue-800);
+
 //Theme
 .header {
-  // overflow: hidden;
   z-index: 3;
   display: flex;
   align-items: center;
   padding: $header-padding;
   position: relative;
-  grid-column: 1 / -1;
   position: fixed;
   top: 0;
   left: 0;
@@ -39,6 +42,54 @@ $full-padding: $grid-gutter;//1rem;
 
   width: 100%;//IE wants this... okay IE. Here you are.
 
+  &::after {
+  	content: "";
+    box-shadow: $header-shadow;
+  	width: 100%;
+  	height: $header-height;
+    background-image: $header-gradient;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	z-index: -1;
+  }
+
+  span:last-of-type {//title thing
+    margin-right: auto;
+  }
+
+  .header-nav {
+    margin-right: auto;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-right: auto;
+
+        margin: 0 1rem;
+        height: 2.5rem;
+        max-width: 5rem;
+        align-items: center;
+
+        a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          color: $gray-100;
+          font-weight: 400;
+          font-size: 1.1rem;
+
+          border-bottom: 2px solid transparent;
+          &:hover  { border-bottom: 3px solid $gray-100; }
+          &.active { border-bottom: 3px solid $gray-100; }
+        }
+      }
+    }
+  }
+
   .title, .spacer { display: none; }//hidden unless "fullscreen" is applied
 
 }
@@ -47,14 +98,7 @@ $full-padding: $grid-gutter;//1rem;
   float: right;/*fallback*/
   margin-top: $header-height;
   -webkit-overflow-scrolling: touch;
-
-  grid-column: 1 / 3;
   width: 100%;
-
-  @media #{$tablet} {
-    grid-column: 2 / 3;
-    width: calc(100% - #{$sidebar-width});/*fallback*/
-  }
 }
 
 //Structure
@@ -66,74 +110,70 @@ $full-padding: $grid-gutter;//1rem;
   }
 }
 
-.grid-phoenix { //TODO rename this
-  display: grid;
-  grid-template-columns: $sidebar-width 1fr;
-  margin: 0 auto;
+.sub-nav {
+  height: $sub-nav-height;
 
-  &.map { //TODO rename this
-    grid-template-columns: 1fr $sidebar-width;
-  }
-}
-
-@supports (display: grid) { .grid-phoenix > * { width: auto; } }
-
-//--------------------------------\\
-//---------- FULLSCREEN ----------\\
-//--------------------------------\\
-//Dashboard for fullscreen processes (add .fullscreen to .grid-phoenix)
-
-.fullscreen { //TODO rename this?
-  .header {
-    .title {
-      display: inline;
-      width: 100%;
-      color: $white;
-      font-size: 1.25rem;
-      font-weight: 600;
-      flex-direction: column;
-      text-align: left;
-      flex: 4;
-
-      @media #{$tablet} { color: $black; flex: auto; text-align: center;}
-
-      .subtitle {
-        opacity: 0.6;
-        margin: 0;
-        color: $white;
-
-        @media #{$tablet} { color: $black; }
-      }
-    }
-
-    .spacer {
-      display: flex;
-      width: auto;
-      padding-right: 0.5rem;
-
-      &:last-of-type  { flex: 1; justify-content: flex-end; }
-
-      @media #{$tablet} {
-        width: 40rem;
-        &:last-of-type { flex: auto; }
-      }
-
-      .action {
-        white-space: nowrap;
-      }
-    }
+  ~.app {
+    margin-top: calc(#{$header-height} + #{$sub-nav-height});
   }
 
-  .logo, .alert, .profile, .mobile-sidebar--button, .crumbs { display: none; }
-  .sidebar { display: none; width: 0rem;}
-  .app     { grid-column: 1 / 3; width: 100%; }
-}
+  position: fixed;
+  top: $header-height;
 
-.map { //TODO rename this
-  .sidebar {
-    &.is-hidden {
-      display: none; width: 0rem;
+  max-width: $content-width;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+
+  z-index: 0;
+
+  &::after {
+  	content: "";
+    box-shadow: $header-shadow;
+  	width: 100%;
+  	height: calc(#{$header-height} / 2);
+    background-color: $sub-nav-color;
+  	position: fixed;
+  	top: $header-height;
+  	left: 0;
+  	z-index: -1;
+  }
+
+  ul, li, a {
+    height: 100%;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: auto;
+
+      margin: 0 1rem;
+      max-width: 5rem;
+      align-items: center;
+
+      a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: $gray-900;
+        font-weight: 400;
+        font-size: 1rem;
+
+        border-bottom: 2px solid transparent;
+        &:hover  { border-bottom: 3px solid $gray-900; }
+        &.active { border-bottom: 3px solid $gray-900; }
+      }
     }
   }
-  .app { float: left; grid-column: 1 / 3; width: 100%; }
 }

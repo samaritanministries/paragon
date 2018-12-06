@@ -62,4 +62,4 @@
 
 .alert { margin-left: auto; }
 .profile, .logo, .header-nav { display: none; @media #{$tablet} { display: flex; } }
-.mobile-sidebar--button { display: flex; @media #{$tablet} { display: none; } }
+.mobile-sidebar--button      { display: flex; @media #{$tablet} { display: none; } }

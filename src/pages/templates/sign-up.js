@@ -1,19 +1,20 @@
 import React from 'react'
+import { Link } from 'gatsby'
 // The scss needs to be imported here for running 'gatsby build'
 import '../../sass/example-page/example-page.scss'
 
 export default () => (
 <div>
-	<div className="grid-phoenix fullscreen">
+	<div>
 		<header className="header signUpHeader">
 			<div className="content content-m" style={{width: "100%"}}>
 				<div className="progress">
 					<div className="progress-bar progress-bar--1of3" data-id="progress-stepper"></div>
 				</div>
 				<div className="progress-labels">
-					<div className="progress-label"><a>Membership</a></div>
-					<div className="progress-label"><a>Agreements</a></div>
-					<div className="progress-label"><a>Payment</a></div>
+					<div className="progress-label"><Link to={"/"}>Membership</Link></div>
+					<div className="progress-label"><Link to={"/"}>Agreements</Link></div>
+					<div className="progress-label"><Link to={"/"}>Payment</Link></div>
 				</div>
 			</div>
 		</header>
@@ -52,7 +53,7 @@ export default () => (
 
 							<fieldset className="grid--third">
 								<label for="date-of-birth">Date of Birth</label>
-								<input type="date" id="date-of-birth"/>
+								<input style={{margin: "0"}} type="date" id="date-of-birth"/>
 							</fieldset>
 							<fieldset className="grid--third select--has-icon">
 								<label for="gender">Gender</label>
@@ -69,19 +70,18 @@ export default () => (
 									<option>Divorced</option>
 								</select>
 							</fieldset>
+
 							<fieldset className="grid--two-thirds select--has-icon">
-								<label for="occupation">Occupation</label>
-								<select id="occupation">
-									<option>Accounting</option>
-									<option>Doctor</option>
-									<option>Teacher</option>
-								</select>
+								<label for="first-name">First Name</label>
+								<input type="text" id="first-name"/>
 							</fieldset>
+
 							<fieldset className="grid--third">
-								<label for="ssn">Last 4 Digits of Social</label>
-								<input type="text" id="ssn"/>
+								<label for="first-name">First Name</label>
+								<input type="text" id="first-name"/>
 							</fieldset>
-							<div>
+
+							<div className="grid--full">
 								<button className="button--gray">+ Add Dependend</button>
 							</div>
 						</div>
@@ -347,8 +347,6 @@ export default () => (
 						  <div className="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 						</div>
 					</div>
-
-
 
 					<div className="grid--third">
 						<div className="card"><h3 className="center-align">Your Monthly Share</h3></div>
