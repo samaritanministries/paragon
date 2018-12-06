@@ -53,6 +53,6 @@ $sides: (
 }
 
 //input spacing
-fieldset input {
+fieldset #{$inputs} {
   margin-bottom: $space-m;
 }

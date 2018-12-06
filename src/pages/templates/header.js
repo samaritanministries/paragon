@@ -62,9 +62,7 @@ export default () => (
 		</nav>
 
     <section className="app">
-		<div className="content" style={{maxWidth: `1200px`}}>
-
-			<div className="grid grid-padding">
+		<div className="content grid grid-padding" style={{maxWidth: `1200px`}}>
 
 				<div className="grid--third">
 					<h2>Funds for Sharing</h2>
@@ -120,8 +118,6 @@ export default () => (
 						</ol>
 					</div>
 				</div>
-
-			</div>
 
 
 	 </div>

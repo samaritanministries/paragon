@@ -51,6 +51,12 @@ fieldset {
   input[type="time"],
   input[type="month"] {
     min-height: 2.75rem;
+    max-height: 2.75rem;
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none;
+    }
   }
 
   input[type=checkbox],

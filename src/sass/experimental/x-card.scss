@@ -33,3 +33,24 @@ button {
 .grid .card {
   margin-bottom: $space-m;
 }
+
+//flex test
+.flex-content {
+  display: flex;
+  flex-direction: column;
+
+  .flex-row {
+    display: flex;
+    flex-direction: column;
+    @media #{$tablet} {flex-direction: row;}
+  }
+
+  fieldset {
+    flex: 1 1 0;
+
+    @media #{$tablet} {
+      margin-right: 1rem;
+      &:last-of-type { margin-right: 0; }
+    }
+  }
+}

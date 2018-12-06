@@ -23,8 +23,10 @@ export default () => (
 			<div className="content content-l">
 				<div className="grid grid-padding">
 
+				<div>
 					<h1>Enter Information About Your Membership</h1>
 					<p>Add information below.</p>
+				</div>
 
 					<div className="grid--two-thirds">
 						<div className="grid card">
