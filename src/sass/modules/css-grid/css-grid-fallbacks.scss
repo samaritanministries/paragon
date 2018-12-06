@@ -1,6 +1,7 @@
 /* -----------------------------
 Fallback Classes (Must be First)
 -------------------------------- */
+
 //12 10 9 8 6 4 3 2
 .grid { grid-template-columns: repeat(12, 1fr);
 	.grid--full,          .grid-12 { @include fallback-grid(100%); }
@@ -11,6 +12,10 @@ Fallback Classes (Must be First)
 	.grid--third,         .grid-4  { @include fallback-grid(33.3333%); }
 	.grid--fourth,        .grid-3  { @include fallback-grid(25%);  }
 	.grid--sixth,         .grid-2  { @include fallback-grid(16.6666%); }
+
+	> * {
+		width: 100%;//By default, content will span all 12 columns
+	}
 }
 
 /* -----------------------------
