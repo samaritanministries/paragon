@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'gatsby'
+// The scss needs to be imported here for running 'gatsby build'
+import '../../sass/example-page/example-page.scss'
 
 export default () => (
 <div>
@@ -9,9 +12,9 @@ export default () => (
 					<div className="progress-bar progress-bar--1of3" data-id="progress-stepper"></div>
 				</div>
 				<div className="progress-labels">
-					<div className="progress-label"><a>Membership</a></div>
-					<div className="progress-label"><a>Agreements</a></div>
-					<div className="progress-label"><a>Payment</a></div>
+					<div className="progress-label"><Link to={"/"}>Membership</Link></div>
+					<div className="progress-label"><Link to={"/"}>Agreements</Link></div>
+					<div className="progress-label"><Link to={"/"}>Payment</Link></div>
 				</div>
 			</div>
 		</header>
