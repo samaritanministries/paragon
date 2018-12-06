@@ -16,11 +16,11 @@ export default () => (
     </header>
     <AppContent>
 
-    <main className="content content-m" style={{backgroundColor: "#efefef"}}>
+    <main className="content content-m">
 			<div className="grid grid-padding">
         <div className="card no-padding">
           <div className="card--header has-border">
-            <h2>Header</h2>
+            <h2>Form</h2>
           </div>
 
           <div className="card--content flex-content">
@@ -41,7 +41,7 @@ export default () => (
             <div className="flex-row">
               <fieldset>
                 <label for="birthday">Date of Birth</label>
-                <input type="text" id="birthday"/>
+                <input type="date" id="birthday"/>
               </fieldset>
               <fieldset className="select--has-icon">
                 <label for="gender">Gender</label>
@@ -58,9 +58,8 @@ export default () => (
           </div>
         </div>
 
-
         <div className="card grid">
-          <h2>Header</h2>
+          <h2>Grid Card</h2>
           <hr />
           <fieldset className="grid--third">
             <label for="first-name">First Name</label>

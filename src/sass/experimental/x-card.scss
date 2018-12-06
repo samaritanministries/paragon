@@ -14,27 +14,29 @@ p {
   line-height: $space-l !important;
 }
 
+p { margin-bottom: $space-xs; }
+h1, h2, h3, h4 { margin-bottom: $space-xxs; }
+button { margin: $space-xs 0; }
+
 .grid .card {
   padding: $space-m;
-}
-
-p {
-  margin-bottom: $space-xs;
-}
-
-h1, h2, h3 {
-  margin-bottom: $space-xxs;
-}
-
-button {
-  margin: $space-xs 0;
-}
-
-.grid .card {
   margin-bottom: $space-m;
 }
 
-//flex test
+//forms
+input[type="date"],
+input[type="time"],
+input[type="month"] {
+  min-height: 2.75rem;
+  max-height: 2.75rem;
+  &::-webkit-inner-spin-button,
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+}
+
+//flex form
 .flex-content {
   display: flex;
   flex-direction: column;
