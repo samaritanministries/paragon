@@ -14,6 +14,7 @@ Fallback Classes (Must be First)
 	.grid--sixth,         .grid-2  { @include fallback-grid(16.6666%); }
 
 	> * {
+		float: left;
 		width: 100%;//By default, content will span all 12 columns
 	}
 }
