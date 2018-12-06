@@ -1,4 +1,6 @@
 import React from 'react'
+// The scss needs to be imported here for running 'gatsby build'
+import '../../sass/example-page/example-page.scss'
 
 export default () => (
 <div>

@@ -27,7 +27,7 @@ Actual CSS Grid Classes
 	@supports(display: grid) { display: grid; grid-gap: 0; @media #{$tablet} { grid-gap: $grid-gutter; } }//For non-fallbacks use grid
 
 	* {
-		@supports(display: grid) { @include grid-column(12); }//By default, content will span all 12 columns
+		@supports(display: grid) { @include grid-column(12); width: auto; }//By default, content will span all 12 columns
 	}
 
 	grid-template-columns: repeat(12, 1fr);
