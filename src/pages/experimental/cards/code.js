@@ -54,7 +54,44 @@ export default () => (
             </div>
           </div>
           <div className="card--footer">
-            <button>Submit</button>
+            <button className="mr-space-xs">Submit</button>
+            <button className="button--transparent button--gray">Cancel</button>
+          </div>
+        </div>
+
+        <div className="card no-padding">
+          <div className="card--header center-align">
+            <h2>Sign In</h2>
+            <p>Sign in to your account</p>
+          </div>
+
+          <div className="card--content flex-content">
+            <div className="flex-row">
+              <fieldset>
+                <label for="email">Email</label>
+                <input type="text" id="email"/>
+              </fieldset>
+            </div>
+            <div className="flex-row">
+              <fieldset>
+                <label for="password">Password</label>
+                <input type="password" id="password"/>
+              </fieldset>
+            </div>
+            <div className="space-between">
+              <span>
+                <fieldset className="checkbox--custom">
+                  <input type="checkbox" id="remember-me"/>
+                  <label for="remember-me">Remember me</label>
+                </fieldset>
+              </span>
+              <button className="button button--transparent">
+                Forgot your password
+              </button>
+            </div>
+          </div>
+          <div className="card--footer">
+            <button className="button-block">Sign In</button>
           </div>
         </div>
 
