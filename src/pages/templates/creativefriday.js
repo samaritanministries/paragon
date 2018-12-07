@@ -32,15 +32,33 @@ export default () => (
 			</ul>
 		</nav>
 
-		<section className="content">
+		<section className="content content-s">
 			<div className="grid grid-padding">
-
-				<div>
-					<h1>Enter Information About Your Membership</h1>
-					<p>Add information below.</p>
+				<div className="grid--half">
+					<div className="card">
+						<h1 className="mb-space-l">Enter Information About Your Membership</h1>
+						<p>Add information below.</p>
+						<button>Go There</button>
+					</div>
+					<div className="card">
+						<h1>Enter Information About Your Membership</h1>
+						<p>Add information below.</p>
+					</div>
 				</div>
 
+				<div className="grid--half">
+					<div className="card">
+						<h1 className="mb-space-l">Enter Information About Your Membership</h1>
+						<p>Add information below.</p>
+						<button>Go There</button>
+					</div>
+					<div className="card">
+						<h1>Enter Information About Your Membership</h1>
+						<p>Add information below.</p>
+					</div>
+				</div>
 			</div>
+
 		</section>
 	</main>
 </div>
