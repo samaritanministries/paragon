@@ -90,7 +90,7 @@ class Sidebar extends React.Component {
 
       <div>
 
-        <div className={this.state.showSidebar ? 'mobile-sidebar expanded' : 'mobile-sidebar'}>
+        <div className={this.state.showSidebar ? 'example-mobile-sidebar expanded' : 'example-mobile-sidebar'}>
           <button className="button--gray button--sidebar-icon" onClick={this.handleClick}>
             <i className={this.state.showSidebar ? 'dashing-icon dashing-icon--close' : 'dashing-icon'}></i>
           </button>
@@ -104,18 +104,19 @@ class Sidebar extends React.Component {
             </div>
 
             <div className={this.state.showParagon ? 'group-container expanded' : 'group-container'}>
-              <h4 className="group-title" onClick={this.toggleParagon}>Paragon</h4>
+              <h4 className="group-title no-margin" onClick={this.toggleParagon}>Paragon</h4>
               <i className={this.state.showParagon ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
                 <Link to="/" activeClassName="active">Principles</Link>
                 <Link to="/get-started" activeClassName="active">Get Started</Link>
+                <Link to="/templates">Templates</Link>
                 <Link to="/resources">Resources</Link>
               </div>
             </div>
 
             <div className={this.state.showStyle ? 'group-container expanded' : 'group-container'}>
-              <h4 className="group-title" onClick={this.toggleStyle}>Foundations</h4>
+              <h4 className="group-title no-margin" onClick={this.toggleStyle}>Foundations</h4>
               <i onClick={this.toggleStyle} className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
@@ -127,7 +128,7 @@ class Sidebar extends React.Component {
 
             <div className={this.state.showComponents ? 'group-container expanded' : 'group-container'}>
 
-              <h4 className="group-title" onClick={this.toggleComponents}>Components</h4>
+              <h4 className="group-title no-margin" onClick={this.toggleComponents}>Components</h4>
               <i onClick={this.toggleComponents} className={this.state.showComponents ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">

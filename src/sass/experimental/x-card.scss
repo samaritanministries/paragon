@@ -1,0 +1,58 @@
+/*
+_______   _______ ___________ ________  ________ _   _ _____ ___  _
+|  ___\ \ / / ___ \  ___| ___ \_   _|  \/  |  ___| \ | |_   _/ _ \| |
+| |__  \ V /| |_/ / |__ | |_/ / | | | .  . | |__ |  \| | | |/ /_\ \ |
+|  __| /   \|  __/|  __||    /  | | | |\/| |  __|| . ` | | ||  _  | |
+| |___/ /^\ \ |   | |___| |\ \ _| |_| |  | | |___| |\  | | || | | | |____
+\____/\/   \|_|   \____/\_| \_|\___/\_|  |_|____/\_| \_/ \_/\_| |_|_____/
+
+This is an EXPERIMENT and is not ready to be included in production!
+*/
+
+p {
+  margin: 0;
+  line-height: $space-l !important;
+}
+
+p { margin-bottom: $space-xs; }
+h1, h2, h3, h4 { margin-bottom: $space-xxs; }
+button { margin: $space-xs 0; }
+
+.grid .card {
+  padding: $space-m;
+  margin-bottom: $space-m;
+}
+
+//forms
+input[type="date"],
+input[type="time"],
+input[type="month"] {
+  min-height: 2.75rem;
+  max-height: 2.75rem;
+  &::-webkit-inner-spin-button,
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+}
+
+//flex form
+.flex-content {
+  display: flex;
+  flex-direction: column;
+
+  .flex-row {
+    display: flex;
+    flex-direction: column;
+    @media #{$tablet} {flex-direction: row;}
+  }
+
+  fieldset {
+    flex: 1 1 0;
+
+    @media #{$tablet} {
+      margin-right: 1rem;
+      &:last-of-type { margin-right: 0; }
+    }
+  }
+}
