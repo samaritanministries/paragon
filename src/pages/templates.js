@@ -12,10 +12,7 @@ export default () => (
       <div className="row">
         <div className="column column--full">
 
-          <a href="/templates/dashboard" target="_blank" rel="noopener noreferrer">Dashboard</a><br/>
-          <a href="/templates/single-page" target="_blank" rel="noopener noreferrer">Single Page</a><br/>
-          <a href="/templates/fullscreen" target="_blank" rel="noopener noreferrer">Fullscreen</a><br/>
-          <a href="/templates/mobile" target="_blank" rel="noopener noreferrer">Mobile</a>
+          <a href="/templates/default" target="_blank" rel="noopener noreferrer">Default</a><br/>
 
         </div>
       </div>

@@ -3,12 +3,7 @@
 //--------------------------------\\
 
 //Variables
-$container-colors: transparent;//#413552
-$sidebar-background: #354052;
 $app-background:     #e0e0e0;
-$sidebar-highlight:  #9D6CDE;
-$sidebar-text-color: $white;
-$sidebar-width: 12rem;
 
 $content-width: 1200px;
 
@@ -86,17 +81,12 @@ $header-background: $white;
   }
 }
 
-.app { //TODO rename this(?)
-  float: right;/*fallback*/
-  margin-top: $header-height;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
-}
-
-//Structure
 .content {
   max-width: $content-width;
   margin: auto;
+  margin-top: $header-height;
+  -webkit-overflow-scrolling: touch;
+
   &.content--reader-width { //TODO rename this
     max-width: $content-width / 2;
   }
@@ -105,7 +95,7 @@ $header-background: $white;
 .sub-nav {
   height: $sub-nav-height;
 
-  ~.app {
+  ~.content {
     margin-top: calc(#{$header-height} + #{$sub-nav-height});
   }
 
