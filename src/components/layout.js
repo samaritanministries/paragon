@@ -5,7 +5,7 @@ import Sidebar from './sidebar'
 import '../sass/example-page/example-page.scss'
 
 export default ({ children }) => (
-  <div >
+  <div>
     <Helmet>
       <script src="/static/prism.js" type="application/javascript"></script>
     </Helmet>

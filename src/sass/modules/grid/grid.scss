@@ -10,9 +10,9 @@
 }
 
 html {
-  font-size: 100%;
+  font-size: 110%;
   @media #{$tablet} { font-size: 105%; }
-  @media #{$desktop} { font-size: 110%; }
+  @media #{$desktop} { font-size: 100%; }
 }
 
 /* Grid Styles

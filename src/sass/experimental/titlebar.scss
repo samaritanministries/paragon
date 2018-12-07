@@ -1,0 +1,57 @@
+/*
+_______   _______ ___________ ________  ________ _   _ _____ ___  _
+|  ___\ \ / / ___ \  ___| ___ \_   _|  \/  |  ___| \ | |_   _/ _ \| |
+| |__  \ V /| |_/ / |__ | |_/ / | | | .  . | |__ |  \| | | |/ /_\ \ |
+|  __| /   \|  __/|  __||    /  | | | |\/| |  __|| . ` | | ||  _  | |
+| |___/ /^\ \ |   | |___| |\ \ _| |_| |  | | |___| |\  | | || | | | |____
+\____/\/   \|_|   \____/\_| \_|\___/\_|  |_|____/\_| \_/ \_/\_| |_|_____/
+
+This is an EXPERIMENT and is not ready to be included in production!
+*/
+
+.title-bar {//This shares tons with the normal header class
+  ~.app {
+    margin-top: 0;
+  }
+
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  padding: $header-padding;
+  height: $header-height;
+  max-height: $header-height;
+
+  max-width: $content-width;
+  margin: auto;
+
+  width: 100%;//IE wants this... okay IE. Here you are.
+
+  &::after {
+  	content: "";
+    box-shadow: $header-shadow;
+  	height: $header-height;
+    background-color: $header-background;
+  	z-index: 0;
+
+    width: 100vw;//This is a test... I'm not sure if it's 100% reliable
+    margin-left: calc(50% - 50vw);//This is a test... I'm not sure if it's 100% reliable
+    margin-right: calc(50% - 50vw);//This is a test... I'm not sure if it's 100% reliable
+  }
+
+  &.fixed {//Add fixed to fix the title bar to the top!
+    ~.app {
+      margin-top: $header-height;
+    }
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &::after {
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    }
+  }
+}

@@ -9,6 +9,11 @@
   list-style: none;
 }
 
+/* Icon Extendables
+=========================================================================== */
+//TO DO: Add more colors for icons
+%icon-white { i:before { color: $white; } }
+
 /* Shadow Extendables
 =========================================================================== */
 %shadow-50 { @include box-shadow(0 2px 4px rgba(0,0,0, 0.5)); }

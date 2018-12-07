@@ -1,0 +1,161 @@
+//--------------------------------\\
+//---------- VARIABLES  ----------\\
+//--------------------------------\\
+
+//Variables
+$app-background:     #e0e0e0;
+
+$content-width: 1200px;
+
+$header-padding: 0.5rem;
+$header-height: 4rem;
+$half-padding: 0.5rem;
+$full-padding: $grid-gutter;//1rem;
+
+$header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+$sub-nav-height: calc(#{$header-height} / 2);
+$sub-nav-color: $white;
+$header-gradient: linear-gradient(100deg, $blue-600, $blue-800);
+$header-background: $white;
+
+//Theme
+.header {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  padding: $header-padding;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  max-height: $header-height;
+
+  max-width: $content-width;
+  margin: auto;
+
+  width: 100%;//IE wants this... okay IE. Here you are.
+
+  &::after {
+  	content: "";
+    box-shadow: $header-shadow;
+  	width: 100%;
+  	height: $header-height;
+    background-image: $header-gradient;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	z-index: -1;
+  }
+
+  .header-nav {
+    margin-right: auto;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-right: auto;
+
+        margin: 0 1rem;
+        height: 2.5rem;
+        max-width: 5rem;
+        align-items: center;
+
+        a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          color: $gray-100;
+          font-weight: 400;
+          font-size: 1.1rem;
+
+          border-bottom: 2px solid transparent;
+          &:hover  { border-bottom: 3px solid $gray-100; }
+          &.active { border-bottom: 3px solid $gray-100; }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  max-width: $content-width;
+  margin: auto;
+  margin-top: $header-height;
+  -webkit-overflow-scrolling: touch;
+
+  &.content--reader-width { //TODO rename this
+    max-width: $content-width / 2;
+  }
+}
+
+.sub-nav {
+  height: $sub-nav-height;
+
+  ~.content {
+    margin-top: calc(#{$header-height} + #{$sub-nav-height});
+  }
+
+  position: fixed;
+  top: $header-height;
+
+  max-width: $content-width;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+
+  z-index: 0;
+
+  &::after {
+  	content: "";
+    box-shadow: $header-shadow;
+  	width: 100%;
+  	height: calc(#{$header-height} / 2);
+    background-color: $sub-nav-color;
+  	position: fixed;
+  	top: $header-height;
+  	left: 0;
+  	z-index: -1;
+  }
+
+  ul, li, a {
+    height: 100%;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: auto;
+
+      margin: 0 1rem;
+      max-width: 5rem;
+      align-items: center;
+
+      a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: $gray-900;
+        font-weight: 400;
+        font-size: 1rem;
+
+        border-bottom: 2px solid transparent;
+        &:hover  { border-bottom: 3px solid $gray-900; }
+        &.active { border-bottom: 3px solid $gray-900; }
+      }
+    }
+  }
+}

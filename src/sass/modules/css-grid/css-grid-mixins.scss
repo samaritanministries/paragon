@@ -1,13 +1,23 @@
 @mixin fallback-grid($percent) {
-	@media #{$tablet} { 
+	@media #{$tablet} {
 		width: calc(#{$percent} - #{$grid-gutter}); float: left;//SAFARI 9
-	} 
+	}
 }
 
 @mixin grid-column($span) {
-	grid-column: 1 / -1; 
-	@media #{$tablet} { 
-		grid-column: span $span; 
+	grid-column: 1 / -1;
+	@media #{$tablet} {
+		grid-column: span $span;
 		@supports(display: grid) { width: auto; }
 	}
+}
+
+%fallback-gap {
+	margin: $grid-gutter 0;
+	&:first-of-type, &:last-of-type { margin-top:    0; }
+	@media #{$tablet} {
+		margin: calc(#{$grid-gutter} / 2);
+		&:first-of-type, &:last-of-type { margin: calc(#{$grid-gutter} / 2); }
+	}
+	@supports(display: grid) { margin: 0; &:first-of-type, &:last-of-type { margin: 0; } }
 }
