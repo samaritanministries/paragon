@@ -2,7 +2,7 @@
   =========================================================================== */
 //content width
 $content-s:     350px;
-$content-m:     600px;
+$content-m:     700px;
 $content-l:     1200px;
 $content-full:  auto;
 
@@ -16,7 +16,7 @@ $widths: (
 @each $width, $width-var in $widths {
   $max-width: if($width == '', '', #{$width-var});
   .content#{$width} { //.content-s
-    max-width: #{$max-width}; //max-width: 350px;
+    max-width: #{$max-width} !important; //max-width: 350px;
   }
 }
 

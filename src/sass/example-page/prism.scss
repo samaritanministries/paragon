@@ -28,6 +28,12 @@ $tablet:        "all and (min-width: 40em)" !default;
 	border: 2px solid $gray-150;
 	border-radius: 8px 8px 0 0;
 	border-bottom: none;
+
+	.grid & {
+		padding: $space-m;
+		border-bottom: 2px solid $gray-150; //temp
+		border-radius: 8px; //temp
+	}
 }
 
 .example-text {

@@ -17,9 +17,17 @@ $font-family-body:      "Source Sans Pro", sans-serif;
 /* Typography Utility Classes
   =========================================================================== */
 
-.text-align-center, .center-align, .align-center { text-align: center !important; }
-.text-align-left, .left-align, .align-left { text-align: left !important; }
-.text-align-right, .right-align, .align-right { text-align: right !important; }
+.text-align-center,
+.center-align,
+.align-center { text-align: center !important; }
+
+.text-align-left,
+.left-align,
+.align-left { text-align: left !important; }
+
+.text-align-right,
+.right-align,
+.align-right { text-align: right !important; }
 
 .no-wrap {
   text-overflow: ellipsis;
@@ -67,11 +75,18 @@ a {
   &:hover, &:focus { color: $blue-400; }
 }
 
-p {
-  color: $gray-900;
+p, li.text-list_item {
   color: $brand-black;
   font-size: $font-size-normal;
-  line-height: 1.25rem;
+  line-height: $space-l;
+  margin: 0;
+  margin-bottom: $space-xs;
+}
+
+ul.text-list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
 }
 
 
