@@ -9,49 +9,100 @@ _______   _______ ___________ ________  ________ _   _ _____ ___  _
 This is an EXPERIMENT and is not ready to be included in production!
 */
 
-.title-bar {//This shares tons with the normal header class
-  ~.app {
-    margin-top: 0;
-  }
+.overpanel {
 
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  padding: $header-padding;
-  height: $header-height;
-  max-height: $header-height;
-
-  max-width: $content-width;
-  margin: auto;
-
-  width: 100%;//IE wants this... okay IE. Here you are.
-
-  &::after {
-  	content: "";
-    box-shadow: $header-shadow;
-  	height: $header-height;
+  .title-bar {
     background-color: $header-background;
-  	z-index: 0;
+    box-shadow: $header-shadow;
 
-    width: 100vw;//This is a test... I'm not sure if it's 100% reliable
-    margin-left: calc(50% - 50vw);//This is a test... I'm not sure if it's 100% reliable
-    margin-right: calc(50% - 50vw);//This is a test... I'm not sure if it's 100% reliable
+    .title-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: $content-m;
+      margin: 0 auto;
+      padding: $space-m;
+    }
   }
 
-  &.fixed {//Add fixed to fix the title bar to the top!
-    ~.app {
-      margin-top: $header-height;
-    }
+  .content {
+    margin-top: $space-xs;
+    max-width: $content-m;
+  }
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+}
 
-    &::after {
-    	position: fixed;
-    	top: 0;
-    	left: 0;
-    }
+// .title-bar {//This shares tons with the normal header class
+//   ~.app .content {
+//     margin-top: $space-m;
+//   }
+//   * { margin: 0; }
+//
+//   z-index: 3;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: $space-m;
+//   height: $header-height;
+//   max-height: $header-height;
+//
+//   max-width: $content-width;
+//   margin: auto;
+//
+//   width: 100%;//IE wants this... okay IE. Here you are.
+//
+//   button.right { margin-left: auto !important; }
+//
+//   &::after {
+//     position: absolute;
+//   	content: "";
+//     box-shadow: $header-shadow;
+//   	height: $header-height;
+//     background-color: $header-background;
+//   	z-index: -1;
+//
+//     width: 100vw;//This is a test... I'm not sure if it's 100% reliable
+//     margin-left: calc(50% - 50vw);//This is a test... I'm not sure if it's 100% reliable
+//     margin-right: calc(50% - 50vw);//This is a test... I'm not sure if it's 100% reliable
+//   }
+//   &.expanded {
+//     height: 5rem;
+//     max-height: 5rem;
+//     &::after { height: 5rem;}
+//   }
+//
+//   &.fixed {//Add fixed to fix the title bar to the top!
+//     ~.app {
+//       margin-top: $header-height;
+//     }
+//
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//
+//     &::after {
+//     	position: fixed;
+//     	top: 0;
+//     	left: 0;
+//     }
+//   }
+// }
+
+
+.overpanel-m {//make max-width consistant
+  .title-content {
+    max-width: $content-m !important;
+  }
+  .content {
+    max-width: $content-m;
+  }
+}
+.overpanel-s {//make max-width consistant
+  .title-content {
+    max-width: $content-s;
+  }
+  .content {
+    max-width: $content-s;
   }
 }
