@@ -94,7 +94,6 @@ export default () => (
         </div>
 
         <h2 className="mt-space-xl">Input Groups <button className="button button--transparent button--copy-link" data-id="copyurl" id="Input_Addon" /></h2>
-        <p className="text-color--red"><strong>This is not supported on Internet Explorer</strong></p>
         <div className="example-container">
           <div className="card">
             <div className="card-content flex-content">
@@ -366,10 +365,12 @@ export default () => (
                   </fieldset>
                   <fieldset className="spacer"></fieldset>
                 </div>
-                <fieldset>
-                  <label htmlFor="form-textarea">Textarea</label>
-                  <textarea id="form-textarea"></textarea>
-                </fieldset>
+                <div className="flex-row">
+                  <fieldset>
+                    <label htmlFor="form-textarea">Textarea</label>
+                    <textarea id="form-textarea"></textarea>
+                  </fieldset>
+                </div>
               </div>
               <div className="card-footer">
                 <button className="mr-space-xs">Submit</button>
@@ -408,10 +409,12 @@ export default () => (
       </fieldset>
       <fieldset class="spacer"></fieldset>
     </div>
-    <fieldset>
-      <label for="form-textarea">Textarea</label>
-      <textarea id="form-textarea"></textarea>
-    </fieldset>
+    <div class="flex-row">
+      <fieldset>
+        <label for="form-textarea">Textarea</label>
+        <textarea id="form-textarea"></textarea>
+      </fieldset>
+    </div>
   </div>
   <div class="card-footer">
     <button class="mr-space-xs">Submit</button>
