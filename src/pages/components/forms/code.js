@@ -314,6 +314,7 @@ export default () => (
           </div>
 
           <h2 className="mt-space-xl">Custom Range Slider <button className="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Range_Slider" /></h2>
+          <p className="text-color--red">Not supported in Internet Explorer</p>
           <div className="example-container">
             <div className="card">
               <div className="card-content">

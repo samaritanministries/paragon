@@ -90,12 +90,12 @@ fieldset {
     .add-on--before {
       border-radius: 5px 0 0 5px;
       border-right: none;
+      flex: 1;
     }
 
     .add-on--after {
       border-radius: 0 5px 5px 0 !important;
       margin: 0;
-      flex-grow: 1;
 
       &.button--border {
         @include border--button($gray-150); //makes button border the same color as the input

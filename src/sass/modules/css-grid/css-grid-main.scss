@@ -9,17 +9,17 @@ Actual CSS Grid Classes
 }
 
 //use grid to make a new 12 column grid
-.grid {//IE and Safar
+.grid {//IE and Safari
 
 	//Pad the grid
 	&.grid-padding {
-		@supports(display: grid) {
-			padding: $grid-gutter;
+		padding: $grid-gutter;
+		// @supports(display: grid) {
 			// padding: $grid-gutter 0;
 			// @media #{$tablet}{
 			// 	padding: $grid-gutter;
 			// }
-		}
+		// }
 	}
 
 	display: block;//For IE and Safari mobile
