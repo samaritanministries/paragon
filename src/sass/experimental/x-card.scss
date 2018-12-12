@@ -16,38 +16,3 @@ h1, h2, h3, h4 { margin-bottom: $space-xxs; }
   // padding: $space-m; //do we want to default padding on cards?
   margin-bottom: $space-m;
 }
-
-//forms
-input[type="date"],
-input[type="time"],
-input[type="month"] {
-  min-height: 2.75rem;
-  max-height: 2.75rem;
-  &::-webkit-inner-spin-button,
-  &::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-  }
-}
-
-//flex form
-.flex-content {
-  display: flex;
-  flex-direction: column;
-
-  .flex-row {
-    display: flex;
-    flex-direction: column;
-    @media #{$tablet} {flex-direction: row;}
-  }
-
-  fieldset {
-    flex: 1 1 auto;
-
-    @media #{$tablet} {
-      margin-right: 1rem;
-      flex: 1 1 0;
-      &:last-of-type { margin-right: 0; }
-    }
-  }
-}
