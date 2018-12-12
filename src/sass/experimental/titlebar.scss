@@ -33,6 +33,23 @@ This is an EXPERIMENT and is not ready to be included in production!
 
 }
 
+.overpanel-m {//make max-width consistant
+  .title-content {
+    max-width: $content-m !important;
+  }
+  .content {
+    max-width: $content-m;
+  }
+}
+.overpanel-l {//make max-width consistant
+  .title-content {
+    max-width: $content-l !important;
+  }
+  .content {
+    max-width: $content-l;
+  }
+}
+
 // .title-bar {//This shares tons with the normal header class
 //   ~.app .content {
 //     margin-top: $space-m;
@@ -89,21 +106,3 @@ This is an EXPERIMENT and is not ready to be included in production!
 //     }
 //   }
 // }
-
-
-.overpanel-m {//make max-width consistant
-  .title-content {
-    max-width: $content-m !important;
-  }
-  .content {
-    max-width: $content-m;
-  }
-}
-.overpanel-l {//make max-width consistant
-  .title-content {
-    max-width: $content-l;
-  }
-  .content {
-    max-width: $content-l;
-  }
-}

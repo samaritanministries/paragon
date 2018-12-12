@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import '../../sass/example-page/example-page.scss'
 
 export default () => (
@@ -10,7 +11,9 @@ export default () => (
 					<h2>Overpanel Title</h2>
 					<p>Overpanel description</p>
 				</div>
-				<button className="button button--secondary">Close</button>
+				<Link to={"/templates/default"}>
+					<button className="button button--secondary"><i className="dashing-icon dashing-icon--close"></i> Close</button>
+				</Link>
 			</div>
 		</header>
 
