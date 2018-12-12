@@ -53,6 +53,12 @@ fieldset {
   input[type="time"],
   input[type="month"] {
     min-height: 2.75rem;
+    max-height: 2.75rem;
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none;
+    }
   }
 
   input[type=checkbox],
@@ -107,53 +113,6 @@ fieldset {
     }
   }
 
-    // select.add-on--after,
-    // select.add-on--before {
-    //   padding-right: 2rem;
-    //   flex: none;
-    // }
-    //
-    // .add-on--field,
-    // .add-on--before,
-    // .add-on--after {
-    //   width: 5rem; //set to fix forms escaping from headers on mobile
-    //   @media #{$tablet} {
-    //     width: auto;
-    //   }
-    //   flex-grow: 1;
-    // }
-    //
-    // .add-on--field,
-    // .add-on--before {
-    //   border-radius: 5px 0 0 5px;
-    //   border-right: none;
-    // }
-    //
-    // .add-on--after {
-    //   border-radius: 0 5px 5px 0;
-    // }
-    //
-    // select.add-on--after,
-    // select.add-on--before {
-    //   padding-right: 2rem;
-    //   flex: none;
-    // }
-    //
-    // .add-on--button {
-    //   border-radius: 0 5px 5px 0 !important;
-    //   padding-top: calc(0.6rem + 3px);
-    //   padding-bottom: calc(0.6rem + 3px);
-    //   margin: 0;
-    //
-    //   &.button--border {
-    //     @include border--button($gray-150);
-    //     color: $gray-500;
-    //     .dashing-icon:before {
-    //       color: $gray-500;
-    //     }
-    //   }
-    // }
-
   //Add class to containing fieldset or div to display a down arrow icon in the menu
   &.select--has-icon,
   .select--has-icon {
@@ -204,13 +163,6 @@ fieldset {
     margin-bottom: $space-m;
     overflow: auto;
     padding: 0;
-
-    // li {
-    //   float: left;
-    //   font-size: $font-size-normal;
-    //   margin-right: 0.5rem;
-    //   margin-bottom: $space-m;
-    // }
   }
 
   //Adds red text to lables and inputs for error states
@@ -241,5 +193,27 @@ fieldset {
     }
 
     .message { color: $orange; }
+  }
+}
+
+//flex form
+.flex-content {
+  display: flex;
+  flex-direction: column;
+
+  .flex-row {
+    display: flex;
+    flex-direction: column;
+    @media #{$tablet} {flex-direction: row;}
+  }
+
+  fieldset {
+    flex: 1 1 auto;
+
+    @media #{$tablet} {
+      margin-right: 1rem;
+      flex: 1 1 0;
+      &:last-of-type { margin-right: 0; }
+    }
   }
 }
