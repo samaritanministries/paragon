@@ -19,20 +19,61 @@ export default () => (
     <main className="content content-m">
 			<div className="grid grid-padding">
 
-        <div className="card no-padding">
-          <div className="card-header has-border">
-            <h2>Card with List</h2>
-          </div>
-          <div className="card-content">
-            <ul className="text-list">
-              <li className="text-list_item">This is a simple card</li>
-              <li className="text-list_item">This is a simple card</li>
-            </ul>
+        <h2>Form</h2>
+        <div className="example-container">
+          <div className="card">
+            <div className="card-header has-border">
+              <h2 className="no-margin">Card Header</h2>
+            </div>
+
+            <div className="card-content flex-content">
+              <div className="flex-row">
+                <fieldset>
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name"/>
+                </fieldset>
+                <fieldset>
+                  <label for="middle-name">Middle Name</label>
+                  <input type="text" id="middle-name"/>
+                </fieldset>
+                <fieldset>
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name"/>
+                </fieldset>
+              </div>
+              <div className="flex-row">
+                <fieldset>
+                  <label for="birthday">Date of Birth</label>
+                  <input type="date" id="birthday"/>
+                </fieldset>
+                <fieldset className="select--has-icon">
+                  <label for="gender">Gender</label>
+                  <select id="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </fieldset>
+                <fieldset className="spacer"></fieldset>
+              </div>
+            </div>
+            <div className="card-footer">
+              <button className="mr-space-xs">Submit</button>
+              <button className="button--transparent button--gray">Cancel</button>
+            </div>
           </div>
         </div>
 
-        <h2>Card States</h2>
+        <h2 className="mt-space-xl">States</h2>
         <div className="example-container">
+          <div className="card">
+            <div className="card-header">
+              <h3>Default</h3>
+            </div>
+            <div className="card-content">
+              <p>This is a default card.</p>
+            </div>
+          </div>
+
           <div className="card is-selectable">
             <div className="card-header">
               <h3>Selectable</h3>
@@ -61,44 +102,32 @@ export default () => (
           </div>
         </div>
 
-        <div className="card">
-          <div className="card-header has-border">
-            <h2 className="no-margin">Form Card</h2>
+        <h2 className="mt-space-xl">Lists</h2>
+        <div className="example-container">
+          <div className="card">
+            <div className="card-header">
+              <h3>Simple List</h3>
+            </div>
+            <div className="card-content">
+              <ul className="text-list">
+                <li className="text-list_item">List Item 1</li>
+                <li className="text-list_item">List Item 2</li>
+                <li className="text-list_item">List Item 3</li>
+              </ul>
+            </div>
           </div>
 
-          <div className="card-content flex-content">
-            <div className="flex-row">
-              <fieldset>
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name"/>
-              </fieldset>
-              <fieldset>
-                <label for="middle-name">Middle Name</label>
-                <input type="text" id="middle-name"/>
-              </fieldset>
-              <fieldset>
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name"/>
-              </fieldset>
+          <div className="card">
+            <div className="card-header has-border">
+              <h2>Selectable List</h2>
             </div>
-            <div className="flex-row">
-              <fieldset>
-                <label for="birthday">Date of Birth</label>
-                <input type="date" id="birthday"/>
-              </fieldset>
-              <fieldset className="select--has-icon">
-                <label for="gender">Gender</label>
-                <select id="gender">
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-              </fieldset>
-              <fieldset className="spacer"></fieldset>
+            <div className="card-content">
+              <ul className="text-list">
+                <li className="text-list_item">List Item 1</li>
+                <li className="text-list_item">List Item 2</li>
+                <li className="text-list_item">List Item 3</li>
+              </ul>
             </div>
-          </div>
-          <div className="card-footer">
-            <button className="mr-space-xs">Submit</button>
-            <button className="button--transparent button--gray">Cancel</button>
           </div>
         </div>
 
