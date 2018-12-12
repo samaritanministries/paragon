@@ -32,8 +32,8 @@ fieldset {
     max-width: 100%;
     padding: 0.6rem;
     width: 100%;
-    //Experimental
-    // margin-bottom: $space-m;
+    //EXPERIMENTAL
+    margin-bottom: $space-m;
 
     &:focus {
       border-color: $blue;
@@ -79,41 +79,26 @@ fieldset {
   //Add class to containing fieldset or div to display a button
   .input--add-on {
     display: flex;
+    margin-bottom: $space-m;
 
-    .add-on--field,
-    .add-on--before,
-    .add-on--after {
-      width: 5rem; //set to fix forms escaping from headers on mobile
-      @media #{$tablet} {
-        width: auto;
-      }
-      flex-grow: 1;
+    #{$inputs} { margin-bottom: 0; }
+    select {
+      padding-right: $space-xl;
+      width: auto !important;
     }
 
-    .add-on--field,
     .add-on--before {
       border-radius: 5px 0 0 5px;
       border-right: none;
+      flex: 1;
     }
 
     .add-on--after {
-      border-radius: 0 5px 5px 0;
-    }
-
-    select.add-on--after,
-    select.add-on--before {
-      padding-right: 2rem;
-      flex: none;
-    }
-
-    .add-on--button {
       border-radius: 0 5px 5px 0 !important;
-      padding-top: calc(0.6rem + 3px);
-      padding-bottom: calc(0.6rem + 3px);
       margin: 0;
 
       &.button--border {
-        @include border--button($gray-150);
+        @include border--button($gray-150); //makes button border the same color as the input
         color: $gray-500;
         .dashing-icon:before {
           color: $gray-500;
@@ -121,6 +106,53 @@ fieldset {
       }
     }
   }
+
+    // select.add-on--after,
+    // select.add-on--before {
+    //   padding-right: 2rem;
+    //   flex: none;
+    // }
+    //
+    // .add-on--field,
+    // .add-on--before,
+    // .add-on--after {
+    //   width: 5rem; //set to fix forms escaping from headers on mobile
+    //   @media #{$tablet} {
+    //     width: auto;
+    //   }
+    //   flex-grow: 1;
+    // }
+    //
+    // .add-on--field,
+    // .add-on--before {
+    //   border-radius: 5px 0 0 5px;
+    //   border-right: none;
+    // }
+    //
+    // .add-on--after {
+    //   border-radius: 0 5px 5px 0;
+    // }
+    //
+    // select.add-on--after,
+    // select.add-on--before {
+    //   padding-right: 2rem;
+    //   flex: none;
+    // }
+    //
+    // .add-on--button {
+    //   border-radius: 0 5px 5px 0 !important;
+    //   padding-top: calc(0.6rem + 3px);
+    //   padding-bottom: calc(0.6rem + 3px);
+    //   margin: 0;
+    //
+    //   &.button--border {
+    //     @include border--button($gray-150);
+    //     color: $gray-500;
+    //     .dashing-icon:before {
+    //       color: $gray-500;
+    //     }
+    //   }
+    // }
 
   //Add class to containing fieldset or div to display a down arrow icon in the menu
   &.select--has-icon,
@@ -164,18 +196,21 @@ fieldset {
 
 fieldset {
   .message {
-    color: $gray-600;
+    color: $gray-800;
+    font-size: $font-size-small;
     list-style: none;
     margin: 0;
-    margin-top: 0.4rem;
+    margin-top: -#{$space-s};
+    margin-bottom: $space-m;
     overflow: auto;
     padding: 0;
 
-    li {
-      float: left;
-      font-size: $font-size-normal;
-      margin-right: 0.5rem;
-    }
+    // li {
+    //   float: left;
+    //   font-size: $font-size-normal;
+    //   margin-right: 0.5rem;
+    //   margin-bottom: $space-m;
+    // }
   }
 
   //Adds red text to lables and inputs for error states
@@ -187,14 +222,10 @@ fieldset {
     }
 
     #{$inputs} {
-      &:focus {
-        border-color: $red;
-      }
+      &:focus { border-color: $red; }
     }
 
-    .message li {
-      color: $red;
-    }
+    .message { color: $red; }
   }
 
   //Adds orange text to lables and inputs for warning states
@@ -206,13 +237,9 @@ fieldset {
     }
 
     #{$inputs} {
-      &:focus {
-        border-color: $orange;
-      }
+      &:focus { border-color: $orange; }
     }
 
-    .message li {
-      color: $orange;
-    }
+    .message { color: $orange; }
   }
 }

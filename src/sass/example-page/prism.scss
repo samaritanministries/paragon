@@ -28,6 +28,13 @@ $tablet:        "all and (min-width: 40em)" !default;
 	border: 2px solid $gray-150;
 	border-radius: 8px 8px 0 0;
 	border-bottom: none;
+
+	.grid & {
+		background-color: $gray-50;
+		border-color: transparent !important;
+		padding: $space-l;
+		border-radius: 8px; //temp
+	}
 }
 
 .example-text {
@@ -281,7 +288,7 @@ pre.line-numbers > code {
 
 //code toggle
 .code-toggle {
-  background-color: $gray-150;
+  background-color: $gray-200;
   border-radius: 0 0 5px 5px;
   cursor: pointer;
   display: block;
@@ -289,6 +296,11 @@ pre.line-numbers > code {
   padding: 0.5rem 0;
   text-align: center;
   transition: all .2s ease-in-out;
+
+	.grid & {
+		border-radius: 5px;
+		padding: $space-xs;
+	}
 
   .icon--code {
     background-image: url(../../img/icon--code_light.svg);
@@ -309,17 +321,19 @@ pre.line-numbers > code {
   }
 
   &:after {
-    content: "Show Code";
-    color: $gray-900;
+    content: "SHOW CODE";
+		font-weight: 600;
+    color: $gray-800;
   }
 
   &.is-open {
     background-color: #313538;
-    border-radius: 0;
+    border-radius: 5px 5px 0 0;
     .icon--code { background-image: url(../../img/icon--code.svg); }
     &:after {
       color: $white;
-      content: "Hide Code";
+      content: "HIDE CODE";
+			font-weight: 600;
     }
   }
 }
