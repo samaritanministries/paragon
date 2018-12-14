@@ -40,6 +40,15 @@ export default () => (
 					<p>Add information below.</p>
 				</div>
 
+				<div className="card">
+					<div className="card-header has-border">
+						<h2>Header</h2>
+					</div>
+					<div className="card-content">
+						<p>More content here</p>
+					</div>
+				</div>
+
 			</div>
 		</section>
 	</main>
