@@ -22,6 +22,7 @@ This is an EXPERIMENT and is not ready to be included in production!
       max-width: $content-m;
       margin: 0 auto;
       padding: $space-m;
+      * { margin: 0; }
     }
   }
 
@@ -98,11 +99,11 @@ This is an EXPERIMENT and is not ready to be included in production!
     max-width: $content-m;
   }
 }
-.overpanel-s {//make max-width consistant
+.overpanel-l {//make max-width consistant
   .title-content {
-    max-width: $content-s;
+    max-width: $content-l;
   }
   .content {
-    max-width: $content-s;
+    max-width: $content-l;
   }
 }
