@@ -22,26 +22,28 @@ This is an EXPERIMENT and is not ready to be included in production!
       max-width: $content-m;
       margin: 0 auto;
       padding: $space-m;
-      * { margin: 0; }
+      * { margin: 0; } //to overwrite global margin bottom
+      button { white-space: nowrap; }
     }
   }
 
   .content {
-    margin-top: $space-xs;
+    margin-top: $space-xs; //to keep content from hiding shadow
     max-width: $content-m;
   }
 
 }
 
-.overpanel-m {//make max-width consistant
+/* Utility classes for max-width of Overpanel */
+.overpanel-s {
   .title-content {
-    max-width: $content-m !important;
+    max-width: $content-s !important;
   }
   .content {
-    max-width: $content-m;
+    max-width: $content-s;
   }
 }
-.overpanel-l {//make max-width consistant
+.overpanel-l {
   .title-content {
     max-width: $content-l !important;
   }
