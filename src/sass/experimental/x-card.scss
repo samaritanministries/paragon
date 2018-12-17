@@ -19,8 +19,10 @@ h1, h2, h3, h4 { margin-bottom: $space-xxs; }
 
 @media #{$phone} {
   .grid .card {
-    border-radius: 0;
-    margin-left: -#{$space-m};
-    margin-right: -#{$space-m};
+    @supports(display: grid) { //Fallback. IE does not support negative margin on cards
+      border-radius: 0;
+      margin-left: -#{$space-m};
+      margin-right: -#{$space-m};
+		}
   }
 }
