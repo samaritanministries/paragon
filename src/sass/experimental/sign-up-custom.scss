@@ -30,7 +30,7 @@ This is an EXPERIMENT and is not ready to be included in production!
 }
 
 .membershipStartDate { //width was broken
-  width: calc(100% - 3rem;);
+  width: calc(100% - 3rem);
   margin-bottom: $space-m;
   @media #{$tablet} { width: 12rem; }
   &:after { //positioning broken
