@@ -42,4 +42,4 @@ Actual CSS Grid Classes
 	.grid--sixth,         .grid-2   { @include grid-column(2); }
 }
 
-.grid { .card { margin: 0; } }
+.grid { .card { margin: 0; } } //required to span cards 100%
