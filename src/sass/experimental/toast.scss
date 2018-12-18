@@ -1,0 +1,67 @@
+.toast-container {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  animation-name: slideInFromBottom;
+  animation-duration: 1s;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.toast-message {
+  position: relative;
+  background-color: $white;
+  width: 300px;
+  padding: $space-m calc( #{$space-xl} + #{$space-xs});
+  border-radius: 5px;
+  border: 1px solid transparent;
+  @extend %card-shadow--hover;
+  @include transition(opacity 0.5s ease-out);
+  p { margin: 0; }
+
+  .toast-message--close {
+    @extend .dashing-icon;
+    @extend .dashing-icon--close;
+    @extend .dashing-icon--black;
+    position: absolute;
+    right: $space-m;
+    top: $space-m;
+  }
+  .toast-message--icon {
+    position: absolute;
+    left: $space-m;
+    top: $space-m;
+    @extend .dashing-icon;
+    @extend .dashing-icon--info-stroke;
+    @extend .dashing-icon--blue;
+  }
+
+  &.success {
+    border-color: $green;
+    .toast-message--icon {
+      @extend .dashing-icon--green;
+      @extend .dashing-icon--checkmark-filled;
+    }
+  }
+  &.warning {
+    border-color: $orange;
+    .toast-message--icon {
+      @extend .dashing-icon--orange;
+      @extend .dashing-icon--info-filled;
+    }
+  }
+  &.error {
+    border-color: $red;
+    .toast-message--icon {
+      @extend .dashing-icon--red;
+      @extend .dashing-icon--alert-filled;
+    }
+  }
+}
