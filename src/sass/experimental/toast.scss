@@ -1,41 +1,55 @@
 .toast-container {
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
   animation-name: fadeInOut;
   animation-duration: 1s;
+  @media #{$tablet} {
+    bottom: 2rem;
+    right: 2rem;
+    left: auto;
+  }
 }
 
 .toast-message {
   position: relative;
   background-color: $white;
-  width: 300px;
-  padding: $space-m calc( #{$space-xl} + #{$space-xs});
-  border-radius: 5px;
-  border: 1px solid transparent;
+  width: 100%;
+  padding: $space-s calc( #{$space-xl} + #{$space-xs});
+  border-radius: 0;
+  border-top: 1px solid $blue;
   @extend %card-shadow--hover;
   @include transition(opacity 0.5s ease-out);
   p { margin: 0; }
+  @media #{$tablet} {
+    width: 300px;
+    border-radius: 5px;
+    padding: $space-m calc( #{$space-xl} + #{$space-xs});
+    border: 1px solid $blue;
+  }
 
   .toast-message--close {
-    @extend .dashing-icon;
-    @extend .dashing-icon--close;
-    @extend .dashing-icon--black;
     position: absolute;
-    right: $space-m;
-    top: $space-m;
+    right: $space-xs;
+    top: $space-xs;
     opacity: 0;
-    @include transition(opacity 0.3s ease-out);
-    cursor: pointer;
+    @include transition(all 0.3s ease-out);
+
+    @extend .button--transparent;
+    @extend .button--gray;
+    @extend .button--icon;
+    @extend .button--icon--small;
   }
 
   .toast-message--icon {
     position: absolute;
     left: $space-m;
-    top: $space-m;
+    top: $space-s;
     @extend .dashing-icon;
     @extend .dashing-icon--info-stroke;
     @extend .dashing-icon--blue;
+    @media #{$tablet} { top: $space-m;}
   }
 
   &.success {

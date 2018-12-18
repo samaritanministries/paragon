@@ -12,7 +12,9 @@ export default () => (
 			<i className="toast-message--icon"></i>
 			<h4>Success</h4>
 			<p>Address saved successfully</p>
-			<i className="toast-message--close"></i>
+			<button class="button toast-message--close">
+				<i className="dashing-icon dashing-icon--close"></i>
+			</button>
 		</div>
 	</div>
 		<header className="header">
