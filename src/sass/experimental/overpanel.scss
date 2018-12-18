@@ -23,30 +23,26 @@ This is an EXPERIMENT and is not ready to be included in production!
       margin: 0 auto;
       padding: $space-m;
       * { margin: 0; } //to overwrite global margin bottom
-      button { white-space: nowrap; }
+      button { white-space: nowrap; margin-left: $space-s; }
     }
   }
 
   .content {
     max-width: $content-m;
+    margin-top: 0;
   }
 
-}
-
-/* Utility classes for max-width of Overpanel */
-.overpanel-s {
-  .title-content {
-    max-width: $content-s !important;
+  /* Utility classes for max-width of Overpanel */
+  &.overpanel-s {
+    .title-content,
+    .content {
+      max-width: $content-s;
+    }
   }
-  .content {
-    max-width: $content-s;
-  }
-}
-.overpanel-l {
-  .title-content {
-    max-width: $content-l !important;
-  }
-  .content {
-    max-width: $content-l;
+  &.overpanel-l {
+    .title-content,
+    .content {
+      max-width: $content-l;
+    }
   }
 }

@@ -19,7 +19,7 @@ export default () => (
 
     <section className="content">
 			<div className="grid grid-padding">
-	      <h1>Example Fullscreen Page</h1>
+	      <h2>Example Fullscreen Page</h2>
 	      <p>This example shows a fullscreen layout. Simple! This example shows a fullscreen layout. Simple! This example shows a fullscreen layout. Simple! This example shows a fullscreen layout. Simple! This example shows a fullscreen layout. Simple! This example shows a fullscreen layout. Simple!</p>
 			</div>
     </section>
