@@ -2,17 +2,8 @@
   position: absolute;
   bottom: 2rem;
   right: 2rem;
-  animation-name: slideInFromBottom;
+  animation-name: fadeInOut;
   animation-duration: 1s;
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .toast-message {
@@ -33,7 +24,11 @@
     position: absolute;
     right: $space-m;
     top: $space-m;
+    opacity: 0;
+    @include transition(opacity 0.3s ease-out);
+    cursor: pointer;
   }
+
   .toast-message--icon {
     position: absolute;
     left: $space-m;
@@ -63,5 +58,19 @@
       @extend .dashing-icon--red;
       @extend .dashing-icon--alert-filled;
     }
+  }
+  &:hover {
+    .toast-message--close {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
