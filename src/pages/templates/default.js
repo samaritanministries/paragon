@@ -40,14 +40,34 @@ export default () => (
 					<p>Add information below.</p>
 				</div>
 
-				<div className="card">
-					<div className="card-header has-border">
-						<h2>Header</h2>
-					</div>
-					<div className="card-content">
-						<p>More content here</p>
+				<div className="grid--half">
+					<div className="card">
+						<div className="card-header has-border">
+							<h2>Header</h2>
+						</div>
+						<div className="card-content">
+							<p>Content here</p>
+						</div>
 					</div>
 				</div>
+
+				<div className="grid--half">
+					<div className="card">
+						<div className="card-header">
+							<h3>Header</h3>
+						</div>
+						<div className="card-content">
+							<p>Even more content here</p>
+						</div>
+						<div className="card-footer">
+							<button>Button</button>
+							<button className="button--transparent">Secondary</button>
+						</div>
+					</div>
+				</div>
+
+
+
 
 			</div>
 		</section>
