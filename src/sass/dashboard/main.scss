@@ -71,8 +71,9 @@ $header-background: $white;
           color: $gray-100;
           font-weight: 400;
           font-size: 1.1rem;
+          @include transition(border 0.2s ease-out);
 
-          border-bottom: 2px solid transparent;
+          border-bottom: 3px solid transparent;
           &:hover  { border-bottom: 3px solid $gray-100; }
           &.active { border-bottom: 3px solid $gray-100; }
         }
@@ -151,8 +152,9 @@ $header-background: $white;
         color: $gray-900;
         font-weight: 400;
         font-size: 1rem;
+        @include transition(border 0.2s ease-out);
 
-        border-bottom: 2px solid transparent;
+        border-bottom: 3px solid transparent;
         &:hover  { border-bottom: 3px solid $gray-900; }
         &.active { border-bottom: 3px solid $gray-900; }
       }
