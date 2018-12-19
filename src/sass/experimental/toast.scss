@@ -6,7 +6,7 @@
   animation-name: fadeInOut;
   animation-duration: 1s;
   @media #{$tablet} {
-    bottom: 2rem;
+    bottom: 1rem;
     right: 2rem;
     left: auto;
   }
@@ -23,6 +23,7 @@
   @include transition(opacity 0.5s ease-out);
   p { margin: 0; }
   @media #{$tablet} {
+    margin-bottom: $space-m;
     width: 300px;
     border-radius: 5px;
     padding: $space-m calc( #{$space-xl} + #{$space-xs});
@@ -38,7 +39,6 @@
 
     @extend .button--transparent;
     @extend .button--gray;
-    @extend .button--icon;
     @extend .button--icon--small;
   }
 
