@@ -8,7 +8,6 @@ $sidebar-width: 12rem;
 $sidebar-background: #354052;
 
 //SIDEBAR
-
 .sidebar {
   float: left;/*fallback*/
   min-height: calc(100vh - #{$header-height});
@@ -169,11 +168,4 @@ $sidebar-background: #354052;
 @supports (display: grid) {
   .mobile-profile--account > * { width: auto; }
   .mobile-profile--account { display: grid; }
-}
-
-.map { //TODO rename this
-  .sidebar {
-    left: auto;
-    right: 0;
-  }
 }

@@ -1,0 +1,11 @@
+.content {
+  max-width: $content-width;
+  margin: auto;
+  margin-top: $header-height;
+  -webkit-overflow-scrolling: touch;
+
+  //Todo: discuss this
+  &.content--reader-width {
+    max-width: $content-width / 2;
+  }
+}

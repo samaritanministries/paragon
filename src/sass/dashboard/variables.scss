@@ -1,0 +1,30 @@
+//The tricky thing here is these variables are used
+//for various other things that will break without them.
+//Thus they can't live in their own files.
+
+//Sidebar (used for mobile menu)
+$animation-time: 0.3s;
+$sidebar-highlight:  #9D6CDE;
+$sidebar-text-color: $white;
+$sidebar-width: 12rem;
+$sidebar-background: #354052;
+
+//Header
+$header-padding: 0.5rem;
+$header-height: 4rem;
+$header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+$header-gradient: linear-gradient(100deg, $blue-600, $blue-800);
+$header-background: $white;
+
+//Sub-nav
+$sub-nav-height: calc(#{$header-height} / 2);
+$sub-nav-color: $white;
+
+//Other
+$app-background:#e0e0e0;
+$content-width: 1200px !default;
+$half-padding: 0.5rem;
+$full-padding: $grid-gutter;//1rem;
+
+//Placeholder
+$container-colors: transparent;
