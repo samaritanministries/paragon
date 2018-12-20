@@ -1,13 +1,13 @@
 .toast-container {
+  overflow-x: hidden;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  animation-name: fadeInOut;
-  animation-duration: 1s;
+  // animation-name: fadeInOut;
+  // animation-duration: 1s;
   @media #{$tablet} {
     bottom: 1rem;
-    right: 2rem;
     left: auto;
   }
 }
@@ -20,10 +20,12 @@
   border-radius: 0;
   border-top: 1px solid $blue;
   @extend %card-shadow--hover;
-  @include transition(opacity 0.5s ease-out);
+  animation-name: slideInLeft;
+  animation-duration: 0.7s;
+  //@include transition(opacity 0.5s ease-out);
   p { margin: 0; }
   @media #{$tablet} {
-    margin-bottom: $space-m;
+    margin: $space-m $space-l $space-m $space-m;
     width: 300px;
     border-radius: 5px;
     padding: $space-m calc( #{$space-xl} + #{$space-xs});
@@ -86,5 +88,14 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    right: calc(-300px - 2rem)
+  }
+  100% {
+    right: 0;
   }
 }
