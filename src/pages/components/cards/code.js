@@ -15,324 +15,230 @@ export default () => (
       <SubNav pageName={currentPageNameLower}/>
     </header>
     <AppContent>
-    <div className="row">
-      <div className="column column--full">
+    <main className="content content-m" style={{marginTop: "2rem"}}>
+			<div className="grid grid-padding">
 
-        <h2 className="example-header no-margin--top">Default Card <button className="button button--transparent button--copy-link" id="Default_Card"></button></h2>
-        <div className="row example-container">
-          <div className="column column--full">
-            <div className="card">
-              <div className="card--header">
-                <h3>This is a simple card</h3>
+        <h2>Form</h2>
+        <div className="example-container">
+          <div className="card">
+            <div className="card-header has-border">
+              <h2 className="no-margin">Card Header</h2>
+            </div>
+
+            <div className="card-content flex-content">
+              <div className="flex-row">
+                <fieldset>
+                  <label htmlFor="first-name">First Name</label>
+                  <input type="text" id="first-name"/>
+                </fieldset>
+                <fieldset>
+                  <label htmlFor="middle-name">Middle Name</label>
+                  <input type="text" id="middle-name"/>
+                </fieldset>
+                <fieldset>
+                  <label htmlFor="last-name">Last Name</label>
+                  <input type="text" id="last-name"/>
+                </fieldset>
               </div>
-
-              <div className="card--content">
-                <p className="remove-margin--top">Dashing Cards are used to contain and display any type of content.</p>
-                <p className="remove-margin--bottom">This is an example of a simple card. Its little markup makes it very convenient to use.</p>
+              <div className="flex-row">
+                <fieldset>
+                  <label htmlFor="birthday">Date of Birth</label>
+                  <input type="date" id="birthday"/>
+                </fieldset>
+                <fieldset className="select--has-icon">
+                  <label htmlFor="gender">Gender</label>
+                  <select id="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </fieldset>
+                <fieldset className="spacer"></fieldset>
               </div>
             </div>
+            <div className="card-footer">
+              <button className="mr-space-xs">Submit</button>
+              <button className="button--transparent button--gray">Cancel</button>
+            </div>
           </div>
-        </div>
-        <CodeToggle>
-{`<div class="card">
-  <div class="card--header">
-    <h3>This is a simple card</h3>
+          <CodeToggle>
+{`<!-- Form within a card -->
+<div class="card">
+  <div class="card-header has-border">
+    <h2 class="no-margin">Card Header</h2>
   </div>
 
-  <div class="card--content">
-    <p class="remove-margin--top">Dashing Cards are used to contain and display any type of content.</p>
-    <p class="remove-margin--bottom">This is an example of a simple card. Its little markup makes it very convenient to use.</p>
+  <div class="card-content flex-content">
+    <div class="flex-row">
+      <fieldset>
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name"/>
+      </fieldset>
+      <fieldset>
+        <label for="middle-name">Middle Name</label>
+        <input type="text" id="middle-name"/>
+      </fieldset>
+      <fieldset>
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name"/>
+      </fieldset>
+    </div>
+    <div class="flex-row">
+      <fieldset>
+        <label for="birthday">Date of Birth</label>
+        <input type="date" id="birthday"/>
+      </fieldset>
+      <fieldset class="select--has-icon">
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </fieldset>
+      <fieldset class="spacer"></fieldset>
+    </div>
+  </div>
+  <div class="card-footer">
+    <button class="mr-space-xs">Submit</button>
+    <button class="button--transparent button--gray">Cancel</button>
   </div>
 </div>`}
-        </CodeToggle>
-
-        <h2 className="example-header">Centered content in a card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Centered_Content_In_A_Card"></button></h2>
-        <div className="row example-container">
-          <div className="column column--full">
-            <div className="card center-align">
-              <div className="card--header">
-                <h3>This is a simple card</h3>
-              </div>
-
-              <div className="card--content">
-                <p>To center content within a card, apply the <a href="https://github.com/dashframework/dashing/blob/2b4f977910aa2cd9c54309d08aae915af283fda0/sass/modules/typography/_typography.scss#L19-L21" target="_blank" rel="noopener noreferrer">alignment utility class</a> <code className="example-text">.center-align</code> to a <code className="example-text">.card</code> element. If you want more control, apply the utility class to the <code className="example-text">.card--header</code>, <code className="example-text">.card--content</code>, or <code className="example-text">.card--footer</code> elements.</p>
-              </div>
-
-              <div className="card--footer">
-                <button className="button button--blue">Centered Button</button>
-              </div>
-            </div>
-          </div>
+          </CodeToggle>
         </div>
 
-        <CodeToggle>
-{`<div class="card center-align">
-  <div class="card--header">
-    <h3>This is a simple card</h3>
-  </div>
-
-  <div class="card--content">
-    <p>To center content within a card, apply the <a href="https://github.com/dashframework/dashing/blob/2b4f977910aa2cd9c54309d08aae915af283fda0/sass/modules/typography/_typography.scss#L19-L21">alignment utility class</a> <code class="example-text">.center-align</code> to a <code class="example-text">.card</code> element. If you want more control, apply the utility class to the <code class="example-text">.card--header</code>, <code class="example-text">.card--content</code>, or <code class="example-text">.card--footer</code> elements.</p>
-  </div>
-
-  <div class="card--footer">
-    <button class="button button--blue">Centered Button</button>
-  </div>
-</div>`}
-        </CodeToggle>
-
-        <h2 className="example-header">Separation within cards <button className="button button--transparent button--copy-link" id="Seperation_Within_Cards"></button></h2>
-        <div className="row example-container">
-          <div className="column column--full">
-            <div className="card">
-              <div className="card--header has-border">
-                <h3>Creating line separation with an <code className="example-text">&lt;hr&gt;</code> and <code className="example-text">.has-border</code></h3>
-              </div>
-
-              <div className="card--content">
-                <p className="remove-margin--top">Use the <code className="example-text">.has-border</code> class on your <code className="example-text">.card--header</code> or <code className="example-text">.card--footer</code> element to create a line separation between content </p>
-                <hr />
-                <p>Placing an <code className="example-text">&lt;hr&gt;</code> within <code className="example-text">.card--header</code>, <code className="example-text">card--content</code>, or <code className="example-text">card--footer</code> will allow you to separate content within your card, while still respecting your <code className="example-text">$grid-gutter</code>.</p>
-                <hr />
-                <p className="remove-margin--bottom">Use the <a href="https://github.com/dashframework/dashing/blob/v1.0.7/sass/base/utilities/_utilities.scss#L12-L16" target="_blank" rel="noopener noreferrer">remove-margin</a> utility classes to remove unnecessary margin in your paragraphs.</p>
-              </div>
-
-              <hr />
-
-              <div className="card--content">
-                <p className="remove-margin">Use an <code className="example-text">&lt;hr&gt;</code> outside of <code className="example-text">.card--header</code>, <code className="example-text">card--content</code>, or <code className="example-text">card--footer</code> to span your <code className="example-text">&lt;hr&gt;</code> edge to edge.</p>
-              </div>
-
-              <div className="card--footer has-border">
-                <button className="button button--primary">Button</button>
-              </div>
+        <h2 className="mt-space-xl">States</h2>
+        <div className="example-container">
+          <div className="card">
+            <div className="card-header">
+              <h3>Default</h3>
+            </div>
+            <div className="card-content">
+              <p>This is a default card.</p>
             </div>
           </div>
-        </div>
 
-        <CodeToggle>
-{`<div class="card">
-  <div class="card--header has-border">
-    <h3>Creating line separation with an <code class="example-text">&lt;hr&gt;</code> and <code class="example-text">.has-border</code></h3>
-  </div>
-
-  <div class="card--content">
-    <p class="remove-margin--top">Use the <code class="example-text">.has-border</code> class on your <code class="example-text">.card--header</code> or <code class="example-text">.card--footer</code> element to create a line separation between content </p>
-    <hr>
-    <p>Placing an <code class="example-text">&lt;hr&gt;</code> within <code class="example-text">.card--header</code>, <code class="example-text">card--content</code>, or <code class="example-text">card--footer</code> will allow you to separate content within your card, while still respecting your <code class="example-text">$grid-gutter</code>.</p>
-    <hr>
-    <p class="remove-margin--bottom">Use the <a href="https://github.com/dashframework/dashing/blob/v1.0.7/sass/base/utilities/_utilities.scss#L12-L16">remove-margin</a> utility classes to remove unnecessary margin in your paragraphs.</p>
-  </div>
-
-  <hr>
-
-  <div class="card--content">
-    <p class="remove-margin">Use an <code class="example-text">&lt;hr&gt;</code> outside of <code class="example-text">.card--header</code>, <code class="example-text">card--content</code>, or <code class="example-text">card--footer</code> to span your <code class="example-text">&lt;hr&gt;</code> edge to edge.</p>
-  </div>
-
-  <div class="card--footer has-border">
-    <button class="button button--primary">Button</button>
-  </div>
-</div>`}
-        </CodeToggle>
-
-        <h2 className="example-header">Selectable Card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Selectable_Card"></button></h2>
-        <div className="row example-container">
-          <div className="column column--full">
-            <div className="card is-selectable">
-              <div className="card--header">
-                <h3>This is a selectable card</h3>
-              </div>
-
-              <div className="card--footer">
-                <button className="button button--primary button--transparent">Click me</button>
-              </div>
+          <div className="card is-selectable">
+            <div className="card-header">
+              <h3>Selectable</h3>
             </div>
-
-            <div className="card is-selectable is-disabled">
-              <div className="card--header">
-                <h3>This is a disabled selectable card</h3>
-              </div>
-
-              <div className="card--footer">
-                <button className="button button--primary button--transparent">Can't click me</button>
-              </div>
+            <div className="card-content">
+              <p>To use a selectable card, apply <code className="example-text">.is-selectable</code> to the <code className="example-text">.card</code>.</p>
             </div>
-
           </div>
-        </div>
 
-      <CodeToggle>
-{`<div class="card is-selectable">
-  <div class="card--header">
-    <h3>This is a selectable card</h3>
+          <div className="card is-selectable is-disabled">
+            <div className="card-header">
+              <h3>Disabled</h3>
+            </div>
+            <div className="card-content">
+              <p>To use a disabled card, apply <code className="example-text">.is-disabled</code> to the <code className="example-text">.card</code>.</p>
+            </div>
+          </div>
+
+          <div className="card card--dashed">
+            <div className="card-header">
+              <h3>Dashed</h3>
+            </div>
+            <div className="card-content">
+              <p>To use a dashed card, apply <code className="example-text">.card--dashed</code> to the <code className="example-text">.card</code>.</p>
+            </div>
+          </div>
+          <CodeToggle>
+{`<!-- Different states of cards -->
+<div class="card">
+  <div class="card-header">
+    <h3>Default</h3>
   </div>
+  <div class="card-content">
+    <p>This is a default card.</p>
+  </div>
+</div>
 
-  <div class="card--footer">
-    <button class="button button--primary button--transparent">Click me</button>
+<div class="card is-selectable">
+  <div class="card-header">
+    <h3>Selectable</h3>
+  </div>
+  <div class="card-content">
+    <p>To use a selectable card, apply <code class="example-text">.is-selectable</code> to the <code class="example-text">.card</code>.</p>
   </div>
 </div>
 
 <div class="card is-selectable is-disabled">
-  <div class="card--header">
-    <h3>This is a disabled selectable card</h3>
+  <div class="card-header">
+    <h3>Disabled</h3>
   </div>
+  <div class="card-content">
+    <p>To use a disabled card, apply <code class="example-text">.is-disabled</code> to the <code class="example-text">.card</code>.</p>
+  </div>
+</div>
 
-  <div class="card--footer">
-    <button class="button button--primary button--transparent">Can't click me</button>
+<div class="card card--dashed">
+  <div class="card-header">
+    <h3>Dashed</h3>
+  </div>
+  <div class="card-content">
+    <p>To use a dashed card, apply <code class="example-text">.card--dashed</code> to the <code class="example-text">.card</code>.</p>
   </div>
 </div>`}
-      </CodeToggle>
-
-      <h2 className="example-header">Dashed Card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Dashed_Card"></button></h2>
-      <div className="row example-container">
-        <div className="column column--full">
-          <div className="card card--dashed">
-            <div className="card--header">
-              <h3>This is a dashed card</h3>
-            </div>
-
-            <div className="card--content">
-              <p className="remove-margin">To use a dashed card, apply <code className="example-text">.card--dashed</code> after <code className="example-text">.card</code>.</p>
-            </div>
-          </div>
+          </CodeToggle>
         </div>
-      </div>
 
-      <CodeToggle>
-{`<div class="card card--dashed">
-  <div class="card--header">
-    <h3>This is a dashed card</h3>
-  </div>
-
-  <div class="card--content">
-    <p class="remove-margin">To use a dashed card, apply <code class="example-text">.card--dashed</code> after <code class="example-text">.card</code>.</p>
-  </div>
-</div>`}
-      </CodeToggle>
-
-      <h2 className="example-header">Form Elements in a Card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Form_Elements_In_A_Card"></button></h2>
-      <div className="row example-container">
-        <div className="column column--full">
+        <h2 className="mt-space-xl">Lists</h2>
+        <div className="example-container">
           <div className="card">
-            <div className="card--header">
-              <h3>This is a card with a form</h3>
+            <div className="card-header">
+              <h3>Simple List</h3>
             </div>
-
-            <form>
-              <fieldset className="card--content">
-
-                <div className="row row--nested">
-                  <div className="column column--full column--nested">
-                    <label>Label</label>
-                    <input type="text"/>
-                  </div>
-                </div>
-
-                <div className="row row--nested">
-                  <div className="column column--half column--nested">
-                    <label>Label</label>
-                    <input type="text"/>
-                  </div>
-                  <div className="column column--half column--nested">
-                    <label>Label</label>
-                    <input type="text"/>
-                  </div>
-                </div>
-                <div className="row row--nested">
-                  <div className="column column--half column--nested">
-                    <label>Label</label>
-                    <input type="text"/>
-                  </div>
-                  <div className="column column--half column--nested">
-                    <label>Label</label>
-                    <input type="text"/>
-                  </div>
-                </div>
-              </fieldset>
-
-              <div className="card--footer">
-                <button className="button button--green">Submit</button>
-                <button className="button button--secondary button--transparent">Cancel</button>
-              </div>
-            </form>
+            <div className="card-content">
+              <ul className="text-list">
+                <li className="text-list_item">List Item 1</li>
+                <li className="text-list_item">List Item 2</li>
+                <li className="text-list_item">List Item 3</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <CodeToggle>
-{`<div class="card">
-  <div class="card--header">
-    <h3>This is a card with a form</h3>
-  </div>
-
-  <form>
-    <fieldset class="card--content">
-
-      <div class="row row--nested">
-        <div class="column column--full column--nested">
-          <label>Label</label>
-          <input type="text">
-        </div>
-      </div>
-
-      <div class="row row--nested">
-        <div class="column column--half column--nested">
-          <label>Label</label>
-          <input type="text">
-        </div>
-        <div class="column column--half column--nested">
-          <label>Label</label>
-          <input type="text">
-        </div>
-      </div>
-      <div class="row row--nested">
-        <div class="column column--half column--nested">
-          <label>Label</label>
-          <input type="text">
-        </div>
-        <div class="column column--half column--nested">
-          <label>Label</label>
-          <input type="text">
-        </div>
-      </div>
-    </fieldset>
-
-    <div class="card--footer">
-      <button class="button button--green">Submit</button>
-      <button class="button button--secondary button--transparent">Cancel</button>
-    </div>
-  </form>
-</div>`}
-      </CodeToggle>
-
-      <h2 className="example-header">Card List <button className="button button--transparent button--copy-link" data-id="copyurl" id="Card_List"></button></h2>
-      <div className="row example-container">
-        <div className="column column--full">
-          <div className="card" style={{ overflow: "hidden" }}>
-            <ul className="card--list is-selectable">
+          <div className="card">
+            <div className="card-header has-border">
+              <h2>Selectable List</h2>
+            </div>
+            <ul className="card-list is-selectable">
               <li className="space-between"><span>Ryan Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
               <li className="space-between"><span>Jill Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
               <li className="space-between"><span>Jackson Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
               <li className="space-between"><span>Emily Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
             </ul>
           </div>
-        </div>
-      </div>
+          <CodeToggle>
+{`<!-- Different types of lists within cards -->
+<div className="card">
+  <div className="card-header">
+    <h3>Simple List</h3>
+  </div>
+  <div className="card-content">
+    <ul className="text-list">
+      <li className="text-list_item">List Item 1</li>
+      <li className="text-list_item">List Item 2</li>
+      <li className="text-list_item">List Item 3</li>
+    </ul>
+  </div>
+</div>
 
-      <CodeToggle>
-{`<div class="card" style="overflow: hidden;" data-id="need">
-  <ul class="card--list is-selectable">
-    <li class="space-between"><span>Ryan Fitz</span><i class="dashing-icon dashing-icon--arrow-right"></i></li>
-    <li class="space-between"><span>Jill Fitz</span><i class="dashing-icon dashing-icon--arrow-right"></i></li>
-    <li class="space-between"><span>Jackson Fitz</span><i class="dashing-icon dashing-icon--arrow-right"></i></li>
-    <li class="space-between"><span>Emily Fitz</span><i class="dashing-icon dashing-icon--arrow-right"></i></li>
+<div className="card">
+  <div className="card-header has-border">
+    <h2>Selectable List</h2>
+  </div>
+  <ul className="card--list is-selectable">
+    <li className="space-between"><span>Ryan Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
+    <li className="space-between"><span>Jill Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
+    <li className="space-between"><span>Jackson Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
+    <li className="space-between"><span>Emily Fitz</span><i className="dashing-icon dashing-icon--arrow-right"></i></li>
   </ul>
 </div>`}
-      </CodeToggle>
-
+          </CodeToggle>
+        </div>
       </div>
-    </div>
+    </main>
+
     </AppContent>
   </Layout>
 )
