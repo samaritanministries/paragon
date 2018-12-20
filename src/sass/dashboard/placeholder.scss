@@ -40,8 +40,7 @@ $container-colors: transparent;//#413552
   background-color: $container-colors;
   margin-left: 0.5rem;
   position: relative;
-
-  @extend %icon-white;
+  .dashing-icon::before { color: #f5cd66; font-size: 1.5rem; }
 
   .count {
   	position: absolute;
