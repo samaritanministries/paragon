@@ -7,16 +7,18 @@ export default () => (
 
 <div>
 	<main>
-	<div className="toast-container">
-		<div className="toast-message success">
-			<i className="toast-message--icon"></i>
-			<h4>Success</h4>
-			<p>Address saved successfully</p>
-			<button class="button button--icon toast-message--close">
-				<i className="dashing-icon dashing-icon--close"></i>
-			</button>
+
+		<div className="toast-container">
+			<div className="toast-message success">
+				<i className="toast-message--icon"></i>
+				<h4>Success</h4>
+				<p>Address saved successfully</p>
+				<button class="button button--icon toast-message--close">
+					<i className="dashing-icon dashing-icon--close"></i>
+				</button>
+			</div>
 		</div>
-	</div>
+
 		<header className="header">
 			<Link to={"/templates/mobile"} className="mobile-sidebar--button" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 			<div className="logo"><p className="text-color--white">LOGO</p></div>

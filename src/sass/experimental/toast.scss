@@ -4,11 +4,9 @@
   bottom: 0;
   right: 0;
   left: 0;
-  // animation-name: fadeInOut;
-  // animation-duration: 1s;
   @media #{$tablet} {
     bottom: 1rem;
-    left: auto;
+    left: auto; //Positions to bottom right of screen
   }
 }
 
@@ -21,11 +19,10 @@
   border-top: 1px solid $blue;
   @extend %card-shadow--hover;
   animation-name: slideInLeft;
-  animation-duration: 0.7s;
-  //@include transition(opacity 0.5s ease-out);
+  animation-duration: 0.5s;
   p { margin: 0; }
   @media #{$tablet} {
-    margin: $space-m $space-l $space-m $space-m;
+    margin: $space-m $space-xl $space-m $space-m; //Add margin to position if multiple toasts
     width: 300px;
     border-radius: 5px;
     padding: $space-m calc( #{$space-xl} + #{$space-xs});
