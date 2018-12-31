@@ -58,12 +58,7 @@ $container-colors: transparent;//#413552
       display: inline-block;
     }
   }
-
   @extend %icon-white;
-
-  &:hover {
-    background-color: lighten($header-gradient, 5%);
-  }
 }
 
 .alert {
