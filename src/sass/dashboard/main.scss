@@ -2,17 +2,12 @@
 //---------- VARIABLES  ----------\\
 //--------------------------------\\
 
-//Variables
-$app-background:     #e0e0e0;
-
 $content-width: 1200px !default;
 
 $header-height: 4rem;
+$sub-nav-height: 3rem;
 
 $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
-$sub-nav-height: 3rem;
-$sub-nav-color: $white;
-$header-color: #28336d;//Comm Blue
 
 .header {
   z-index: 2;
@@ -32,22 +27,21 @@ $header-color: #28336d;//Comm Blue
   width: 100%;//IE wants this... okay IE. Here you are.
 
   &::after {
+    z-index: -1;
   	content: "";
   	width: 100%;
   	height: $header-height;
-    background: $header-color;
+    background: $brand-blue;
   	position: fixed;
   	top: 0;
   	left: 0;
-  	z-index: -1;
   }
 
   .header-nav {
 
     ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+      @extend %remove-list-style;
+
       li {
         display: inline-block;
         align-items: center;
@@ -62,7 +56,7 @@ $header-color: #28336d;//Comm Blue
           border-bottom: 2px solid transparent;
           @include transition(0.2s ease-out);
 
-          &:hover, &.active  { border-bottom: 2px solid $white; }
+          &:hover, &.active { border-bottom: 2px solid $white; }
 
         }
       }
@@ -71,11 +65,11 @@ $header-color: #28336d;//Comm Blue
 }
 
 .content {
+  z-index: 0;
   max-width: $content-width;
   margin: auto;
   margin-top: $header-height;
   -webkit-overflow-scrolling: touch;
-  z-index: 0;
 
   &.content--reader-width { //TODO rename this
     max-width: $content-width / 2;
@@ -83,6 +77,7 @@ $header-color: #28336d;//Comm Blue
 }
 
 .sub-nav {
+  z-index: 1;
   height: $sub-nav-height;
 
   ~.content {
@@ -99,14 +94,12 @@ $header-color: #28336d;//Comm Blue
 
   width: 100%;
 
-  z-index: 1;
-
   &::after {
   	content: "";
     box-shadow: $header-shadow;
   	width: 100%;
   	height: $sub-nav-height;
-    background-color: $sub-nav-color;
+    background-color: $white;
   	position: fixed;
   	top: $header-height;
   	left: 0;
@@ -118,11 +111,10 @@ $header-color: #28336d;//Comm Blue
   }
 
   ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    @extend %remove-list-style;
     white-space: nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
 
     li {
       display: inline-block;
@@ -131,13 +123,13 @@ $header-color: #28336d;//Comm Blue
       a {
         display: flex;
         align-items: center;
-        color: $header-color;
+        color: $brand-blue;
         font-weight: 600;
         font-size: 1rem;
         @include transition(0.2s ease-out);
 
         border-bottom: 3px solid transparent;
-        &:hover, &.active  { border-bottom: 3px solid $header-color; }
+        &:hover, &.active  { border-bottom: 3px solid $brand-blue; }
       }
     }
   }
