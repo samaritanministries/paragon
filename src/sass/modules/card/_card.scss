@@ -9,6 +9,17 @@
   margin: 1.5rem auto;
   @extend %card-shadow;
 
+  .grid & { margin-bottom: $space-m; }
+  @media #{$phone} {
+    .grid & {
+      @supports(display: grid) { //Fallback. IE does not support negative margin on cards
+        border-radius: 0;
+        margin-left: -#{$space-m};
+        margin-right: -#{$space-m};
+  		}
+    }
+  }
+
   .card--header, &.card--content, &.card--footer,
   .card-header, &.card-content, &.card-footer {
     hr { margin: ($grid-gutter) 0; }
@@ -29,7 +40,9 @@
         margin-top: -$grid-gutter;
       }
     }
+    h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in card-headers
   }
+
 
   .card--content,
   .card-content {
