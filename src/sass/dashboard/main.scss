@@ -61,15 +61,12 @@ $header-background: $white;
       padding: 0;
       li {
         display: inline-block;
-        //margin-right: auto;
-
-
-        height: $header-height;
+        //height: $header-height;
         //max-width: 5rem;
         align-items: center;
 
         a {
-          padding: 0 1rem;
+          margin: 0 1rem;
           //width: 100%;
           //height: 100%;
           display: flex;
@@ -77,17 +74,20 @@ $header-background: $white;
           color: $white;
           font-weight: 600;
           font-size: 1.1rem;
-          @include transition(background-color 0.2s ease-out);
+          //@include transition(border 0.2s ease-out);
 
           //border-bottom: 2px solid transparent;
           &:hover  {
-            background-color: lighten($header-gradient, 5%) !important;
-            opacity: 1 !important;
+            //background-color: lighten($header-gradient, 5%) !important;
+            //opacity: 1 !important;
+            border-bottom: 2px solid $white;
           }
-          &.active { background-color: lighten($header-gradient, 5%); }
+          &.active { //background-color: lighten($header-gradient, 5%);
+            border-bottom: 2px solid $white;
+          }
         }
       }
-      &:hover { li a { background-color: transparent; opacity: 0.5; } }
+      //&:hover { li a { background-color: transparent; opacity: 0.5; } }
     }
   }
 }
