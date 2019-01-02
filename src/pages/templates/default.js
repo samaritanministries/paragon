@@ -19,7 +19,11 @@ export default () => (
 		</nav>
 
 		<div className="alert"><i className="dashing-icon dashing-icon--notification"></i><div className="count">100</div></div>
-		<div className="profile"><i className="dashing-icon dashing-icon--face-good"></i></div>
+		<div className="profile">
+			<div className="profile-image"><span className="initials">RF</span></div>
+			<span className="profile-name">Ryan Fitzgerald</span>
+			<i className="dashing-icon dashing-icon--arrow-down"></i>
+		</div>
 
 	</header>
 
