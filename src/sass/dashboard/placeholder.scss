@@ -27,9 +27,7 @@ $container-colors: transparent;//#413552
   cursor: pointer;
   width: auto;
   border-radius: 5px;
-  background-color: $container-colors;
-  margin: 0 $space-xs;
-  padding:$space-xs;
+  padding: $space-xs;
   color: $white;
 
   .profile-image {

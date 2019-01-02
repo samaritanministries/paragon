@@ -7,24 +7,18 @@ $app-background:     #e0e0e0;
 
 $content-width: 1200px !default;
 
-$header-padding: 0.5rem;
 $header-height: 4rem;
-$half-padding: 0.5rem;
-$full-padding: $grid-gutter;//1rem;
 
 $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
 $sub-nav-height: 3rem;
 $sub-nav-color: $white;
-//$header-gradient: linear-gradient(100deg, #72569b, #28336d);
-$header-gradient: #28336d;
-$header-background: $white;
+$header-color: #28336d;//Comm Blue
 
-//Theme
 .header {
-  z-index: 3;
+  z-index: 2;
   display: flex;
   align-items: center;
-  padding: $header-padding;
+  padding: $space-xs;
   position: fixed;
   top: 0;
   left: 0;
@@ -39,10 +33,9 @@ $header-background: $white;
 
   &::after {
   	content: "";
-    //box-shadow: $header-shadow;
   	width: 100%;
   	height: $header-height;
-    background: $header-gradient;
+    background: $header-color;
   	position: fixed;
   	top: 0;
   	left: 0;
@@ -50,44 +43,29 @@ $header-background: $white;
   }
 
   .header-nav {
-    //margin-right: auto;
 
-    ul, li, a {
-      height: 100%;
-    }
     ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       li {
         display: inline-block;
-        //height: $header-height;
-        //max-width: 5rem;
         align-items: center;
 
         a {
-          margin: 0 1rem;
-          //width: 100%;
-          //height: 100%;
+          margin: 0 $space-m;
           display: flex;
           align-items: center;
           color: $white;
           font-weight: 600;
           font-size: 1.1rem;
-          //@include transition(border 0.2s ease-out);
+          border-bottom: 2px solid transparent;
+          @include transition(0.2s ease-out);
 
-          //border-bottom: 2px solid transparent;
-          &:hover  {
-            //background-color: lighten($header-gradient, 5%) !important;
-            //opacity: 1 !important;
-            border-bottom: 2px solid $white;
-          }
-          &.active { //background-color: lighten($header-gradient, 5%);
-            border-bottom: 2px solid $white;
-          }
+          &:hover, &.active  { border-bottom: 2px solid $white; }
+
         }
       }
-      //&:hover { li a { background-color: transparent; opacity: 0.5; } }
     }
   }
 }
@@ -97,6 +75,7 @@ $header-background: $white;
   margin: auto;
   margin-top: $header-height;
   -webkit-overflow-scrolling: touch;
+  z-index: 0;
 
   &.content--reader-width { //TODO rename this
     max-width: $content-width / 2;
@@ -111,20 +90,16 @@ $header-background: $white;
   }
 
   position: fixed;
+  left: 0;
+  right: 0;
   top: $header-height;
 
   max-width: $content-width;
   margin: auto;
 
-  display: flex;
-  align-items: center;
-  position: fixed;
-  left: 0;
-  right: 0;
-
   width: 100%;
 
-  z-index: 0;
+  z-index: 1;
 
   &::after {
   	content: "";
@@ -146,28 +121,23 @@ $header-background: $white;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    white-space: nowrap;
+    overflow-x: auto;
 
     li {
       display: inline-block;
-      margin-right: auto;
-
-      margin: 0 1rem;
-      max-width: 5rem;
-      align-items: center;
+      margin: 0 $space-m;
 
       a {
-        width: 100%;
         display: flex;
         align-items: center;
-        color: $header-gradient;
+        color: $header-color;
         font-weight: 600;
         font-size: 1rem;
-        @include transition(all 0.2s ease-out);
-        opacity: 1;
+        @include transition(0.2s ease-out);
 
         border-bottom: 3px solid transparent;
-        &:hover  { opacity: 0.7; }
-        &.active { border-bottom: 3px solid $header-gradient; opacity: 1; }
+        &:hover, &.active  { border-bottom: 3px solid $header-color; }
       }
     }
   }
