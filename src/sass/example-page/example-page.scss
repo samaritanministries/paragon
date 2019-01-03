@@ -640,3 +640,90 @@ footer {
     background-color: transparent;
   }
 }
+
+.card--accessibility {
+  overflow: hidden;
+  background-color: transparent;
+  .card-content {
+    position: relative;
+
+    &::after {
+      z-index: -1;
+      content: "";
+      width: calc(100% - 5rem);
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 5rem;
+    }
+  }
+
+  &.card--brand-red {
+    .card-content:after {
+      content: "";
+      background: #E96A63;
+    }
+  }
+  &.card--brand-purple {
+    .card-content:after {
+      content: "";
+      background: #72569B;
+    }
+  }
+  &.card--brand-darkBlue {
+    .card-content:after {
+      content: "";
+      background: #28336D;
+    }
+  }
+  &.card--brand-yellow {
+    .card-content:after {
+      content: "";
+      background: #F5CD66;
+    }
+  }
+  &.card--brand-gray {
+    .card-content:after {
+      content: "";
+      background: #F1F2F2;
+    }
+  }
+}
+
+.x-accessibility-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: $space-xs;
+  .dashing-icon {
+    margin-left: $space-s;
+  }
+  h1, h2, h3, h4, h5, p, .button:first-of-type, .dashing-icon:first-of-type {
+    margin: 0;
+    margin-left: $space-l;
+  }
+  .tag { min-width: 3rem; text-align: center; }
+  .button--brand-redWhite  {@include button($background-color: #E96A63, $color: $white); }
+  .button--brand-whiteRed  {@include button($background-color: $white, $color: #E96A63); }
+  .button--brand-redBlack  {@include button($background-color: #E96A63, $color: $black); }
+  .button--brand-blackRed  {@include button($background-color: $black, $color: #E96A63); }
+
+  .button--brand-purpleWhite  {@include button($background-color: #72569B, $color: $white); }
+  .button--brand-whitePurple  {@include button($background-color: $white, $color: #72569B); }
+  .button--brand-purpleBlack  {@include button($background-color: #72569B, $color: $black); }
+  .button--brand-blackPurple  {@include button($background-color: $black, $color: #72569B); }
+
+  .button--brand-darkBlueWhite  {@include button($background-color: #28336D, $color: $white); }
+  .button--brand-whiteDarkBlue  {@include button($background-color: $white, $color: #28336D); }
+  .button--brand-darkBlueBlack  {@include button($background-color: #28336D, $color: $black); }
+  .button--brand-blackDarkBlue  {@include button($background-color: $black, $color: #28336D); }
+
+  .button--brand-yellowWhite  {@include button($background-color: #F5CD66, $color: $white); }
+  .button--brand-whiteYellow  {@include button($background-color: $white, $color: #F5CD66); }
+  .button--brand-yellowBlack  {@include button($background-color: #F5CD66, $color: $black); }
+  .button--brand-blackYellow  {@include button($background-color: $black, $color: #F5CD66); }
+
+  .button--brand-grayWhite  {@include button($background-color: #F1F2F2, $color: $white); }
+  .button--brand-whiteGray  {@include button($background-color: $white, $color: #F1F2F2); }
+  .button--brand-grayBlack  {@include button($background-color: #F1F2F2, $color: $black); }
+  .button--brand-blackGray  {@include button($background-color: $black, $color: #F1F2F2); }
+}

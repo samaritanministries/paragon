@@ -38,7 +38,6 @@ $button-disabled: "&[disabled], &.disabled, &.button--disabled";
   @media #{$tablet} {
     display: inline-block;
     padding: 0.5rem 1rem;
-    padding-top: 0.45rem;
   }
 
   #{$button-disabled} {
@@ -77,7 +76,8 @@ $button-disabled: "&[disabled], &.disabled, &.button--disabled";
     }
   }
 
-  &.button-block {
+  &.button-block,
+  &.button--block {
     display: block !important;
     width: 100%;
   }
