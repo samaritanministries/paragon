@@ -1,11 +1,11 @@
-.accordion {
+.accordion, .accordion--table {
   border-radius: 5px;
   transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
   background-color: $white;
   overflow: hidden;
   @extend %card-shadow;
 
-  .accordion--header {
+  .accordion--header, .accordion--row {
     padding: $grid-gutter;
     display: flex;
     align-items: center;
@@ -46,7 +46,8 @@
   }
 
   &.expanded {
-    .accordion--header i.accordion--arrow { transform: rotate(90deg); }
+    .accordion--header i.accordion--arrow,
+    .accordion--row li.accordion--arrow { transform: rotate(90deg); }
     .accordion--header:hover { background-color: none; }
   }
 }
