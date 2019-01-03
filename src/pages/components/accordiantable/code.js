@@ -13,11 +13,12 @@ class AccordionTableCode extends React.Component {
   componentDidMount() {
     $("#toggleAccordion").click(function(){
       this.parentElement.classList.toggle('expanded');
-      $(".accordion--content").slideToggle(200);
+      $(this).siblings(".accordion--content").slideToggle(200);
     });
+
     $("#toggleAccordionTable").click(function(){
       this.parentElement.classList.toggle('expanded');
-      $(".accordion--content").slideToggle(200);
+      $(this).siblings(".accordion--content").slideToggle(200);
     });
   }
 
