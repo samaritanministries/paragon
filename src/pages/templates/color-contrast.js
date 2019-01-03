@@ -9,7 +9,7 @@ export default () => (
 			<div className="title-content">
 				<div>
 					<h2>Brand Contrast Checker</h2>
-					<p>Rated against <Link to="https://webaim.org/resources/contrastchecker/">WCAG 2.1 AA rating</Link></p>
+					<p>Rated against <a href="https://webaim.org/resources/contrastchecker/">WCAG 2.1 AA rating</a></p>
 				</div>
 			</div>
 		</header>
