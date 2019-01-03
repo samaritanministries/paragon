@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
+import NotFoundLayout from '../components/NotFoundLayout'
 import AppContent from '../components/appcontent'
 
 export default () => (
-  <Layout>
+  <NotFoundLayout>
     <AppContent>
       <section className="splash-image">
         <div className="splash-image--content">
@@ -22,5 +22,5 @@ export default () => (
 
       </div>
     </AppContent>
-  </Layout>
+  </NotFoundLayout>
 )
