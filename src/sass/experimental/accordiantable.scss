@@ -10,35 +10,10 @@ This is an EXPERIMENT and is not ready to be included in production!
 */
 
 .accordion--table {
-  // border-radius: 5px;
-  // transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  // background-color: $white;
-  // overflow: hidden;
-  // @extend %card-shadow;
 
   .accordion--row {
     justify-content: space-between;
     list-style-type: none;
     margin: 0;
-
-
-    // padding: $grid-gutter;
-    // display: flex;
-    // align-items: center;
-    // cursor: pointer;
-    // transition: background-color 0.2s ease-in-out;
-    // h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in accordion headers
-
-    // i.accordion--arrow {
-    //   transition: transform 0.1s linear;
-    //   @extend .dashing-icon--arrow-right;
-    //   &:before { color: $black; }
-    // }
   }
 }
-
-// .accordion--content {
-//   display: none;
-//   padding: $grid-gutter;
-//   border-top: 2px solid $gray-100;
-// }
