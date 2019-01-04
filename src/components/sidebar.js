@@ -120,7 +120,7 @@ class Sidebar extends React.Component {
               <i onClick={this.toggleStyle} className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
-                <Link to="/style/accessibility">Accessibility</Link>
+                <Link to="/style/accessibility/code">Accessibility</Link>
                 <Link to="/style/color/code">Color</Link>
                 <Link to="/style/typography/code">Typography</Link>
               </div>
