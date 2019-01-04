@@ -15,4 +15,23 @@ This is an EXPERIMENT and is not ready to be included in production!
     list-style-type: none;
     margin: 0;
   }
+
+  .accordion--content {
+    border-bottom: 2px solid $gray-50;
+  }
 }
+
+.provider, .member, .amount, .sharing, .youpay, .status, .category, .date {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date     { max-width: 100px; }
+.provider { max-width: 100px; }
+.member   { max-width: 100px; }
+.amount   { max-width: 100px; }
+.sharing  { max-width: 100px; }
+.youpay   { max-width: 100px; }
+.status   { max-width: 100px; }
+.category { max-width: 100px; }

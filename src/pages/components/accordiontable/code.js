@@ -55,14 +55,50 @@ class AccordionTableCode extends React.Component {
 
                 <ol className="accordion--row" id="toggleAccordionTable">
                   <li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
-                  <li>Item</li>
-                  <li>Item</li>
-                  <li>Item</li>
-                  <li>Item</li>
-                  <li>Item</li>
-                  <li>Item</li>
-                  <li>Item</li>
-                  <li>Item</li>
+                  <li className="date">01/12/19</li>
+                  <li className="provider">A Long Provider Name</li>
+                  <li className="member">Jill Throwfitz</li>
+                  <li className="amount">$8624.16</li>
+                  <li className="sharing">$7175.94</li>
+                  <li className="youpay">$860.22</li>
+                  <li className="status">Awaiting Shares</li>
+                  <li className="category">Broken Arm</li>
+                </ol>
+
+                <section className="accordion--content">
+                  <h1>Provider Name</h1>
+                  <p>Description of What happened</p>
+                  <span className="item"><span>$100</span><span>$100</span></span>
+                </section>
+
+                <ol className="accordion--row" id="toggleAccordionTable2">
+                  <li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
+                  <li className="date">01/12/19</li>
+                  <li className="provider">A Short Name</li>
+                  <li className="member">Jill Throwfitz</li>
+                  <li className="amount">$8999.16</li>
+                  <li className="sharing">$7735.94</li>
+                  <li className="youpay">$86.22</li>
+                  <li className="status">Awaiting Shares</li>
+                  <li className="category">Broken Arm</li>
+                </ol>
+
+                <section className="accordion--content">
+                  <h1>Provider Name</h1>
+                  <p>Description of What happened</p>
+                  <span className="item"><span>$100</span><span>$100</span></span>
+                </section>
+
+                <ol className="accordion--row" id="toggleAccordionTable2">
+                  <li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
+                  <li className="date">01/12/19</li>
+                  <li className="provider">A Short Name</li>
+                  <li className="member">Jill Throwfitz</li>
+                  <li className="amount">$6223.16</li>
+                  <li className="sharing">$7752.94</li>
+                  <li className="youpay">$22.22</li>
+                  <li className="status">Awaiting Shares</li>
+                  <li className="category">Broken Arm</li>
                 </ol>
 
                 <section className="accordion--content">

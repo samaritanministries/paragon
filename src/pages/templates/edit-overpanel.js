@@ -1,7 +1,5 @@
 import React from 'react'
 import '../../sass/example-page/example-page.scss'
-// The scss needs to be imported here for running 'gatsby build'
-import '../../sass/example-page/example-page.scss'
 
 export default () => (
 
