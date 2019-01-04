@@ -441,11 +441,14 @@ blockquote {
   }
 }
 
-.show-scss {
+.show-code {
   code[class*="language-"],
   pre[class*="language-"] {
     display: block;
+    border-radius: 0.3rem;
+    margin-bottom: 0;
   }
+  .code-toggle { display: none; }
 }
 
 /* Radio Buttons Page

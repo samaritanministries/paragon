@@ -145,6 +145,7 @@ class Sidebar extends React.Component {
                 <Link to="/components/icons/code">Icons</Link>
                 <Link to="/components/lists/code">Lists</Link>
                 <Link to="/components/navigation/code">Navigation</Link>
+                <Link to="/components/overpanel/code">Overpanel</Link>
                 <Link to="/components/progress-stepper/code" id="progress-stepper">Progress Stepper</Link>
                 <Link to="/components/radio-buttons/code" id="radio-buttons">Radio Buttons</Link>
                 <Link to="/components/spinner/code">Spinner</Link>
