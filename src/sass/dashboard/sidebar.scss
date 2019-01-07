@@ -37,7 +37,7 @@ $sidebar-background: #354052;
   padding: 0;
 
   li {
-    padding-left: $full-padding;
+    padding-left: $grid-gutter;
     height: 2.5rem;
     display: flex;
     align-items: center;
@@ -48,7 +48,7 @@ $sidebar-background: #354052;
       color: $sidebar-text-color;
       width: 100%;
       height: 100%;
-      padding-left: $half-padding;
+      padding-left: $space-xs;
       display: flex;
       align-items: center;
     }
@@ -106,17 +106,17 @@ $sidebar-background: #354052;
 
 .mobile-profile .mobile-sidebar--button {
   background-color: transparent;
-  padding-top: $full-padding;
+  padding-top: $grid-gutter;
 
   i:before {
-    margin-top: $full-padding;
-    margin-left: $full-padding;
+    margin-top: $grid-gutter;
+    margin-left: $grid-gutter;
   }
 }
 
 .mobile-profile--account {
 	margin-top: 1.5rem;
-	padding: $full-padding;
+	padding: $grid-gutter;
   display: block;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto auto;
@@ -142,7 +142,7 @@ $sidebar-background: #354052;
     grid-column: 1 / 3;
 
     clear: both;//fallback
-    padding: $half-padding 0rem;
+    padding: $space-xs 0rem;
   }
 
   .profile-email {

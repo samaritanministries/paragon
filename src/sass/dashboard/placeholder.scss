@@ -24,12 +24,38 @@ $container-colors: transparent;//#413552
 }
 
 .profile {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50px;
-  background-color: $container-colors;
-  margin-left: 0.5rem;
+  cursor: pointer;
+  width: auto;
+  border-radius: 5px;
+  padding: $space-xs;
+  color: $white;
 
+  .profile-image {
+    height: 2rem;
+    width: 2rem;
+    background-color: $white;
+    border-radius: 50%;
+    position: relative;
+    margin-right: $space-xs;
+    .initials {
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $black;
+    }
+  }
+
+  .profile-name {
+    display: none;
+    font-weight: 600;
+    margin-right: $space-xs;
+    @media #{$desktop} {
+      display: inline-block;
+    }
+  }
   @extend %icon-white;
 }
 
@@ -40,8 +66,7 @@ $container-colors: transparent;//#413552
   background-color: $container-colors;
   margin-left: 0.5rem;
   position: relative;
-
-  @extend %icon-white;
+  .dashing-icon::before { color: #f5cd66; font-size: 1.5rem; }
 
   .count {
   	position: absolute;
@@ -64,5 +89,5 @@ $container-colors: transparent;//#413552
 }
 
 .alert { margin-left: auto; }
-.profile, .logo, .header-nav { display: none; @media #{$tablet} { display: flex; } }
+.logo, .header-nav { display: none; @media #{$tablet} { display: flex; } }
 .mobile-sidebar--button      { display: flex; @media #{$tablet} { display: none; } }

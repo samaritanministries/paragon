@@ -1,8 +1,26 @@
 import React from 'react'
+import { Link } from 'gatsby'
+
+import NotFoundLayout from '../components/NotFoundLayout'
+import AppContent from '../components/appcontent'
 
 export default () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
+  <NotFoundLayout>
+    <AppContent>
+      <section className="splash-image">
+        <div className="splash-image--content">
+          <div className="row" style={{ marginBottom: "1rem"}}>
+            <div className="column column--full">
+              <h1 className="splash-image--title">404 Not Found!</h1>
+              <h3 className="splash-image--subtitle">Hey, that's awesome. This page either doesn't exist, or the page is loading...</h3>
+              <Link className="button button--primary" to="/">Return to Home</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="row">
+
+      </div>
+    </AppContent>
+  </NotFoundLayout>
 )

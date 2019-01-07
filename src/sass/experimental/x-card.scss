@@ -10,9 +10,21 @@ This is an EXPERIMENT and is not ready to be included in production!
 */
 
 h1, h2, h3, h4 { margin-bottom: $space-xxs; }
-// button { margin: $space-xs 0; }
+
+.card-header {
+  h1, h2, h3, h4 { margin-bottom: 0; }
+}
 
 .grid .card {
-  // padding: $space-m; //do we want to default padding on cards?
   margin-bottom: $space-m;
+}
+
+@media #{$phone} {
+  .grid .card {
+    @supports(display: grid) { //Fallback. IE does not support negative margin on cards
+      border-radius: 0;
+      margin-left: -#{$space-m};
+      margin-right: -#{$space-m};
+		}
+  }
 }
