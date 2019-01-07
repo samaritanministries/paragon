@@ -6,18 +6,18 @@ import AppContent from '../components/appcontent'
 
 export default () => (
   <Layout>
-    <AppContent>
-      <section className="splash-image">
-        <div className="splash-image--content">
-          <div className="row" style={{ marginBottom: "1rem"}}>
-            <div className="column column--full">
-              <h1 className="splash-image--title">Paragon</h1>
-              <h3 className="splash-image--subtitle">A web application framework to simply get it done.</h3>
-              <Link className="button button--primary" to="/get-started">Get Started</Link>
-            </div>
+    <section className="splash-image">
+      <div className="splash-image--content">
+        <div className="row" style={{ marginBottom: "1rem"}}>
+          <div className="column column--full">
+            <h1 className="splash-image--title">Paragon</h1>
+            <h3 className="splash-image--subtitle">A web application framework to simply get it done.</h3>
+            <Link className="button button--primary" to="/get-started">Get Started</Link>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <AppContent>
       <div className="row">
         <div className="column column--full">
           <div className="dashing-description">

@@ -40,7 +40,7 @@ class GetStarted extends React.Component {
         <p>Copy &amp; paste this code into your main scss file. Note that the relative path may differ.</p>
         <p className="note"><strong>Note:</strong> You will need to create a folder and file for each custom style file (<span className="underline">theme</span>, <span className="underline">base</span>, <span className="underline">layout</span>, <span className="underline">module</span> and <span className="underline">state</span>).</p>
       </fieldset>
-      <div className="show-scss">
+      <div className="show-code">
       <CodeToggleSCSS>
 {`// Import paragon components
 @import "/node_modules/paragon-framework/sass/vendor/normalize";
