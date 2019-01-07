@@ -155,7 +155,9 @@ class Sidebar extends React.Component {
               </div>
 
             </div>
-
+            <a href="https://badge.fury.io/js/paragon-framework">
+              <img src="https://badge.fury.io/js/paragon-framework.svg" alt="npm version" height="18" />
+            </a>
           </ul>
         </div>
       </div>
