@@ -137,6 +137,7 @@
       }
       &.is-selectable {
         tbody tr {
+          transition: $global-transition;
           &:hover {
             cursor: pointer;
             background-color: $gray-100;
