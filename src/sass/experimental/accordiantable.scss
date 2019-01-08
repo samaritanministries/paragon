@@ -21,17 +21,24 @@ This is an EXPERIMENT and is not ready to be included in production!
   }
 }
 
+.accordion--key {
+  cursor: default;
+  background-color: $gray-700c;
+}
+
 .provider, .member, .amount, .sharing, .youpay, .status, .category, .date {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 0 0.5rem;
 }
 
-.date     { max-width: 100px; }
-.provider { max-width: 100px; }
-.member   { max-width: 100px; }
-.amount   { max-width: 100px; }
-.sharing  { max-width: 100px; }
-.youpay   { max-width: 100px; }
-.status   { max-width: 100px; }
-.category { max-width: 100px; }
+.accordion--arrow { width: 35px; text-align: center; }
+.date             { width: 4rem; flex-grow: 1; }
+.provider         { width: 5rem; flex-grow: 2; }
+.member           { width: 5rem; flex-grow: 1; }
+.amount           { width: 5rem; flex-grow: 1; }
+.sharing          { width: 5rem; flex-grow: 1; }
+.youpay           { width: 5rem; flex-grow: 1; }
+.status           { width: 5rem; flex-grow: 1; }
+.category         { width: 5rem; flex-grow: 1; }

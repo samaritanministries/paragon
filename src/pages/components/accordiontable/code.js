@@ -16,9 +16,9 @@ class AccordionTableCode extends React.Component {
       $(this).siblings(".accordion--content").slideToggle(200);
     });
 
-    $("#toggleAccordionTable").click(function(){
+    $(".accordion--row").click(function(e){
       this.parentElement.classList.toggle('expanded');
-      $(this).siblings(".accordion--content").slideToggle(200);
+      $(this).next(".accordion--content").slideToggle(200);
     });
   }
 
@@ -52,6 +52,17 @@ class AccordionTableCode extends React.Component {
 
             <div className="example-container">
               <div className="accordion--table">
+                <ol className="accordion--row accordion--key">
+                  <li className="accordion--arrow"></li>
+                  <li className="date">Date</li>
+                  <li className="provider">Provider</li>
+                  <li className="member">Member</li>
+                  <li className="amount">Amount</li>
+                  <li className="sharing">Sharing</li>
+                  <li className="youpay">You Pay</li>
+                  <li className="category">Category</li>
+                  <li className="status">Status</li>
+                </ol>
 
                 <ol className="accordion--row" id="toggleAccordionTable">
                   <li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
@@ -61,8 +72,8 @@ class AccordionTableCode extends React.Component {
                   <li className="amount">$8624.16</li>
                   <li className="sharing">$7175.94</li>
                   <li className="youpay">$860.22</li>
-                  <li className="status">Awaiting Shares</li>
                   <li className="category">Broken Arm</li>
+                  <li className="status">Awaiting Shares</li>
                 </ol>
 
                 <section className="accordion--content">
@@ -71,7 +82,7 @@ class AccordionTableCode extends React.Component {
                   <span className="item"><span>$100</span><span>$100</span></span>
                 </section>
 
-                <ol className="accordion--row" id="toggleAccordionTable2">
+                <ol className="accordion--row" id="toggleAccordionTable">
                   <li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
                   <li className="date">01/12/19</li>
                   <li className="provider">A Short Name</li>
@@ -79,8 +90,8 @@ class AccordionTableCode extends React.Component {
                   <li className="amount">$8999.16</li>
                   <li className="sharing">$7735.94</li>
                   <li className="youpay">$86.22</li>
-                  <li className="status">Awaiting Shares</li>
                   <li className="category">Broken Arm</li>
+                  <li className="status">Awaiting Shares</li>
                 </ol>
 
                 <section className="accordion--content">
@@ -89,16 +100,16 @@ class AccordionTableCode extends React.Component {
                   <span className="item"><span>$100</span><span>$100</span></span>
                 </section>
 
-                <ol className="accordion--row" id="toggleAccordionTable2">
+                <ol className="accordion--row" id="toggleAccordionTable">
                   <li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
-                  <li className="date">01/12/19</li>
-                  <li className="provider">A Short Name</li>
-                  <li className="member">Jill Throwfitz</li>
-                  <li className="amount">$6223.16</li>
-                  <li className="sharing">$7752.94</li>
-                  <li className="youpay">$22.22</li>
-                  <li className="status">Awaiting Shares</li>
-                  <li className="category">Broken Arm</li>
+                  <li className="date">--</li>
+                  <li className="provider">--</li>
+                  <li className="member">Random</li>
+                  <li className="amount">$0,000,000.00</li>
+                  <li className="sharing">$775299.94</li>
+                  <li className="youpay">$2.00</li>
+                  <li className="category">--</li>
+                  <li className="status">--</li>
                 </ol>
 
                 <section className="accordion--content">
