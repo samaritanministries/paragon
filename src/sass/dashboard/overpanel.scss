@@ -8,7 +8,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: $content-m;
+      max-width: $content-s;
       margin: 0 auto;
       padding: $space-m;
       * { margin: 0; } //to overwrite global margin bottom
@@ -17,15 +17,27 @@
   }
 
   .content {
-    max-width: $content-m;
+    max-width: $content-s;
     margin-top: 0;
   }
 
   /* Utility classes for max-width of Overpanel */
+  &.overpanel-xs {
+    .title-content,
+    .content {
+      max-width: $content-xs;
+    }
+  }
   &.overpanel-s {
     .title-content,
     .content {
       max-width: $content-s;
+    }
+  }
+  &.overpanel-m {
+    .title-content,
+    .content {
+      max-width: $content-m;
     }
   }
   &.overpanel-l {
