@@ -54,7 +54,7 @@ export default () => (
 		</aside>
 
 		<section class="app">
-			<div class="content content--reader-width">
+			<div class="content content-s">
 				<div class="card">
 					<div class="card--header has-border"><h3>Example Dashing Page</h3></div>
 					<div class="card--content"><p>This example shows a single column layout and various uses.</p>
