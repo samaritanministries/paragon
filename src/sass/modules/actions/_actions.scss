@@ -192,9 +192,9 @@ $button-disabled: "&[disabled], &.disabled, &.button--disabled";
   }
 
   //Used to display actions and icons with a transparent background
-  &.button--transparent {
-    &:hover, &:focus { @include button($background-color: rgba($gray, .2), $color: transparentize(white, 1)); opacity: 1;}
-  }
+  // &.button--transparent {
+  //   &:hover, &:focus { @include button($background-color: rgba($gray, .2), $color: transparentize(white, 1)); opacity: 1;}
+  // }
 }
 
 //Provides margin when a button and action are paired together

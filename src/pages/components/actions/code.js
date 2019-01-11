@@ -20,13 +20,13 @@ export default () => (
             <h2 className="example-header no-margin--top">Default Button <button className="button button--transparent button--copy-link" data-id="copyurl" id="Default_Button"></button></h2>
             <div className="row example-container">
               <div className="column column--full">
-                <button className="button button--primary ripple">Primary Button</button>
-                <button className="button button--secondary ripple">Secondary Button</button>
+                <button className="button button--primary">Primary Button</button>
+                <button className="button button--secondary">Secondary Button</button>
               </div>
             </div>
             <CodeToggle>
-{`<button class="button button--primary ripple">Primary Button</button>
-<button class="button button--secondary ripple">Secondary Button</button>`}
+{`<button class="button button--primary">Primary Button</button>
+<button class="button button--secondary">Secondary Button</button>`}
             </CodeToggle>
           </div>
         </div>
