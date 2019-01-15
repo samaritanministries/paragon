@@ -42,7 +42,7 @@ export default () => (
               <td><span>#72569B</span></td>
               <td><i className="x-pass"></i><h2 className="text-color--white">AAA</h2></td>
               <td><i className="x-pass"></i><p className="text-color--white">AA</p></td>
-              <td><i className="x-pass"></i><button className="button--brand-purpleWhite">AA</button></td>
+              <td><i className="x-pass"></i><button className="x-button--brand-purpleWhite">AA</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--white"></i></td>
             </tr>
             <tr className="color--brand-purple" style={{borderBottom: "2px solid #EDEDED"}}>
@@ -50,7 +50,7 @@ export default () => (
               <td></td>
               <td><i className="x-pass"></i><h2 className="text-color--black">AA</h2></td>
               <td><i className="x-fail"></i><p className="text-color--black">FAIL</p></td>
-              <td><i className="x-fail"></i><button className="button--brand-purpleBlack">FAIL</button></td>
+              <td><i className="x-fail"></i><button className="x-button--brand-purpleBlack">FAIL</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--black"></i></td>
             </tr>
             <tr className="color--brand-blue">
@@ -58,7 +58,7 @@ export default () => (
               <td><span>#28336D</span></td>
               <td><i className="x-pass"></i><h2 className="text-color--white">AAA</h2></td>
               <td><i className="x-pass"></i><p className="text-color--white">AAA</p></td>
-              <td><i className="x-pass"></i><button className="button--brand-blueWhite">AAA</button></td>
+              <td><i className="x-pass"></i><button className="x-button--brand-blueWhite">AAA</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--white"></i></td>
             </tr>
             <tr className="color--brand-blue" style={{borderBottom: "2px solid #EDEDED"}}>
@@ -66,7 +66,7 @@ export default () => (
               <td></td>
               <td><i className="x-fail"></i><h2 className="text-color--black">FAIL</h2></td>
               <td><i className="x-fail"></i><p className="text-color--black">FAIL</p></td>
-              <td><i className="x-fail"></i><button className="button--brand-blueBlack">FAIL</button></td>
+              <td><i className="x-fail"></i><button className="x-button--brand-blueBlack">FAIL</button></td>
               <td><i className="x-fail"></i><i className="x-accessibility--black"></i></td>
             </tr>
             <tr className="color--brand-red">
@@ -74,7 +74,7 @@ export default () => (
               <td><span>#E96A63</span></td>
               <td><i className="x-pass"></i><h2 className="text-color--white">AA</h2></td>
               <td><i className="x-fail"></i><p className="text-color--white">FAIL</p></td>
-              <td><i className="x-fail"></i><button className="button--brand-redWhite">FAIL</button></td>
+              <td><i className="x-fail"></i><button className="x-button--brand-redWhite">FAIL</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--white"></i></td>
             </tr>
             <tr className="color--brand-red" style={{borderBottom: "2px solid #EDEDED"}}>
@@ -82,7 +82,7 @@ export default () => (
               <td></td>
               <td><i className="x-pass"></i><h2 className="text-color--black">AAA</h2></td>
               <td><i className="x-pass"></i><p className="text-color--black">AA</p></td>
-              <td><i className="x-pass"></i><button className="button--brand-redBlack">AA</button></td>
+              <td><i className="x-pass"></i><button className="x-button--brand-redBlack">AA</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--black"></i></td>
             </tr>
             <tr className="color--brand-yellow">
@@ -90,7 +90,7 @@ export default () => (
               <td><span>#F5CD66</span></td>
               <td><i className="x-fail"></i><h2 className="text-color--white">FAIL</h2></td>
               <td><i className="x-fail"></i><p className="text-color--white">FAIL</p></td>
-              <td><i className="x-fail"></i><button className="button--brand-yellowWhite">FAIL</button></td>
+              <td><i className="x-fail"></i><button className="x-button--brand-yellowWhite">FAIL</button></td>
               <td><i className="x-fail"></i><i className="x-accessibility--white"></i></td>
             </tr>
             <tr className="color--brand-yellow" style={{borderBottom: "2px solid #EDEDED"}}>
@@ -98,7 +98,7 @@ export default () => (
               <td></td>
               <td><i className="x-pass"></i><h2 className="text-color--black">AAA</h2></td>
               <td><i className="x-pass"></i><p className="text-color--black">AAA</p></td>
-              <td><i className="x-pass"></i><button className="button--brand-yellowBlack">AAA</button></td>
+              <td><i className="x-pass"></i><button className="x-button--brand-yellowBlack">AAA</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--black"></i></td>
             </tr>
             <tr className="color--brand-gray">
@@ -106,7 +106,7 @@ export default () => (
               <td><span>#F1F2F2</span></td>
               <td><i className="x-fail"></i><h2 className="text-color--white">FAIL</h2></td>
               <td><i className="x-fail"></i><p className="text-color--white">FAIL</p></td>
-              <td><i className="x-fail"></i><button className="button--brand-grayWhite">FAIL</button></td>
+              <td><i className="x-fail"></i><button className="x-button--brand-grayWhite">FAIL</button></td>
               <td><i className="x-fail"></i><i className="x-accessibility--white"></i></td>
             </tr>
             <tr className="color--brand-gray">
@@ -114,7 +114,7 @@ export default () => (
               <td></td>
               <td><i className="x-pass"></i><h2 className="text-color--black">AAA</h2></td>
               <td><i className="x-pass"></i><p className="text-color--black">AAA</p></td>
-              <td><i className="x-pass"></i><button className="button--brand-grayBlack">AAA</button></td>
+              <td><i className="x-pass"></i><button className="x-button--brand-grayBlack">AAA</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--black"></i></td>
             </tr>
           </tbody>
@@ -140,7 +140,7 @@ export default () => (
               <td><span>#3F70C9</span></td>
               <td><i className="x-pass"></i><h2 className="text-color--white">AAA</h2></td>
               <td><i className="x-pass"></i><p className="text-color--white">AA</p></td>
-              <td><i className="x-pass"></i><button className="button--blueWhite">AA</button></td>
+              <td><i className="x-pass"></i><button className="x-button--blueWhite">AA</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--white"></i></td>
             </tr>
             <tr className="color--blue" style={{borderBottom: "2px solid #EDEDED"}}>
@@ -148,7 +148,7 @@ export default () => (
               <td></td>
               <td><i className="x-pass"></i><h2 className="text-color--black">AA</h2></td>
               <td><i className="x-fail"></i><p className="text-color--black">FAIL</p></td>
-              <td><i className="x-fail"></i><button className="button--blueBlack">FAIL</button></td>
+              <td><i className="x-fail"></i><button className="x-button--blueBlack">FAIL</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--black"></i></td>
             </tr>
             <tr className="color--green">
@@ -156,7 +156,7 @@ export default () => (
               <td><span>#09AA66</span></td>
               <td><i className="x-pass"></i><h2 className="text-color--white">AA</h2></td>
               <td><i className="x-fail"></i><p className="text-color--white">FAIL</p></td>
-              <td><i className="x-fail"></i><button className="button--greenWhite">FAIL</button></td>
+              <td><i className="x-fail"></i><button className="x-button--greenWhite">FAIL</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--white"></i></td>
             </tr>
             <tr className="color--green" style={{borderBottom: "2px solid #EDEDED"}}>
@@ -164,7 +164,7 @@ export default () => (
               <td></td>
               <td><i className="x-pass"></i><h2 className="text-color--black">AAA</h2></td>
               <td><i className="x-pass"></i><p className="text-color--black">AA</p></td>
-              <td><i className="x-pass"></i><button className="button--greenBlack">AA</button></td>
+              <td><i className="x-pass"></i><button className="x-button--greenBlack">AA</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--black"></i></td>
             </tr>
             <tr className="color--orange">
@@ -172,7 +172,7 @@ export default () => (
               <td><span>#FFA11F</span></td>
               <td><i className="x-fail"></i><h2 className="text-color--white">FAIL</h2></td>
               <td><i className="x-fail"></i><p className="text-color--white">FAIL</p></td>
-              <td><i className="x-fail"></i><button className="button--orangeWhite">FAIL</button></td>
+              <td><i className="x-fail"></i><button className="x-button--orangeWhite">FAIL</button></td>
               <td><i className="x-fail"></i><i className="x-accessibility--white"></i></td>
             </tr>
             <tr className="color--orange" style={{borderBottom: "2px solid #EDEDED"}}>
@@ -180,7 +180,7 @@ export default () => (
               <td></td>
               <td><i className="x-pass"></i><h2 className="text-color--black">AAA</h2></td>
               <td><i className="x-pass"></i><p className="text-color--black">AAA</p></td>
-              <td><i className="x-pass"></i><button className="button--orangeBlack">AAA</button></td>
+              <td><i className="x-pass"></i><button className="x-button--orangeBlack">AAA</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--black"></i></td>
             </tr>
             <tr className="color--red">
@@ -188,7 +188,7 @@ export default () => (
               <td><span>#DA3D30</span></td>
               <td><i className="x-pass"></i><h2 className="text-color--white">AA</h2></td>
               <td><i className="x-fail"></i><p className="text-color--white">FAIL</p></td>
-              <td><i className="x-fail"></i><button className="button--redWhite">FAIL</button></td>
+              <td><i className="x-fail"></i><button className="x-button--redWhite">FAIL</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--white"></i></td>
             </tr>
             <tr className="color--red" style={{borderBottom: "2px solid #EDEDED"}}>
@@ -196,7 +196,7 @@ export default () => (
               <td></td>
               <td><i className="x-pass"></i><h2 className="text-color--black">AAA</h2></td>
               <td><i className="x-pass"></i><p className="text-color--black">AA</p></td>
-              <td><i className="x-pass"></i><button className="button--redBlack">AA</button></td>
+              <td><i className="x-pass"></i><button className="x-button--redBlack">AA</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--black"></i></td>
             </tr>
             <tr className="color--purple">
@@ -204,7 +204,7 @@ export default () => (
               <td><span>#9F65AE</span></td>
               <td><i className="x-pass"></i><h2 className="text-color--white">AA</h2></td>
               <td><i className="x-fail"></i><p className="text-color--white">FAIL</p></td>
-              <td><i className="x-fail"></i><button className="button--purpleWhite">FAIL</button></td>
+              <td><i className="x-fail"></i><button className="x-button--purpleWhite">FAIL</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--white"></i></td>
             </tr>
             <tr className="color--purple" style={{borderBottom: "2px solid #EDEDED"}}>
@@ -212,7 +212,7 @@ export default () => (
               <td></td>
               <td><i className="x-pass"></i><h2 className="text-color--black">AAA</h2></td>
               <td><i className="x-pass"></i><p className="text-color--black">AA</p></td>
-              <td><i className="x-pass"></i><button className="button--purpleBlack">AA</button></td>
+              <td><i className="x-pass"></i><button className="x-button--purpleBlack">AA</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--black"></i></td>
             </tr>
             <tr className="color--gray">
@@ -220,7 +220,7 @@ export default () => (
               <td><span>#D4D4D4</span></td>
               <td><i className="x-fail"></i><h2 className="text-color--white">FAIL</h2></td>
               <td><i className="x-fail"></i><p className="text-color--white">FAIL</p></td>
-              <td><i className="x-fail"></i><button className="button--grayWhite">FAIL</button></td>
+              <td><i className="x-fail"></i><button className="x-button--grayWhite">FAIL</button></td>
               <td><i className="x-fail"></i><i className="x-accessibility--white"></i></td>
             </tr>
             <tr className="color--gray">
@@ -228,7 +228,7 @@ export default () => (
               <td></td>
               <td><i className="x-pass"></i><h2 className="text-color--black">AAA</h2></td>
               <td><i className="x-pass"></i><p className="text-color--black">AAA</p></td>
-              <td><i className="x-pass"></i><button className="button--grayBlack">AAA</button></td>
+              <td><i className="x-pass"></i><button className="x-button--grayBlack">AAA</button></td>
               <td><i className="x-pass"></i><i className="x-accessibility--black"></i></td>
             </tr>
           </tbody>

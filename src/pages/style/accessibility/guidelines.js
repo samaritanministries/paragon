@@ -22,14 +22,33 @@ export default () => (
       </p>
 
       <h2 className="has-number has-number--one no-margin--top">Color</h2>
-      <p>Color is an important design element used to highlight valuable information to our users. When used correctly, it allows users to quickly navigate the page and find what they're looking for. It is important that color</p>
+      <p>Color is an important design element used to highlight valuable information to our users. When used correctly, it allows users to quickly navigate the page and find what they're looking for.</p>
 
       <div>
         <h3>Contrast Ratios</h3>
-        <p>Pay attention to your colors and contrast within your app to help users efficiently navigate your app without strain.</p>
+        <p>Color used within buttons, links, and navigation elements must pass the WCAG 2.1 AA rating for accessibility.</p>
       </div>
-      <div className="image-container">
-        <div className="image" id="accessibility--contrast-ratios"></div>
+      <div className="example-container">
+        <div className="grid x-accessibility-color-container">
+          <div className="grid--half x-accessibility-colorBlack">
+            <div className="space-between"><h2>Light on Dark</h2><span className="tag tag--no-link tag--solid tag--green">PASS</span></div>
+            <p>Light on Dark</p>
+          </div>
+          <div className="grid--half x-accessibility-colorWhite">
+            <div className="space-between"><h2>Light on Dark</h2><span className="tag tag--no-link tag--solid tag--green">PASS</span></div>
+            <p>Dark on Light</p>
+          </div>
+        </div>
+        <div className="grid x-accessibility-color-container mt-space-s">
+          <div className="grid--half x-accessibility-colorOffBlack">
+            <div className="space-between"><h2>Light on Dark</h2><span className="tag tag--no-link tag--solid tag--red">FAIL</span></div>
+            <p>Light on Dark</p>
+          </div>
+          <div className="grid--half x-accessibility-colorOffWhite">
+            <div className="space-between"><h2>Light on Dark</h2><span className="tag tag--no-link tag--solid tag--red">FAIL</span></div>
+            <p>Dark on Light</p>
+          </div>
+        </div>
       </div>
 
       <blockquote className="tips">
