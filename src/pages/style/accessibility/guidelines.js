@@ -111,7 +111,7 @@ export default () => (
       <p>When adding text to your app or website, pay careful attention to the size that it is displayed. Body text should be 16px - 18px in size, and labels should be no smaller than 12px. Using anything smaller can cause strain and frustration for your user.</p>
       <blockquote className="caution">
         <strong>Caution: Don't Save Text as an Image</strong>
-        <p>Displaying text as an image can cause pixelation and make sentenses difficult to read. Additionally, this prevents screen readers from seeing and reading text to your user.</p>
+        <p>Displaying text as an image can cause pixelation and make sentences difficult to read. Additionally, this prevents screen readers from seeing and reading text to your user.</p>
       </blockquote>
     </div>
     </AppContent>
