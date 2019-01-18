@@ -14,16 +14,36 @@ This is an EXPERIMENT and is not ready to be included in production!
     justify-content: space-between;
     list-style-type: none;
     margin: 0;
+
+    font-size: 0.75rem;
   }
+
+  // margin: 0 -1rem;
 
   .accordion--content {
     border-bottom: 2px solid $gray-50;
   }
+
+  @media #{$tablet} { margin: 0 -1rem; }//offset padding
+
 }
 
 .accordion--key {
   cursor: default;
-  background-color: $gray-700c;
+  font-weight: 600;
+  border-bottom: 2px solid $gray-150;
+  font-size: 14px;
+  background-color: $gray-50;
+
+  //The remainder of this is the same styles as accordion--row
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+
+  padding: 0.5rem $grid-gutter;
+  display: flex;
+  align-items: center;
+  h1, h2, h3, h4 { margin-bottom: 0; }//removes default margin-bottom in accordion headers
 }
 
 .provider, .member, .amount, .sharing, .youpay, .status, .category, .date {
@@ -33,12 +53,21 @@ This is an EXPERIMENT and is not ready to be included in production!
   padding: 0 0.5rem;
 }
 
+.scroll {
+  overflow-x: auto;
+  box-shadow: inset 0 2px 4px rgba(0,0,0, 0.5);
+}
+
+.scroll--width {
+  min-width: 1200px;
+}
+
 .accordion--arrow { width: 35px; text-align: center; }
-.date             { width: 4rem; flex-grow: 1; }
-.provider         { width: 5rem; flex-grow: 2; }
-.member           { width: 5rem; flex-grow: 1; }
-.amount           { width: 5rem; flex-grow: 1; }
-.sharing          { width: 5rem; flex-grow: 1; }
-.youpay           { width: 5rem; flex-grow: 1; }
-.status           { width: 5rem; flex-grow: 1; }
-.category         { width: 5rem; flex-grow: 1; }
+.date             { width: 1rem; flex-grow: 2; }
+.provider         { width: 3rem; flex-grow: 3; }
+.member           { width: 3rem; flex-grow: 2; }
+.amount           { width: 2rem; flex-grow: 1; }
+.sharing          { width: 2rem; flex-grow: 1; }
+.youpay           { width: 2rem; flex-grow: 1; }
+.category         { width: 3rem; flex-grow: 1; }
+.status           { width: 3rem; flex-grow: 2; }

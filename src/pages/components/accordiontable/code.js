@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import $ from 'jquery';
 
-import Layout from '../../../components/layout'
-import SubNav from '../../../components/subnavigation'
-import AppContent from '../../../components/appcontent'
+import Layout from '../../../components/layout';
+import SubNav from '../../../components/subnavigation';
+import AppContent from '../../../components/appcontent';
 
 const currentPageName = "AccordionTable";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -52,7 +52,7 @@ class AccordionTableCode extends React.Component {
 
             <div className="example-container">
               <div className="accordion--table">
-                <ol className="accordion--row accordion--key">
+                <ol className="accordion--key">
                   <li className="accordion--arrow"></li>
                   <li className="date">Date</li>
                   <li className="provider">Provider</li>
@@ -125,7 +125,8 @@ class AccordionTableCode extends React.Component {
         </main>
       </AppContent>
     </Layout>
-  )
+    )
+  }
 }
-}
+
 export default AccordionTableCode;
