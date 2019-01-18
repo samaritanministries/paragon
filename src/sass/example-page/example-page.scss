@@ -185,6 +185,21 @@ body {
   }
 }
 
+.example-container {
+  .header {
+    position: relative;
+    &:after { position: absolute; }
+  }
+  .sub-nav {
+    position: relative;
+    top: 0;
+    &:after {
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
 .subnav {
   background-color: $blue;
   box-shadow: 0 2px 6px $gray-200;
