@@ -9,7 +9,7 @@ export default () => (
 	<section className="mobile-overlay is-collapsed">
 		<aside className="mobile-sidebar">
 			<div className="mobile-profile">
-				<Link to={"/templates/mobile"} className="mobile-sidebar--button" id="open-button" ><i className="dashing-icon dashing-icon--close"></i></Link>
+				<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="open-button" ><i className="dashing-icon dashing-icon--close"></i></Link>
         <Link to={"/templates/dashboard"} className="mobile-profile--account">
           <div className="profile-image"><i className="dashing-icon dashing-icon--face-good"></i></div>
           <div className="profile-edit"><i className="dashing-icon dashing-icon--pencil"></i></div>
@@ -28,7 +28,7 @@ export default () => (
 
   <main>
 		<header className="header">
-			<Link to={"/templates/mobile"} className="mobile-sidebar--button" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+			<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 			<div className="logo"><p className="text-color--white">LOGO</p></div>
 
 			<nav className="header-nav">

@@ -8,7 +8,7 @@ export default () => (
 	<section class="mobile-overlay is-collapsed">
 		<aside class="mobile-sidebar">
 			<div class="mobile-profile">
-				<a href="/templates/mobile" class="mobile-sidebar--button" id="open-button" ><i class="dashing-icon dashing-icon--close"></i></a>
+				<a href="/templates/mobile" class="button--mobile-sidebar" id="open-button" ><i class="dashing-icon dashing-icon--close"></i></a>
 				<a href="/templates/single-page" class="mobile-profile--account">
 					<div class="profile-image"><i class="dashing-icon dashing-icon--face-good"></i></div>
 					<div class="profile-edit"><i class="dashing-icon dashing-icon--pencil"></i></div>
@@ -27,7 +27,7 @@ export default () => (
 
 	<div class="grid-phoenix">
 		<header class="header">
-			<a href="/templates/mobile" class="mobile-sidebar--button" id="close-button"><i class="dashing-icon dashing-icon--menu"></i></a>
+			<a href="/templates/mobile" class="button--mobile-sidebar" id="close-button"><i class="dashing-icon dashing-icon--menu"></i></a>
 			<div class="logo"><p class="text-color--white">LOGO</p></div>
 			<div class="crumbs">A Title of This Page</div>
 			<div class="alert"><i class="dashing-icon dashing-icon--notification"></i><div class="count">100</div></div>
