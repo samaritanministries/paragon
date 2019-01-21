@@ -4,6 +4,7 @@ import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 import CodeToggle from '../../../components/codetoggle'
+import CodeToggleSCSS from '../../../components/codetoggle-scss'
 
 const currentPageName = "Actions";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -519,6 +520,8 @@ export default () => (
     </div>
   </div>
   <CodeToggle>
+  </CodeToggle>
+  <CodeToggleSCSS>
 {`<!-- Round Button Theme (Default) -->
 button { @extend %button--round; }
 
@@ -527,7 +530,7 @@ button { @extend %button--smooth; }
 
 <!-- Square Button Theme -->
 button { @extend %button--square; }`}
-</CodeToggle>
+</CodeToggleSCSS>
 </div>
 </div>
     </AppContent>

@@ -16,8 +16,11 @@ class CodeToggle extends React.Component {
     }));
   }
 
-  render() {
+  componentDidMount() {
     Prism.highlightAll();
+  }
+
+  render() {
     Prism.plugins.customClass.map({ tag: 'exampletag', });
 
     return (
