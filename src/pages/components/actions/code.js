@@ -4,6 +4,7 @@ import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 import CodeToggle from '../../../components/codetoggle'
+import CodeToggleSCSS from '../../../components/codetoggle-scss'
 
 const currentPageName = "Actions";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -511,7 +512,7 @@ export default () => (
 <div className="column column--full">
   <h2 className="example-header">Global Button Themes <button className="button button--transparent button--copy-link" data-id="copyurl" id="Global_Button_Themes"></button></h2>
   <p>Apply one of the following extendables to apply a button theme your entire project.</p>
-  <div className="row example-container">
+  <div className="row example-container hide-HTML-code">
     <div className="column column--full">
       <button className="button button--round">Round Button</button>
       <button className="button button--smooth">Smooth Button</button>
@@ -519,6 +520,8 @@ export default () => (
     </div>
   </div>
   <CodeToggle>
+  </CodeToggle>
+  <CodeToggleSCSS>
 {`<!-- Round Button Theme (Default) -->
 button { @extend %button--round; }
 
@@ -527,7 +530,7 @@ button { @extend %button--smooth; }
 
 <!-- Square Button Theme -->
 button { @extend %button--square; }`}
-</CodeToggle>
+</CodeToggleSCSS>
 </div>
 </div>
     </AppContent>

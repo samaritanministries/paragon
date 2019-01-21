@@ -354,3 +354,8 @@ pre.line-numbers > code {
      display: block;
    }
 }
+
+code, pre {
+white-space:pre-wrap !important;
+word-wrap:break-word !important;
+}

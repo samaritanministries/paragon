@@ -1,4 +1,6 @@
 import React from 'react'
+import Prism from 'prismjs'
+import 'prismjs/plugins/custom-class/prism-custom-class.min.js'
 
 class CodeToggle extends React.Component {
 
@@ -15,11 +17,11 @@ class CodeToggle extends React.Component {
   }
 
   componentDidMount() {
-    var Prism = window.Prism;
     Prism.highlightAll();
   }
 
   render() {
+    Prism.plugins.customClass.map({ tag: 'exampletag', });
 
     return (
       <div className={this.state.showCode ? 'group-open' : ''}>
