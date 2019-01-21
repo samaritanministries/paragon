@@ -16,12 +16,8 @@ class CodeToggleSCSS extends React.Component {
     }));
   }
 
-  componentDidMount() {
-    Prism = window.Prism;
-    Prism.highlightAll();
-  }
-
   render() {
+    Prism.highlightAll();
 
     return (
       <pre className="language-scss">
