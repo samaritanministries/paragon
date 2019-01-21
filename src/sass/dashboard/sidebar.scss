@@ -101,8 +101,6 @@ $sidebar-background: #354052;
   @extend .button--transparent;
   @extend .button--icon;
   @extend .button--white;
-  @extend .dashing-icon;
-  @extend .dashing-icon--white;
   @media #{$tablet} { display: none; }
 }
 
