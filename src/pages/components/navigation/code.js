@@ -1,10 +1,10 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 import CodeToggle from '../../../components/codetoggle'
-import CodeToggleSCSS from '../../../components/codetoggle-scss'
 
 const currentPageName = "Navigation";
 const currentPageNameLower = currentPageName.toLowerCase();
