@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import AppContent from '../components/appcontent'
 import CodeToggleSCSS from '../components/codetoggle-scss'
+import 'prismjs/components/prism-bash.min.js'
 
 class GetStarted extends React.Component {
 
