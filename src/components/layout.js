@@ -6,6 +6,7 @@ import '../sass/example-page/example-page.scss'
 
 export default ({ children }) => (
   <div>
+    <Helmet />
     <Sidebar />
     <div className="app-content">
       {children}
