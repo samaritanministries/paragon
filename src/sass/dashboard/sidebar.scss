@@ -100,7 +100,9 @@ $sidebar-background: #354052;
   @extend .button;
   @extend .button--transparent;
   @extend .button--icon;
-  &:hover { background-color: rgba(0, 0, 0, 0.4) !important; } //custom hover override to better display on dark header color
+  @extend .button--white;
+  @extend .dashing-icon;
+  @extend .dashing-icon--white;
   @media #{$tablet} { display: none; }
 }
 
