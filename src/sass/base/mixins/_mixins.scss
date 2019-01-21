@@ -65,14 +65,9 @@
 @mixin button($background-color, $color) {
   background-color: $background-color;
   color: $color;
-  &:hover, &:focus {
-    background-color: darken($background-color, 10%);
-    color: $color;
-  }
+  &:hover, &:focus { background-color: darken($background-color, 10%); }
   &:active { background-color: darken($background-color, 15%); }
-  &:not(.button--transparent) {
-    .dashing-icon:before { color: $white; }
-  }
+  .dashing-icon:before { color: $color; } //matches icon to text color
 }
 
 //Border Button
@@ -99,7 +94,7 @@
   color: $color;
   &:hover, &:focus { background-color: rgba(85,85,85,.1) }
   &:active { background-color: rgba(85,85,85,.2) }
-  &:not(.button--icon) .dashing-icon:before { color: $color; }
+  .dashing-icon:before { color: $color; }
 }
 
 /* Tag Mixins

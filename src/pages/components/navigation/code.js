@@ -24,20 +24,20 @@ export default () => (
           <div className="example-container relative">
 
             <header className="header mb-space-m">
-          		<Link to={"/templates/mobile"} className="mobile-sidebar--button" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+          		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 
           		<nav className="header-nav">
           			<ul>
-          				<li><Link to={"/"} className="active">Page 1</Link></li>
-          				<li><Link to={"/"}>Page 2</Link></li>
-          				<li><Link to={"/"}>Page 3</Link></li>
+          				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
+          				<li><Link to={"/components/navigation/code"}>Page 2</Link></li>
+          				<li><Link to={"/components/navigation/code"}>Page 3</Link></li>
           			</ul>
           		</nav>
           	</header>
 
             <CodeToggle>
 {`<header className="header">
-  <Link to={"/templates/mobile"} className="mobile-sidebar--button" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+  <Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 
   <nav className="header-nav">
     <ul>
@@ -54,27 +54,28 @@ export default () => (
           <div className="example-container relative">
 
             <header className="header">
-          		<Link to={"/templates/mobile"} className="mobile-sidebar--button" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+          		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 
           		<nav className="header-nav">
           			<ul>
-          				<li><Link to={"/"} className="active">Page 1</Link></li>
-          				<li><Link to={"/"}>Page 2</Link></li>
-          				<li><Link to={"/"}>Page 3</Link></li>
+          				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
+          				<li><Link to={"/components/navigation/code"}>Page 2</Link></li>
+          				<li><Link to={"/components/navigation/code"}>Page 3</Link></li>
           			</ul>
           		</nav>
           	</header>
             <nav className="sub-nav mb-space-m">
               <ul>
-                <li><Link to={"/"} className="active">Option 1</Link></li>
-                <li><Link to={"/"}>Option 2</Link></li>
-                <li><Link to={"/"}>Option 3</Link></li>
+                <li><Link to={"/components/navigation/code"} className="active">Option 1</Link></li>
+                <li><Link to={"/components/navigation/code"}>Option 2</Link></li>
+                <li><Link to={"/components/navigation/code"}>Option 3</Link></li>
+                <li><Link to={"/components/navigation/code"}>Option 4</Link></li>
               </ul>
             </nav>
 
             <CodeToggle>
 {`<header className="header">
-  <Link to={"/templates/mobile"} className="mobile-sidebar--button" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+  <Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 
   <nav className="header-nav">
     <ul>
@@ -89,6 +90,7 @@ export default () => (
     <li><Link to={"/"} className="active">Option 1</Link></li>
     <li><Link to={"/"}>Option 2</Link></li>
     <li><Link to={"/"}>Option 3</Link></li>
+    <li><Link to={"/"}>Option 4</Link></li>
   </ul>
 </nav>`}
             </CodeToggle>

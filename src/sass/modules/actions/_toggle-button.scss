@@ -1,5 +1,6 @@
 // Toggle Button Styles
 .button-group {
+  @extend .button--smooth;
   margin: 0;
   padding: 0;
   overflow: auto;
