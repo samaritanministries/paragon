@@ -62,13 +62,13 @@ export default () => (
               </div>
             </div>
             <CodeToggle>
-{`<button className="button">Default</button>
-<button className="button button--border">Border</button>
-<button className="button button--transparent">Transparent</button>
+{`<button class="button">Default</button>
+<button class="button button--border">Border</button>
+<button class="button button--transparent">Transparent</button>
 
-<button className="button" disabled>Disabled</button>
-<button className="button button--border" disabled>Disabled</button>
-<button className="button button--transparent" disabled>Disabled</button>`}
+<button class="button" disabled>Disabled</button>
+<button class="button button--border" disabled>Disabled</button>
+<button class="button button--transparent" disabled>Disabled</button>`}
             </CodeToggle>
           </div>
 
@@ -100,15 +100,15 @@ export default () => (
               </div>
             </div>
             <CodeToggle>
-{`<button className="button button--small">Small</button>
+{`<button class="button button--small">Small</button>
 
-<button className="button">Default</button>
+<button class="button">Default</button>
 
-<button className="button button--large">Large</button>
+<button class="button button--large">Large</button>
 
-<button className="button button--block">Block</button>
+<button class="button button--block">Block</button>
 
-<button className="button button--block_mobile">Mobile Block</button>
+<button class="button button--block_mobile">Mobile Block</button>
 `}
             </CodeToggle>
           </div>
@@ -207,74 +207,74 @@ export default () => (
               </div>
             </div>
             <CodeToggle>
-{`<button className="button">Blue</button>
-<button className="button button--border">Blue</button>
-<button className="button button--transparent">Blue</button>
-<button className="button button--icon">
-  <i className="dashing-icon dashing-icon--pencil"></i>
+{`<button class="button">Blue</button>
+<button class="button button--border">Blue</button>
+<button class="button button--transparent">Blue</button>
+<button class="button button--icon">
+  <i class="dashing-icon dashing-icon--pencil"></i>
 </button>
-<button className="button button--blue button--icon button--transparent">
-  <i className="dashing-icon dashing-icon--pencil"></i>
-</button>
-
-<button className="button button--gray">Gray</button>
-<button className="button button--gray button--border">Gray</button>
-<button className="button button--gray button--transparent">Gray</button>
-<button className="button button--gray button--icon">
-  <i className="dashing-icon dashing-icon--close"></i>
-</button>
-<button className="button button--icon button--transparent">
-  <i className="dashing-icon dashing-icon--close"></i>
+<button class="button button--blue button--icon button--transparent">
+  <i class="dashing-icon dashing-icon--pencil"></i>
 </button>
 
-<button className="button button--green">Green</button>
-<button className="button button--green button--border">Green</button>
-<button className="button button--green button--transparent">Green</button>
-<button className="button button--green button--icon">
-  <i className="dashing-icon dashing-icon--plus"></i>
+<button class="button button--gray">Gray</button>
+<button class="button button--gray button--border">Gray</button>
+<button class="button button--gray button--transparent">Gray</button>
+<button class="button button--gray button--icon">
+  <i class="dashing-icon dashing-icon--close"></i>
 </button>
-<button className="button button--green button--icon button--transparent">
-  <i className="dashing-icon dashing-icon--plus"></i>
-</button>
-
-<button className="button button--orange">Orange</button>
-<button className="button button--orange button--border">Orange</button>
-<button className="button button--orange button--transparent">Orange</button>
-<button className="button button--orange button--icon">
-  <i className="dashing-icon dashing-icon--comment"></i>
-</button>
-<button className="button button--orange button--icon button--transparent">
-  <i className="dashing-icon dashing-icon--comment"></i>
+<button class="button button--icon button--transparent">
+  <i class="dashing-icon dashing-icon--close"></i>
 </button>
 
-<button className="button button--purple">Purple</button>
-<button className="button button--purple button--border">Purple</button>
-<button className="button button--purple button--transparent">Purple</button>
-<button className="button button--purple button--icon">
-  <i className="dashing-icon dashing-icon--phone"></i>
+<button class="button button--green">Green</button>
+<button class="button button--green button--border">Green</button>
+<button class="button button--green button--transparent">Green</button>
+<button class="button button--green button--icon">
+  <i class="dashing-icon dashing-icon--plus"></i>
 </button>
-<button className="button button--purple button--icon button--transparent">
-  <i className="dashing-icon dashing-icon--phone"></i>
-</button>
-
-<button className="button button--red">Red</button>
-<button className="button button--red button--border">Red</button>
-<button className="button button--red button--transparent">Red</button>
-<button className="button button--red button--icon">
-  <i className="dashing-icon dashing-icon--trash"></i>
-</button>
-<button className="button button--red button--icon button--transparent">
-  <i className="dashing-icon dashing-icon--trash"></i>
+<button class="button button--green button--icon button--transparent">
+  <i class="dashing-icon dashing-icon--plus"></i>
 </button>
 
-<button className="button button--white">White</button>
-<button className="button button--white button--border">White</button>
-<button className="button button--white button--transparent">White</button>
-<button className="button button--white button--icon">
-  <i className="dashing-icon dashing-icon--settings"></i>
+<button class="button button--orange">Orange</button>
+<button class="button button--orange button--border">Orange</button>
+<button class="button button--orange button--transparent">Orange</button>
+<button class="button button--orange button--icon">
+  <i class="dashing-icon dashing-icon--comment"></i>
 </button>
-<button className="button button--white button--icon button--transparent">
-  <i className="dashing-icon dashing-icon--settings"></i>
+<button class="button button--orange button--icon button--transparent">
+  <i class="dashing-icon dashing-icon--comment"></i>
+</button>
+
+<button class="button button--purple">Purple</button>
+<button class="button button--purple button--border">Purple</button>
+<button class="button button--purple button--transparent">Purple</button>
+<button class="button button--purple button--icon">
+  <i class="dashing-icon dashing-icon--phone"></i>
+</button>
+<button class="button button--purple button--icon button--transparent">
+  <i class="dashing-icon dashing-icon--phone"></i>
+</button>
+
+<button class="button button--red">Red</button>
+<button class="button button--red button--border">Red</button>
+<button class="button button--red button--transparent">Red</button>
+<button class="button button--red button--icon">
+  <i class="dashing-icon dashing-icon--trash"></i>
+</button>
+<button class="button button--red button--icon button--transparent">
+  <i class="dashing-icon dashing-icon--trash"></i>
+</button>
+
+<button class="button button--white">White</button>
+<button class="button button--white button--border">White</button>
+<button class="button button--white button--transparent">White</button>
+<button class="button button--white button--icon">
+  <i class="dashing-icon dashing-icon--settings"></i>
+</button>
+<button class="button button--white button--icon button--transparent">
+  <i class="dashing-icon dashing-icon--settings"></i>
 </button>
 
 `}
@@ -332,37 +332,37 @@ export default () => (
               </div>
             </div>
             <CodeToggle>
-{`<button className="button">
-  <i className="dashing-icon dashing-icon--add"></i>
+{`<button class="button">
+  <i class="dashing-icon dashing-icon--add"></i>
   Default
 </button>
 
-<button className="button button--border">
-  <i className="dashing-icon dashing-icon--pencil"></i>
+<button class="button button--border">
+  <i class="dashing-icon dashing-icon--pencil"></i>
   Border
 </button>
 
-<button className="button button--transparent">
-  <i className="dashing-icon dashing-icon--search"></i>
+<button class="button button--transparent">
+  <i class="dashing-icon dashing-icon--search"></i>
   Transparent
 </button>
-<button className="button button--gray button--transparent">
+<button class="button button--gray button--transparent">
   Transparent
-  <i className="dashing-icon dashing-icon--new-tab flow-opposite"></i>
+  <i class="dashing-icon dashing-icon--new-tab flow-opposite"></i>
 </button>
 
-<button className="button button--icon">
-  <i className="dashing-icon dashing-icon--add"></i>
+<button class="button button--icon">
+  <i class="dashing-icon dashing-icon--add"></i>
 </button>
-<button className="button button--red button--icon">
-  <i className="dashing-icon dashing-icon--trash"></i>
+<button class="button button--red button--icon">
+  <i class="dashing-icon dashing-icon--trash"></i>
 </button>
-<button className="button button--transparent button--icon">
-  <i className="dashing-icon dashing-icon--question-filled"></i>
+<button class="button button--transparent button--icon">
+  <i class="dashing-icon dashing-icon--question-filled"></i>
 </button>
 
-<button className="button button--icon button--icon--main">
-  <i className="dashing-icon dashing-icon--add"></i>
+<button class="button button--icon button--icon--main">
+  <i class="dashing-icon dashing-icon--add"></i>
 </button>`}
             </CodeToggle>
           </div>

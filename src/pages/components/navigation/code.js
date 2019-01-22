@@ -36,10 +36,10 @@ export default () => (
 
             <CodeToggle>
 {`<header className="header">
-  <Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
-  <nav className="header-nav">
+  <Link to={"/templates/mobile"} class="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+  <nav class="header-nav">
     <ul>
-      <li><Link to={"/"} className="active">Page 1</Link></li>
+      <li><Link to={"/"} class="active">Page 1</Link></li>
       <li><Link to={"/"}>Page 2</Link></li>
       <li><Link to={"/"}>Page 3</Link></li>
     </ul>
@@ -73,18 +73,18 @@ export default () => (
 
             <CodeToggle>
 {`<header className="header">
-  <Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
-  <nav className="header-nav">
+  <Link to={"/templates/mobile"} class="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+  <nav class="header-nav">
     <ul>
-      <li><Link to={"/"} className="active">Page 1</Link></li>
+      <li><Link to={"/"} class="active">Page 1</Link></li>
       <li><Link to={"/"}>Page 2</Link></li>
       <li><Link to={"/"}>Page 3</Link></li>
     </ul>
   </nav>
 </header>
-<nav className="sub-nav">
+<nav class="sub-nav">
   <ul>
-    <li><Link to={"/"} className="active">Option 1</Link></li>
+    <li><Link to={"/"} class="active">Option 1</Link></li>
     <li><Link to={"/"}>Option 2</Link></li>
     <li><Link to={"/"}>Option 3</Link></li>
     <li><Link to={"/"}>Option 4</Link></li>
