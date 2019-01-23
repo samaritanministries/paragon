@@ -95,22 +95,20 @@ $sidebar-background: #354052;
   }
 }
 
-.mobile-sidebar--button {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 5px;
-  background-color: $container-colors;
-
+.button--mobile-sidebar {
   @extend %icon-white;
+  @extend .button;
+  @extend .button--transparent;
+  @extend .button--icon;
+  @extend .button--white;
+  @media #{$tablet} { display: none; }
 }
 
-.mobile-profile .mobile-sidebar--button {
-  background-color: transparent;
-  padding-top: $grid-gutter;
-
-  i:before {
-    margin-top: $grid-gutter;
-    margin-left: $grid-gutter;
+.mobile-profile{
+  padding-top: $space-m;
+  .button--mobile-sidebar {
+    display: inline-block;
+    margin-left: $space-m !important;
   }
 }
 

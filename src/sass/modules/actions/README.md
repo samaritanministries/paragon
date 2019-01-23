@@ -89,7 +89,7 @@ Button icons are used to add action to a single ui icon. Just add the `.button--
 Adding the `.button--transparent` class to your `.button--icon` removes the background color.
 
 ```html
-<button class="button button--transparent button--icon button--icon--small">
+<button class="button button--transparent button--icon">
   <i class="icon icon--question-filled icon--gray"></i>
 </button>
 ```
