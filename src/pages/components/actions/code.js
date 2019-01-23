@@ -210,70 +210,70 @@ export default () => (
 <button class="button button--border">Blue</button>
 <button class="button button--transparent">Blue</button>
 <button class="button button--icon">
-<i class="dashing-icon dashing-icon--pencil"></i>
+  <i class="dashing-icon dashing-icon--pencil"></i>
 </button>
 <button class="button button--blue button--icon button--transparent">
-<i class="dashing-icon dashing-icon--pencil"></i>
+  <i class="dashing-icon dashing-icon--pencil"></i>
 </button>
 
 <button class="button button--gray">Gray</button>
 <button class="button button--gray button--border">Gray</button>
 <button class="button button--gray button--transparent">Gray</button>
 <button class="button button--gray button--icon">
-<i class="dashing-icon dashing-icon--close"></i>
+  <i class="dashing-icon dashing-icon--close"></i>
 </button>
 <button class="button button--icon button--transparent">
-<i class="dashing-icon dashing-icon--close"></i>
+  <i class="dashing-icon dashing-icon--close"></i>
 </button>
 
 <button class="button button--green">Green</button>
 <button class="button button--green button--border">Green</button>
 <button class="button button--green button--transparent">Green</button>
 <button class="button button--green button--icon">
-<i class="dashing-icon dashing-icon--plus"></i>
+  <i class="dashing-icon dashing-icon--plus"></i>
 </button>
 <button class="button button--green button--icon button--transparent">
-<i class="dashing-icon dashing-icon--plus"></i>
+  <i class="dashing-icon dashing-icon--plus"></i>
 </button>
 
 <button class="button button--orange">Orange</button>
 <button class="button button--orange button--border">Orange</button>
 <button class="button button--orange button--transparent">Orange</button>
 <button class="button button--orange button--icon">
-<i class="dashing-icon dashing-icon--comment"></i>
+  <i class="dashing-icon dashing-icon--comment"></i>
 </button>
 <button class="button button--orange button--icon button--transparent">
-<i class="dashing-icon dashing-icon--comment"></i>
+  <i class="dashing-icon dashing-icon--comment"></i>
 </button>
 
 <button class="button button--purple">Purple</button>
 <button class="button button--purple button--border">Purple</button>
 <button class="button button--purple button--transparent">Purple</button>
 <button class="button button--purple button--icon">
-<i class="dashing-icon dashing-icon--phone"></i>
+  <i class="dashing-icon dashing-icon--phone"></i>
 </button>
 <button class="button button--purple button--icon button--transparent">
-<i class="dashing-icon dashing-icon--phone"></i>
+  <i class="dashing-icon dashing-icon--phone"></i>
 </button>
 
 <button class="button button--red">Red</button>
 <button class="button button--red button--border">Red</button>
 <button class="button button--red button--transparent">Red</button>
 <button class="button button--red button--icon">
-<i class="dashing-icon dashing-icon--trash"></i>
+  <i class="dashing-icon dashing-icon--trash"></i>
 </button>
 <button class="button button--red button--icon button--transparent">
-<i class="dashing-icon dashing-icon--trash"></i>
+  <i class="dashing-icon dashing-icon--trash"></i>
 </button>
 
 <button class="button button--white">White</button>
 <button class="button button--white button--border">White</button>
 <button class="button button--white button--transparent">White</button>
 <button class="button button--white button--icon">
-<i class="dashing-icon dashing-icon--settings"></i>
+  <i class="dashing-icon dashing-icon--settings"></i>
 </button>
 <button class="button button--white button--icon button--transparent">
-<i class="dashing-icon dashing-icon--settings"></i>
+  <i class="dashing-icon dashing-icon--settings"></i>
 </button>
 
 `}
@@ -332,36 +332,36 @@ export default () => (
         </div>
         <CodeToggle>
 {`<button class="button">
-<i class="dashing-icon dashing-icon--add"></i>
-Default
+  <i class="dashing-icon dashing-icon--add"></i>
+  Default
 </button>
 
 <button class="button button--border">
-<i class="dashing-icon dashing-icon--pencil"></i>
-Border
+  <i class="dashing-icon dashing-icon--pencil"></i>
+  Border
 </button>
 
 <button class="button button--transparent">
-<i class="dashing-icon dashing-icon--search"></i>
-Transparent
+  <i class="dashing-icon dashing-icon--search"></i>
+  Transparent
 </button>
 <button class="button button--gray button--transparent">
-Transparent
-<i class="dashing-icon dashing-icon--new-tab flow-opposite"></i>
+  Transparent
+  <i class="dashing-icon dashing-icon--new-tab flow-opposite"></i>
 </button>
 
 <button class="button button--icon">
-<i class="dashing-icon dashing-icon--add"></i>
+  <i class="dashing-icon dashing-icon--add"></i>
 </button>
 <button class="button button--red button--icon">
-<i class="dashing-icon dashing-icon--trash"></i>
+  <i class="dashing-icon dashing-icon--trash"></i>
 </button>
 <button class="button button--transparent button--icon">
-<i class="dashing-icon dashing-icon--question-filled"></i>
+  <i class="dashing-icon dashing-icon--question-filled"></i>
 </button>
 
 <button class="button button--icon button--icon--main">
-<i class="dashing-icon dashing-icon--add"></i>
+  <i class="dashing-icon dashing-icon--add"></i>
 </button>`}
         </CodeToggle>
       </div>
@@ -443,68 +443,68 @@ Transparent
           </div>
         </div>
         <CodeToggle>
-{`<ul className="button-group button--gray">
-  <li className="button--radio">
+{`<ul class="button-group button--gray">
+  <li class="button--radio">
     <input type="radio" name="options-blue" id="blue1" defaultChecked />
-    <label htmlFor="blue1" className="button">Left</label>
+    <label for="blue1" class="button">Left</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-blue" id="blue2" />
-    <label htmlFor="blue2" className="button">Middle</label>
+    <label for="blue2" class="button">Middle</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-blue" id="blue3" />
-    <label htmlFor="blue3" className="button">Right</label>
+    <label for="blue3" class="button">Right</label>
   </li>
 </ul>
 
-<ul className="button-group button--border button--blue">
-  <li className="button--radio">
+<ul class="button-group button--border button--blue">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="previous" />
-    <label htmlFor="previous" className="button">
-      <i className="dashing-icon dashing-icon--arrow-left"></i>
+    <label for="previous" class="button">
+      <i class="dashing-icon dashing-icon--arrow-left"></i>
     </label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green1" defaultChecked/>
-    <label htmlFor="green1" className="button">1</label>
+    <label for="green1" class="button">1</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green2" />
-    <label htmlFor="green2" className="button">2</label>
+    <label for="green2" class="button">2</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green3" />
-    <label htmlFor="green3" className="button">3</label>
+    <label for="green3" class="button">3</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green4" />
-    <label htmlFor="green4" className="button">4</label>
+    <label for="green4" class="button">4</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="green5" />
-    <label htmlFor="green5" className="button">5</label>
+    <label for="green5" class="button">5</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-green" id="next" />
-    <label htmlFor="next" className="button">
-      <i className="dashing-icon dashing-icon--arrow-right"></i>
+    <label for="next" class="button">
+      <i class="dashing-icon dashing-icon--arrow-right"></i>
     </label>
   </li>
 </ul>
 
-<ul className="button-group button-group--vertical button--green button--border">
-  <li className="button--radio">
+<ul class="button-group button-group--vertical button--green button--border">
+  <li class="button--radio">
     <input type="radio" name="options-gray" id="toggle-gray1" defaultChecked />
-    <label htmlFor="toggle-gray1" className="button">Top</label>
+    <label for="toggle-gray1" class="button">Top</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-gray" id="toggle-gray2" />
-    <label htmlFor="toggle-gray2" className="button">Middle</label>
+    <label for="toggle-gray2" class="button">Middle</label>
   </li>
-  <li className="button--radio">
+  <li class="button--radio">
     <input type="radio" name="options-gray" id="toggle-gray3" />
-    <label htmlFor="toggle-gray3" className="button">Bottom</label>
+    <label for="toggle-gray3" class="button">Bottom</label>
   </li>
 </ul>`}
       </CodeToggle>
