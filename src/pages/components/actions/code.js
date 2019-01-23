@@ -528,8 +528,8 @@ Transparent
 
     <h2 className="mt-space-xl">Global Button Themes <button className="button button--transparent button--copy-link" data-id="copyurl" id="Global_Button_Themes"></button></h2>
     <p>Apply one of the following extendables to apply a button theme your entire project.</p>
-    <div className="example-container hide-HTML-code">
-      <div className="card">
+    <div className="example-container">
+      <div className="card hide-HTML-code">
         <div className="card-content">
           <button className="button button--round">Round</button>
           <button className="button button--smooth">Smooth</button>
