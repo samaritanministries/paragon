@@ -370,7 +370,7 @@ Transparent
       <div className="example-container">
         <div className="card">
           <div className="card-content">
-            <ul className="button-group button-group--blue">
+            <ul className="button-group button--gray">
               <li className="button--radio">
                 <input type="radio" name="options-blue" id="blue1" defaultChecked />
                 <label htmlFor="blue1" className="button">Left</label>
@@ -388,13 +388,15 @@ Transparent
         </div>
         <div className="card">
           <div className="card-content">
-            <ul className="button-group button-group--green button-group--border">
+            <ul className="button-group button--border button--blue">
               <li className="button--radio">
-                <input type="radio" name="options-green" id="previous" defaultChecked />
-                <label htmlFor="previous" className="button">Previous</label>
+                <input type="radio" name="options-green" id="previous" />
+                <label htmlFor="previous" className="button">
+                  <i className="dashing-icon dashing-icon--arrow-left"></i>
+                </label>
               </li>
               <li className="button--radio">
-                <input type="radio" name="options-green" id="green1" defaultChecked />
+                <input type="radio" name="options-green" id="green1" defaultChecked/>
                 <label htmlFor="green1" className="button">1</label>
               </li>
               <li className="button--radio">
@@ -415,14 +417,16 @@ Transparent
               </li>
               <li className="button--radio">
                 <input type="radio" name="options-green" id="next" />
-                <label htmlFor="next" className="button">Next</label>
+                <label htmlFor="next" className="button">
+                  <i className="dashing-icon dashing-icon--arrow-right"></i>
+                </label>
               </li>
             </ul>
           </div>
         </div>
         <div className="card">
           <div className="card-content">
-            <ul className="button-group button-group--vertical button-group--gray button-group--border">
+            <ul className="button-group button-group--vertical button--green button--border">
               <li className="button--radio">
                 <input type="radio" name="options-gray" id="toggle-gray1" defaultChecked />
                 <label htmlFor="toggle-gray1" className="button">Top</label>
@@ -441,34 +445,34 @@ Transparent
         <CodeToggle>
 {`<!-- Green Toggle Border Button -->
 <ul class="button-group button-group--green button-group--border">
-<li class="button--radio">
-<input type="radio" name="options-green" id="green1" defaultChecked />
-<label for="green1" class="button">1</label>
-</li>
-<li class="button--radio">
-<input type="radio" name="options-green" id="green2" />
-<label for="green2" class="button">2</label>
-</li>
-<li class="button--radio">
-<input type="radio" name="options-green" id="green3" />
-<label for="green3" class="button">3</label>
-</li>
-<li class="button--radio">
-<input type="radio" name="options-green" id="green4" />
-<label for="green4" class="button">4</label>
-</li>
-<li class="button--radio">
-<input type="radio" name="options-green" id="green5" />
-<label for="green5" class="button">5</label>
-</li>
-<li class="button--radio">
-<input type="radio" name="options-green" id="green6" />
-<label for="green6" class="button">6</label>
-</li>
-<li class="button--radio">
-<input type="radio" name="options-green" id="green7" />
-<label for="green7" class="button">7</label>
-</li>
+  <li class="button--radio">
+    <input type="radio" name="options-green" id="green1" defaultChecked />
+    <label for="green1" class="button">1</label>
+  </li>
+  <li class="button--radio">
+    <input type="radio" name="options-green" id="green2" />
+    <label for="green2" class="button">2</label>
+  </li>
+  <li class="button--radio">
+    <input type="radio" name="options-green" id="green3" />
+    <label for="green3" class="button">3</label>
+  </li>
+  <li class="button--radio">
+    <input type="radio" name="options-green" id="green4" />
+    <label for="green4" class="button">4</label>
+  </li>
+  <li class="button--radio">
+    <input type="radio" name="options-green" id="green5" />
+    <label for="green5" class="button">5</label>
+  </li>
+  <li class="button--radio">
+    <input type="radio" name="options-green" id="green6" />
+    <label for="green6" class="button">6</label>
+  </li>
+  <li class="button--radio">
+    <input type="radio" name="options-green" id="green7" />
+    <label for="green7" class="button">7</label>
+  </li>
 </ul>`}
       </CodeToggle>
     </div>
