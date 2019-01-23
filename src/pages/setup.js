@@ -18,7 +18,7 @@ class GetStarted extends React.Component {
 
       <Layout>
         <header className="subnav">
-          <h1>Get Started</h1>
+          <h1>Setup</h1>
         </header>
         <AppContent>
           <div className="row">
