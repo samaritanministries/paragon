@@ -163,6 +163,7 @@ fieldset {
     margin-bottom: $space-m;
     overflow: auto;
     padding: 0;
+    .dashing-icon { margin: 0 $space-xxs; }
   }
 
   //Adds red text to lables and inputs for error states
@@ -177,7 +178,10 @@ fieldset {
       &:focus { border-color: $red; }
     }
 
-    .message { color: $red; }
+    .message {
+      color: $red;
+      .dashing-icon { @extend .dashing-icon--red; }
+    }
   }
 
   //Adds orange text to lables and inputs for warning states
@@ -192,7 +196,10 @@ fieldset {
       &:focus { border-color: $orange; }
     }
 
-    .message { color: $orange; }
+    .message {
+      color: $orange;
+      .dashing-icon { @extend .dashing-icon--orange; }
+    }
   }
 }
 
