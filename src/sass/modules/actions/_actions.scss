@@ -189,17 +189,6 @@ $button-disabled: "&[disabled], &.disabled, &.button--disabled";
     padding: $space-m;
     &:active { @extend %shadow-50; }
   }
-
-<<<<<<< HEAD
-  &.button--transparent {
-    @include transparent--button($color: $gray-600); //makes default transparent button--icon gray
-  }
-=======
-  //Used to display actions and icons with a transparent background
-  // &.button--transparent {
-  //   &:hover, &:focus { @include button($background-color: rgba($gray, .2), $color: transparentize(white, 1)); opacity: 1;}
-  // }
->>>>>>> small bug fixes to forms and actions // removed completed experimental code
 }
 
 //Provides margin when a button and action are paired together
