@@ -36,11 +36,11 @@ export default () => (
           </div>
         </div>
         <CodeToggle>
-{`<button className="button">Default</button>
+{`<button class="button">Default</button>
 
-<button className="button button--border">Border</button>
+<button class="button button--border">Border</button>
 
-<button className="button button--transparent">Transparent</button>`}
+<button class="button button--transparent">Transparent</button>`}
         </CodeToggle>
       </div>
 
