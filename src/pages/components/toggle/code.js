@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -18,7 +19,9 @@ export default () => (
     <AppContent>
       <div className="row">
         <div className="column column--full">
-        <h2 className="example-header no-margin--top">Custom Toggle Switch <button className="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Toggle_Switch" /></h2>
+        <h2 className="example-header no-margin--top" id="customToggleSwitch">Custom Toggle Switch 
+          <Link to={window.location.pathname + "/#customToggleSwitch"} className="button button--transparent button--copy-link"></Link>
+        </h2>
         <div className="row example-container">
           <fieldset className="column column--full">
             <label className="inline" htmlFor="switch1">Switch</label>

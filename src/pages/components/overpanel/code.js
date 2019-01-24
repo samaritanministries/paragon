@@ -18,7 +18,9 @@ export default () => (
     <AppContent>
       <div className="grid grid-padding">
 
-        <h2>Overpanel</h2>
+        <h2 id="overpanel">Overpanel
+          <Link to={window.location.pathname + "/#overpanel"} className="button button--transparent button--copy-link"></Link>
+        </h2>
         <div className="example-container">
 
           <Link className="button button--primary" to="../../templates/overpanel-example" style={{ marginBottom: "1rem" }}>View Example Overpanel</Link>
@@ -47,7 +49,9 @@ export default () => (
           </CodeToggle>
         </div>
 
-        <h2 className="mt-space-xl">Overpanel Widths</h2>
+        <h2 className="mt-space-xl" id="overpanelWidths">Overpanel Widths
+          <Link to={window.location.pathname + "/#overpanelWidths"} className="button button--transparent button--copy-link"></Link>
+        </h2>
         <p className="no-margin">To change the max width of the overpanel and page content, all you need to do is apply an additional class <strong>AFTER</strong> <code className="example-text">overpanel</code>.</p>
         <ul className="no-margin">
           <li><strong>Small Width (350px):</strong> <code className="example-text">overpanel-s</code></li>

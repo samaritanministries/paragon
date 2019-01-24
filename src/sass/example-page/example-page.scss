@@ -16,10 +16,6 @@ $sidebar-width:  13rem;
   margin-top: $space-m;
 }
 
-.button--copy-link {
-  display: none;
-}
-
 .logo-container {
   padding: 1rem;
   display: flex;
@@ -267,13 +263,15 @@ $sidebar-width:  13rem;
 h2 {
   .button--copy-link {
     &:after {
-      content: "Copy Link";
+      content: "Add to URL";
     }
       width: 100px;
       pointer-events: initial;
       transition: all 0.25s;
       opacity: 1;
       text-align: left;
+      margin-left: 1rem !important;
+      display: inline;
 
     @media #{$tablet} {
       width: 0px;
@@ -290,13 +288,12 @@ h2 {
         &:active,
         &:focus {
           &:after {
-            content: "Copied";
+            content: "Added to URL";
           }
           color: $green-500;
         }
       width: 100px;
       pointer-events: initial;
-      // transition: all 0.5s;
       opacity: 1;
     }
   }

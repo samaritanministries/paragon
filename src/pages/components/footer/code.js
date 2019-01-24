@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -18,7 +19,9 @@ export default () => (
     <AppContent>
       <div className="row">
         <div className="column column--full">
-          <h2 className="example-header no-margin--top">Footer <button className="button button--transparent button--copy-link" data-id="copyurl" id="Footer"/></h2>
+          <h2 className="example-header no-margin--top" id="footer">Footer
+            <Link to={window.location.pathname + "/#footer"} className="button button--transparent button--copy-link"></Link>
+          </h2>
           <div className="row example-container">
             <div className="column column--full" style={{ overflow: "auto" }}>
               <footer className="app-footer example--footer" style={{ position: "relative" }}>

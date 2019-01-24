@@ -1,5 +1,6 @@
 import React from 'react'
 import $ from 'jquery';
+import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -30,7 +31,9 @@ class AccordionCode extends React.Component {
         <AppContent>
   			<div className="grid grid-padding">
 
-          <h2>Default Accordion</h2>
+          <h2 id="defaultAccordian">Default Accordion
+            <Link to={window.location.pathname + "/#defaultAccordian"} className="button button--transparent button--copy-link"></Link>
+          </h2>
           <div className="example-container">
 
             <div className="accordion" style={{marginBottom: "1rem"}}>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -17,7 +18,9 @@ export default () => (
   <AppContent>
 		<div className="grid grid-padding">
 
-      <h2>Forms <button className="button button--transparent button--copy-link" data-id="copyurl" id="Forms" /></h2>
+      <h2 id="forms">Forms
+        <Link to={window.location.pathname + "/#forms"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-content">
@@ -60,7 +63,9 @@ export default () => (
         </CodeToggle>
       </div>
 
-      <h2 className="mt-space-xl">Select Menu <button className="button button--transparent button--copy-link" data-id="copyurl" id="Forms" /></h2>
+      <h2 className="mt-space-xl" id="selectMenu">Select Menu
+        <Link to={window.location.pathname + "/#selectMenu"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <p>To add the drop-down icon, add the <code className="example-text">.select--has-icon</code> class to the parent container. Ensure you also have the dashing-icon font library properly installed.</p>
       <div className="example-container">
         <div className="card">
@@ -92,7 +97,9 @@ export default () => (
         </CodeToggle>
       </div>
 
-      <h2 className="mt-space-xl">Input Groups <button className="button button--transparent button--copy-link" data-id="copyurl" id="Input_Addon" /></h2>
+      <h2 className="mt-space-xl" id="inputGroups">Input Groups
+        <Link to={window.location.pathname + "/#inputGroups"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-content flex-content">
@@ -170,7 +177,9 @@ export default () => (
         </CodeToggle>
       </div>
 
-      <h2 className="mt-space-xl">Input Message States <button className="button button--transparent button--copy-link" data-id="copyurl" id="Input_Message_States" /></h2>
+      <h2 className="mt-space-xl" id="inputMessageStates">Input Message States
+        <Link to={window.location.pathname + "/#inputMessageStates"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-content">
@@ -220,7 +229,9 @@ export default () => (
           </CodeToggle>
         </div>
 
-        <h2 className="mt-space-xl">Other Supported Input Types <button className="button button--transparent button--copy-link" data-id="copyurl" id="Other_Supported_Types" /></h2>
+        <h2 className="mt-space-xl" id="otherSupportedInputTypes">Other Supported Input Types
+          <Link to={window.location.pathname + "/#otherSupportedInputTypes"} className="button button--transparent button--copy-link"></Link>
+        </h2>
         <div className="example-container">
           <div className="card">
             <div className="card-content">
@@ -312,7 +323,9 @@ export default () => (
           </CodeToggle>
         </div>
 
-        <h2 className="mt-space-xl">Custom Range Slider <button className="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Range_Slider" /></h2>
+        <h2 className="mt-space-xl" id="customRangeSlider">Custom Range Slider
+          <Link to={window.location.pathname + "/#customRangeSlider"} className="button button--transparent button--copy-link"></Link>
+        </h2>
         <p className="text-color--red">Not supported in Internet Explorer</p>
         <div className="example-container">
           <div className="card">
@@ -333,7 +346,9 @@ export default () => (
           </CodeToggle>
         </div>
 
-        <h2 className="mt-space-xl">Form Example <button className="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Range_Slider" /></h2>
+        <h2 className="mt-space-xl" id="formExample">Form Example
+          <Link to={window.location.pathname + "/#formExample"} className="button button--transparent button--copy-link"></Link>
+        </h2>
         <div className="example-container">
           <div className="card">
             <div className="card-header has-border">

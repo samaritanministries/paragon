@@ -18,7 +18,9 @@ export default () => (
     <AppContent>
       <div className="grid grid-padding">
 
-        <h2>Page Banner <button className="button button--transparent button--copy-link" id="Page_Banner"/></h2>
+        <h2 id="pageBanner">Page Banner
+          <Link to={window.location.pathname + "/#pageBanner"} className="button button--transparent button--copy-link"></Link>
+        </h2>
         <div className="example-container">
           <div className="page-banner" style={{ position: "relative", marginBottom: "1rem" }}>
             <h1>Page Banner</h1>
@@ -31,7 +33,9 @@ export default () => (
           </CodeToggle>
         </div>
 
-          <h2 className="mt-space-xl">Page Banner with subhead <button className="button button--transparent button--copy-link" id="Page_Banner_With_Subhead"/></h2>
+        <h2 className="mt-space-xl" id="pageBannerWithSubhead">Page Banner with subhead
+          <Link to={window.location.pathname + "/#pageBannerWithSubhead"} className="button button--transparent button--copy-link"></Link>
+        </h2>
           <div className="example-container">
             <div className="page-banner" style={{ position: "relative", marginBottom: "1rem" }}>
               <h2>Add a Bill to this Need</h2>
@@ -46,7 +50,9 @@ export default () => (
           </div>
 
 
-          <h2 className="mt-space-xl">Default Card Banner <button className="button button--transparent button--copy-link" id="Default_Card_Banner"/></h2>
+          <h2 className="mt-space-xl" id="defaultCardBanner">Default Card Banner
+            <Link to={window.location.pathname + "/#defaultCardBanner"} className="button button--transparent button--copy-link"></Link>
+          </h2>
           <div className="example-container">
             <div className="card">
               <div className="card-header">
@@ -79,7 +85,9 @@ export default () => (
           </div>
 
 
-          <h2 className="mt-space-xl" id="cardBannerSuccess">Card Banner with success <button className="button button--transparent button--copy-link" id="Card_Banner_With_Success"/></h2>
+          <h2 className="mt-space-xl" id="cardBannerWithSuccess">Card Banner with success
+            <Link to={window.location.pathname + "/#cardBannerWithSuccess"} className="button button--transparent button--copy-link"></Link>
+          </h2>
           <div className="example-container">
             <div className="card">
               <div className="card-header">
@@ -113,7 +121,9 @@ export default () => (
             </CodeToggle>
           </div>
 
-          <h2 className="mt-space-xl" id="cardBannerWarning">Card Banner with warning <button className="button button--transparent button--copy-link" id="Card_Banner_With_Warning"/></h2>
+          <h2 className="mt-space-xl" id="cardBannerWithWarning">Card Banner with warning
+            <Link to={window.location.pathname + "/#cardBannerWithWarning"} className="button button--transparent button--copy-link"></Link>
+          </h2>
           <div className="example-container">
             <div className="card">
               <div className="card-header">
@@ -147,7 +157,9 @@ export default () => (
             </CodeToggle>
           </div>
 
-          <h2 className="mt-space-xl" id="cardBannerError">Card Banner with error <button className="button button--transparent button--copy-link" id="Card_Banner_With_Error"/></h2>
+          <h2 className="mt-space-xl" id="cardBannerWithError">Card Banner with error
+            <Link to={window.location.pathname + "/#cardBannerWithError"} className="button button--transparent button--copy-link"></Link>
+          </h2>
           <div className="example-container">
             <div className="card">
               <div className="card-header">
@@ -181,7 +193,9 @@ export default () => (
             </CodeToggle>
           </div>
 
-          <h2 className="mt-space-xl" id="cardBannerButton">Card Banner with button <button className="button button--transparent button--copy-link" id="Card_Banner_With_Button"/></h2>
+          <h2 className="mt-space-xl" id="cardBannerWithButton">Card Banner with button
+            <Link to={window.location.pathname + "/#cardBannerWithButton"} className="button button--transparent button--copy-link"></Link>
+          </h2>
           <div className="example-container">
             <div className="card">
               <div className="card-header">
@@ -215,7 +229,9 @@ export default () => (
             </CodeToggle>
           </div>
 
-          <h2 className="mt-space-xl" id="cardBannerLink">Card Banner with link <button className="button button--transparent button--copy-link" id="Card_Banner_With_Link" /></h2>
+          <h2 className="mt-space-xl" id="cardBannerWithLink">Card Banner with link
+            <Link to={window.location.pathname + "/#cardBannerWithLink"} className="button button--transparent button--copy-link"></Link>
+          </h2>
           <div className="example-container">
             <div className="card">
               <div className="card-header">
