@@ -1,5 +1,6 @@
 import React from 'react'
 import $ from 'jquery';
+import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
