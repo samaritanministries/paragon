@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -9,33 +10,39 @@ import CodeToggle from '../../../components/codetoggle'
 const currentPageName = "Navigation";
 const currentPageNameLower = currentPageName.toLowerCase();
 
-export default () => (
-  <Layout>
-    <header className="subnav">
-      <h1>{currentPageName}</h1>
-      <SubNav pageName={currentPageNameLower}/>
-    </header>
-  <AppContent>
-      <div className="grid grid-padding">
+class NavigationCode extends React.Component {
+  static propTypes = { location: PropTypes.object.isRequired }
 
-        <h2 id="defaultNavigation">Default Navigation
-          <Link to={window.location.pathname + "/#defaultNavigation"} className="button button--transparent button--copy-link"></Link>
-        </h2>
-        <div className="example-container relative">
+  render() {
+    const { location } = this.props;
 
-          <header className="header mb-space-m">
-        		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+    return (
+      <Layout>
+        <header className="subnav">
+          <h1>{currentPageName}</h1>
+          <SubNav pageName={currentPageNameLower}/>
+        </header>
+      <AppContent>
+          <div className="grid grid-padding">
 
-        		<nav className="header-nav">
-        			<ul>
-        				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
-        				<li><Link to={"/components/navigation/code"}>Page 2</Link></li>
-        				<li><Link to={"/components/navigation/code"}>Page 3</Link></li>
-        			</ul>
-        		</nav>
-        	</header>
+            <h2 id="defaultNavigation">Default Navigation
+              <Link to={location.pathname + "/#defaultNavigation"} className="button button--transparent button--copy-link"></Link>
+            </h2>
+            <div className="example-container relative">
 
-          <CodeToggle>
+              <header className="header mb-space-m">
+            		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+
+            		<nav className="header-nav">
+            			<ul>
+            				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
+            				<li><Link to={"/components/navigation/code"}>Page 2</Link></li>
+            				<li><Link to={"/components/navigation/code"}>Page 3</Link></li>
+            			</ul>
+            		</nav>
+            	</header>
+
+              <CodeToggle>
 {`<header className="header">
 <Link to={"/templates/mobile"} class="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 <nav class="header-nav">
@@ -46,35 +53,35 @@ export default () => (
   </ul>
 </nav>
 </header>`}
-          </CodeToggle>
-          </div>
+              </CodeToggle>
+              </div>
 
-        <h2 className="mt-space-xl" id="subnavigation">Subnavigation
-          <Link to={window.location.pathname + "/#subnavigation"} className="button button--transparent button--copy-link"></Link>
-        </h2>
-        <div className="example-container relative">
+            <h2 className="mt-space-xl" id="subnavigation">Subnavigation
+              <Link to={location.pathname + "/#subnavigation"} className="button button--transparent button--copy-link"></Link>
+            </h2>
+            <div className="example-container relative">
 
-          <header className="header">
-        		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+              <header className="header">
+            		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 
-        		<nav className="header-nav">
-        			<ul>
-        				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
-        				<li><Link to={"/components/navigation/code"}>Page 2</Link></li>
-        				<li><Link to={"/components/navigation/code"}>Page 3</Link></li>
-        			</ul>
-        		</nav>
-        	</header>
-          <nav className="sub-nav mb-space-m">
-            <ul>
-              <li><Link to={"/components/navigation/code"} className="active">Option 1</Link></li>
-              <li><Link to={"/components/navigation/code"}>Option 2</Link></li>
-              <li><Link to={"/components/navigation/code"}>Option 3</Link></li>
-              <li><Link to={"/components/navigation/code"}>Option 4</Link></li>
-            </ul>
-          </nav>
+            		<nav className="header-nav">
+            			<ul>
+            				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
+            				<li><Link to={"/components/navigation/code"}>Page 2</Link></li>
+            				<li><Link to={"/components/navigation/code"}>Page 3</Link></li>
+            			</ul>
+            		</nav>
+            	</header>
+              <nav className="sub-nav mb-space-m">
+                <ul>
+                  <li><Link to={"/components/navigation/code"} className="active">Option 1</Link></li>
+                  <li><Link to={"/components/navigation/code"}>Option 2</Link></li>
+                  <li><Link to={"/components/navigation/code"}>Option 3</Link></li>
+                  <li><Link to={"/components/navigation/code"}>Option 4</Link></li>
+                </ul>
+              </nav>
 
-          <CodeToggle>
+              <CodeToggle>
 {`<header className="header">
 <Link to={"/templates/mobile"} class="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 <nav class="header-nav">
@@ -93,10 +100,14 @@ export default () => (
   <li><Link to={"/"}>Option 4</Link></li>
 </ul>
 </nav>`}
-          </CodeToggle>
-          </div>
+              </CodeToggle>
+              </div>
 
-        </div>
-    </AppContent>
-  </Layout>
-)
+            </div>
+        </AppContent>
+      </Layout>
+    )
+  }
+}
+
+export default NavigationCode;

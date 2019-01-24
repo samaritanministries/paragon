@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -11,6 +12,7 @@ const currentPageName = "Spinner";
 const currentPageNameLower = currentPageName.toLowerCase();
 
 class SpinnerCode extends React.Component {
+  static propTypes = { location: PropTypes.object.isRequired }
 
   constructor(props) {
     super(props);
@@ -25,6 +27,7 @@ class SpinnerCode extends React.Component {
   }
 
   render() {
+    const { location } = this.props;
 
     return (
 
@@ -37,7 +40,7 @@ class SpinnerCode extends React.Component {
           <div className="row">
             <div className="column column--full">
               <h2 className="example-header no-margin--top" id="defaultSpinner">Default Spinner
-                <Link to={window.location.pathname + "/#defaultSpinner"} className="button button--transparent button--copy-link"></Link>
+                <Link to={location.pathname + "/#defaultSpinner"} className="button button--transparent button--copy-link"></Link>
               </h2>
               <div className="row example-container">
                 <div className="column column--full">
@@ -67,7 +70,7 @@ $spinner-color: #000;`}
               </CodeToggle>
 
               <h2 className="example-header" id="buttonSpinner">Button Spinner
-                <Link to={window.location.pathname + "/#buttonSpinner"} className="button button--transparent button--copy-link"></Link>
+                <Link to={location.pathname + "/#buttonSpinner"} className="button button--transparent button--copy-link"></Link>
               </h2>
               <div className="row example-container">
                 <div className="column column--full">
@@ -89,4 +92,5 @@ $spinner-color: #000;`}
     )
   }
 }
+
 export default SpinnerCode;
