@@ -9,12 +9,12 @@ $global-content-width: 800px !default;
 
 $sidebar-width:  13rem;
 
-body {
-  // background-color: $white;
-}
-
 //Give example pages gray background
 .app { background-color: $gray-100; }
+
+.content--example-page {
+  margin-top: $space-m;
+}
 
 .button--copy-link {
   display: none;

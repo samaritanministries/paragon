@@ -10,20 +10,18 @@ export default () => (
       <h1>Templates</h1>
     </header>
     <AppContent>
-      <main className="content content-m">
-        <div className="grid grid-padding">
+      <div className="grid grid-padding">
 
-          <div className="grid--third">
-            <a href="/templates/default" target="_blank" rel="noopener noreferrer">
-              <div className="card is-selectable" style={{ overflow: "hidden" }}>
-                <img src={defaultTemplate} alt="Default Template" className="card--image" />
-                <div className="card--content">Default Dashboard</div>
-              </div>
-            </a>
-          </div>
-
+        <div className="grid--third">
+          <a href="/templates/default" target="_blank" rel="noopener noreferrer">
+            <div className="card is-selectable" style={{ overflow: "hidden" }}>
+              <img src={defaultTemplate} alt="Default Template" className="card--image" />
+              <div className="card--content">Default Dashboard</div>
+            </div>
+          </a>
         </div>
-      </main>
+
+      </div>
     </AppContent>
   </Layout>
 )
