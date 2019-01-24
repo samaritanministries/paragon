@@ -270,6 +270,7 @@ h2 {
       transition: all 0.25s;
       opacity: 1;
       text-align: left;
+      margin-left: 1rem !important;
       display: inline;
 
     @media #{$tablet} {
