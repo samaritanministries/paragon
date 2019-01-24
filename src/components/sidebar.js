@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import $ from 'jquery';
 
-import logo from "../img/Dashing.svg";
+import logo from "../img/nigel_2.svg";
 
 class Sidebar extends React.Component {
 
@@ -104,12 +104,12 @@ class Sidebar extends React.Component {
             </div>
 
             <div className={this.state.showParagon ? 'group-container expanded' : 'group-container'}>
-              <h4 className="group-title no-margin" onClick={this.toggleParagon}>Paragon</h4>
+              <h4 className="group-title no-margin" onClick={this.toggleParagon}>Get Started</h4>
               <i className={this.state.showParagon ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
                 <Link to="/" activeClassName="active">Principles</Link>
-                <Link to="/get-started" activeClassName="active">Get Started</Link>
+                <Link to="/setup" activeClassName="active">Setup</Link>
                 <Link to="/templates">Templates</Link>
                 <Link to="/resources">Resources</Link>
               </div>

@@ -25,7 +25,7 @@ export default () => (
 				Forgot your password
 			</button>
 		</span>
-		<button className="button button-block">Sign in</button>
+		<button className="button button--block">Sign in</button>
 	</div>
 
 )

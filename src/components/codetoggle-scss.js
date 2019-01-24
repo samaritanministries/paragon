@@ -1,4 +1,6 @@
 import React from 'react'
+import Prism from 'prismjs'
+import 'prismjs/components/prism-scss.min.js'
 
 class CodeToggleSCSS extends React.Component {
 
@@ -15,7 +17,6 @@ class CodeToggleSCSS extends React.Component {
   }
 
   componentDidMount() {
-    var Prism = window.Prism;
     Prism.highlightAll();
   }
 

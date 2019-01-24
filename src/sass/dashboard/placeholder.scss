@@ -82,7 +82,7 @@ $container-colors: transparent;//#413552
   }
 }
 
-.logo, .profile, .alert, .mobile-sidebar--button {
+.logo, .profile, .alert {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,4 +90,3 @@ $container-colors: transparent;//#413552
 
 .alert { margin-left: auto; }
 .logo, .header-nav { display: none; @media #{$tablet} { display: flex; } }
-.mobile-sidebar--button      { display: flex; @media #{$tablet} { display: none; } }

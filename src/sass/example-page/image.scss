@@ -64,3 +64,11 @@
   &#typography--specimen { background-image: url("../../img/typography-specimen.svg"); padding-bottom: 55%; }
   &#typography--line-length { background-image: url("../../img/typography--line-length.png"); padding-bottom: 40%; }
 }
+
+.card--image {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  vertical-align: middle;
+}

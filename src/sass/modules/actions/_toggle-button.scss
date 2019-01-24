@@ -1,82 +1,60 @@
+@mixin button-group($background-color, $color) {
+  .button { @include button($background-color, $color); }
+  input:checked ~ label { //active state of button-group
+    background-color: darken($background-color, 10%);
+    border-color: darken($background-color, 10%);
+  }
+}
+
+@mixin button-group--border($background-color, $checked-color) {
+  .button { @include transparent--button($gray-600); }
+  input:checked ~ label { //active state of button-group
+    background-color: $background-color;
+    border-color: $background-color;
+    color: $checked-color;
+    &:hover { background-color: $background-color; }
+    .dashing-icon:before { color: $checked-color; }
+  }
+}
+
 // Toggle Button Styles
 .button-group {
+  @extend .button--smooth;
   margin: 0;
   padding: 0;
   overflow: auto;
 
-  &.button-group--gray,
-  &.button-group--grey {
-    .button { @include button($background-color: $gray-200, $color: $gray-900); }
-    .button--radio input:checked ~ label { background-color: $gray-500; color: $white; }
-  }
-
-  &.button-group--blue {
-    .button { @include button($background-color: $blue, $color: $white); }
-    .button--radio input:checked ~ label { background-color: $blue-700; }
-  }
-
-  &.button-group--green {
-    .button { @include button($background-color: $green, $color: $white); }
-    .button--radio input:checked ~ label { background-color: $green-700; }
-  }
-
-  &.button-group--orange {
-    .button { @include button($background-color: $orange, $color: $white); }
-    .button--radio input:checked ~ label { background-color: $orange-700; }
-  }
-
-  &.button-group--purple {
-    .button { @include button($background-color: $purple, $color: $white); }
-    .button--radio input:checked ~ label { background-color: $purple-800; }
-  }
-
-  &.button-group--red {
-    .button { @include button($background-color: $red, $color: $white); }
-    .button--radio input:checked ~ label { background-color: $red-800; }
+  .button--radio    { @include button-group($blue, $white);} //default button-group style
+  &.button--blue    { .button--radio { @include button-group($blue, $white); } }
+  &.button--green   { .button--radio { @include button-group($green, $white); } }
+  &.button--orange  { .button--radio { @include button-group($orange, $black); } }
+  &.button--purple  { .button--radio { @include button-group($purple, $white); } }
+  &.button--red     { .button--radio { @include button-group($red, $white); } }
+  &.button--gray,
+  &.button--grey {
+    .button--radio { @include button-group($gray-200, $gray-900); }
+    .button { border-color: $gray-300 !important; }
   }
 
   //Border Button Groups
-  &.button-group--border {
-    .button--radio {
-      &:first-of-type {
-        .button { border-left: 2px solid $gray-300; }
-        input:checked ~ label { border-color: $green; }
-      }
-      &:last-of-type {
-        .button { border-right: 2px solid $gray-300; }
-        input:checked ~ label { border-color: $green; }
-      }
+  &.button--border {
+    .button--radio    { @include button-group--border($blue, $white);} //default button-group--border style
+    &.button--blue    { .button--radio { @include button-group--border($blue, $white); } }
+    &.button--green   { .button--radio { @include button-group--border($green, $white); } }
+    &.button--orange  { .button--radio { @include button-group--border($orange, $black); } }
+    &.button--purple  { .button--radio { @include button-group--border($purple, $white); } }
+    &.button--red     { .button--radio { @include button-group--border($red, $white); } }
+    &.button--gray,
+    &.button--grey {
+      .button--radio { @include button-group--border($gray-200, $gray-900); }
+      .button { border-color: $gray-300 !important; }
     }
-
     .button {
-      border: 2px solid $gray-300;
+      border: 1px solid $gray-300;
       display: inline-block;
-      padding: 0.4rem 0.9rem;
-      padding-top: 0.35rem;
+      background-color: transparent;
+      color: $gray-600;
     }
-
-    @mixin button-group($color) {
-      input:checked ~ label {
-        background-color: $color;
-        border-color: $color;
-        color: $white;
-        &:hover { color: $white; }
-      }
-
-      .button {
-        background-color: transparent;
-        color: $gray-600;
-        &:hover { color: $color; }
-      }
-    }
-
-    &.button-group--gray,
-    &.button-group--grey    { .button--radio { @include button-group($gray); } }
-    &.button-group--blue    { .button--radio { @include button-group($blue); } }
-    &.button-group--green   { .button--radio { @include button-group($green); } }
-    &.button-group--orange  { .button--radio { @include button-group($orange); } }
-    &.button-group--purple  { .button--radio { @include button-group($purple); } }
-    &.button-group--red     { .button--radio { @include button-group($red); } }
   }
 
   .button--radio {
@@ -85,12 +63,14 @@
     &:first-of-type label { margin-left: 0; }
     input { display: none; }
     label {
-      @media #{$phone} { border-left: 1px; }
       border-radius: 0;
       display: inline-block;
-      margin: 0 0 0 -2px;
+      margin: 0 0 0 -1px;
     }
   }
+
+  .dashing-icon { margin: 0 !important; }
+  .dashing-icon--arrow-left { width: 16px; } //fixes weird sizing difference between arrow-right and arrow-left
 }
 
 /* Vertical Button Styles
@@ -110,12 +90,12 @@
   flex-direction: column;
   .button--radio {
     display: block;
-    &:first-of-type label { margin-top: 2px; }
-    &:last-of-type label { margin-bottom: 2px; }
+    &:first-of-type label { margin-top: 0; }
     label {
       display: block !important;
-      border-width: 2px;
-      margin: -1px auto;
+      border-width: 1px;
+      margin: auto;
+      margin-top: -1px;
     }
   }
 }

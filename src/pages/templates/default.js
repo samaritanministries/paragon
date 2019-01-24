@@ -5,16 +5,16 @@ import '../../sass/example-page/example-page.scss'
 
 export default () => (
 
-<main>
+<div>
 	<header className="header">
-		<Link to={"/templates/mobile"} className="mobile-sidebar--button" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 		<div className="logo"><p className="text-color--white">LOGO</p></div>
 
 		<nav className="header-nav">
 			<ul>
-				<li><Link to={"/"} className="active">Home</Link></li>
-				<li><Link to={"/"}>Shares</Link></li>
-				<li><Link to={"/"}>Bill's</Link></li>
+				<li><Link to={"/"} className="active">Page 1</Link></li>
+				<li><Link to={"/"}>Page 2</Link></li>
+				<li><Link to={"/"}>Page 3</Link></li>
 			</ul>
 		</nav>
 
@@ -35,17 +35,17 @@ export default () => (
 		</ul>
 	</nav>
 
-	<section className="content">
+	<main className="content">
 		<div className="grid grid-padding">
 
 			<div>
-				<h1>Enter Information About Your Membership</h1>
-				<p>Add information below.</p>
+				<h1>Primary Header</h1>
+				<p>Header description</p>
 				<Link to="/templates/overpanel">Full Page</Link>
 			</div>
 
 		</div>
-	</section>
-</main>
+	</main>
+</div>
 
 )

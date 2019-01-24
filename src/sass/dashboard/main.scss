@@ -70,10 +70,6 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
   margin: auto;
   margin-top: $header-height;
   -webkit-overflow-scrolling: touch;
-
-  &.content--reader-width { //TODO rename this
-    max-width: $content-width / 2;
-  }
 }
 
 .sub-nav {
