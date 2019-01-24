@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -19,9 +18,7 @@ export default () => (
     <AppContent>
       <div className="row">
         <div className="column column--full">
-          <h2 className="example-header no-margin--top" id="defaultTable">Default Table
-            <Link to={window.location.pathname + "/#defaultTable"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header no-margin--top">Default Table <button className="button button--transparent button--copy-link" data-id="copyurl" id="Default_Table" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="table--container">
@@ -133,9 +130,7 @@ export default () => (
 </div>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="tableWithBorder">Table with Border
-            <Link to={window.location.pathname + "/#tableWithBorder"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Table with Border <button className="button button--transparent button--copy-link" data-id="copyurl" id="Table_With_Border" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="table--container has-border">
@@ -251,9 +246,7 @@ export default () => (
 $table--border: $gray-200 !default;`}
           </CodeToggleSCSS>
 
-          <h2 className="example-header" id="tableWithDividers">Table with Dividers
-            <Link to={window.location.pathname + "/#tableWithDividers"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Table with Dividers <button className="button button--transparent button--copy-link" data-id="copyurl" id="Table_With_Dividers" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="table--container">
@@ -369,9 +362,7 @@ $table--border: $gray-200 !default;`}
 $table--dividers: $gray-100 !default;`}
           </CodeToggleSCSS>
 
-          <h2 className="example-header" id="tableWithHover">Table with Hover
-            <Link to={window.location.pathname + "/#tableWithHover"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Table with Hover <button className="button button--transparent button--copy-link" data-id="copyurl" id="Table_With_Hover" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="table--container">
@@ -483,9 +474,7 @@ $table--dividers: $gray-100 !default;`}
 </div>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="tableWithColoredRows">Table with Colored Rows
-            <Link to={window.location.pathname + "/#tableWithColoredRows"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Table with Colored Rows <button className="button button--transparent button--copy-link" data-id="copyurl" id="Table_With_Colored_Rows" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="table--container">
@@ -602,9 +591,7 @@ $table--odd-row: $gray-50 !default;
 $table--even-row: $white !default;`}
           </CodeToggleSCSS>
 
-          <h2 className="example-header" id="exampleTable">Example Table
-            <Link to={window.location.pathname + "/#exampleTable"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Example Table <button className="button button--transparent button--copy-link" data-id="copyurl" id="Example_Table" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="table--container has-border">

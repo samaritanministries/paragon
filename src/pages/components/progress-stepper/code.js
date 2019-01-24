@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -19,9 +18,7 @@ export default () => (
     <AppContent>
       <div className="row">
         <div className="column column--full">
-          <h2 className="example-header no-margin--top" id="progressStepperTheming">Progress Stepper Theming
-            <Link to={window.location.pathname + "/#progressStepperTheming"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header no-margin--top">Progress Stepper Theming <button className="button button--transparent button--copy-link" data-id="copyurl" id="Progress_Theme" /></h2>
           <p>You can customize the color of your progress stepper and completed labels by altering the variable <code className="example-text">$progress-color</code> in your theme file.</p>
           <div className="row example-container hide-HTML-code">
             <div className="column column--full">
@@ -41,9 +38,7 @@ export default () => (
 $progress-color: $green;`}
           </CodeToggleSCSS>
 
-          <h2 className="example-header" id="widthOptions">Width Options
-            <Link to={window.location.pathname + "/#widthOptions"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Width Options<button className="button button--transparent button--copy-link" data-id="copyurl" id="Progress_Width" /></h2>
           <p>The width on this progress stepper can be set by an inline style or a class name.</p>
           <ul>
             <li>Inline width: <code className="example-text">style="width: 50%;"</code></li>
@@ -97,9 +92,7 @@ $progress-color: $green;`}
 </div>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="twoSteps">Two Steps
-            <Link to={window.location.pathname + "/#twoSteps"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Two Steps <button className="button button--transparent button--copy-link" data-id="copyurl" id="Two_Steps" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="progress">
@@ -166,9 +159,7 @@ $progress-color: $green;`}
 </div>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="threeSteps">Three Steps
-            <Link to={window.location.pathname + "/#threeSteps"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Three Steps <button className="button button--transparent button--copy-link" data-id="copyurl" id="Three_Steps" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="progress">
@@ -264,9 +255,7 @@ $progress-color: $green;`}
 </div>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="fourSteps">Four Steps 
-            <Link to={window.location.pathname + "/#fourSteps"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Four Steps <button className="button button--transparent button--copy-link" data-id="copyurl" id="Four_Steps" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="progress">

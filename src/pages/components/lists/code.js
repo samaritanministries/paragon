@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -19,9 +18,7 @@ export default () => (
     <AppContent>
       <div className="row">
         <div className="column column--full">
-          <h2 className="example-header no-margin--top" id="orderedLists">Ordered Lists
-            <Link to={window.location.pathname + "/#orderedLists"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header no-margin--top">Ordered Lists <button className="button button--transparent button--copy-link" data-id="copyurl" id="ordered-lists" /></h2>
           <div className="row example-container">
             <div className="column column--full" style={{ overflow: "auto" }}>
               <ol className="ordered-list--custom">
@@ -41,9 +38,7 @@ export default () => (
 </ol>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="customColoredLists">Custom Colored Lists
-            <Link to={window.location.pathname + "/#customColoredLists"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Custom Colored Lists <button className="button button--transparent button--copy-link" data-id="copyurl" id="ordered-lists" /></h2>
           <div className="row example-container">
             <div className="column column--full" style={{ overflow: "auto" }}>
               <ol className="ordered-list--custom ordered-list--sharing-blue">

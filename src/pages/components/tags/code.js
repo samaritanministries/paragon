@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -19,9 +18,7 @@ export default () => (
     <AppContent>
       <div className="row">
         <div className="column column--full">
-          <h2 className="example-header no-margin--top" id="solidTag">Solid Tag
-            <Link to={window.location.pathname + "/#solidTag"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header no-margin--top">Solid Tag <button className="button button--transparent button--copy-link" data-id="copyurl" id="Solid_Tag" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <a className="tag tag--blue tag--solid" href=" ">Blue Tag</a>
@@ -33,9 +30,7 @@ export default () => (
 <a class="tag tag--gray tag--solid">Gray Tag</a>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="largeTag">Large Tag
-            <Link to={window.location.pathname + "/#largeTag"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Large Tag <button className="button button--transparent button--copy-link" data-id="copyurl" id="Large_Tag" /></h2>
   			  <div className="row example-container">
       			<div className="column column--full ">
       				<a className="tag tag--blue tag--large" href=" ">Large Blue Tag</a>
@@ -47,9 +42,7 @@ export default () => (
 <a class="tag tag--gray tag--large tag--solid">Large Gray Tag</a>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="tagCounters">Tag Counters
-            <Link to={window.location.pathname + "/#tagCounters"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Tag Counters <button className="button button--transparent button--copy-link" data-id="copyurl" id="Tag_Counters" /></h2>
   				<div className="row example-container">
       			<div className="column column--full ">
       				<div className="tag--counter">
@@ -83,9 +76,7 @@ export default () => (
 </div>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="tagNoLink">Tag No Link
-            <Link to={window.location.pathname + "/#tagNoLink"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Tag - No Link <button className="button button--transparent button--copy-link" data-id="copyurl" id="Tag_No_Link" /></h2>
     			<div className="row example-container">
         			<div className="column column--full ">
         				<div className="tag tag--blue tag--no-link tag--solid" href=" ">Blue Tag</div>
@@ -97,9 +88,7 @@ export default () => (
 <a class="tag tag--gray tag--no-link tag--solid">Gray Tag</a>`}
             </CodeToggle>
 
-            <h2 className="example-header" id="tagColors">Tag Colors
-              <Link to={window.location.pathname + "/#tagColors"} className="button button--transparent button--copy-link"></Link>
-            </h2>
+            <h2 className="example-header">Tag - Colors <button className="button button--transparent button--copy-link" data-id="copyurl" id="Tag_Colors"/></h2>
 			      <div className="row example-container">
     			     <div className="column column--full">
         				<a className="tag" href=" ">Default Tag</a>
@@ -137,9 +126,7 @@ export default () => (
 <a class="tag tag--red tag--solid">Red Tag</a>`}
            </CodeToggle>
 
-           <h2 className="example-header" id="tagCustom">Tag Custom
-            <Link to={window.location.pathname + "/#tagCustom"} className="button button--transparent button--copy-link"></Link>
-           </h2>
+           <h2 className="example-header">Tag - Custom <button className="button button--transparent button--copy-link" data-id="copyurl" id="Tag_Custom" /></h2>
       			<div className="row example-container hide-HTML-code">
         			<div className="column column--full ">
         				<div className="tag plan-1 tag--large tag--no-link" href=" ">classNameic</div>

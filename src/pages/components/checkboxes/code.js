@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -20,9 +19,7 @@ export default () => (
     <div className="row">
       <div className="column column--full">
 
-        <h2 className="example-header no-margin--top" id="customCheckboxes">Custom Checkboxes
-          <Link to={window.location.pathname + "/#customCheckboxes"} className="button button--transparent button--copy-link"></Link>
-        </h2>
+        <h2 className="example-header no-margin--top">Custom Checkboxes <button className="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Checkboxes"></button></h2>
     		<p>To use custom checkboxes, be sure to include your input <strong>before</strong> your label. Failing to do so will break styles.</p>
     		<div className="row example-container">
     		  <fieldset className="column column--third">
@@ -192,9 +189,7 @@ $checkbox--disabled: $gray-150 !default; //Color of checkbox when checked and di
 $checkbox--icon-disabled: $gray-500 !default; //Color of check icon when checked and disabled`}
         </CodeToggleSCSS>
 
-        <h2 className="example-header" id="defaultCheckboxCard">Default Checkbox Card
-          <Link to={window.location.pathname + "/#defaultCheckboxCard"} className="button button--transparent button--copy-link"></Link>
-        </h2>
+        <h2 className="example-header">Default Checkbox Card <button className="button button--transparent button--copy-link" id="Default_Checkbox_Card"></button></h2>
     		<p>To use smaller checkbox cards apply the <code className="example-text">.checkbox-card--small</code> class to the <code className="example-text">.checkbox-card</code>.</p>
     		<div className="row example-container">
     		  <fieldset className="column column--full">
@@ -238,9 +233,7 @@ $card-checkbox--focus: $blue-300 !default; //Color of border around card-checkbo
 $card-checkbox--padding: 1rem !default; //Padding of checkbox`}
         </CodeToggleSCSS>
 
-        <h2 className="example-header" id="smallCheckboxCard">Small Checkbox Card
-          <Link to={window.location.pathname + "/#smallCheckboxCard"} className="button button--transparent button--copy-link"></Link>
-        </h2>
+        <h2 className="example-header">Small Checkbox Card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Small_Checkbox_Card"></button></h2>
     		<p>To use smaller checkbox cards apply the <code className="example-text">.checkbox-card--small</code> class to the <code className="example-text">.checkbox-card</code>.</p>
     		<div className="row example-container">
     			<fieldset className="column column--full">
@@ -278,9 +271,7 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox`}
 </fieldset>`}
         </CodeToggle>
 
-        <h2 className="example-header" id="blockCheckboxCard">Block Checkbox Card
-          <Link to={window.location.pathname + "/#blockCheckboxCard"} className="button button--transparent button--copy-link"></Link>
-        </h2>
+        <h2 className="example-header">Block Checkbox Card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Block_Checkbox_Card"></button></h2>
     		<p>To use block style checkbox cards apply the <code className="example-text">.is-block</code> class to the <code className="example-text">.checkbox-card</code>.</p>
     		<div className="row example-container">
     		  <fieldset className="column column--half">

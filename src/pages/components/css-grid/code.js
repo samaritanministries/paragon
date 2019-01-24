@@ -19,9 +19,7 @@ export default () => (
       <h4 className="grid-compatibility"><i className="dashing-icon dashing-icon--white dashing-icon--alert-filled"></i> You are viewing a grid fallback. This page will mimic grid as closely as it can.</h4>
       <div className="row">
         <div className="column column--full">
-          <h2 className="example-header" id="gridWithPadding">Grid with Padding
-            <Link to={window.location.pathname + "/#gridWithPadding"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Grid with Padding <button className="button button--transparent button--copy-link" data-id="copyurl" id="Grid_with_Padding" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="grid grid-highlight-blue grid-padding">
@@ -36,9 +34,7 @@ export default () => (
 </div>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="gridSeperations">Grid Seperations
-            <Link to={window.location.pathname + "/#gridSeperations"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Grid Seperations <button className="button button--transparent button--copy-link" data-id="copyurl" id="Grid_Seperations" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="grid grid--full grid-highlight-blue">
@@ -88,9 +84,7 @@ export default () => (
 </div>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="nestedGrids">Nested Grids
-            <Link to={window.location.pathname + "/#nestedGrids"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Nested Grids <button className="button button--transparent button--copy-link" data-id="copyurl" id="Nested_Grids" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="grid grid--full grid-highlight-blue">
@@ -139,9 +133,7 @@ export default () => (
 </div>`}
           </CodeToggle>
 
-          <h2 className="example-header" id="gridInAndWithCards">Grid in and with Cards
-            <Link to={window.location.pathname + "/#gridInAndWithCards"} className="button button--transparent button--copy-link"></Link>
-          </h2>
+          <h2 className="example-header">Grid in and with Cards <button className="button button--transparent button--copy-link" data-id="copyurl" id="Grid_in_and_with_Cards" /></h2>
           <div className="row example-container">
             <div className="column column--full">
               <div className="grid grid--full grid-highlight">

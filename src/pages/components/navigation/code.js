@@ -18,9 +18,7 @@ export default () => (
   <AppContent>
       <div className="grid grid-padding">
 
-        <h2 id="defaultNavigation">Default Navigation
-          <Link to={window.location.pathname + "/#defaultNavigation"} className="button button--transparent button--copy-link"></Link>
-        </h2>
+        <h2>Default Navigation</h2>
         <div className="example-container relative">
 
           <header className="header mb-space-m">
@@ -49,9 +47,7 @@ export default () => (
           </CodeToggle>
           </div>
 
-        <h2 className="mt-space-xl" id="subnavigation">Subnavigation
-          <Link to={window.location.pathname + "/#subnavigation"} className="button button--transparent button--copy-link"></Link>
-        </h2>
+        <h2 className="mt-space-xl">Subnavigation</h2>
         <div className="example-container relative">
 
           <header className="header">
