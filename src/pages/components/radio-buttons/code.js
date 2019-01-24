@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -18,7 +19,9 @@ export default () => (
     <AppContent>
       <div className="row">
         <div className="column column--full">
-        <h2 className="example-header no-margin--top">Custom Radio Buttons <button className="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Radio_Buttons"></button></h2>
+        <h2 className="example-header no-margin--top" id="customRadioButtons">Custom Radio Buttons
+          <Link to={window.location.pathname + "/#customRadioButtons"} className="button button--transparent button--copy-link"></Link>
+        </h2>
         <p>To use custom radio buttons, be sure to include your input <strong>before</strong> your label. Failing to do so will break styles.</p>
         <div className="row example-container">
           <fieldset className="column column--third">
@@ -187,7 +190,9 @@ $radio--disabled: $gray-150 !default; //Color of radio when checked and disabled
 $radio--icon-disabled: $gray-500 !default; //Color of radio icon when checked and disabled`}
           </CodeToggleSCSS>
 
-          <h2 className="example-header">Default Radio Card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Default_Radio_Card"></button></h2>
+          <h2 className="example-header" id="defaultRadioCard">Default Radio Card
+            <Link to={window.location.pathname + "/#defaultRadioCard"} className="button button--transparent button--copy-link"></Link>
+          </h2>
       		<p>To use smaller radio cards apply the <code className="example-text">.radio-card--small</code> class to the parent <code className="example-text">.radio-card</code>.</p>
       		<div className="row example-container">
       		  <fieldset className="column column--full">
@@ -231,7 +236,9 @@ $card-checkbox--focus: $blue-300 !default; //Color of border around card-checkbo
 $card-checkbox--padding: 1rem !default; //Padding of checkbox`}
           </CodeToggleSCSS>
 
-          <h2 className="example-header">Small Radio Card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Small_Radio_Card"></button></h2>
+          <h2 className="example-header" id="smallRadioCard">Small Radio Card
+            <Link to={window.location.pathname + "/#smallRadioCard"} className="button button--transparent button--copy-link"></Link>
+          </h2>
       		<p>To use smaller radio cards apply the <code className="example-text">.radio-card--small</code> className to the parent <code className="example-text">.radio-card</code>.</p>
       		<div className="row example-container">
       			<fieldset className="column column--full">
@@ -269,7 +276,9 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox`}
 </fieldset>`}
           </CodeToggle>
 
-          <h2 className="example-header">Block Radio Card <button className="button button--transparent button--copy-link" data-id="copyurl" id="Block_Radio_Card"></button></h2>
+          <h2 className="example-header" id="blockRadioCard">Block Radio Card 
+            <Link to={window.location.pathname + "/#blockRadioCard"} className="button button--transparent button--copy-link"></Link>
+          </h2>
       		<p>To use block style radio cards apply the <code className="example-text">.is-block</code> class to the <code className="example-text">.radio-card</code>.</p>
       		<div className="row example-container">
       		  <fieldset className="column column--half">

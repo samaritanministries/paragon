@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -17,7 +18,9 @@ export default () => (
   <AppContent>
 		<div className="grid grid-padding">
 
-      <h2>Form</h2>
+      <h2 id="form">Form
+        <Link to={window.location.pathname + "/#form"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-header has-border">
@@ -104,7 +107,9 @@ export default () => (
         </CodeToggle>
       </div>
 
-      <h2 className="mt-space-xl">States</h2>
+      <h2 className="mt-space-xl" id="states">States
+        <Link to={window.location.pathname + "/#states"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-header">
@@ -181,7 +186,9 @@ export default () => (
         </CodeToggle>
       </div>
 
-      <h2 className="mt-space-xl">Lists</h2>
+      <h2 className="mt-space-xl" id="lists">Lists
+        <Link to={window.location.pathname + "/#lists"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-header">
