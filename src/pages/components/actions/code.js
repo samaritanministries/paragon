@@ -18,7 +18,9 @@ export default () => (
     <AppContent>
     <div className="grid grid-padding">
 
-      <h2>Styles <button className="button button--transparent button--copy-link" data-id="copyurl" id="Buttonn_Styles"></button></h2>
+      <h2 id="styles">Styles
+        <Link to={window.location.pathname + "/#styles"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-content">
@@ -44,7 +46,9 @@ export default () => (
         </CodeToggle>
       </div>
 
-      <h2 className="mt-space-xl">States <button className="button button--transparent button--copy-link" data-id="copyurl" id="Default_Button"></button></h2>
+      <h2 className="mt-space-xl" id="states">States
+        <Link to={window.location.pathname + "/#states"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-content">
@@ -71,7 +75,9 @@ export default () => (
         </CodeToggle>
       </div>
 
-      <h2 className="mt-space-xl">Sizes <button className="button button--transparent button--copy-link" data-id="copyurl" id="Button_Sizes"></button></h2>
+      <h2 className="mt-space-xl" id="sizes">Sizes
+        <Link to={window.location.pathname + "/#sizes"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-content">
@@ -112,7 +118,9 @@ export default () => (
         </CodeToggle>
       </div>
 
-      <h2 className="mt-space-xl">Colors <button className="button button--transparent button--copy-link" data-id="copyurl" id="Button_Colors"></button></h2>
+      <h2 className="mt-space-xl" id="colors">Colors
+        <Link to={window.location.pathname + "/#colors"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-content">
@@ -280,7 +288,9 @@ export default () => (
         </CodeToggle>
       </div>
 
-      <h2 className="mt-space-xl">Icons <button className="button button--transparent button--copy-link" data-id="copyurl" id="Button_With_Icon"></button></h2>
+      <h2 className="mt-space-xl" id="icons">Icons
+        <Link to={window.location.pathname + "/#icons"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-content">
@@ -366,7 +376,9 @@ export default () => (
         </CodeToggle>
       </div>
 
-      <h2 className="mt-space-xl">Button Group <button className="button button--transparent button--copy-link" data-id="copyurl" id="Toggle_Button_Border_Button"></button></h2>
+      <h2 className="mt-space-xl">Button Group
+        <Link to={window.location.pathname + "/#buttonGroup"} className="button button--transparent button--copy-link"></Link>
+      </h2>
       <div className="example-container">
         <div className="card">
           <div className="card-content">
@@ -510,7 +522,9 @@ export default () => (
       </CodeToggle>
     </div>
 
-    <h2 className="mt-space-xl">Theme Options <button className="button button--transparent button--copy-link" data-id="copyurl" id="Theme_Options"></button></h2>
+    <h2 className="mt-space-xl" id="themeOptions">Theme Options
+      <Link to={window.location.pathname + "/#themeOptions"} className="button button--transparent button--copy-link"></Link>
+    </h2>
     <div className="example-container">
       <div className="card">
         <div className="card-content">
@@ -526,7 +540,9 @@ export default () => (
       </CodeToggle>
     </div>
 
-    <h2 className="mt-space-xl">Global Button Themes <button className="button button--transparent button--copy-link" data-id="copyurl" id="Global_Button_Themes"></button></h2>
+    <h2 className="mt-space-xl" id="globalButtonThemes">Global Button Themes
+      <Link to={window.location.pathname + "/#globalButtonThemes"} className="button button--transparent button--copy-link"></Link>
+    </h2>
     <p>Apply one of the following extendables to apply a button theme your entire project.</p>
     <div className="example-container">
       <div className="card hide-HTML-code">
