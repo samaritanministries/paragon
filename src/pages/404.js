@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import NotFoundLayout from '../components/NotFoundLayout'
+import NotFoundLayout from '../components/notfoundlayout'
 import AppContent from '../components/appcontent'
 
 export default () => (
