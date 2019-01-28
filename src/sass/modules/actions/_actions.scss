@@ -189,10 +189,6 @@ $button-disabled: "&[disabled], &.disabled, &.button--disabled";
     padding: $space-m;
     &:active { @extend %shadow-50; }
   }
-
-  &.button--transparent {
-    @include transparent--button($color: $gray-600); //makes default transparent button--icon gray
-  }
 }
 
 //Provides margin when a button and action are paired together
