@@ -41,11 +41,12 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
   }
 
   input:focus ~ label:before { box-shadow: none; }
-  input:focus ~ label { box-shadow: 0 0 0 2px $card-checkbox--focus; }
   input:checked ~ label, input:active ~ label {
     color: $card-checkbox--active;
     border: 2px solid $card-checkbox--active;
   }
+  input:focus ~ label,
+  input:hover:focus ~ label { box-shadow: 0 0 0 4px $card-checkbox--focus; }
 
   //disabled radio button
   input[disabled] ~ label,

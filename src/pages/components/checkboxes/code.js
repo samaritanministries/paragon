@@ -74,34 +74,34 @@ class CheckboxesCode extends React.Component {
 {`<!-- Default -->
 <fieldset>
   <label>Checkboxes</label>
-  <div className="checkbox--custom">
-    <input type="checkbox" id="checkbox1" defaultChecked={true}/>
-    <label htmlFor="checkbox1">Option 1</label>
+  <div class="checkbox--custom">
+    <input type="checkbox" id="checkbox1" checked/>
+    <label for="checkbox1">Option 1</label>
   </div>
-  <div className="checkbox--custom">
+  <div class="checkbox--custom">
     <input type="checkbox" id="checkbox2"/>
-    <label htmlFor="checkbox2">Option 2</label>
+    <label for="checkbox2">Option 2</label>
   </div>
-  <div className="checkbox--custom">
+  <div class="checkbox--custom">
     <input type="checkbox" id="checkbox3"/>
-    <label htmlFor="checkbox3">Option 3</label>
+    <label for="checkbox3">Option 3</label>
   </div>
 </fieldset>
 
 <!-- Inline -->
 <fieldset>
   <label>Inline Checkboxes</label>
-  <div className="checkbox--custom inline">
-    <input type="checkbox" id="inline-checkbox1" defaultChecked={true}/>
-    <label htmlFor="inline-checkbox1">Option 1</label>
+  <div class="checkbox--custom inline">
+    <input type="checkbox" id="inline-checkbox1" checked/>
+    <label for="inline-checkbox1">Option 1</label>
   </div>
-  <div className="checkbox--custom inline">
+  <div class="checkbox--custom inline">
     <input type="checkbox" id="inline-checkbox2"/>
-    <label htmlFor="inline-checkbox2">Option 2</label>
+    <label for="inline-checkbox2">Option 2</label>
   </div>
-  <div className="checkbox--custom inline">
+  <div class="checkbox--custom inline">
     <input type="checkbox" id="inline-checkbox3"/>
-    <label htmlFor="inline-checkbox3">Option 3</label>
+    <label for="inline-checkbox3">Option 3</label>
   </div>
 </fieldset>`}
         </CodeToggle>
@@ -194,68 +194,68 @@ class CheckboxesCode extends React.Component {
 {`<!-- Default -->
 <fieldset>
   <label>Default Radio Buttons</label>
-  <div className="radio--custom">
-    <input type="radio" name="default-radio" id="default-radio1" defaultChecked={true}/>
-    <label htmlFor="default-radio1">Option 1</label>
+  <div class="radio--custom">
+    <input type="radio" name="default-radio" id="default-radio1" checked/>
+    <label for="default-radio1">Option 1</label>
   </div>
-  <div className="radio--custom">
+  <div class="radio--custom">
     <input type="radio" name="default-radio" id="default-radio2"/>
-    <label htmlFor="default-radio2">Option 2</label>
+    <label for="default-radio2">Option 2</label>
   </div>
-  <div className="radio--custom">
+  <div class="radio--custom">
     <input type="radio" name="default-radio" id="default-radio3"/>
-    <label htmlFor="default-radio3">Option 3</label>
+    <label for="default-radio3">Option 3</label>
   </div>
 </fieldset>
 
 <!-- Disabled -->
 <fieldset>
   <label>Disabled Radio Buttons</label>
-  <div className="radio--custom">
-    <input type="radio" name="disabled-radio" id="disabled-radio1" disabled defaultChecked={true}/>
-    <label htmlFor="disabled-radio1">Option 1</label>
+  <div class="radio--custom">
+    <input type="radio" name="disabled-radio" id="disabled-radio1" disabled checked/>
+    <label for="disabled-radio1">Option 1</label>
   </div>
-  <div className="radio--custom">
+  <div class="radio--custom">
     <input type="radio" name="disabled-radio" id="disabled-radio2" disabled/>
-    <label htmlFor="disabled-radio2">Option 2</label>
+    <label for="disabled-radio2">Option 2</label>
   </div>
-  <div className="radio--custom">
+  <div class="radio--custom">
     <input type="radio" name="disabled-radio" id="disabled-radio3" disabled/>
-    <label htmlFor="disabled-radio3">Option 3</label>
+    <label for="disabled-radio3">Option 3</label>
   </div>
 </fieldset>
 
 <!-- Error -->
-<fieldset className="has-error">
+<fieldset class="has-error">
   <label>Error Radio Buttons</label>
-  <div className="radio--custom">
-    <input type="radio" name="error-radio" id="error-radio1" defaultChecked={true}/>
-    <label htmlFor="error-radio1">Option 1</label>
+  <div class="radio--custom">
+    <input type="radio" name="error-radio" id="error-radio1" checked/>
+    <label for="error-radio1">Option 1</label>
   </div>
-  <div className="radio--custom">
+  <div class="radio--custom">
     <input type="radio" name="error-radio" id="error-radio2"/>
-    <label htmlFor="error-radio2">Option 2</label>
+    <label for="error-radio2">Option 2</label>
   </div>
-  <div className="radio--custom">
+  <div class="radio--custom">
     <input type="radio" name="error-radio" id="error-radio3"/>
-    <label htmlFor="error-radio3">Option 3</label>
+    <label for="error-radio3">Option 3</label>
   </div>
 </fieldset>
 
 <!-- Warning -->
-<fieldset className="has-warning">
+<fieldset class="has-warning">
   <label>Warning Radio Buttons</label>
-  <div className="radio--custom">
-    <input type="radio" name="warning-radio" id="warning-radio1" defaultChecked={true}/>
-    <label htmlFor="warning-radio1">Option 1</label>
+  <div class="radio--custom">
+    <input type="radio" name="warning-radio" id="warning-radio1" checked/>
+    <label for="warning-radio1">Option 1</label>
   </div>
-  <div className="radio--custom">
+  <div class="radio--custom">
     <input type="radio" name="warning-radio" id="warning-radio2"/>
-    <label htmlFor="warning-radio2">Option 2</label>
+    <label for="warning-radio2">Option 2</label>
   </div>
-  <div className="radio--custom">
+  <div class="radio--custom">
     <input type="radio" name="warning-radio" id="warning-radio3"/>
-    <label htmlFor="warning-radio3">Option 3</label>
+    <label for="warning-radio3">Option 3</label>
   </div>
 </fieldset>`}
         </CodeToggle>
@@ -308,34 +308,34 @@ class CheckboxesCode extends React.Component {
 {`<!-- Checkbox Cards -->
 <fieldset>
   <label>Default Checkbox Card</label>
-  <div className="checkbox-card">
-    <input type="checkbox" name="checkbox-card" id="checkbox-card1" defaultChecked={true}/>
-    <label htmlFor="checkbox-card1" className="card">Option 1</label>
+  <div class="checkbox-card">
+    <input type="checkbox" name="checkbox-card" id="checkbox-card1" checked/>
+    <label for="checkbox-card1" class="card">Option 1</label>
   </div>
-  <div className="checkbox-card">
+  <div class="checkbox-card">
     <input type="checkbox" name="checkbox-card" id="checkbox-card2" />
-    <label htmlFor="checkbox-card2" className="card">Option 2</label>
+    <label for="checkbox-card2" class="card">Option 2</label>
   </div>
-  <div className="checkbox-card">
+  <div class="checkbox-card">
     <input type="checkbox" name="checkbox-card" id="checkbox-card3" />
-    <label htmlFor="checkbox-card3" className="card">Option 3</label>
+    <label for="checkbox-card3" class="card">Option 3</label>
   </div>
 </fieldset>
 
 <!-- Disabled Checkbox Cards -->
 <fieldset>
   <label>Disabled Checkbox Card</label>
-  <div className="checkbox-card">
-    <input type="checkbox" name="disabled-checkbox-card" id="disabled-checkbox-card1" disabled defaultChecked={true} />
-    <label htmlFor="disabled-checkbox-card1" className="card">Option 1</label>
+  <div class="checkbox-card">
+    <input type="checkbox" name="disabled-checkbox-card" id="disabled-checkbox-card1" disabled checked/>
+    <label for="disabled-checkbox-card1" class="card">Option 1</label>
   </div>
-  <div className="checkbox-card">
+  <div class="checkbox-card">
     <input type="checkbox" name="disabled-checkbox-card" id="disabled-checkbox-card2" disabled />
-    <label htmlFor="disabled-checkbox-card2" className="card">Option 2</label>
+    <label for="disabled-checkbox-card2" class="card">Option 2</label>
   </div>
-  <div className="checkbox-card">
+  <div class="checkbox-card">
     <input type="checkbox" name="disabled-checkbox-card" id="disabled-checkbox-card3" disabled />
-    <label htmlFor="disabled-checkbox-card3" className="card">Option 3</label>
+    <label for="disabled-checkbox-card3" class="card">Option 3</label>
   </div>
 </fieldset>`}
         </CodeToggle>
@@ -427,52 +427,52 @@ class CheckboxesCode extends React.Component {
 {`<!-- Small Checkbox Card -->
 <fieldset>
   <label>Small Checkbox Card</label>
-  <div className="checkbox-card checkbox-card--small">
-    <input type="checkbox" name="checkbox-small" id="checkbox-small1" defaultChecked={true}/>
-    <label htmlFor="checkbox-small1" className="card">Option 1</label>
+  <div class="checkbox-card checkbox-card--small">
+    <input type="checkbox" name="checkbox-small" id="checkbox-small1" checked/>
+    <label for="checkbox-small1" class="card">Option 1</label>
   </div>
-  <div className="checkbox-card checkbox-card--small">
+  <div class="checkbox-card checkbox-card--small">
     <input type="checkbox" name="checkbox-small" id="checkbox-small2" />
-    <label htmlFor="checkbox-small2" className="card">Option 2</label>
+    <label for="checkbox-small2" class="card">Option 2</label>
   </div>
-  <div className="checkbox-card checkbox-card--small">
+  <div class="checkbox-card checkbox-card--small">
     <input type="checkbox" name="checkbox-small" id="checkbox-small3" />
-    <label htmlFor="checkbox-small3" className="card">Option 3</label>
+    <label for="checkbox-small3" class="card">Option 3</label>
   </div>
 </fieldset>
 
 <!-- Default Radio Card -->
 <fieldset>
   <label>Default Checkbox Card</label>
-  <div className="checkbox-card">
-    <input type="checkbox" name="checkbox-card-normal" id="checkbox-card-normal1" defaultChecked={true}/>
-    <label htmlFor="checkbox-card-normal1" className="card">Option 1</label>
+  <div class="checkbox-card">
+    <input type="checkbox" name="checkbox-card-normal" id="checkbox-card-normal1" checked/>
+    <label for="checkbox-card-normal1" class="card">Option 1</label>
   </div>
-  <div className="checkbox-card">
+  <div class="checkbox-card">
     <input type="checkbox" name="checkbox-card-normal" id="checkbox-card-normal2" />
-    <label htmlFor="checkbox-card-normal2" className="card">Option 2</label>
+    <label for="checkbox-card-normal2" class="card">Option 2</label>
   </div>
-  <div className="checkbox-card">
+  <div class="checkbox-card">
     <input type="checkbox" name="checkbox-card-normal" id="checkbox-card-normal3" />
-    <label htmlFor="checkbox-card-normal3" className="card">Option 3</label>
+    <label for="checkbox-card-normal3" class="card">Option 3</label>
   </div>
 </fieldset>
 
 <!-- Flex Radio Card -->
 <fieldset>
   <label>Flex Checkbox Card</label>
-  <div className="flex-row">
-    <div className="checkbox-card">
-      <input type="checkbox" name="checkbox-card-flex" id="checkbox-card-flex1" defaultChecked={true}/>
-      <label htmlFor="checkbox-card-flex1" className="card">Option 3</label>
+  <div class="flex-row">
+    <div class="checkbox-card">
+      <input type="checkbox" name="checkbox-card-flex" id="checkbox-card-flex1" checked/>
+      <label for="checkbox-card-flex1" class="card">Option 3</label>
     </div>
-    <div className="checkbox-card">
+    <div class="checkbox-card">
       <input type="checkbox" name="checkbox-card-flex" id="checkbox-card-flex2" />
-      <label htmlFor="checkbox-card-flex2" className="card">Option 3</label>
+      <label for="checkbox-card-flex2" class="card">Option 3</label>
     </div>
-    <div className="checkbox-card">
+    <div class="checkbox-card">
       <input type="checkbox" name="checkbox-card-flex" id="checkbox-card-flex3" />
-      <label htmlFor="checkbox-card-flex3" className="card">Option 3</label>
+      <label for="checkbox-card-flex3" class="card">Option 3</label>
     </div>
   </div>
 </fieldset>
@@ -480,17 +480,17 @@ class CheckboxesCode extends React.Component {
 <!-- Block Radio Card -->
 <fieldset>
   <label>Block Checkbox Card</label>
-  <div className="checkbox-card checkbox-card--block">
-    <input type="checkbox" name="checkbox-card-block" id="checkbox-card-block1" defaultChecked={true}/>
-    <label htmlFor="checkbox-card-block1" className="card">Option 1</label>
+  <div class="checkbox-card checkbox-card--block">
+    <input type="checkbox" name="checkbox-card-block" id="checkbox-card-block1" checked/>
+    <label for="checkbox-card-block1" class="card">Option 1</label>
   </div>
-  <div className="checkbox-card checkbox-card--block">
+  <div class="checkbox-card checkbox-card--block">
     <input type="checkbox" name="checkbox-card-block" id="checkbox-card-block2" />
-    <label htmlFor="checkbox-card-block2" className="card">Option 2</label>
+    <label for="checkbox-card-block2" class="card">Option 2</label>
   </div>
-  <div className="checkbox-card checkbox-card--block">
+  <div class="checkbox-card checkbox-card--block">
     <input type="checkbox" name="checkbox-card-block" id="checkbox-card-block3" />
-    <label htmlFor="checkbox-card-block3" className="card">Option 3</label>
+    <label for="checkbox-card-block3" className="card">Option 3</label>
   </div>
 </fieldset>`}
         </CodeToggle>
