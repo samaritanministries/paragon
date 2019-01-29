@@ -1,228 +1,135 @@
-$menu-height-condensed: 4.6rem; //Use this if you do not have navigation within your header
-$menu-height-expanded: 7.05rem; //Use this if you have navigation within your header
-$menu-color: $gray-100 !default; //Override this variable to change the color of your header
+//--------------------------------\\
+//---------- VARIABLES  ----------\\
+//--------------------------------\\
 
-@function auto-color($color) {
-  @if (lightness($color) > 60) { @return $gray-900; }
-  @else { @return $white; }
-}
+$content-width: 1200px !default;
 
-.app-menu {
-  background-color: rgba($menu-color, 0.97);
-  box-shadow: 0 2px 6px $gray-200;
-  height: auto !important;
-  position: absolute;
+$header-height: 4rem;
+$sub-nav-height: 3rem;
+
+//Theme
+$header-color: $brand-blue !default;
+$sub-nav-color: $white !default;
+$header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
+
+.header {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: $space-xs;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 10;
+  right: 0;
+  height: $header-height;
+  max-height: $header-height;
 
-  .app-context {
-    max-width: $global-content-width;
-    margin: auto;
-    padding: 1rem;
+  max-width: $content-width;
+  margin: auto;
 
-    //Every App should include an App Title
-    .app-title {
-      color: auto-color($menu-color);
-      font-size: $font-size-medium;
-      font-weight: 600;
+  width: 100%;//IE wants this... okay IE. Here you are.
 
-      a {
-        color: auto-color($menu-color);
-        &:hover { color: rgba(auto-color($menu-color), .60); }
+  &::after {
+    z-index: -1;
+  	content: "";
+  	width: 100%;
+  	height: $header-height;
+    background: $header-color;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  }
 
-        //Use to apply a clickable style to your App Title
-        &.app-title--has-breadcrumb {
-          color: rgba(auto-color($menu-color), .50);
-          cursor: pointer;
-          transition: $global-transition;
-          &:hover { color: rgba(auto-color($menu-color), 1); }
-        }
-      }
+  .header-nav {
 
-      //Auto-colors the button and dashing-icon
-      .button--navigation {
-        @extend .button--small;
-        @extend .button--smooth;
-        @extend .dashing-icon;
-        @include button(darken($menu-color, 8%), auto-color($menu-color));
-        padding: 0.4rem 0.55rem !important;
-        position: relative;
-        top: -3px;
-        margin-right: 0.5rem;
-        text-decoration: none;
-        &:before {
-          content: '\e82a';
-          color: auto-color($menu-color) !important;
-          margin-right: 0.35rem;
-        }
-        &:after { content: 'Back'; }
-      }
-    }
-
-    ul.header-description {
-      color: auto-color($menu-color);
-      float: right;
-      position: relative;
-      top: -1.4rem;
-      height: 0;
-      margin: 0;
-      padding: 0;
-      list-style: none;
+    ul {
+      @extend %remove-list-style;
 
       li {
-        text-align: right;
         display: inline-block;
-        font-weight: 600;
-        margin-right: 1rem;
+        align-items: center;
 
-        &:last-of-type { margin-right: 0; }
+        a {
+          margin: 0 $space-m;
+          display: flex;
+          align-items: center;
+          color: $sub-nav-color;
+          font-weight: 600;
+          font-size: 1.1rem;
+          border-bottom: 2px solid transparent;
+          @include transition(0.2s ease-out);
 
-        .header-description--label,
-        .header-description--content { display: block; }
-        .header-description--label { font-size: $font-size-xsmall; }
-        .header-description--content { font-size: $font-size-medium; }
+          &:hover, &.active { border-bottom: 2px solid $sub-nav-color; }
+
+        }
       }
     }
   }
+}
 
-  .app-navigation {
+.content {
+  z-index: 0;
+  max-width: $content-width;
+  margin: auto;
+  margin-top: $header-height;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sub-nav {
+  z-index: 1;
+  height: $sub-nav-height;
+
+  ~.content {
+    margin-top: calc(#{$header-height} + #{$sub-nav-height});
+  }
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: $header-height;
+
+  max-width: $content-width;
+  margin: auto;
+
+  width: 100%;
+
+  &::after {
+  	content: "";
+    box-shadow: $header-shadow;
+  	width: 100%;
+  	height: $sub-nav-height;
+    background-color: $sub-nav-color;
+  	position: fixed;
+  	top: $header-height;
+  	left: 0;
+  	z-index: -1;
+  }
+
+  ul, li, a {
+    height: 100%;
+  }
+
+  ul {
     @extend %remove-list-style;
-    @extend %clearfix;
-    max-width: $global-content-width;
-    margin: auto;
-    overflow: hidden;
-    overflow-x: auto;
-    padding: 0 1rem;
     white-space: nowrap;
-
-    li, a {
-      border-bottom: 4px solid transparent;
-      padding-bottom: 0.5rem;
-    }
+    overflow-x: auto;
+    overflow-y: hidden;
 
     li {
       display: inline-block;
-      float: none;
-
-      &.active a,
-      a.active,
-      &.is-active a,
-      a.is-active {
-        color: auto-color($menu-color) !important;
-        border-bottom: 4px solid !important;
-      }
+      margin: 0 $space-m;
 
       a {
-        @extend %action;
-        color: rgba(auto-color($menu-color), .60);
-        font-size: $font-size-normal;
-        line-height: 0.9rem;
-        margin: 0;
-        margin-right: 1.2rem !important; //Ignores first-of-type and last-of-type margin default to %actions
-        transition: $global-transition;
+        display: flex;
+        align-items: center;
+        color: $header-color;
+        font-weight: 600;
+        font-size: 1rem;
+        @include transition(0.2s ease-out);
 
-        &:hover {
-          color: auto-color($menu-color);
-          .dashing-icon {
-            opacity: 1;
-          }
-        }
-
-        .dashing-icon { //TODO add support to dashing
-          opacity: .6;
-          transition: $global-transition;
-        }
+        border-bottom: 3px solid transparent;
+        &:hover, &.active  { border-bottom: 3px solid $header-color; }
       }
     }
   }
-
-  .dashing-icon--new-tab:before {
-    color: rgba(auto-color($menu-color), .90);
-  }
-
-  .dashing-icon--arrow-right:before {
-    color: rgba(auto-color($menu-color), .50);
-    font-size: 12px;
-    position: relative;
-    top: -2px;
-  }
-
-  //Add this class to your app-menu if you do not have navigation items
-  &.condensed {
-    height: $menu-height-condensed;
-  }
-
-  //Add this class to your app-menu if you have navigation items
-  &.expanded {
-    height: $menu-height-expanded;
-  }
-
-  &.fixed {
-    position: fixed;
-  }
-
-  //Positioning for main button icon element
-  .button--icon--main {
-    position: absolute;
-    right: 1rem;
-    bottom: -1.5rem;
-    @media screen and (min-width: #{$global-content-width}) {
-      right:calc(50% - (#{$global-content-width}/2) - 0.4rem);
-    }
-  }
-}
-
-//Use .has-search to add a search bar to the navigation
-.app-menu {
-    &.has-search {
-        .app-context {
-            padding: 0.5rem 1rem;
-            @media #{$tablet} {
-                display: flex;
-                align-items: center;
-            }
-        }
-
-        .app-title {
-            display: inline-block;
-        }
-
-        .search-input {
-            padding-top: 0.5rem;
-
-            @media #{$tablet} {
-                margin-left: auto;
-                padding-top: 0rem;
-                width: auto;
-            }
-        }
-
-        fieldset input[type="text"] {
-            border-color: transparent;
-        }
-    }
-}
-//This sets padding of your app content relative to the size of your app-menu
-.app-menu.has-search ~ .app-content {
-    padding-top: 5.75rem;
-    @media #{$tablet} {
-        padding-top: 3.75rem;
-    }
-}
-
-.app-menu.expanded.has-search ~ .app-content {
-    padding-top: 8rem;
-    @media #{$tablet} {
-        padding-top: 5.75rem;
-    }
-}
-
-.app-menu ~ .app-content {
-  padding-top: $menu-height-condensed;
-}
-
-.app-menu.expanded ~ .app-content {
-  padding-top: $menu-height-expanded;
 }
