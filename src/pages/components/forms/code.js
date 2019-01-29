@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -8,36 +10,44 @@ import CodeToggle from '../../../components/codetoggle'
 const currentPageName = "Forms";
 const currentPageNameLower = currentPageName.toLowerCase();
 
-export default () => (
-  <Layout>
-    <header className="subnav">
-      <h1>{currentPageName}</h1>
-      <SubNav pageName={currentPageNameLower}/>
-    </header>
-  <AppContent>
-		<div className="grid grid-padding">
+class FooterCode extends React.Component {
+  static propTypes = { location: PropTypes.object.isRequired }
 
-      <h2>Forms <button className="button button--transparent button--copy-link" data-id="copyurl" id="Forms" /></h2>
-      <div className="example-container">
-        <div className="card">
-          <div className="card-content">
-            <fieldset>
-              <label htmlFor="form-text">Text Input</label>
-              <input type="text" id="form-text"/>
-            </fieldset>
+  render() {
+    const { location } = this.props;
 
-            <fieldset>
-              <label htmlFor="form-text-disabled">Text Input disabled</label>
-              <input type="text" id="form-text-disabled" value="This input is disabled" disabled />
-            </fieldset>
+    return (
+      <Layout>
+        <header className="subnav">
+          <h1>{currentPageName}</h1>
+          <SubNav pageName={currentPageNameLower}/>
+        </header>
+      <AppContent>
+    		<div className="grid grid-padding">
 
-            <fieldset>
-              <label htmlFor="form-textarea">Textarea</label>
-              <textarea id="form-textarea"></textarea>
-            </fieldset>
-          </div>
-        </div>
-        <CodeToggle>
+          <h2 id="forms">Forms
+            <Link to={location.pathname + "/#forms"} className="button button--transparent button--copy-link"></Link>
+          </h2>
+          <div className="example-container">
+            <div className="card">
+              <div className="card-content">
+                <fieldset>
+                  <label htmlFor="form-text">Text Input</label>
+                  <input type="text" id="form-text"/>
+                </fieldset>
+
+                <fieldset>
+                  <label htmlFor="form-text-disabled">Text Input disabled</label>
+                  <input type="text" id="form-text-disabled" value="This input is disabled" disabled />
+                </fieldset>
+
+                <fieldset>
+                  <label htmlFor="form-textarea">Textarea</label>
+                  <textarea id="form-textarea"></textarea>
+                </fieldset>
+              </div>
+            </div>
+            <CodeToggle>
 {`<!-- Default Input -->
 <div class="card">
 <div class="card-content">
@@ -57,25 +67,27 @@ export default () => (
   </fieldset>
 </div>
 </div>`}
-        </CodeToggle>
-      </div>
-
-      <h2 className="mt-space-xl">Select Menu <button className="button button--transparent button--copy-link" data-id="copyurl" id="Forms" /></h2>
-      <p>To add the drop-down icon, add the <code className="example-text">.select--has-icon</code> class to the parent container. Ensure you also have the dashing-icon font library properly installed.</p>
-      <div className="example-container">
-        <div className="card">
-          <div className="card-content">
-            <fieldset className="select--has-icon">
-              <label htmlFor="form-add-on-menu">Select Menu</label>
-              <select id="form-add-on-menu">
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-              </select>
-            </fieldset>
+            </CodeToggle>
           </div>
-        </div>
-        <CodeToggle>
+
+          <h2 className="mt-space-xl" id="selectMenu">Select Menu
+            <Link to={location.pathname + "/#selectMenu"} className="button button--transparent button--copy-link"></Link>
+          </h2>
+          <p>To add the drop-down icon, add the <code className="example-text">.select--has-icon</code> class to the parent container. Ensure you also have the dashing-icon font library properly installed.</p>
+          <div className="example-container">
+            <div className="card">
+              <div className="card-content">
+                <fieldset className="select--has-icon">
+                  <label htmlFor="form-add-on-menu">Select Menu</label>
+                  <select id="form-add-on-menu">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+                </fieldset>
+              </div>
+            </div>
+            <CodeToggle>
 {`<!-- Select Element with custom icon -->
 <div card="card">
 <div card="card-content">
@@ -89,47 +101,49 @@ export default () => (
   </fieldset>
 </div>
 </div>`}
-        </CodeToggle>
-      </div>
-
-      <h2 className="mt-space-xl">Input Groups <button className="button button--transparent button--copy-link" data-id="copyurl" id="Input_Addon" /></h2>
-      <div className="example-container">
-        <div className="card">
-          <div className="card-content flex-content">
-            <div className="flex-row">
-              <fieldset className="select--has-icon">
-                <label htmlFor="form-input-group">Input Group</label>
-                <div className="input--add-on">
-                  <input type="text" className="add-on--before" id="form-input-group" placeholder="e.g. (481) 516-2342"/>
-                  <select type="text" className="add-on--after">
-                    <option>Home</option>
-                    <option>Mobile</option>
-                    <option>Work</option>
-                  </select>
-                </div>
-              </fieldset>
-            </div>
-            <div className="flex-row">
-              <fieldset>
-                <label htmlFor="form-input-action1">Add-on button</label>
-                <div className="input--add-on">
-                  <input type="text" className="add-on--before" id="form-input-action1"/>
-                  <input type="submit" className="button button--green add-on--after" value="Submit" />
-                </div>
-              </fieldset>
-              <fieldset>
-                <label htmlFor="form-input-action4">Add-on border icon</label>
-                <div className="input--add-on">
-                  <input type="text" className="add-on--before" id="form-input-action4"/>
-                  <button className="button--icon button--border add-on--after">
-                    <i className="dashing-icon dashing-icon--search"></i>
-                  </button>
-                </div>
-              </fieldset>
-            </div>
+            </CodeToggle>
           </div>
-        </div>
-        <CodeToggle>
+
+          <h2 className="mt-space-xl" id="inputGroups">Input Groups
+            <Link to={location.pathname + "/#inputGroups"} className="button button--transparent button--copy-link"></Link>
+          </h2>
+          <div className="example-container">
+            <div className="card">
+              <div className="card-content flex-content">
+                <div className="flex-row">
+                  <fieldset className="select--has-icon">
+                    <label htmlFor="form-input-group">Input Group</label>
+                    <div className="input--add-on">
+                      <input type="text" className="add-on--before" id="form-input-group" placeholder="e.g. (481) 516-2342"/>
+                      <select type="text" className="add-on--after">
+                        <option>Home</option>
+                        <option>Mobile</option>
+                        <option>Work</option>
+                      </select>
+                    </div>
+                  </fieldset>
+                </div>
+                <div className="flex-row">
+                  <fieldset>
+                    <label htmlFor="form-input-action1">Add-on button</label>
+                    <div className="input--add-on">
+                      <input type="text" className="add-on--before" id="form-input-action1"/>
+                      <input type="submit" className="button button--green add-on--after" value="Submit" />
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <label htmlFor="form-input-action4">Add-on border icon</label>
+                    <div className="input--add-on">
+                      <input type="text" className="add-on--before" id="form-input-action4"/>
+                      <button className="button--icon button--border add-on--after">
+                        <i className="dashing-icon dashing-icon--search"></i>
+                      </button>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <CodeToggle>
 
 {`<!-- This is an example of an add-on -->
 <div class="card">
@@ -167,34 +181,36 @@ export default () => (
   </div>
 </div>
 </div>`}
-        </CodeToggle>
-      </div>
-
-      <h2 className="mt-space-xl">Input Message States <button className="button button--transparent button--copy-link" data-id="copyurl" id="Input_Message_States" /></h2>
-      <div className="example-container">
-        <div className="card">
-          <div className="card-content">
-            <fieldset>
-              <label htmlFor="dashing-text-message">Dashing Text Input with message</label>
-              <input type="text" id="dashing-text-message"/>
-              <div className="message">Default messages can be used to give additional information about an input.</div>
-            </fieldset>
-
-            <fieldset className="has-error">
-              <label htmlFor="dashing-text-error">Dashing Text Input with error</label>
-              <input type="text" id="dashing-text-error"/>
-              <div className="message">Error messages are used to explain system failures or user errors.</div>
-            </fieldset>
-
-            <fieldset className="has-warning">
-              <label htmlFor="dashing-text-warning">Dashing Text Input with warning</label>
-              <input type="text" id="dashing-text-warning"/>
-              <div className="message">Use warnings to convey important messages to your user.</div>
-            </fieldset>
+            </CodeToggle>
           </div>
-        </div>
 
-      <CodeToggle>
+          <h2 className="mt-space-xl" id="inputMessageStates">Input Message States
+            <Link to={location.pathname + "/#inputMessageStates"} className="button button--transparent button--copy-link"></Link>
+          </h2>
+          <div className="example-container">
+            <div className="card">
+              <div className="card-content">
+                <fieldset>
+                  <label htmlFor="dashing-text-message">Dashing Text Input with message</label>
+                  <input type="text" id="dashing-text-message"/>
+                  <div className="message">Default messages can be used to give additional information about an input.</div>
+                </fieldset>
+
+                <fieldset className="has-error">
+                  <label htmlFor="dashing-text-error">Dashing Text Input with error</label>
+                  <input type="text" id="dashing-text-error"/>
+                  <div className="message">Error messages are used to explain system failures or user errors.</div>
+                </fieldset>
+
+                <fieldset className="has-warning">
+                  <label htmlFor="dashing-text-warning">Dashing Text Input with warning</label>
+                  <input type="text" id="dashing-text-warning"/>
+                  <div className="message">Use warnings to convey important messages to your user.</div>
+                </fieldset>
+              </div>
+            </div>
+
+          <CodeToggle>
 {`<!-- Default Message -->
 <div class="card">
 <div class="card-content">
@@ -217,55 +233,57 @@ export default () => (
   </fieldset>
 </div>
 </div>`}
-          </CodeToggle>
-        </div>
-
-        <h2 className="mt-space-xl">Other Supported Input Types <button className="button button--transparent button--copy-link" data-id="copyurl" id="Other_Supported_Types" /></h2>
-        <div className="example-container">
-          <div className="card">
-            <div className="card-content">
-              <fieldset>
-                <label htmlFor="dashing-date">Dashing Date</label>
-                <input type="date" id="dashing-date"/>
-              </fieldset>
-
-              <fieldset>
-                <label htmlFor="dashing-time">Dashing Time</label>
-                <input type="time" id="dashing-time"/>
-              </fieldset>
-
-              <fieldset>
-                <label htmlFor="dashing-month">Dashing Month</label>
-                <input type="month" id="dashing-month"/>
-              </fieldset>
-
-              <fieldset>
-                <label htmlFor="dashing-email">Dashing Email</label>
-                <input type="email" id="dashing-email" placeholder="e.g. ryan@fitzinator.com"/>
-              </fieldset>
-
-              <fieldset>
-                <label htmlFor="dashing-password">Dashing Password</label>
-                <input type="password" id="dashing-password"/>
-              </fieldset>
-
-              <fieldset>
-                <label htmlFor="dashing-number">Dashing Number</label>
-                <input type="number" id="dashing-number"/>
-              </fieldset>
-
-              <fieldset>
-                <label htmlFor="dashing-tel">Dashing Tel</label>
-                <input type="tel" id="dashing-tel"/>
-              </fieldset>
-
-              <fieldset>
-                <label htmlFor="dashing-file">Dashing File</label>
-                <input type="file" id="dashing-file"/>
-              </fieldset>
+              </CodeToggle>
             </div>
-          </div>
-          <CodeToggle>
+
+            <h2 className="mt-space-xl" id="otherSupportedInputTypes">Other Supported Input Types
+              <Link to={location.pathname + "/#otherSupportedInputTypes"} className="button button--transparent button--copy-link"></Link>
+            </h2>
+            <div className="example-container">
+              <div className="card">
+                <div className="card-content">
+                  <fieldset>
+                    <label htmlFor="dashing-date">Dashing Date</label>
+                    <input type="date" id="dashing-date"/>
+                  </fieldset>
+
+                  <fieldset>
+                    <label htmlFor="dashing-time">Dashing Time</label>
+                    <input type="time" id="dashing-time"/>
+                  </fieldset>
+
+                  <fieldset>
+                    <label htmlFor="dashing-month">Dashing Month</label>
+                    <input type="month" id="dashing-month"/>
+                  </fieldset>
+
+                  <fieldset>
+                    <label htmlFor="dashing-email">Dashing Email</label>
+                    <input type="email" id="dashing-email" placeholder="e.g. ryan@fitzinator.com"/>
+                  </fieldset>
+
+                  <fieldset>
+                    <label htmlFor="dashing-password">Dashing Password</label>
+                    <input type="password" id="dashing-password"/>
+                  </fieldset>
+
+                  <fieldset>
+                    <label htmlFor="dashing-number">Dashing Number</label>
+                    <input type="number" id="dashing-number"/>
+                  </fieldset>
+
+                  <fieldset>
+                    <label htmlFor="dashing-tel">Dashing Tel</label>
+                    <input type="tel" id="dashing-tel"/>
+                  </fieldset>
+
+                  <fieldset>
+                    <label htmlFor="dashing-file">Dashing File</label>
+                    <input type="file" id="dashing-file"/>
+                  </fieldset>
+                </div>
+              </div>
+              <CodeToggle>
 {`<div class="card">
 <div class="card-content">
   <fieldset>
@@ -309,75 +327,79 @@ export default () => (
   </fieldset>
 </div>
 </div>`}
-          </CodeToggle>
-        </div>
-
-        <h2 className="mt-space-xl">Custom Range Slider <button className="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Range_Slider" /></h2>
-        <p className="text-color--red">Not supported in Internet Explorer</p>
-        <div className="example-container">
-          <div className="card">
-            <div className="card-content">
-              <fieldset className="range--custom">
-                <label htmlFor="dashing-range">Dashing Range</label>
-                <input type="range" id="dashing-range"/>
-              </fieldset>
+              </CodeToggle>
             </div>
-          </div>
 
-          <CodeToggle>
+            <h2 className="mt-space-xl" id="customRangeSlider">Custom Range Slider
+              <Link to={location.pathname + "/#customRangeSlider"} className="button button--transparent button--copy-link"></Link>
+            </h2>
+            <p className="text-color--red">Not supported in Internet Explorer</p>
+            <div className="example-container">
+              <div className="card">
+                <div className="card-content">
+                  <fieldset className="range--custom">
+                    <label htmlFor="dashing-range">Dashing Range</label>
+                    <input type="range" id="dashing-range"/>
+                  </fieldset>
+                </div>
+              </div>
+
+              <CodeToggle>
 {`<!-- Custom Range Slider -->
 <fieldset class="range--custom">
 <label for="dashing-range">Dashing Range</label>
 <input type="range" id="dashing-range"/>
 </fieldset>`}
-          </CodeToggle>
-        </div>
-
-        <h2 className="mt-space-xl">Form Example <button className="button button--transparent button--copy-link" data-id="copyurl" id="Custom_Range_Slider" /></h2>
-        <div className="example-container">
-          <div className="card">
-            <div className="card-header has-border">
-              <h2 className="no-margin">Card Header</h2>
+              </CodeToggle>
             </div>
 
-            <div className="card-content flex-content">
-              <div className="flex-row">
-                <fieldset>
-                  <label htmlFor="form-text">Text Input</label>
-                  <input type="text" id="form-text"/>
-                </fieldset>
-                <fieldset>
-                  <label htmlFor="form-text2">Text Input</label>
-                  <input type="text" id="form-text2"/>
-                </fieldset>
+            <h2 className="mt-space-xl" id="formExample">Form Example
+              <Link to={location.pathname + "/#formExample"} className="button button--transparent button--copy-link"></Link>
+            </h2>
+            <div className="example-container">
+              <div className="card">
+                <div className="card-header has-border">
+                  <h2 className="no-margin">Card Header</h2>
+                </div>
+
+                <div className="card-content flex-content">
+                  <div className="flex-row">
+                    <fieldset>
+                      <label htmlFor="form-text">Text Input</label>
+                      <input type="text" id="form-text"/>
+                    </fieldset>
+                    <fieldset>
+                      <label htmlFor="form-text2">Text Input</label>
+                      <input type="text" id="form-text2"/>
+                    </fieldset>
+                  </div>
+                  <div className="flex-row">
+                    <fieldset>
+                      <label htmlFor="form-date">Date Input</label>
+                      <input type="date" id="form-date"/>
+                    </fieldset>
+                    <fieldset className="select--has-icon">
+                      <label htmlfor="form-select">Select</label>
+                      <select id="form-select">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </fieldset>
+                    <fieldset className="spacer"></fieldset>
+                  </div>
+                  <div className="flex-row">
+                    <fieldset>
+                      <label htmlFor="form-textarea">Textarea</label>
+                      <textarea id="form-textarea"></textarea>
+                    </fieldset>
+                  </div>
+                </div>
+                <div className="card-footer">
+                  <button className="mr-space-xs">Submit</button>
+                  <button className="button--transparent button--gray">Cancel</button>
+                </div>
               </div>
-              <div className="flex-row">
-                <fieldset>
-                  <label htmlFor="form-date">Date Input</label>
-                  <input type="date" id="form-date"/>
-                </fieldset>
-                <fieldset className="select--has-icon">
-                  <label htmlfor="form-select">Select</label>
-                  <select id="form-select">
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                  </select>
-                </fieldset>
-                <fieldset className="spacer"></fieldset>
-              </div>
-              <div className="flex-row">
-                <fieldset>
-                  <label htmlFor="form-textarea">Textarea</label>
-                  <textarea id="form-textarea"></textarea>
-                </fieldset>
-              </div>
-            </div>
-            <div className="card-footer">
-              <button className="mr-space-xs">Submit</button>
-              <button className="button--transparent button--gray">Cancel</button>
-            </div>
-          </div>
-          <CodeToggle>
+              <CodeToggle>
 {`<!-- Custom Range Slider -->
 <div class="card">
 <div class="card-header has-border">
@@ -421,10 +443,14 @@ export default () => (
   <button class="button--transparent button--gray">Cancel</button>
 </div>
 </div>`}
-          </CodeToggle>
-        </div>
+              </CodeToggle>
+            </div>
 
-    </div>
-    </AppContent>
-  </Layout>
-)
+        </div>
+        </AppContent>
+      </Layout>
+    )
+  }
+}
+
+export default FooterCode;

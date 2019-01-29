@@ -18,10 +18,22 @@ const SubNav = ({ pageName, sectionName }) => {
   const getPageName = pageName;
   const getSectionName = sectionName;
 
+  const isPartiallyActive = ({ isPartiallyCurrent }) => {
+  return isPartiallyCurrent
+    ? { className: 'active' }
+    : { className: '' }
+  }
+
+  const PartialNavLink = props => (
+    <Link getProps={isPartiallyActive} {...props}>
+      {props.children}
+    </Link>
+  )
+
   return (
     <div className="subnav-links">
-        <Link to={ getSectionName + "/" + getPageName  + "/code"} activeClassName="active">Code</Link>
-        <Link to={ getSectionName + "/" + getPageName  + "/guidelines"} activeClassName="active">Guidelines</Link>
+        <PartialNavLink to={ getSectionName + "/" + getPageName  + "/code"}>Code</PartialNavLink>
+        <PartialNavLink to={ getSectionName + "/" + getPageName  + "/guidelines"}>Guidelines</PartialNavLink>
     </div>
   );
 };

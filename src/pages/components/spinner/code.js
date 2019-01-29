@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -10,6 +12,7 @@ const currentPageName = "Spinner";
 const currentPageNameLower = currentPageName.toLowerCase();
 
 class SpinnerCode extends React.Component {
+  static propTypes = { location: PropTypes.object.isRequired }
 
   constructor(props) {
     super(props);
@@ -24,6 +27,7 @@ class SpinnerCode extends React.Component {
   }
 
   render() {
+    const { location } = this.props;
 
     return (
 
@@ -35,7 +39,9 @@ class SpinnerCode extends React.Component {
         <AppContent>
           <div className="row">
             <div className="column column--full">
-              <h2 className="example-header no-margin--top">Default Spinner <button className="button button--transparent button--copy-link" data-id="copyurl" id="Default_Spinner"/></h2>
+              <h2 className="example-header no-margin--top" id="defaultSpinner">Default Spinner
+                <Link to={location.pathname + "/#defaultSpinner"} className="button button--transparent button--copy-link"></Link>
+              </h2>
               <div className="row example-container">
                 <div className="column column--full">
                   <div className="relative" style={{ height: "8rem" }}>
@@ -51,7 +57,7 @@ class SpinnerCode extends React.Component {
 $spinner-color: #000;`}
               </CodeToggleSCSS>
 
-              <h2 className="example-header">Small Spinner <button className="button button--transparent button--copy-link" data-id="copyurl" id="Small_Spinner" /></h2>
+              <h2 className="example-header">Small Spinner<button className="button button--transparent button--copy-link" data-id="copyurl" id="Small_Spinner" /></h2>
               <div className="row example-container">
                 <div className="column column--full">
                   <div className="relative" style={{ height: "5rem" }}>
@@ -63,7 +69,9 @@ $spinner-color: #000;`}
 {`<div class="dash-spinner small"></div>`}
               </CodeToggle>
 
-              <h2 className="example-header">Button Spinner <button className="button button--transparent button--copy-link" data-id="copyurl" id="Button_Spinner" /></h2>
+              <h2 className="example-header" id="buttonSpinner">Button Spinner
+                <Link to={location.pathname + "/#buttonSpinner"} className="button button--transparent button--copy-link"></Link>
+              </h2>
               <div className="row example-container">
                 <div className="column column--full">
                   <button onClick={this.handleClick} className={this.state.addSpinner ? 'button button--blue has-spinner' : 'button button--blue'}>
@@ -84,4 +92,5 @@ $spinner-color: #000;`}
     )
   }
 }
+
 export default SpinnerCode;

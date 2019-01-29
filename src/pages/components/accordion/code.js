@@ -1,16 +1,20 @@
 import React from 'react'
-import $ from 'jquery';
+import PropTypes from 'prop-types'
+
+import $ from 'jquery'
+import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 import CodeToggle from '../../../components/codetoggle'
 
-const currentPageName = "Accordion";
-const currentPageNameLower = currentPageName.toLowerCase();
+const currentPageName = "Accordion"
+const currentPageNameLower = currentPageName.toLowerCase()
 
 class AccordionCode extends React.Component {
-
+  static propTypes = { location: PropTypes.object.isRequired }
+  
   componentDidMount() {
     $("#toggleAccordion").click(function(){
       this.parentElement.classList.toggle('expanded');
@@ -19,6 +23,7 @@ class AccordionCode extends React.Component {
   }
 
   render() {
+    const { location } = this.props;
 
     return (
 
@@ -30,7 +35,9 @@ class AccordionCode extends React.Component {
         <AppContent>
   			<div className="grid grid-padding">
 
-          <h2>Default Accordion</h2>
+          <h2 id="defaultAccordian">Default Accordion
+            <Link to={location.pathname + "/#defaultAccordian"} className="button button--transparent button--copy-link"></Link>
+          </h2>
           <div className="example-container">
 
             <div className="accordion" style={{marginBottom: "1rem"}}>
@@ -62,4 +69,5 @@ class AccordionCode extends React.Component {
     )
   }
 }
+
 export default AccordionCode;
