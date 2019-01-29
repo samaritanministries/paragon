@@ -1,6 +1,7 @@
 @import "typography/typography";
 @import "grid/grid";
-@import "css-grid/_css-grid";
+@import "css-grid/css-grid";
+@import "header/header";
 @import "forms/forms";
 @import "forms/themed-elements";
 @import "forms/card-controls";
@@ -12,6 +13,7 @@
 @import "banner/banner";
 @import "table/table";
 @import "navigation/navigation";
+@import "overpanel/overpanel";//dependent on header being first
 @import "footer/footer";
 @import "icons/icons";
 @import "spinner/spinner";
