@@ -133,7 +133,7 @@ class PaginationCode extends React.Component {
             </div>
 
             <h2 className="mt-space-xl">Pagination Group
-              <Link to={location.pathname + "/#pagination"} className="button button--transparent button--copy-link"></Link>
+              <Link to={location.pathname + "/#paginationGroup"} className="button button--transparent button--copy-link"></Link>
             </h2>
             <div className="example-container">
               <div className="card">
