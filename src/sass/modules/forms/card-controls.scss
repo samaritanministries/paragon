@@ -32,7 +32,10 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
   &.block { //block cards
     display: block;
     width: 100%;
-    .card { margin-bottom: $space-s; }
+    .card {
+      margin-bottom: $space-s;
+      width: 100%;
+    }
   }
 
   .flex-row &,

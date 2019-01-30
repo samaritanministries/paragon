@@ -214,7 +214,10 @@ fieldset {
     @media #{$tablet} {flex-direction: row;}
   }
 
-  fieldset {
+  fieldset,
+  .radio-card,
+  .checkbox-card {
+    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
 
     @media #{$tablet} {
