@@ -1,0 +1,31 @@
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  li {
+    list-style: none;
+    display: inline-flex; //fixes whitespace bug present with inline-block
+    &:not(.active) .button { @extend .button--transparent; } //only shows transparent if not active
+    .button { padding: $space-xs $space-s !important; } //overrides smaller paddinng inherited from transparent buttons
+  }
+  .dashing-icon { margin: 0 !important; }
+  .dashing-icon--arrow-left { width: 16px; }
+
+  &.pagination--group {
+    li {
+      .button {
+        border: 1px solid $gray-300;
+        border-radius: 0;
+        margin-left: -1px;
+      }
+    }
+    li:first-of-type .button { border-radius: 5px 0 0 5px; }
+    li:last-of-type .button { border-radius: 0 5px 5px 0; }
+    li.active .button { border-color: transparent; } //allows border to inherit button color
+  }
+
+  &.center-align { justify-content: center; }
+  &.left-align { justify-content: flex-start; }
+  &.right-align { justify-content: flex-end; }
+}
