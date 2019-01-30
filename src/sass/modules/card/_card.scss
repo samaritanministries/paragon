@@ -10,13 +10,17 @@
   @extend %card-shadow;
 
   .grid & { margin-bottom: $space-m; }
+
   @media #{$phone} {
-    .grid & {
-      @supports(display: grid) { //Fallback. IE does not support negative margin on cards
-        border-radius: 0;
-        margin-left: -#{$space-m};
-        margin-right: -#{$space-m};
-  		}
+    .grid {
+      :not(.radio-card) &,
+      :not(.checkbox-card) &,   { //ignores checkbox and radio cards
+        @supports(display: grid) { //Fallback. IE does not support negative margin on cards
+          border-radius: 0;
+          margin-left: -#{$space-m};
+          margin-right: -#{$space-m};
+        }
+      }
     }
   }
 

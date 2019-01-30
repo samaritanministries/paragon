@@ -19,254 +19,415 @@ class RadioButtonsCode extends React.Component {
 
     return (
       <Layout>
-        <header className="subnav">
-          <h1>{currentPageName}</h1>
-          <SubNav pageName={currentPageNameLower}/>
-        </header>
-        <AppContent>
-          <div className="row">
-            <div className="column column--full">
-            <h2 className="example-header no-margin--top" id="customRadioButtons">Custom Radio Buttons
-              <Link to={location.pathname + "/#customRadioButtons"} className="button button--transparent button--copy-link"></Link>
-            </h2>
-            <p>To use custom radio buttons, be sure to include your input <strong>before</strong> your label. Failing to do so will break styles.</p>
-            <div className="row example-container">
-              <fieldset className="column column--third">
+    <header className="subnav">
+      <h1>{currentPageName}</h1>
+      <SubNav pageName={currentPageNameLower}/>
+    </header>
+    <AppContent>
+
+      <div className="grid grid-padding">
+
+        <p className="intro">Radio buttons are used to allow for exactly one choice in a short list of two or more options. Selecting one option will deselect any previously selected option.</p>
+        <h2 id="RadioButtonStyles">Styles
+          <Link to={location.pathname + "/#RadioButtonStyles"} className="button button--transparent button--copy-link"></Link>
+        </h2>
+        <p>To make a radio button flow inline, apply the <code className="example-text">.inline</code> class to each <code className="example-text">radio-custom</code> element</p>
+        <div className="example-container">
+          <div className="card">
+            <div className="card-content">
+              <fieldset>
                 <label>Radio Buttons</label>
                 <div className="radio--custom">
-                  <input type="radio" name="dashing-radio--custom" id="dashing-radio1--custom" defaultChecked={true}/>
-                  <label htmlFor="dashing-radio1--custom">Option 1</label>
+                  <input type="radio" name="radio" id="radio1" defaultChecked={true}/>
+                  <label htmlFor="radio1">Option 1</label>
                 </div>
                 <div className="radio--custom">
-                  <input type="radio" name="dashing-radio--custom" id="dashing-radio2--custom"/>
-                  <label htmlFor="dashing-radio2--custom">Option 2</label>
+                  <input type="radio" name="radio" id="radio2"/>
+                  <label htmlFor="radio2">Option 2</label>
                 </div>
                 <div className="radio--custom">
-                  <input type="radio" name="dashing-radio--custom" id="dashing-radio3--custom"/>
-                  <label htmlFor="dashing-radio3--custom">Option 3 is much longer and indents when it goes beyond one line</label>
-                </div>
-              </fieldset>
-
-              <fieldset className="column column--full">
-                <label>Disabled Radio Button</label>
-                <div className="radio--custom">
-                  <input type="checkbox" id="dashing-radio--custom-disabled" disabled defaultChecked={true}/>
-                  <label htmlFor="dashing-radio--custom-disabled">Disabled</label>
-                </div>
-                <div className="radio--custom">
-                  <input type="checkbox" id="dashing-radio--custom-disabled2" disabled/>
-                  <label htmlFor="dashing-radio--custom-disabled2">Disabled</label>
-                </div>
-              </fieldset>
-
-              <fieldset className="column column--full has-error">
-                <label>Radio Buttons with Error</label>
-                <div className="radio--custom">
-                  <input type="radio" name="dashing-radio--error" id="dashing-radio--error1" defaultChecked={true}/>
-                  <label htmlFor="dashing-radio--error1">Option 1</label>
-                </div>
-                <div className="radio--custom">
-                  <input type="radio" name="dashing-radio--error" id="dashing-radio--error2" />
-                  <label htmlFor="dashing-radio--error2">Option 2</label>
-                </div>
-                <div className="radio--custom">
-                  <input type="radio" name="dashing-radio--error" id="dashing-radio--error3" />
-                  <label htmlFor="dashing-radio--error3">Option 3</label>
-                </div>
-              </fieldset>
-
-              <fieldset className="column column--full has-warning">
-                <label>Radio Buttons with Warning</label>
-                <div className="radio--custom">
-                  <input type="radio" name="dashing-radio--warning" id="dashing-radio--warning1" defaultChecked={true}/>
-                  <label htmlFor="dashing-radio--warning1">Option 1</label>
-                </div>
-                <div className="radio--custom">
-                  <input type="radio" name="dashing-radio--warning" id="dashing-radio--warning2" />
-                  <label htmlFor="dashing-radio--warning2">Option 2</label>
-                </div>
-                <div className="radio--custom">
-                  <input type="radio" name="dashing-radio--warning" id="dashing-radio--warning3" />
-                  <label htmlFor="dashing-radio--warning3">Option 3</label>
-                </div>
-              </fieldset>
-
-              <fieldset className="column column--full">
-                <label>Radio Buttons</label>
-                <div className="radio--custom inline">
-                  <input type="radio" name="dashing-radio--custom--inline" id="dashing-radio--custom--inline1" defaultChecked={true}/>
-                  <label htmlFor="dashing-radio--custom--inline1">Option 1</label>
-                </div>
-                <div className="radio--custom inline">
-                  <input type="radio" name="dashing-radio--custom--inline" id="dashing-radio--custom--inline2"/>
-                  <label htmlFor="dashing-radio--custom--inline2">Option 2</label>
-                </div>
-                <div className="radio--custom inline">
-                  <input type="radio" name="dashing-radio--custom--inline" id="dashing-radio--custom--inline3"/>
-                  <label htmlFor="dashing-radio--custom--inline3">Option 3</label>
+                  <input type="radio" name="radio" id="radio3"/>
+                  <label htmlFor="radio3">Option 3</label>
                 </div>
               </fieldset>
             </div>
-              <CodeToggle>
-{`<!-- Custom Radio Button -->
-<fieldset class="column column--full">
+          </div>
+
+          <div className="card">
+            <div className="card-content">
+              <fieldset>
+                <label>Inline Radio Buttons</label>
+                <div className="radio--custom inline">
+                  <input type="radio" name="inline-radio" id="inline-radio1" defaultChecked={true}/>
+                  <label htmlFor="inline-radio1">Option 1</label>
+                </div>
+                <div className="radio--custom inline">
+                  <input type="radio" name="inline-radio" id="inline-radio2"/>
+                  <label htmlFor="inline-radio2">Option 2</label>
+                </div>
+                <div className="radio--custom inline">
+                  <input type="radio" name="inline-radio" id="inline-radio3"/>
+                  <label htmlFor="inline-radio3">Option 3</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <CodeToggle>
+{`<!-- Default -->
+<fieldset>
   <label>Radio Buttons</label>
   <div class="radio--custom">
-    <input type="radio" name="dashing-radio--custom" id="dashing-radio1--custom" checked/>
-    <label for="dashing-radio1--custom" class="inline">Option 1</label>
+    <input type="radio" name="radio" id="radio1" checked/>
+    <label for="radio1">Option 1</label>
   </div>
   <div class="radio--custom">
-    <input type="radio" name="dashing-radio--custom" id="dashing-radio2--custom"/>
-    <label for="dashing-radio2--custom" class="inline">Option 2</label>
+    <input type="radio" name="radio" id="radio2"/>
+    <label for="radio2">Option 2</label>
   </div>
   <div class="radio--custom">
-    <input type="radio" name="dashing-radio--custom" id="dashing-radio3--custom"/>
-    <label for="dashing-radio3--custom" class="inline">Option 3</label>
+    <input type="radio" name="radio" id="radio3"/>
+    <label for="radio3">Option 3</label>
   </div>
 </fieldset>
 
-<fieldset class="column column--full">
-  <label>Disabled Radio Button</label>
-  <div class="radio--custom">
-    <input type="checkbox" id="dashing-radio--custom-disabled" disabled checked/>
-    <label for="dashing-radio--custom-disabled" class="inline">Disabled</label>
-  </div>
-  <div class="radio--custom">
-    <input type="checkbox" id="dashing-radio--custom-disabled2" disabled/>
-    <label for="dashing-radio--custom-disabled2" class="inline">Disabled</label>
-  </div>
-</fieldset>
-
-<!-- Add the class .has-error to the parent container to apply error styles -->
-<fieldset class="column column--full has-error">
-  <label>Radio Buttons with Error</label>
-  <div class="radio--custom">
-    <input type="radio" name="dashing-radio--error" id="dashing-radio--error1" checked/>
-    <label for="dashing-radio--error1" class="inline">Option 1</label>
-  </div>
-  <div class="radio--custom">
-    <input type="radio" name="dashing-radio--error" id="dashing-radio--error2" />
-    <label for="dashing-radio--error2" class="inline">Option 2</label>
-  </div>
-  <div class="radio--custom">
-    <input type="radio" name="dashing-radio--error" id="dashing-radio--error3" />
-    <label for="dashing-radio--error3" class="inline">Option 3</label>
-  </div>
-</fieldset>
-
-<!-- Add the class .has-warning to the parent container to apply warning styles -->
-<fieldset class="column column--full has-warning">
-  <label>Radio Buttons with Warning</label>
-  <div class="radio--custom">
-    <input type="radio" name="dashing-radio--warning" id="dashing-radio--warning1" checked/>
-    <label for="dashing-radio--warning1" class="inline">Option 1</label>
-  </div>
-  <div class="radio--custom">
-    <input type="radio" name="dashing-radio--warning" id="dashing-radio--warning2" />
-    <label for="dashing-radio--warning2" class="inline">Option 2</label>
-  </div>
-  <div class="radio--custom">
-    <input type="radio" name="dashing-radio--warning" id="dashing-radio--warning3" />
-    <label for="dashing-radio--warning3" class="inline">Option 3</label>
-  </div>
-</fieldset>
-
-<!-- Add the class .inline to the .radio--custom element to list your checkboxes vertially -->
-<fieldset class="column column--full">
-  <label>Radio Buttons</label>
+<!-- Inline -->
+<fieldset>
+  <label>Inline Radio Buttons</label>
   <div class="radio--custom inline">
-    <input type="radio" name="dashing-radio--custom--inline" id="dashing-radio--custom--inline1" checked/>
-    <label for="dashing-radio--custom--inline1">Option 1</label>
+    <input type="radio" name="inline-radio" id="inline-radio1" checked/>
+    <label for="inline-radio1">Option 1</label>
   </div>
   <div class="radio--custom inline">
-    <input type="radio" name="dashing-radio--custom--inline" id="dashing-radio--custom--inline2"/>
-    <label for="dashing-radio--custom--inline2">Option 2</label>
+    <input type="radio" name="inline-radio" id="inline-radio2"/>
+    <label for="inline-radio2">Option 2</label>
   </div>
   <div class="radio--custom inline">
-    <input type="radio" name="dashing-radio--custom--inline" id="dashing-radio--custom--inline3"/>
-    <label for="dashing-radio--custom--inline3">Option 3</label>
+    <input type="radio" name="inline-radio" id="inline-radio3"/>
+    <label for="inline-radio3">Option 3</label>
   </div>
 </fieldset>`}
-              </CodeToggle>
-              <CodeToggleSCSS>
-{`//Include these variables in your theme file to change the color of your radio button
-$radio--active: $blue !default; //Color of radio button when checked
-$radio--icon: $white !default; //Color of radio icon when checked
-$radio--focus: $blue-300 !default; //Color of border around radio when focused
-$radio--disabled: $gray-150 !default; //Color of radio when checked and disabled
-$radio--icon-disabled: $gray-500 !default; //Color of radio icon when checked and disabled`}
-              </CodeToggleSCSS>
+          </CodeToggle>
+        </div>
 
-              <h2 className="example-header" id="defaultRadioCard">Default Radio Card
-                <Link to={location.pathname + "/#defaultRadioCard"} className="button button--transparent button--copy-link"></Link>
-              </h2>
-          		<p>To use smaller radio cards apply the <code className="example-text">.radio-card--small</code> class to the parent <code className="example-text">.radio-card</code>.</p>
-          		<div className="row example-container">
-          		  <fieldset className="column column--full">
-          		    <label>Radio Card</label>
-          		    <div className="radio-card">
-          		      <input type="radio" name="radio-inline" id="radio-inline1" defaultChecked={true}/>
-          		      <label htmlFor="radio-inline1" className="card">Option 1</label>
-          		    </div>
-          		    <div className="radio-card">
-          		      <input type="radio" name="radio-inline" id="radio-inline2" />
-          		      <label htmlFor="radio-inline2" className="card">Option 2</label>
-          		    </div>
-          		    <div className="radio-card">
-          		      <input type="radio" name="radio-inline" id="radio-inline3" disabled />
-          		      <label htmlFor="radio-inline3" className="card disabled">Disabled</label>
-          		    </div>
-          		  </fieldset>
-          		</div>
-              <CodeToggle>
-{`<!-- Radio Button Cards -->
-<fieldset class="column column--full">
-  <label>Radio Card</label>
-  <div class="radio-card">
-    <input type="radio" name="radio-inline" id="radio-inline1" checked/>
-    <label for="radio-inline1" class="card">Option 1</label>
+        <h2 className="mt-space-xl" id="RadioButtonStates">States
+          <Link to={location.pathname + "/#RadioButtonStates"} className="button button--transparent button--copy-link"></Link>
+        </h2>
+        <div className="example-container">
+          <div className="card">
+            <div className="card-content">
+              <fieldset>
+                <label>Default Radio Buttons</label>
+                <div className="radio--custom">
+                  <input type="radio" name="default-radio" id="default-radio1" defaultChecked={true}/>
+                  <label htmlFor="default-radio1">Option 1</label>
+                </div>
+                <div className="radio--custom">
+                  <input type="radio" name="default-radio" id="default-radio2"/>
+                  <label htmlFor="default-radio2">Option 2</label>
+                </div>
+                <div className="radio--custom">
+                  <input type="radio" name="default-radio" id="default-radio3"/>
+                  <label htmlFor="default-radio3">Option 3</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="card-content">
+              <fieldset>
+                <label>Disabled Radio Buttons</label>
+                <div className="radio--custom">
+                  <input type="radio" name="disabled-radio" id="disabled-radio1" disabled defaultChecked={true}/>
+                  <label htmlFor="disabled-radio1">Option 1</label>
+                </div>
+                <div className="radio--custom">
+                  <input type="radio" name="disabled-radio" id="disabled-radio2" disabled/>
+                  <label htmlFor="disabled-radio2">Option 2</label>
+                </div>
+                <div className="radio--custom">
+                  <input type="radio" name="disabled-radio" id="disabled-radio3" disabled/>
+                  <label htmlFor="disabled-radio3">Option 3</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="card-content">
+              <fieldset className="has-error">
+                <label>Error Radio Buttons</label>
+                <div className="radio--custom">
+                  <input type="radio" name="error-radio" id="error-radio1" defaultChecked={true}/>
+                  <label htmlFor="error-radio1">Option 1</label>
+                </div>
+                <div className="radio--custom">
+                  <input type="radio" name="error-radio" id="error-radio2"/>
+                  <label htmlFor="error-radio2">Option 2</label>
+                </div>
+                <div className="radio--custom">
+                  <input type="radio" name="error-radio" id="error-radio3"/>
+                  <label htmlFor="error-radio3">Option 3</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="card-content">
+              <fieldset className="has-warning">
+                <label>Warning Radio Buttons</label>
+                <div className="radio--custom">
+                  <input type="radio" name="warning-radio" id="warning-radio1" defaultChecked={true}/>
+                  <label htmlFor="warning-radio1">Option 1</label>
+                </div>
+                <div className="radio--custom">
+                  <input type="radio" name="warning-radio" id="warning-radio2"/>
+                  <label htmlFor="warning-radio2">Option 2</label>
+                </div>
+                <div className="radio--custom">
+                  <input type="radio" name="warning-radio" id="warning-radio3"/>
+                  <label htmlFor="warning-radio3">Option 3</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <CodeToggle>
+{`<!-- Default -->
+<fieldset>
+  <label>Default Radio Buttons</label>
+  <div class="radio--custom">
+    <input type="radio" name="default-radio" id="default-radio1" checked/>
+    <label for="default-radio1">Option 1</label>
   </div>
-  <div class="radio-card">
-    <input type="radio" name="radio-inline" id="radio-inline2" />
-    <label for="radio-inline2" class="card">Option 2</label>
+  <div class="radio--custom">
+    <input type="radio" name="default-radio" id="default-radio2"/>
+    <label for="default-radio2">Option 2</label>
   </div>
-  <div class="radio-card">
-    <input type="radio" name="radio-inline" id="radio-inline3" disabled />
-    <label for="radio-inline3" class="card disabled">Disabled</label>
+  <div class="radio--custom">
+    <input type="radio" name="default-radio" id="default-radio3"/>
+    <label for="default-radio3">Option 3</label>
+  </div>
+</fieldset>
+
+<!-- Disabled -->
+<fieldset>
+  <label>Disabled Radio Buttons</label>
+  <div class="radio--custom">
+    <input type="radio" name="disabled-radio" id="disabled-radio1" disabled checked/>
+    <label for="disabled-radio1">Option 1</label>
+  </div>
+  <div class="radio--custom">
+    <input type="radio" name="disabled-radio" id="disabled-radio2" disabled/>
+    <label for="disabled-radio2">Option 2</label>
+  </div>
+  <div class="radio--custom">
+    <input type="radio" name="disabled-radio" id="disabled-radio3" disabled/>
+    <label for="disabled-radio3">Option 3</label>
+  </div>
+</fieldset>
+
+<!-- Error -->
+<fieldset class="has-error">
+  <label>Error Radio Buttons</label>
+  <div class="radio--custom">
+    <input type="radio" name="error-radio" id="error-radio1" checked/>
+    <label for="error-radio1">Option 1</label>
+  </div>
+  <div class="radio--custom">
+    <input type="radio" name="error-radio" id="error-radio2"/>
+    <label for="error-radio2">Option 2</label>
+  </div>
+  <div class="radio--custom">
+    <input type="radio" name="error-radio" id="error-radio3"/>
+    <label for="error-radio3">Option 3</label>
+  </div>
+</fieldset>
+
+<!-- Warning -->
+<fieldset class="has-warning">
+  <label>Warning Radio Buttons</label>
+  <div class="radio--custom">
+    <input type="radio" name="warning-radio" id="warning-radio1" checked/>
+    <label for="warning-radio1">Option 1</label>
+  </div>
+  <div class="radio--custom">
+    <input type="radio" name="warning-radio" id="warning-radio2"/>
+    <label for="warning-radio2">Option 2</label>
+  </div>
+  <div class="radio--custom">
+    <input type="radio" name="warning-radio" id="warning-radio3"/>
+    <label for="warning-radio3">Option 3</label>
   </div>
 </fieldset>`}
-              </CodeToggle>
-              <CodeToggleSCSS>
-{`//Include these variables in your theme file to change the color or padding of your radio button cards
-$card-checkbox--active: $blue !default; //Color of checkbox and card when checked
-$card-checkbox--focus: $blue-300 !default; //Color of border around card-checkbox when focused
-$card-checkbox--padding: 1rem !default; //Padding of checkbox`}
-              </CodeToggleSCSS>
+          </CodeToggle>
+        </div>
 
-              <h2 className="example-header" id="smallRadioCard">Small Radio Card
-                <Link to={location.pathname + "/#smallRadioCard"} className="button button--transparent button--copy-link"></Link>
-              </h2>
-          		<p>To use smaller radio cards apply the <code className="example-text">.radio-card--small</code> className to the parent <code className="example-text">.radio-card</code>.</p>
-          		<div className="row example-container">
-          			<fieldset className="column column--full">
-          				<label>Small Radio Card</label>
-          				<div className="radio-card radio-card--small">
-          					<input type="radio" name="radio-small" id="radio-small1" defaultChecked={true}/>
-          					<label htmlFor="radio-small1" className="card">Option 1</label>
-          				</div>
-          				<div className="radio-card radio-card--small">
-          					<input type="radio" name="radio-small" id="radio-small2" />
-          					<label htmlFor="radio-small2" className="card">Option 2</label>
-          				</div>
-          				<div className="radio-card radio-card--small">
-          					<input type="radio" name="radio-small" id="radio-small3" disabled />
-          					<label htmlFor="radio-small3" className="card disabled">Disabled</label>
-          				</div>
-          			</fieldset>
-          		</div>
-              <CodeToggle>
-{`<!-- Small Radio Button Cards -->
-<fieldset class="column column--full">
+        <h1 className="mt-space-xl">Radio Card</h1>
+        <h2 className="mt-space-xl" id="RadioCardStates">States
+          <Link to={location.pathname + "/#RadioCardStates"} className="button button--transparent button--copy-link"></Link>
+        </h2>
+        <div className="example-container">
+          <div className="card">
+            <div className="card-content">
+        		  <fieldset>
+        		    <label>Default Radio Card</label>
+        		    <div className="radio-card">
+        		      <input type="radio" name="radio-card" id="radio-card1" defaultChecked={true}/>
+        		      <label htmlFor="radio-card1" className="card">Option 1</label>
+        		    </div>
+        		    <div className="radio-card">
+        		      <input type="radio" name="radio-card" id="radio-card2" />
+        		      <label htmlFor="radio-card2" className="card">Option 2</label>
+        		    </div>
+        		    <div className="radio-card">
+        		      <input type="radio" name="radio-card" id="radio-card3" />
+        		      <label htmlFor="radio-card3" className="card">Option 3</label>
+        		    </div>
+        		  </fieldset>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-content">
+        		  <fieldset>
+        		    <label>Disabled Radio Card</label>
+        		    <div className="radio-card">
+        		      <input type="radio" name="disabled-radio-card" id="disabled-radio-card1" disabled defaultChecked={true}/>
+        		      <label htmlFor="disabled-radio-card1" className="card">Option 1</label>
+        		    </div>
+        		    <div className="radio-card">
+        		      <input type="radio" name="disabled-radio-card" id="disabled-radio-card2" disabled/>
+        		      <label htmlFor="disabled-radio-card2" className="card">Option 2</label>
+        		    </div>
+        		    <div className="radio-card">
+        		      <input type="radio" name="disabled-radio-card" id="disabled-radio-card3" disabled/>
+        		      <label htmlFor="disabled-radio-card3" className="card">Option 3</label>
+        		    </div>
+        		  </fieldset>
+            </div>
+          </div>
+          <CodeToggle>
+{`<!-- Radio Cards -->
+<fieldset>
+  <label>Default Radio Card</label>
+  <div class="radio-card">
+    <input type="radio" name="radio-card" id="radio-card1" checked/>
+    <label for="radio-card1" class="card">Option 1</label>
+  </div>
+  <div class="radio-card">
+    <input type="radio" name="radio-card" id="radio-card2" />
+    <label for="radio-card2" class="card">Option 2</label>
+  </div>
+  <div class="radio-card">
+    <input type="radio" name="radio-card" id="radio-card3" />
+    <label for="radio-card3" class="card">Option 3</label>
+  </div>
+</fieldset>
+
+<!-- Disabled Radio Cards -->
+<fieldset>
+  <label>Disabled Radio Card</label>
+  <div class="radio-card">
+    <input type="radio" name="disabled-radio-card" id="disabled-radio-card1" disabled checked/>
+    <label for="disabled-radio-card1" class="card">Option 1</label>
+  </div>
+  <div class="radio-card">
+    <input type="radio" name="disabled-radio-card" id="disabled-radio-card2" disabled/>
+    <label for="disabled-radio-card2" class="card">Option 2</label>
+  </div>
+  <div class="radio-card">
+    <input type="radio" name="disabled-radio-card" id="disabled-radio-card3" disabled/>
+    <label for="disabled-radio-card3" class="card">Option 3</label>
+  </div>
+</fieldset>`}
+          </CodeToggle>
+        </div>
+
+        <h2 className="mt-space-xl" id="RadioCardSizes">Sizes
+          <Link to={location.pathname + "/#RadioCardSizes"} className="button button--transparent button--copy-link"></Link>
+        </h2>
+        <div className="example-container">
+          <div className="card">
+            <div className="card-content">
+              <fieldset>
+                <label>Small Radio Card</label>
+                <div className="radio-card radio-card--small">
+                  <input type="radio" name="radio-small" id="radio-small1" defaultChecked={true}/>
+                  <label htmlFor="radio-small1" className="card">Option 1</label>
+                </div>
+                <div className="radio-card radio-card--small">
+                  <input type="radio" name="radio-small" id="radio-small2" />
+                  <label htmlFor="radio-small2" className="card">Option 2</label>
+                </div>
+                <div className="radio-card radio-card--small">
+                  <input type="radio" name="radio-small" id="radio-small3" />
+                  <label htmlFor="radio-small3" className="card">Option 3</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-content">
+              <fieldset>
+                <label>Default Radio Card</label>
+                <div className="radio-card">
+                  <input type="radio" name="radio-normal" id="radio-normal1" defaultChecked={true}/>
+                  <label htmlFor="radio-normal1" className="card">Option 1</label>
+                </div>
+                <div className="radio-card">
+                  <input type="radio" name="radio-normal" id="radio-normal2" />
+                  <label htmlFor="radio-normal2" className="card">Option 2</label>
+                </div>
+                <div className="radio-card">
+                  <input type="radio" name="radio-normal" id="radio-normal3" />
+                  <label htmlFor="radio-normal3" className="card">Option 3</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-content flex-content">
+              <fieldset>
+                <label>Flex Radio Card</label>
+                <div className="flex-row">
+                  <div className="radio-card">
+                    <input type="radio" name="radio-flex" id="radio-flex1" defaultChecked={true}/>
+                    <label htmlFor="radio-flex1" className="card">Option 1</label>
+                  </div>
+                  <div className="radio-card">
+                    <input type="radio" name="radio-flex" id="radio-flex2" />
+                    <label htmlFor="radio-flex2" className="card">Option 2</label>
+                  </div>
+                  <div className="radio-card">
+                    <input type="radio" name="radio-flex" id="radio-flex3" />
+                    <label htmlFor="radio-flex3" className="card">Option 3</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-content">
+              <fieldset>
+                <label>Block Radio Card</label>
+                <div className="radio-card radio-card--block">
+                  <input type="radio" name="radio-block" id="radio-block1" defaultChecked={true}/>
+                  <label htmlFor="radio-block1" className="card">Option 1</label>
+                </div>
+                <div className="radio-card radio-card--block">
+                  <input type="radio" name="radio-block" id="radio-block2" />
+                  <label htmlFor="radio-block2" className="card">Option 2</label>
+                </div>
+                <div className="radio-card radio-card--block">
+                  <input type="radio" name="radio-block" id="radio-block3" />
+                  <label htmlFor="radio-block3" className="card">Option 3</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <CodeToggle>
+{`<!-- Small Radio Card -->
+<fieldset>
   <label>Small Radio Card</label>
   <div class="radio-card radio-card--small">
     <input type="radio" name="radio-small" id="radio-small1" checked/>
@@ -277,58 +438,137 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox`}
     <label for="radio-small2" class="card">Option 2</label>
   </div>
   <div class="radio-card radio-card--small">
-    <input type="radio" name="radio-small" id="radio-small3" disabled />
-    <label for="radio-small3" class="card disabled">Disabled</label>
+    <input type="radio" name="radio-small" id="radio-small3" />
+    <label for="radio-small3" class="card">Option 3</label>
   </div>
-</fieldset>`}
-              </CodeToggle>
+</fieldset>
 
-              <h2 className="example-header" id="blockRadioCard">Block Radio Card
-                <Link to={location.pathname + "/#blockRadioCard"} className="button button--transparent button--copy-link"></Link>
-              </h2>
-          		<p>To use block style radio cards apply the <code className="example-text">.is-block</code> class to the <code className="example-text">.radio-card</code>.</p>
-          		<div className="row example-container">
-          		  <fieldset className="column column--half">
-          		    <label>Block Radio Card</label>
-          		    <div className="radio-card is-block">
-          		      <input type="radio" name="radio-block" id="radio-block1" defaultChecked={true}/>
-          		      <label htmlFor="radio-block1" className="card">Option 1</label>
-          		    </div>
-          		    <div className="radio-card is-block">
-          		      <input type="radio" name="radio-block" id="radio-block2" />
-          		      <label htmlFor="radio-block2" className="card">Option 2</label>
-          		    </div>
-          		    <div className="radio-card is-block">
-          		      <input type="radio" name="radio-block" id="radio-block3" disabled />
-          		      <label htmlFor="radio-block3" className="card disabled">Disabled</label>
-          		    </div>
-          		  </fieldset>
-          		</div>
-              <CodeToggle>
-{`<!-- Block Style Radio Button Cards -->
-<fieldset class="column column--full">
+<!-- Default Radio Card -->
+<fieldset>
+  <label>Default Radio Card</label>
+  <div class="radio-card">
+    <input type="radio" name="radio-normal" id="radio-normal1" checked/>
+    <label for="radio-normal1" class="card">Option 1</label>
+  </div>
+  <div class="radio-card">
+    <input type="radio" name="radio-normal" id="radio-normal2" />
+    <label for="radio-normal2" class="card">Option 2</label>
+  </div>
+  <div class="radio-card">
+    <input type="radio" name="radio-normal" id="radio-normal3" />
+    <label for="radio-normal3" class="card">Option 3</label>
+  </div>
+</fieldset>
+
+<!-- Flex Radio Card -->
+<div class="card">
+  <div class="card-content flex-content">
+    <fieldset>
+      <label>Flex Radio Card</label>
+      <div class="flex-row">
+        <div class="radio-card">
+          <input type="radio" name="radio-flex" id="radio-flex1" checked/>
+          <label for="radio-flex1" class="card">Option 1</label>
+        </div>
+        <div class="radio-card">
+          <input type="radio" name="radio-flex" id="radio-flex2" />
+          <label for="radio-flex2" class="card">Option 2</label>
+        </div>
+        <div class="radio-card">
+          <input type="radio" name="radio-flex" id="radio-flex3" />
+          <label for="radio-flex3" class="card">Option 3</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+
+<!-- Block Radio Card -->
+<fieldset>
   <label>Block Radio Card</label>
-  <div class="radio-card is-block">
+  <div class="radio-card radio-card--block">
     <input type="radio" name="radio-block" id="radio-block1" checked/>
     <label for="radio-block1" class="card">Option 1</label>
   </div>
-  <div class="radio-card is-block">
+  <div class="radio-card radio-card--block">
     <input type="radio" name="radio-block" id="radio-block2" />
     <label for="radio-block2" class="card">Option 2</label>
   </div>
-  <div class="radio-card is-block">
-    <input type="radio" name="radio-block" id="radio-block3" disabled />
-    <label for="radio-block3" class="card disabled">Disabled</label>
+  <div class="radio-card radio-card--block">
+    <input type="radio" name="radio-block" id="radio-block3" />
+    <label for="radio-block3" class="card">Option 3</label>
   </div>
 </fieldset>`}
-              </CodeToggle>
+          </CodeToggle>
+        </div>
 
+        <h1 className="mt-space-xl">Theme</h1>
+        <h2 className="mt-space-xl" id="RadioButtonTheme">Radio Button Theme
+          <Link to={location.pathname + "/#RadioButtonTheme"} className="button button--transparent button--copy-link"></Link>
+        </h2>
+        <div className="example-container">
+          <div className="card hide-HTML-code">
+            <div className="card-content">
+              <fieldset>
+                <label>Radio Buttons</label>
+                <div className="radio--custom">
+                  <input type="radio" name="radio-theme" id="radio-theme1" defaultChecked={true}/>
+                  <label htmlFor="radio-theme1">Option 1</label>
+                </div>
+                <div className="radio--custom">
+                  <input type="radio" name="radio-theme" id="radio-theme2"/>
+                  <label htmlFor="radio-theme2">Option 2</label>
+                </div>
+              </fieldset>
             </div>
           </div>
-        </AppContent>
-      </Layout>
-    )
-  }
+
+          <CodeToggle>
+          </CodeToggle>
+          <CodeToggleSCSS>
+{`//Include these variables in your theme file
+$radio--active: $blue !default; //Color of radio button when checked
+$radio--icon: $white !default; //Color of radio icon when checked
+$radio--focus: $blue-300 !default; //Color of border around radio when focused
+$radio--disabled: $gray-150 !default; //Color of radio when checked and disabled
+$radio--icon-disabled: $gray-500 !default; //Color of radio icon when checked and disabled`}
+          </CodeToggleSCSS>
+        </div>
+
+        <h2 className="mt-space-xl" id="RadioCardTheme">Radio Card Theme
+          <Link to={location.pathname + "/#RadioCardTheme"} className="button button--transparent button--copy-link"></Link>
+        </h2>
+        <div className="example-container">
+          <div className="card hide-HTML-code">
+            <div className="card-content">
+              <fieldset>
+                <label>Radio Buttons</label>
+                <div className="radio-card">
+                  <input type="radio" name="radio-card-theme" id="radio-card-theme1" defaultChecked={true}/>
+                  <label htmlFor="radio-card-theme1" className="card">Option 1</label>
+                </div>
+                <div className="radio-card">
+                  <input type="radio" name="radio-card-theme" id="radio-card-theme2" />
+                  <label htmlFor="radio-card-theme2" className="card">Option 2</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+        <CodeToggle>
+        </CodeToggle>
+        <CodeToggleSCSS>
+{`//Include these variables in your theme file
+$card-checkbox--active: $blue !default; //Color of checkbox and card when checked
+$card-checkbox--focus: $blue-300 !default; //Color of border around card-checkbox when focused
+$card-checkbox--padding: 1rem !default; //Padding of checkbox`}
+        </CodeToggleSCSS>
+      </div>
+      </div>
+    </AppContent>
+  </Layout>
+)
+}
 }
 
 export default RadioButtonsCode;

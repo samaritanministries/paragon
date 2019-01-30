@@ -214,12 +214,16 @@ fieldset {
     @media #{$tablet} {flex-direction: row;}
   }
 
-  fieldset {
+  fieldset,
+  .radio-card,
+  .checkbox-card {
     flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
 
     @media #{$tablet} {
       margin-right: 1rem;
       flex: 1 1 0;
+      -ms-flex: 1 1 auto;
       &:last-of-type { margin-right: 0; }
     }
   }
