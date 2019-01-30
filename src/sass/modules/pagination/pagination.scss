@@ -12,6 +12,10 @@
   .dashing-icon { margin: 0 !important; }
   .dashing-icon--arrow-left { width: 16px; }
 
+  &:not(.pagination--group) li:not(:last-of-type) { //adds margin-right to default pagination list item
+    margin-right: $space-xxs;
+  }
+
   &.pagination--group {
     li {
       .button {
