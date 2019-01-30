@@ -154,7 +154,7 @@ class CheckboxesCode extends React.Component {
         <div className="card">
           <div className="card-content">
             <fieldset className="has-error">
-      		    <label>Default Checkboxes</label>
+      		    <label>Error Checkboxes</label>
       		    <div className="checkbox--custom">
       		      <input type="checkbox" id="error-checkbox1" defaultChecked={true}/>
       		      <label htmlFor="error-checkbox1">Option 1</label>
@@ -174,7 +174,7 @@ class CheckboxesCode extends React.Component {
         <div className="card">
           <div className="card-content">
             <fieldset className="has-warning">
-      		    <label>Default Checkboxes</label>
+      		    <label>Warning Checkboxes</label>
       		    <div className="checkbox--custom">
       		      <input type="checkbox" id="warning-checkbox1" defaultChecked={true}/>
       		      <label htmlFor="warning-checkbox1">Option 1</label>
