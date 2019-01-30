@@ -249,7 +249,6 @@ class CardsCode extends React.Component {
 </div>`}
             </CodeToggle>
           </div>
-        </div>
 
         <h2 className="mt-space-xl" id="card-table">Card Table
           <Link to={location.pathname + "/#card-table"} className="button button--transparent button--copy-link"></Link>
@@ -352,9 +351,8 @@ class CardsCode extends React.Component {
           </CodeToggle>
         </div>
 
-      </div>
-    </main>
 
+          </div>
         </AppContent>
       </Layout>
     )
