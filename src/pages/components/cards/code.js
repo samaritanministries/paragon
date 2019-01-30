@@ -249,8 +249,110 @@ class CardsCode extends React.Component {
 </div>`}
             </CodeToggle>
           </div>
+
+        <h2 className="mt-space-xl" id="card-table">Card Table
+          <Link to={location.pathname + "/#card-table"} className="button button--transparent button--copy-link"></Link>
+        </h2>
+        <div className="example-container">
+
+          <div className="card">
+            <div className="card-header">
+              <h2>Table within a Card</h2>
+            </div>
+            <div className="card-table">
+              <table className="table has-dividers is-selectable has-arrow">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Age</th>
+                    <th>Start Date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Ryan Fitz
+                    </td>
+                    <td>
+                      Primary
+                    </td>
+                    <td>
+                      47
+                    </td>
+                    <td>
+                      01/01/2018
+                    </td>
+                    <td className="align-right">
+                      <i className="dashing-icon dashing-icon--arrow-right"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Lisa Fitz
+                    </td>
+                    <td>
+                      Spouse
+                    </td>
+                    <td>
+                      42
+                    </td>
+                    <td>
+                      01/01/2018
+                    </td>
+                    <td className="align-right">
+                      <i className="dashing-icon dashing-icon--arrow-right"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <CodeToggle>
+{`<div class="card">
+  <div class="card-header">
+    <h2>Table within a Card</h2>
+  </div>
+  <div class="card-table">
+    <table class="table has-dividers is-selectable has-arrow">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Age</th>
+          <th>Start Date</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ryan Fitz</td>
+          <td>Primary</td>
+          <td>47</td>
+          <td>01/01/2018</td>
+          <td class="align-right">
+            <i class="dashing-icon dashing-icon--arrow-right"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>Lisa Fitz</td>
+          <td>Spouse</td>
+          <td>42</td>
+          <td>01/01/2018</td>
+          <td class="align-right">
+            <i class="dashing-icon dashing-icon--arrow-right"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>`}
+          </CodeToggle>
         </div>
 
+
+          </div>
         </AppContent>
       </Layout>
     )

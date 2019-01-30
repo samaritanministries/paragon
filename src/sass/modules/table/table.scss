@@ -4,7 +4,8 @@ $table--even-row: $white !default;
 $table--dividers: $gray-100 !default;
 $table--border: $gray-200 !default;
 
-.table--container {
+.table--container,
+.card-table {
   .table {
     background-color: $white;
     font-size: $font-size-small;
