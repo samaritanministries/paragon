@@ -193,69 +193,69 @@ class CheckboxesCode extends React.Component {
         <CodeToggle>
 {`<!-- Default -->
 <fieldset>
-  <label>Default Radio Buttons</label>
-  <div class="radio--custom">
-    <input type="radio" name="default-radio" id="default-radio1" checked/>
-    <label for="default-radio1">Option 1</label>
+  <label>Default Checkboxes</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="default-checkbox1" defaultChecked={true}/>
+    <label htmlFor="default-checkbox1">Option 1</label>
   </div>
-  <div class="radio--custom">
-    <input type="radio" name="default-radio" id="default-radio2"/>
-    <label for="default-radio2">Option 2</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="default-checkbox2"/>
+    <label htmlFor="default-checkbox2">Option 2</label>
   </div>
-  <div class="radio--custom">
-    <input type="radio" name="default-radio" id="default-radio3"/>
-    <label for="default-radio3">Option 3</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="default-checkbox3"/>
+    <label htmlFor="default-checkbox3">Option 3</label>
   </div>
 </fieldset>
 
 <!-- Disabled -->
 <fieldset>
-  <label>Disabled Radio Buttons</label>
-  <div class="radio--custom">
-    <input type="radio" name="disabled-radio" id="disabled-radio1" disabled checked/>
-    <label for="disabled-radio1">Option 1</label>
+  <label>Disabled Checkboxes</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="disabled-checkbox1" disabled defaultChecked={true}/>
+    <label htmlFor="disabled-checkbox1">Option 1</label>
   </div>
-  <div class="radio--custom">
-    <input type="radio" name="disabled-radio" id="disabled-radio2" disabled/>
-    <label for="disabled-radio2">Option 2</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="disabled-checkbox2" disabled/>
+    <label htmlFor="disabled-checkbox2">Option 2</label>
   </div>
-  <div class="radio--custom">
-    <input type="radio" name="disabled-radio" id="disabled-radio3" disabled/>
-    <label for="disabled-radio3">Option 3</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="disabled-checkbox3" disabled/>
+    <label htmlFor="disabled-checkbox3">Option 3</label>
   </div>
 </fieldset>
 
 <!-- Error -->
-<fieldset class="has-error">
-  <label>Error Radio Buttons</label>
-  <div class="radio--custom">
-    <input type="radio" name="error-radio" id="error-radio1" checked/>
-    <label for="error-radio1">Option 1</label>
+<fieldset className="has-error">
+  <label>Error Checkboxes</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="error-checkbox1" defaultChecked={true}/>
+    <label htmlFor="error-checkbox1">Option 1</label>
   </div>
-  <div class="radio--custom">
-    <input type="radio" name="error-radio" id="error-radio2"/>
-    <label for="error-radio2">Option 2</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="error-checkbox2"/>
+    <label htmlFor="error-checkbox2">Option 2</label>
   </div>
-  <div class="radio--custom">
-    <input type="radio" name="error-radio" id="error-radio3"/>
-    <label for="error-radio3">Option 3</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="error-checkbox3"/>
+    <label htmlFor="error-checkbox3">Option 3</label>
   </div>
 </fieldset>
 
 <!-- Warning -->
-<fieldset class="has-warning">
-  <label>Warning Radio Buttons</label>
-  <div class="radio--custom">
-    <input type="radio" name="warning-radio" id="warning-radio1" checked/>
-    <label for="warning-radio1">Option 1</label>
+<fieldset className="has-warning">
+  <label>Warning Checkboxes</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="warning-checkbox1" defaultChecked={true}/>
+    <label htmlFor="warning-checkbox1">Option 1</label>
   </div>
-  <div class="radio--custom">
-    <input type="radio" name="warning-radio" id="warning-radio2"/>
-    <label for="warning-radio2">Option 2</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="warning-checkbox2"/>
+    <label htmlFor="warning-checkbox2">Option 2</label>
   </div>
-  <div class="radio--custom">
-    <input type="radio" name="warning-radio" id="warning-radio3"/>
-    <label for="warning-radio3">Option 3</label>
+  <div className="checkbox--custom">
+    <input type="checkbox" id="warning-checkbox3"/>
+    <label htmlFor="warning-checkbox3">Option 3</label>
   </div>
 </fieldset>`}
         </CodeToggle>
