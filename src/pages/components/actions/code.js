@@ -408,44 +408,6 @@ class ActionsCode extends React.Component {
             </div>
             <div className="card">
               <div className="card-content">
-                <ul className="button-group button--border button--blue">
-                  <li className="button--radio">
-                    <input type="radio" name="options-green" id="previous" />
-                    <label htmlFor="previous" className="button">
-                      <i className="dashing-icon dashing-icon--arrow-left"></i>
-                    </label>
-                  </li>
-                  <li className="button--radio">
-                    <input type="radio" name="options-green" id="green1" defaultChecked/>
-                    <label htmlFor="green1" className="button">1</label>
-                  </li>
-                  <li className="button--radio">
-                    <input type="radio" name="options-green" id="green2" />
-                    <label htmlFor="green2" className="button">2</label>
-                  </li>
-                  <li className="button--radio">
-                    <input type="radio" name="options-green" id="green3" />
-                    <label htmlFor="green3" className="button">3</label>
-                  </li>
-                  <li className="button--radio">
-                    <input type="radio" name="options-green" id="green4" />
-                    <label htmlFor="green4" className="button">4</label>
-                  </li>
-                  <li className="button--radio">
-                    <input type="radio" name="options-green" id="green5" />
-                    <label htmlFor="green5" className="button">5</label>
-                  </li>
-                  <li className="button--radio">
-                    <input type="radio" name="options-green" id="next" />
-                    <label htmlFor="next" className="button">
-                      <i className="dashing-icon dashing-icon--arrow-right"></i>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card-content">
                 <ul className="button-group button-group--vertical button--green button--border">
                   <li className="button--radio">
                     <input type="radio" name="options-gray" id="toggle-gray1" defaultChecked />
@@ -475,41 +437,6 @@ class ActionsCode extends React.Component {
   <li class="button--radio">
     <input type="radio" name="options-blue" id="blue3" />
     <label for="blue3" class="button">Right</label>
-  </li>
-</ul>
-
-<ul class="button-group button--border button--blue">
-  <li class="button--radio">
-    <input type="radio" name="options-green" id="previous" />
-    <label for="previous" class="button">
-      <i class="dashing-icon dashing-icon--arrow-left"></i>
-    </label>
-  </li>
-  <li class="button--radio">
-    <input type="radio" name="options-green" id="green1" defaultChecked/>
-    <label for="green1" class="button">1</label>
-  </li>
-  <li class="button--radio">
-    <input type="radio" name="options-green" id="green2" />
-    <label for="green2" class="button">2</label>
-  </li>
-  <li class="button--radio">
-    <input type="radio" name="options-green" id="green3" />
-    <label for="green3" class="button">3</label>
-  </li>
-  <li class="button--radio">
-    <input type="radio" name="options-green" id="green4" />
-    <label for="green4" class="button">4</label>
-  </li>
-  <li class="button--radio">
-    <input type="radio" name="options-green" id="green5" />
-    <label for="green5" class="button">5</label>
-  </li>
-  <li class="button--radio">
-    <input type="radio" name="options-green" id="next" />
-    <label for="next" class="button">
-      <i class="dashing-icon dashing-icon--arrow-right"></i>
-    </label>
   </li>
 </ul>
 
