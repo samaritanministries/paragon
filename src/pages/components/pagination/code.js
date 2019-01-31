@@ -32,45 +32,45 @@ class PaginationCode extends React.Component {
                 <div className="card-content">
                   <ul className="pagination">
                     <li>
-                      <a href="/" className="button">
+                      <a href="/components/pagination/code" className="button" disabled>
                         <span className="screen-reader">Previous Page</span>
                         <span aria-hidden="true">
                           <i className="dashing-icon dashing-icon--arrow-left"></i>
                         </span>
                       </a>
                     </li>
-                    <li className="active">
-                      <a href="/" className="button">
+                    <li className="is-active">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Page 1</span>
                         <span aria-hidden="true">1</span>
                       </a>
                     </li>
                     <li>
-                      <a href="/" className="button">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Page 2</span>
                         <span aria-hidden="true">2</span>
                       </a>
                     </li>
                     <li>
-                      <a href="/" className="button">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Page 3</span>
                         <span aria-hidden="true">3</span>
                       </a>
                     </li>
                     <li>
-                      <a href="/" className="button">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Page 4</span>
                         <span aria-hidden="true">4</span>
                       </a>
                     </li>
                     <li>
-                      <a href="/" className="button">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Page 5</span>
                         <span aria-hidden="true">5</span>
                       </a>
                     </li>
                     <li>
-                      <a href="/" className="button">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Next Page</span>
                         <span aria-hidden="true">
                           <i className="dashing-icon dashing-icon--arrow-right"></i>
@@ -83,14 +83,14 @@ class PaginationCode extends React.Component {
               <CodeToggle>
 {`<ul class="pagination">
   <li>
-    <a href="/" class="button">
+    <a href="/" class="button" disabled>
       <span class="screen-reader">Previous Page</span>
       <span aria-hidden="true">
         <i class="dashing-icon dashing-icon--arrow-left"></i>
       </span>
     </a>
   </li>
-  <li class="active">
+  <li class="is-active">
     <a href="/" class="button">
       <span class="screen-reader">Page 1</span>
       <span aria-hidden="true">1</span>
@@ -140,45 +140,45 @@ class PaginationCode extends React.Component {
                 <div className="card-content">
                   <ul className="pagination pagination--group">
                     <li>
-                      <a href="/" className="button">
+                      <a href="/" className="button" disabled>
                         <span className="screen-reader">Previous Page</span>
                         <span aria-hidden="true">
                           <i className="dashing-icon dashing-icon--arrow-left"></i>
                         </span>
                       </a>
                     </li>
-                    <li className="active">
-                      <a href="/" className="button">
+                    <li className="is-active">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Page 1</span>
                         <span aria-hidden="true">1</span>
                       </a>
                     </li>
                     <li>
-                      <a href="/" className="button">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Page 2</span>
                         <span aria-hidden="true">2</span>
                       </a>
                     </li>
                     <li>
-                      <a href="/" className="button">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Page 3</span>
                         <span aria-hidden="true">3</span>
                       </a>
                     </li>
                     <li>
-                      <a href="/" className="button">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Page 4</span>
                         <span aria-hidden="true">4</span>
                       </a>
                     </li>
                     <li>
-                      <a href="/" className="button">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Page 5</span>
                         <span aria-hidden="true">5</span>
                       </a>
                     </li>
                     <li>
-                      <a href="/" className="button">
+                      <a href="/components/pagination/code" className="button">
                         <span className="screen-reader">Next Page</span>
                         <span aria-hidden="true">
                           <i className="dashing-icon dashing-icon--arrow-right"></i>
@@ -191,14 +191,14 @@ class PaginationCode extends React.Component {
               <CodeToggle>
 {`<ul class="pagination pagination--group">
   <li>
-    <a href="/" class="button">
+    <a href="/" class="button" disabled>
       <span class="screen-reader">Previous Page</span>
       <span aria-hidden="true">
         <i class="dashing-icon dashing-icon--arrow-left"></i>
       </span>
     </a>
   </li>
-  <li class="active">
+  <li class="is-active">
     <a href="/" class="button">
       <span class="screen-reader">Page 1</span>
       <span aria-hidden="true">1</span>

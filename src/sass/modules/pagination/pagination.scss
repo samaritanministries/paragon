@@ -6,7 +6,7 @@
   li {
     list-style: none;
     display: inline-flex; //fixes whitespace bug present with inline-block
-    &:not(.active) .button { @extend .button--transparent; } //only shows transparent if not active
+    &:not(.is-active) .button { @extend .button--transparent; } //only shows transparent if not active
     .button { padding: $space-xs $space-s !important; } //overrides smaller paddinng inherited from transparent buttons
   }
   .dashing-icon { margin: 0 !important; }
@@ -26,7 +26,7 @@
     }
     li:first-of-type .button { border-radius: 5px 0 0 5px; }
     li:last-of-type .button { border-radius: 0 5px 5px 0; }
-    li.active .button { border-color: transparent; } //allows border to inherit button color
+    li.is-active .button { border-color: transparent; } //allows border to inherit button color
   }
 
   &.center-align { justify-content: center; }
