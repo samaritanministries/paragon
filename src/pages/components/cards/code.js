@@ -88,7 +88,7 @@ class CardsCode extends React.Component {
                 <button className="button--transparent button--gray">Cancel</button>
               </div>
             </div>
-            <button className="button" onClick={this.toggleLoading}>Load Content</button>
+            <button className="button" onClick={this.toggleLoading}>Toggle Loading</button>
           </div>
 
           <h2 className="mt-space-xl" id="form">Form
