@@ -33,3 +33,12 @@
   &.left-align { justify-content: flex-start; }
   &.right-align { justify-content: flex-end; }
 }
+
+.pagination li.is-active { //override for anchor tag hover
+  .button {
+    &:hover, &:focus, &:active { color: $white; }
+  }
+  .button--gray {
+    &:hover, &:focus, &:active { color: $gray-800; }
+  }
+}

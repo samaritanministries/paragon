@@ -73,7 +73,7 @@ a {
   outline: none;
   text-decoration: none;
 
-  &:not(.button):hover, &:not(.button):focus { color: $blue-400; }
+  &:hover, &:focus { color: $blue-400; }
 }
 
 p, li.text-list_item {
