@@ -11,6 +11,7 @@
   "dependencies": {
     "gatsby": "next",
     "gatsby-plugin-google-fonts": "0.0.4",
+    "gatsby-plugin-manifest": "^2.0.17",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-react-next": "next",
     "gatsby-plugin-sass": "next",
@@ -27,8 +28,6 @@
     "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
-    "gatsby": "next",
-    "node-sass": "^4.9.0",
     "prettier": "^1.12.0",
     "sass-loader": "^7.0.3",
     "webpack": "^4.12.0",
