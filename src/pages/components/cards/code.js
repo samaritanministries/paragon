@@ -11,7 +11,20 @@ const currentPageName = "Cards";
 const currentPageNameLower = currentPageName.toLowerCase();
 
 class CardsCode extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { isLoading: true };
+    this.toggleLoading = this.toggleLoading.bind(this);
+  }
+
   static propTypes = { location: PropTypes.object.isRequired }
+
+  toggleLoading() {
+    this.setState(prevState => ({
+      isLoading: !prevState.isLoading
+    }));
+   }
 
   render() {
     const { location } = this.props;
@@ -25,7 +38,60 @@ class CardsCode extends React.Component {
       <AppContent>
     		<div className="grid grid-padding">
 
-          <h2 id="form">Form
+          <h2 id="form">Loading Card
+            <Link to={location.pathname + "/#loading-card"} className="button button--transparent button--copy-link"></Link>
+          </h2>
+          <div className="example-container">
+            <div className="card" style={{ overflow: "hidden" }}>
+              <div className="card-header has-border">
+                <h3 className={this.state.isLoading ? '' : 'loading'}></h3>
+                <h3 className={this.state.isLoading ? '' : 'hidden'}>Card Header</h3>
+              </div>
+              <div className="card-content flex-content" style={{ overflow: "hidden" }}>
+                <p className={this.state.isLoading ? 'hidden' : 'loading'}></p>
+                <p className={this.state.isLoading ? 'hidden' : 'loading'}></p>
+                <p className={this.state.isLoading ? 'hidden' : 'loading'}></p>
+
+                <div className={this.state.isLoading ? '' : 'hidden'}>
+                  <div className="flex-row">
+                    <fieldset>
+                      <label htmlFor="first-name">First Name</label>
+                      <input type="text" id="first-name"/>
+                    </fieldset>
+                    <fieldset>
+                      <label htmlFor="middle-name">Middle Name</label>
+                      <input type="text" id="middle-name"/>
+                    </fieldset>
+                    <fieldset>
+                      <label htmlFor="last-name">Last Name</label>
+                      <input type="text" id="last-name"/>
+                    </fieldset>
+                  </div>
+                  <div className="flex-row">
+                    <fieldset>
+                      <label htmlFor="birthday">Date of Birth</label>
+                      <input type="date" id="birthday"/>
+                    </fieldset>
+                    <fieldset className="select--has-icon">
+                      <label htmlFor="gender">Gender</label>
+                      <select id="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                      </select>
+                    </fieldset>
+                    <fieldset className="spacer"></fieldset>
+                  </div>
+                </div>
+              </div>
+              <div className={this.state.isLoading ? 'card-footer' : 'hidden'}>
+                <button className="mr-space-xs">Submit</button>
+                <button className="button--transparent button--gray">Cancel</button>
+              </div>
+            </div>
+            <button className="button" onClick={this.toggleLoading}>Load Content</button>
+          </div>
+
+          <h2 className="mt-space-xl" id="form">Form
             <Link to={location.pathname + "/#form"} className="button button--transparent button--copy-link"></Link>
           </h2>
           <div className="example-container">
