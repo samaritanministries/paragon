@@ -10,13 +10,17 @@
   @extend %card-shadow;
 
   .grid & { margin-bottom: $space-m; }
+
   @media #{$phone} {
-    .grid & {
-      @supports(display: grid) { //Fallback. IE does not support negative margin on cards
-        border-radius: 0;
-        margin-left: -#{$space-m};
-        margin-right: -#{$space-m};
-  		}
+    .grid {
+      :not(.radio-card) &,
+      :not(.checkbox-card) &,   { //ignores checkbox and radio cards
+        @supports(display: grid) { //Fallback. IE does not support negative margin on cards
+          border-radius: 0;
+          margin-left: -#{$space-m};
+          margin-right: -#{$space-m};
+        }
+      }
     }
   }
 
@@ -106,6 +110,38 @@
         cursor: pointer;
         &:hover {
           background-color: $gray-100;
+        }
+      }
+    }
+  }
+  //Table within Card
+  .card-table {
+    overflow-x: auto;
+    border-radius: 0 0 5px 5px;
+    .table,
+    table {
+      margin-top: $grid-gutter !important;
+      border-radius: 0 0 5px 5px;
+      th {
+        border-top: 2px solid;
+        border-color: $gray-200;
+        padding: $space-xs $space-m !important;
+        background-color: $gray-100;
+      }
+      &.has-arrow {
+        th,tr {
+          td:last-of-type  {
+            width: 3rem;
+          }
+        }
+      }
+      &.is-selectable {
+        tbody tr {
+          transition: $global-transition;
+          &:hover {
+            cursor: pointer;
+            background-color: $gray-100;
+          }
         }
       }
     }

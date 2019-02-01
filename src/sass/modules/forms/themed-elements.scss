@@ -109,7 +109,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
   }
 
   //Checkbox Focus
-  input:focus ~ label:before { box-shadow: 0 0 0 2px $checkbox--focus; }
+  input:focus ~ label:before { box-shadow: 0 0 0 4px $checkbox--focus; }
 
   //Disabled Checkbox
   input[disabled] ~ label,
@@ -145,7 +145,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
     }
 
     //Checkbox Focus
-    input:focus ~ label:before { box-shadow: 0 0 0 2px $red-200; }
+    input:focus ~ label:before { box-shadow: 0 0 0 4px $red-200; }
   }
 
   &.has-warning,
@@ -164,7 +164,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
     }
 
     //Checkbox Focus
-    input:focus ~ label:before { box-shadow: 0 0 0 2px $orange-200; }
+    input:focus ~ label:before { box-shadow: 0 0 0 4px $orange-200; }
   }
 }
 
@@ -242,7 +242,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
   }
 
   //Radio Focus
-  input:focus ~ label:before { box-shadow: 0 0 0 2px $radio--focus; }
+  input:focus ~ label:before { box-shadow: 0 0 0 4px $radio--focus; }
 
   //Disabled Radio Button
   input[disabled] ~ label,
@@ -274,7 +274,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
       border-color: $red-500;
       color: $white;
     }
-    input:focus ~ label:before { box-shadow: 0 0 0 2px $red-200; }
+    input:focus ~ label:before { box-shadow: 0 0 0 4px $red-200; }
   }
 
   &.has-warning,
@@ -289,7 +289,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
       border-color: $orange-400;
       color: $white;
     }
-    input:focus ~ label:before { box-shadow: 0 0 0 2px $orange-200; }
+    input:focus ~ label:before { box-shadow: 0 0 0 4px $orange-200; }
   }
 }
 
