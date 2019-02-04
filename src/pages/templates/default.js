@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 // The scss needs to be imported here for running 'gatsby build'
+import '../../sass/experimental/placeholder.scss'
+import '../../sass/experimental/mobilemenu.scss'
 import '../../sass/example-page/example-page.scss'
 
 export default () => (

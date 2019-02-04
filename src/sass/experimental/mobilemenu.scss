@@ -11,6 +11,12 @@ This is an EXPERIMENT and is not ready to be included in production!
 
 //This is the mobile menu including sidebar and profile
 
+@import '../base/base';
+@import '../modules/typography/typography';
+@import '../modules/navigation/navigation';
+@import '../modules/actions/actions';
+@import '../modules/icons/icons';
+
 //Variables
 $animation-time: 0.3s;
 $sidebar-highlight:  #9D6CDE;
