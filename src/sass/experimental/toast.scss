@@ -6,130 +6,142 @@
 $toast-width: 300px;
 
 .toast-container {
-  overflow: hidden;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 3;
-  @media #{$tablet} {
-    bottom: 1rem;
-    left: auto; //Positions to bottom right of screen
-  }
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	z-index: 3;
+	@media #{$tablet} {
+		bottom: 1rem;
+		left: auto; //Positions to bottom right of screen
+	}
 }
 
 .toast-message {
-  //bottom: -130px; //hide by default (for demo)
+	@extend %card-shadow--hover;
+	background-color: $white;
+	border-radius: 0;
+	border-top: 1px solid $blue;
+	bottom: -130px; //hide by default (for demo)
+	padding: $space-s calc(#{$space-xl} + #{$space-xs});
 
-  position: relative;
-  background-color: $white;
-  width: 100%;
-  padding: $space-s calc( #{$space-xl} + #{$space-xs});
-  border-radius: 0;
-  border-top: 1px solid $blue;
-  @extend %card-shadow--hover;
-  p { margin: 0; }
+	position: relative;
+	width: 100%;
+	p { margin: 0; }
 
-  @media #{$tablet} {
-    bottom: 0;
-    right: calc(-#{$toast-width} - 2.5rem); //hide by default (for demo)
+	.toast-message--close {
 
-    animation-name: slideInLeftThenOut;
+		@extend .button--transparent;
+		@extend .button--gray;
+		@extend .button--icon;
+		@include transition(opacity 0.3s ease-out);
+		opacity: 1;
+		position: absolute;
+		right: $space-xs;
+		top: $space-xs;
 
-    margin: $space-m $space-xl $space-m $space-m; //Add margin to position if multiple toasts
-    width: $toast-width;
-    border-radius: 5px;
-    padding: $space-m calc( #{$space-xl} + #{$space-xs});
-    border: 1px solid $blue;
-  }
+		@media #{$desktop} {
+			opacity: 0;
+		}
+	}
 
-  .toast-message--close {
-    position: absolute;
-    right: $space-xs;
-    top: $space-xs;
-    opacity: 1;
-    @include transition(opacity 0.3s ease-out);
+	.toast-message--icon {
+		@extend .dashing-icon;
+		@extend .dashing-icon--info-stroke;
+		@extend .dashing-icon--blue;
+		left: $space-m;
+		position: absolute;
+		top: $space-s;
+		@media #{$tablet} { top: $space-m;}
+	}
 
-    @extend .button--transparent;
-    @extend .button--gray;
-    @extend .button--icon;
+	&.success {
+		border-color: $green;
 
-    @media #{$desktop} {
-      opacity: 0;
-    }
-  }
+		.toast-message--icon {
+			@extend .dashing-icon--green;
+			@extend .dashing-icon--checkmark-filled;
+		}
+	}
 
-  .toast-message--icon {
-    position: absolute;
-    left: $space-m;
-    top: $space-s;
-    @extend .dashing-icon;
-    @extend .dashing-icon--info-stroke;
-    @extend .dashing-icon--blue;
-    @media #{$tablet} { top: $space-m;}
-  }
+	&.warning {
+		border-color: $orange;
 
-  &.success {
-    border-color: $green;
-    .toast-message--icon {
-      @extend .dashing-icon--green;
-      @extend .dashing-icon--checkmark-filled;
-    }
-  }
-  &.warning {
-    border-color: $orange;
-    .toast-message--icon {
-      @extend .dashing-icon--orange;
-      @extend .dashing-icon--info-filled;
-    }
-  }
-  &.error {
-    border-color: $red;
-    .toast-message--icon {
-      @extend .dashing-icon--red;
-      @extend .dashing-icon--alert-filled;
-    }
-  }
-  &:hover {
-    .toast-message--close {
-      opacity: 1;
-    }
-  }
+		.toast-message--icon {
+			@extend .dashing-icon--orange;
+			@extend .dashing-icon--info-filled;
+		}
+	}
 
-  &.animate {
-    animation-name: slideInUpThenOut;
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
+	&.error {
+		border-color: $red;
 
-    @media #{$tablet} { animation-name: slideInLeftThenOut; }
-  }
+		.toast-message--icon {
+			@extend .dashing-icon--red;
+			@extend .dashing-icon--alert-filled;
+		}
+	}
+
+	&:hover {
+		.toast-message--close {
+			opacity: 1;
+		}
+	}
+
+	&.animate {
+		animation-duration: 4s;
+		animation-name: slideInUpThenOut;
+		animation-timing-function: ease-in-out;
+
+		@media #{$tablet} { animation-name: slideInLeftThenOut; }
+	}
+
+	@media #{$tablet} {
+
+		animation-name: slideInLeftThenOut;
+		border: 1px solid $blue;
+		border-radius: 5px;
+		bottom: 0;
+
+		margin: $space-m $space-xl $space-m $space-m; //Add margin to position if multiple toasts
+		padding: $space-m calc(#{$space-xl} + #{$space-xs});
+		right: calc(-#{$toast-width} - 2.5rem); //hide by default (for demo)
+		width: $toast-width;
+	}
 }
 
 @keyframes slideInLeftThenOut {
-  0% {
-    right: calc(-#{$toast-width} - 2.5rem);
-  }
-  10% {
-    right: 0;
-  }
-  90% {
-    right: 0;
-  }
-  100% {
-    right: calc(-#{$toast-width} - 2.5rem);
-  }
+	0% {
+		right: calc(-#{$toast-width} - 2.5rem);
+	}
+
+	10% {
+		right: 0;
+	}
+
+	90% {
+		right: 0;
+	}
+
+	100% {
+		right: calc(-#{$toast-width} - 2.5rem);
+	}
 }
 @keyframes slideInUpThenOut {
-  0% {
-    bottom: calc(-130px);
-  }
-  10% {
-    bottom: 0;
-  }
-  90% {
-    bottom: 0;
-  }
-  100% {
-    bottom: calc(-130px);
-  }
+	0% {
+		bottom: calc(-130px);
+	}
+
+	10% {
+		bottom: 0;
+	}
+
+	90% {
+		bottom: 0;
+	}
+
+	100% {
+		bottom: calc(-130px);
+	}
 }
