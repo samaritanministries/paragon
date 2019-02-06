@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import AppFooter from './footer'
 // The scss needs to be imported here for running 'gatsby build'
+import '../../sass/experimental/toast.scss'
 import '../../sass/example-page/example-page.scss'
 import '../../sass/experimental/mobilemenu.scss'
 import '../../sass/experimental/placeholder.scss'
@@ -37,6 +38,17 @@ export default () => (
 			<li><Link to={"/"}>Option 3</Link></li>
 		</ul>
 	</nav>
+
+	<div className="toast-container">
+		<div className="toast-message success">
+			<i className="toast-message--icon"></i>
+			<h4>Success</h4>
+			<p>Address saved successfully</p>
+			<button className="button button--icon toast-message--close">
+				<i className="dashing-icon dashing-icon--close"></i>
+			</button>
+		</div>
+	</div>
 
 	<main className="content">
 		<div className="grid grid-padding">

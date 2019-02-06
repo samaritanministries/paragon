@@ -1,0 +1,130 @@
+@import '../base/base';
+@import '../modules/typography/typography';
+@import '../modules/actions/actions';
+@import '../modules/icons/icons';
+
+$toast-width: 300px;
+
+.toast-container {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  @media #{$tablet} {
+    bottom: 1rem;
+    left: auto; //Positions to bottom right of screen
+  }
+}
+
+.toast-message {
+  bottom: -130px; //hide by default (for demo)
+
+  position: relative;
+  background-color: $white;
+  width: 100%;
+  padding: $space-s calc( #{$space-xl} + #{$space-xs});
+  border-radius: 0;
+  border-top: 1px solid $blue;
+  @extend %card-shadow--hover;
+  p { margin: 0; }
+
+  animation-name: slideInUpThenOut;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+
+  @media #{$tablet} {
+    bottom: 0;
+    right: calc(-#{$toast-width} - 2.5rem); //hide by default (for demo)
+
+    animation-name: slideInLeftThenOut;
+
+    margin: $space-m $space-xl $space-m $space-m; //Add margin to position if multiple toasts
+    width: $toast-width;
+    border-radius: 5px;
+    padding: $space-m calc( #{$space-xl} + #{$space-xs});
+    border: 1px solid $blue;
+  }
+
+  .toast-message--close {
+    position: absolute;
+    right: $space-xs;
+    top: $space-xs;
+    opacity: 1;
+    @include transition(opacity 0.3s ease-out);
+
+    @extend .button--transparent;
+    @extend .button--gray;
+    @extend .button--icon;
+
+    @media #{$desktop} {
+      opacity: 0;
+    }
+  }
+
+  .toast-message--icon {
+    position: absolute;
+    left: $space-m;
+    top: $space-s;
+    @extend .dashing-icon;
+    @extend .dashing-icon--info-stroke;
+    @extend .dashing-icon--blue;
+    @media #{$tablet} { top: $space-m;}
+  }
+
+  &.success {
+    border-color: $green;
+    .toast-message--icon {
+      @extend .dashing-icon--green;
+      @extend .dashing-icon--checkmark-filled;
+    }
+  }
+  &.warning {
+    border-color: $orange;
+    .toast-message--icon {
+      @extend .dashing-icon--orange;
+      @extend .dashing-icon--info-filled;
+    }
+  }
+  &.error {
+    border-color: $red;
+    .toast-message--icon {
+      @extend .dashing-icon--red;
+      @extend .dashing-icon--alert-filled;
+    }
+  }
+  &:hover {
+    .toast-message--close {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes slideInLeftThenOut {
+  0% {
+    right: calc(-#{$toast-width} - 2.5rem);
+  }
+  20% {
+    right: 0;
+  }
+  80% {
+    right: 0;
+  }
+  100% {
+    right: calc(-#{$toast-width} - 2.5rem);
+  }
+}
+@keyframes slideInUpThenOut {
+  0% {
+    bottom: calc(-130px);
+  }
+  20% {
+    bottom: 0;
+  }
+  80% {
+    bottom: 0;
+  }
+  100% {
+    bottom: calc(-130px);
+  }
+}
