@@ -14,11 +14,10 @@ const currentPageNameLower = currentPageName.toLowerCase()
 
 class AccordionCode extends React.Component {
   static propTypes = { location: PropTypes.object.isRequired }
-  
+
   componentDidMount() {
     $("#toggleAccordion").click(function(){
       this.parentElement.classList.toggle('expanded');
-      $(".accordion--content").slideToggle(200);
     });
   }
 
@@ -48,16 +47,23 @@ class AccordionCode extends React.Component {
               </div>
 
               <div className="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              <div className="accordion--footer">
+                <button className="button">Save & Continue</button>
+              </div>
 
             </div>
             <CodeToggle>
 {`<div class="accordion">
-<div class="accordion--header" id="toggleAccordion" tabindex="0">
-  <i class="dashing-icon accordion--arrow"></i>
-  <h3 class="title">Accordion Title</h3>
-</div>
+  <div class="accordion--header" id="toggleAccordion" tabindex="0">
+    <i class="dashing-icon accordion--arrow"></i>
+    <h3 class="title">Accordion Title</h3>
+  </div>
 
-<div class="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+  <div class="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+
+  <div class="accordion--footer">
+    <button class="button">Save & Continue</button>
+  </div>
 
 </div>`}
             </CodeToggle>

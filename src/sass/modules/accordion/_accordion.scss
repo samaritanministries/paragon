@@ -40,6 +40,12 @@
     border-top: 2px solid $gray-100;
   }
 
+  .accordion--footer {
+    display: none;
+    padding: $grid-gutter;
+    border-top: 2px solid $gray-100;
+  }
+
   &:focus,
   &:hover {
     outline: none;
@@ -48,5 +54,7 @@
   &.expanded {
     .accordion--header i.accordion--arrow { transform: rotate(90deg); }
     .accordion--header:hover { background-color: none; }
+    .accordion--content,
+    .accordion--footer { display: block; }
   }
 }
