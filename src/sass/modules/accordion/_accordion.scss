@@ -1,49 +1,42 @@
 .accordion {
-  border-radius: 5px;
-  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
-  background-color: $white;
-  overflow: hidden;
+  @extend .card;
   @extend %card-shadow;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
-  .accordion--header {
-    padding: $grid-gutter;
+  .accordion-header {
+    @extend .card-header;
+    padding-bottom: $grid-gutter;
     display: flex;
     align-items: center;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in accordion headers
 
-    i.accordion--arrow {
+    i.accordion-arrow {
       transition: transform 0.1s linear;
       @extend .dashing-icon--arrow-right;
       &:before { color: $black; }
     }
 
-    .title {
-      margin-left: 0.5rem;
-    }
+    .title { margin-left: $space-xs; }
+    .secondary-title { margin-left: auto; }
 
-    .secondary-title {
-      margin-left: auto;
-    }
-
-    &:focus,
     &:hover {
-      outline: none;
       background-color: $gray-50;
     }
 
   }
-  .accordion--content {
-    display: none;
-    padding: $grid-gutter;
+  .accordion-content {
+    @extend .card-content;
     border-top: 2px solid $gray-100;
+    display: none;
   }
 
-  .accordion--footer {
+  .accordion-footer {
+    @extend .card-footer;
+    @extend .has-border;
     display: none;
-    padding: $grid-gutter;
-    border-top: 2px solid $gray-100;
   }
 
   &:focus,
@@ -52,9 +45,12 @@
   }
 
   &.expanded {
-    .accordion--header i.accordion--arrow { transform: rotate(90deg); }
-    .accordion--header:hover { background-color: none; }
-    .accordion--content,
-    .accordion--footer { display: block; }
+    .accordion-header i.accordion-arrow { transform: rotate(90deg); }
+    .accordion-header {
+      border-radius: 5px 5px 0 0;
+      &:hover { background-color: none; }
+    }
+    .accordion-content,
+    .accordion-footer { display: block; }
   }
 }
