@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import LoadingCard from './loadingCard'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -10,7 +11,7 @@ import CodeToggle from '../../../components/codetoggle'
 const currentPageName = "Cards";
 const currentPageNameLower = currentPageName.toLowerCase();
 
-class CardsCode extends React.Component {
+export default class CardsCode extends React.Component {
 
   constructor(props) {
     super(props);
@@ -166,6 +167,8 @@ class CardsCode extends React.Component {
                 <p>To use a dashed card, apply <code className="example-text">.card--dashed</code> to the <code className="example-text">.card</code>.</p>
               </div>
             </div>
+
+            <LoadingCard hasBorder={true} numberOfLines={3} hasFooter={true}/>
 
             <div className={this.state.isLoading ? 'card' : 'card is-loading'}>
               <div className="card-header">
@@ -392,5 +395,3 @@ class CardsCode extends React.Component {
     )
   }
 }
-
-export default CardsCode;
