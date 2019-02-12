@@ -62,7 +62,7 @@ export default class LoadingCard extends React.Component {
     if (hasFooter) {
       return (
         <div className="card-footer">
-          <button></button>
+          <p></p>
         </div>
       );
     } else {

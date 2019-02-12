@@ -168,7 +168,7 @@ export default class CardsCode extends React.Component {
               </div>
             </div>
 
-            <LoadingCard hasBorder={true} numberOfLines={3} hasFooter={true}/>
+            <LoadingCard hasBorder={true} numberOfLines={1} hasFooter={false}/>
 
             <div className={this.state.isLoading ? 'card' : 'card is-loading'}>
               <div className="card-header">

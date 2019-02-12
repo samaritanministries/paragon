@@ -52,7 +52,7 @@ h1, h2, h3, h4 { margin-bottom: $space-xxs; }
     }
     .card-footer,
     .card--footer {
-      button {
+      * {
         width: 100px; //Sets a static width for footer buttons
         margin: 0;
       }
