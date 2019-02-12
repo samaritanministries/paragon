@@ -38,60 +38,7 @@ class CardsCode extends React.Component {
       <AppContent>
     		<div className="grid grid-padding">
 
-          <h2 id="form">Loading Card
-            <Link to={location.pathname + "/#loading-card"} className="button button--transparent button--copy-link"></Link>
-          </h2>
-          <div className="example-container">
-            <div className="card" style={{ overflow: "hidden" }}>
-              <div className="card-header has-border">
-                <h3 className={this.state.isLoading ? '' : 'loading'}></h3>
-                <h3 className={this.state.isLoading ? '' : 'hidden'}>Card Header</h3>
-              </div>
-              <div className="card-content flex-content" style={{ overflow: "hidden" }}>
-                <p className={this.state.isLoading ? 'hidden' : 'loading'}></p>
-                <p className={this.state.isLoading ? 'hidden' : 'loading'}></p>
-                <p className={this.state.isLoading ? 'hidden' : 'loading'}></p>
-
-                <div className={this.state.isLoading ? '' : 'hidden'}>
-                  <div className="flex-row">
-                    <fieldset>
-                      <label htmlFor="first-name">First Name</label>
-                      <input type="text" id="first-name"/>
-                    </fieldset>
-                    <fieldset>
-                      <label htmlFor="middle-name">Middle Name</label>
-                      <input type="text" id="middle-name"/>
-                    </fieldset>
-                    <fieldset>
-                      <label htmlFor="last-name">Last Name</label>
-                      <input type="text" id="last-name"/>
-                    </fieldset>
-                  </div>
-                  <div className="flex-row">
-                    <fieldset>
-                      <label htmlFor="birthday">Date of Birth</label>
-                      <input type="date" id="birthday"/>
-                    </fieldset>
-                    <fieldset className="select--has-icon">
-                      <label htmlFor="gender">Gender</label>
-                      <select id="gender">
-                        <option>Male</option>
-                        <option>Female</option>
-                      </select>
-                    </fieldset>
-                    <fieldset className="spacer"></fieldset>
-                  </div>
-                </div>
-              </div>
-              <div className={this.state.isLoading ? 'card-footer' : 'hidden'}>
-                <button className="mr-space-xs">Submit</button>
-                <button className="button--transparent button--gray">Cancel</button>
-              </div>
-            </div>
-            <button className="button" onClick={this.toggleLoading}>Toggle Loading</button>
-          </div>
-
-          <h2 className="mt-space-xl" id="form">Form
+          <h2 id="form">Form
             <Link to={location.pathname + "/#form"} className="button button--transparent button--copy-link"></Link>
           </h2>
           <div className="example-container">
@@ -219,42 +166,63 @@ class CardsCode extends React.Component {
                 <p>To use a dashed card, apply <code className="example-text">.card--dashed</code> to the <code className="example-text">.card</code>.</p>
               </div>
             </div>
+
+            <div className={this.state.isLoading ? 'card' : 'card is-loading'}>
+              <div className="card-header">
+                <h3 className={this.state.isLoading ? 'hidden' : ''}></h3>
+                <h3 className={this.state.isLoading ? '' : 'hidden'}>Loading</h3>
+              </div>
+              <div className="card-content">
+                <p className={this.state.isLoading ? 'hidden' : ''}></p>
+                <p className={this.state.isLoading ? '' : 'hidden'}>To use the loading card, apply <code className="example-text">.is-loading</code> to the <code className="example-text">.card</code>. Then add empty elements within the card.</p>
+              </div>
+            </div>
+            <button className="button mb-space-m" onClick={this.toggleLoading}>Toggle Loading</button>
             <CodeToggle>
 {`<!-- Different states of cards -->
 <div class="card">
-<div class="card-header">
-  <h3>Default</h3>
-</div>
-<div class="card-content">
-  <p>This is a default card.</p>
-</div>
+  <div class="card-header">
+    <h3>Default</h3>
+  </div>
+  <div class="card-content">
+    <p>This is a default card.</p>
+  </div>
 </div>
 
 <div class="card is-selectable">
-<div class="card-header">
-  <h3>Selectable</h3>
-</div>
-<div class="card-content">
-  <p>To use a selectable card, apply <code class="example-text">.is-selectable</code> to the <code class="example-text">.card</code>.</p>
-</div>
+  <div class="card-header">
+    <h3>Selectable</h3>
+  </div>
+  <div class="card-content">
+    <p>To use a selectable card, apply <code class="example-text">.is-selectable</code> to the <code class="example-text">.card</code>.</p>
+  </div>
 </div>
 
 <div class="card is-selectable is-disabled">
-<div class="card-header">
-  <h3>Disabled</h3>
-</div>
-<div class="card-content">
-  <p>To use a disabled card, apply <code class="example-text">.is-disabled</code> to the <code class="example-text">.card</code>.</p>
-</div>
+  <div class="card-header">
+    <h3>Disabled</h3>
+  </div>
+  <div class="card-content">
+    <p>To use a disabled card, apply <code class="example-text">.is-disabled</code> to the <code class="example-text">.card</code>.</p>
+  </div>
 </div>
 
 <div class="card card--dashed">
-<div class="card-header">
-  <h3>Dashed</h3>
+  <div class="card-header">
+    <h3>Dashed</h3>
+  </div>
+  <div class="card-content">
+    <p>To use a dashed card, apply <code class="example-text">.card--dashed</code> to the <code class="example-text">.card</code>.</p>
+  </div>
 </div>
-<div class="card-content">
-  <p>To use a dashed card, apply <code class="example-text">.card--dashed</code> to the <code class="example-text">.card</code>.</p>
-</div>
+
+<div class="card is-loading">
+  <div class="card-header">
+    <h3></h3>
+  </div>
+  <div class="card-content">
+    <p></p>
+  </div>
 </div>`}
             </CodeToggle>
           </div>
