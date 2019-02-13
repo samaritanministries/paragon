@@ -31,13 +31,13 @@ export default class LoadingCard extends React.Component {
     if (hasBorder) {
       return (
         <div className="card-header has-border">
-          <h3></h3>
+          <h3>&nbsp;</h3>
         </div>
       );
     } else {
       return (
         <div className="card-header">
-          <h3></h3>
+          <h3>&nbsp;</h3>
         </div>
       );
     }
@@ -62,7 +62,7 @@ export default class LoadingCard extends React.Component {
     if (hasFooter) {
       return (
         <div className="card-footer">
-          <button></button>
+          <p></p>
         </div>
       );
     } else {

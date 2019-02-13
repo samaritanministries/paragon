@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import LoadingCard from './loadingCard'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
@@ -168,15 +167,15 @@ export default class CardsCode extends React.Component {
               </div>
             </div>
 
-            <LoadingCard hasBorder={true} numberOfLines={3} hasFooter={true}/>
+            {/* <LoadingCard hasBorder={true} numberOfLines={1} hasFooter={false}/> */}
 
             <div className={this.state.isLoading ? 'card' : 'card is-loading'}>
               <div className="card-header">
-                <h3 className={this.state.isLoading ? 'hidden' : ''}></h3>
+                <h3 className={this.state.isLoading ? 'hidden' : ''}>&nbsp;</h3>
                 <h3 className={this.state.isLoading ? '' : 'hidden'}>Loading</h3>
               </div>
               <div className="card-content">
-                <p className={this.state.isLoading ? 'hidden' : ''}></p>
+                <p className={this.state.isLoading ? 'hidden' : ''}>&nbsp;</p>
                 <p className={this.state.isLoading ? '' : 'hidden'}>To use the loading card, apply <code className="example-text">.is-loading</code> to the <code className="example-text">.card</code>. Then add empty elements within the card.</p>
               </div>
             </div>
