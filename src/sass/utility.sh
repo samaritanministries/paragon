@@ -156,13 +156,13 @@ function changeFiles {
 
         #Has to be inserted line by line... (Mac osx requires the literal line break...)
         sed -i '' "5 i\\
-        ### $version - $timestamp
+        ## $version - $timestamp
         " $changelogfile
         sed -i '' "6 i\\
-        **$changelogtype**
+        ### $changelogtype
         " $changelogfile
         sed -i '' "7 i\\
-        * $changelog
+        - $changelog
         " $changelogfile
         sed -i '' "8 i\\
         \
@@ -229,7 +229,7 @@ do
             break
             ;;
         "Write")
-			gitTags
+		        gitTags
             requestDetails
             changeFiles
             break
