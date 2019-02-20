@@ -11,6 +11,8 @@ This is an EXPERIMENT and is not ready to be included in production!
 
 //This file is for placeholder pieces that have been needed but should be replaced by official modules.
 
+@import '../base/base';
+
 //VARIABLES
 $container-colors: transparent;//#413552
 
@@ -23,7 +25,7 @@ $container-colors: transparent;//#413552
 .crumbs {
   margin-left: 0;
   padding-left: 1rem;
-  color: $white;
+  color: #fff;
   font-weight: 600;
   margin-right: auto;
 

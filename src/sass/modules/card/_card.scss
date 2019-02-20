@@ -147,3 +147,51 @@
     }
   }
 }
+
+/* Card Loading Animation
+  =========================================================================== */
+.card.is-loading {
+  overflow: hidden;
+  .card-header, .card--header,
+  .card-content, .card--content,
+  .card-footer, .card--footer {
+    overflow: hidden;
+    * { //Targets all elements inside the card header, content, and footer
+      position: relative;
+      background-color: $gray-100;
+      border-radius: 3px;
+      height: 1.25rem;
+
+      &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .7), transparent);
+        animation: loadingCard 1.2s infinite;
+        top: 0;
+      }
+    }
+  }
+  .card-header,
+  .card--header {
+    * {
+      width: 200px; //Sets a static width for the header
+    }
+  }
+  .card-footer,
+  .card--footer {
+    * {
+      width: 100px; //Sets a static width for footer buttons
+      margin: 0;
+    }
+  }
+}
+
+@keyframes loadingCard {
+  100% {
+    transform: translateX(100%);
+  }
+}
