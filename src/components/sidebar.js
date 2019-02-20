@@ -153,6 +153,7 @@ class Sidebar extends React.Component {
                 <Link to="/components/tables/code">Tables</Link>
                 <Link to="/components/tags/code">Tags</Link>
                 <Link to="/components/toggle/code">Toggle</Link>
+                <Link to="/components/tooltips/code">Tooltips</Link>
               </div>
 
             </div>
