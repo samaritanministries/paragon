@@ -22,7 +22,8 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
-    "react-prism": "^4.3.2"
+    "react-prism": "^4.3.2",
+    "react-tooltip": "^3.9.2"
   },
   "devDependencies": {
     "prettier": "^1.12.0",

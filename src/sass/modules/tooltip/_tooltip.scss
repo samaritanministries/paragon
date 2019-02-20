@@ -1,3 +1,6 @@
+$tooltip-color: #555; //$gray-700
+$clippy-color: #FFF; //$gray-400
+
 //STATE
 .has-tooltip { @include user-select(none); }
 
@@ -24,3 +27,32 @@ p .dashing-tooltip {
 }
 
 span.dashing-tooltip { display: inline-block; }
+
+//Custom Tooltip Code
+.tooltip {
+	background-color: $tooltip-color;
+	opacity: 1 !important;
+  box-shadow: 0 4px 8px rgba(0,0,0, 0.3);
+  border: none;
+  max-width: 250px;
+  padding: $space-s;
+  border-radius: 5px;
+	//overflow: hidden;
+	font-weight: $font-weight-semibold;
+}
+
+.clippy {
+	background-color: $clippy-color !important;
+	opacity: 1 !important;
+	border-radius: 5px !important;
+	box-shadow: 0 4px 8px rgba(0,0,0, 0.2);
+	border: 2px solid $gray-200;
+	max-width: 350px;
+	padding: $space-m;
+	&.place-top { margin-top: -5px !important; }
+	&:hover {
+		visibility: visible !important;
+		opacity: 1 !important;
+	}
+	&:after { display: none; }
+}
