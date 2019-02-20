@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
@@ -8,7 +7,11 @@ import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 //import CodeToggle from '../../../components/codetoggle'
 //import CodeToggleSCSS from '../../../components/codetoggle-scss'
-import ReactTooltip from 'react-tooltip'
+import 'react-tippy/dist/tippy.css';
+
+import {
+  Tooltip,
+} from 'react-tippy';
 
 const currentPageName = "Tooltips";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -28,21 +31,59 @@ class ToggleCode extends React.Component {
         <AppContent>
           <div className="grid grid-padding">
 
-            <div className="card">
-              <div className="card-content">
-                <p className="mb-space-xl">Tooltip
-                	<i className="dashing-tooltip" data-tip data-for='defaultTooltip'></i>
-                </p>
-                <ReactTooltip id="defaultTooltip" effect="solid" className="tooltip">
-                  <span>Default Tooltip</span>
-                </ReactTooltip>
+            <div className="example-container">
+              <div className="card">
+                <div className="card-content">
 
-                <button className="button button--gray" data-tip data-for='defaultClippy'>Default Button</button>
-                <ReactTooltip id="defaultClippy" effect="solid" className="clippy">
-                  <h4>Default Clippy</h4>
-                  <p>This is a clippy message with a <Link>link</Link>.</p>
-                </ReactTooltip>
+                  <div className="grid-full mb-space-xl">
+                    <span>Tooltip</span>
+                    <Tooltip
+                      className="tooltip"
+                      title="Welcome to React"
+                      position="top"
+                      arrow="true"
+                      animateFill="false"
+                      hideOnClick="false"
+                    >
+                      <i className="dashing-tooltip"></i>
+                    </Tooltip>
+                  </div>
 
+                  <div className="grid-full mb-space-xl">
+                    <Tooltip
+                      title="Edit"
+                      theme="dark"
+                      position="bottom"
+                      animation="fade"
+                      animateFill="false"
+                      hideOnClick="false"
+                    >
+                      <button class="dashing-tooltip button button--icon button--blue">
+                      	<i class="dashing-icon dashing-icon--pencil"></i>
+                      </button>
+                    </Tooltip>
+                  </div>
+
+                  <div className="grid-full">
+                    <Tooltip
+                      html={(
+                        <div className="align-left">
+                          <h4>Clippy Title</h4>
+                          <p>Here is some comtent in a clippy to have the member learn more.</p>
+                          <a>Link</a>
+                        </div>
+                      )}
+                      theme="light"
+                      interactive
+                      animation="fade"
+                      animateFill="false"
+                      hideOnClick="false"
+                    >
+                      <Link>Learn More</Link>
+                    </Tooltip>
+                  </div>
+
+                </div>
               </div>
             </div>
 
