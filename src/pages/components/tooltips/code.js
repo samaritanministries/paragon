@@ -53,7 +53,7 @@ class ToggleCode extends React.Component {
 
                   </div>
 
-                  <div className="grid-full">
+                  <div className="grid-full mb-space-xl">
                     <IconDescription content="Delete">
                       <button className="button button--red button--icon button--transparent">
                         <i className="dashing-icon dashing-icon--trash"></i>
@@ -64,6 +64,17 @@ class ToggleCode extends React.Component {
                         <i className="dashing-icon dashing-icon--add"></i>
                       </button>
                     </IconDescription>
+                  </div>
+
+                  <div className="grid-full">
+                    <Tooltip content="You cannot delete the Primary Phone Number">
+                      <span style={{ display: "inline-block" }}>
+                        <button className="button" disabled>
+                          This is Disabled
+                        </button>
+                      </span>
+                    </Tooltip>
+
                   </div>
 
                 </div>
