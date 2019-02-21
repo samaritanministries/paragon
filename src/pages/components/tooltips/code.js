@@ -7,11 +7,7 @@ import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 //import CodeToggle from '../../../components/codetoggle'
 //import CodeToggleSCSS from '../../../components/codetoggle-scss'
-import 'react-tippy/dist/tippy.css';
-
-import {
-  Tooltip,
-} from 'react-tippy';
+import { Tooltip, Clippy, IconDescription } from './tippyComponent'
 
 const currentPageName = "Tooltips";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -20,7 +16,7 @@ class ToggleCode extends React.Component {
   static propTypes = { location: PropTypes.object.isRequired }
 
   render() {
-    const { location } = this.props;
+//    const { location } = this.props;
 
     return (
       <Layout>
@@ -30,57 +26,44 @@ class ToggleCode extends React.Component {
         </header>
         <AppContent>
           <div className="grid grid-padding">
-
+            <h2>Default Tooltip</h2>
             <div className="example-container">
               <div className="card">
                 <div className="card-content">
 
                   <div className="grid-full mb-space-xl">
-                    <span>Tooltip</span>
-                    <Tooltip
-                      className="tooltip"
-                      title="Welcome to React"
-                      position="top"
-                      arrow="true"
-                      animateFill="false"
-                      hideOnClick="false"
-                    >
+                    <span>Tooltip </span>
+                    <Tooltip content="Hello Tooltip">
                       <i className="dashing-tooltip"></i>
                     </Tooltip>
+
                   </div>
 
                   <div className="grid-full mb-space-xl">
-                    <Tooltip
-                      title="Edit"
-                      theme="dark"
-                      position="bottom"
-                      animation="fade"
-                      animateFill="false"
-                      hideOnClick="false"
-                    >
-                      <button class="dashing-tooltip button button--icon button--blue">
-                      	<i class="dashing-icon dashing-icon--pencil"></i>
-                      </button>
-                    </Tooltip>
+                    <span>Clippy </span>
+                    <Clippy content={
+                      <div>
+                        <h4>Clippy Title</h4>
+                        <p>This is some content of the Clippy. It is interactive. Feel free to hover over this and click the link.</p>
+                        <Link to="./code">Link</Link>
+                      </div>
+                    }>
+                      <i className="dashing-tooltip"></i>
+                    </Clippy>
+
                   </div>
 
                   <div className="grid-full">
-                    <Tooltip
-                      html={(
-                        <div className="align-left">
-                          <h4>Clippy Title</h4>
-                          <p>Here is some comtent in a clippy to have the member learn more.</p>
-                          <a>Link</a>
-                        </div>
-                      )}
-                      theme="light"
-                      interactive
-                      animation="fade"
-                      animateFill="false"
-                      hideOnClick="false"
-                    >
-                      <Link>Learn More</Link>
-                    </Tooltip>
+                    <IconDescription content="Delete">
+                      <button className="button button--red button--icon button--transparent">
+                        <i className="dashing-icon dashing-icon--trash"></i>
+                      </button>
+                    </IconDescription>
+                    <IconDescription content="Add">
+                      <button className="button button--icon button--icon--main">
+                        <i className="dashing-icon dashing-icon--add"></i>
+                      </button>
+                    </IconDescription>
                   </div>
 
                 </div>

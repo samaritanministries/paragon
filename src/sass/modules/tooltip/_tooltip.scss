@@ -1,5 +1,5 @@
-$tooltip-color: #555; //$gray-700
-$clippy-color: #FFF; //$gray-400
+$tooltip-color: $gray-700;
+$clippy-color: $white;
 
 //STATE
 .has-tooltip { @include user-select(none); }
@@ -30,36 +30,40 @@ span.dashing-tooltip { display: inline-block; }
 
 //Custom Tooltip Code
 .tippy-tooltip {
-	&.dark-theme {
+
+	&.default-theme {
 		background-color: $tooltip-color;
 		box-shadow: 0 4px 8px rgba(0,0,0, 0.3);
 	  border: none;
-		border-radius: 10px;
-	  max-width: 250px;
-		[x-arrow] {
-			border-bottom-color: $tooltip-color !important;
-			border-top-color: $tooltip-color !important;
-		}
-
-		.tippy-tooltip-content {
+		border-radius: 5px;
+		.tippy-backdrop { background-color: $tooltip-color; }
+		.tippy-content {
 			font-weight: 600;
-	    font-size: 0.9rem;
-	    line-height: 1.1rem;
+			font-size: 0.9rem;
+			line-height: 1.1rem;
+		}
+		.tippy-roundarrow {
+			fill: $tooltip-color;
 		}
 	}
-	&.light-theme {
+
+	&.clippy-theme {
 		border: 2px solid $gray-200;
 		box-shadow: 0 4px 8px rgba(0,0,0, 0.2) !important;
-		max-width: 350px;
 		border-radius: 5px;
-
-		.tippy-tooltip-content {
+		background-color: $clippy-color;
+		.tippy-backdrop { background-color: $clippy-color; }
+		.tippy-content {
 			font-weight: 400;
-	    font-size: 0.9rem;
-	    line-height: 1.2rem;
+			font-size: 0.9rem;
+			line-height: 1.2rem;
 			padding: 0;
+			color: $gray-900;
+			text-align: left;
+			padding: 0.2rem;
 
 			h4, p { font-size: 0.9rem; }
+			p { line-height: 1.2rem; }
 			h4 { font-weight: 600;}
 			a { margin-top: 0.5rem; }
 		}
