@@ -11,6 +11,7 @@ $toast-width: 300px;
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: 3;
   @media #{$tablet} {
     bottom: 1rem;
     left: auto; //Positions to bottom right of screen
@@ -18,7 +19,7 @@ $toast-width: 300px;
 }
 
 .toast-message {
-  bottom: -130px; //hide by default (for demo)
+  //bottom: -130px; //hide by default (for demo)
 
   position: relative;
   background-color: $white;
@@ -28,10 +29,6 @@ $toast-width: 300px;
   border-top: 1px solid $blue;
   @extend %card-shadow--hover;
   p { margin: 0; }
-
-  animation-name: slideInUpThenOut;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
 
   @media #{$tablet} {
     bottom: 0;
@@ -98,16 +95,24 @@ $toast-width: 300px;
       opacity: 1;
     }
   }
+
+  &.animate {
+    animation-name: slideInUpThenOut;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+
+    @media #{$tablet} { animation-name: slideInLeftThenOut; }
+  }
 }
 
 @keyframes slideInLeftThenOut {
   0% {
     right: calc(-#{$toast-width} - 2.5rem);
   }
-  20% {
+  10% {
     right: 0;
   }
-  80% {
+  90% {
     right: 0;
   }
   100% {
@@ -118,10 +123,10 @@ $toast-width: 300px;
   0% {
     bottom: calc(-130px);
   }
-  20% {
+  10% {
     bottom: 0;
   }
-  80% {
+  90% {
     bottom: 0;
   }
   100% {

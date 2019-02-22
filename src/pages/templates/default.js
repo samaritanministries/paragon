@@ -40,7 +40,7 @@ export default () => (
 	</nav>
 
 	<div className="toast-container">
-		<div className="toast-message success">
+		<div className="toast-message success animate">
 			<i className="toast-message--icon"></i>
 			<h4>Success</h4>
 			<p>Address saved successfully</p>
