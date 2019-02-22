@@ -17,7 +17,7 @@ export default () => (
     <AppContent>
       <div className="row">
         <div className="column column--full">
-          <p className="intro">Text legibility and consistency throughout the Dash platform is a must. Adopting our platform font and type structure will ensure that you are up to par with our defined design and usability standards in order to make your App more successful.</p>
+          <p className="intro">Text legibility and consistency is a must. Adopting the default font and type structure will ensure that you are up to par with our defined design and usability standards in order to make your App more successful.</p>
 
             <h2 className="has-number has-number--one no-margin--top">System Typeface</h2>
             <p>Source Sans Pro was Adobes first open source typeface family, created in 2012. Designed primarily for user interface, it draws from the clarity and legibility of twentieth-century American gothic typefaces (News Gothic and Franklin Gothic). Samaritan utilizes this typeface throughout our Apps to create a legible interface on any device or screen.</p>

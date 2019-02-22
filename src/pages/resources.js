@@ -31,7 +31,7 @@ export default () => (
             <div className="resource-image"></div>
           </div>
           <div className="card--resource-text">
-            <h3>Dashing Prototype Kit</h3>
+            <h3>Paragon Prototype Kit</h3>
             <a className="resource-badge" href="https://badge.fury.io/gh/samaritanministries%2Fdashing-prototype-kit" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/gh/samaritanministries%2Fdashing-prototype-kit.svg" alt="GitHub version" height="18" /></a>
             <p>Adobe XD prototype kit</p>
           </div>
@@ -41,7 +41,7 @@ export default () => (
             <a className="button button--blue button--border button--smooth" href="https://github.com/samaritanministries/dashing-prototype-kit/raw/master/Prototype-Kit.xd" target="_blank" rel="noopener noreferrer" style={{marginTop: "0.5rem"}}>Download Kit<i className="dashing-icon dashing-icon--arrow-long-down flow-opposite"></i></a>
           </div>
         </div>
-        
+
       </div>
 
     </AppContent>

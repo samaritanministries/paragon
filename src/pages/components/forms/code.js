@@ -191,20 +191,20 @@ class FooterCode extends React.Component {
             <div className="card">
               <div className="card-content">
                 <fieldset>
-                  <label htmlFor="dashing-text-message">Dashing Text Input with message</label>
-                  <input type="text" id="dashing-text-message"/>
+                  <label htmlFor="text-message">Text Input with message</label>
+                  <input type="text" id="text-message"/>
                   <div className="message">Default messages can be used to give additional information about an input.</div>
                 </fieldset>
 
                 <fieldset className="has-error">
-                  <label htmlFor="dashing-text-error">Dashing Text Input with error</label>
-                  <input type="text" id="dashing-text-error"/>
+                  <label htmlFor="text-error">Text Input with error</label>
+                  <input type="text" id="text-error"/>
                   <div className="message">Error messages are used to explain system failures or user errors.</div>
                 </fieldset>
 
                 <fieldset className="has-warning">
-                  <label htmlFor="dashing-text-warning">Dashing Text Input with warning</label>
-                  <input type="text" id="dashing-text-warning"/>
+                  <label htmlFor="text-warning">Text Input with warning</label>
+                  <input type="text" id="text-warning"/>
                   <div className="message">Use warnings to convey important messages to your user.</div>
                 </fieldset>
               </div>
@@ -215,20 +215,20 @@ class FooterCode extends React.Component {
 <div class="card">
 <div class="card-content">
   <fieldset>
-    <label for="dashing-text-message">Dashing Text Input with message</label>
-    <input type="text" id="dashing-text-message"/>
+    <label for="text-message">Text Input with message</label>
+    <input type="text" id="text-message"/>
     <div class="message">Default messages can be used to give additional information about an input.</div>
   </fieldset>
 
   <fieldset class="has-error">
-    <label for="dashing-text-error">Dashing Text Input with error</label>
-    <input type="text" id="dashing-text-error"/>
+    <label for="text-error">Text Input with error</label>
+    <input type="text" id="text-error"/>
     <div class="message">Error messages are used to explain system failures or user errors.</div>
   </fieldset>
 
   <fieldset class="has-warning">
-    <label for="dashing-text-warning">Dashing Text Input with warning</label>
-    <input type="text" id="dashing-text-warning"/>
+    <label for="text-warning">Text Input with warning</label>
+    <input type="text" id="text-warning"/>
     <div class="message">Use warnings to convey important messages to your user.</div>
   </fieldset>
 </div>
@@ -243,43 +243,43 @@ class FooterCode extends React.Component {
               <div className="card">
                 <div className="card-content">
                   <fieldset>
-                    <label htmlFor="dashing-date">Dashing Date</label>
-                    <input type="date" id="dashing-date"/>
+                    <label htmlFor="date">Date</label>
+                    <input type="date" id="date"/>
                   </fieldset>
 
                   <fieldset>
-                    <label htmlFor="dashing-time">Dashing Time</label>
-                    <input type="time" id="dashing-time"/>
+                    <label htmlFor="time">Time</label>
+                    <input type="time" id="time"/>
                   </fieldset>
 
                   <fieldset>
-                    <label htmlFor="dashing-month">Dashing Month</label>
-                    <input type="month" id="dashing-month"/>
+                    <label htmlFor="month">Month</label>
+                    <input type="month" id="month"/>
                   </fieldset>
 
                   <fieldset>
-                    <label htmlFor="dashing-email">Dashing Email</label>
-                    <input type="email" id="dashing-email" placeholder="e.g. ryan@fitzinator.com"/>
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id="email" placeholder="e.g. ryan@fitzinator.com"/>
                   </fieldset>
 
                   <fieldset>
-                    <label htmlFor="dashing-password">Dashing Password</label>
-                    <input type="password" id="dashing-password"/>
+                    <label htmlFor="password">Password</label>
+                    <input type="password" id="password"/>
                   </fieldset>
 
                   <fieldset>
-                    <label htmlFor="dashing-number">Dashing Number</label>
-                    <input type="number" id="dashing-number"/>
+                    <label htmlFor="number">Number</label>
+                    <input type="number" id="number"/>
                   </fieldset>
 
                   <fieldset>
-                    <label htmlFor="dashing-tel">Dashing Tel</label>
-                    <input type="tel" id="dashing-tel"/>
+                    <label htmlFor="tel">Tel</label>
+                    <input type="tel" id="tel"/>
                   </fieldset>
 
                   <fieldset>
-                    <label htmlFor="dashing-file">Dashing File</label>
-                    <input type="file" id="dashing-file"/>
+                    <label htmlFor="file">File</label>
+                    <input type="file" id="file"/>
                   </fieldset>
                 </div>
               </div>
@@ -287,43 +287,43 @@ class FooterCode extends React.Component {
 {`<div class="card">
 <div class="card-content">
   <fieldset>
-    <label for="dashing-date">Dashing Date</label>
-    <input type="date" id="dashing-date"/>
+    <label for="date">Date</label>
+    <input type="date" id="date"/>
   </fieldset>
 
   <fieldset>
-    <label for="dashing-time">Dashing Time</label>
-    <input type="time" id="dashing-time"/>
+    <label for="time">Time</label>
+    <input type="time" id="time"/>
   </fieldset>
 
   <fieldset>
-    <label for="dashing-month">Dashing Month</label>
-    <input type="month" id="dashing-month"/>
+    <label for="month">Month</label>
+    <input type="month" id="month"/>
   </fieldset>
 
   <fieldset>
-    <label for="dashing-email">Dashing Email</label>
-    <input type="email" id="dashing-email" placeholder="e.g. ryan@fitzinator.com"/>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="e.g. ryan@fitzinator.com"/>
   </fieldset>
 
   <fieldset>
-    <label for="dashing-password">Dashing Password</label>
-    <input type="password" id="dashing-password"/>
+    <label for="password">Password</label>
+    <input type="password" id="password"/>
   </fieldset>
 
   <fieldset>
-    <label for="dashing-number">Dashing Number</label>
-    <input type="number" id="dashing-number"/>
+    <label for="number">Number</label>
+    <input type="number" id="number"/>
   </fieldset>
 
   <fieldset>
-    <label for="dashing-tel">Dashing Tel</label>
-    <input type="tel" id="dashing-tel"/>
+    <label for="tel">Tel</label>
+    <input type="tel" id="tel"/>
   </fieldset>
 
   <fieldset>
-    <label for="dashing-file">Dashing File</label>
-    <input type="file" id="dashing-file"/>
+    <label for="file">File</label>
+    <input type="file" id="file"/>
   </fieldset>
 </div>
 </div>`}
@@ -338,8 +338,8 @@ class FooterCode extends React.Component {
               <div className="card">
                 <div className="card-content">
                   <fieldset className="range--custom">
-                    <label htmlFor="dashing-range">Dashing Range</label>
-                    <input type="range" id="dashing-range"/>
+                    <label htmlFor="range">Range</label>
+                    <input type="range" id="range"/>
                   </fieldset>
                 </div>
               </div>
@@ -347,8 +347,8 @@ class FooterCode extends React.Component {
               <CodeToggle>
 {`<!-- Custom Range Slider -->
 <fieldset class="range--custom">
-<label for="dashing-range">Dashing Range</label>
-<input type="range" id="dashing-range"/>
+<label for="range">Range</label>
+<input type="range" id="range"/>
 </fieldset>`}
               </CodeToggle>
             </div>
