@@ -11,7 +11,7 @@
       max-width: $content-s;
       margin: 0 auto;
       padding: $space-m;
-      * { margin: 0; } //to overwrite global margin bottom
+      * { margin-bottom: 0; } //to overwrite global margin bottom
       button { white-space: nowrap; margin-left: $space-s; }
     }
   }
