@@ -5,8 +5,8 @@ $clippy-color: $white;
 .has-tooltip { @include user-select(none); }
 
 //MODULE
-i.dashing-tooltip,
-i.dashing-clippy {
+i.paragon-tooltip,
+i.paragon-clippy {
 	@extend .dashing-icon;
 	@extend .dashing-icon--question-filled;
 	@extend .dashing-icon--gray;
@@ -21,12 +21,13 @@ i.dashing-clippy {
   }
 }
 
-span .dashing-tooltip,
-p .dashing-tooltip {
+span .paragon-tooltip,
+p .paragon-tooltip,
+label .paragon-clippy {
   margin-left: 0.2rem;
 }
 
-span.dashing-tooltip { display: inline-block; }
+span.paragon-tooltip { display: inline-block; }
 
 /* Custom Tippy.js Themes
   =========================================================================== */

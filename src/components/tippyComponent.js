@@ -15,7 +15,6 @@ export const Clippy = props => <Tippy {...props} />
 Clippy.defaultProps = {
   boundary: 'viewport',
   animation: 'fade',
-  interactive: true,
   interactiveBorder: 10,
   theme: 'clippy',
   maxWidth: 350,

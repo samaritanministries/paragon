@@ -5,7 +5,7 @@ import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 import StillWorking from '../../../components/stillworking'
 
-const currentPageName = "Tooltips";
+const currentPageName = "Tooltip";
 const currentPageNameLower = currentPageName.toLowerCase();
 
 export default () => (
