@@ -58,19 +58,6 @@ class TooltipCode extends React.Component {
 
                   </div>
 
-                  <div className="grid-full mb-space-xl">
-                    <IconDescription content="Delete">
-                      <button className="button button--red button--icon button--transparent">
-                        <i className="dashing-icon dashing-icon--trash"></i>
-                      </button>
-                    </IconDescription>
-                    <IconDescription content="Add">
-                      <button className="button button--icon button--icon--main">
-                        <i className="dashing-icon dashing-icon--add"></i>
-                      </button>
-                    </IconDescription>
-                  </div>
-
                   <div className="grid-full">
                     <Tooltip content="You cannot delete the Primary Phone Number">
                       <span style={{ display: "inline-block" }}>
@@ -90,7 +77,44 @@ class TooltipCode extends React.Component {
   <i className="paragon-tooltip"></i>
 </Tooltip>
 
-/* Icon Description */
+/* Tooltip on Disabled Button */
+/*  You must wrap a tag around the disabled button to utilize a tooltip */
+<Tooltip content="You cannot delete the Primary Phone Number">
+  <span style={{ display: "inline-block" }}>
+    <button className="button" disabled>
+      This is Disabled
+    </button>
+  </span>
+</Tooltip>
+`}
+              </CodeToggleJSX>
+            </div>
+
+            <h2 className="mt-space-xl" id="defaultTooltip">Icon Tooltip
+              <Link to={location.pathname + "/#defaultTooltip"} className="button button--transparent button--copy-link"></Link>
+            </h2>
+            <p>Icon tooltips can be used to give the user more information about an action that is only represented by an icon. They are built to show after a 1 second delay.</p>
+            <div className="example-container">
+              <div className="card">
+                <div className="card-content">
+
+                  <div className="grid-full">
+                    <IconDescription content="Delete">
+                      <button className="button button--red button--icon button--transparent">
+                        <i className="dashing-icon dashing-icon--trash"></i>
+                      </button>
+                    </IconDescription>
+                    <IconDescription content="Add">
+                      <button className="button button--icon button--icon--main">
+                        <i className="dashing-icon dashing-icon--add"></i>
+                      </button>
+                    </IconDescription>
+                  </div>
+
+                </div>
+              </div>
+              <CodeToggleJSX>
+{`/* Icon Description */
 <IconDescription content="Delete">
   <button className="button button--red button--icon button--transparent">
     <i className="dashing-icon dashing-icon--trash"></i>
@@ -101,16 +125,6 @@ class TooltipCode extends React.Component {
     <i className="dashing-icon dashing-icon--add"></i>
   </button>
 </IconDescription>
-
-/* Tooltip on Disabled Button */
-/*  You must wrap a tag around the disabled button to utilize a tooltip */
-<Tooltip content="You cannot delete the Primary Phone Number">
-  <span style={{ display: "inline-block" }}>
-    <button className="button" disabled>
-      This is Disabled
-    </button>
-  </span>
-</Tooltip>
 `}
               </CodeToggleJSX>
             </div>

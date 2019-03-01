@@ -29,7 +29,7 @@ IconDescription.defaultProps = {
   arrow: false,
   theme: 'default',
   maxWidth: 250,
-  delay: [800, 0],
+  delay: [1000, 0],
   distance: 5,
 }
 
