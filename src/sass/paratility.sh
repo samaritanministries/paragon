@@ -31,15 +31,55 @@ function gitTags {
 }
 
 function requestDetails {
+
     echo -e "\n"
     echo -e "${textnormal}[1/2 Gather Details]${textnormal}"
-    read -p "1.) Version to update to (Current: v$gitversionfirst.$gitversionmiddle.$gitversionlast): v" version
+    read -p "1.) Update Paragon from v$gitversionfirst.$gitversionmiddle.$gitversionlast to [v$gitversionfirst.$gitversionmiddle.`expr $gitversionlast + 1`]: v" version
+    version=${version:-$gitversionfirst.$gitversionmiddle.`expr $gitversionlast + 1`}
     echo -e "You are going to update paragon to${textgreen} v$version${textnormal}"
-    read -p "2.) Type of changelog (Fixed, Added, Updated, etc): " changelogtype
+    read -p "2.) Type of changelog (Fixed, Added, Updated, etc) [Fixed]: " changelogtype
+    changelogtype=${changelogtype:-Fixed}
     echo -e "Type of changelog will be${textgreen} \"$changelogtype\"${textnormal}"
     read -p "3.) What would you like to add to the changelog for this version? " changelog
     echo -e "Your addition to the changelog reads:${textgreen} $changelog${textnormal}"
     echo -e "\n"
+}
+
+function writeChangeLog {
+  $lineNumber="7"#line to start writing at
+  echo -e "\n"
+
+  read -p "Update Paragon from v$gitversionfirst.$gitversionmiddle.$gitversionlast to [v$gitversionfirst.$gitversionmiddle.`expr $gitversionlast + 1`]: v" version
+  version=${version:-$gitversionfirst.$gitversionmiddle.`expr $gitversionlast + 1`}
+
+  echo -e "You are going to update paragon to${textgreen} v$version${textnormal}"
+
+  read -p "Type of changelog (Fixed, Added, Updated, etc) [Fixed]: " changelogtype
+  changelogtype=${changelogtype:-Fixed}
+
+  echo -e "Type of changelog will be${textgreen} \"$changelogtype\"${textnormal}"
+
+  read -p "3.) What would you like to add to the changelog for this version? " changelog
+
+  echo -e "Your addition to the changelog reads:${textgreen} $changelog${textnormal}"
+
+  echo -e "\n"
+
+  sed -i '' "$lineNumber i\\
+  ## [$version] - $timestamp
+  " $changelogfile
+
+  sed -i '' "`expr $lineNumber + 1` i\\
+  ### $changelogtype
+  " $changelogfile
+
+  sed -i '' "`expr $lineNumber + 1` i\\
+  - $changelog
+  " $changelogfile
+
+  sed -i '' "`expr $lineNumber + 1` i\\
+  \\
+  " $changelogfile
 }
 
 function changeFiles {
@@ -101,7 +141,7 @@ _____
                      |___/
 textart
 echo -e "${textpurple}©Samaritan Ministries International${textgreen}
-v0.0.1 - (Uses Dart Sass)
+v0.1.0 - (Uses Dart Sass)
 +--------------------------------------+"
 echo -e "${textnormal}"
 
@@ -111,7 +151,7 @@ PS3="
 How can I help?"
 options=("Watch" "Files" "Exit")
 select option in "${options[@]}"
-do
+  do
     case $option in
         "Watch")
             echo "Starting sass watch (requires dart sass)..."
@@ -119,7 +159,6 @@ do
             break
             ;;
         "Files")
-            # echo "This should prompt for and change the changelog.md and package.json"
             gitTags
             requestDetails
             changeFiles
@@ -131,5 +170,5 @@ do
             ;;
         *) echo invalid option;;
     esac
-done
+  done
 done
