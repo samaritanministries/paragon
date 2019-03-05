@@ -9,15 +9,11 @@ $global-content-width: 800px !default;
 
 $sidebar-width:  13rem;
 
-body {
-  // background-color: $white;
-}
-
 //Give example pages gray background
 .app { background-color: $gray-100; }
 
-.button--copy-link {
-  display: none;
+.content--example-page {
+  margin-top: $space-m;
 }
 
 .logo-container {
@@ -26,7 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   img {
-    width: 6rem;
+    width: 100%;
   }
 }
 
@@ -73,7 +69,7 @@ body {
   }
   .active {
     color: $white;
-    background-color: $blue;
+    background-color: $brand-blue;
     border-radius: 5px;
   }
 
@@ -125,7 +121,7 @@ body {
   ================================================== */
 
 .splash-image {
-  background-image: linear-gradient(-45deg, $blue , $purple);
+  background-image: linear-gradient(-45deg, $brand-blue, $brand-purple);
   height: 22rem;
   margin-top: -1rem;
   position: relative;
@@ -164,9 +160,9 @@ body {
     border-radius: 10px;
     margin-right: 1rem;
     @extend %shadow-50;
-    &.consistent { background-color: $blue; }
-    &.clean { background-color: $green; }
-    &.confident { background-color: $purple; }
+    &.consistent { background-color: $brand-gray; }
+    &.clean { background-color: $brand-blue; }
+    &.confident { background-color: $brand-purple; }
     @media #{$tablet} {
       display: block;
     }
@@ -185,8 +181,23 @@ body {
   }
 }
 
+.example-container {
+  .header {
+    position: relative;
+    &:after { position: absolute; }
+  }
+  .sub-nav {
+    position: relative;
+    top: 0;
+    &:after {
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
 .subnav {
-  background-color: $blue;
+  background-color: $brand-blue;
   box-shadow: 0 2px 6px $gray-200;
   h1 {
     max-width: $global-content-width;
@@ -252,13 +263,15 @@ body {
 h2 {
   .button--copy-link {
     &:after {
-      content: "Copy Link";
+      content: "Add to URL";
     }
       width: 100px;
       pointer-events: initial;
       transition: all 0.25s;
       opacity: 1;
       text-align: left;
+      margin-left: 1rem !important;
+      display: inline;
 
     @media #{$tablet} {
       width: 0px;
@@ -275,13 +288,12 @@ h2 {
         &:active,
         &:focus {
           &:after {
-            content: "Copied";
+            content: "Added to URL";
           }
           color: $green-500;
         }
       width: 100px;
       pointer-events: initial;
-      // transition: all 0.5s;
       opacity: 1;
     }
   }
@@ -289,34 +301,6 @@ h2 {
 
 /* Blockquotes
   ================================================== */
-
-blockquote {
-  border-left: 4px solid $gray;
-  margin: 0 0 2rem 0;
-  padding-left: 1rem;
-
-  strong {
-    font-weight: bold;
-    font-size: 1rem;
-    margin-bottom: 0;
-    color: #232323;
-  }
-
-  p {
-    margin-top: 0.5rem;
-  }
-
-  &.tips { border-left: 4px solid $green; }
-  .tips-list {
-    margin: -1rem 0 0 0;
-    padding-left: 2rem;
-    line-height: 1.5rem;
-  }
-  &.warning { border-left: 4px solid $orange; }
-  &.caution { border-left: 4px solid $red; }
-  &.related { border-left: 4px solid $blue; }
-}
-
 .flex-container {
   display: flex;
   align-items: center;
@@ -441,11 +425,14 @@ blockquote {
   }
 }
 
-.show-scss {
+.show-code {
   code[class*="language-"],
   pre[class*="language-"] {
     display: block;
+    border-radius: 0.3rem;
+    margin-bottom: 0;
   }
+  .code-toggle { display: none; }
 }
 
 /* Radio Buttons Page
@@ -604,26 +591,13 @@ blockquote {
 footer {
   background-color: $gray-50c;
   float: right;
-  margin-top: 1rem;
   position: relative;
   width: 100%;
   text-align: center;
 
-  a {
+  a, .copyright {
     display: inline-block;
-    font-size: 0.8rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
-  }
-
-  .copyright { font-size: 0.8rem; }
-}
-
-@media #{$tablet} {
-  footer .copyright { display: inline-block; }
-  footer a {
-    margin-left: 2rem;
-    margin-top: 0rem;
+    margin: $space-m;
   }
 }
 
@@ -638,5 +612,204 @@ footer {
 .ex {
   &-no-color {
     background-color: transparent;
+  }
+}
+
+.card--accessibility {
+  overflow: hidden;
+  background-color: transparent;
+  .card-content {
+    position: relative;
+
+    &::after {
+      z-index: -1;
+      content: "";
+      width: calc(100% - 5rem);
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 5rem;
+    }
+  }
+  &.card--blue .card-content:after { background: $blue; }
+  &.card--green .card-content:after { background: $green; }
+  &.card--red .card-content:after { background: $red; }
+  &.card--orange .card-content:after { background: $orange; }
+  &.card--purple .card-content:after { background: $purple; }
+  &.card--gray .card-content:after { background: $gray-200; }
+  &.card--brand-red .card-content:after { background: #E96A63; }
+  &.card--brand-purple .card-content:after { background: #72569B; }
+  &.card--brand-darkBlue .card-content:after { background: #28336D; }
+  &.card--brand-yellow .card-content:after { background: #F5CD66; }
+  &.card--brand-gray .card-content:after { background: #F1F2F2; }
+}
+
+.x-accessibility-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: $space-xs;
+  .dashing-icon {
+    margin-left: $space-s;
+  }
+  h1, h2, h3, h4, h5, p, .button:first-of-type, .dashing-icon:first-of-type {
+    margin: 0;
+    margin-left: $space-l;
+  }
+  .tag { min-width: 3rem; text-align: center; }
+}
+
+.x-button--blueWhite  {@include button($background-color: $blue, $color: $white); }
+.x-button--whiteBlue  {@include button($background-color: $white, $color: $blue); }
+.x-button--blueBlack  {@include button($background-color: $blue, $color: $black); }
+.x-button--blackBlue  {@include button($background-color: $black, $color: $blue); }
+
+.x-button--greenWhite  {@include button($background-color: $green, $color: $white); }
+.x-button--whiteGreen  {@include button($background-color: $white, $color: $green); }
+.x-button--greenBlack  {@include button($background-color: $green, $color: $black); }
+.x-button--blackGreen  {@include button($background-color: $black, $color: $green); }
+
+.x-button--redWhite  {@include button($background-color: $red, $color: $white); }
+.x-button--whiteRed  {@include button($background-color: $white, $color: $red); }
+.x-button--redBlack  {@include button($background-color: $red, $color: $black); }
+.x-button--blackRed  {@include button($background-color: $black, $color: $red); }
+
+.x-button--orangeWhite  {@include button($background-color: $orange, $color: $white); }
+.x-button--whiteOrange  {@include button($background-color: $white, $color: $orange); }
+.x-button--orangeBlack  {@include button($background-color: $orange, $color: $black); }
+.x-button--blackOrange  {@include button($background-color: $black, $color: $orange); }
+
+.x-button--purpleWhite  {@include button($background-color: $purple, $color: $white); }
+.x-button--whitePurple  {@include button($background-color: $white, $color: $purple); }
+.x-button--purpleBlack  {@include button($background-color: $purple, $color: $black); }
+.x-button--blackPurple  {@include button($background-color: $black, $color: $purple); }
+
+.x-button--grayWhite  {@include button($background-color: $gray-200, $color: $white); }
+.x-button--whiteGray  {@include button($background-color: $white, $color: $gray-200); }
+.x-button--grayBlack  {@include button($background-color: $gray-200, $color: $black); }
+.x-button--blackGray  {@include button($background-color: $black, $color: $gray-200); }
+
+.x-button--brand-redWhite  {@include button($background-color: #E96A63, $color: $white); }
+.x-button--brand-whiteRed  {@include button($background-color: $white, $color: #E96A63); }
+.x-button--brand-redBlack  {@include button($background-color: #E96A63, $color: $black); }
+.x-button--brand-blackRed  {@include button($background-color: $black, $color: #E96A63); }
+
+.x-button--brand-purpleWhite  {@include button($background-color: #72569B, $color: $white); }
+.x-button--brand-whitePurple  {@include button($background-color: $white, $color: #72569B); }
+.x-button--brand-purpleBlack  {@include button($background-color: #72569B, $color: $black); }
+.x-button--brand-blackPurple  {@include button($background-color: $black, $color: #72569B); }
+
+.x-button--brand-blueWhite  {@include button($background-color: #28336D, $color: $white); }
+.x-button--brand-whiteBlue  {@include button($background-color: $white, $color: #28336D); }
+.x-button--brand-blueBlack  {@include button($background-color: #28336D, $color: $black); }
+.x-button--brand-blackBlue  {@include button($background-color: $black, $color: #28336D); }
+
+.x-button--brand-yellowWhite  {@include button($background-color: #F5CD66, $color: $white); }
+.x-button--brand-whiteYellow  {@include button($background-color: $white, $color: #F5CD66); }
+.x-button--brand-yellowBlack  {@include button($background-color: #F5CD66, $color: $black); }
+.x-button--brand-blackYellow  {@include button($background-color: $black, $color: #F5CD66); }
+
+.x-button--brand-grayWhite  {@include button($background-color: #F1F2F2, $color: $white); }
+.x-button--brand-whiteGray  {@include button($background-color: $white, $color: #F1F2F2); }
+.x-button--brand-grayBlack  {@include button($background-color: #F1F2F2, $color: $black); }
+.x-button--brand-blackGray  {@include button($background-color: $black, $color: #F1F2F2); }
+
+.x-accessiblity-table {
+  span, p, h2, .x-accessibility--white, .x-accessibility--black {
+    background-color: $gray-100;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 $space-s;
+    margin: 0;
+    height: $space-xl;
+    border-radius: 3px;
+  }
+  .x-accessibility--white {
+    @extend .dashing-icon;
+    @extend .dashing-icon--add;
+    @extend .dashing-icon--white;
+  }
+  .x-accessibility--black {
+    @extend .dashing-icon;
+    @extend .dashing-icon--add;
+    @extend .dashing-icon--black;
+  }
+  i.x-fail,i.x-pass {
+    margin-right: $space-s;
+  }
+  i.x-fail {
+    @extend .dashing-icon;
+    @extend .dashing-icon--close;
+    @extend .dashing-icon--red;
+  }
+  i.x-pass {
+    @extend .dashing-icon;
+    @extend .dashing-icon--checkmark;
+    @extend .dashing-icon--green;
+  }
+  .color--brand-purple { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $brand-purple; }
+  }
+  .color--brand-blue { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $brand-blue; }
+  }
+  .color--brand-red { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $brand-red; }
+  }
+  .color--brand-yellow { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $brand-yellow; }
+  }
+  .color--brand-gray { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $brand-gray; }
+  }
+  .color--blue { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $blue; }
+  }
+  //UI
+  .color--blue { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $blue; }
+  }
+  .color--green { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $green; }
+  }
+  .color--orange { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $orange; }
+  }
+  .color--red { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $red; }
+  }
+  .color--purple { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $purple; }
+  }
+  .color--gray { p, h2, .x-accessibility--white, .x-accessibility--black
+    { background-color: $gray-200; }
+  }
+}
+
+.x-accessibility-color-container {
+  border-radius: 5px;
+  border: $gray-150 1px solid;
+  grid-gap: 0;
+  .x-accessibility-color {
+    &White {
+      background-color: $white;
+    }
+    &Black {
+      background-color: $gray-900;
+      h2, p { color: $white; }
+    }
+  }
+  .x-accessibility-color {
+    &OffWhite {
+      background-color: $gray-300;
+      h2, p { color: $gray-500; }
+    }
+    &OffBlack {
+      background-color: $gray-500;
+      h2, p { color: $gray-300; }
+    }
+  }
+  .x-accessibility-colorBlack, .x-accessibility-colorWhite,
+  .x-accessibility-colorOffBlack, .x-accessibility-colorOffWhite {
+    padding: $space-m;
   }
 }

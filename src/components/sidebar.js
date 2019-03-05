@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import $ from 'jquery';
 
-import logo from "../img/Dashing.svg";
+import logo from "../img/nigel_2.svg";
 
 class Sidebar extends React.Component {
 
@@ -104,12 +104,12 @@ class Sidebar extends React.Component {
             </div>
 
             <div className={this.state.showParagon ? 'group-container expanded' : 'group-container'}>
-              <h4 className="group-title no-margin" onClick={this.toggleParagon}>Paragon</h4>
+              <h4 className="group-title no-margin" onClick={this.toggleParagon}>Get Started</h4>
               <i className={this.state.showParagon ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
                 <Link to="/" activeClassName="active">Principles</Link>
-                <Link to="/get-started" activeClassName="active">Get Started</Link>
+                <Link to="/setup" activeClassName="active">Setup</Link>
                 <Link to="/templates">Templates</Link>
                 <Link to="/resources">Resources</Link>
               </div>
@@ -120,7 +120,7 @@ class Sidebar extends React.Component {
               <i onClick={this.toggleStyle} className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
-                <Link to="/style/accessibility">Accessibility</Link>
+                <Link to="/style/accessibility/code">Accessibility</Link>
                 <Link to="/style/color/code">Color</Link>
                 <Link to="/style/typography/code">Typography</Link>
               </div>
@@ -145,6 +145,8 @@ class Sidebar extends React.Component {
                 <Link to="/components/icons/code">Icons</Link>
                 <Link to="/components/lists/code">Lists</Link>
                 <Link to="/components/navigation/code">Navigation</Link>
+                <Link to="/components/overpanel/code">Overpanel</Link>
+                <Link to="/components/pagination/code">Pagination</Link>
                 <Link to="/components/progress-stepper/code" id="progress-stepper">Progress Stepper</Link>
                 <Link to="/components/radio-buttons/code" id="radio-buttons">Radio Buttons</Link>
                 <Link to="/components/spinner/code">Spinner</Link>
@@ -154,7 +156,9 @@ class Sidebar extends React.Component {
               </div>
 
             </div>
-
+            <a href="https://badge.fury.io/js/paragon-framework">
+              <img src="https://badge.fury.io/js/paragon-framework.svg" alt="npm version" height="18" />
+            </a>
           </ul>
         </div>
       </div>

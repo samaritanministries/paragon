@@ -125,13 +125,13 @@ fieldset {
       font-weight: 600;
       pointer-events: none;
       position: absolute;
-      right: 2rem; bottom: calc(#{$grid-gutter} * 2);
+      right: 2rem;
+      top: 2.4rem;
     }
 
     .grid & { //supports select positioning in grid
       &:after {
         right: 1rem;
-        bottom: 2rem;
       }
     }
 
@@ -163,6 +163,7 @@ fieldset {
     margin-bottom: $space-m;
     overflow: auto;
     padding: 0;
+    .dashing-icon { margin: 0 $space-xxs; }
   }
 
   //Adds red text to lables and inputs for error states
@@ -177,7 +178,10 @@ fieldset {
       &:focus { border-color: $red; }
     }
 
-    .message { color: $red; }
+    .message {
+      color: $red;
+      .dashing-icon { @extend .dashing-icon--red; }
+    }
   }
 
   //Adds orange text to lables and inputs for warning states
@@ -192,7 +196,10 @@ fieldset {
       &:focus { border-color: $orange; }
     }
 
-    .message { color: $orange; }
+    .message {
+      color: $orange;
+      .dashing-icon { @extend .dashing-icon--orange; }
+    }
   }
 }
 
@@ -207,12 +214,16 @@ fieldset {
     @media #{$tablet} {flex-direction: row;}
   }
 
-  fieldset {
+  fieldset,
+  .radio-card,
+  .checkbox-card {
     flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
 
     @media #{$tablet} {
       margin-right: 1rem;
       flex: 1 1 0;
+      -ms-flex: 1 1 auto;
       &:last-of-type { margin-right: 0; }
     }
   }

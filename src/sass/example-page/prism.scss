@@ -295,7 +295,7 @@ pre.line-numbers > code {
   width: 100%;
   padding: 0.5rem 0;
   text-align: center;
-  transition: all .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
 
 	.grid & {
 		border-radius: 5px;
@@ -353,4 +353,9 @@ pre.line-numbers > code {
    &.show {
      display: block;
    }
+}
+
+code, pre {
+white-space:pre-wrap !important;
+word-wrap:break-word !important;
 }

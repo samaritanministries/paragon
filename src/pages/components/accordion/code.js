@@ -1,24 +1,28 @@
 import React from 'react'
-import $ from 'jquery';
+import PropTypes from 'prop-types'
+
+import $ from 'jquery'
+import { Link } from 'gatsby'
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 import CodeToggle from '../../../components/codetoggle'
 
-const currentPageName = "Accordion";
-const currentPageNameLower = currentPageName.toLowerCase();
+const currentPageName = "Accordion"
+const currentPageNameLower = currentPageName.toLowerCase()
 
 class AccordionCode extends React.Component {
+  static propTypes = { location: PropTypes.object.isRequired }
 
   componentDidMount() {
     $("#toggleAccordion").click(function(){
       this.parentElement.classList.toggle('expanded');
-      $(".accordion--content").slideToggle(200);
     });
   }
 
   render() {
+    const { location } = this.props;
 
     return (
 
@@ -28,40 +32,52 @@ class AccordionCode extends React.Component {
           <SubNav pageName={currentPageNameLower}/>
         </header>
         <AppContent>
-        <main className="content content-m" style={{marginTop: "1rem"}}>
-    			<div className="grid grid-padding">
+  			<div className="grid grid-padding">
 
-            <h2>Default Accordion</h2>
-            <div className="example-container">
+          <h2 id="defaultAccordian">Default Accordion
+            <Link to={location.pathname + "/#defaultAccordian"} className="button button--transparent button--copy-link"></Link>
+          </h2>
 
-              <div className="accordion" style={{marginBottom: "1rem"}}>
-                <div className="accordion--header" id="toggleAccordion" tabIndex="0">
-                  <i className="dashing-icon accordion--arrow"></i>
-                  <h3 className="title">Accordion Title</h3>
-                  <h3 className="secondary-title">$100.00</h3>
-                </div>
+          <p>To expand the accordion, apply the class <code className="example-text">.expanded</code> to the <code className="example-text">.accordion</code>.</p>
 
-                <div className="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          <div className="example-container">
 
+            <div className="accordion" style={{marginBottom: "1rem"}}>
+              <div className="accordion-header" id="toggleAccordion" tabIndex="0">
+                <i className="dashing-icon accordion-arrow"></i>
+                <h3 className="title">Accordion Title</h3>
+                <h3 className="secondary-title">$100.00</h3>
               </div>
-              <CodeToggle>
-{`<div class="accordion">
-  <div class="accordion--header" id="toggleAccordion" tabindex="0">
-    <i class="dashing-icon accordion--arrow"></i>
-    <h3 class="title">Accordion Title</h3>
-  </div>
 
-  <div class="accordion--content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-
-</div>`}
-              </CodeToggle>
+              <div className="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              <div className="accordion-footer">
+                <button className="button">Save & Continue</button>
               </div>
 
             </div>
-          </main>
+            <CodeToggle>
+{`<div class="accordion">
+  <div class="accordion-header" id="toggleAccordion" tabindex="0">
+    <i class="dashing-icon accordion-arrow"></i>
+    <h3 class="title">Accordion Title</h3>
+    <h3 class="secondary-title">$100.00</h3>
+  </div>
+
+  <div class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+
+  <div class="accordion-footer">
+    <button class="button">Save & Continue</button>
+  </div>
+
+</div>`}
+            </CodeToggle>
+            </div>
+
+          </div>
         </AppContent>
       </Layout>
     )
   }
 }
+
 export default AccordionCode;

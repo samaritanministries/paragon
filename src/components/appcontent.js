@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default ({children}) => (
-  <section>
+  <main className="content content-m content--example-page">
     {children}
-  </section>
+  </main>
 )

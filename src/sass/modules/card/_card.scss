@@ -10,13 +10,17 @@
   @extend %card-shadow;
 
   .grid & { margin-bottom: $space-m; }
+
   @media #{$phone} {
-    .grid & {
-      @supports(display: grid) { //Fallback. IE does not support negative margin on cards
-        border-radius: 0;
-        margin-left: -#{$space-m};
-        margin-right: -#{$space-m};
-  		}
+    .grid {
+      :not(.radio-card) &,
+      :not(.checkbox-card) &,   { //ignores checkbox and radio cards
+        @supports(display: grid) { //Fallback. IE does not support negative margin on cards
+          border-radius: 0;
+          margin-left: -#{$space-m};
+          margin-right: -#{$space-m};
+        }
+      }
     }
   }
 
@@ -109,5 +113,85 @@
         }
       }
     }
+  }
+  //Table within Card
+  .card-table {
+    overflow-x: auto;
+    border-radius: 0 0 5px 5px;
+    .table,
+    table {
+      margin-top: $grid-gutter !important;
+      border-radius: 0 0 5px 5px;
+      th {
+        border-top: 2px solid;
+        border-color: $gray-200;
+        padding: $space-xs $space-m !important;
+        background-color: $gray-100;
+      }
+      &.has-arrow {
+        th,tr {
+          td:last-of-type  {
+            width: 3rem;
+          }
+        }
+      }
+      &.is-selectable {
+        tbody tr {
+          transition: $global-transition;
+          &:hover {
+            cursor: pointer;
+            background-color: $gray-100;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Card Loading Animation
+  =========================================================================== */
+.card.is-loading {
+  overflow: hidden;
+  .card-header, .card--header,
+  .card-content, .card--content,
+  .card-footer, .card--footer {
+    overflow: hidden;
+    * { //Targets all elements inside the card header, content, and footer
+      position: relative;
+      background-color: $gray-100;
+      border-radius: 3px;
+      height: 1.25rem;
+
+      &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .7), transparent);
+        animation: loadingCard 1.2s infinite;
+        top: 0;
+      }
+    }
+  }
+  .card-header,
+  .card--header {
+    * {
+      width: 200px; //Sets a static width for the header
+    }
+  }
+  .card-footer,
+  .card--footer {
+    * {
+      width: 100px; //Sets a static width for footer buttons
+      margin: 0;
+    }
+  }
+}
+
+@keyframes loadingCard {
+  100% {
+    transform: translateX(100%);
   }
 }

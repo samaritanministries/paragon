@@ -15,10 +15,8 @@ export default () => (
       <SubNav pageName={currentPageNameLower}/>
     </header>
     <AppContent>
-      <div className="row">
-        <div className="column column--full">
-          <StillWorking />
-        </div>
+      <div className="grid grid-padding">
+        <StillWorking />
       </div>
     </AppContent>
   </Layout>

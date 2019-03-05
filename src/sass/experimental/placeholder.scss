@@ -1,0 +1,104 @@
+/*
+_______   _______ ___________ ________  ________ _   _ _____ ___  _
+|  ___\ \ / / ___ \  ___| ___ \_   _|  \/  |  ___| \ | |_   _/ _ \| |
+| |__  \ V /| |_/ / |__ | |_/ / | | | .  . | |__ |  \| | | |/ /_\ \ |
+|  __| /   \|  __/|  __||    /  | | | |\/| |  __|| . ` | | ||  _  | |
+| |___/ /^\ \ |   | |___| |\ \ _| |_| |  | | |___| |\  | | || | | | |____
+\____/\/   \|_|   \____/\_| \_|\___/\_|  |_|____/\_| \_/ \_/\_| |_|_____/
+
+This is an EXPERIMENT and is not ready to be included in production!
+*/
+
+//This file is for placeholder pieces that have been needed but should be replaced by official modules.
+
+@import '../base/base';
+
+//VARIABLES
+$container-colors: transparent;//#413552
+
+.logo {
+  width: 10.75rem;
+  height: 4rem;
+  background-color: $container-colors;
+}
+
+.crumbs {
+  margin-left: 0;
+  padding-left: 1rem;
+  color: #fff;
+  font-weight: 600;
+  margin-right: auto;
+
+  @media #{$tablet} {
+    padding-left: 2rem;
+    color: $black;
+  }
+}
+
+.profile {
+  cursor: pointer;
+  width: auto;
+  border-radius: 5px;
+  padding: $space-xs;
+  color: $white;
+
+  .profile-image {
+    height: 2rem;
+    width: 2rem;
+    background-color: $white;
+    border-radius: 50%;
+    position: relative;
+    margin-right: $space-xs;
+    .initials {
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $black;
+    }
+  }
+
+  .profile-name {
+    display: none;
+    font-weight: 600;
+    margin-right: $space-xs;
+    @media #{$desktop} {
+      display: inline-block;
+    }
+  }
+  @extend %icon-white;
+}
+
+.alert {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50px;
+  background-color: $container-colors;
+  margin-left: 0.5rem;
+  position: relative;
+  .dashing-icon::before { color: #f5cd66; font-size: 1.5rem; }
+
+  .count {
+  	position: absolute;
+  	bottom: 1rem;
+  	right: 1rem;
+  	background-color: $red-500;
+  	border-radius: 50px;
+  	color: $white;
+    font-weight: bold;
+    padding: 0rem 0.25rem;
+    text-align: center;
+    min-width: 1.25rem;
+  }
+}
+
+.logo, .profile, .alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert { margin-left: auto; }
+.logo, .header-nav { display: none; @media #{$tablet} { display: flex; } }

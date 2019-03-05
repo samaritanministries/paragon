@@ -1,12 +1,14 @@
 /* Core Utility Classes
   =========================================================================== */
 //content width
-$content-s:     350px;
-$content-m:     800px;
-$content-l:     1200px;
-$content-full:  auto;
+$content-xs:     350px;
+$content-s:      600px;
+$content-m:      800px;
+$content-l:      1200px;
+$content-full:   auto;
 
 $widths: (
+  "-xs":    #{$content-xs},
   "-s":     #{$content-s},
   "-m":     #{$content-m},
   "-l":     #{$content-l},
@@ -16,7 +18,7 @@ $widths: (
 @each $width, $width-var in $widths {
   $max-width: if($width == '', '', #{$width-var});
   .content#{$width} { //.content-s
-    max-width: #{$max-width} !important; //max-width: 350px;
+    max-width: #{$max-width} !important; //max-width: 600px;
   }
 }
 
@@ -62,6 +64,18 @@ $sides: (
       padding#{$property}: #{$space-var} !important; //padding: space-m;
     }
   }
+}
+
+.screen-reader { //content is only "visible" to a screen reader
+  display: block;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  position: absolute;
 }
 
 .hide, .hidden, .is-hidden { display: none !important; }

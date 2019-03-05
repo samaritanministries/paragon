@@ -17,21 +17,8 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
     border: 2px solid transparent;
     @extend %card-shadow;
 
-    &:hover {
-      @extend %card-shadow--hover;
-    }
-
-    &:before {
-      display: inline-block;
-    }
-    //disabled card
-    &.disabled {
-      background-color: $gray-200;
-      border-color: $gray-200;
-      pointer-events: none;
-      opacity: 0.4;
-      color: $gray-700;
-    }
+    &:hover { @extend %card-shadow--hover; }
+    &:before { display: inline-block; }
 
     //centers checkbox and radio button to card
     &.center-align,
@@ -40,35 +27,48 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
     }
   }
 
-  &.is-block,
-  &.block {
+  &.checkbox-card--block,
+  &.radio-card--block,
+  &.block { //block cards
     display: block;
-    margin-bottom: 0.5rem;
     width: 100%;
+    .card {
+      margin-bottom: $space-s;
+      width: 100%;
+    }
+  }
+
+  .flex-row &,
+  .flex-row & .card { //flex cards in a row
+    flex-grow: 1;
   }
 
   input:focus ~ label:before { box-shadow: none; }
-  input:focus ~ label { box-shadow: 0 0 0 2px $card-checkbox--focus; }
   input:checked ~ label, input:active ~ label {
     color: $card-checkbox--active;
     border: 2px solid $card-checkbox--active;
   }
+  input:focus ~ label,
+  input:hover:focus ~ label { box-shadow: 0 0 0 4px $card-checkbox--focus; }
 
   //disabled radio button
   input[disabled] ~ label,
   input[disabled]:active ~ label,
-  input[disabled]:checked ~ label {
+  input[disabled]:checked ~ label { //disabled cards
     cursor: default;
+    background-color: $gray-200;
+    border-color: $gray-200;
     pointer-events: none;
+    opacity: 0.4;
+    color: $gray-700;
     &:before {
       border-color: $gray-400 !important;
       background-color: $gray-200 !important;
     }
   }
-  &.checkbox-card--small {
-    .card { padding: calc(#{$card-checkbox--padding} / 2); }
-  }
-  &.radio-card--small {
+
+  &.checkbox-card--small,
+  &.radio-card--small { //small card size
     .card { padding: calc(#{$card-checkbox--padding} / 2); }
   }
 }
