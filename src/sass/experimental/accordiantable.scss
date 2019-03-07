@@ -9,6 +9,18 @@ _______   _______ ___________ ________  ________ _   _ _____ ___  _
 This is an EXPERIMENT and is not ready to be included in production!
 */
 
+.accordian--breakdown {
+  ol {
+    width: 50%;
+    list-style-type: none;
+    padding:0;
+    display: inline-block;
+    li {
+      display: inline-block;
+    }
+  }
+}
+
 .accordion--table {
   .accordion--row {
     justify-content: space-between;
@@ -22,6 +34,8 @@ This is an EXPERIMENT and is not ready to be included in production!
 
   .accordion--content {
     border-bottom: 2px solid $gray-50;
+    // border-top: 2px solid $gray-50;
+    padding: 1rem;
   }
 
   @media #{$tablet} { margin: 0 -1rem; }//offset padding
@@ -46,6 +60,18 @@ This is an EXPERIMENT and is not ready to be included in production!
   h1, h2, h3, h4 { margin-bottom: 0; }//removes default margin-bottom in accordion headers
 }
 
+.details {
+  display: flex;
+  margin: 0.5rem 0;
+  justify-content: space-between;
+  p, h3, .label-class {
+    width: 50%;
+  }
+  strong, .description {
+    width: 50%;
+  }
+}
+
 .provider, .member, .amount, .sharing, .youpay, .status, .category, .date {
   white-space: nowrap;
   overflow: hidden;
@@ -62,12 +88,12 @@ This is an EXPERIMENT and is not ready to be included in production!
   min-width: 1200px;
 }
 
-.accordion--arrow { width: 35px; text-align: center; }
-.date             { width: 1rem; flex-grow: 2; }
-.provider         { width: 3rem; flex-grow: 3; }
-.member           { width: 3rem; flex-grow: 2; }
-.amount           { width: 2rem; flex-grow: 1; }
+.accordion--arrow { width: 1rem; text-align: center; display: flex; align-content: center;}
+.date             { width: 1rem; flex-grow: 1; margin-left: 0.5rem}
+.provider         { width: 2rem; flex-grow: 2; }
+.member           { width: 2rem; flex-grow: 2; }
+// .amount           { width: 2rem; flex-grow: 1; }
 .sharing          { width: 2rem; flex-grow: 1; }
-.youpay           { width: 2rem; flex-grow: 1; }
+// .youpay           { width: 2rem; flex-grow: 1; }
 .category         { width: 3rem; flex-grow: 1; }
-.status           { width: 3rem; flex-grow: 2; }
+.status           { width: 1rem; flex-grow: 1; }

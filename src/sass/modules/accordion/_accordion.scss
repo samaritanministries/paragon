@@ -13,9 +13,9 @@
     transition: background-color 0.2s ease-in-out;
     h1, h2, h3, h4 { margin-bottom: 0; }//removes default margin-bottom in accordion headers
 
-    i.accordion-arrow, li.accordion--arrow {
-      transition: transform 0.1s linear;
+    i.accordion-arrow, i.accordion--arrow {
       @extend .dashing-icon--arrow-right;
+      transition: transform 0.1s linear;
       &:before { color: $black; }
     }
 
