@@ -9,7 +9,16 @@
   margin: 1.5rem auto;
   @extend %card-shadow;
 
-  .grid & { margin-bottom: $space-m; }
+  .grid & {
+    @media #{$phone} { //remove card within grid padding on mobile
+      margin: $grid-gutter -#{$grid-gutter};
+      border-radius: 0;
+    }
+    margin: 0 0 $space-m 0;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 
   @media #{$phone} {
     .grid {
