@@ -49,11 +49,18 @@ $button-disabled: "&[disabled], &.disabled, &.button--disabled";
   &.button--block {
     display: block;
     width: 100%;
+    &:not(:first-child) {
+      margin: $space-xs 0 0 0;
+    }
+
     &_phone,
     &_mobile {
       @media #{$phone} {
         display: block;
         width: 100%;
+        &:not(:first-child) {
+          margin: $space-xs 0 0 0;
+        }
       }
       @media #{$tablet} { display: inline-block; }
     }
