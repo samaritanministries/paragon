@@ -70,10 +70,13 @@ a {
   color: $blue;
   cursor: pointer;
   font-weight: $font-weight-semibold;
-  outline: none;
   text-decoration: none;
 
-  &:hover, &:focus { color: $blue-400; }
+  &:hover, &:focus {
+    color: $blue-400;
+    text-decoration: underline;
+    text-decoration-color: inherit;
+  }
 }
 
 p, li.text-list_item {
