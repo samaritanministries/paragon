@@ -42,9 +42,12 @@
     color: inherit;
     cursor: pointer;
 
+    &:focus,
     &:hover {
-    opacity: 0.6;
-    transition: all 50ms ease-in-out;
+      opacity: 0.6;
+      transition: all 50ms ease-in-out;
+      text-decoration: none;
+      color: inherit;
     }
   }
 
