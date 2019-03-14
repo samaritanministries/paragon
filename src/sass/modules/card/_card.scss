@@ -20,19 +20,6 @@
     }
   }
 
-  @media #{$phone} {
-    .grid {
-      :not(.radio-card) &,
-      :not(.checkbox-card) &,   { //ignores checkbox and radio cards
-        @supports(display: grid) { //Fallback. IE does not support negative margin on cards
-          border-radius: 0;
-          margin-left: -#{$space-m};
-          margin-right: -#{$space-m};
-        }
-      }
-    }
-  }
-
   .card--header, &.card--content, &.card--footer,
   .card-header, &.card-content, &.card-footer {
     hr { margin: ($grid-gutter) 0; }
