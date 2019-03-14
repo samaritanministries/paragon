@@ -136,7 +136,8 @@ class TooltipCode extends React.Component {
 
             <div className="show-code">
               <CodeToggleJSX>
-{`export const Tooltip = props => <Tippy {...props} />
+{`/* Tooltip Default Props */ 
+export const Tooltip = props => <Tippy {...props} />
 Tooltip.defaultProps = {
   animation: 'fade',
   boundary: 'viewport',
@@ -144,6 +145,19 @@ Tooltip.defaultProps = {
   theme: 'default',
   arrowType: 'round',
   maxWidth: 250,
+}
+
+/* Icon Description Default Props */
+export const IconDescription = props => <Tippy {...props} />
+IconDescription.defaultProps = {
+  animation: 'fade',
+  placement: 'bottom',
+  boundary: 'viewport',
+  arrow: false,
+  theme: 'default',
+  maxWidth: 250,
+  delay: [1000, 0],
+  distance: 5,
 }
 `}
               </CodeToggleJSX>
