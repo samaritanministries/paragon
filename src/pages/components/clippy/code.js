@@ -39,7 +39,7 @@ class ClippyCode extends React.Component {
             <ul className="no-margin">
               <li><a href="https://github.com/atomiks/tippyjs" target="_blank" rel="noopener noreferrer">Tippy.js package</a></li>
               <li><a href="https://github.com/atomiks/tippy.js-react" target="_blank" rel="noopener noreferrer">Tippy.js react component</a></li>
-              <li>Custom Paragon Tippy Component</li>
+              <li><a href="#defaultProps">Custom Paragon Clippy Component</a></li>
             </ul>
 
             <h2 className="mt-space-xl" id="defaultClippy">Default Clippy
@@ -110,6 +110,25 @@ class ClippyCode extends React.Component {
               </CodeToggleJSX>
             </div>
 
+            <h2 className="mt-space-xl" id="defaultProps">Clippy Default Props
+              <Link to={location.pathname + "/#defaultProps"} className="button button--transparent button--copy-link"></Link>
+            </h2>
+            <p>Below are the Default Props we have assigned to clippy's in Paragon.</p>
+
+            <div className="show-code">
+              <CodeToggleJSX>
+{`export const Clippy = props => <Tippy {...props} />
+Clippy.defaultProps = {
+  boundary: 'viewport',
+  animation: 'fade',
+  interactiveBorder: 10,
+  theme: 'clippy',
+  maxWidth: 350,
+  hideOnClick: false,
+}
+`}
+              </CodeToggleJSX>
+            </div>
           </div>
         </AppContent>
       </Layout>

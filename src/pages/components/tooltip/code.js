@@ -40,7 +40,7 @@ class TooltipCode extends React.Component {
             <ul className="no-margin">
               <li><a href="https://github.com/atomiks/tippyjs" target="_blank" rel="noopener noreferrer">Tippy.js package</a></li>
               <li><a href="https://github.com/atomiks/tippy.js-react" target="_blank" rel="noopener noreferrer">Tippy.js react component</a></li>
-              <li>Custom Paragon Tippy Component</li>
+              <li><a href="#defaultProps">Custom Paragon Tooltip Component</a></li>
             </ul>
 
             <h2 className="mt-space-xl" id="defaultTooltip">Default Tooltip
@@ -125,6 +125,26 @@ class TooltipCode extends React.Component {
     <i className="dashing-icon dashing-icon--add"></i>
   </button>
 </IconDescription>
+`}
+              </CodeToggleJSX>
+            </div>
+
+            <h2 className="mt-space-xl" id="defaultProps">Tooltip Default Props
+              <Link to={location.pathname + "/#defaultProps"} className="button button--transparent button--copy-link"></Link>
+            </h2>
+            <p>Below are the Default Props we have assigned to tooltip's in Paragon.</p>
+
+            <div className="show-code">
+              <CodeToggleJSX>
+{`export const Tooltip = props => <Tippy {...props} />
+Tooltip.defaultProps = {
+  animation: 'fade',
+  boundary: 'viewport',
+  arrow: true,
+  theme: 'default',
+  arrowType: 'round',
+  maxWidth: 250,
+}
 `}
               </CodeToggleJSX>
             </div>
