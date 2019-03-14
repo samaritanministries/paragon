@@ -1,0 +1,270 @@
+/*
+_______   _______ ___________ ________  ________ _   _ _____ ___  _
+|  ___\ \ / / ___ \  ___| ___ \_   _|  \/  |  ___| \ | |_   _/ _ \| |
+| |__  \ V /| |_/ / |__ | |_/ / | | | .  . | |__ |  \| | | |/ /_\ \ |
+|  __| /   \|  __/|  __||    /  | | | |\/| |  __|| . ` | | ||  _  | |
+| |___/ /^\ \ |   | |___| |\ \ _| |_| |  | | |___| |\  | | || | | | |____
+\____/\/   \|_|   \____/\_| \_|\___/\_|  |_|____/\_| \_/ \_/\_| |_|_____/
+
+This is an EXPERIMENT and is not ready to be included in production!
+*/
+
+//"Header or "Key"
+
+.expandable-table-header {
+  display: none;
+
+  @media #{$tablet} {
+    cursor: default;
+    font-weight: 600;
+    border-bottom: 2px solid $gray-150;
+    border-radius: 5px 5px 0 0;
+    font-size: 0.8rem;
+    background-color: $gray-50;
+    h1, h2, h3, h4 { margin-bottom: 0; }
+    padding: 0.5rem $grid-gutter;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+  }
+}
+
+.expandable-table {
+  @extend .card;
+  @extend %card-shadow;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  margin: 0 -1rem !important;
+
+  @media #{$tablet} {
+    margin: 0 !important;
+  }
+
+  .expandable-table-row {
+    @extend .card-header;
+    padding-bottom: $grid-gutter;
+    display: block;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    h1, h2, h3, h4 { margin-bottom: 0; }//removes default margin-bottom in accordion headers
+
+    position: relative;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    font-size: 0.8rem;
+    border-radius: 0;
+    border-bottom: 2px solid $gray-50;
+
+    &:hover {
+      background-color: $gray-100;
+    }
+
+    @media #{$tablet} {
+      display: flex;
+    }
+
+    i.accordion--arrow {
+      @extend .dashing-icon--arrow-right;
+      transition: transform 0.1s linear;
+      &:before { color: $black; }
+    }
+
+    &:hover {
+      background-color: $gray-100;
+    }
+
+    &.expanded {
+      i.accordion--arrow { transform: rotate(90deg); }
+    }
+  }
+
+  .expandable-table-content {
+    padding: 2rem;
+    background-color: $white;
+    border-bottom: 2px solid $gray-50;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    @media #{$tablet} {
+      position: inherit;
+      padding: 1rem;
+      z-index: 0;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+//Expanded Content
+.expandable-table-breakdown {
+  ol {
+    width: 50%;
+    list-style-type: none;
+    padding:0;
+    display: inline-block;
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.details {
+  border-bottom: 1px solid $gray-150;
+  padding: 0.25rem 0;
+  display: block;
+
+  .label-class, .description {
+    font-size: 0.8rem;
+  }
+}
+
+.breakdown {
+  display: flex;
+  .label-class, .description {
+    font-size: 0.8rem;
+    margin-left: 1rem;
+  }
+}
+
+.breakdown--header {
+  display: flex;
+  .description {
+    font-weight: bold;
+  }
+}
+
+.details, .breakdown--header, .breakdown {
+  justify-content: space-between;
+
+  @media #{$tablet} {
+    display: flex;
+  }
+
+  .label-class {
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 0;
+
+    @media #{$tablet} {
+      width: 50%;
+    }
+
+    @media #{$desktop} {
+      width: 30%;
+    }
+  }
+
+  .description {
+    width: 100%;
+    margin-bottom: 0;
+
+    @media #{$tablet} {
+      width: 50%;
+    }
+
+    @media #{$desktop} {
+      width: 70%;
+    }
+  }
+}
+
+// .scroll {
+//   overflow-x: auto;
+//   box-shadow: inset 0 2px 4px rgba(0,0,0, 0.5);
+// }
+//
+// .scroll--width {
+//   min-width: 1200px;
+// }
+
+//Column Sizes (Specific Styles)
+
+.provider, .member, .amount, .sharing, .youpay, .status, .category, .date {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media #{$tablet} {
+    white-space: nowrap;
+    padding: 0 0.5rem;
+  }
+}
+
+.accordion--arrow {
+  text-align: center;
+  display: flex;
+  align-content: center;
+  padding-left: 0.5rem;
+
+  position: absolute;
+  top: 45%;
+  right: 0.5rem;
+
+  @media #{$tablet} {
+    position: inherit;
+    padding-left: 0rem;
+    top: auto;
+    right: auto;
+    float: none;
+    width: 1rem;
+  }
+}
+
+.date {
+  float: right;
+  flex-grow: 1;
+  margin-left: 0.5rem;
+  margin-right: 2rem;
+  @media #{$tablet} {
+    float: none;
+    width: 1rem;
+    margin-right: auto;
+  }
+}
+
+.provider {
+  font-weight: bold;
+  flex-grow: 2;
+  @media #{$tablet} {
+    width: 2rem;
+    font-size: inherit;
+  }
+}
+
+.member {
+  flex-grow: 2;
+  @media #{$tablet} { width: 2rem; }
+}
+
+.sharing {
+  font-weight: bold;
+  @media #{$tablet} { width: 2rem; }
+  flex-grow: 1;
+}
+
+.sharing-label {
+  display: inline;
+  @media #{$tablet} { display: none; }
+}
+
+.category {
+  flex-grow: 1;
+  float: left;
+  @media #{$tablet} { width: 3rem; }
+}
+.status {
+  flex-grow: 1;
+  margin-right: 2rem;
+  @media #{$tablet} { width: 1rem; }
+  i { float: right; @media #{$tablet} { float: none; } }
+}

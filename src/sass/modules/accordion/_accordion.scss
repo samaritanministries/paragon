@@ -1,9 +1,9 @@
-.accordion, .accordion--table {
+.accordion {
   @extend .card;
   @extend %card-shadow;
   transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
-  .accordion-header, .accordion--row {
+  .accordion-header {
     @extend .card-header;
     padding-bottom: $grid-gutter;
     display: flex;
@@ -13,7 +13,7 @@
     transition: background-color 0.2s ease-in-out;
     h1, h2, h3, h4 { margin-bottom: 0; }//removes default margin-bottom in accordion headers
 
-    i.accordion-arrow, i.accordion--arrow {
+    i.accordion-arrow {
       @extend .dashing-icon--arrow-right;
       transition: transform 0.1s linear;
       &:before { color: $black; }
@@ -45,8 +45,7 @@
   }
 
   &.expanded {
-    .accordion-header i.accordion-arrow,
-    .accordion--row li.accordion--arrow { transform: rotate(90deg); }
+    .accordion-header i.accordion-arrow { transform: rotate(90deg); }
     .accordion-header {
       border-radius: 5px 5px 0 0;
       &:hover { background-color: none; }

@@ -5,16 +5,16 @@ import '../../sass/example-page/example-page.scss'
 
 export default () => (
 
-<main>
+<div>
 	<header className="header">
-		<Link to={"/templates/mobile"} className="mobile-sidebar--button" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 		<div className="logo"><p className="text-color--white">LOGO</p></div>
 
 		<nav className="header-nav">
 			<ul>
-				<li><Link to={"/"} className="active">Home</Link></li>
-				<li><Link to={"/"}>Shares</Link></li>
-				<li><Link to={"/"}>Bill's</Link></li>
+				<li><Link to={"/"} className="active">Page 1</Link></li>
+				<li><Link to={"/"}>Page 2</Link></li>
+				<li><Link to={"/"}>Page 3</Link></li>
 			</ul>
 		</nav>
 
@@ -35,79 +35,335 @@ export default () => (
 		</ul>
 	</nav>
 
-	<section className="content">
+	<main className="content">
 		<div className="grid grid-padding">
-		  <div className="accordion--table expanded scroll">
-				<div className="scroll--width">
-			    <ol className="accordion--key">
-			      <li className="accordion--arrow"></li>
-			      <li className="date">Date</li>
-			      <li className="provider">Provider</li>
-			      <li className="member">Member</li>
-			      <li className="amount">Amount</li>
-			      <li className="sharing">Sharing</li>
-			      <li className="youpay">You Pay</li>
-			      <li className="category">Category</li>
-			      <li className="status">Status</li>
-			    </ol>
 
-			    <ol className="accordion--row" id="toggleAccordionTable">
-			      <li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
-			      <li className="date">01/12/19</li>
-			      <li className="provider">A Long Provider Name</li>
-			      <li className="member">Jill Throwfitz</li>
-			      <li className="amount">$8624.16</li>
-			      <li className="sharing">$7175.94</li>
-			      <li className="youpay">$860.22</li>
-			      <li className="category">Broken Arm</li>
-			      <li className="status">Awaiting Shares</li>
-			    </ol>
+			<h2>Accordion Title</h2>
 
-			    <section className="accordion--content" style={{ display: "block" }}>
-			      <h1>Provider Name</h1>
-			      <p>Description of What happened</p>
-			      <span className="item"><span>$100</span><span>$100</span></span>
-			    </section>
+			<div className="expandable-table">
+				<ol className="expandable-table-header">
+					<li className="accordion--arrow"></li>
+					<li className="date">Date</li>
+					<li className="provider">Provider</li>
+					<li className="member">Member</li>
+					{/* <li className="amount">Amount</li> */}
+					<li className="sharing"><span className="sharing-label">Shareable: </span>Sharing</li>
+					{/* <li className="youpay">You Pay</li> */}
+					<li className="category">Category</li>
+					<li className="status">Status</li>
+				</ol>
 
-			    <ol className="accordion--row" id="toggleAccordionTable">
-			      <li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
-			      <li className="date">01/12/19</li>
-			      <li className="provider">A Short Name</li>
-			      <li className="member">Jill Throwfitz</li>
-			      <li className="amount">$8999.16</li>
-			      <li className="sharing">$7735.94</li>
-			      <li className="youpay">$86.22</li>
-			      <li className="category">Broken Arm</li>
-			      <li className="status">Awaiting Shares</li>
-			    </ol>
+				{/* Non-Expanded Section */}
+				<ol className="expandable-table-row" id="toggleAccordionTableA">
+					<li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
+					<li className="date">Feb 12</li>
+					<li className="provider">A Long Provider Name</li>
+					<li className="member">Carl ViewSonic</li>
+					{/* <li className="amount">$8624.16</li> */}
+					<li className="sharing"><span className="sharing-label">Shareable: </span>$7175.94</li>
+					{/* <li className="youpay">$860.22</li> */}
+					<li className="category">Broken Arm</li>
+					<li className="status"><i className="dashing-icon dashing-icon--heart"></i></li>
+				</ol>
 
-			    <section className="accordion--content">
-			      <h1>Provider Name</h1>
-			      <p>Description of What happened</p>
-			      <span className="item"><span>$100</span><span>$100</span></span>
-			    </section>
+				{/* Expanded Section */}
+				<section className="expandable-table-content grid">
+					<div className="grid--half expandable-table-breakdown">
+						<div className="details">
+							<p className="label-class">Member:</p>
+							<p className="description">Carl ViewSonic</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Date of Service:</p>
+							<p className="description">02/12/19</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Provider:</p>
+							<p className="description">A Long Provider Name LOLOL</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Provider Address:</p>
+							<p className="description">5678 gjgjhkghjk St, wertg PL, 56787</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Description:</p>
+							<p className="description">Broken Something</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Repriced Amount:</p>
+							<p className="description">Your bill was repriced from this to that.</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Adjustment:</p>
+							<p className="description">$Money</p>
+						</div>
+					</div>
 
-			    <ol className="accordion--row" id="toggleAccordionTable">
-			      <li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
-			      <li className="date">--</li>
-			      <li className="provider">--</li>
-			      <li className="member">Random</li>
-			      <li className="amount">$0,000,000.00</li>
-			      <li className="sharing">$775299.94</li>
-			      <li className="youpay">$2.00</li>
-			      <li className="category">--</li>
-			      <li className="status">--</li>
-			    </ol>
+					<div className="grid--half expandable-table-breakdown">
+						<div>
+							<div className="breakdown--header">
+								<p className="label-class">Unshareable</p>
+								<p className="description align-right">$86.22</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">Co-share</p>
+								<p className="description align-right">$86.22</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">Ineligible</p>
+								<p className="description align-right">$0.00</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">AUA:</p>
+								<p className="description align-right">$0.00</p>
+							</div>
+							<div className="breakdown--header">
+								<p className="label-class">Shareable</p>
+								<p className="description align-right">$775.94</p>
+							</div>
+							<hr />
+							<div className="breakdown--header">
+								<p className="label-class">Repriced Amount</p>
+								<p className="description align-right">$862.16</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
-			    <section className="accordion--content">
-			      <h1>Provider Name</h1>
-			      <p>Description of What happened</p>
-			      <span className="item"><span>$100</span><span>$100</span></span>
-			    </section>
-				</div>
-		  </div>
+				{/* Non-Expanded Section */}
+				<ol className="expandable-table-row" id="toggleAccordionTableA">
+					<li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
+					<li className="date">Feb 12</li>
+					<li className="provider">A Long Provider Name</li>
+					<li className="member">Carl ViewSonic</li>
+					{/* <li className="amount">$8624.16</li> */}
+					<li className="sharing"><span className="sharing-label">Shareable: </span>$7175.94</li>
+					{/* <li className="youpay">$860.22</li> */}
+					<li className="category">Broken Arm</li>
+					<li className="status"><i className="dashing-icon dashing-icon--heart"></i></li>
+				</ol>
+
+				{/* Expanded Section */}
+				<section className="expandable-table-content grid">
+					<div className="grid--half expandable-table-breakdown">
+						<div className="details">
+							<p className="label-class">Member:</p>
+							<p className="description">Carl ViewSonic</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Date of Service:</p>
+							<p className="description">02/12/19</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Provider:</p>
+							<p className="description">A Long Provider Name LOLOL</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Provider Address:</p>
+							<p className="description">5678 gjgjhkghjk St, wertg PL, 56787</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Description:</p>
+							<p className="description">Broken Something</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Repriced Amount:</p>
+							<p className="description">Your bill was repriced from this to that.</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Adjustment:</p>
+							<p className="description">$Money</p>
+						</div>
+					</div>
+
+					<div className="grid--half expandable-table-breakdown">
+						<div>
+							<div className="breakdown--header">
+								<p className="label-class">Unshareable</p>
+								<p className="description align-right">$86.22</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">Co-share</p>
+								<p className="description align-right">$86.22</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">Ineligible</p>
+								<p className="description align-right">$0.00</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">AUA:</p>
+								<p className="description align-right">$0.00</p>
+							</div>
+							<div className="breakdown--header">
+								<p className="label-class">Shareable</p>
+								<p className="description align-right">$775.94</p>
+							</div>
+							<hr />
+							<div className="breakdown--header">
+								<p className="label-class">Repriced Amount</p>
+								<p className="description align-right">$862.16</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				{/* Non-Expanded Section */}
+				<ol className="expandable-table-row" id="toggleAccordionTableA">
+					<li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
+					<li className="date">Feb 12</li>
+					<li className="provider">A Long Provider Name</li>
+					<li className="member">Carl ViewSonic</li>
+					{/* <li className="amount">$8624.16</li> */}
+					<li className="sharing"><span className="sharing-label">Shareable: </span>$7175.94</li>
+					{/* <li className="youpay">$860.22</li> */}
+					<li className="category">Broken Arm</li>
+					<li className="status"><i className="dashing-icon dashing-icon--heart"></i></li>
+				</ol>
+
+				{/* Expanded Section */}
+				<section className="expandable-table-content grid">
+					<div className="grid--half expandable-table-breakdown">
+						<div className="details">
+							<p className="label-class">Member:</p>
+							<p className="description">Carl ViewSonic</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Date of Service:</p>
+							<p className="description">02/12/19</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Provider:</p>
+							<p className="description">A Long Provider Name LOLOL</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Provider Address:</p>
+							<p className="description">5678 gjgjhkghjk St, wertg PL, 56787</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Description:</p>
+							<p className="description">Broken Something</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Repriced Amount:</p>
+							<p className="description">Your bill was repriced from this to that.</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Adjustment:</p>
+							<p className="description">$Money</p>
+						</div>
+					</div>
+
+					<div className="grid--half expandable-table-breakdown">
+						<div>
+							<div className="breakdown--header">
+								<p className="label-class">Unshareable</p>
+								<p className="description align-right">$86.22</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">Co-share</p>
+								<p className="description align-right">$86.22</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">Ineligible</p>
+								<p className="description align-right">$0.00</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">AUA:</p>
+								<p className="description align-right">$0.00</p>
+							</div>
+							<div className="breakdown--header">
+								<p className="label-class">Shareable</p>
+								<p className="description align-right">$775.94</p>
+							</div>
+							<hr />
+							<div className="breakdown--header">
+								<p className="label-class">Repriced Amount</p>
+								<p className="description align-right">$862.16</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				{/* Non-Expanded Section */}
+				<ol className="expandable-table-row" id="toggleAccordionTableA">
+					<li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
+					<li className="date">Feb 12</li>
+					<li className="provider">A Long Provider Name</li>
+					<li className="member">Carl ViewSonic</li>
+					{/* <li className="amount">$8624.16</li> */}
+					<li className="sharing"><span className="sharing-label">Shareable: </span>$7175.94</li>
+					{/* <li className="youpay">$860.22</li> */}
+					<li className="category">Broken Arm</li>
+					<li className="status"><i className="dashing-icon dashing-icon--heart"></i></li>
+				</ol>
+
+				{/* Expanded Section */}
+				<section className="expandable-table-content grid">
+					<div className="grid--half expandable-table-breakdown">
+						<div className="details">
+							<p className="label-class">Member:</p>
+							<p className="description">Carl ViewSonic</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Date of Service:</p>
+							<p className="description">02/12/19</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Provider:</p>
+							<p className="description">A Long Provider Name LOLOL</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Provider Address:</p>
+							<p className="description">5678 gjgjhkghjk St, wertg PL, 56787</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Description:</p>
+							<p className="description">Broken Something</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Repriced Amount:</p>
+							<p className="description">Your bill was repriced from this to that.</p>
+						</div>
+						<div className="details">
+							<p className="label-class">Adjustment:</p>
+							<p className="description">$Money</p>
+						</div>
+					</div>
+
+					<div className="grid--half expandable-table-breakdown">
+						<div>
+							<div className="breakdown--header">
+								<p className="label-class">Unshareable</p>
+								<p className="description align-right">$86.22</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">Co-share</p>
+								<p className="description align-right">$86.22</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">Ineligible</p>
+								<p className="description align-right">$0.00</p>
+							</div>
+							<div className="breakdown">
+								<p className="label-class">AUA:</p>
+								<p className="description align-right">$0.00</p>
+							</div>
+							<div className="breakdown--header">
+								<p className="label-class">Shareable</p>
+								<p className="description align-right">$775.94</p>
+							</div>
+							<hr />
+							<div className="breakdown--header">
+								<p className="label-class">Repriced Amount</p>
+								<p className="description align-right">$862.16</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</div>
 		</div>
-	</section>
-</main>
+	</main>
+</div>
 
 )

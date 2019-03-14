@@ -125,10 +125,54 @@ class AccordionTableCode extends React.Component {
                   <li className="status"><i className="dashing-icon dashing-icon--heart"></i></li>
                 </ol>
 
-                <section className="accordion--content">
-                  <h1>Provider Name</h1>
-                  <p>Description of What happened</p>
-                  <span className="item"><span>$100</span><span>$100</span></span>
+                <section className="accordion--content grid">
+                  <div className="grid--half accordian--breakdown">
+                    <h3>Carl ViewSonic</h3>
+                    <div>
+                      <div className="details">
+                        <strong className="label-class">Date of Service:</strong>
+                        <p className="description">02/12/19</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Provider:</strong>
+                        <p className="description">A Long Provider Name LOLOL</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Provider Address:</strong>
+                        <p className="description">5678 gjgjhkghjk St, wertg PL, 56787</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Description:</strong>
+                        <p className="description">Broken Something</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Repriced Amount:</strong>
+                        <p className="description">Your bill was repriced from this to that.</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Adjustment:</strong>
+                        <p className="description">$Money</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid--half accordian--breakdown">
+                    <div>
+                      <div className="details">
+                        <h3 className="label-class">Unshareable</h3>
+                        <p className="description align-right">$0.00</p>
+                      </div>
+                      <div className="details">
+                        <h3 className="label-class">Unshareable</h3>
+                        <p className="description align-right">$0.00</p>
+                      </div>
+                      <hr />
+                      <div className="details">
+                        <h3 className="label-class">Unshareable</h3>
+                        <p className="description align-right">$0.00</p>
+                      </div>
+                    </div>
+                  </div>
                 </section>
 
                 <ol className="accordion--row" id="toggleAccordionTableC">
@@ -143,10 +187,116 @@ class AccordionTableCode extends React.Component {
                   <li className="status"><i className="dashing-icon dashing-icon--heart"></i></li>
                 </ol>
 
-                <section className="accordion--content">
-                  <h1>Provider Name</h1>
-                  <p>Description of What happened</p>
-                  <span className="item"><span>$100</span><span>$100</span></span>
+                <section className="accordion--content grid">
+                  <div className="grid--half accordian--breakdown">
+                    <h3>Carl ViewSonic</h3>
+                    <div>
+                      <div className="details">
+                        <strong className="label-class">Date of Service:</strong>
+                        <p className="description">02/12/19</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Provider:</strong>
+                        <p className="description">A Long Provider Name LOLOL</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Provider Address:</strong>
+                        <p className="description">5678 gjgjhkghjk St, wertg PL, 56787</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Description:</strong>
+                        <p className="description">Broken Something</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Repriced Amount:</strong>
+                        <p className="description">Your bill was repriced from this to that.</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Adjustment:</strong>
+                        <p className="description">$Money</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid--half accordian--breakdown">
+                    <div>
+                      <div className="details">
+                        <h3 className="label-class">Unshareable</h3>
+                        <p className="description align-right">$86.22</p>
+                      </div>
+                      <div className="details">
+                        <h3 className="label-class">Shareable</h3>
+                        <p className="description align-right">$775.94</p>
+                      </div>
+                      <hr />
+                      <div className="details">
+                        <h3 className="label-class">Repriced Amount</h3>
+                        <p className="description align-right">$862.16</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <ol className="accordion--row" id="toggleAccordionTableC">
+                  <li className="accordion--arrow"><i className="dashing-icon accordion--arrow"></i></li>
+                  <li className="date">01/12/19</li>
+                  <li className="provider">St. Angelica Mortimer Gonzallo the Third Memorial Hospital</li>
+                  <li className="member">Thomas Wallace Kinkade Jr</li>
+                  {/* <li className="amount">$0,000,000.00</li> */}
+                  <li className="sharing">$775299.94</li>
+                  {/* <li className="youpay">$2.00</li> */}
+                  <li className="category">--</li>
+                  <li className="status"><i className="dashing-icon dashing-icon--heart"></i></li>
+                </ol>
+
+                <section className="accordion--content grid">
+                  <div className="grid--half accordian--breakdown">
+                    <h3>Carl ViewSonic</h3>
+                    <div>
+                      <div className="details">
+                        <strong className="label-class">Date of Service:</strong>
+                        <p className="description">02/12/19</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Provider:</strong>
+                        <p className="description">A Long Provider Name LOLOL</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Provider Address:</strong>
+                        <p className="description">5678 gjgjhkghjk St, wertg PL, 56787</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Description:</strong>
+                        <p className="description">Broken Something</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Repriced Amount:</strong>
+                        <p className="description">Your bill was repriced from this to that.</p>
+                      </div>
+                      <div className="details">
+                        <strong className="label-class">Adjustment:</strong>
+                        <p className="description">$Money</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid--half accordian--breakdown">
+                    <div>
+                      <div className="details">
+                        <h3 className="label-class">Unshareable</h3>
+                        <p className="description align-right">$0.00</p>
+                      </div>
+                      <div className="details">
+                        <h3 className="label-class">Unshareable</h3>
+                        <p className="description align-right">$0.00</p>
+                      </div>
+                      <hr />
+                      <div className="details">
+                        <h3 className="label-class">Unshareable</h3>
+                        <p className="description align-right">$0.00</p>
+                      </div>
+                    </div>
+                  </div>
                 </section>
 
               </div>
