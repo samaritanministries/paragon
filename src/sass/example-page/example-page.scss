@@ -13,7 +13,7 @@ $sidebar-width:  13rem;
 .app { background-color: $gray-100; }
 
 .content--example-page {
-  margin-top: $space-m;
+  margin-top: $space-m !important;
 }
 
 .logo-container {

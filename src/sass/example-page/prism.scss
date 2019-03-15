@@ -147,6 +147,11 @@ pre.language-scss:before {
 	background-color: rgb(220, 165, 208);
 }
 
+pre.language-jsx:before {
+	content: "jsx";
+	background-color: $orange-200;
+}
+
 pre.language-css:before {
 	content: "css";
 	background-color: $yellow-500;
