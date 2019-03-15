@@ -9,17 +9,6 @@
   margin: 1.5rem auto;
   @extend %card-shadow;
 
-  .grid & {
-    @media #{$phone} { //remove card within grid padding on mobile
-      margin: $grid-gutter -#{$grid-gutter};
-      border-radius: 0;
-    }
-    margin: 0 0 $space-m 0;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
   .card--header, &.card--content, &.card--footer,
   .card-header, &.card-content, &.card-footer {
     hr { margin: ($grid-gutter) 0; }
@@ -140,6 +129,20 @@
           }
         }
       }
+    }
+  }
+}
+
+//Set the margin of Cards when they are within a Grid
+.grid {
+  :not(.checkbox-card):not(.radio-card) > .card {
+    @media #{$phone} {
+      margin: 0 -#{$grid-gutter} $grid-gutter -#{$grid-gutter};
+      border-radius: 0;
+    }
+    @media #{$tablet} {
+      margin: 0 0 $space-m 0;
+      &:last-of-type { margin-bottom: 0; }
     }
   }
 }
