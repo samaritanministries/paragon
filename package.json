@@ -9,26 +9,28 @@
     "deploy": "gatsby build && gh-pages -d public"
   },
   "dependencies": {
-    "gatsby": "^2.0.0",
+    "@tippy.js/react": "^2.1.1",
+    "gatsby": "^2.1.19",
     "gatsby-plugin-google-fonts": "0.0.4",
-    "gatsby-plugin-manifest": "^2.0.17",
-    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-manifest": "^2.0.20",
+    "gatsby-plugin-react-helmet": "^3.0.7",
     "gatsby-plugin-sass": "^2.0.7",
     "gatsby-remark-prismjs": "^3.2.0",
-    "gatsby-transformer-remark": "^2.2.0",
+    "gatsby-transformer-remark": "^2.3.0",
     "jquery": "^3.3.1",
     "node-sass": "^4.9.0",
     "prismjs": "^1.15.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
-    "react-prism": "^4.3.2"
+    "react-prism": "^4.3.2",
+    "tippy.js": "^4.0.3"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.0",
     "prettier": "^1.12.0",
     "sass-loader": "^7.0.3",
-    "webpack": "^4.12.0",
-    "gh-pages": "^2.0.0"
+    "webpack": "^4.29.6"
   },
   "files": [
     "src/sass/base",

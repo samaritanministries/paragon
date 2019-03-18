@@ -9,21 +9,6 @@
   margin: 1.5rem auto;
   @extend %card-shadow;
 
-  .grid & { margin-bottom: $space-m; }
-
-  @media #{$phone} {
-    .grid {
-      :not(.radio-card) &,
-      :not(.checkbox-card) &,   { //ignores checkbox and radio cards
-        @supports(display: grid) { //Fallback. IE does not support negative margin on cards
-          border-radius: 0;
-          margin-left: -#{$space-m};
-          margin-right: -#{$space-m};
-        }
-      }
-    }
-  }
-
   .card--header, &.card--content, &.card--footer,
   .card-header, &.card-content, &.card-footer {
     hr { margin: ($grid-gutter) 0; }
@@ -144,6 +129,20 @@
           }
         }
       }
+    }
+  }
+}
+
+//Set the margin of Cards when they are within a Grid
+.grid {
+  :not(.checkbox-card):not(.radio-card) > .card {
+    @media #{$phone} {
+      margin: 0 -#{$grid-gutter} $grid-gutter -#{$grid-gutter};
+      border-radius: 0;
+    }
+    @media #{$tablet} {
+      margin: 0 0 $grid-gutter 0;
+      &:last-of-type { margin-bottom: 0; }
     }
   }
 }
