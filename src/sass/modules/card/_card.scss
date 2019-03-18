@@ -141,7 +141,7 @@
       border-radius: 0;
     }
     @media #{$tablet} {
-      margin: 0 0 $space-m 0;
+      margin: 0 0 $grid-gutter 0;
       &:last-of-type { margin-bottom: 0; }
     }
   }
