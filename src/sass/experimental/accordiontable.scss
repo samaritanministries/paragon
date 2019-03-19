@@ -67,7 +67,7 @@ This is an EXPERIMENT and is not ready to be included in production!
       display: flex;
     }
 
-    i.accordion--arrow {
+    i.toggle-arrow {
       @extend .dashing-icon--arrow-right;
       transition: transform 0.1s linear;
       &:before { color: $black; }
@@ -78,7 +78,7 @@ This is an EXPERIMENT and is not ready to be included in production!
     }
 
     &.expanded {
-      i.accordion--arrow { transform: rotate(90deg); }
+      i.toggle-arrow { transform: rotate(90deg); }
     }
   }
 
@@ -179,15 +179,6 @@ This is an EXPERIMENT and is not ready to be included in production!
   }
 }
 
-// .scroll {
-//   overflow-x: auto;
-//   box-shadow: inset 0 2px 4px rgba(0,0,0, 0.5);
-// }
-//
-// .scroll--width {
-//   min-width: 1200px;
-// }
-
 //Column Sizes (Specific Styles)
 
 .provider, .member, .amount, .sharing, .youpay, .status, .category, .date {
@@ -200,8 +191,7 @@ This is an EXPERIMENT and is not ready to be included in production!
   }
 }
 
-.accordion--arrow {
-  text-align: center;
+.toggle-arrow {
   display: flex;
   align-content: center;
   padding-left: 0.5rem;
@@ -262,6 +252,7 @@ This is an EXPERIMENT and is not ready to be included in production!
   float: left;
   @media #{$tablet} { width: 3rem; }
 }
+
 .status {
   flex-grow: 1;
   margin-right: 2rem;
