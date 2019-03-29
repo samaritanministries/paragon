@@ -2,6 +2,10 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [1.2.1] - 2019-03-29
+### Fixed
+- Fix duplicate imports by removing them in the experimental files
+
 ## [1.2.0] - 2019-03-18
 ### Added
 - Add Tooltip and Clippy CSS for use with Tippy.js component
