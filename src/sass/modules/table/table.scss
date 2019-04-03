@@ -1,3 +1,93 @@
+.accessible-table {
+  @extend .card;
+  @extend %card-shadow;
+  margin: 0;
+
+  .table-row--header,
+  .table-row {
+    margin: 0;
+    @extend %remove-list-style;
+    @extend .no-wrap;
+    padding: $grid-gutter;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      flex: 1 1 0;
+      @extend .no-wrap;
+    }
+  }
+
+  &.is-condensed {
+    font-size: 0.9rem;
+    .table-row { padding: $grid-gutter/2 $grid-gutter; }
+  }
+
+  .table-row--header {
+    font-weight: $font-weight-semibold;
+    background-color: $gray-50;
+    cursor: default;
+    padding: $grid-gutter/2 $grid-gutter;
+  }
+
+  .table-row {
+    border-bottom: 2px solid $gray-50;
+    &:last-of-type { border: none; }
+  }
+
+  &.row-selectable {
+    a {
+      cursor: pointer;
+      position: relative;
+      margin: 0;
+      @extend %remove-list-style;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $gray-900;
+      font-weight: $font-weight-normal;
+      transition: background-color 0.2s ease-in-out;
+      &:hover { background-color: $gray-50; }
+      &:last-of-type {
+        border-radius: 0 0 5px 5px;
+        border: none;
+      }
+      border-bottom: 2px solid $gray-50;
+      .table-row { width: 100%; }
+    }
+  }
+  &.row-selectable {
+    //Space for arrow icon
+    .table-row--header { padding-right: calc(#{$space-m} + #{$grid-gutter}); }
+    a {
+      padding-right: $space-m;
+      .dashing-icon--arrow-right {
+        position: absolute;
+        right: $grid-gutter/2;
+      }
+    }
+  }
+
+  &.row-expandable {
+    //Space for arrow icon
+    .table-row--header { padding-left: calc(#{$space-xl} + #{$grid-gutter}); }
+    .table-row {
+      cursor: pointer;
+      position: relative;
+      padding-left: calc(#{$space-xl} + #{$grid-gutter});
+      transition: background-color 0.2s ease-in-out;
+      &:hover { background-color: $gray-50; }
+      &:last-of-type { border-radius: 0 0 5px 5px; }
+    }
+    .dashing-icon--arrow-right {
+      position: absolute;
+      left: $grid-gutter;
+    }
+  }
+}
+
+
+
 $table--header-row: $white !default;
 $table--odd-row: $gray-50 !default;
 $table--even-row: $white !default;

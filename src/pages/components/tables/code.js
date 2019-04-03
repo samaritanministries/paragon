@@ -24,7 +24,104 @@ class TablesCode extends React.Component {
           <SubNav pageName={currentPageNameLower}/>
         </header>
         <AppContent>
-          <div className="row">
+
+          <h2>Accessible Table</h2>
+          <div className="accessible-table is-condensed">
+            <ol className="table-row--header">
+              <li>Column 12345</li>
+              <li>Column 2</li>
+              <li>Column 3</li>
+              <li>Column 4</li>
+            </ol>
+            <ol className="table-row">
+              <li>Column 1</li>
+              <li>Column 2</li>
+              <li>Column 3</li>
+              <li>Column 4</li>
+            </ol>
+            <ol className="table-row">
+              <li>Column 1</li>
+              <li>Column 2</li>
+              <li>Column 312345</li>
+              <li>Column 4</li>
+            </ol>
+            <ol className="table-row">
+              <li>Column 1</li>
+              <li>Column 2</li>
+              <li>Column 3</li>
+              <li>Column 4</li>
+            </ol>
+          </div>
+
+          <h2 className="mt-space-xxl">Accessible Table - Selectable</h2>
+          <div className="accessible-table row-selectable">
+            <ol className="table-row--header">
+              <li>Column 1</li>
+              <li>Column 2</li>
+              <li>Column 312345</li>
+              <li>Column 4</li>
+            </ol>
+            <a>
+              <ol className="table-row">
+                <li>Column 112345</li>
+                <li>Column 2</li>
+                <li>Column 3</li>
+                <li>Column 4</li>
+                <i className="dashing-icon dashing-icon--arrow-right"></i>
+              </ol>
+            </a>
+            <a>
+              <ol className="table-row">
+                <li>Column 1</li>
+                <li>Column 2</li>
+                <li>Column 3</li>
+                <li>Column 4</li>
+                <i className="dashing-icon dashing-icon--arrow-right"></i>
+              </ol>
+            </a>
+            <a>
+              <ol className="table-row">
+                <li>Column 1</li>
+                <li>Column 2</li>
+                <li>Column 3</li>
+                <li>Column 4</li>
+                <i className="dashing-icon dashing-icon--arrow-right"></i>
+              </ol>
+            </a>
+          </div>
+
+          <h2 className="mt-space-xxl">Accessible Table - Expandable</h2>
+          <div className="accessible-table row-expandable">
+            <ol className="table-row--header">
+              <li>Column 1</li>
+              <li>Column 2</li>
+              <li>Column 3</li>
+              <li>Column 4</li>
+            </ol>
+            <ol className="table-row">
+              <i className="dashing-icon dashing-icon--arrow-right"></i>
+              <li>Column 1</li>
+              <li>Column 2</li>
+              <li>Column 3</li>
+              <li>Column 4</li>
+            </ol>
+            <ol className="table-row">
+              <i className="dashing-icon dashing-icon--arrow-right"></i>
+              <li>Column 1</li>
+              <li>Column 2</li>
+              <li>Column 3</li>
+              <li>Column 4</li>
+            </ol>
+            <ol className="table-row">
+              <i className="dashing-icon dashing-icon--arrow-right"></i>
+              <li>Column 1</li>
+              <li>Column 2</li>
+              <li>Column 3</li>
+              <li>Column 4</li>
+            </ol>
+          </div>
+
+          <div className="row" style={{ marginTop: "50rem"}}>
             <div className="column column--full">
               <h2 className="example-header no-margin--top" id="defaultTable">Default Table
                 <Link to={location.pathname + "/#defaultTable"} className="button button--transparent button--copy-link"></Link>
