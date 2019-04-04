@@ -144,6 +144,7 @@ class Sidebar extends React.Component {
                 <Link to="/components/grid/code">Grid</Link>
                 <Link to="/components/icons/code">Icons</Link>
                 <Link to="/components/lists/code">Lists</Link>
+                <Link to="/components/modal/code">Modal</Link>
                 <Link to="/components/navigation/code">Navigation</Link>
                 <Link to="/components/overpanel/code">Overpanel</Link>
                 <Link to="/components/pagination/code">Pagination</Link>
