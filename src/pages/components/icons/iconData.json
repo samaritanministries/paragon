@@ -1,0 +1,272 @@
+{
+    "iconsData": [
+      {
+        "iconName": "arrow-down",
+        "id": 1
+      },
+      {
+        "iconName": "arrow-up",
+        "id": 2
+      },
+      {
+        "iconName": "arrow-right",
+        "id": 3
+      },
+      {
+        "iconName": "arrow-left",
+        "id": 4
+      },
+      {
+        "iconName": "arrow-long-down",
+        "id": 5
+      },
+      {
+        "iconName": "arrow-long-up",
+        "id": 6
+      },
+      {
+        "iconName": "arrow-long-right",
+        "id": 7
+      },
+      {
+        "iconName": "arrow-long-left",
+        "id": 8
+      },
+      {
+        "iconName": "alert-filled",
+        "id": 9
+      },
+      {
+        "iconName": "alert-stroke",
+        "id": 10
+      },
+      {
+        "iconName": "checkmark-filled",
+        "id": 11
+      },
+      {
+        "iconName": "checkmark-stroke",
+        "id": 12
+      },
+      {
+        "iconName": "info-filled",
+        "id": 13
+      },
+      {
+        "iconName": "info-stroke",
+        "id": 14
+      },
+      {
+        "iconName": "question-filled",
+        "id": 15
+      },
+      {
+        "iconName": "question-stroke",
+        "id": 16
+      },
+      {
+        "iconName": "calendar",
+        "id": 17
+      },
+      {
+        "iconName": "time",
+        "id": 18
+      },
+      {
+        "iconName": "search",
+        "id": 19
+      },
+      {
+        "iconName": "checkmark",
+        "id": 20
+      },
+      {
+        "iconName": "close",
+        "id": 21
+      },
+      {
+        "iconName": "add",
+        "id": 22
+      },
+      {
+        "iconName": "minus",
+        "id": 23
+      },
+      {
+        "iconName": "fit-page",
+        "id": 24
+      },
+      {
+        "iconName": "fit-width",
+        "id": 25
+      },
+      {
+        "iconName": "flip",
+        "id": 26
+      },
+      {
+        "iconName": "rotate",
+        "id": 27
+      },
+      {
+        "iconName": "phone",
+        "id": 28
+      },
+      {
+        "iconName": "comment",
+        "id": 29
+      },
+      {
+        "iconName": "comment-add",
+        "id": 30
+      },
+      {
+        "iconName": "show",
+        "id": 31
+      },
+      {
+        "iconName": "hidden",
+        "id": 32
+      },
+      {
+        "iconName": "info",
+        "id": 33
+      },
+      {
+        "iconName": "location",
+        "id": 34
+      },
+      {
+        "iconName": "locked",
+        "id": 35
+      },
+      {
+        "iconName": "unlocked",
+        "id": 36
+      },
+      {
+        "iconName": "new-tab",
+        "id": 37
+      },
+      {
+        "iconName": "notification",
+        "id": 38
+      },
+      {
+        "iconName": "page",
+        "id": 39
+      },
+      {
+        "iconName": "pencil",
+        "id": 40
+      },
+      {
+        "iconName": "play",
+        "id": 41
+      },
+      {
+        "iconName": "grid",
+        "id": 42
+      },
+      {
+        "iconName": "reply",
+        "id": 43
+      },
+      {
+        "iconName": "settings",
+        "id": 44
+      },
+      {
+        "iconName": "trash",
+        "id": 45
+      },
+      {
+        "iconName": "view-single",
+        "id": 46
+      },
+      {
+        "iconName": "view-double",
+        "id": 47
+      },
+      {
+        "iconName": "heart",
+        "id": 48
+      },
+      {
+        "iconName": "add-person",
+        "id": 49
+      },
+      {
+        "iconName": "paper-check",
+        "id": 50
+      },
+      {
+        "iconName": "inbox",
+        "id": 51
+      },
+      {
+        "iconName": "face-amazing",
+        "id": 52
+      },
+      {
+        "iconName": "face-awful",
+        "id": 53
+      },
+      {
+        "iconName": "face-ok",
+        "id": 54
+      },
+      {
+        "iconName": "face-good",
+        "id": 55
+      },
+      {
+        "iconName": "face-bad",
+        "id": 56
+      },
+      {
+        "iconName": "mobile-phone",
+        "id": 57
+      },
+      {
+        "iconName": "notification-off",
+        "id": 58
+      },
+      {
+        "iconName": "star-stroke",
+        "id": 59
+      },
+      {
+        "iconName": "star-filled",
+        "id": 60
+      },
+      {
+        "iconName": "menu",
+        "id": 61
+      },
+      {
+        "iconName": "categories",
+        "id": 62
+      },
+      {
+        "iconName": "mail",
+        "id": 63
+      },
+      {
+        "iconName": "chat-filled",
+        "id": 64
+      },
+      {
+        "iconName": "popular",
+        "id": 65
+      },
+      {
+        "iconName": "paper-check-2",
+        "id": 66
+      },
+      {
+        "iconName": "pause",
+        "id": 67
+      }
+    ]
+}
