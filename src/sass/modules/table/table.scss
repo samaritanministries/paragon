@@ -25,6 +25,7 @@
 
   .table-row--header {
     font-weight: $font-weight-semibold;
+    border-radius: 5px 5px 0 0;
     background-color: $gray-50;
     cursor: default;
     padding: $grid-gutter/2 $grid-gutter;
