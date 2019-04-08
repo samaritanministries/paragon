@@ -148,6 +148,16 @@ fieldset {
     //Removes default select icon in IE
     select::-ms-expand { display: none; }
   }
+
+  //Add class to containing fieldset to display optional text
+  &.is-optional {
+    label::after {
+      content: "(Optional)";
+      color: $gray-500;
+      font-weight: $font-weight-normal;
+      margin-left: $space-xxs;
+    }
+  }
 }
 
 /* Form States
