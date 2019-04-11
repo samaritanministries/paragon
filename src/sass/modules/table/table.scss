@@ -1,23 +1,31 @@
+/* Flex Table Styles
+  =========================================================================== */
+
 $selectable-icon-space: 2.5rem;
 $expandable-icon-space: 3rem;
+$expandable-left-border: 5px;
 
-.accessible-table {
+.flex-table {
   @extend .card;
   @extend %card-shadow;
   margin: 0;
 
   .table-row--header,
   .table-row {
-    margin: 0;
     @extend %remove-list-style;
     @extend .no-wrap;
     padding: $grid-gutter;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: space-between;
+    @media #{$tablet} { display: flex; }
     li {
+      @media #{$phone} {
+        white-space: normal;
+      }
       flex: 1 1 0;
       @extend .no-wrap;
+      padding-right: 0.5rem;
     }
   }
 
@@ -41,7 +49,10 @@ $expandable-icon-space: 3rem;
 
   &.row-selectable {
     //Space for arrow icon
-    .table-row--header { padding-right: $selectable-icon-space; }
+    .table-row--header {
+      @media #{$phone} { display: none; }
+      padding-right: $selectable-icon-space;
+    }
     .table-row {
       width: 100%;
       padding-right: $selectable-icon-space;
@@ -65,31 +76,115 @@ $expandable-icon-space: 3rem;
       }
       li:last-of-type {
         position: absolute;
-        right: $grid-gutter;
+        right: $grid-gutter/2;
+        top: 50%;
+        margin-top: -11px; //half of icon height
       }
     }
   }
 
   &.row-expandable {
     //Space for arrow icon
-    .table-row--header { padding-left: $expandable-icon-space; }
+    .table-row--header {
+      @media #{$phone} { display: none; }
+      padding-left: calc(#{$expandable-icon-space} + #{$expandable-left-border});
+    }
     .table-row {
+      padding-right: $expandable-icon-space;
+      @media #{$tablet} {
+        padding-left: $expandable-icon-space;
+        padding-right: $grid-gutter;
+      }
+      border-left: 5px solid transparent;
       cursor: pointer;
       position: relative;
-      padding-left: $expandable-icon-space;
       transition: background-color 0.2s ease-in-out;
       &:hover { background-color: $gray-50; }
       &:last-of-type { border-radius: 0 0 5px 5px; }
       li:first-of-type {
+        @media #{$phone} {
+          right: $grid-gutter/2;
+          top: 50%;
+          margin-top: -11px; //half of icon height
+        }
+        padding: 0;
         position: absolute;
-        left: $grid-gutter;
+        transition: transform 0.3s;
+        @media #{$tablet} {
+          left: calc(#{$grid-gutter} - #{$expandable-left-border});
+        }
+        i {
+          @extend .dashing-icon--arrow-right;
+          transition: transform 0.1s linear;
+        }
+      }
+      &.expanded {
+        border-left: 5px solid $blue-500;
+        @media #{$tablet} {
+          li:first-of-type { transform: rotate(90deg); }
+        }
+        + .table-row--content {
+          padding: 1rem;
+          border-bottom: 2px solid $gray-50;
+          height: auto;
+          left: 0%;
+          transition: left 0.25s;
+
+          @media #{$tablet} {
+            height: auto;
+            transition: height 0.25s;
+          }
+        }
+      }
+    }
+    //Caleb's custom content
+    .table-row--content {
+      overflow: auto;
+      transition: left 0.25s;
+
+      background-color: $white;
+
+      position: fixed;
+      top: 0;
+      left: 100%;
+      right: 0;
+      bottom: 0;
+      z-index: 6;
+
+      @media #{$tablet} {
+        overflow: hidden;
+        border-left: 5px solid $blue-500;
+
+        //for example app only
+        transition: height 0.25s;
+        transition: padding 0.5s;
+
+        position: inherit;
+        height: 0;
+        padding: 0;
+        z-index: 0;
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+
+      .close {
+        opacity: 1.0;
+        display: block;
+
+        @media #{$tablet} {
+          opacity: 0.0;
+          display: none;
+        }
       }
     }
   }
 }
 
 
-
+/* Default Table Styles
+  =========================================================================== */
 $table--header-row: $white !default;
 $table--odd-row: $gray-50 !default;
 $table--even-row: $white !default;
