@@ -1,3 +1,6 @@
+$selectable-icon-space: 2.5rem;
+$expandable-icon-space: 3rem;
+
 .accessible-table {
   @extend .card;
   @extend %card-shadow;
@@ -37,6 +40,12 @@
   }
 
   &.row-selectable {
+    //Space for arrow icon
+    .table-row--header { padding-right: $selectable-icon-space; }
+    .table-row {
+      width: 100%;
+      padding-right: $selectable-icon-space;
+    }
     a {
       cursor: pointer;
       position: relative;
@@ -48,41 +57,33 @@
       color: $gray-900;
       font-weight: $font-weight-normal;
       transition: background-color 0.2s ease-in-out;
+      border-bottom: 2px solid $gray-50;
       &:hover { background-color: $gray-50; }
       &:last-of-type {
         border-radius: 0 0 5px 5px;
         border: none;
       }
-      border-bottom: 2px solid $gray-50;
-      .table-row { width: 100%; }
-    }
-  }
-  &.row-selectable {
-    //Space for arrow icon
-    .table-row--header { padding-right: calc(#{$space-m} + #{$grid-gutter}); }
-    a {
-      padding-right: $space-m;
-      .dashing-icon--arrow-right {
+      li:last-of-type {
         position: absolute;
-        right: $grid-gutter/2;
+        right: $grid-gutter;
       }
     }
   }
 
   &.row-expandable {
     //Space for arrow icon
-    .table-row--header { padding-left: calc(#{$space-xl} + #{$grid-gutter}); }
+    .table-row--header { padding-left: $expandable-icon-space; }
     .table-row {
       cursor: pointer;
       position: relative;
-      padding-left: calc(#{$space-xl} + #{$grid-gutter});
+      padding-left: $expandable-icon-space;
       transition: background-color 0.2s ease-in-out;
       &:hover { background-color: $gray-50; }
       &:last-of-type { border-radius: 0 0 5px 5px; }
-    }
-    .dashing-icon--arrow-right {
-      position: absolute;
-      left: $grid-gutter;
+      li:first-of-type {
+        position: absolute;
+        left: $grid-gutter;
+      }
     }
   }
 }

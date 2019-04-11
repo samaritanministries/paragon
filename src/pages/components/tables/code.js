@@ -228,7 +228,9 @@ $table--border: $gray-200 !default;`}
                   <li>Column 2</li>
                   <li>Column 3</li>
                   <li>Column 4</li>
-                  <i className="dashing-icon dashing-icon--arrow-right"></i>
+                  <li>
+                    <i className="dashing-icon dashing-icon--arrow-right"></i>
+                  </li>
                 </ol>
               </a>
               <a>
@@ -237,7 +239,9 @@ $table--border: $gray-200 !default;`}
                   <li>Column 2</li>
                   <li>Column 3</li>
                   <li>Column 4</li>
-                  <i className="dashing-icon dashing-icon--arrow-right"></i>
+                  <li>
+                    <i className="dashing-icon dashing-icon--arrow-right"></i>
+                  </li>
                 </ol>
               </a>
               <a>
@@ -246,7 +250,9 @@ $table--border: $gray-200 !default;`}
                   <li>Column 2</li>
                   <li>Column 3</li>
                   <li>Column 4</li>
-                  <i className="dashing-icon dashing-icon--arrow-right"></i>
+                  <li>
+                    <i className="dashing-icon dashing-icon--arrow-right"></i>
+                  </li>
                 </ol>
               </a>
             </div>
@@ -265,7 +271,9 @@ $table--border: $gray-200 !default;`}
       <li>Column 2</li>
       <li>Column 3</li>
       <li>Column 4</li>
-      <i className="dashing-icon dashing-icon--arrow-right"></i>
+      <li>
+        <i className="dashing-icon dashing-icon--arrow-right"></i>
+      </li>
     </ol>
   </a>
   <a>
@@ -274,7 +282,9 @@ $table--border: $gray-200 !default;`}
       <li>Column 2</li>
       <li>Column 3</li>
       <li>Column 4</li>
-      <i className="dashing-icon dashing-icon--arrow-right"></i>
+      <li>
+        <i className="dashing-icon dashing-icon--arrow-right"></i>
+      </li>
     </ol>
   </a>
   <a>
@@ -283,7 +293,9 @@ $table--border: $gray-200 !default;`}
       <li>Column 2</li>
       <li>Column 3</li>
       <li>Column 4</li>
-      <i className="dashing-icon dashing-icon--arrow-right"></i>
+      <li>
+        <i className="dashing-icon dashing-icon--arrow-right"></i>
+      </li>
     </ol>
   </a>
 </div>`}
@@ -303,21 +315,27 @@ $table--border: $gray-200 !default;`}
                 <li>Column 4</li>
               </ol>
               <ol className="table-row">
-                <i className="dashing-icon dashing-icon--arrow-right"></i>
+                <li>
+                  <i className="dashing-icon dashing-icon--arrow-right"></i>
+                </li>
                 <li>Column 1</li>
                 <li>Column 2</li>
                 <li>Column 3</li>
                 <li>Column 4</li>
               </ol>
               <ol className="table-row">
-                <i className="dashing-icon dashing-icon--arrow-right"></i>
+                <li>
+                  <i className="dashing-icon dashing-icon--arrow-right"></i>
+                </li>
                 <li>Column 1</li>
                 <li>Column 2</li>
                 <li>Column 3</li>
                 <li>Column 4</li>
               </ol>
               <ol className="table-row">
-                <i className="dashing-icon dashing-icon--arrow-right"></i>
+                <li>
+                  <i className="dashing-icon dashing-icon--arrow-right"></i>
+                </li>
                 <li>Column 1</li>
                 <li>Column 2</li>
                 <li>Column 3</li>
@@ -334,21 +352,27 @@ $table--border: $gray-200 !default;`}
     <li>Column 4</li>
   </ol>
   <ol className="table-row">
-    <i className="dashing-icon dashing-icon--arrow-right"></i>
+    <li>
+      <i className="dashing-icon dashing-icon--arrow-right"></i>
+    </li>
     <li>Column 1</li>
     <li>Column 2</li>
     <li>Column 3</li>
     <li>Column 4</li>
   </ol>
   <ol className="table-row">
-    <i className="dashing-icon dashing-icon--arrow-right"></i>
+    <li>
+      <i className="dashing-icon dashing-icon--arrow-right"></i>
+    </li>
     <li>Column 1</li>
     <li>Column 2</li>
     <li>Column 3</li>
     <li>Column 4</li>
   </ol>
   <ol className="table-row">
-    <i className="dashing-icon dashing-icon--arrow-right"></i>
+    <li>
+      <i className="dashing-icon dashing-icon--arrow-right"></i>
+    </li>
     <li>Column 1</li>
     <li>Column 2</li>
     <li>Column 3</li>
