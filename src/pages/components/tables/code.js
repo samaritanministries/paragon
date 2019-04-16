@@ -184,10 +184,12 @@ $table--border: $gray-200 !default;`}
           <h2 className="mt-space-xl" id="flex-table">Flex Table
             <Link to={location.pathname + "/#flex-table"} className="button button--transparent button--copy-link"></Link>
           </h2>
-          <p>Use <code className="example-text">.is-condensed</code> to make the padding for the rows half the size</p>
+          <p className="no-margin">Use <code className="example-text">.is-condensed</code> to make the padding for the rows half the size.</p>
+          <p>Use <code className="example-text">.font-small</code> to make the font 0.9rem.</p>
           <div className="example-container">
 
-            <div className="flex-table is-condensed">
+            <div className="flex-table is-condensed font-small">
+              <h3 className="flex-table--title">Flex Table Title</h3>
               <ol className="table-row--header">
                 <li>Column 1</li>
                 <li>Column 2</li>
@@ -214,7 +216,8 @@ $table--border: $gray-200 !default;`}
               </ol>
             </div>
             <CodeToggle>
-{`<div className="flex-table is-condensed">
+{`<div className="flex-table is-condensed font-small">
+  <h3 className="flex-table--title">Flex Table Title</h3>
   <ol className="table-row--header">
     <li>Column 1</li>
     <li>Column 2</li>
