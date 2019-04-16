@@ -1,7 +1,4 @@
-/* Flex Table Styles
-  =========================================================================== */
-
-$selectable-icon-space: 2.5rem;
+$selectable-icon-space: 2rem;
 $expandable-icon-space: 3rem;
 $expandable-left-border: 5px;
 
@@ -9,6 +6,12 @@ $expandable-left-border: 5px;
   @extend .card;
   @extend %card-shadow;
   margin: 0;
+
+  .flex-table--title {
+    padding: $grid-gutter;
+    margin: 0;
+    + .table-row--header { border-radius: 0 !important; }
+  }
 
   .table-row--header,
   .table-row {
@@ -30,9 +33,9 @@ $expandable-left-border: 5px;
   }
 
   &.is-condensed {
-    font-size: 0.9rem;
     .table-row { padding: $grid-gutter/2 $grid-gutter; }
   }
+  &.font-small { font-size: 0.9rem; }
 
   .table-row--header {
     font-weight: $font-weight-semibold;
@@ -43,14 +46,13 @@ $expandable-left-border: 5px;
   }
 
   .table-row {
-    border-bottom: 2px solid $gray-50;
+    border-bottom: 1px solid $gray-50;
     &:last-of-type { border: none; }
   }
 
   &.row-selectable {
     //Space for arrow icon
     .table-row--header {
-      @media #{$phone} { display: none; }
       padding-right: $selectable-icon-space;
     }
     .table-row {
@@ -68,7 +70,7 @@ $expandable-left-border: 5px;
       color: $gray-900;
       font-weight: $font-weight-normal;
       transition: background-color 0.2s ease-in-out;
-      border-bottom: 2px solid $gray-50;
+      border-bottom: 1px solid $gray-50;
       &:hover { background-color: $gray-50; }
       &:last-of-type {
         border-radius: 0 0 5px 5px;
@@ -76,10 +78,14 @@ $expandable-left-border: 5px;
       }
       li:last-of-type {
         position: absolute;
+        padding: 0;
         right: $grid-gutter/2;
         top: 50%;
         margin-top: -11px; //half of icon height
       }
+    }
+    &.font-small {
+      .table-row li:last-of-type { margin-top: -8px; }
     }
   }
 
