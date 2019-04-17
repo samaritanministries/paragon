@@ -1,11 +1,17 @@
-$selectable-icon-space: 2rem;
-$expandable-icon-space: 3rem;
-$expandable-left-border: 5px;
+/* Flex Table Styles
+  =========================================================================== */
+$selectable-icon-space:   2rem;
+$expandable-icon-space:   3rem;
+$expandable-left-border:  5px;
+
+$flex-table--border-width: 2px !default;
+$flex-table--border-color: $gray-50 !default;
 
 .flex-table {
   @extend .card;
   @extend %card-shadow;
   margin: 0;
+  overflow: hidden;
 
   .flex-table--title {
     padding: $grid-gutter;
@@ -46,7 +52,7 @@ $expandable-left-border: 5px;
   }
 
   .table-row {
-    border-bottom: 1px solid $gray-50;
+    border-bottom: $flex-table--border-width solid $flex-table--border-color;
     &:last-of-type { border: none; }
   }
 
@@ -70,10 +76,9 @@ $expandable-left-border: 5px;
       color: $gray-900;
       font-weight: $font-weight-normal;
       transition: background-color 0.2s ease-in-out;
-      border-bottom: 1px solid $gray-50;
+      border-bottom: $flex-table--border-width solid $flex-table--border-color;
       &:hover { background-color: $gray-50; }
       &:last-of-type {
-        border-radius: 0 0 5px 5px;
         border: none;
       }
       li:last-of-type {
@@ -106,7 +111,6 @@ $expandable-left-border: 5px;
       position: relative;
       transition: background-color 0.2s ease-in-out;
       &:hover { background-color: $gray-50; }
-      &:last-of-type { border-radius: 0 0 5px 5px; }
       li:first-of-type {
         @media #{$phone} {
           right: $grid-gutter/2;
@@ -126,15 +130,22 @@ $expandable-left-border: 5px;
       }
       &.expanded {
         border-left: 5px solid $blue-500;
+        border-bottom: none;
         @media #{$tablet} {
           li:first-of-type { transform: rotate(90deg); }
         }
         + .table-row--content {
           padding: 1rem;
-          border-bottom: 2px solid $gray-50;
           height: auto;
           left: 0%;
           transition: left 0.25s;
+
+          border-top: $flex-table--border-width solid $flex-table--border-color;
+          border-bottom: $flex-table--border-width solid $flex-table--border-color;
+
+          &:last-of-type {
+            border-bottom: none;
+          }
 
           @media #{$tablet} {
             height: auto;
@@ -169,10 +180,6 @@ $expandable-left-border: 5px;
         height: 0;
         padding: 0;
         z-index: 0;
-
-        &:last-of-type {
-          border-bottom: none;
-        }
       }
 
       .close {
