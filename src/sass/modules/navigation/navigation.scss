@@ -133,3 +133,14 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
     }
   }
 }
+
+/* Mobile Navigation Icon
+  =========================================================================== */
+.button--mobile-sidebar {
+  @extend %icon-white;
+  @extend .button;
+  @extend .button--transparent;
+  @extend .button--icon;
+  @extend .button--white;
+  @media #{$tablet} { display: none; }
+}
