@@ -259,7 +259,7 @@ $table--border: $gray-200 !default;`}
                 <li>Column 3</li>
                 <li>Column 4</li>
               </ol>
-              <a>
+              <Link to="#">
                 <ol className="table-row">
                   <li>Column 1</li>
                   <li>Column 2</li>
@@ -269,8 +269,8 @@ $table--border: $gray-200 !default;`}
                     <i className="dashing-icon dashing-icon--arrow-right"></i>
                   </li>
                 </ol>
-              </a>
-              <a>
+              </Link>
+              <Link to="#">
                 <ol className="table-row">
                   <li>Column 1</li>
                   <li>Column 2</li>
@@ -280,8 +280,8 @@ $table--border: $gray-200 !default;`}
                     <i className="dashing-icon dashing-icon--arrow-right"></i>
                   </li>
                 </ol>
-              </a>
-              <a>
+              </Link>
+              <Link to="#">
                 <ol className="table-row">
                   <li>Column 1</li>
                   <li>Column 2</li>
@@ -291,7 +291,7 @@ $table--border: $gray-200 !default;`}
                     <i className="dashing-icon dashing-icon--arrow-right"></i>
                   </li>
                 </ol>
-              </a>
+              </Link>
             </div>
 <CodeToggle>
 {`<!-- Use row-selectable to give space for the dashing-icon -->
