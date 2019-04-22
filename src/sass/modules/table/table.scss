@@ -22,7 +22,6 @@ $flex-table--border-color: $gray-50 !default;
   .table-row--header,
   .table-row {
     @extend %remove-list-style;
-    @extend .no-wrap;
     padding: $grid-gutter;
     display: block;
     align-items: center;
