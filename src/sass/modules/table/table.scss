@@ -1,3 +1,202 @@
+/* Flex Table Styles
+  =========================================================================== */
+$selectable-icon-space:   2rem;
+$expandable-icon-space:   2.5rem;
+$expandable-left-border:  5px;
+
+$flex-table--border-width: 2px !default;
+$flex-table--border-color: $gray-50 !default;
+
+.flex-table {
+  @extend .card;
+  @extend %card-shadow;
+  margin: 0;
+  overflow: hidden;
+
+  .flex-table--title {
+    padding: $grid-gutter;
+    margin: 0;
+    + .table-row--header { border-radius: 0 !important; }
+  }
+
+  .table-row--header,
+  .table-row {
+    @extend %remove-list-style;
+    padding: $grid-gutter;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    @media #{$tablet} { display: flex; }
+    li {
+      @media #{$phone} {
+        white-space: normal;
+      }
+      flex: 1 1 0;
+      @extend .no-wrap;
+      padding-right: 0.5rem;
+    }
+  }
+
+  &.is-condensed {
+    .table-row { padding: $grid-gutter/2 $grid-gutter; }
+  }
+  &.font-small { font-size: 0.9rem; }
+
+  .table-row--header {
+    font-weight: $font-weight-semibold;
+    border-radius: 5px 5px 0 0;
+    background-color: $gray-50;
+    cursor: default;
+    padding: $grid-gutter/2 $grid-gutter;
+  }
+
+  .table-row {
+    border-bottom: $flex-table--border-width solid $flex-table--border-color;
+    &:last-of-type { border: none; }
+  }
+
+  &.row-selectable {
+    //Space for arrow icon
+    .table-row--header {
+      padding-right: $selectable-icon-space;
+    }
+    .table-row {
+      width: 100%;
+      padding-right: $selectable-icon-space;
+    }
+    a {
+      cursor: pointer;
+      position: relative;
+      margin: 0;
+      @extend %remove-list-style;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $gray-900;
+      font-weight: $font-weight-normal;
+      transition: background-color 0.2s ease-in-out;
+      border-bottom: $flex-table--border-width solid $flex-table--border-color;
+      &:hover { background-color: $gray-50; }
+      &:last-of-type {
+        border: none;
+      }
+      li:last-of-type {
+        position: absolute;
+        padding: 0;
+        right: $grid-gutter/2;
+        top: 50%;
+        margin-top: -11px; //half of icon height
+      }
+    }
+    &.font-small {
+      .table-row li:last-of-type { margin-top: -8px; }
+    }
+  }
+
+  &.row-expandable {
+    //Space for arrow icon
+    .table-row--header {
+      @media #{$phone} { display: none; }
+      padding-left: calc(#{$expandable-icon-space} + #{$expandable-left-border});
+    }
+    .table-row {
+      padding-right: $expandable-icon-space;
+      @media #{$tablet} {
+        padding-left: $expandable-icon-space;
+        padding-right: $grid-gutter;
+      }
+      border-left: 5px solid transparent;
+      cursor: pointer;
+      position: relative;
+      transition: background-color 0.2s ease-in-out;
+      &:hover { background-color: $gray-50; }
+      li:first-of-type {
+        @media #{$phone} {
+          right: $grid-gutter/2;
+          top: 50%;
+          margin-top: -11px; //half of icon height
+        }
+        padding: 0;
+        position: absolute;
+        transition: transform 0.3s;
+        @media #{$tablet} {
+          left: calc(#{$grid-gutter} - #{$expandable-left-border});
+        }
+        i {
+          @extend .dashing-icon--arrow-right;
+          transition: transform 0.1s linear;
+        }
+      }
+      &.expanded {
+        border-left: 5px solid $blue-500;
+        border-bottom: none;
+        @media #{$tablet} {
+          li:first-of-type { transform: rotate(90deg); }
+        }
+        + .table-row--content {
+          padding: 1rem;
+          height: auto;
+          left: 0%;
+          transition: left 0.25s;
+
+          border-top: $flex-table--border-width solid $flex-table--border-color;
+          border-bottom: $flex-table--border-width solid $flex-table--border-color;
+
+          &:last-of-type {
+            border-bottom: none;
+          }
+
+          @media #{$tablet} {
+            height: auto;
+            transition: height 0.25s;
+          }
+        }
+      }
+    }
+    //Caleb's custom content
+    .table-row--content {
+      overflow: auto;
+      transition: left 0.25s;
+
+      background-color: $white;
+
+      position: fixed;
+      top: 0;
+      left: 100%;
+      right: 0;
+      bottom: 0;
+      z-index: 6;
+
+      @media #{$tablet} {
+        overflow: hidden;
+        border-left: 5px solid $blue-500;
+
+        //for example app only
+        transition: height 0.25s;
+        transition: padding 0.5s;
+
+        position: inherit;
+        height: 0;
+        padding: 0;
+        z-index: 0;
+      }
+
+      .close {
+        opacity: 1.0;
+        display: block;
+
+        @media #{$tablet} {
+          opacity: 0.0;
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+/* Default Table Styles
+  =========================================================================== */
 $table--header-row: $white !default;
 $table--odd-row: $gray-50 !default;
 $table--even-row: $white !default;
