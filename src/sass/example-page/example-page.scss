@@ -1,6 +1,6 @@
 $global-content-width: 800px !default;
 
-@import '../paragon';
+@import '../experimental/x-paragon.scss';
 @import 'color';
 @import 'typography';
 @import 'image';
@@ -213,6 +213,7 @@ $sidebar-width:  13rem;
     padding-left: 1rem;
     a {
       text-transform: uppercase;
+      text-decoration: none;
       color: white;
       margin-right: 1rem;
       padding-bottom: 0.3rem;
