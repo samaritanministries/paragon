@@ -122,6 +122,7 @@ class Sidebar extends React.Component {
               <div className="menu-group">
                 <Link to="/style/accessibility/code">Accessibility</Link>
                 <Link to="/style/color/code">Color</Link>
+                <Link to="/style/spacing/code">Spacing</Link>
                 <Link to="/style/typography/code">Typography</Link>
               </div>
             </div>
