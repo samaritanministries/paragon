@@ -90,7 +90,7 @@ $space-xxl: 3rem;`}
           </div>
 
 
-          <h2>Individual Spacing</h2>
+          <h2 className="mt-space-xl">Individual Spacing</h2>
 
           <div className="example-container">
 
@@ -153,7 +153,10 @@ $space-xxl: 3rem;`}
             </div>
 
             <CodeToggle>
-{`<div class="mt-space-xl"></div>`}
+{`<div class="mt-space-xl"></div> <!-- margin-top: 2rem; -->
+<div class="ml-space-xs"></div> <!-- margin-left: 0.5rem; -->
+<div class="p-space-m"></div> <!-- padding: 1rem; -->
+`}
             </CodeToggle>
             </div>
 

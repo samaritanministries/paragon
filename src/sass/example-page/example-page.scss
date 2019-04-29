@@ -894,6 +894,7 @@ footer {
   }
 }
 
+//SPACING
 .x-space { //spacing examples
   background-color: $brand-yellow;
   display: inline-block;
@@ -925,4 +926,32 @@ footer {
   &--pl { border-left: 8px solid $brand-blue; }
   &--px { border-left: 8px solid $brand-blue; border-right: 8px solid $brand-blue; }
   &--py { border-top: 8px solid $brand-blue; border-bottom: 8px solid $brand-blue; }
+}
+
+.h1-spacing,
+.input-spacing,
+.p-spacing {
+  position: relative;
+}
+
+.h1-spacing:after,
+.p-spacing:after,
+.input-spacing:after {
+  content: "";
+  position: absolute;
+  background-color: $brand-yellow;
+  width: 100%;
+  display: block;
+  height: 0.25rem;
+  bottom: -0.25rem;
+}
+
+.p-spacing:after {
+  height: 0.5rem;
+  bottom: -0.5rem;
+}
+
+.input-spacing:after {
+  height: 1rem;
+  bottom: 0;
 }
