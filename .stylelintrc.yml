@@ -1,7 +1,42 @@
 {
   "extends": "stylelint-config-standard",
+  "ignoreFiles": [
+    "src/sass/example-page/**",
+    "src/sass/vendor/**"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
+    "at-rule-name-case": "lower",
+    "at-rule-name-space-after": "always-single-line",
+    "at-rule-semicolon-newline-after": "always",
+    "block-closing-brace-empty-line-before": "never",
+    "block-closing-brace-newline-after": "always",
+    "block-opening-brace-space-before": "always",
+    "block-no-empty": true,
+    "comment-empty-line-before": [ "always", {
+      except: ["first-nested"],
+      ignore: ["stylelint-commands"],
+    } ],
+    "comment-whitespace-inside": "always",
+    "declaration-bang-space-after": "never",
+    "declaration-bang-space-before": "always",
     "indentation": "tab",
-    "at-rule-no-unknown": null
+    "declaration-block-no-duplicate-properties": true,
+    "max-nesting-depth": "2",
+    "number-no-trailing-zeros": true,
+    "property-case": "lower",
+    "selector-attribute-brackets-space-inside": "never",
+    "shorthand-property-no-redundant-values": true,
+    "unit-case": "lower",
+    "no-invalid-double-slash-comments": true,
+    "color-no-invalid-hex": true,
+    "function-calc-no-invalid": true,
+    "function-calc-no-unspaced-operator": true,
+    "unit-no-unknown": true,
+    "property-no-unknown": [ true, {
+      checkPrefixed: true,
+    } ]
   }
 }
