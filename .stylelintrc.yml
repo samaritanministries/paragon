@@ -11,6 +11,11 @@
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always-single-line",
     "at-rule-semicolon-newline-after": "always",
+    "at-rule-no-unknown": null,
+    "at-rule-empty-line-before": [ "always", {
+      except: ["after-same-name", "inside-block"],
+    } ],
+    "scss/at-rule-no-unknown": true,
     "block-closing-brace-empty-line-before": "never",
     "block-closing-brace-newline-after": "always",
     "block-opening-brace-space-before": "always",
@@ -24,10 +29,11 @@
     "declaration-bang-space-before": "always",
     "indentation": "tab",
     "declaration-block-no-duplicate-properties": true,
-    "max-nesting-depth": "2",
+    "max-nesting-depth": 2,
     "number-no-trailing-zeros": true,
     "property-case": "lower",
     "selector-attribute-brackets-space-inside": "never",
+    "selector-pseudo-element-colon-notation": "double",
     "shorthand-property-no-redundant-values": true,
     "unit-case": "lower",
     "no-invalid-double-slash-comments": true,
@@ -37,6 +43,6 @@
     "unit-no-unknown": true,
     "property-no-unknown": [ true, {
       checkPrefixed: true,
-    } ]
+    } ],
   }
 }
