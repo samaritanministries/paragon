@@ -40,12 +40,13 @@ $switch--off: $gray-250 !default; //Color of switch when off
     margin: 0.2rem 0;
     @supports(display: flex) { display: flex; }
 
-    &:before {
+    &::before {
       border: 2px solid $gray-200;
-      display: inline-block; //required for IE11
       color: transparent;
-      height: 20px; width: 20px;
+      display: inline-block; //required for IE11
+      height: 20px;
       margin-right: 0.5rem;
+      width: 20px;
     }
   }
 
@@ -54,7 +55,8 @@ $switch--off: $gray-250 !default; //Color of switch when off
   &.inline {
     display: inline-block;
     margin-right: 1rem;
-    .label:before {
+
+    .label::before {
       display: inline-block;
     }
   }
@@ -65,9 +67,9 @@ $switch--off: $gray-250 !default; //Color of switch when off
   //Label Styles
   label {
     //Checkbox Styles
-    &:before {
-      content: '\e835';
+    &::before {
       border-radius: 5px;
+      content: '\e835';
       font-family: 'dashing-icons';
       font-size: 12px;
       padding: 2px;
@@ -76,40 +78,44 @@ $switch--off: $gray-250 !default; //Color of switch when off
   }
 
   @media #{$phone} {
-    margin: 0.2rem 0 0 0; //gives proper spacing for touch
+    margin: 0.2rem 0 0; //gives proper spacing for touch
 
     label:not(.card) { //mobile-optimized large checkboxes if not inside a card-checkbox
-      margin: 0.4rem 0 0.25rem 0;
-      &:before {
+      margin: 0.4rem 0 0.25rem;
+
+      &::before {
         border-radius: 8px;
         font-size: 16px;
-        height: 32px; width: 32px;
-        margin-top: 2px;
+        height: 32px;
         margin-right: 0.5rem;
+        margin-top: 2px;
         padding: 6px;
+        width: 32px;
       }
     }
   }
 
-  &.inline label:before { margin-right: 0.3rem; }
+  &.inline label::before { margin-right: 0.3rem; }
 
   //Checkbox Hover
   input:hover ~ label { //Text Hover
-    color: rgba($black, .6);
-    &:before { //Checkbox Hover
+    color: rgba($black, 0.6);
+
+    &::before { //Checkbox Hover
       color: $gray-200;
     }
   }
 
   //Checkbox Active
-  input:checked ~ label:before, input:active ~ label:before {
-    color: $checkbox--icon;
+  input:checked ~ label::before,
+  input:active ~ label::before {
     background-color: $checkbox--active;
     border: 2px solid $checkbox--active;
+    color: $checkbox--icon;
   }
 
   //Checkbox Focus
-  input:focus ~ label:before { box-shadow: 0 0 0 4px $checkbox--focus; }
+  input:focus ~ label::before { box-shadow: 0 0 0 4px $checkbox--focus; }
 
   //Disabled Checkbox
   input[disabled] ~ label,
@@ -117,70 +123,75 @@ $switch--off: $gray-250 !default; //Color of switch when off
   input[disabled]:checked ~ label {
     cursor: default;
     pointer-events: none;
-    &:before {
-      border-color: $checkbox--disabled;
+
+    &::before {
       background-color: $checkbox--disabled;
+      border-color: $checkbox--disabled;
     }
   }
 
   //Disabled Checkbox Icon
   input[disabled]:active ~ label,
   input[disabled]:checked ~ label {
-    &:before { color: $checkbox--icon-disabled; }
+    &::before { color: $checkbox--icon-disabled; }
   }
 
   &.has-error,
   .has-error & {
-    label:before { border: 2px solid $red-400; }
+    label::before { border: 2px solid $red-400; }
+
     input:hover ~ label {
-      color: rgba($red, .6); //Text Hover
-      &:before { color: $red-200; } //Checkbox Hover
+      color: rgba($red, 0.6); //Text Hover
+      &::before { color: $red-200; } //Checkbox Hover
     }
 
     //Checkbox Active
-    input:checked ~ label:before, input:active ~ label:before {
-      color: $white; //Checkbox Icon
+    input:checked ~ label::before,
+    input:active ~ label::before {
       background-color: $red-500; // Checkbox Active
       border: 2px solid $red-500; // Checkbox Active
+      color: $white; //Checkbox Icon
     }
 
     //Checkbox Focus
-    input:focus ~ label:before { box-shadow: 0 0 0 4px $red-200; }
+    input:focus ~ label::before { box-shadow: 0 0 0 4px $red-200; }
   }
 
   &.has-warning,
   .has-warning & {
-    label:before { border: 2px solid $orange-400; }
+    label::before { border: 2px solid $orange-400; }
+
     input:hover ~ label {
-      color: rgba($orange, .6); //Text Hover
-      &:before { color: $orange-300; } //Checkbox Hover
+      color: rgba($orange, 0.6); //Text Hover
+      &::before { color: $orange-300; } //Checkbox Hover
     }
 
     //Checkbox Active
-    input:checked ~ label:before, input:active ~ label:before {
-      color: $white; //Checkbox Icon
+    input:checked ~ label::before,
+    input:active ~ label::before {
       background-color: $orange-400; // Checkbox Active
       border: 2px solid $orange-400; // Checkbox Active
+      color: $white; //Checkbox Icon
     }
 
     //Checkbox Focus
-    input:focus ~ label:before { box-shadow: 0 0 0 4px $orange-200; }
+    input:focus ~ label::before { box-shadow: 0 0 0 4px $orange-200; }
   }
 }
 
 /* Custom Radio Buttons
   ================================================== */
 //Wrapper for Custom Radio Buttons
-.radio--custom  {
+.radio--custom {
 
   //Label Styles
   label { //Position Styles
     // position: relative;
 
     //Radio Button Styles
-    &:before {
-      content: '•';
+    &::before {
       border-radius: 50px;
+      content: '•';
       font-size: 1.7rem;
       line-height: 12px;
       padding: 0 4px;
@@ -192,27 +203,29 @@ $switch--off: $gray-250 !default; //Color of switch when off
 
   @media #{$phone} {
     label:not(.card) { //mobile-optimized large radio buttons if not inside a card-radio
-      &:before {
+      &::before {
         font-size: 3rem;
+        height: 32px;
         line-height: 20px;
         padding: 0 7px;
-        height: 32px; width: 32px;
+        width: 32px;
       }
     }
   }
 
   @-moz-document url-prefix() { //Target Firefox radio button
-    label:before {
+    label::before {
       font-size: 1.6rem;
     }
 
     @media #{$phone} {
       label:not(.card) { //mobile-optimized large checkboxes if not inside a card-checkbox
-        &:before {
+        &::before {
+          font-size: 3rem;
+          height: 32px;
           line-height: 20px;
           padding: 0 7px;
-          font-size: 3rem;
-          height: 32px; width: 32px;
+          width: 32px;
         }
       }
     }
@@ -220,21 +233,22 @@ $switch--off: $gray-250 !default; //Color of switch when off
 
   //Radio Hover
   input:hover:not(:checked) ~ label { //Text Hover
-    color: rgba($black, .6);
-    &:before { //Button Hover
+    color: rgba($black, 0.6);
+
+    &::before { //Button Hover
       color: $gray-200;
     }
   }
 
   //Radio Active
   input:checked ~ label {
-    &:before {
+    &::before {
       color: $white;
     }
   }
 
   input:checked ~ label {
-    &:before {
+    &::before {
       background-color: $radio--active;
       border-color: $radio--active;
       color: $white;
@@ -242,7 +256,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
   }
 
   //Radio Focus
-  input:focus ~ label:before { box-shadow: 0 0 0 4px $radio--focus; }
+  input:focus ~ label::before { box-shadow: 0 0 0 4px $radio--focus; }
 
   //Disabled Radio Button
   input[disabled] ~ label,
@@ -250,46 +264,51 @@ $switch--off: $gray-250 !default; //Color of switch when off
   input[disabled]:checked ~ label {
     cursor: default;
     pointer-events: none;
-    &:before {
-      border-color: $radio--disabled;
+
+    &::before {
       background-color: $radio--disabled;
+      border-color: $radio--disabled;
     }
   }
 
   //Disabled Radio Icon
   input[disabled]:active ~ label,
   input[disabled]:checked ~ label {
-    &:before { color: $radio--icon-disabled; }
+    &::before { color: $radio--icon-disabled; }
   }
 
   &.has-error,
   .has-error & {
-    label:before { border: 2px solid $red-400; }
+    label::before { border: 2px solid $red-400; }
+
     input:hover:not(:checked) ~ label {
-      color: rgba($red, .6); //Text Hover
-      &:before { color: $red-200; } //Button Hover
+      color: rgba($red, 0.6); //Text Hover
+      &::before { color: $red-200; } //Button Hover
     }
-    input:checked ~ label:before {
+
+    input:checked ~ label::before {
       background-color: $red-500;
       border-color: $red-500;
       color: $white;
     }
-    input:focus ~ label:before { box-shadow: 0 0 0 4px $red-200; }
+    input:focus ~ label::before { box-shadow: 0 0 0 4px $red-200; }
   }
 
   &.has-warning,
   .has-warning & {
-    label:before { border: 2px solid $orange-400; }
+    label::before { border: 2px solid $orange-400; }
+
     input:hover:not(:checked) ~ label {
-      color: rgba($orange, .6); //Text Hover
-      &:before { color: $orange-300; } //Button Hover
+      color: rgba($orange, 0.6); //Text Hover
+      &::before { color: $orange-300; } //Button Hover
     }
-    input:checked ~ label:before {
+
+    input:checked ~ label::before {
       background-color: $orange-400;
       border-color: $orange-400;
       color: $white;
     }
-    input:focus ~ label:before { box-shadow: 0 0 0 4px $orange-200; }
+    input:focus ~ label::before { box-shadow: 0 0 0 4px $orange-200; }
   }
 }
 
@@ -299,20 +318,20 @@ $switch--off: $gray-250 !default; //Color of switch when off
   // width: 10rem;
   margin: 0 auto;
 
-  input[type="range"] {
+  input[type='range'] {
     -webkit-appearance: none;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     background: none;
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    width: 100%;
     margin: 0;
     min-height: 2.5rem;
     outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    width: 100%;
   }
 
-  input[type="range"]::-webkit-slider-runnable-track {
+  input[type='range']::-webkit-slider-runnable-track {
     -webkit-appearance: none;
     background-color: $gray-200;
     border-radius: 30px;
@@ -320,9 +339,9 @@ $switch--off: $gray-250 !default; //Color of switch when off
     &:active { background-color: $gray-250; }
   }
 
-  input[type="range"]::-moz-range-track {
-    border: inherit;
+  input[type='range']::-moz-range-track {
     background-color: $gray-200;
+    border: inherit;
     border-radius: 30px;
     height: 0.5rem;
     &:active { background-color: $gray-250; }
@@ -330,46 +349,46 @@ $switch--off: $gray-250 !default; //Color of switch when off
 
   input[type=range]::-moz-focus-outer { border: 0; }
 
-  input[type="range"]::-ms-track {
+  input[type='range']::-ms-track {
+    background: transparent;
     border: inherit;
     color: transparent; /* don't drawn vertical reference line */
+  }
+
+  input[type='range']::-ms-fill-lower,
+  input[type='range']::-ms-fill-upper {
     background: transparent;
   }
 
-  input[type="range"]::-ms-fill-lower,
-  input[type="range"]::-ms-fill-upper {
-    background: transparent;
-  }
-
-  input[type="range"]::-ms-tooltip {
+  input[type='range']::-ms-tooltip {
     display: none;
   }
 
   //THUMB
-  input[type="range"]::-webkit-slider-thumb {
+  input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     background-color: $white;
     border: 2px solid $gray-200;
-    width: 20px;
-    height: 20px;
     border-radius: 30px;
+    height: 20px;
     margin-top: -5px;
+    width: 20px;
   }
 
-  input[type="range"]::-moz-range-thumb {
+  input[type='range']::-moz-range-thumb {
     background-color: $white;
     border: 2px solid $gray-200;
-    width: 20px;
-    height: 20px;
     border-radius: 30px;
+    height: 20px;
+    width: 20px;
   }
 
-  input[type="range"]::-ms-thumb {
+  input[type='range']::-ms-thumb {
     -webkit-appearance: none;
     background-color: $white;
     border: 2px solid $gray-200;
-    width: 20px;
     height: 20px;
+    width: 20px;
   }
 }
 
@@ -377,14 +396,15 @@ $switch--off: $gray-250 !default; //Color of switch when off
   ================================================== */
 .file-custom {
   float: left;
+
   .file-custom--button {
     @extend .button;
+    cursor: pointer;
     display: inline-block;
     padding: 6px 12px;
-    cursor: pointer;
   }
 
-  & ~ input[type="file"] { display: none; }
+  & ~ input[type='file'] { display: none; }
 }
 
 /* Custom Toggle Switch
@@ -399,8 +419,8 @@ $switch--off: $gray-250 !default; //Color of switch when off
 
   //Inactive state
   .switch--label {
-    border-radius: 50px;
     background-color: $switch--off;
+    border-radius: 50px;
     cursor: pointer;
     display: block;
     height: 25px;
@@ -409,18 +429,18 @@ $switch--off: $gray-250 !default; //Color of switch when off
   }
 
   label + & {
-    top: 6px;
     margin-left: 0.2rem;
+    top: 6px;
   }
 
   &.switch--has-text {
-    .onoffswitch-inner:before {
-      content: "on";
+    .onoffswitch-inner::before {
+      content: 'on';
       padding-left: 0.5rem;
     }
 
-    .onoffswitch-inner:after {
-      content: "inactive";
+    .onoffswitch-inner::after {
+      content: 'inactive';
       float: right;
       padding-right: 0.5rem;
     }
@@ -430,29 +450,31 @@ $switch--off: $gray-250 !default; //Color of switch when off
   .switch--inner {
     @include transition(all 0.05s ease-in 0s);
     display: block;
-    width: 200%;
     margin-left: -100%;
-    &:before, &:after {
+    width: 200%;
+
+    &::before,
+    &::after {
       color: $white;
       display: block;
       float: left;
+      font-size: 0.8rem;
       height: 2rem;
-      padding: 0;
       line-height: 26px;
-      font-size: .8rem;
+      padding: 0;
       text-transform: uppercase;
       width: 50%;
     }
 
     //Active
-    &:before {
+    &::before {
       background-color: $switch--on;
-      content: "";
+      content: '';
     }
 
-    &:after {
+    &::after {
       background-color: $switch--off;
-      content: "";
+      content: '';
     }
   }
 
@@ -461,12 +483,12 @@ $switch--off: $gray-250 !default; //Color of switch when off
     @include transition(all 0.05s ease-in 0s);
     background-color: $white;
     border-radius: 50%;
+    bottom: 0;
     display: block;
     margin: 3px;
     position: absolute;
-    top: 0;
-    bottom: 0;
     right: 25px;
+    top: 0;
     width: 19px;
   }
 

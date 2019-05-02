@@ -1,24 +1,24 @@
 .overpanel {
-
   .title-bar {
     background-color: $white;
     box-shadow: $header-shadow;
 
     .title-content {
+      align-items: center;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      max-width: $content-s;
       margin: 0 auto;
+      max-width: $content-s;
       padding: $space-m;
       * { margin-bottom: 0; } //to overwrite global margin bottom
-      button { white-space: nowrap; margin-left: $space-s; }
+      button { margin-left: $space-s;
+        white-space: nowrap; }
     }
   }
 
   .content {
-    max-width: $content-s;
     margin-top: 0;
+    max-width: $content-s;
   }
 
   /* Utility classes for max-width of Overpanel */
@@ -28,18 +28,21 @@
       max-width: $content-xs;
     }
   }
+
   &.overpanel-s {
     .title-content,
     .content {
       max-width: $content-s;
     }
   }
+
   &.overpanel-m {
     .title-content,
     .content {
       max-width: $content-m;
     }
   }
+
   &.overpanel-l {
     .title-content,
     .content {

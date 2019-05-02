@@ -2,7 +2,7 @@
   =========================================================================== */
 
 $buttons: ".button, button, input[type='submit'], input[type='reset']";
-$button-disabled: "&[disabled], &.disabled, &.button--disabled";
+$button-disabled: '&[disabled], &.disabled, &.button--disabled';
 $action--focus: $blue-300 !default;
 
 /* Actions Extendables
@@ -10,17 +10,17 @@ $action--focus: $blue-300 !default;
 
 %action {
   @include user-select(none);
-  border: none;
+  border: 0;
   cursor: pointer;
   font-size: $font-size-small;
   font-weight: $font-weight-semibold;
   outline: none;
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
   transition: all 50ms ease-in-out;
   &:first-of-type { margin-left: 0; } //Clears left margin of first %action element
   &:last-of-type { margin-right: 0; } //Clears right margin of last %action element
-  &:hover { transition: all .1s ease-in-out; }
+  &:hover { transition: all 0.1s ease-in-out; }
   &:focus { box-shadow: 0 0 0 4px $action--focus; }
 }
 
@@ -51,6 +51,7 @@ $action--focus: $blue-300 !default;
   &.button--block {
     display: block;
     width: 100%;
+
     &:not(:first-child) {
       margin: $space-xs 0 0 0;
     }
@@ -60,6 +61,7 @@ $action--focus: $blue-300 !default;
       @media #{$phone} {
         display: block;
         width: 100%;
+
         &:not(:first-child) {
           margin: $space-xs 0 0 0;
         }
@@ -73,6 +75,7 @@ $action--focus: $blue-300 !default;
     font-size: $font-size-medium !important;
     padding: 0.6rem 1.2rem;
   }
+
   &.button--small {
     font-size: $font-size-xsmall !important;
     padding: 0.4rem 0.75rem;
@@ -80,11 +83,12 @@ $action--focus: $blue-300 !default;
 
   //Button Color Options
   &.button--primary { @include button($background-color: $blue, $color: $white); }
+
   &.button--gray,
   &.button--grey,
   &.button--secondary {
     @include button($background-color: $gray-200, $color: $gray-900);
-    .dashing-icon:before { color: $gray-700 !important; }
+    .dashing-icon::before { color: $gray-700 !important; }
   }
   &.button--blue {@include button($background-color: $blue, $color: $white); }
   &.button--green { @include button($background-color: $green, $color: $white); }
@@ -98,6 +102,7 @@ $action--focus: $blue-300 !default;
   //transparentize(white, 1) used instead of transparent because "darken" requires an rgb color value
   &.button--transparent {
     @include transparent--button($color: $blue);
+
     &:not(.button--icon) { //Retains button--icon padding
       padding-left: 0.5rem;
       padding-right: 0.5rem;
@@ -105,15 +110,19 @@ $action--focus: $blue-300 !default;
     &.button--primary { @include transparent--button($color: $blue); }
     &.button--secondary { @include transparent--button($color: $gray-600); }
     &.button--blue { @include transparent--button($color: $blue); }
+
     &.button--gray,
     &.button--grey { @include transparent--button($color: $gray-600); }
     &.button--green { @include transparent--button($color: $green); }
     &.button--red { @include transparent--button($color: $red); }
     &.button--orange { @include transparent--button($color: $orange); }
     &.button--purple { @include transparent--button($color: $purple); }
+
     &.button--white {
       @include transparent--button($color: $white);
-      &:hover, &:focus { background-color: rgba(0, 0, 0, 0.4) !important; } //custom hover override to better display on dark header color
+
+      &:hover,
+      &:focus { background-color: rgba(0, 0, 0, 0.4) !important; } //custom hover override to better display on dark header color
       &:active { background-color: rgba(0, 0, 0, 0.6) !important; } //custom hover override to better display on dark header color
     }
   }
@@ -122,10 +131,10 @@ $action--focus: $blue-300 !default;
     @include border--button($blue);
     border: 2px solid;
     @media #{$tablet} {
-      padding-top: calc(0.45rem - 2px);
       padding-bottom: calc(0.5rem - 2px);
       padding-left: calc(1rem - 2px);
       padding-right: calc(1rem - 2px);
+      padding-top: calc(0.45rem - 2px);
     }
     &.button--primary { @include border--button($blue); }
     &.button--blue { @include border--button($blue); }
@@ -133,16 +142,23 @@ $action--focus: $blue-300 !default;
     &.button--red { @include border--button($red); }
     &.button--orange { @include border--button($orange); }
     &.button--purple { @include border--button($purple); }
+
     &.button--gray,
     &.button--secondary {
       @include button($background-color: transparentize(white, 1), $color: $gray-700); border-color: $gray-500;
-      &:hover, &:focus { @include button($background-color: $gray-200, $color: $gray-900); border-color: transparentize(white, 1);}
+
+      &:hover,
+      &:focus { @include button($background-color: $gray-200, $color: $gray-900); border-color: transparentize($white, 1);}
     }
+
     &.button--white {
       @include border--button($white);
-      &:hover, &:focus {
+
+      &:hover,
+      &:focus {
         color: $gray-800 !important;
-        .dashing-icon:before {
+
+        .dashing-icon::before {
           color: $gray-800 !important;
           transition: all 50ms ease-in-out;
         }
@@ -159,30 +175,30 @@ $action--focus: $blue-300 !default;
 
   //Experimental Ripple Effect
   &.ripple {
-    position: relative;
     overflow: hidden;
+    position: relative;
     transform: translate3d(0, 0, 0);
 
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      pointer-events: none;
+    &::after {
       background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-      background-repeat: no-repeat;
       background-position: 50%;
-      transform: scale(10, 10);
+      background-repeat: no-repeat;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
       opacity: 0;
-      transition: transform .5s, opacity 1s;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      transform: scale(10, 10);
+      transition: transform 0.5s, opacity 1s;
+      width: 100%;
     }
 
-    &:active:after {
+    &:active::after {
+      opacity: 0.3;
       transform: scale(0, 0);
-      opacity: .3;
       transition: 0s;
     }
   }

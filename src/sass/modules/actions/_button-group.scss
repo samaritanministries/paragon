@@ -1,5 +1,6 @@
 @mixin button-group($background-color, $color) {
   .button { @include button($background-color, $color); }
+
   input:checked ~ label { //active state of button-group
     background-color: darken($background-color, 10%);
     border-color: darken($background-color, 10%);
@@ -8,12 +9,13 @@
 
 @mixin button-group--border($background-color, $checked-color) {
   .button { @include transparent--button($gray-600); }
+
   input:checked ~ label { //active state of button-group
     background-color: $background-color;
     border-color: $background-color;
     color: $checked-color;
     &:hover { background-color: $background-color; }
-    .dashing-icon:before { color: $checked-color; }
+    .dashing-icon::before { color: $checked-color; }
   }
 }
 
@@ -21,15 +23,16 @@
 .button-group {
   @extend .button--smooth;
   margin: 0;
-  padding: 0;
   overflow: auto;
+  padding: 0;
 
-  .button--radio    { @include button-group($blue, $white);} //default button-group style
-  &.button--blue    { .button--radio { @include button-group($blue, $white); } }
-  &.button--green   { .button--radio { @include button-group($green, $white); } }
-  &.button--orange  { .button--radio { @include button-group($orange, $black); } }
-  &.button--purple  { .button--radio { @include button-group($purple, $white); } }
-  &.button--red     { .button--radio { @include button-group($red, $white); } }
+  .button--radio { @include button-group($blue, $white);} //default button-group style
+  &.button--blue { .button--radio { @include button-group($blue, $white); } }
+  &.button--green { .button--radio { @include button-group($green, $white); } }
+  &.button--orange { .button--radio { @include button-group($orange, $black); } }
+  &.button--purple { .button--radio { @include button-group($purple, $white); } }
+  &.button--red { .button--radio { @include button-group($red, $white); } }
+
   &.button--gray,
   &.button--grey {
     .button--radio { @include button-group($gray-200, $gray-900); }
@@ -38,22 +41,24 @@
 
   //Border Button Groups
   &.button--border {
-    .button--radio    { @include button-group--border($blue, $white);} //default button-group--border style
-    &.button--blue    { .button--radio { @include button-group--border($blue, $white); } }
-    &.button--green   { .button--radio { @include button-group--border($green, $white); } }
-    &.button--orange  { .button--radio { @include button-group--border($orange, $black); } }
-    &.button--purple  { .button--radio { @include button-group--border($purple, $white); } }
-    &.button--red     { .button--radio { @include button-group--border($red, $white); } }
+    .button--radio { @include button-group--border($blue, $white);} //default button-group--border style
+    &.button--blue { .button--radio { @include button-group--border($blue, $white); } }
+    &.button--green { .button--radio { @include button-group--border($green, $white); } }
+    &.button--orange { .button--radio { @include button-group--border($orange, $black); } }
+    &.button--purple { .button--radio { @include button-group--border($purple, $white); } }
+    &.button--red { .button--radio { @include button-group--border($red, $white); } }
+
     &.button--gray,
     &.button--grey {
       .button--radio { @include button-group--border($gray-200, $gray-900); }
       .button { border-color: $gray-300 !important; }
     }
+
     .button {
-      border: 1px solid $gray-300;
-      display: inline-block;
       background-color: transparent;
+      border: 1px solid $gray-300;
       color: $gray-600;
+      display: inline-block;
     }
   }
 
@@ -62,6 +67,7 @@
     float: left;
     &:first-of-type label { margin-left: 0; }
     input { display: none; }
+
     label {
       border-radius: 0;
       display: inline-block;
@@ -76,24 +82,26 @@
 /* Vertical Button Styles
   =========================================================================== */
 @mixin button-group--vertical {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
   display: -webkit-inline-box;
   display: -moz-inline-box;
   display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-orient: vertical;
-  -moz-box-direction: normal;
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
   flex-direction: column;
+
   .button--radio {
     display: block;
     &:first-of-type label { margin-top: 0; }
+
     label {
-      display: block !important;
       border-width: 1px;
+      display: block !important;
       margin: auto;
       margin-top: -1px;
     }

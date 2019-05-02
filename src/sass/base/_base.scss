@@ -4,11 +4,11 @@
 
 /* Imported base components
   ================================================== */
-@import "colors/colors";
-@import "mixins/mixins";
-@import "variables/variables";
-@import "utilities/utilities";
-@import "extendables/extendables";
+@import 'colors/colors';
+@import 'mixins/mixins';
+@import 'variables/variables';
+@import 'utilities/utilities';
+@import 'extendables/extendables';
 
 /* Default base element styles
   ================================================== */
@@ -20,9 +20,9 @@ hr {
 
 //fixes iOS iframe issue
 .dashing-app {
-  -webkit-overflow-scrolling: touch;
+  height: 100%;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   position: absolute;
   width: 100%;
-  height: 100%;
 }

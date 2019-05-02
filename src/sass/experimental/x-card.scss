@@ -9,10 +9,16 @@ _______   _______ ___________ ________  ________ _   _ _____ ___  _
 This is an EXPERIMENT and is not ready to be included in production!
 */
 
-h1, h2, h3, h4 { margin-bottom: $space-xxs; }
+h1,
+h2,
+h3,
+h4 { margin-bottom: $space-xxs; }
 
 .card-header {
-  h1, h2, h3, h4 { margin-bottom: 0; }
+  h1,
+  h2,
+  h3,
+  h4 { margin-bottom: 0; }
 }
 
 .grid .card {

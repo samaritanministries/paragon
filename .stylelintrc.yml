@@ -12,5 +12,14 @@
     "max-nesting-depth": 3,
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
+    ##### Rules to fix at a later point #####
+    "scss/at-extend-no-missing-placeholder": null,
+    "selector-class-pattern": null,
+    # Vendor Prefixes #
+    "property-no-vendor-prefix": null,
+    "at-rule-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
+    #
+    "selector-no-qualifying-type": null
   }
 }

@@ -1,8 +1,8 @@
 /* Flex Table Styles
   =========================================================================== */
-$selectable-icon-space:   2rem;
-$expandable-icon-space:   2.5rem;
-$expandable-left-border:  5px;
+$selectable-icon-space: 2rem;
+$expandable-icon-space: 2.5rem;
+$expandable-left-border: 5px;
 
 $flex-table--border-width: 2px !default;
 $flex-table--border-color: $gray-50 !default;
@@ -14,27 +14,28 @@ $flex-table--border-color: $gray-50 !default;
   overflow: hidden;
 
   .flex-table--title {
-    padding: $grid-gutter;
     margin: 0;
+    padding: $grid-gutter;
     + .table-row--header { border-radius: 0 !important; }
   }
 
   .table-row--header,
   .table-row {
     @extend %remove-list-style;
-    padding: $grid-gutter;
-    display: block;
     align-items: center;
+    display: block;
     justify-content: space-between;
-    @media #{$tablet} { display: flex; }
+    padding: $grid-gutter;
+
     li {
+      @extend .no-wrap;
+      flex: 1 1 0;
+      padding-right: 0.5rem;
       @media #{$phone} {
         white-space: normal;
       }
-      flex: 1 1 0;
-      @extend .no-wrap;
-      padding-right: 0.5rem;
     }
+    @media #{$tablet} { display: flex; }
   }
 
   &.is-condensed {
@@ -43,16 +44,16 @@ $flex-table--border-color: $gray-50 !default;
   &.font-small { font-size: 0.9rem; }
 
   .table-row--header {
-    font-weight: $font-weight-semibold;
-    border-radius: 5px 5px 0 0;
     background-color: $gray-50;
+    border-radius: 5px 5px 0 0;
     cursor: default;
+    font-weight: $font-weight-semibold;
     padding: $grid-gutter/2 $grid-gutter;
   }
 
   .table-row {
     border-bottom: $flex-table--border-width solid $flex-table--border-color;
-    &:last-of-type { border: none; }
+    &:last-of-type { border: 0; }
   }
 
   &.row-selectable {
@@ -60,34 +61,39 @@ $flex-table--border-color: $gray-50 !default;
     .table-row--header {
       padding-right: $selectable-icon-space;
     }
+
     .table-row {
-      width: 100%;
       padding-right: $selectable-icon-space;
+      width: 100%;
     }
+
     a {
-      cursor: pointer;
-      position: relative;
-      margin: 0;
       @extend %remove-list-style;
-      display: flex;
       align-items: center;
-      justify-content: space-between;
-      color: $gray-900;
-      font-weight: $font-weight-normal;
-      transition: background-color 0.2s ease-in-out;
       border-bottom: $flex-table--border-width solid $flex-table--border-color;
+      color: $gray-900;
+      cursor: pointer;
+      display: flex;
+      font-weight: $font-weight-normal;
+      justify-content: space-between;
+      margin: 0;
+      position: relative;
+      transition: background-color 0.2s ease-in-out;
       &:hover { background-color: $gray-50; }
+
       &:last-of-type {
-        border: none;
+        border: 0;
       }
+
       li:last-of-type {
-        position: absolute;
+        margin-top: -11px; //half of icon height
         padding: 0;
+        position: absolute;
         right: $grid-gutter/2;
         top: 50%;
-        margin-top: -11px; //half of icon height
       }
     }
+
     &.font-small {
       .table-row li:last-of-type { margin-top: -8px; }
     }
@@ -96,54 +102,52 @@ $flex-table--border-color: $gray-50 !default;
   &.row-expandable {
     //Space for arrow icon
     .table-row--header {
-      @media #{$phone} { display: none; }
       padding-left: calc(#{$expandable-icon-space} + #{$expandable-left-border});
+      @media #{$phone} { display: none; }
     }
+
     .table-row {
-      padding-right: $expandable-icon-space;
-      @media #{$tablet} {
-        padding-left: $expandable-icon-space;
-        padding-right: $grid-gutter;
-      }
       border-left: 5px solid transparent;
       cursor: pointer;
+      padding-right: $expandable-icon-space;
       position: relative;
       transition: background-color 0.2s ease-in-out;
       &:hover { background-color: $gray-50; }
+
       li:first-of-type {
-        @media #{$phone} {
-          right: $grid-gutter/2;
-          top: 50%;
-          margin-top: -11px; //half of icon height
-        }
         padding: 0;
         position: absolute;
         transition: transform 0.3s;
-        @media #{$tablet} {
-          left: calc(#{$grid-gutter} - #{$expandable-left-border});
-        }
+
         i {
           @extend .dashing-icon--arrow-right;
           transition: transform 0.1s linear;
         }
-      }
-      &.expanded {
-        border-left: 5px solid $blue-500;
-        border-bottom: none;
-        @media #{$tablet} {
-          li:first-of-type { transform: rotate(90deg); }
+        @media #{$phone} {
+          margin-top: -11px; //half of icon height
+          right: $grid-gutter/2;
+          top: 50%;
         }
-        + .table-row--content {
-          padding: 1rem;
-          height: auto;
-          left: 0%;
-          transition: left 0.25s;
+        @media #{$tablet} {
+          left: calc(#{$grid-gutter} - #{$expandable-left-border});
+        }
+      }
 
-          border-top: $flex-table--border-width solid $flex-table--border-color;
+      &.expanded {
+        border-bottom: 0;
+        border-left: 5px solid $blue-500;
+
+        + .table-row--content {
           border-bottom: $flex-table--border-width solid $flex-table--border-color;
 
+          border-top: $flex-table--border-width solid $flex-table--border-color;
+          height: auto;
+          left: 0%;
+          padding: 1rem;
+          transition: left 0.25s;
+
           &:last-of-type {
-            border-bottom: none;
+            border-bottom: 0;
           }
 
           @media #{$tablet} {
@@ -151,44 +155,51 @@ $flex-table--border-color: $gray-50 !default;
             transition: height 0.25s;
           }
         }
+        @media #{$tablet} {
+          li:first-of-type { transform: rotate(90deg); }
+        }
+      }
+      @media #{$tablet} {
+        padding-left: $expandable-icon-space;
+        padding-right: $grid-gutter;
       }
     }
     //Caleb's custom content
     .table-row--content {
-      overflow: auto;
-      transition: left 0.25s;
 
       background-color: $white;
+      bottom: 0;
+      left: 100%;
+      overflow: auto;
 
       position: fixed;
-      top: 0;
-      left: 100%;
       right: 0;
-      bottom: 0;
+      top: 0;
+      transition: left 0.25s;
       z-index: 6;
 
+      .close {
+        display: block;
+        opacity: 1;
+
+        @media #{$tablet} {
+          display: none;
+          opacity: 0;
+        }
+      }
+
       @media #{$tablet} {
-        overflow: hidden;
         border-left: 5px solid $blue-500;
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+
+        position: inherit;
 
         //for example app only
         transition: height 0.25s;
         transition: padding 0.5s;
-
-        position: inherit;
-        height: 0;
-        padding: 0;
         z-index: 0;
-      }
-
-      .close {
-        opacity: 1.0;
-        display: block;
-
-        @media #{$tablet} {
-          opacity: 0.0;
-          display: none;
-        }
       }
     }
   }
@@ -214,7 +225,8 @@ $table--border: $gray-200 !default;
 
     thead tr { background-color: $table--header-row; }
 
-    th, td {
+    th,
+    td {
       padding: $grid-gutter;
       text-align: left;
     }
@@ -239,7 +251,7 @@ $table--border: $gray-200 !default;
 .table.has-dividers,
 .table.has-divider {
   td { border-bottom: 2px solid $table--dividers; }
-  tr:last-of-type { td { border-bottom: none;} }
+  tr:last-of-type { td { border-bottom: 0;} }
 }
 
 //Add alternating row colors to table rows
@@ -261,6 +273,7 @@ $table--border: $gray-200 !default;
 .table.has-hover {
   td { @include transition(all 0.15s ease-in-out); }
   tr:hover { td { background-color: $gray-100; } }
+
   tr.disabled {
     &:hover {
       td {

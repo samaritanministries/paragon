@@ -65,9 +65,10 @@
 @mixin button($background-color, $color) {
   background-color: $background-color;
   color: $color;
-  &:hover, &:focus { background-color: darken($background-color, 10%); }
+  &:hover,
+  &:focus { background-color: darken($background-color, 10%); }
   &:active { background-color: darken($background-color, 15%); }
-  .dashing-icon:before { color: $color; } //matches icon to text color
+  .dashing-icon::before { color: $color; } //matches icon to text color
 }
 
 //Border Button
@@ -75,12 +76,15 @@
   background-color: transparentize(white, 1);
   border-color: $color;
   color: $color;
-  .dashing-icon:before { color: $color; }
-  &:hover, &:focus {
+  .dashing-icon::before { color: $color; }
+
+  &:hover,
+  &:focus {
     background-color: darken($color, 10%);
     border-color: transparentize(white, 1);
     color: $white;
-    .dashing-icon:before {
+
+    .dashing-icon::before {
       color: $white;
       transition: all 50ms ease-in-out;
     }
@@ -92,9 +96,10 @@
 @mixin transparent--button($color) {
   background-color: transparentize(white, 1);
   color: $color;
-  &:hover, &:focus { background-color: rgba(85,85,85,.1) }
-  &:active { background-color: rgba(85,85,85,.2) }
-  .dashing-icon:before { color: $color; }
+  &:hover,
+  &:focus { background-color: rgba(85, 85, 85, 0.1); }
+  &:active { background-color: rgba(85, 85, 85, 0.2); }
+  .dashing-icon::before { color: $color; }
 }
 
 /* Tag Mixins
@@ -104,7 +109,9 @@
   background-color: $tag-color;
   border-color: $tag-color;
   color: $color;
-  &:not(.tag--no-link):hover, &:not(.tag--no-link):focus {
+
+  &:not(.tag--no-link):hover,
+  &:not(.tag--no-link):focus {
     border-color: darken($tag-color, 20%);
     color: lighten($color, 10%);
   }
@@ -115,7 +122,9 @@
   background-color: $gray-150;
   border-color: $gray-150;
   color: $color;
-  &:not(.tag--no-link):hover, &:not(.tag--no-link):focus {
+
+  &:not(.tag--no-link):hover,
+  &:not(.tag--no-link):focus {
     border-color: $color;
     color: lighten($color, 10%);
   }

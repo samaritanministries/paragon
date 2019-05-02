@@ -11,14 +11,14 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
   margin-right: 0.5rem;
 
   .card {
+    @extend %card-shadow;
+    border: 2px solid transparent;
     float: none;
     margin: 0;
     padding: $card-checkbox--padding;
-    border: 2px solid transparent;
-    @extend %card-shadow;
 
     &:hover { @extend %card-shadow--hover; }
-    &:before { display: inline-block; }
+    &::before { display: inline-block; }
 
     //centers checkbox and radio button to card
     &.center-align,
@@ -32,6 +32,7 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
   &.block { //block cards
     display: block;
     width: 100%;
+
     .card {
       margin-bottom: $space-s;
       width: 100%;
@@ -43,11 +44,14 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
     flex-grow: 1;
   }
 
-  input:focus ~ label:before { box-shadow: none; }
-  input:checked ~ label, input:active ~ label {
-    color: $card-checkbox--active;
+  input:focus ~ label::before { box-shadow: none; }
+
+  input:checked ~ label,
+  input:active ~ label {
     border: 2px solid $card-checkbox--active;
+    color: $card-checkbox--active;
   }
+
   input:focus ~ label,
   input:hover:focus ~ label { box-shadow: 0 0 0 4px $card-checkbox--focus; }
 
@@ -55,15 +59,16 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
   input[disabled] ~ label,
   input[disabled]:active ~ label,
   input[disabled]:checked ~ label { //disabled cards
-    cursor: default;
     background-color: $gray-200;
     border-color: $gray-200;
-    pointer-events: none;
-    opacity: 0.4;
     color: $gray-700;
-    &:before {
-      border-color: $gray-400 !important;
+    cursor: default;
+    opacity: 0.4;
+    pointer-events: none;
+
+    &::before {
       background-color: $gray-200 !important;
+      border-color: $gray-400 !important;
     }
   }
 
@@ -75,16 +80,17 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
 
 .radio-card {
   .card {
-    &:before {
-      top: calc(#{$card-checkbox--padding} + 2px);
+    &::before {
       left: $card-checkbox--padding;
+      top: calc(#{$card-checkbox--padding} + 2px);
     }
   }
+
   &.radio-card--small {
     .card {
-      &:before {
-        top: calc((#{$card-checkbox--padding} / 2) + 2px);
+      &::before {
         left: calc((#{$card-checkbox--padding} / 2) + 3px);
+        top: calc((#{$card-checkbox--padding} / 2) + 2px);
       }
     }
   }

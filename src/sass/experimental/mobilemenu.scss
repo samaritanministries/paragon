@@ -13,7 +13,7 @@ This is an EXPERIMENT and is not ready to be included in production!
 
 //Variables
 $animation-time: 0.3s;
-$sidebar-highlight:  #9D6CDE;
+$sidebar-highlight: #9d6cde;
 $sidebar-text-color: $white;
 $sidebar-width: 12rem;
 $sidebar-background: #354052;
@@ -21,14 +21,14 @@ $sidebar-background: #354052;
 //SIDEBAR
 
 .sidebar {
-  float: left;/*fallback*/
+
+  display: none;
+  float: left;
+  left: 0;
   min-height: calc(100vh - #{$header-height});
   min-width: $sidebar-width;
   position: fixed;
-  left: 0;//left or right
-  top: $header-height;
-
-  display: none;
+  top: $header-height;/*fallback*///left or right
 
   @media #{$tablet} {
     display: flex;
@@ -36,35 +36,38 @@ $sidebar-background: #354052;
 }
 
 .mobile-sidebar {
+  bottom: 0;
   position: absolute;
   top: 0;
-  bottom: 0;
   width: 90%;
 }
 
-.sidebar, .mobile-sidebar { background-color: $sidebar-background; }
-.sidebar-nav, .mobile-sidebar-nav {
+.sidebar,
+.mobile-sidebar { background-color: $sidebar-background; }
+
+.sidebar-nav,
+.mobile-sidebar-nav {
   list-style-type: none;
   padding: 0;
 
   li {
-    padding-left: $grid-gutter;
-    height: 2.5rem;
-    display: flex;
+
+    @extend %icon-white;
     align-items: center;
+    display: flex;
+    height: 2.5rem;
+    padding-left: $grid-gutter;
 
     &:hover { background-color: $sidebar-highlight; }
 
     a {
+      align-items: center;
       color: $sidebar-text-color;
-      width: 100%;
+      display: flex;
       height: 100%;
       padding-left: $space-xs;
-      display: flex;
-      align-items: center;
+      width: 100%;
     }
-
-    @extend %icon-white;
   }
 }
 
@@ -72,37 +75,37 @@ $sidebar-background: #354052;
 .mobile-sidebar-nav { width: 100%; }
 
 .mobile-overlay {
-  transition: width $animation-time;
 
   background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
   bottom: 0;
   left: 0;
+  position: fixed;
   right: 0;
-  z-index: 4;
+  top: 0;
+  transition: width $animation-time;
   width: 100%;
+  z-index: 4;
 
-  *{
+  * {
+    opacity: 1;
     transition: opacity $animation-time;
-    opacity: 1.0;
   }
 
   &.is-collapsed {
-    transition: width $animation-time;
-    width: 0px;
     overflow: hidden;
+    transition: width $animation-time;
+    width: 0;
 
-    *{
+    * {
+      opacity: 0;
       transition: opacity $animation-time;
-      opacity: 0.0;
     }
   }
 
   .mobile-profile {
-    width: 100%;
+    background-color: #333;
     max-height: 15rem;
-    background-color: #333333;
+    width: 100%;
   }
 }
 
@@ -115,8 +118,9 @@ $sidebar-background: #354052;
   @media #{$tablet} { display: none; }
 }
 
-.mobile-profile{
+.mobile-profile {
   padding-top: $space-m;
+
   .button--mobile-sidebar {
     display: inline-block;
     margin-left: $space-m !important;
@@ -124,34 +128,34 @@ $sidebar-background: #354052;
 }
 
 .mobile-profile--account {
-	margin-top: 1.5rem;
-	padding: $grid-gutter;
   display: block;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto auto;
+  margin-top: 1.5rem;
+  padding: $grid-gutter;
 
   .profile-image {
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: $gray-150;
 
     border-radius: 50px;
-    background-color: $gray-150;
-    margin-right: auto;
+    display: flex;
 
-    float: left;//fallback
+    float: left;
+    height: 3rem;
+    justify-content: center;
+    margin-right: auto;
+    width: 3rem;//fallback
   }
 
   .profile-name {
+
+    clear: both;
     color: $white;
     font-size: 1.25rem;
     font-weight: 600;
     grid-column: 1 / 3;
-
-    clear: both;//fallback
-    padding: $space-xs 0rem;
+    padding: $space-xs 0;//fallback
   }
 
   .profile-email {
@@ -160,17 +164,17 @@ $sidebar-background: #354052;
   }
 
   .profile-edit {
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
+
+    float: right;
+    height: 3rem;
+    justify-content: center;
 
     margin-left: auto;
+    width: 3rem;
 
-    i:before { color: $white; }
-
-    float: right;//fallback
+    i::before { color: $white; }//fallback
   }
 }
 

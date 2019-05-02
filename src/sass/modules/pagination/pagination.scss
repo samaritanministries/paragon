@@ -1,11 +1,12 @@
 .pagination {
   display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
-  justify-content: center;
+
   li {
-    list-style: none;
     display: inline-flex; //fixes whitespace bug present with inline-block
+    list-style: none;
     &:not(.is-active) .button { @extend .button--transparent; } //only shows transparent if not active
     .button { padding: $space-xs $space-s !important; } //overrides smaller paddinng inherited from transparent buttons
   }
@@ -36,9 +37,14 @@
 
 .pagination li.is-active { //override for anchor tag hover
   .button {
-    &:hover, &:focus, &:active { color: $white; }
+    &:hover,
+    &:focus,
+    &:active { color: $white; }
   }
+
   .button--gray {
-    &:hover, &:focus, &:active { color: $gray-800; }
+    &:hover,
+    &:focus,
+    &:active { color: $gray-800; }
   }
 }

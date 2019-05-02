@@ -5,20 +5,21 @@
 
   .accordion-header {
     @extend .card-header;
-    padding-bottom: $grid-gutter;
-    display: flex;
     align-items: center;
     cursor: pointer;
+    display: flex;
+    padding-bottom: $grid-gutter;
     transition: background-color 0.2s ease-in-out;
-    h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in accordion headers
-    @media #{$tablet} {
-      border-radius: 5px;
-    }
+    
+    h1,
+    h2,
+    h3,
+    h4 { margin-bottom: 0; } //removes default margin-bottom in accordion headers
 
     i.accordion-arrow {
-      transition: transform 0.1s linear;
       @extend .dashing-icon--arrow-right;
-      &:before { color: $black; }
+      transition: transform 0.1s linear;
+      &::before { color: $black; }
     }
 
     .title { margin-left: $space-xs; }
@@ -27,8 +28,12 @@
     &:hover {
       background-color: $gray-50;
     }
+    @media #{$tablet} {
+      border-radius: 5px;
+    }
 
   }
+
   .accordion-content {
     @extend .card-content;
     border-top: 2px solid $gray-100;
@@ -48,10 +53,12 @@
 
   &.expanded {
     .accordion-header i.accordion-arrow { transform: rotate(90deg); }
+
     .accordion-header {
       border-radius: 5px 5px 0 0;
       &:hover { background-color: none; }
     }
+
     .accordion-content,
     .accordion-footer { display: block; }
   }

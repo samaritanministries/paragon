@@ -10,12 +10,12 @@ This is an EXPERIMENT and is not ready to be included in production!
 */
 
 .button--tooltip { //gives tooltips focus and allows for one-class implementation
-	@extend .dashing-icon;
-	@extend .dashing-icon--question-filled;
-	cursor: help;
+  @extend .dashing-icon;
+  @extend .dashing-icon--question-filled;
+  cursor: help;
 }
 
 .button--close { //gives tooltips focus and allows for one-class implementation
-	@extend .dashing-icon;
-	@extend .dashing-icon--close;
+  @extend .dashing-icon;
+  @extend .dashing-icon--close;
 }

@@ -4,41 +4,57 @@ Fallback Classes (Must be First)
 
 //12 10 9 8 6 4 3 2
 .grid { grid-template-columns: repeat(12, 1fr);
-	.grid--full,          .grid-12 { @include fallback-grid(100%); }
-	.grid--five-sixths,   .grid-10 { @include fallback-grid(83.3333%); }
-	.grid--three-fourths, .grid-9  { @include fallback-grid(75%); }
-	.grid--two-thirds,    .grid-8  { @include fallback-grid(66.6666%); }
-	.grid--half,          .grid-6  { @include fallback-grid(50%); }
-	.grid--third,         .grid-4  { @include fallback-grid(33.3333%); }
-	.grid--fourth,        .grid-3  { @include fallback-grid(25%);  }
-	.grid--sixth,         .grid-2  { @include fallback-grid(16.6666%); }
+  
+  .grid--full,
+  .grid-12 { @include fallback-grid(100%); }
 
-	> * {
-		float: left;
-		width: 100%;//By default, content will span all 12 columns
-	}
+  .grid--five-sixths,
+  .grid-10 { @include fallback-grid(83.3333%); }
+
+  .grid--three-fourths,
+  .grid-9 { @include fallback-grid(75%); }
+
+  .grid--two-thirds,
+  .grid-8 { @include fallback-grid(66.6666%); }
+
+  .grid--half,
+  .grid-6 { @include fallback-grid(50%); }
+
+  .grid--third,
+  .grid-4 { @include fallback-grid(33.3333%); }
+
+  .grid--fourth,
+  .grid-3 { @include fallback-grid(25%);  }
+
+  .grid--sixth,
+  .grid-2 { @include fallback-grid(16.6666%); }
+
+  > * {
+    float: left;
+    width: 100%;//By default, content will span all 12 columns
+  }
 }
 
 /* -----------------------------
 Fake "grid-gap" for Old Browsers
 -------------------------------- */
 .grid {
-	.grid--full,
-	.grid--half,
-	.grid--three-fourths,
-	.grid--fourth,
-	.grid--two-thirds,
-	.grid--five-sixths,
-	.grid--third,
-	.grid--sixth,
-	.grid-12,
-	.grid-10,
-	.grid-9,
-	.grid-8,
-	.grid-6,
-	.grid-4,
-	.grid-3,
-	.grid-2 {
-		@extend %fallback-gap;
-	}
+  .grid--full,
+  .grid--half,
+  .grid--three-fourths,
+  .grid--fourth,
+  .grid--two-thirds,
+  .grid--five-sixths,
+  .grid--third,
+  .grid--sixth,
+  .grid-12,
+  .grid-10,
+  .grid-9,
+  .grid-8,
+  .grid-6,
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    @extend %fallback-gap;
+  }
 }

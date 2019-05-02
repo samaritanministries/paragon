@@ -10,127 +10,130 @@ $sub-nav-height: 3rem;
 //Theme
 $header-color: $brand-blue !default;
 $sub-nav-color: $white !default;
-$header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
+$header-shadow: 0 1px 5px rgba(0, 0, 0, 0.5) !default;
 
 .header {
-  z-index: 2;
-  display: flex;
   align-items: center;
-  padding: $space-xs;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  display: flex;
   height: $header-height;
+  left: 0;
+  margin: auto;
   max-height: $header-height;
 
   max-width: $content-width;
-  margin: auto;
+  padding: $space-xs;
+  position: fixed;
+  right: 0;
+  top: 0;
 
-  width: 100%;//IE wants this... okay IE. Here you are.
+  width: 100%;
+  z-index: 2;
 
   &::after {
-    z-index: -1;
-  	content: "";
-  	width: 100%;
-  	height: $header-height;
     background: $header-color;
-  	position: fixed;
-  	top: 0;
-  	left: 0;
+    content: '';
+    height: $header-height;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
   }
 
   .header-nav {
-
     ul {
       @extend %remove-list-style;
 
       li {
-        display: inline-block;
         align-items: center;
+        display: inline-block;
 
         a {
-          margin: 0 $space-m;
-          display: flex;
-          align-items: center;
-          color: $sub-nav-color;
-          font-weight: 600;
-          font-size: 1.1rem;
-          border-bottom: 2px solid transparent;
-          text-decoration: none;
           @include transition(border-bottom 0.2s ease-out);
+          align-items: center;
+          border-bottom: 2px solid transparent;
+          color: $sub-nav-color;
+          display: flex;
+          font-size: 1.1rem;
+          font-weight: 600;
+          margin: 0 $space-m;
+          text-decoration: none;
 
-          &:hover, &.active { border-bottom: 2px solid $sub-nav-color; }
+          &:hover,
+          &.active { border-bottom: 2px solid $sub-nav-color; }
 
         }
       }
     }
-  }
+  }//IE wants this... okay IE. Here you are.
 }
 
 .content {
-  z-index: 0;
-  max-width: $content-width;
   margin: auto;
   margin-top: $header-height;
+  max-width: $content-width;
   -webkit-overflow-scrolling: touch;
+  z-index: 0;
 }
 
 .sub-nav {
-  z-index: 1;
   height: $sub-nav-height;
+  left: 0;
+  margin: auto;
+
+  max-width: $content-width;
+
+  position: fixed;
+  right: 0;
+  top: $header-height;
+
+  width: 100%;
+  z-index: 1;
 
   ~.content {
     margin-top: calc(#{$header-height} + #{$sub-nav-height});
   }
 
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: $header-height;
-
-  max-width: $content-width;
-  margin: auto;
-
-  width: 100%;
-
   &::after {
-  	content: "";
-    box-shadow: $header-shadow;
-  	width: 100%;
-  	height: $sub-nav-height;
     background-color: $sub-nav-color;
-  	position: fixed;
-  	top: $header-height;
-  	left: 0;
-  	z-index: -1;
+    box-shadow: $header-shadow;
+    content: '';
+    height: $sub-nav-height;
+    left: 0;
+    position: fixed;
+    top: $header-height;
+    width: 100%;
+    z-index: -1;
   }
 
-  ul, li, a {
+  ul,
+  li,
+  a {
     height: 100%;
   }
 
   ul {
     @extend %remove-list-style;
-    white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
+    white-space: nowrap;
 
     li {
       display: inline-block;
       margin: 0 $space-m;
 
       a {
-        display: flex;
-        align-items: center;
-        color: $header-color;
-        font-weight: 600;
-        font-size: 1rem;
-        text-decoration: none;
-        border-bottom: 3px solid transparent;
         @include transition(border-bottom 0.2s ease-out);
+        align-items: center;
+        border-bottom: 3px solid transparent;
+        color: $header-color;
+        display: flex;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
 
-        &:hover, &.active  { border-bottom: 3px solid $header-color; }
+        &:hover,
+        &.active { border-bottom: 3px solid $header-color; }
       }
     }
   }

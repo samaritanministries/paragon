@@ -1,18 +1,18 @@
 /* Typography Variables
   =========================================================================== */
 
-$font-size-xlarge:      1.953rem; //35px
-$font-size-large:       1.563rem; //28px
-$font-size-medium:      1.25rem;  //23px
-$font-size-normal:      1rem;     //18px
-$font-size-small:       0.9rem;   //16px
-$font-size-xsmall:      0.8rem;   //14px
+$font-size-xlarge: 1.953rem; //35px
+$font-size-large: 1.563rem; //28px
+$font-size-medium: 1.25rem;  //23px
+$font-size-normal: 1rem;     //18px
+$font-size-small: 0.9rem;   //16px
+$font-size-xsmall: 0.8rem;   //14px
 
-$font-weight-normal:    400;
-$font-weight-semibold:  600;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
 
-$font-family-header:    "Source Sans Pro", sans-serif;
-$font-family-body:      "Source Sans Pro", sans-serif;
+$font-family-header: 'Source Sans Pro', sans-serif;
+$font-family-body: 'Source Sans Pro', sans-serif;
 
 /* Typography Utility Classes
   =========================================================================== */
@@ -30,9 +30,9 @@ $font-family-body:      "Source Sans Pro", sans-serif;
 .align-right { text-align: right !important; }
 
 .no-wrap {
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 
 .break-word { word-wrap: break-word; }
@@ -51,7 +51,12 @@ body {
   font-size: $font-size-normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $gray-900;
   font-family: $font-family-header;
   font-weight: $font-weight-semibold;
@@ -59,12 +64,22 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: $space-xxs;
 }
 
-h1, .font-size--xlarge    { font-size: $font-size-xlarge; }
-h2, .font-size--large     { font-size: $font-size-large; }
-h3, .font-size--medium    { font-size: $font-size-medium; }
-h4, .font-size--normal    { font-size: $font-size-normal; }
-small, .font-size--small  { font-size: $font-size-small; }
-.font-size--xsmall        { font-size: $font-size-xsmall; }
+h1,
+.font-size--xlarge { font-size: $font-size-xlarge; }
+
+h2,
+.font-size--large { font-size: $font-size-large; }
+
+h3,
+.font-size--medium { font-size: $font-size-medium; }
+
+h4,
+.font-size--normal { font-size: $font-size-normal; }
+
+small,
+.font-size--small { font-size: $font-size-small; }
+
+.font-size--xsmall { font-size: $font-size-xsmall; }
 
 a {
   color: $blue;
@@ -72,14 +87,16 @@ a {
   font-weight: $font-weight-semibold;
   text-decoration: none;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $blue-400;
     text-decoration: underline;
     text-decoration-color: inherit;
   }
 }
 
-p, li.text-list_item {
+p,
+.text-list_item {
   color: $brand-black;
   font-size: $font-size-normal;
   line-height: $space-l;
@@ -87,13 +104,14 @@ p, li.text-list_item {
   margin-bottom: $space-xs;
 }
 
-ul.text-list {
-  margin: 0;
+.text-list {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
 
-strong, .strong {
+strong,
+.strong {
   font-weight: $font-weight-semibold;
 }

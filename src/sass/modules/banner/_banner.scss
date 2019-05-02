@@ -2,11 +2,11 @@
   =========================================================================== */
 .page-banner {
   background-color: $gray-150;
-  text-align: center;
+  left: 0;
   padding: 2rem 1rem;
   position: absolute;
+  text-align: center;
   top: 0;
-  left: 0;
   width: 100%;
 
   h4 {
@@ -15,24 +15,24 @@
   }
 
   .button--banner {
-    @include button($gray-400, $white);
     @extend %button--smooth;
+    @include button($gray-400, $white);
     position: absolute;
-    top: 2.15rem;
     right: 1rem;
+    top: 2.15rem;
   }
 }
 
 .card-banner {
   align-items: baseline;
-  background-color: #D4D4D4;
+  background-color: #d4d4d4;
   display: flex;
-  padding: $grid-gutter;
   margin: 0 -#{$grid-gutter};
+  padding: $grid-gutter;
 
   &.has-button {
-    padding: $grid-gutter/2 $grid-gutter;
     align-items: center;
+    padding: $grid-gutter/2 $grid-gutter;
     button { white-space: nowrap; }
     p { margin-right: $grid-gutter; }
   }
@@ -44,27 +44,27 @@
 
     &:focus,
     &:hover {
-      opacity: 0.6;
-      transition: all 50ms ease-in-out;
-      text-decoration: none;
       color: inherit;
+      opacity: 0.6;
+      text-decoration: none;
+      transition: all 50ms ease-in-out;
     }
   }
 
   &.has-success,
   &.has-error {
     p { color: $white; }
-    .dashing-icon:before { color: $white;}
+    .dashing-icon::before { color: $white;}
   }
 
   &.has-warning {
     p { color: $black; }
-    .dashing-icon:before { color: $black;}
+    .dashing-icon::before { color: $black;}
   }
 
   &.has-success { background-color: $green; }
   &.has-warning { background-color: $orange; }
-  &.has-error   { background-color: $red; }
+  &.has-error { background-color: $red; }
 
   .dashing-icon { margin-right: 0.5rem; }
 
