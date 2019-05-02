@@ -9,8 +9,8 @@ class Modal extends React.Component {
     }
 
     return (
-      <div className="dash-overlay">
-        <div className={`dash-modal ${this.props.sizeClass}`}>
+      <div className="modal-overlay">
+        <div className={`modal ${this.props.sizeClass}`}>
           <button onClick={this.props.onClose} className="button button--icon button--icon--small button--transparent modal-close">
             <i className="dashing-icon dashing-icon--close"></i>
           </button>

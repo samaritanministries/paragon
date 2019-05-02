@@ -37,7 +37,7 @@ class FooterCode extends React.Component {
                 </fieldset>
 
                 <fieldset className="is-optional">
-                  <label htmlFor="form-text">Text Input</label>
+                  <label htmlFor="form-text-optional">Text Input</label>
                   <input type="text" id="form-text-optional" placeholder="This input is optional"/>
                 </fieldset>
 
@@ -61,7 +61,7 @@ class FooterCode extends React.Component {
 
 <!-- Add is-optional to fieldset to add label -->
 <fieldset class="is-optional">
-  <label for="form-text">Text Input</label>
+  <label for="form-text-optional">Text Input</label>
   <input type="text" id="form-text-optional" placeholder="This input is optional" />
 </fieldset>
 

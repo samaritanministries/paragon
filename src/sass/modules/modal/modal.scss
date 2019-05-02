@@ -1,11 +1,18 @@
 @keyframes openModal {
-  from { transform: translateY(-25%); }
-  to { transform: translateY(0); }
+  from {
+    transform: translateY(-25%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .prevent-scrolling { overflow: hidden; }
 
-.dash-overlay {
+.dash-overlay,
+.modal-overlay {
   background-color: rgba($black, 0.80);
   overflow-x: hidden;
   overflow-y: auto;
@@ -21,7 +28,8 @@
   }
 }
 
-.dash-modal {
+.dash-modal,
+.modal {
   background-color: $white;
   border-radius: 15px;
   margin: 1.5rem auto;
