@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 // The scss needs to be imported here for running 'gatsby build'
-import '../../sass/example-page/example-page.scss'
+//import '../../sass/example-page/example-page.scss'
 
 export default () => (
 
@@ -37,13 +37,17 @@ export default () => (
 
 	<main className="content">
 		<div className="grid grid-padding">
+			<div className="grid--full grid--half_desktop">
 
-			<div>
-				<h1>Primary Header</h1>
-				<p>Header description</p>
-				<Link to="/templates/overpanel">Full Page</Link>
+				<div className="card">
+					<div className="card-content">
+						<h1>Primary Header</h1>
+						<p>Header description</p>
+						<Link to="/templates/overpanel">Full Page</Link>
+					</div>
+				</div>
+
 			</div>
-
 		</div>
 	</main>
 </React.Fragment>
