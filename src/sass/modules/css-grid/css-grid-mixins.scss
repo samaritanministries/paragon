@@ -4,6 +4,12 @@
 	}
 }
 
+@mixin fallback-grid_desktop($percent) {
+	@media #{$desktop} {
+		width: calc(#{$percent} - #{$grid-gutter}); float: left;//SAFARI 9
+	}
+}
+
 @mixin grid-column($span) {
 	grid-column: 1 / -1;
 	@media #{$tablet} {
