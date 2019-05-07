@@ -37,13 +37,17 @@ export default () => (
 
 	<main className="content">
 		<div className="grid grid-padding">
+			<div className="grid--full grid--half_desktop">
 
-			<div>
-				<h1>Primary Header</h1>
-				<p>Header description</p>
-				<Link to="/templates/overpanel">Full Page</Link>
+				<div className="card">
+					<div className="card-content">
+						<h1>Primary Header</h1>
+						<p>Header description</p>
+						<Link to="/templates/overpanel">Full Page</Link>
+					</div>
+				</div>
+
 			</div>
-
 		</div>
 	</main>
 </React.Fragment>

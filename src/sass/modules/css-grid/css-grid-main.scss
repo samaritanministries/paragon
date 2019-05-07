@@ -31,6 +31,7 @@ Actual CSS Grid Classes
 	}
 
 	grid-template-columns: repeat(12, 1fr);
+
 	//12 10 9 8 6 4 3 2
 	.grid--full,          .grid-12  { @include grid-column(12); }
 	.grid--five-sixths,   .grid-10  { @include grid-column(10); }
@@ -40,6 +41,16 @@ Actual CSS Grid Classes
 	.grid--third,         .grid-4   { @include grid-column(4); }
 	.grid--fourth,        .grid-3   { @include grid-column(3); }
 	.grid--sixth,         .grid-2   { @include grid-column(2); }
+
+	//Desktop mixin for 12 10 9 8 6 4 3 2
+	.grid--full_desktop,  				.grid-12_desktop  { @include grid-column_desktop(12); }
+	.grid--five-sixths_desktop,   .grid-10_desktop  { @include grid-column_desktop(10); }
+	.grid--three-fourths_desktop, .grid-9_desktop   { @include grid-column_desktop(9); }
+	.grid--two-thirds_desktop,    .grid-8_desktop   { @include grid-column_desktop(8); }
+	.grid--half_desktop,          .grid-6_desktop   { @include grid-column_desktop(6); }
+	.grid--third_desktop,         .grid-4_desktop   { @include grid-column_desktop(4); }
+	.grid--fourth_desktop,        .grid-3_desktop   { @include grid-column_desktop(3); }
+	.grid--sixth_desktop,         .grid-2_desktop   { @include grid-column_desktop(2); }
 }
 
 .grid { .card { margin: 0; } } //required to span cards 100%

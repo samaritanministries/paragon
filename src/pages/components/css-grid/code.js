@@ -95,6 +95,30 @@ class CssGridCode extends React.Component {
     </div>`}
               </CodeToggle>
 
+              <h2 className="example-header" id="gridMultipleBreakpoints">Multiple Grid Breakpoints
+                <Link to={location.pathname + "/#gridMultipleBreakpoints"} className="button button--transparent button--copy-link"></Link>
+              </h2>
+              <p>To resize a grid for different breakpoints, use a combination of classes. You can add <code className="example-text">_desktop</code> to any grid class to apply to the desktop breakpoint.</p>
+              <div className="row example-container">
+                <div className="column column--full">
+                  <div className="grid grid--full grid-highlight-blue">
+                    <div className="grid--two-thirds grid--half_desktop">.grid--two-thirds .grid--half_desktop</div>
+                    <div className="grid--third grid--full_desktop">.grid--third .grid--full_desktop</div>
+                    <div className="grid--full">.grid--full</div>
+                  </div>
+                </div>
+              </div>
+              <CodeToggle>
+    {`<!-- Grid Example -->
+<div class="grid grid--full grid-highlight-blue">
+<!-- Grid is two-thirds on tablet and changes to half on desktop -->
+  <div class="grid--two-thirds grid--half_desktop">.grid--two-thirds .grid--half_desktop</div>
+  <!-- Grid is one third on tablet and changes to full on desktop -->
+  <div class="grid--third grid--full_desktop">.grid--third .grid--full_desktop</div>
+  <div class="grid--full">.grid--full</div>
+</div>`}
+              </CodeToggle>
+
               <h2 className="example-header" id="nestedGrids">Nested Grids
                 <Link to={location.pathname + "/#nestedGrids"} className="button button--transparent button--copy-link"></Link>
               </h2>
