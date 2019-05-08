@@ -51,7 +51,7 @@ export default () => (
         </div>
 
         <h2 className="has-number has-number--three">Purposeful Color</h2>
-        <p>The Dashing <Link to="style/color/guidelines">color library</Link> has been purposefully crafted for interaction. All interface colors have been tested to meet web accessibility standards, and should be used intentionally to draw attention and signify different types of action.</p>
+        <p>The Paragon <Link to="style/color/guidelines">color library</Link> has been purposefully crafted for interaction. All interface colors have been tested to meet web accessibility standards, and should be used intentionally to draw attention and signify different types of action.</p>
         <div className="image-container p-space-xl">
           <fieldset>
             <button>Action</button>

@@ -17,12 +17,3 @@ hr {
   border: 0;
   border-top: 2px solid $gray-100;
 }
-
-//fixes iOS iframe issue
-.dashing-app {
-  -webkit-overflow-scrolling: touch;
-  overflow: auto;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}

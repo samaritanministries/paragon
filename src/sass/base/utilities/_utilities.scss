@@ -23,13 +23,14 @@ $widths: (
 }
 
 //Spacing
-$space-xxs: 0.25rem;
-$space-xs:  0.5rem;
-$space-s:   0.75rem;
-$space-m:   1rem;
-$space-l:   1.5rem;
-$space-xl:  2rem;
-$space-xxl: 3rem;
+$space-xxs:   0.25rem;
+$space-xs:    0.5rem;
+$space-s:     0.75rem;
+$space-m:     1rem;
+$space-l:     1.5rem;
+$space-xl:    2rem;
+$space-xxl:   3rem;
+$space-auto:  auto;
 
 //SPACING UTILITY
 $spaceamounts: (
@@ -40,6 +41,7 @@ $spaceamounts: (
   "space-l":    #{$space-l},
   "space-xl":   #{$space-xl},
   "space-xxl":  #{$space-xxl},
+  "auto":       #{$space-auto},
 );
 
 $sides: (
@@ -47,8 +49,7 @@ $sides: (
   "t":    "top",
   "b":    "bottom",
   "l":    "left",
-  "r":    "right",
-  "auto": "auto",
+  "r":    "right"
 );
 
 @each $space, $space-variable in $spaceamounts {

@@ -18,7 +18,7 @@ export default () => (
         <div className="column column--full">
           <p className="intro">Radio buttons are used to allow for exactly one choice in a short list of two or more options. Selecting one option will deselect any previously selected option.</p>
           <h2 className="has-number has-number--one no-margin--top">Radio Button Style</h2>
-            <p>Dashing includes custom radio button styles that allow for a larger click area and color customization. It is advised that custom radio buttons be utilized whenever possible.</p>
+            <p>Custom radio button styles that allow for a larger click area and color customization. It is advised that custom radio buttons be utilized whenever possible.</p>
             <div className="image-container double-padding">
 
               <fieldset className="column column--full">
@@ -36,14 +36,14 @@ export default () => (
 
 
                 <div className="example--radio">
-                  <label>Dashing Radio Buttons</label>
+                  <label>Radio Buttons</label>
                   <div className="radio--custom">
-                    <input type="radio" name="dashing-radio" id="dashing-radio1--custom" defaultChecked={true}/>
-                    <label htmlFor="dashing-radio1--custom" className="inline">Option 1</label>
+                    <input type="radio" name="radio" id="radio1--custom" defaultChecked={true}/>
+                    <label htmlFor="radio1--custom" className="inline">Option 1</label>
                   </div>
                   <div className="radio--custom">
-                    <input type="radio" name="dashing-radio" id="dashing-radio2--custom"/>
-                    <label htmlFor="dashing-radio2--custom" className="inline">Option 2</label>
+                    <input type="radio" name="radio" id="radio2--custom"/>
+                    <label htmlFor="radio2--custom" className="inline">Option 2</label>
                   </div>
                 </div>
               </fieldset>
@@ -60,19 +60,19 @@ export default () => (
                 <div className="example--radio">
                   <label>Who is this Need for?</label>
                   <div className="radio--custom">
-                    <input type="radio" name="dashing-example2" id="example-ryan" defaultChecked={true}/>
+                    <input type="radio" name="example2" id="example-ryan" defaultChecked={true}/>
                     <label htmlFor="example-ryan" className="inline">Ryan</label>
                   </div>
                   <div className="radio--custom">
-                    <input type="radio" name="dashing-example2" id="example-jill"/>
+                    <input type="radio" name="example2" id="example-jill"/>
                     <label htmlFor="example-jill" className="inline">Jill</label>
                   </div>
                   <div className="radio--custom">
-                    <input type="radio" name="dashing-example2" id="example-jackson"/>
+                    <input type="radio" name="example2" id="example-jackson"/>
                     <label htmlFor="example-jackson" className="inline">Jackson</label>
                   </div>
                   <div className="radio--custom">
-                    <input type="radio" name="dashing-example2" id="example-emily"/>
+                    <input type="radio" name="example2" id="example-emily"/>
                     <label htmlFor="example-emily" className="inline">Emily</label>
                   </div>
                 </div>
