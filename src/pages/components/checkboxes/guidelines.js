@@ -19,16 +19,16 @@ export default () => (
           <p className="intro">Checkboxes are used as an "on/off" function to select any number of options from a list. Each checkbox is independent from the others in the list, so checking one item should never uncheck another.</p>
 
           <h2 className="has-number has-number--one no-margin--top">Checkbox Style</h2>
-          <p>Dashing includes custom checkbox styles that allow for a larger click area and color customization. It is advised that custom checkboxes be utilized whenever possible.</p>
+          <p>Custom checkbox styles allow for a larger click area and color customization. It is advised that custom checkboxes be utilized whenever possible.</p>
           <div className="image-container double-padding">
             <fieldset className="column column--full">
               <div className="example--checkbox">
-                <input type="checkbox" id="dashing-checkbox--custom-inline1" defaultChecked={true}/>
-                <label htmlFor="dashing-checkbox--custom-inline1">Default Checkbox</label>
+                <input type="checkbox" id="custom-checkbox--custom-inline1" defaultChecked={true}/>
+                <label htmlFor="custom-checkbox--custom-inline1">Default Checkbox</label>
               </div>
               <div className="checkbox--custom inline">
-                <input type="checkbox" id="dashing-checkbox--custom-inline2" defaultChecked={true}/>
-                <label htmlFor="dashing-checkbox--custom-inline2">Dashing Checkbox</label>
+                <input type="checkbox" id="custom-checkbox--custom-inline2" defaultChecked={true}/>
+                <label htmlFor="custom-checkbox--custom-inline2">Custom Checkbox</label>
               </div>
             </fieldset>
           </div>
@@ -47,8 +47,8 @@ export default () => (
                     <i className="dashing-icon dashing-icon--alert-filled dashing-icon--red"></i>
                   </div>
                   <div className="checkbox--custom">
-                    <input type="checkbox" id="dashing-checkbox--positivelanguage1" defaultChecked={true}/>
-                    <label htmlFor="dashing-checkbox--positivelanguage1">No note was received</label>
+                    <input type="checkbox" id="custom-checkbox--positivelanguage1" defaultChecked={true}/>
+                    <label htmlFor="custom-checkbox--positivelanguage1">No note was received</label>
                   </div>
                 </div>
                 <div className="flex-container">
@@ -56,8 +56,8 @@ export default () => (
                     <i className="dashing-icon dashing-icon--checkmark-filled dashing-icon--green"></i>
                   </div>
                   <div className="checkbox--custom">
-                    <input type="checkbox" id="dashing-checkbox--positivelanguage2" defaultChecked={true}/>
-                    <label htmlFor="dashing-checkbox--positivelanguage2">I received a note</label>
+                    <input type="checkbox" id="custom-checkbox--positivelanguage2" defaultChecked={true}/>
+                    <label htmlFor="custom-checkbox--positivelanguage2">I received a note</label>
                   </div>
                 </div>
               </fieldset>
@@ -68,8 +68,8 @@ export default () => (
             <div className="image-container double-padding">
               <fieldset className="column column--full">
                 <div className="checkbox--custom">
-                  <input type="checkbox" id="dashing-checkbox--save-changes1" defaultChecked={true}/>
-                  <label htmlFor="dashing-checkbox--save-changes1">Opt-in to Paperless Notifications</label>
+                  <input type="checkbox" id="custom-checkbox--save-changes1" defaultChecked={true}/>
+                  <label htmlFor="custom-checkbox--save-changes1">Opt-in to Paperless Notifications</label>
                 </div>
                 <button className="button--smooth" style={{ marginTop: "1rem" }}>Save Settings</button>
               </fieldset>

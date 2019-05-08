@@ -19,7 +19,7 @@ export default () => (
     </section>
     <AppContent>
       <div className="grid grid-padding">
-        <div className="dashing-description">
+        <div className="paragon-description">
           <h1>Paragon is...</h1>
           <p>Paragon is an open source CSS framework that provides a complete toolset for quickly building web applications. Based on proven design research, Paragon is confident in delivering clean and consistent UI guidelines driven by User Experience.</p>
         </div>
