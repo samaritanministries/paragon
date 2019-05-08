@@ -8,10 +8,12 @@
     padding-bottom: $grid-gutter;
     display: flex;
     align-items: center;
-    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in accordion headers
+    @media #{$tablet} {
+      border-radius: 5px;
+    }
 
     i.accordion-arrow {
       transition: transform 0.1s linear;

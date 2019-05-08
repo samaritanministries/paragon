@@ -32,13 +32,13 @@ export default () => (
           </div>
           <div className="card--resource-text">
             <h3>Paragon Prototype Kit</h3>
-            <a className="resource-badge" href="https://badge.fury.io/gh/samaritanministries%2Fdashing-prototype-kit" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/gh/samaritanministries%2Fdashing-prototype-kit.svg" alt="GitHub version" height="18" /></a>
+            <a className="resource-badge" href="https://badge.fury.io/gh/samaritanministries%2Fparagon-prototype-kit" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/gh/samaritanministries%2Fparagon-prototype-kit.svg" alt="GitHub version" height="18" /></a>
             <p>Adobe XD prototype kit</p>
           </div>
           <div className="card--resource-buttons align-right">
-            <a className="button button--blue button--border button--smooth" href="https://github.com/samaritanministries/dashing-prototype-kit" target="_blank" rel="noopener noreferrer">View in github<i className="dashing-icon dashing-icon--new-tab flow-opposite"></i></a>
+            <a className="button button--blue button--border button--smooth" href="https://github.com/samaritanministries/paragon-prototype-kit" target="_blank" rel="noopener noreferrer">View in github<i className="dashing-icon dashing-icon--new-tab flow-opposite"></i></a>
             <br/>
-            <a className="button button--blue button--border button--smooth" href="https://github.com/samaritanministries/dashing-prototype-kit/raw/master/Prototype-Kit.xd" target="_blank" rel="noopener noreferrer" style={{marginTop: "0.5rem"}}>Download Kit<i className="dashing-icon dashing-icon--arrow-long-down flow-opposite"></i></a>
+            <a className="button button--blue button--border button--smooth" href="https://github.com/samaritanministries/paragon-prototype-kit/raw/master/Prototype%20Kit%20(Paragon).xd" target="_blank" rel="noopener noreferrer" style={{marginTop: "0.5rem"}}>Download Kit<i className="dashing-icon dashing-icon--arrow-long-down flow-opposite"></i></a>
           </div>
         </div>
 

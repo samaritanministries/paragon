@@ -36,6 +36,11 @@ class FooterCode extends React.Component {
                   <input type="text" id="form-text"/>
                 </fieldset>
 
+                <fieldset className="is-optional">
+                  <label htmlFor="form-text-optional">Text Input</label>
+                  <input type="text" id="form-text-optional" placeholder="This input is optional"/>
+                </fieldset>
+
                 <fieldset>
                   <label htmlFor="form-text-disabled">Text Input disabled</label>
                   <input type="text" id="form-text-disabled" value="This input is disabled" disabled />
@@ -49,24 +54,27 @@ class FooterCode extends React.Component {
             </div>
             <CodeToggle>
 {`<!-- Default Input -->
-<div class="card">
-<div class="card-content">
-  <fieldset>
-    <label for="form-text">Text Input</label>
-    <input type="text" id="form-text"/>
-  </fieldset>
+<fieldset>
+  <label for="form-text">Text Input</label>
+  <input type="text" id="form-text"/>
+</fieldset>
 
-  <fieldset>
-    <label for="form-text-disabled">Text Input disabled</label>
-    <input type="text" id="form-text-disabled" value="This input is disabled" disabled />
-  </fieldset>
+<!-- Add is-optional to fieldset to add label -->
+<fieldset class="is-optional">
+  <label for="form-text-optional">Text Input</label>
+  <input type="text" id="form-text-optional" placeholder="This input is optional" />
+</fieldset>
 
-  <fieldset>
-    <label for="form-textarea">Textarea</label>
-    <textarea id="form-textarea"></textarea>
-  </fieldset>
-</div>
-</div>`}
+<fieldset>
+  <label for="form-text-disabled">Text Input disabled</label>
+  <input type="text" id="form-text-disabled" value="This input is disabled" disabled />
+</fieldset>
+
+<fieldset>
+  <label for="form-textarea">Textarea</label>
+  <textarea id="form-textarea"></textarea>
+</fieldset>
+`}
             </CodeToggle>
           </div>
 

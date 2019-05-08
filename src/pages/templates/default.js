@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 // The scss needs to be imported here for running 'gatsby build'
-import '../../sass/experimental/placeholder.scss'
-import '../../sass/experimental/mobilemenu.scss'
 import '../../sass/example-page/example-page.scss'
 
 export default () => (
 
-<div>
+<React.Fragment>
 	<header className="header">
 		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 		<div className="logo"><p className="text-color--white">LOGO</p></div>
@@ -39,15 +37,19 @@ export default () => (
 
 	<main className="content">
 		<div className="grid grid-padding">
+			<div className="grid--full grid--half_desktop">
 
-			<div>
-				<h1>Primary Header</h1>
-				<p>Header description</p>
-				<Link to="/templates/overpanel">Full Page</Link>
+				<div className="card">
+					<div className="card-content">
+						<h1>Primary Header</h1>
+						<p>Header description</p>
+						<Link to="/templates/overpanel">Full Page</Link>
+					</div>
+				</div>
+
 			</div>
-
 		</div>
 	</main>
-</div>
+</React.Fragment>
 
 )

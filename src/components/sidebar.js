@@ -122,6 +122,7 @@ class Sidebar extends React.Component {
               <div className="menu-group">
                 <Link to="/style/accessibility/code">Accessibility</Link>
                 <Link to="/style/color/code">Color</Link>
+                <Link to="/style/spacing/code">Spacing</Link>
                 <Link to="/style/typography/code">Typography</Link>
               </div>
             </div>
@@ -137,13 +138,14 @@ class Sidebar extends React.Component {
                 <Link to="/components/banner/code">Banner</Link>
                 <Link to="/components/cards/code">Cards</Link>
                 <Link to="/components/checkboxes/code">Checkboxes</Link>
-                {/*}<Link to="/components/clippy/code">Clippy</Link>*/}
+                <Link to="/components/clippy/code">Clippy</Link>
                 <Link to="/components/footer/code">Footer</Link>
                 <Link to="/components/forms/code">Forms</Link>
                 <Link to="/components/css-grid/code" id="css-grid">CSS Grid</Link>
                 <Link to="/components/grid/code">Grid</Link>
                 <Link to="/components/icons/code">Icons</Link>
                 <Link to="/components/lists/code">Lists</Link>
+                <Link to="/components/modal/code">Modal</Link>
                 <Link to="/components/navigation/code">Navigation</Link>
                 <Link to="/components/overpanel/code">Overpanel</Link>
                 <Link to="/components/pagination/code">Pagination</Link>
@@ -153,6 +155,7 @@ class Sidebar extends React.Component {
                 <Link to="/components/tables/code">Tables</Link>
                 <Link to="/components/tags/code">Tags</Link>
                 <Link to="/components/toggle/code">Toggle</Link>
+                <Link to="/components/tooltip/code">Tooltip</Link>
               </div>
 
             </div>

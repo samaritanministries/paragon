@@ -2,6 +2,19 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [1.2.1] - 2019-03-29
+### Fixed
+- Fix duplicate imports by removing them in the experimental files
+
+## [1.2.0] - 2019-03-18
+### Added
+- Add Tooltip and Clippy CSS for use with Tippy.js component
+- Add Tooltip and Clippy example pages
+
+### Fixed
+- Fix margin for button--block buttons on mobile
+- Fix card negative margin on mobile
+
 ## [1.1.0] - 2019-02-20
 ### Changed
 - Update accordion open and close animation to use display

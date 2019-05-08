@@ -3,6 +3,7 @@
 
 $buttons: ".button, button, input[type='submit'], input[type='reset']";
 $button-disabled: "&[disabled], &.disabled, &.button--disabled";
+$action--focus: $blue-300 !default;
 
 /* Actions Extendables
   =========================================================================== */
@@ -20,6 +21,7 @@ $button-disabled: "&[disabled], &.disabled, &.button--disabled";
   &:first-of-type { margin-left: 0; } //Clears left margin of first %action element
   &:last-of-type { margin-right: 0; } //Clears right margin of last %action element
   &:hover { transition: all .1s ease-in-out; }
+  &:focus { box-shadow: 0 0 0 4px $action--focus; }
 }
 
 /* Actions Styles
@@ -49,11 +51,18 @@ $button-disabled: "&[disabled], &.disabled, &.button--disabled";
   &.button--block {
     display: block;
     width: 100%;
+    &:not(:first-child) {
+      margin: $space-xs 0 0 0;
+    }
+
     &_phone,
     &_mobile {
       @media #{$phone} {
         display: block;
         width: 100%;
+        &:not(:first-child) {
+          margin: $space-xs 0 0 0;
+        }
       }
       @media #{$tablet} { display: inline-block; }
     }

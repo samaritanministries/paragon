@@ -61,14 +61,15 @@ class OverpanelCode extends React.Component {
             </h2>
             <p className="no-margin">To change the max width of the overpanel and page content, all you need to do is apply an additional class <strong>AFTER</strong> <code className="example-text">overpanel</code>.</p>
             <ul className="no-margin">
-              <li><strong>Small Width (350px):</strong> <code className="example-text">overpanel-s</code></li>
-              <li><strong>Default Width (800px):</strong> <code className="example-text">overpanel-m</code></li>
+              <li><strong>Extra Small Width (350px):</strong> <code className="example-text">overpanel-xs</code></li>
+              <li><strong>Small Width (600px):</strong> <code className="example-text">overpanel-s</code></li>
+              <li><strong>Medium Width (800px):</strong> <code className="example-text">overpanel-m</code></li>
               <li><strong>Large Width (1200px):</strong> <code className="example-text">overpanel-l</code></li>
             </ul>
             <div className="example-container">
               <div className="show-code">
               <CodeToggle>
-{`<!-- By default the content width is set to overpanel-m -->
+{`<!-- By default the content width is set to overpanel-s -->
 <div class="overpanel overpanel-l">
 ...`}
               </CodeToggle>
