@@ -893,3 +893,65 @@ footer {
     }
   }
 }
+
+//SPACING
+.x-space { //spacing examples
+  background-color: $brand-yellow;
+  display: inline-block;
+  &.x-space--xxs { height: $space-xxs; width: $space-xxs; }
+  &.x-space--xs { height: $space-xs; width: $space-xs; }
+  &.x-space--s { height: $space-s; width: $space-s; }
+  &.x-space--m { height: $space-m; width: $space-m; }
+  &.x-space--l { height: $space-l; width: $space-l; }
+  &.x-space--xl { height: $space-xl; width: $space-xl; }
+  &.x-space--xxl { height: $space-xxl; width: $space-xxl; }
+}
+
+.x-i-space { //individualSpacing examples
+  height: 2rem;
+  width: 2rem;
+  background-color: $gray-200;
+  display: block;
+  &--m { border: 8px solid $brand-red; box-sizing: content-box; }
+  &--mt { border-top: 8px solid $brand-red; box-sizing: content-box; }
+  &--mr { border-right: 8px solid $brand-red; box-sizing: content-box; }
+  &--mb { border-bottom: 8px solid $brand-red; box-sizing: content-box; }
+  &--ml { border-left: 8px solid $brand-red; box-sizing: content-box; }
+  &--mx { border-left: 8px solid $brand-red; border-right: 8px solid $brand-red; box-sizing: content-box; }
+  &--my { border-top: 8px solid $brand-red; border-bottom: 8px solid $brand-red; box-sizing: content-box; }
+  &--p { border: 8px solid $brand-blue; }
+  &--pt { border-top: 8px solid $brand-blue; }
+  &--pr { border-right: 8px solid $brand-blue; }
+  &--pb { border-bottom: 8px solid $brand-blue; }
+  &--pl { border-left: 8px solid $brand-blue; }
+  &--px { border-left: 8px solid $brand-blue; border-right: 8px solid $brand-blue; }
+  &--py { border-top: 8px solid $brand-blue; border-bottom: 8px solid $brand-blue; }
+}
+
+.h1-spacing,
+.input-spacing,
+.p-spacing {
+  position: relative;
+}
+
+.h1-spacing:after,
+.p-spacing:after,
+.input-spacing:after {
+  content: "";
+  position: absolute;
+  background-color: $brand-yellow;
+  width: 100%;
+  display: block;
+  height: 0.25rem;
+  bottom: -0.25rem;
+}
+
+.p-spacing:after {
+  height: 0.5rem;
+  bottom: -0.5rem;
+}
+
+.input-spacing:after {
+  height: 1rem;
+  bottom: 0;
+}
