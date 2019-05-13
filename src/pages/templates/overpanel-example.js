@@ -5,7 +5,7 @@ import '../../sass/example-page/example-page.scss'
 
 export default () => (
 
-	<div className="overpanel">
+	<div className="overpanel slide-up">
 		<header className="title-bar">
 			<div className="title-content">
 				<div>
