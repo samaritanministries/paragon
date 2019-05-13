@@ -74,6 +74,7 @@ $flex-table--border-color: $gray-50 !default;
       justify-content: space-between;
       color: $gray-900;
       font-weight: $font-weight-normal;
+      text-decoration: none;
       transition: background-color 0.2s ease-in-out;
       border-bottom: $flex-table--border-width solid $flex-table--border-color;
       &:hover { background-color: $gray-50; }
