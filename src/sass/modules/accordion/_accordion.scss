@@ -10,6 +10,7 @@
     align-items: center;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
     h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in accordion headers
     @media #{$tablet} {
       border-radius: 5px;
