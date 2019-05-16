@@ -15,6 +15,7 @@
   left: 0;
   z-index: 3;
   background-color: $gray-100;
+  -webkit-overflow-scrolling: touch;
 
   .title-bar {
     background-color: $white;
@@ -29,6 +30,9 @@
       padding: $space-m;
       * { margin-bottom: 0; } //to overwrite global margin bottom
       button { white-space: nowrap; margin-left: $space-s; }
+    }
+    .title {
+      @media #{$phone} { font-size: $font-size-medium; }
     }
   }
 
