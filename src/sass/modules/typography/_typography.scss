@@ -77,9 +77,10 @@ a {
     text-decoration: underline;
     text-decoration-color: inherit;
   }
-  
+
   &.button {
     text-decoration: none;
+    display: inline-block;
   }
 }
 
