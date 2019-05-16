@@ -135,7 +135,7 @@
 
 //Set the margin of Cards when they are within a Grid
 .grid {
-  :not(.checkbox-card):not(.radio-card):not(.card-content) > .card {
+  :not(.checkbox-card):not(.radio-card):not(.card-content) > .card:not(.card--dashed) {
     @media #{$phone} {
       margin: 0 -#{$grid-gutter} $grid-gutter -#{$grid-gutter};
       border-radius: 0;
