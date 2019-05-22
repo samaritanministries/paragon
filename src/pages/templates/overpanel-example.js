@@ -9,7 +9,7 @@ export default () => (
 		<header className="title-bar">
 			<div className="title-content">
 				<div>
-					<h2>Overpanel Title</h2>
+					<h2 className="title">Overpanel Title</h2>
 					<p>Overpanel description</p>
 				</div>
 				<Link to={"/components/overpanel/code"}>

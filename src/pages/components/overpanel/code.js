@@ -37,7 +37,7 @@ class OverpanelCode extends React.Component {
 <header class="title-bar">
   <div class="title-content">
     <div>
-      <h2>Overpanel Title</h2>
+      <h2 class="title">Overpanel Title</h2>
       <p>Overpanel description</p>
     </div>
     <a href="/templates/default">

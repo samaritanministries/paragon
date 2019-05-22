@@ -158,7 +158,7 @@ export default class CardsCode extends React.Component {
               </div>
             </div>
 
-            <div className="card card--dashed">
+            <div className="card card--dashed mb-space-m">
               <div className="card-header">
                 <h3>Dashed</h3>
               </div>
