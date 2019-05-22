@@ -2,6 +2,15 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [1.3.1] - 2019-05-22
+### Fixed
+- Fix loading card animation on mobile
+- Fix touch screen scrolling on overpanel pages
+
+### Changed
+- Update global focus styles
+- Update accordion and overpanel header sizes on mobile
+
 ## [1.3.0] - 2019-05-08
 ### Fixed
 - Fix card within a card margin on mobile
