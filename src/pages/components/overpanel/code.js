@@ -37,7 +37,7 @@ class OverpanelCode extends React.Component {
 <header class="title-bar">
   <div class="title-content">
     <div>
-      <h2>Overpanel Title</h2>
+      <h2 class="title">Overpanel Title</h2>
       <p>Overpanel description</p>
     </div>
     <a href="/templates/default">
@@ -74,6 +74,20 @@ class OverpanelCode extends React.Component {
 ...`}
               </CodeToggle>
             </div>
+            </div>
+
+            <h2 className="mt-space-xl" id="overpanelAnimation">Overpanel Animation
+              <Link to={location.pathname + "/#overpanelAnimation"} className="button button--transparent button--copy-link"></Link>
+            </h2>
+            <p className="no-margin">To add the sliding animation, all you need to do is apply an additional class <strong>AFTER</strong> <code className="example-text">overpanel</code>.</p>
+            <div className="example-container">
+              <div className="show-code">
+                <CodeToggle>
+{`<!-- Overpanel slides in from the bottom of the screen  -->
+<div class="overpanel slide-up">
+...`}
+                </CodeToggle>
+              </div>
             </div>
 
           </div>

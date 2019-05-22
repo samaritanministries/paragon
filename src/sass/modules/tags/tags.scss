@@ -26,6 +26,7 @@ $tag-hover-rules: "&:not(.tag--no-link):hover .tag, &:not(.tag--no-link):focus .
 		border: 2px solid $blue;
 		color: $blue;
 		transition: border-color .1s ease-in-out;
+		text-decoration: none;
 	}
 }
 

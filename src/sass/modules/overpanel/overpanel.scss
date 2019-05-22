@@ -1,4 +1,21 @@
+@keyframes slideUp {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: none;
+  }
+}
 .overpanel {
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  background-color: $gray-100;
+  -webkit-overflow-scrolling: touch;
 
   .title-bar {
     background-color: $white;
@@ -14,11 +31,19 @@
       * { margin-bottom: 0; } //to overwrite global margin bottom
       button { white-space: nowrap; margin-left: $space-s; }
     }
+    .title {
+      @media #{$phone} { font-size: $font-size-medium; }
+    }
   }
 
   .content {
     max-width: $content-s;
     margin-top: 0;
+  }
+
+  &.slide-up {
+    animation: slideUp 0.3s ease-in-out;
+    animation-fill-mode: both;
   }
 
   /* Utility classes for max-width of Overpanel */

@@ -10,6 +10,7 @@
     align-items: center;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
     h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in accordion headers
     @media #{$tablet} {
       border-radius: 5px;
@@ -21,8 +22,16 @@
       &:before { color: $black; }
     }
 
-    .title { margin-left: $space-xs; }
-    .secondary-title { margin-left: auto; }
+    .title,
+    .secondary-title {
+      @media #{$phone} { font-size: $font-size-normal; }
+    }
+
+    .title { margin: 0 $space-xs; }
+    .secondary-title {
+      margin-left: auto;
+      white-space: nowrap;
+    }
 
     &:hover {
       background-color: $gray-50;
