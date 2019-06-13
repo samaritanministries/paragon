@@ -8,7 +8,7 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
 .checkbox-card,
 .radio-card {
   display: inline-flex;
-  margin-right: 0.5rem;
+  margin: 0 $space-xs $space-xs 0;
 
   .card {
     float: none;

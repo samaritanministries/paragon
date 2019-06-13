@@ -229,6 +229,7 @@ fieldset {
   .checkbox-card {
     flex: 1 1 auto;
     -ms-flex: 1 1 auto;
+    margin-bottom: $space-xs;
 
     @media #{$tablet} {
       margin-right: 1rem;
