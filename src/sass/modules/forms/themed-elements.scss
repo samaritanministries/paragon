@@ -206,23 +206,6 @@ $switch--off: $gray-250 !default; //Color of switch when off
     }
   }
 
-  @-moz-document url-prefix() { //Target Firefox radio button
-    label:before {
-      font-size: 1.6rem;
-    }
-
-    @media #{$phone} {
-      label:not(.card) { //mobile-optimized large checkboxes if not inside a card-checkbox
-        &:before {
-          line-height: 20px;
-          padding: 0 7px;
-          font-size: 3rem;
-          height: 32px; width: 32px;
-        }
-      }
-    }
-  }
-
   //Radio Hover
   input:hover:not(:checked) ~ label { //Text Hover
     color: rgba($black, .6);
