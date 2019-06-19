@@ -28,9 +28,6 @@ $flex-table--border-color: $gray-50 !default;
     justify-content: space-between;
     @media #{$tablet} { display: flex; }
     li {
-      @media #{$phone} {
-        white-space: normal;
-      }
       flex: 1 1 0;
       padding-right: 0.5rem;
     }
