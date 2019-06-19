@@ -32,7 +32,6 @@ $flex-table--border-color: $gray-50 !default;
         white-space: normal;
       }
       flex: 1 1 0;
-      @extend .no-wrap;
       padding-right: 0.5rem;
     }
   }
