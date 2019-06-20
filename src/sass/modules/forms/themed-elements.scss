@@ -23,6 +23,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
 .checkbox--custom,
 .radio--custom {
   display: flex;
+  position: relative;
 
   input { // Places the input behind the label so it doesn't overlay text
     opacity: 0;
@@ -32,7 +33,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
 
   label {
     @include user-select(none);
-    align-items: baseline;
+    align-items: center;
     cursor: pointer;
     display: inline-block;
     font-size: $font-size-normal;
@@ -72,6 +73,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
       font-size: 12px;
       padding: 2px;
       text-indent: 0;
+      align-self: baseline;
     }
   }
 
@@ -84,7 +86,6 @@ $switch--off: $gray-250 !default; //Color of switch when off
         border-radius: 8px;
         font-size: 16px;
         height: 32px; width: 32px;
-        margin-top: 2px;
         margin-right: 0.5rem;
         padding: 6px;
       }
@@ -181,12 +182,15 @@ $switch--off: $gray-250 !default; //Color of switch when off
     &:before {
       content: '•';
       border-radius: 50px;
-      font-size: 1.7rem;
-      line-height: 12px;
+      font-size: 1.6rem;
+      line-height: 11px;
       padding: 0 4px;
+      text-align: center;
       text-indent: 0;
+      align-self: flex-start;
 
-      @media #{$tablet} { font-size: 1.5rem; }
+      @media #{$tablet} { margin-top: 1px; }
+      @media #{$desktop} { line-height: 12px; }
     }
   }
 
@@ -194,26 +198,9 @@ $switch--off: $gray-250 !default; //Color of switch when off
     label:not(.card) { //mobile-optimized large radio buttons if not inside a card-radio
       &:before {
         font-size: 3rem;
-        line-height: 20px;
-        padding: 0 7px;
+        line-height: 19px;
+        padding: 0 6px;
         height: 32px; width: 32px;
-      }
-    }
-  }
-
-  @-moz-document url-prefix() { //Target Firefox radio button
-    label:before {
-      font-size: 1.6rem;
-    }
-
-    @media #{$phone} {
-      label:not(.card) { //mobile-optimized large checkboxes if not inside a card-checkbox
-        &:before {
-          line-height: 20px;
-          padding: 0 7px;
-          font-size: 3rem;
-          height: 32px; width: 32px;
-        }
       }
     }
   }
