@@ -86,11 +86,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
-     li {
+    li {
       padding: $space-s $space-m;
       transition: $global-transition;
     }
-     &.is-selectable {
+    &.is-selectable {
       li {
         cursor: pointer;
         &:hover {
@@ -100,6 +100,12 @@
           margin: -#{$space-s} -#{$space-m};
           padding: $space-s $space-m;
         }
+      }
+    }
+    &.has-border {
+      li {
+        border-bottom: 1px solid $gray-100;
+        &:last-of-type { border: 0; }
       }
     }
   }
