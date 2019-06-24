@@ -82,6 +82,12 @@ a {
     text-decoration: none;
     display: inline-block;
   }
+  
+  &.no-decoration {
+    text-decoration: none;
+    color: $gray-900;
+    font-weight: $font-weight-normal;
+  }
 }
 
 p, li.text-list_item {
