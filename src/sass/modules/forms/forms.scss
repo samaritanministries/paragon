@@ -211,9 +211,10 @@ fieldset {
       .dashing-icon { @extend .dashing-icon--orange; }
     }
   }
-  //Remove top margin on radio button errors
+  //Remove top margin on radio button and checkbox errors
   .radio--custom,
-  .checkbox--custom {
+  .checkbox--custom,
+  .flex-row {
     &~ .message {
       margin-top: 0;
     }
