@@ -20,6 +20,7 @@
     "at-rule-no-vendor-prefix": null,
     "value-no-vendor-prefix": null,
     #
-    "selector-no-qualifying-type": null
+    "selector-no-qualifying-type": null,
+    "function-calc-no-unspaced-operator": true
   }
 }
