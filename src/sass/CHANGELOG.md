@@ -2,6 +2,14 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [1.3.2] - 2019-06-26
+### Fixed
+- Fix Radio/Checkbox label alignment on mobile
+- Fix Radio/Checkbox error message placement
+
+### Changed
+- Change card-list to work with React links
+
 ## [1.3.1] - 2019-05-22
 ### Fixed
 - Fix loading card animation on mobile
