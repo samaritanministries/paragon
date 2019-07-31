@@ -387,6 +387,69 @@ export default class CardsCode extends React.Component {
           </CodeToggle>
         </div>
 
+        <h2 className="mt-space-xl" id="card-info">Card Info
+          <Link to={location.pathname + "/#card-info"} className="button button--transparent button--copy-link"></Link>
+        </h2>
+
+        <div className="example-container">
+
+          <div className="card">
+            <div className="card-header">
+              <h3>Information Cards</h3>
+            </div>
+            <div className="card-content">
+
+              <p className="mb-space-m">Information cards are nested inside another card and are a good way to spotlight instructions or text to want to give more emphasis.</p>
+
+              <div className="card card-info">
+                <div className="card-header has-icon">
+                  <i className="dashing-icon dashing-icon--info-filled dashing-icon--black" />
+                  <h3>Default</h3>
+                </div>
+                <div className="card-content">
+                  <p>This is a default card.</p>
+                </div>
+              </div>
+
+              <div className="card card-info--default mt-space-m">
+                <div className="card-header has-icon">
+                  <h3>Default</h3>
+                </div>
+                <div className="card-content">
+                  <p>This is a default card.</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <CodeToggle>
+{`/* Card info should be placed inside of a card-content */
+<div class="card-content">
+  <div className="card card-info">
+    <div className="card-header has-icon">
+      <i className="dashing-icon dashing-icon--info-filled dashing-icon--black" />
+      <h3>Default</h3>
+    </div>
+    <div className="card-content">
+      <p>This is a default card.</p>
+    </div>
+  </div>
+
+  <div className="card card-info--default mt-space-m">
+    <div className="card-header has-icon">
+      <h3>Default</h3>
+    </div>
+    <div className="card-content">
+      <p>This is a default info card.</p>
+    </div>
+  </div>
+</div>
+`}
+          </CodeToggle>
+
+        </div>
 
           </div>
         </AppContent>

@@ -29,6 +29,11 @@
         margin-top: -$grid-gutter;
       }
     }
+    &.has-icon {
+      display: flex;
+      align-items: center;
+      i { margin-right: $space-xxs; }
+    }
     h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in card-headers
   }
 
@@ -140,6 +145,16 @@
         }
       }
     }
+  }
+  //Informational card
+  &.card-info {
+    //background-color: lighten($blue, 25%);
+    background-color: #eaf9ff;
+    box-shadow: none;
+  }
+  &.card-info--default {
+    background-color: $gray-100;
+    box-shadow: none;
   }
 }
 
