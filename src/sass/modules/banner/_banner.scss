@@ -1,3 +1,47 @@
+$content-width: 1200px !default;
+$global-banner-height: 4rem;
+
+/* Shared Banner Styles
+  =========================================================================== */
+.banner {
+  &.has-success,
+  &.has-error {
+    p { color: $white; }
+    .dashing-icon:before { color: $white;}
+  }
+
+  &.has-warning {
+    p { color: $black; }
+    .dashing-icon:before { color: $black;}
+  }
+
+  &.has-success { background-color: $green; }
+  &.has-warning { background-color: $orange; }
+  &.has-error   { background-color: $red; }
+
+  .dashing-icon { margin-right: 0.5rem; }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  a {
+    border-bottom: solid 2px;
+    color: inherit;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      opacity: 0.6;
+      transition: all 50ms ease-in-out;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
 /* Banner Styles
   =========================================================================== */
 .page-banner {
@@ -24,6 +68,7 @@
 }
 
 .card-banner {
+  @extend .banner;
   align-items: baseline;
   background-color: $color-gray-3;
   display: flex;
@@ -36,42 +81,46 @@
     button { white-space: nowrap; }
     p { margin-right: $grid-gutter; }
   }
+}
 
-  a {
-    border-bottom: solid 2px;
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
+.global-banner {
+  @extend .banner;
+  display: flex;
+  align-items: center;
+  padding: $space-xs;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $global-banner-height;
+  max-height: $global-banner-height;
 
-    &:focus,
-    &:hover {
-      opacity: 0.6;
-      transition: all 50ms ease-in-out;
-      text-decoration: none;
-      color: inherit;
-    }
+  max-width: $content-width;
+  margin: auto;
+
+  width: 100%;//IE wants this... okay IE. Here you are.
+
+  &::after {
+    z-index: -1;
+  	content: "";
+  	width: 100%;
+  	height: $global-banner-height;
+    background: $gray-200;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
   }
-
-  &.has-success,
-  &.has-error {
-    p { color: $color-white; }
-    .dashing-icon:before { color: $color-white;}
-  }
-
-  &.has-warning {
-    p { color: $color-black; }
-    .dashing-icon:before { color: $color-black;}
-  }
-
-  &.has-success { background-color: $color-green; }
-  &.has-warning { background-color: $color-orange; }
-  &.has-error   { background-color: $color-red; }
-
-  .dashing-icon { margin-right: 0.5rem; }
 
   p {
     font-size: 0.9rem;
     font-weight: $font-weight-semibold;
     margin: 0;
+  }
+
+  &.has-error {
+    &::after { background-color: $red; }
+  }
+  &.has-warning {
+    &::after { background-color: $orange; }
   }
 }

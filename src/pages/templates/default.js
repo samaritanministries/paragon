@@ -8,6 +8,10 @@ import '../../sass/experimental/placeholder.scss'
 export default () => (
 
 <React.Fragment>
+	<header className="global-banner has-error">
+		<i className="dashing-icon dashing-icon--alert-filled" />
+		<p>Automatic funding has been disabled. Please <a>resolve the issue(s)</a> with your funding account and re-enable automatic funding.</p>
+	</header>
 	<header className="header">
 		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 		<div className="logo"><p className="text-color--purple">LOGO</p></div>
