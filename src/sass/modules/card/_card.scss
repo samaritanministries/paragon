@@ -42,6 +42,15 @@
   .card-content {
     overflow: auto;
     padding: $grid-gutter;
+    &.has-icon {
+      display: flex;
+      align-items: center;
+      i {
+        margin-right: $space-xxs;
+        margin-top: $space-xxs;
+        align-self: flex-start;
+      }
+    }
   }
 
   .card--footer,
@@ -148,13 +157,19 @@
   }
   //Informational card
   &.card-info {
-    //background-color: lighten($blue, 25%);
     background-color: #eaf9ff;
     box-shadow: none;
   }
-  &.card-info--default {
+  &.card-info--gray,
+  &.card-info--grey {
     background-color: $gray-100;
     box-shadow: none;
+  }
+  &.card-info--error {
+    background-color: lighten($red, 40%);
+    box-shadow: none;
+    border: 2px solid lighten($red, 30%);
+    color: darken($red, 20%);;
   }
 }
 

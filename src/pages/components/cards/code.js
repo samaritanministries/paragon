@@ -399,24 +399,31 @@ export default class CardsCode extends React.Component {
             </div>
             <div className="card-content">
 
-              <p className="mb-space-m">Information cards are nested inside another card and are a good way to spotlight instructions or text to want to give more emphasis.</p>
+              <p className="mb-space-m">Information cards are nested inside another card and are a good way to spotlight instructions or to give text more emphasis.</p>
 
               <div className="card card-info">
                 <div className="card-header has-icon">
                   <i className="dashing-icon dashing-icon--info-filled dashing-icon--black" />
-                  <h3>Default</h3>
+                  <h4>Default</h4>
                 </div>
                 <div className="card-content">
-                  <p>This is a default card.</p>
+                  <p className="no-margin">This is a default card.</p>
                 </div>
               </div>
 
-              <div className="card card-info--default mt-space-m">
-                <div className="card-header has-icon">
-                  <h3>Default</h3>
+              <div className="card card-info--gray mt-space-m">
+                <div className="card-header">
+                  <h4>Default</h4>
                 </div>
                 <div className="card-content">
-                  <p>This is a default card.</p>
+                  <p className="no-margin">This is a default card.</p>
+                </div>
+              </div>
+
+              <div className="card card-info mt-space-m">
+                <div className="card-content has-icon">
+                  <i className="dashing-icon dashing-icon--info-filled dashing-icon--black" />
+                  <p className="no-margin">This is a default card.</p>
                 </div>
               </div>
 
