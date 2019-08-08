@@ -1,5 +1,5 @@
 $content-width: 1200px !default;
-$global-banner-height: 4rem;
+$global-banner-height: 3rem;
 
 /* Shared Banner Styles
   =========================================================================== */
@@ -19,7 +19,10 @@ $global-banner-height: 4rem;
   &.has-warning { background-color: $orange; }
   &.has-error   { background-color: $red; }
 
-  .dashing-icon { margin-right: 0.5rem; }
+  .dashing-icon {
+    margin-right: $space-xs;
+    &::before { padding: 1px; }
+  }
 
   p {
     font-size: 0.9rem;
@@ -85,15 +88,18 @@ $global-banner-height: 4rem;
 
 .global-banner {
   @extend .banner;
+  background-color: $gray-200;
   display: flex;
   align-items: center;
-  padding: $space-xs;
+  padding: $space-xs $space-m;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: $global-banner-height;
   max-height: $global-banner-height;
+  overflow-x: auto;
+  white-space: nowrap;
 
   max-width: $content-width;
   margin: auto;
@@ -109,11 +115,13 @@ $global-banner-height: 4rem;
   	position: fixed;
   	top: 0;
   	left: 0;
+    background-color: $gray-200;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: $font-size-small;
     font-weight: $font-weight-semibold;
+    padding-right: $space-m;
     margin: 0;
   }
 
