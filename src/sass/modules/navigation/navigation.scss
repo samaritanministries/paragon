@@ -6,7 +6,8 @@ $content-width: $global-content-width;
 
 $header-height: 4rem;
 $sub-nav-height: 3rem;
-$global-banner-height: 3rem;
+$global-banner-height: 3.5rem;
+$global-banner-height_phone: 4rem;
 
 //Theme
 $header-color: $color-white !default;
@@ -209,16 +210,30 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
   =========================================================================== */
 .global-banner {
   + .header {
-    top: $global-banner-height;
-    &::after { top: $global-banner-height; }
+    top: $global-banner-height_phone;
+    &::after { top: $global-banner-height_phone; }
+
+    @media #{$tablet} {
+      top: $global-banner-height;
+      &::after { top: $global-banner-height; }
+    }
 
     + .sub-nav {
-      top: calc(#{$global-banner-height} + #{$header-height});
+      top: calc(#{$global-banner-height_phone} + #{$header-height});
       &::after {
-        top: calc(#{$global-banner-height} + #{$header-height});
+        top: calc(#{$global-banner-height_phone} + #{$header-height});
       }
       ~.content {
-        margin-top: calc(#{$global-banner-height} + #{$header-height} + #{$sub-nav-height});
+        margin-top: calc(#{$global-banner-height_phone} + #{$header-height} + #{$sub-nav-height});
+      }
+      @media #{$tablet} {
+        top: calc(#{$global-banner-height} + #{$header-height});
+        &::after {
+          top: calc(#{$global-banner-height} + #{$header-height});
+        }
+        ~.content {
+          margin-top: calc(#{$global-banner-height} + #{$header-height} + #{$sub-nav-height});
+        }
       }
     }
   }

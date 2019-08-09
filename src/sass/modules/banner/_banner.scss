@@ -1,5 +1,6 @@
 $content-width: 1200px !default;
-$global-banner-height: 3rem;
+$global-banner-height: 3.5rem;
+$global-banner-height_phone: 4rem;
 
 /* Shared Banner Styles
   =========================================================================== */
@@ -25,8 +26,8 @@ $global-banner-height: 3rem;
   }
 
   p {
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: $font-size-small;
+    font-weight: $font-weight-semibold;
     margin: 0;
   }
 
@@ -96,8 +97,8 @@ $global-banner-height: 3rem;
   top: 0;
   left: 0;
   right: 0;
-  height: $global-banner-height;
-  max-height: $global-banner-height;
+  height: $global-banner-height_phone;
+  max-height: $global-banner-height_phone;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -111,7 +112,7 @@ $global-banner-height: 3rem;
     z-index: -1;
   	content: "";
   	width: 100%;
-  	height: $global-banner-height;
+  	height: $global-banner-height_phone;
     background: $gray-200;
   	position: fixed;
   	top: 0;
@@ -119,11 +120,17 @@ $global-banner-height: 3rem;
     background-color: $gray-200;
   }
 
+  @media #{$tablet} {
+    height: $global-banner-height;
+    max-height: $global-banner-height;
+    &::after {
+      height: $global-banner-height;
+    }
+  }
+
   p {
-    font-size: $font-size-small;
-    font-weight: $font-weight-semibold;
+    font-size: $font-size-normal;
     padding-right: $space-m;
-    margin: 0;
   }
 
   &.has-error {
