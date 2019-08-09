@@ -99,6 +99,7 @@ $global-banner-height: 3rem;
   height: $global-banner-height;
   max-height: $global-banner-height;
   overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
 
   max-width: $content-width;
