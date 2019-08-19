@@ -236,5 +236,14 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
         }
       }
     }
+
+    ~.content {
+      margin-top: calc(#{$global-banner-height_phone} + #{$header-height});
+    }
+    @media #{$tablet} {
+      ~.content {
+        margin-top: calc(#{$global-banner-height} + #{$header-height});
+      }
+    }
   }
 }
