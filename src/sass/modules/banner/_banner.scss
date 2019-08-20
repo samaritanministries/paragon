@@ -4,7 +4,7 @@ $global-banner-height_phone: 4rem;
 
 /* Shared Banner Styles
   =========================================================================== */
-.banner {
+@mixin shared-banner {
   &.has-success,
   &.has-error {
     p { color: $white; }
@@ -72,7 +72,7 @@ $global-banner-height_phone: 4rem;
 }
 
 .card-banner {
-  @extend .banner;
+  @include shared-banner;
   align-items: baseline;
   background-color: $color-gray-3;
   display: flex;
@@ -87,18 +87,27 @@ $global-banner-height_phone: 4rem;
   }
 }
 
-.global-banner {
-  @extend .banner;
-  background-color: $gray-200;
-  display: flex;
-  align-items: center;
-  padding: $space-xs $space-m;
+.global-banner-container {
+  @include shared-banner;
+  animation: fadein 0.25s;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 4;
   height: $global-banner-height_phone;
   max-height: $global-banner-height_phone;
+
+  @media #{$tablet} {
+    height: $global-banner-height;
+    max-height: $global-banner-height;
+  }
+}
+
+.global-banner {
+  display: flex;
+  align-items: center;
+  padding: 0 $space-m;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -107,36 +116,10 @@ $global-banner-height_phone: 4rem;
   margin: auto;
 
   width: 100%;//IE wants this... okay IE. Here you are.
-
-  &::after {
-    z-index: -1;
-  	content: "";
-  	width: 100%;
-  	height: $global-banner-height_phone;
-    background: $gray-200;
-  	position: fixed;
-  	top: 0;
-  	left: 0;
-    background-color: $gray-200;
-  }
-
-  @media #{$tablet} {
-    height: $global-banner-height;
-    max-height: $global-banner-height;
-    &::after {
-      height: $global-banner-height;
-    }
-  }
+  height: 100%;
 
   p {
     font-size: $font-size-normal;
     padding-right: $space-m;
-  }
-
-  &.has-error {
-    &::after { background-color: $red; }
-  }
-  &.has-warning {
-    &::after { background-color: $orange; }
   }
 }

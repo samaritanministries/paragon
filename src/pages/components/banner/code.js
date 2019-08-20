@@ -29,17 +29,21 @@ class BannerCode extends React.Component {
               <Link to={location.pathname + "/#globalErrorBanner"} className="button button--transparent button--copy-link"></Link>
             </h2>
             <div className="example-container">
-              <header className="global-banner global-banner--example has-error mb-space-m">
-            		<i className="dashing-icon dashing-icon--alert-filled" />
-            		<p>There is an error with your banking account. Please <a>resolve the issue(s)</a>.</p>
+              <header className="global-banner-container has-error global-banner--example mb-space-m">
+                <div className="global-banner">
+              		<i className="dashing-icon dashing-icon--alert-filled" />
+              		<p>This is an error banner with an <a href="../code">action</a>.</p>
+                </div>
             	</header>
 
               <CodeToggle>
 {`<!-- Use has-error for error banners -->
-<header class="global-banner has-error">
-  <i class="dashing-icon dashing-icon--alert-filled" />
-  <p>There is an error with your banking account. Please <a>resolve the issue(s)</a>.</p>
-</header>`}
+  <header class="global-banner-container has-error">
+    <div class="global-banner">
+      <i class="dashing-icon dashing-icon--info-filled" />
+      <p>This is an error banner with an <a>action</a>.</p>
+    </div>
+  </header>`}
               </CodeToggle>
             </div>
 
@@ -47,16 +51,20 @@ class BannerCode extends React.Component {
               <Link to={location.pathname + "/#globalWarningBanner"} className="button button--transparent button--copy-link"></Link>
             </h2>
             <div className="example-container">
-              <header className="global-banner global-banner--example has-warning mb-space-m">
-            		<i class="dashing-icon dashing-icon--info-filled" />
-            		<p>Please verify your email address to continue use of your Dashboard. <a>Resend Verification</a></p>
+              <header className="global-banner-container has-warning global-banner--example mb-space-m">
+                <div className="global-banner">
+              		<i class="dashing-icon dashing-icon--info-filled" />
+              		<p>This is a warning banner with an <a href="../code">action</a>.</p>
+                </div>
             	</header>
 
               <CodeToggle>
 {`<!-- Use has-error for error banners -->
-<header class="global-banner has-warning">
-  <i class="dashing-icon dashing-icon--info-filled" />
-  <p>Please verify your email address to continue use of your Dashboard. <a>Resend Verification</a></p>
+<header class="global-banner-container has-warning">
+  <div class="global-banner">
+    <i class="dashing-icon dashing-icon--info-filled" />
+    <p>This is a warning banner with an <a>action</a>.</p>
+  </div>
 </header>`}
               </CodeToggle>
             </div>

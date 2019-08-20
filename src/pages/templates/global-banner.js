@@ -8,9 +8,11 @@ import '../../sass/experimental/placeholder.scss'
 export default () => (
 
 <React.Fragment>
-	<header className="global-banner has-error">
-		<i className="dashing-icon dashing-icon--alert-filled" />
-		<p>Automatic funding has been disabled. Please <a>resolve the issue(s)</a> with your account.</p>
+	<header className="global-banner-container has-error">
+		<div className="global-banner">
+			<i className="dashing-icon dashing-icon--alert-filled" />
+			<p>This is an error banner with an <a href="../global-banner">action</a>.</p>
+		</div>
 	</header>
 	<header className="header">
 		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
