@@ -13,7 +13,7 @@ $sub-nav-color: $white !default;
 $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 
 .header {
-  z-index: 2;
+  z-index: $zindex-header;
   display: flex;
   align-items: center;
   padding: $space-xs;
@@ -30,7 +30,7 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
   width: 100%;//IE wants this... okay IE. Here you are.
 
   &::after {
-    z-index: -1;
+    z-index: $zindex-negative;
   	content: "";
   	width: 100%;
   	height: $header-height;
@@ -69,7 +69,7 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 }
 
 .content {
-  z-index: 0;
+  z-index: $zindex-content;
   max-width: $content-width;
   margin: auto;
   margin-top: $header-height;
@@ -77,7 +77,7 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 }
 
 .sub-nav {
-  z-index: 1;
+  z-index: $zindex-header;
   height: $sub-nav-height;
 
   ~.content {
@@ -103,7 +103,7 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
   	position: fixed;
   	top: $header-height;
   	left: 0;
-  	z-index: -1;
+  	z-index: $zindex-negative;
   }
 
   ul, li, a {
