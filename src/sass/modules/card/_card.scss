@@ -42,15 +42,6 @@
   .card-content {
     overflow: auto;
     padding: $grid-gutter;
-    &.has-icon {
-      display: flex;
-      align-items: center;
-      i {
-        margin-right: $space-xxs;
-        margin-top: $space-xxs;
-        align-self: flex-start;
-      }
-    }
   }
 
   .card--footer,
