@@ -404,26 +404,19 @@ export default class CardsCode extends React.Component {
               <div className="card card-info">
                 <div className="card-header has-icon">
                   <i className="dashing-icon dashing-icon--info-filled dashing-icon--black" />
-                  <h4>Default</h4>
+                  <h4>Default Info Card</h4>
                 </div>
                 <div className="card-content">
-                  <p className="no-margin">This is a default card.</p>
+                  <p className="no-margin">This is an info card with an icon.</p>
                 </div>
               </div>
 
               <div className="card card-info--gray mt-space-m">
                 <div className="card-header">
-                  <h4>Default</h4>
+                  <h4>Gray Info Card</h4>
                 </div>
                 <div className="card-content">
-                  <p className="no-margin">This is a default card.</p>
-                </div>
-              </div>
-
-              <div className="card card-info mt-space-m">
-                <div className="card-content has-icon">
-                  <i className="dashing-icon dashing-icon--info-filled dashing-icon--black" />
-                  <p className="no-margin">This is a default card.</p>
+                  <p className="no-margin">This is a gray info card.</p>
                 </div>
               </div>
 
@@ -432,24 +425,23 @@ export default class CardsCode extends React.Component {
           </div>
 
           <CodeToggle>
-{`/* Card info should be placed inside of a card-content */
-<div class="card-content">
-  <div className="card card-info">
-    <div className="card-header has-icon">
-      <i className="dashing-icon dashing-icon--info-filled dashing-icon--black" />
-      <h3>Default</h3>
+{`<div class="card-content">
+  <div class="card card-info">
+    <div class="card-header has-icon">
+      <i class="dashing-icon dashing-icon--info-filled dashing-icon--black" />
+      <h4>Default Info Card</h4>
     </div>
-    <div className="card-content">
-      <p>This is a default card.</p>
+    <div class="card-content">
+      <p class="no-margin">This is an info card with an icon.</p>
     </div>
   </div>
 
-  <div className="card card-info--default mt-space-m">
-    <div className="card-header has-icon">
-      <h3>Default</h3>
+  <div class="card card-info--gray">
+    <div class="card-header">
+      <h4>Gray Info Card</h4>
     </div>
-    <div className="card-content">
-      <p>This is a default info card.</p>
+    <div class="card-content">
+      <p class="no-margin">This is a gray info card.</p>
     </div>
   </div>
 </div>

@@ -165,12 +165,6 @@
     background-color: $gray-100;
     box-shadow: none;
   }
-  &.card-info--error {
-    background-color: lighten($red, 40%);
-    box-shadow: none;
-    border: 2px solid lighten($red, 30%);
-    color: darken($red, 20%);;
-  }
 }
 
 //Set the margin of Cards when they are within a Grid
