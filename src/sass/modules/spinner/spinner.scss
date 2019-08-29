@@ -32,7 +32,7 @@ $spinner-button: 24px; //1.2rem;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: $zindex-spinner;
 
   &:after {
     content: "";
@@ -43,7 +43,7 @@ $spinner-button: 24px; //1.2rem;
 
 .button.has-spinner {
   pointer-events: none;
-  color: transparent;
+  color: transparent !important;
   position: relative;
   &:hover,
   &:active,

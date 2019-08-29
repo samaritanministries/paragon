@@ -8,3 +8,16 @@ $phone:         "all and (max-width: 40em)" !default;
 $tablet:        "all and (min-width: 40em)" !default;
 $desktop:       "all and (min-width: 64em)" !default;
 $desktop-large: "all and (min-width: 96em)" !default;
+
+/* z-index
+  =========================================================================== */
+$zindex-chat:         8000;
+$zindex-modal:        7001;
+$zindex-modaloverlay: 7000;
+$zindex-overpanel:    6000;
+$zindex-mobilemenu:   5000;
+$zindex-dropdown:     4000;
+$zindex-header:       3000;
+$zindex-spinner:      2000;
+$zindex-content:      1000;
+$zindex-negative:       -1;

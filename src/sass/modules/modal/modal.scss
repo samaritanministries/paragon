@@ -22,7 +22,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+  z-index: $zindex-modaloverlay;
   &.is-locked {
     overflow: hidden;
   }
@@ -36,7 +36,7 @@
   max-width: 35rem;
   outline: 0;
   width: 90%;
-  z-index: 1050;
+  z-index: $zindex-modal;
   cursor: default;
   overflow: hidden;
 

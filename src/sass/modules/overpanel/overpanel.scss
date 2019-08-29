@@ -13,7 +13,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 3;
+  z-index: $zindex-overpanel;
   background-color: $gray-100;
   -webkit-overflow-scrolling: touch;
 

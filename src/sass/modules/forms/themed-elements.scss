@@ -28,7 +28,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
   input { // Places the input behind the label so it doesn't overlay text
     opacity: 0;
     position: absolute;
-    z-index: -1;
+    z-index: $zindex-negative;
   }
 
   label {
