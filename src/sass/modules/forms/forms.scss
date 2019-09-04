@@ -32,7 +32,6 @@ fieldset {
     max-width: 100%;
     padding: 0.6rem;
     width: 100%;
-    //EXPERIMENTAL
     margin-bottom: $space-m;
 
     &:focus {
@@ -229,10 +228,16 @@ fieldset {
   .flex-row {
     display: flex;
     flex-direction: column;
-    @media #{$tablet} {flex-direction: row;}
+    @media #{$tablet} {
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-left: -#{$grid-gutter};
+    }
+
+    //fieldset:not(.spacer) { margin-bottom: 1rem;}
   }
 
-  fieldset,
+  .flex-row fieldset,
   .radio-card,
   .checkbox-card {
     flex: 1 1 auto;
@@ -240,10 +245,15 @@ fieldset {
     margin-bottom: $space-xs;
 
     @media #{$tablet} {
-      margin-right: 1rem;
+      margin-left: 1rem;
+      margin-right: 0;
       flex: 1 1 0;
       -ms-flex: 1 1 auto;
+      min-width: 180px;
       &:last-of-type { margin-right: 0; }
+    }
+    @media #{$desktop} {
+      min-width: auto;
     }
   }
 }

@@ -10,6 +10,7 @@ $font-size-xsmall:      0.8rem;   //14px
 
 $font-weight-normal:    400;
 $font-weight-semibold:  600;
+$font-weight-bold:      700;
 
 $font-family-header:    "Source Sans Pro", sans-serif;
 $font-family-body:      "Source Sans Pro", sans-serif;
@@ -107,4 +108,8 @@ ul.text-list {
 
 strong, .strong {
   font-weight: $font-weight-semibold;
+}
+
+.bold {
+  font-weight: $font-weight-bold;
 }

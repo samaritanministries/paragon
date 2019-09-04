@@ -2,6 +2,15 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [1.4.0] - 2019-09-04
+### Added
+- Add font weight 700
+- Add z-index variables
+- Add info card styles and examples
+
+### Changed
+- Change flex-content to be responsive on tablet
+
 ## [1.3.2] - 2019-06-26
 ### Fixed
 - Fix Radio/Checkbox label alignment on mobile
