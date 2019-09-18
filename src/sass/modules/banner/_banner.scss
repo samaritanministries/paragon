@@ -15,7 +15,7 @@
   }
 
   .button--banner {
-    @include button($gray-400, $white);
+    // @include button($gray-400, $white);
     @extend %button--smooth;
     position: absolute;
     top: 2.15rem;

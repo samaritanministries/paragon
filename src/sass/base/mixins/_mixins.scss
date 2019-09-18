@@ -62,11 +62,10 @@
 /* Actions Mixins
   =========================================================================== */
 //Default Button
-@mixin button($background-color, $color) {
+@mixin button($background-color, $background-color-dark, $color) {
   background-color: $background-color;
   color: $color;
-  &:hover, &:focus { background-color: darken($background-color, 10%); }
-  &:active { background-color: darken($background-color, 15%); }
+  &:hover, &:focus, &:active { background-color: $background-color-dark; }
   .dashing-icon:before { color: $color; } //matches icon to text color
 }
 

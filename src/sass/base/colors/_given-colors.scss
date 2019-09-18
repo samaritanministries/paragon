@@ -1,0 +1,73 @@
+:root {
+  /* Base Colors */
+  --color-purple:               #595478;
+  --color-purple-light:         #7A7693;
+  --color-purple-dark:          #474360;
+
+  --color-blue:                 #097CBF;
+  --color-blue-light:           ;
+  --color-blue-dark:            ;
+
+  --color-green:                #00875D;
+  --color-green-light:          ;
+  --color-green-dark:           ;
+
+  --color-orange:               #F8652A;
+  --color-orange-light:         ;
+  --color-orange-dark:          ;
+
+  --color-red:                  #D1323F;
+  --color-red-light:            ;
+  --color-red-dark:             ;
+
+  --color-black:                #222228;
+  --color-gray-4:               #6F6F75;
+  --color-gray-3:               #E1E1E7;
+  --color-gray-2:               #EEEEF4;
+  --color-gray-1:               #F3F3F9;
+  --color-white:                #FFFFFF;
+
+  /* Primary and Accent */
+  --color-primary:              var(--color-purple);
+  --color-primary-light:        var(--color-purple-light);
+  --color-primary-dark:         var(--color-purple-dark);
+
+  --color-accent:               var(--color-blue);
+  --color-accent-light:         var(--color-blue-light);
+  --color-accent-dark:          var(--color-blue-dark);
+
+  /* Semantic */
+  --color-success:              var(--color-green);
+  --color-warning:              var(--color-orange);
+  --color-error:                var(--color-red);
+
+  /* Border */
+  --color-border:               var(--color-gray-3);
+
+  /* Hover/Selectable */
+  --color-hover:                var(--color-gray-1);
+
+  /* Body Background */
+  --color-background:           var(--color-gray-2);
+
+  /* Typography */
+  --color-text:                 var(--color-black);
+  --color-subtext:              var(--color-gray-4);
+  --color-link:                 var(--color-accent);
+  --color-link-visted:          var(--color-accent-dark);
+
+  /* Forms */
+  --form-element-border:        var(--color-border);
+  --form-element-border-focus:  var(--color-accent);
+  --form-element-border-error:  var(--color-error);
+  --form-element-bg:            var(--color-white);
+  --form-text-placeholder:      var(--color-subtext);
+
+  /* Buttons */
+  --btn-primary-bg:             var(--color-primary);
+  --btn-primary-hover:          var(--color-primary-dark);
+  --btn-primary-text:           var(--color-white);
+
+  /* Icons */
+  --color-icon-primary:         var(--color-subtext);
+}
