@@ -1,78 +1,77 @@
-:root {
+
   /* Base Colors */
-  --color-purple:               #595478;
-  --color-purple-light:         #7A7693;
-  --color-purple-dark:          #474360;
+  $purple:                      #595478 !default;
+  $purple-light:                lighten($purple, 10%) !default;
+  $purple-dark:                 darken($purple, 10%) !default;
 
-  --color-blue:                 #097CBF;
-  --color-blue-light:           #3A96CB;
-  --color-blue-dark:            #076398;
+  $blue:                        #097CBF;
+  $blue-light:                  lighten($blue, 10%) !default;
+  $blue-dark:                   darken($blue, 10%) !default;
 
-  --color-green:                #00875D;
-  --color-green-light:          #339F7C;
-  --color-green-dark:           #006C49;
+  $green:                       #00875D;
+  $green-light:                 lighten($green, 10%) !default;
+  $green-dark:                  darken($green, 10%) !default;
 
-  --color-orange:               #F8652A;
-  --color-orange-light:         #F98354;
-  --color-orange-dark:          #C65021;
+  $orange:                      #F8652A;
+  $orange-light:                lighten($orange, 10%) !default;
+  $orange-dark:                 darken($orange, 10%) !default;
 
-  --color-red:                  #D1323F;
-  --color-red-light:            #DA5B65;
-  --color-red-dark:             #A72832;
+  $red:                         #D1323F;
+  $red-light:                   lighten($red, 10%) !default;
+  $red-dark:                    darken($red, 10%) !default;
 
-  --color-black:                #222228;
-  --color-gray-4:               #6F6F75;
-  --color-gray-3-dark:          #B4B4B8;
-  --color-gray-3:               #E1E1E7;
-  --color-gray-2:               #EEEEF4;
-  --color-gray-1:               #F3F3F9;
-  --color-white:                #FFFFFF;
+  $black:                       #222228;
+  $gray-4:                      #6F6F75;
+  $gray-3-dark:                 #B4B4B8;
+  $gray-3:                      #E1E1E7;
+  $gray-2:                      #EEEEF4;
+  $gray-1:                      #F3F3F9;
+  $white:                       #FFFFFF;
 
   /* Primary and Accent */
-  --color-primary:              var(--color-purple);
-  --color-primary-light:        var(--color-purple-light);
-  --color-primary-dark:         var(--color-purple-dark);
+  $color-primary:               $purple;
+  $color-primary-light:         $purple-light;
+  $color-primary-dark:          $purple-dark;
 
-  --color-accent:               var(--color-blue);
-  --color-accent-light:         var(--color-blue-light);
-  --color-accent-dark:          var(--color-blue-dark);
+  $color-accent:                $blue;
+  $color-accent-light:          $blue-light;
+  $color-accent-dark:           $blue-dark;
 
   /* Semantic */
-  --color-success:              var(--color-green);
-  --color-warning:              var(--color-orange);
-  --color-error:                var(--color-red);
+  $color-success:               $green;
+  $color-warning:               $orange;
+  $color-error:                 $red;
 
   /* Border */
-  --color-border:               var(--color-gray-3);
+  $color-border:                $gray-3;
 
   /* Hover/Selectable */
-  --color-hover:                var(--color-gray-1);
+  $color-hover:                 $gray-1;
 
   /* Body Background */
-  --color-background:           var(--color-gray-2);
+  $color-background:            $gray-2;
 
   /* Typography */
-  --color-text:                 var(--color-black);
-  --color-subtext:              var(--color-gray-4);
-  --color-link:                 var(--color-accent);
-  --color-link-visted:          var(--color-accent-dark);
+  $color-text:                  $black;
+  $color-subtext:               $gray-4;
+  $color-link:                  $color-accent;
+  $color-link-visted:           $color-accent-dark;
 
   /* Forms */
-  --form-element-border:        var(--color-border);
-  --form-element-border-focus:  var(--color-accent);
-  --form-element-border-error:  var(--color-error);
-  --form-element-bg:            var(--color-white);
-  --form-text-placeholder:      var(--color-subtext);
+  $form-element-border:         $color-border;
+  $form-element-border-focus:   $color-accent;
+  $form-element-border-error:   $color-error;
+  $form-element-bg:             $white;
+  $form-text-placeholder:       $color-subtext;
 
   /* Buttons */
-  --btn-primary-bg:             var(--color-primary);
-  --btn-primary-hover:          var(--color-primary-dark);
-  --btn-primary-text:           var(--color-white);
+  $btn-primary-bg:              $color-primary;
+  $btn-primary-hover:           $color-primary-dark;
+  $btn-primary-text:            $white;
 
-  --btn-gray-bg:                var(--color-gray-3);
-  --btn-gray-hover:             var(--color-gray-3-dark);
-  --btn-gray-text:              var(--color-gray-4);
+  $btn-gray-bg:                 $gray-3;
+  $btn-gray-hover:              $gray-3-dark;
+  $btn-gray-text:               $black;
 
   /* Icons */
-  --color-icon-primary:         var(--color-subtext);
-}
+  $color-icon-primary:          $color-subtext;
