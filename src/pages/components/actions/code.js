@@ -132,10 +132,10 @@ class ActionsCode extends React.Component {
           <div className="example-container">
             <div className="card">
               <div className="card-content">
-                <button className="button">Blue</button>
-                <button className="button button--border">Blue</button>
-                <button className="button button--transparent">Blue</button>
-                <button className="button button--icon">
+                <button className="button button--blue">Blue</button>
+                <button className="button button--blue button--border">Blue</button>
+                <button className="button button--blue button--transparent">Blue</button>
+                <button className="button button--blue button--icon">
                   <i className="dashing-icon dashing-icon--pencil"></i>
                 </button>
                 <button className="button button--blue button--icon button--transparent">

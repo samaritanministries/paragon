@@ -103,7 +103,7 @@ fieldset {
       margin: 0;
 
       &.button--border {
-        @include border--button($gray-150); //makes button border the same color as the input
+        @include border--button(var(--form-element-border), var(--color-gray-3-dark)); //makes button border the same color as the input
         color: $gray-500;
         .dashing-icon:before {
           color: $gray-500;

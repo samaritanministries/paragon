@@ -5,23 +5,24 @@
   --color-purple-dark:          #474360;
 
   --color-blue:                 #097CBF;
-  --color-blue-light:           ;
-  --color-blue-dark:            ;
+  --color-blue-light:           #3A96CB;
+  --color-blue-dark:            #076398;
 
   --color-green:                #00875D;
-  --color-green-light:          ;
-  --color-green-dark:           ;
+  --color-green-light:          #339F7C;
+  --color-green-dark:           #006C49;
 
   --color-orange:               #F8652A;
-  --color-orange-light:         ;
-  --color-orange-dark:          ;
+  --color-orange-light:         #F98354;
+  --color-orange-dark:          #C65021;
 
   --color-red:                  #D1323F;
-  --color-red-light:            ;
-  --color-red-dark:             ;
+  --color-red-light:            #DA5B65;
+  --color-red-dark:             #A72832;
 
   --color-black:                #222228;
   --color-gray-4:               #6F6F75;
+  --color-gray-3-dark:          #B4B4B8;
   --color-gray-3:               #E1E1E7;
   --color-gray-2:               #EEEEF4;
   --color-gray-1:               #F3F3F9;
@@ -67,6 +68,10 @@
   --btn-primary-bg:             var(--color-primary);
   --btn-primary-hover:          var(--color-primary-dark);
   --btn-primary-text:           var(--color-white);
+
+  --btn-gray-bg:                var(--color-gray-3);
+  --btn-gray-hover:             var(--color-gray-3-dark);
+  --btn-gray-text:              var(--color-gray-4);
 
   /* Icons */
   --color-icon-primary:         var(--color-subtext);
