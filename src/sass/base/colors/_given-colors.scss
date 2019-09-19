@@ -1,59 +1,59 @@
 
   /* Base Colors */
-  $purple:                      #595478 !default;
-  $purple-light:                lighten($purple, 10%) !default;
-  $purple-dark:                 darken($purple, 10%) !default;
+  $color-purple:                      #595478 !default;
+  $color-purple-light:                lighten($color-purple, 10%) !default;
+  $color-purple-dark:                 darken($color-purple, 10%) !default;
 
-  $blue:                        #097CBF;
-  $blue-light:                  lighten($blue, 10%) !default;
-  $blue-dark:                   darken($blue, 10%) !default;
+  $color-blue:                        #097CBF;
+  $color-blue-light:                  lighten($color-blue, 10%) !default;
+  $color-blue-dark:                   darken($color-blue, 10%) !default;
 
-  $green:                       #00875D;
-  $green-light:                 lighten($green, 10%) !default;
-  $green-dark:                  darken($green, 10%) !default;
+  $color-green:                       #00875D;
+  $color-green-light:                 lighten($color-green, 10%) !default;
+  $color-green-dark:                  darken($color-green, 10%) !default;
 
-  $orange:                      #F8652A;
-  $orange-light:                lighten($orange, 10%) !default;
-  $orange-dark:                 darken($orange, 10%) !default;
+  $color-orange:                      #F8652A;
+  $color-orange-light:                lighten($color-orange, 10%) !default;
+  $color-orange-dark:                 darken($color-orange, 10%) !default;
 
-  $red:                         #D1323F;
-  $red-light:                   lighten($red, 10%) !default;
-  $red-dark:                    darken($red, 10%) !default;
+  $color-red:                         #D1323F;
+  $color-red-light:                   lighten($color-red, 10%) !default;
+  $color-red-dark:                    darken($color-red, 10%) !default;
 
-  $black:                       #222228;
-  $gray-4:                      #6F6F75;
-  $gray-3-dark:                 #B4B4B8;
-  $gray-3:                      #E1E1E7;
-  $gray-2:                      #EEEEF4;
-  $gray-1:                      #F3F3F9;
-  $white:                       #FFFFFF;
+  $color-black:                       #222228;
+  $color-gray-4:                      #6F6F75;
+  $color-gray-3-dark:                 #B4B4B8;
+  $color-gray-3:                      #E1E1E7;
+  $color-gray-2:                      #EEEEF4;
+  $color-gray-1:                      #F3F3F9;
+  $color-white:                       #FFFFFF;
 
   /* Primary and Accent */
-  $color-primary:               $purple;
-  $color-primary-light:         $purple-light;
-  $color-primary-dark:          $purple-dark;
+  $color-primary:               $color-purple;
+  $color-primary-light:         $color-purple-light;
+  $color-primary-dark:          $color-purple-dark;
 
-  $color-accent:                $blue;
-  $color-accent-light:          $blue-light;
-  $color-accent-dark:           $blue-dark;
+  $color-accent:                $color-blue;
+  $color-accent-light:          $color-blue-light;
+  $color-accent-dark:           $color-blue-dark;
 
   /* Semantic */
-  $color-success:               $green;
-  $color-warning:               $orange;
-  $color-error:                 $red;
+  $color-success:               $color-green;
+  $color-warning:               $color-orange;
+  $color-error:                 $color-red;
 
   /* Border */
-  $color-border:                $gray-3;
+  $color-border:                $color-gray-3;
 
   /* Hover/Selectable */
-  $color-hover:                 $gray-1;
+  $color-hover:                 $color-gray-1;
 
   /* Body Background */
-  $color-background:            $gray-2;
+  $color-background:            $color-gray-2;
 
   /* Typography */
-  $color-text:                  $black;
-  $color-subtext:               $gray-4;
+  $color-text:                  $color-black;
+  $color-subtext:               $color-gray-4;
   $color-link:                  $color-accent;
   $color-link-visted:           $color-accent-dark;
 
@@ -61,17 +61,17 @@
   $form-element-border:         $color-border;
   $form-element-border-focus:   $color-accent;
   $form-element-border-error:   $color-error;
-  $form-element-bg:             $white;
+  $form-element-bg:             $color-white;
   $form-text-placeholder:       $color-subtext;
 
   /* Buttons */
   $btn-primary-bg:              $color-primary;
   $btn-primary-hover:           $color-primary-dark;
-  $btn-primary-text:            $white;
+  $btn-primary-text:            $color-white;
 
-  $btn-gray-bg:                 $gray-3;
-  $btn-gray-hover:              $gray-3-dark;
-  $btn-gray-text:               $black;
+  $btn-gray-bg:                 $color-gray-3;
+  $btn-gray-hover:              $color-gray-3-dark;
+  $btn-gray-text:               $color-black;
 
   /* Icons */
   $color-icon-primary:          $color-subtext;
