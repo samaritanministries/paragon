@@ -3,7 +3,7 @@
 
 $buttons: ".button, button, input[type='submit'], input[type='reset']";
 $button-disabled: "&[disabled], &.disabled, &.button--disabled";
-$action--focus: $blue-300 !default;
+$action--focus: $color-blue-light !default;
 
 /* Actions Extendables
   =========================================================================== */
@@ -204,7 +204,7 @@ $action--focus: $blue-300 !default;
   }
 
   &.button--transparent { //makes default transparent button icon gray, rather than blue
-    @include transparent--button($color: $gray-700);
+    @include transparent--button($color-icon-primary);
   }
 }
 

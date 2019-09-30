@@ -49,7 +49,7 @@ $tag-hover-rules: "&:not(.tag--no-link):hover .tag, &:not(.tag--no-link):focus .
 	&.tag--purple 	  { @include tag--action($color: $purple) }
 	&.tag--red    	  { @include tag--action($color: $red) }
 	&.tag--white  	  { @include tag--action($color: $white) }
-	&.tag--black    	  { @include tag--action($color: $ui-black) }
+	&.tag--black    	{ @include tag--action($color: $ui-black) }
 }
 
 .tag--solid {
