@@ -22,8 +22,8 @@
 
   $color-black:                       #222228 !default;
   $color-gray-4:                      #6F6F75 !default;
-  $color-gray-3-dark:                 #B4B4B8 !default;
   $color-gray-3:                      #E1E1E7 !default;
+  $color-gray-3-dark:                 darken($color-gray-3, 10%) !default;
   $color-gray-2:                      #EEEEF4 !default;
   $color-gray-1:                      #F3F3F9 !default;
   $color-white:                       #FFFFFF !default;
@@ -65,13 +65,16 @@
   $form-text-placeholder:       $color-subtext;
 
   /* Buttons */
-  $btn-primary-bg:              $color-primary;
-  $btn-primary-hover:           $color-primary-dark;
-  $btn-primary-text:            $color-white;
+  $button-primary-bg:           $color-primary;
+  $button-primary-hover:        $color-primary-dark;
+  $button-primary-text:         $color-white;
 
-  $btn-gray-bg:                 $color-gray-3;
-  $btn-gray-hover:              $color-gray-3-dark;
-  $btn-gray-text:               $color-black;
+  $button-gray-bg:              $color-gray-3;
+  $button-gray-hover:           $color-gray-3-dark;
+  $button-gray-text:            $color-black;
 
   /* Icons */
   $color-icon-primary:          $color-subtext;
+
+  /* Shadows */
+  $color-shadow:                #3c4043;

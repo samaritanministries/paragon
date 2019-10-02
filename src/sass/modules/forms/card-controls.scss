@@ -1,5 +1,7 @@
-$card-checkbox--active: $blue !default; //Color of checkbox and card when checked
-$card-checkbox--focus: $blue-300 !default; //Color of border around card-checkbox when focused
+$card-checkbox--active: $color-blue !default; //Color of checkbox and card when checked
+$card-checkbox--focus: $color-blue-light !default; //Color of border around card-checkbox when focused
+$card-disabled-background: $color-gray-3 !default;
+$card-disabled-border: $color-gray-4 !default;
 $card-checkbox--padding: 1rem !default; //Padding of checkbox
 
 .checkbox-card { @extend .checkbox--custom; }
@@ -56,14 +58,14 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
   input[disabled]:active ~ label,
   input[disabled]:checked ~ label { //disabled cards
     cursor: default;
-    background-color: $gray-200;
-    border-color: $gray-200;
+    background-color: $card-disabled-background;
+    border-color: $card-disabled-background;
     pointer-events: none;
     opacity: 0.4;
-    color: $gray-700;
+    color: $color-text;
     &:before {
-      border-color: $gray-400 !important;
-      background-color: $gray-200 !important;
+      border-color: $card-disabled-border !important;
+      background-color: $card-disabled-background !important;
     }
   }
 

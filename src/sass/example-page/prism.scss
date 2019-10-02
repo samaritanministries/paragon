@@ -24,13 +24,13 @@ $tablet:        "all and (min-width: 40em)" !default;
 }
 
 .example-container {
-	background-color: $white;
-	border: 2px solid $gray-150;
+	background-color: $color-white;
+	border: 2px solid $color-border;
 	border-radius: 8px 8px 0 0;
 	border-bottom: none;
 
 	.grid & {
-		background-color: $gray-50;
+		background-color: $color-background;
 		border-color: transparent !important;
 		padding: $space-l;
 		border-radius: 8px; //temp
@@ -67,7 +67,7 @@ $tablet:        "all and (min-width: 40em)" !default;
 	}
 }
 
-.page-header { 
+.page-header {
   // background-color: $gray-200;
 	background-color: #393e41;
 	line-height: 1.7rem;

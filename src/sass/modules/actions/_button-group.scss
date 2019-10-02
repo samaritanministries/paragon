@@ -1,5 +1,5 @@
 @mixin button-group($background-color, $color) {
-  .button { @include button(var(--color-primary), var(--color-primary-dark), var(--white)); }
+  .button { @include button($color-primary, $color-primary-dark, $color-white); }
   input:checked ~ label { //active state of button-group
     background-color: darken($background-color, 10%);
     border-color: darken($background-color, 10%);

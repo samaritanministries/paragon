@@ -15,7 +15,7 @@
   }
 
   .button--banner {
-    // @include button($gray-400, $white);
+    //@include button($gray-400, $color-white);
     @extend %button--smooth;
     position: absolute;
     top: 2.15rem;
@@ -25,7 +25,7 @@
 
 .card-banner {
   align-items: baseline;
-  background-color: #D4D4D4;
+  background-color: $color-gray-3;
   display: flex;
   padding: $grid-gutter;
   margin: 0 -#{$grid-gutter};
@@ -53,18 +53,18 @@
 
   &.has-success,
   &.has-error {
-    p { color: $white; }
-    .dashing-icon:before { color: $white;}
+    p { color: $color-white; }
+    .dashing-icon:before { color: $color-white;}
   }
 
   &.has-warning {
-    p { color: $black; }
-    .dashing-icon:before { color: $black;}
+    p { color: $color-black; }
+    .dashing-icon:before { color: $color-black;}
   }
 
-  &.has-success { background-color: $green; }
-  &.has-warning { background-color: $orange; }
-  &.has-error   { background-color: $red; }
+  &.has-success { background-color: $color-green; }
+  &.has-warning { background-color: $color-orange; }
+  &.has-error   { background-color: $color-red; }
 
   .dashing-icon { margin-right: 0.5rem; }
 

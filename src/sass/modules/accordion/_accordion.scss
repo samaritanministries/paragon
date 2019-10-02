@@ -19,7 +19,7 @@
     i.accordion-arrow {
       transition: transform 0.1s linear;
       @extend .dashing-icon--arrow-right;
-      &:before { color: $black; }
+      &:before { color: $color-black; }
     }
 
     .title,
@@ -34,13 +34,13 @@
     }
 
     &:hover {
-      background-color: $gray-50;
+      background-color: $color-hover;
     }
 
   }
   .accordion-content {
     @extend .card-content;
-    border-top: 2px solid $gray-100;
+    border-top: 2px solid $color-border;
     display: none;
   }
 
