@@ -448,6 +448,46 @@ Code tab color sass
   }
 }
 
+.color-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.color-square {
+  height: 75px;
+  width: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-right: $space-xs;
+  margin-bottom: $space-xs;
+
+  input {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    margin: -1rem;
+    outline: none;
+  }
+
+  &.color-purple { background-color: $color-purple; color: $color-white; }
+  &.color-blue { background-color: $color-blue; color: $color-white; }
+  &.color-green { background-color: $color-green; color: $color-white; }
+  &.color-orange { background-color: $color-orange; color: $color-white; }
+  &.color-red { background-color: $color-red; color: $color-white; }
+
+  &.color-black { background-color: $color-black; color: $color-white; }
+  &.color-gray-4 { background-color: $color-gray-4; color: $color-white; }
+  &.color-gray-3 { background-color: $color-gray-3; color: $color-black; }
+  &.color-gray-2 { background-color: $color-gray-2; color: $color-black; }
+  &.color-gray-1 { background-color: $color-gray-1; color: $color-black; }
+}
+
 .example-flex .column-flex {
   &.gray-50  { background-color: $gray-50;  color: $gray-900; }
   &.gray-100 { background-color: $gray-100; color: $gray-900; }

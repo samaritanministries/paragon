@@ -1,3 +1,12 @@
+$color-input-border:          $color-border;
+$color-input-border-focus:    $color-blue;
+$color-input-disabled:        $color-gray-2;
+
+$color-input-border-error:    $color-red-light;
+$color-input-text-error:      $color-red;
+$color-input-border-warning:  $color-orange-light;
+$color-input-text-warning:    $color-orange;
+
 $inputs: 'select, textarea,input[type="date"],input[type="time"],input[type="email"],input[type="month"],input[type="number"],input[type="password"],input[type="tel"],input[type="text"]';
 
 fieldset {
@@ -25,8 +34,8 @@ fieldset {
   #{$inputs} {
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-color: $white;
-    border: 2px solid $gray-150;
+    background-color: $color-white;
+    border: 2px solid $color-input-border;
     border-radius: 5px;
     font-size: $font-size-normal;
     max-width: 100%;
@@ -35,15 +44,15 @@ fieldset {
     margin-bottom: $space-m;
 
     &:focus {
-      border-color: $blue;
+      border-color: $color-input-border-focus;
       outline-color: transparent;
       outline-style: none;
     }
 
     //Adds light gray background color to disabled inputs
     &[disabled] {
-      background-color: $gray-100 !important;
-      border-color: $gray-100 !important;
+      background-color: $color-input-disabled !important;
+      border-color: $color-input-disabled !important;
       cursor: default !important;
     }
   }
@@ -103,10 +112,10 @@ fieldset {
       margin: 0;
 
       &.button--border {
-        @include border--button(var(--form-element-border), var(--color-gray-3-dark)); //makes button border the same color as the input
-        color: $gray-500;
+        @include border--button($color-border, $color-gray-3-dark); //makes button border the same color as the input
+        color: $color-icon-primary;
         .dashing-icon:before {
-          color: $gray-500;
+          color: $color-icon-primary;
         }
       }
     }
@@ -118,7 +127,7 @@ fieldset {
     position: relative;
     &:after {
       content: '\e800';
-      color: $gray-400;
+      color: $color-icon-primary;
       font-family: 'dashing-icons';
       font-size: 12px;
       font-weight: 600;
@@ -134,8 +143,8 @@ fieldset {
       }
     }
 
-    &.has-error:after { color: $red-400; }
-    &.has-warning:after { color: $orange-400; }
+    &.has-error:after { color: $color-input-text-error; }
+    &.has-warning:after { color: $color-input-text-warning; }
 
     &.column--nested {
       &:after { right: 1.5rem; bottom: 1.5rem; }
@@ -152,7 +161,7 @@ fieldset {
   &.is-optional {
     label::after {
       content: "(Optional)";
-      color: $gray-500;
+      color: $color-subtext;
       font-weight: $font-weight-normal;
       margin-left: $space-xxs;
     }
@@ -164,7 +173,7 @@ fieldset {
 
 fieldset {
   .message {
-    color: $gray-800;
+    color: $color-subtext;
     font-size: $font-size-small;
     list-style: none;
     margin: 0;
@@ -179,16 +188,16 @@ fieldset {
   &.has-error,
   .has-error {
     label, #{$inputs} {
-      color: $red;
-      border-color: $red-200;
+      color: $color-input-text-error;
+      border-color: $color-input-border-error;
     }
 
     #{$inputs} {
-      &:focus { border-color: $red; }
+      &:focus { border-color: $color-input-text-error; }
     }
 
     .message {
-      color: $red;
+      color: $color-input-text-error;
       .dashing-icon { @extend .dashing-icon--red; }
     }
   }
@@ -197,16 +206,16 @@ fieldset {
   &.has-warning,
   .has-warning {
     label, #{$inputs} {
-      color: $orange;
-      border-color: $orange-300;
+      color: $color-input-text-warning;
+      border-color: $color-input-border-warning;
     }
 
     #{$inputs} {
-      &:focus { border-color: $orange; }
+      &:focus { border-color: $color-input-text-warning; }
     }
 
     .message {
-      color: $orange;
+      color: $color-input-text-warning;
       .dashing-icon { @extend .dashing-icon--orange; }
     }
   }
