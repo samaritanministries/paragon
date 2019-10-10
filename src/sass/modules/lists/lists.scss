@@ -12,8 +12,8 @@
       content: counter(step-counter); /* Displays the value of 'step-counter' */
       margin-right: $grid-gutter/2;
       font-size: 1rem;
-      background-color: $gray-200;
-      color: $black;
+      background-color: $color-gray-3;
+      color: $color-black;
       font-weight: $font-weight-semibold;
       padding: .3rem .7rem;
       border-radius: 50%;
@@ -26,7 +26,7 @@
     text-indent: 2.5rem;
   }
   //Example: Custom Colored Lists
-  &.ordered-list--sharing-blue {
-    @include ordered-list($sharing-blue, $white);
+  &.ordered-list--color-blue {
+    @include ordered-list($color-blue, $color-white);
   }
 }
