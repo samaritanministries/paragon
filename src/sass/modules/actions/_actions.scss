@@ -3,7 +3,7 @@
 
 $buttons: ".button, button, input[type='submit'], input[type='reset']";
 $button-disabled: "&[disabled], &.disabled, &.button--disabled";
-$action--focus: $color-blue-light !default;
+$action--focus: $color-focus !default;
 
 /* Actions Extendables
   =========================================================================== */
