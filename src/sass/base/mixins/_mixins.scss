@@ -78,9 +78,9 @@
   &:hover, &:focus, &:active {
     background-color: $background-color-dark;
     border-color: transparentize(white, 1);
-    color: $white;
+    color: $color-white;
     .dashing-icon:before {
-      color: $white;
+      color: $color-white;
       transition: all 50ms ease-in-out;
     }
   }

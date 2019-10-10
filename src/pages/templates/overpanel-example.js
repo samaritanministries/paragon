@@ -12,7 +12,7 @@ export default () => (
 					<h2 className="title">Overpanel Title</h2>
 					<p>Overpanel description</p>
 				</div>
-				<Link to={"/components/overpanel/code"}>
+				<Link to={"/components/overpanel/code"} tabIndex="-1">
 					<button className="button button--secondary"><i className="dashing-icon dashing-icon--close"></i> Close</button>
 				</Link>
 			</div>
