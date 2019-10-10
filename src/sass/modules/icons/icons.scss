@@ -14,7 +14,7 @@
   &:before {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: $gray-700;
+    color: $color-icon-primary;
     display: inline-block;
     font-family: "dashing-icons";
     font-size: 16px;
@@ -48,25 +48,15 @@
     margin: 0;
   }
 
-  &.dashing-icon--white:before  { color: $white; }
-  &.dashing-icon--black:before  { color: $black; }
-  &.dashing-icon--blue:before   { color: $blue-600; }
-  &.dashing-icon--gray:before, 
-  &.dashing-icon--grey:before   { color: $gray; }
-  &.dashing-icon--green:before  { color: $green; }
-  &.dashing-icon--orange:before { color: $orange; }
-  &.dashing-icon--red:before    { color: $red; }
-  &.dashing-icon--purple:before { color: $purple; }
-
-  //ui-colors
-  &.dashing-icon--ui-black:before  { color: $ui-black; }
-  &.dashing-icon--ui-blue:before   { color: $ui-blue; }
-  &.dashing-icon--ui-green:before  { color: $ui-green; }
-  &.dashing-icon--ui-red:before    { color: $ui-red; }
-  &.dashing-icon--ui-orange:before { color: $ui-orange; }
-
-  //brand-colors
-  &.dashing-icon--brand-purple:before { color: $ui-purple; }
+  &.dashing-icon--white:before  { color: $color-white; }
+  &.dashing-icon--black:before  { color: $color-black; }
+  &.dashing-icon--blue:before   { color: $color-blue; }
+  &.dashing-icon--gray:before,
+  &.dashing-icon--grey:before   { color: $color-gray-3; }
+  &.dashing-icon--green:before  { color: $color-green; }
+  &.dashing-icon--orange:before { color: $color-orange; }
+  &.dashing-icon--red:before    { color: $color-red; }
+  &.dashing-icon--purple:before { color: $color-purple; }
 
   //icon font codes
 
@@ -88,7 +78,7 @@
   &.dashing-icon--info-stroke:before      { content: '\e810'; } /* '' */
   &.dashing-icon--location:before         { content: '\e811'; } /* '' */
   &.dashing-icon--locked:before           { content: '\e812'; } /* '' */
-  &.dashing-icon--minus:before, 
+  &.dashing-icon--minus:before,
   &.dashing-icon--zoom-out:before         { content: '\e814'; } /* '' */
   &.dashing-icon--new-tab:before          { content: '\e815'; } /* '' */
   &.dashing-icon--notification:before     { content: '\e816'; } /* '' */
@@ -96,8 +86,8 @@
   &.dashing-icon--pencil:before           { content: '\e818'; } /* '' */
   &.dashing-icon--phone:before            { content: '\e819'; } /* '' */
   &.dashing-icon--play:before             { content: '\e81b'; } /* '' */
-  &.dashing-icon--plus:before,  
-  &.dashing-icon--add:before, 
+  &.dashing-icon--plus:before,
+  &.dashing-icon--add:before,
   &.dashing-icon--zoom-in:before          { content: '\e81c'; } /* '' */
   &.dashing-icon--pull:before             { content: '\e81d'; } /* '' */
   &.dashing-icon--push:before             { content: '\e81e'; } /* '' */
@@ -127,7 +117,7 @@
   &.dashing-icon--alert-stroke:before     { content: '\e837'; } /* '' */
   &.dashing-icon--alert-filled:before     { content: '\e838'; } /* '' */
   &.dashing-icon--add-person:before       { content: '\e839'; } /* '' */
-  
+
   //Below Added on Jan 15, 2018
   &.dashing-icon--inbox:before            { content: '\e83d'; } /* '' */
   &.dashing-icon--face-amazing:before     { content: '\e83e'; } /* '' */
