@@ -12,7 +12,8 @@
 /* Icon Extendables
 =========================================================================== */
 //TO DO: Add more colors for icons
-%icon-white { i:before { color: $white !important; } }
+%icon-white { i:before { color: $color-white !important; } }
+%icon-purple { i:before { color: $color-purple !important; } }
 
 /* Shadow Extendables
 =========================================================================== */
