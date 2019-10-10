@@ -44,7 +44,6 @@ class ColorCode extends React.Component {
     </header>
     <AppContent>
       <div className="grid grid-padding">
-        <h2>Color Theme</h2>
 
       <div className="mb-space-m">
         <h3 className="mb-space-xs">Primary</h3>
@@ -69,6 +68,14 @@ class ColorCode extends React.Component {
           <div className="color-square color-gray-3">$color-gray-3</div>
           <div className="color-square color-gray-2">$color-gray-2</div>
           <div className="color-square color-gray-1">$color-gray-1</div>
+          <div className="color-square color-white">$color-white</div>
+        </div>
+      </div>
+
+      <div className="mb-space-m">
+        <h3 className="mb-space-xs">Gradient</h3>
+        <div className="color-group">
+          <div className="color-rectangle color-gradient">$color-gradient</div>
         </div>
       </div>
 

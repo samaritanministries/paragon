@@ -142,7 +142,7 @@ class Sidebar extends React.Component {
                 <Link to="/components/footer/code">Footer</Link>
                 <Link to="/components/forms/code">Forms</Link>
                 <Link to="/components/css-grid/code" id="css-grid">CSS Grid</Link>
-                <Link to="/components/grid/code">Grid</Link>
+                {/* <Link to="/components/grid/code">Grid</Link> */}
                 <Link to="/components/icons/code">Icons</Link>
                 <Link to="/components/lists/code">Lists</Link>
                 <Link to="/components/modal/code">Modal</Link>

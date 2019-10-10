@@ -266,11 +266,11 @@ h2 {
     &:after {
       content: "Add to URL";
     }
-    width: auto;
+    width: 120px;
     pointer-events: initial;
     transition: all 0.25s;
     opacity: 1;
-    text-align: left;
+    text-align: center;
     margin-left: 1rem !important;
     display: inline;
 
@@ -295,7 +295,7 @@ h2 {
           }
           color: $color-green;
         }
-      width: 100px;
+      width: 120px;
       pointer-events: initial;
       opacity: 1;
     }
@@ -396,33 +396,19 @@ h2 {
   cursor: pointer;
   border: 2px solid transparent;
   &.active {
-    background-color: #E0E0E0;
-    border: 2px solid $brand-2;
+    background-color: $color-background;
+    border: 2px solid $color-blue;
   }
 }
 
-.example--icon-container:hover { background-color: #E0E0E0; }
+.example--icon-container:hover { background-color: $color-background; }
 .example--icon-container .dashing-icon:before { font-size: 32px; }
 
 .example--caption {
-  color: #555555;
+  color: $color-subtext;
   display: block;
   font-size: 12px;
   margin-top: 1rem;
-}
-
-/* Navigation Page
-  ================================================== */
-
-.example-page--app-navigation {
-  li a {
-    color: #FFFFFF !important;
-    opacity: 0.7;
-    &.active { border-bottom-color: #FFFFFF; opacity: 1; color: #FFFFFF !important; }
-  }
-}
-.app-menu .app-context .app-title .button--navigation.example-button--navigation:before {
-  color: #FFFFFF !important;
 }
 
 .hide-HTML-code {
@@ -474,28 +460,6 @@ h2 {
     height: 500px;
     margin-top: -2rem;
     padding-bottom: 0;
-  }
-}
-
-/* Intro Page
-  ================================================== */
-
-.intro {
-  .hero {
-    padding: 2rem;
-    margin: 5rem 0 -1rem;
-  }
-
-  .note {
-    border-radius: 5px;
-    background-color: #DCDCDC;
-    color: #555;
-    padding: 1rem;
-  }
-
-  .underline {
-    border-bottom: 2px solid #6E6E6E;
-    padding-bottom: 0.1rem;
   }
 }
 
@@ -571,7 +535,7 @@ h2 {
 
 
 .resource-image-container {
-  background-color: $gray-150;
+  background-color: $color-background;
   border-radius: 8px;
   overflow: hidden;
   min-width: 94px;
@@ -598,7 +562,7 @@ h2 {
   ================================================== */
 
 footer {
-  background-color: $gray-50c;
+  background-color: $color-background;
   float: right;
   position: relative;
   width: 100%;
@@ -608,14 +572,6 @@ footer {
     display: inline-block;
     margin: $space-m;
   }
-}
-
-.img-placeholder {
-  background-color: $gray-200;
-  border-color: $gray-200;
-  height: 4rem;
-  width: 100%;
-  border-radius: 5px 5px 0 0;
 }
 
 .ex {
@@ -640,17 +596,12 @@ footer {
       left: 5rem;
     }
   }
-  &.card--blue .card-content:after { background: $blue; }
-  &.card--green .card-content:after { background: $green; }
-  &.card--red .card-content:after { background: $red; }
-  &.card--orange .card-content:after { background: $orange; }
-  &.card--purple .card-content:after { background: $purple; }
-  &.card--gray .card-content:after { background: $gray-200; }
-  &.card--brand-red .card-content:after { background: #E96A63; }
-  &.card--brand-purple .card-content:after { background: #72569B; }
-  &.card--brand-darkBlue .card-content:after { background: #28336D; }
-  &.card--brand-yellow .card-content:after { background: #F5CD66; }
-  &.card--brand-gray .card-content:after { background: #F1F2F2; }
+  &.card--blue .card-content:after { background: $color-blue; }
+  &.card--green .card-content:after { background: $color-green; }
+  &.card--red .card-content:after { background: $color-red; }
+  &.card--orange .card-content:after { background: $color-orange; }
+  &.card--purple .card-content:after { background: $color-purple; }
+  &.card--gray .card-content:after { background: $color-gray-3; }
 }
 
 .x-accessibility-group {
@@ -724,7 +675,7 @@ footer {
 
 .x-accessiblity-table {
   span, p, h2, .x-accessibility--white, .x-accessibility--black {
-    background-color: $gray-100;
+    background-color: $color-gray-2;
     display: inline-flex;
     align-items: center;
     padding: 0 $space-s;

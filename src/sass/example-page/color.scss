@@ -454,7 +454,8 @@ Code tab color sass
   align-items: center;
 }
 
-.color-square {
+.color-square,
+.color-rectangle {
   height: 75px;
   width: 125px;
   display: flex;
@@ -464,6 +465,8 @@ Code tab color sass
   border-radius: 5px;
   margin-right: $space-xs;
   margin-bottom: $space-xs;
+
+  &.color-gradient { width: calc((125px * 2) + #{$space-xs}); }
 
   input {
     background-color: transparent;
@@ -486,6 +489,9 @@ Code tab color sass
   &.color-gray-3 { background-color: $color-gray-3; color: $color-black; }
   &.color-gray-2 { background-color: $color-gray-2; color: $color-black; }
   &.color-gray-1 { background-color: $color-gray-1; color: $color-black; }
+  &.color-white { background-color: $color-white; color: $color-black; border: 2px solid $color-gray-2; }
+
+  &.color-gradient { background-image: $color-gradient; color: $color-white; }
 }
 
 .example-flex .column-flex {
