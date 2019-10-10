@@ -297,7 +297,7 @@ $green10: #78C696;
 .color--purple-900   { @include color-guide($purple-900, "#0F001C", "$purple-900"); }
 
 .card--header--color {
-  color: $white;
+  color: $color-white;
   font-weight: 600;
   font-size: $font-size-medium;
   padding: 0.5rem 0.7rem !important;
@@ -313,8 +313,8 @@ $green10: #78C696;
 .card--pass {
   background-color: $ui-green;
   border-color: $ui-green;
-  color: $white;
-  label, h2 { color: $white; }
+  color: $color-white;
+  label, h2 { color: $color-white; }
 }
 
 .color-input { position: relative; }
@@ -386,7 +386,7 @@ $green10: #78C696;
 
 .color-right, .card-color--small {
   label, span { display: block; }
-  label { font-size: .8rem; font-weight: 600; color: $black; margin-bottom: -0.5rem;}
+  label { font-size: .8rem; font-weight: 600; color: $color-black; margin-bottom: -0.5rem;}
   span { font-size: .9rem; }
 }
 
@@ -401,7 +401,7 @@ Code tab color sass
   overflow: auto;
 
   .column-flex {
-    color: $white;
+    color: $color-white;
     font-weight: 600;
     text-align: center;
     padding: 3rem 0;

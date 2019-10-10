@@ -10,7 +10,7 @@ $global-content-width: 800px !default;
 $sidebar-width:  13rem;
 
 //Give example pages gray background
-.app { background-color: $gray-100; }
+.app { background-color: $color-background; }
 
 .content--example-page {
   margin-top: $space-m !important;
@@ -28,9 +28,9 @@ $sidebar-width:  13rem;
 
 .example-sidebar {
   width: $sidebar-width;
-  background-color: $gray-100;
+  background-color: $color-background;
   line-height: 2rem;
-  border-right: 2px solid $gray-200;
+  border-right: 2px solid $color-border;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -56,7 +56,7 @@ $sidebar-width:  13rem;
     height: 81px;
     width: 170px;
     text-align: center;
-    background-color: $white;
+    background-color: $color-white;
     margin: 1rem auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 1rem;
@@ -65,11 +65,11 @@ $sidebar-width:  13rem;
   a {
     padding-left: 0.5rem;
     display: block;
-    color: $gray-700;
+    color: lighten($color-text, 20%);
   }
   .active {
-    color: $white;
-    background-color: $brand-blue;
+    color: $color-white;
+    background-color: $color-purple;
     border-radius: 5px;
   }
 
@@ -78,7 +78,7 @@ $sidebar-width:  13rem;
     cursor: pointer;
 
     &:last-of-type {
-      border-bottom: 2px solid $gray-200;
+      border-bottom: 2px solid $color-border;
     }
 
     &.expanded {
@@ -92,9 +92,9 @@ $sidebar-width:  13rem;
   .group-title {
     display: flex;
     align-items: center;
-    background-color: $white;
+    background-color: $color-white;
     padding: 0.3rem 1rem;
-    border-top: 2px solid $gray-200;
+    border-top: 2px solid $color-border;
     font-size: 1.1rem;
   }
 
@@ -105,11 +105,11 @@ $sidebar-width:  13rem;
   }
   .menu-group {
     padding: 0.5rem 1rem;
-    background-color: $gray-100;
+    background-color: $color-background;
     display: none;
     line-height: 1.9rem;
     font-size: 0.9rem;
-    border-top: 2px solid $gray-200;
+    border-top: 2px solid $color-border;
     &.expanded {
       display: block;
     }
@@ -121,7 +121,7 @@ $sidebar-width:  13rem;
   ================================================== */
 
 .splash-image {
-  background-image: linear-gradient(-45deg, $brand-blue, $brand-purple);
+  background-image: $color-gradient;
   height: 22rem;
   margin-top: -1rem;
   position: relative;
@@ -131,11 +131,11 @@ $sidebar-width:  13rem;
   }
   .splash-image--title {
     margin-bottom: 0.5rem;
-    color: $white;
+    color: $color-white;
   }
   .splash-image--subtitle {
     margin-bottom: 1rem;
-    color: $white;
+    color: $color-white;
   }
   .splash-image--title { font-size: 3rem; }
   button {
@@ -156,13 +156,13 @@ $sidebar-width:  13rem;
     display: none;
     height: 90px;
     width: 90px;
-    background-color: gray;
+    background-color: $color-gray-2;
     border-radius: 10px;
     margin-right: 1rem;
     @extend %shadow-50;
-    &.consistent { background-color: $brand-gray; }
-    &.clean { background-color: $brand-blue; }
-    &.confident { background-color: $brand-purple; }
+    &.consistent { background-color: $color-gray-2; }
+    &.clean { background-color: $color-blue; }
+    &.confident { background-color: $color-purple; }
     @media #{$tablet} {
       display: block;
     }
@@ -175,7 +175,7 @@ $sidebar-width:  13rem;
 }
 
 .app-content {
-  background-color: $white;
+  background-color: $color-white;
   @media all and (min-width: 40em) {
     margin-left: 13rem;
   }
@@ -197,12 +197,12 @@ $sidebar-width:  13rem;
 }
 
 .subnav {
-  background-color: $brand-blue;
-  box-shadow: 0 2px 6px $gray-200;
+  background-color: $color-purple;
+  box-shadow: 0 2px 6px $color-gray-3;
   h1 {
     max-width: $global-content-width;
     margin: auto;
-    color: $white;
+    color: $color-white;
     padding: 2rem 0;
     padding-left: 1rem;
   }
@@ -218,7 +218,7 @@ $sidebar-width:  13rem;
       margin-right: 1rem;
       padding-bottom: 0.3rem;
       &.active {
-        border-bottom: 4px solid white;
+        border-bottom: 4px solid $color-white;
       }
     }
   }
@@ -230,7 +230,7 @@ $sidebar-width:  13rem;
 .example-mobile-sidebar {
   .button--sidebar-icon {
     border-radius: 5px 0 0 5px;
-    background-color: $gray-100;
+    background-color: $color-gray-2;
     position: fixed;
     top: 1.9rem;
     right: 0;
@@ -266,13 +266,13 @@ h2 {
     &:after {
       content: "Add to URL";
     }
-      width: 100px;
-      pointer-events: initial;
-      transition: all 0.25s;
-      opacity: 1;
-      text-align: left;
-      margin-left: 1rem !important;
-      display: inline;
+    width: auto;
+    pointer-events: initial;
+    transition: all 0.25s;
+    opacity: 1;
+    text-align: left;
+    margin-left: 1rem !important;
+    display: inline;
 
     @media #{$tablet} {
       width: 0px;
@@ -280,6 +280,8 @@ h2 {
       white-space: nowrap;
       pointer-events: none;
       opacity: 0;
+      top: 0.7rem;
+      position: relative;
     }
   }
 
@@ -291,7 +293,7 @@ h2 {
           &:after {
             content: "Added to URL";
           }
-          color: $green-500;
+          color: $color-green;
         }
       width: 100px;
       pointer-events: initial;
@@ -664,7 +666,7 @@ footer {
   }
   .tag { min-width: 3rem; text-align: center; }
 }
-// 
+//
 // .x-button--blueWhite  {@include button($background-color: $blue, $color: $white); }
 // .x-button--whiteBlue  {@include button($background-color: $white, $color: $blue); }
 // .x-button--blueBlack  {@include button($background-color: $blue, $color: $black); }
@@ -798,11 +800,11 @@ footer {
   grid-gap: 0;
   .x-accessibility-color {
     &White {
-      background-color: $white;
+      background-color: $color-white;
     }
     &Black {
       background-color: $gray-900;
-      h2, p { color: $white; }
+      h2, p { color: $color-white; }
     }
   }
   .x-accessibility-color {

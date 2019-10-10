@@ -18,7 +18,7 @@ $yellow-500:    #F2E670;
 $tablet:        "all and (min-width: 40em)" !default;
 
 .example-body {
-	background-color: $white;
+	background-color: $color-white;
 	font-size: 18px;
 	margin: auto;
 }
@@ -75,7 +75,7 @@ $tablet:        "all and (min-width: 40em)" !default;
   padding: 2rem 1rem;
   margin-bottom: 1rem;
   h1 {
-		color: $white;
+		color: $color-white;
     font-weight: 600;
     margin: 0;
   }
@@ -88,7 +88,7 @@ $tablet:        "all and (min-width: 40em)" !default;
 code[class*="language-"],
 pre[class*="language-"] {
 	border-radius: 5px;
-  color: $white;
+  color: $color-white;
   font-family: monaco, 'Inconsolata', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
@@ -319,7 +319,7 @@ pre.line-numbers > code {
 
   &:hover {
     background-color: #313538;
-    &:after { color: $white; }
+    &:after { color: $color-white; }
     .icon--code {
       background-image: url(../../img/icon--code.svg);
     }
@@ -336,7 +336,7 @@ pre.line-numbers > code {
     border-radius: 5px 5px 0 0;
     .icon--code { background-image: url(../../img/icon--code.svg); }
     &:after {
-      color: $white;
+      color: $color-white;
       content: "HIDE CODE";
 			font-weight: 600;
     }

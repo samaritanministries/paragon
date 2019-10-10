@@ -30,7 +30,7 @@ $container-colors: transparent;//#413552
 
   @media #{$tablet} {
     padding-left: 2rem;
-    color: $black;
+    color: $color-black;
   }
 }
 
@@ -39,12 +39,12 @@ $container-colors: transparent;//#413552
   width: auto;
   border-radius: 5px;
   padding: $space-xs;
-  color: $white;
+  color: $color-white;
 
   .profile-image {
     height: 2rem;
     width: 2rem;
-    background-color: $white;
+    background-color: $color-white;
     border-radius: 50%;
     position: relative;
     margin-right: $space-xs;
@@ -55,7 +55,7 @@ $container-colors: transparent;//#413552
       display: flex;
       align-items: center;
       justify-content: center;
-      color: $black;
+      color: $color-black;
     }
   }
 
@@ -85,7 +85,7 @@ $container-colors: transparent;//#413552
   	right: 1rem;
   	background-color: $red-500;
   	border-radius: 50px;
-  	color: $white;
+  	color: $color-white;
     font-weight: bold;
     padding: 0rem 0.25rem;
     text-align: center;

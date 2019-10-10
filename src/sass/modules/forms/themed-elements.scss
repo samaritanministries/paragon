@@ -169,7 +169,7 @@ $switch--off: $color-gray-2 !default; //Color of switch when off
 
     //Checkbox Active
     input:checked ~ label:before, input:active ~ label:before {
-      color: $white; //Checkbox Icon
+      color: $color-white; //Checkbox Icon
       background-color: $checkbox--color-warning; // Checkbox Active
       border: 2px solid $checkbox--color-warning; // Checkbox Active
     }
@@ -345,7 +345,7 @@ $switch--off: $color-gray-2 !default; //Color of switch when off
   //THUMB
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-color: $white;
+    background-color: $color-white;
     border: 2px solid $gray-200;
     width: 20px;
     height: 20px;
@@ -354,7 +354,7 @@ $switch--off: $color-gray-2 !default; //Color of switch when off
   }
 
   input[type="range"]::-moz-range-thumb {
-    background-color: $white;
+    background-color: $color-white;
     border: 2px solid $gray-200;
     width: 20px;
     height: 20px;
@@ -363,7 +363,7 @@ $switch--off: $color-gray-2 !default; //Color of switch when off
 
   input[type="range"]::-ms-thumb {
     -webkit-appearance: none;
-    background-color: $white;
+    background-color: $color-white;
     border: 2px solid $gray-200;
     width: 20px;
     height: 20px;
@@ -430,7 +430,7 @@ $switch--off: $color-gray-2 !default; //Color of switch when off
     width: 200%;
     margin-left: -100%;
     &:before, &:after {
-      color: $white;
+      color: $color-white;
       display: block;
       float: left;
       height: 2rem;
@@ -456,7 +456,7 @@ $switch--off: $color-gray-2 !default; //Color of switch when off
   //Inactive circle position
   .switch--handle {
     @include transition(all 0.05s ease-in 0s);
-    background-color: $white;
+    background-color: $color-white;
     border-radius: 50%;
     display: block;
     margin: 3px;

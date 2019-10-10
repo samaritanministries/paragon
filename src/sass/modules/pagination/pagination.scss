@@ -36,7 +36,7 @@
 
 .pagination li.is-active { //override for anchor tag hover
   .button {
-    &:hover, &:focus, &:active { color: $white; }
+    &:hover, &:focus, &:active { color: $color-white; }
   }
   .button--gray {
     &:hover, &:focus, &:active { color: $gray-800; }

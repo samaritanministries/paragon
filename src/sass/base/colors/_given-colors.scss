@@ -28,6 +28,9 @@
   $color-gray-1:                      #F3F3F9 !default;
   $color-white:                       #FFFFFF !default;
 
+  /* Gradient */
+  $color-gradient:                    linear-gradient(-45deg, #4d4677, #7175AA);
+
   /* Primary and Accent */
   $color-primary:               $color-purple !default;
   $color-primary-light:         $color-purple-light !default;

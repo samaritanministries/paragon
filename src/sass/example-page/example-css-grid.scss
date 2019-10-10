@@ -3,7 +3,7 @@ Display Compatibility Banner
 -------------------------------- */
 .grid-compatibility {
 	background-color: $red-500;
-	color: $white;
+	color: $color-white;
 	text-align: center;
 	padding: 1rem;
 	margin: -1rem 0rem;
@@ -24,7 +24,7 @@ Example App Mockups Below
 .grid-highlight-blue, .grid-highlight-blue > div {
     background-color: rgba(81, 116, 186, 0.5);
     border: 2px solid #6A8DD3;
-    color: $white;
+    color: $color-white;
     text-align: center;
     border-radius: 5px;
 }
@@ -32,7 +32,7 @@ Example App Mockups Below
 .grid-highlight-red, .grid-highlight-red > div {
     background-color: rgba(218, 61, 48, 0.5);
     border: 2px solid #DA3D30;
-    color: $white;
+    color: $color-white;
     text-align: center;
     border-radius: 5px;
 }
@@ -40,7 +40,7 @@ Example App Mockups Below
 .grid-highlight-green, .grid-highlight-green > div {
     background-color: rgba(9, 170, 102, 0.5);
     border: 2px solid #09AA66;
-    color: $white;
+    color: $color-white;
     text-align: center;
     border-radius: 5px;
 }
