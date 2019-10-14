@@ -16,7 +16,7 @@ i.paragon-clippy {
     margin: -0.6rem -0.4rem !important;
     padding: 0.6rem;
     border-radius: 50px;
-    &:hover { background-color: rgba(85, 85, 85, 0.1); }
+    &:hover { background-color: rgba($color-gray-4, 0.1); }
   }
 }
 
