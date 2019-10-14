@@ -394,12 +394,12 @@ h2 {
   cursor: pointer;
   border: 2px solid transparent;
   &.active {
-    background-color: #E0E0E0;
+    background-color: $white;
     border: 2px solid $brand-2;
   }
 }
 
-.example--icon-container:hover { background-color: #E0E0E0; }
+.example--icon-container:hover { background-color: $white; }
 .example--icon-container .dashing-icon:before { font-size: 32px; }
 
 .example--caption {
