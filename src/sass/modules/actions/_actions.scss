@@ -79,8 +79,6 @@ $action--focus: $color-focus !default;
   }
 
   //Button Color Options
-  // &.button--primary   { @include button(var(--button-primary-bg), var(--button-primary-hover), var(--button-primary-text)); }
-  // &.button--secondary { @include button--border(var(--color-accent), var(--color-accent-dark), var(--color-white)); }
   &.button--blue      { @include button($color-blue, $color-blue-dark, $color-white); }
   &.button--green     { @include button($color-green, $color-green-dark, $color-white); }
   &.button--orange    { @include button($color-orange, $color-orange-dark, $color-black); }
@@ -100,11 +98,10 @@ $action--focus: $color-focus !default;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
     }
-    //&.button--primary { @include transparent--button(var(--button-primary-bg)); }
-    // &.button--secondary { @include transparent--button(var(--color-gray-4)); }
     &.button--blue { @include transparent--button($color-blue); }
     &.button--gray,
-    &.button--grey { @include transparent--button($button-gray-text); }
+    &.button--grey,
+    &.button--secondary { @include transparent--button($button-gray-text); }
     &.button--green { @include transparent--button($color-green);
  }
     &.button--red { @include transparent--button($color-red); }
@@ -126,7 +123,6 @@ $action--focus: $color-focus !default;
       padding-left: calc(1rem - 2px);
       padding-right: calc(1rem - 2px);
     }
-    // &.button--primary { @include border--button(var(--button-primary-bg), var(--button-primary-hover)); }
     &.button--blue { @include border--button($color-blue, $color-blue-dark); }
     &.button--green { @include border--button($color-green, $color-green-dark); }
     &.button--red { @include border--button($color-red, $color-red-dark); }
