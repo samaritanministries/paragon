@@ -1,7 +1,8 @@
 $global-content-width: 800px !default;
 
 @import '../paragon.scss';
-@import 'color';
+// @import 'color';
+@import '../base/colors/given-colors';
 @import 'typography';
 @import 'image';
 @import 'prism';
@@ -706,66 +707,66 @@ footer {
     @extend .dashing-icon--checkmark;
     @extend .dashing-icon--green;
   }
-  .color--brand-purple { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $brand-purple; }
-  }
-  .color--brand-blue { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $brand-blue; }
-  }
-  .color--brand-red { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $brand-red; }
-  }
-  .color--brand-yellow { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $brand-yellow; }
-  }
-  .color--brand-gray { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $brand-gray; }
-  }
-  .color--blue { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $blue; }
-  }
-  //UI
-  .color--blue { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $blue; }
-  }
-  .color--green { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $green; }
-  }
-  .color--orange { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $orange; }
-  }
-  .color--red { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $red; }
-  }
-  .color--purple { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $purple; }
-  }
-  .color--gray { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $gray-200; }
-  }
+  // .color--brand-purple { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $brand-purple; }
+  // }
+  // .color--brand-blue { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $color-purple; }
+  // }
+  // .color--brand-red { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $brand-red; }
+  // }
+  // .color--brand-yellow { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $brand-yellow; }
+  // }
+  // .color--brand-gray { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $brand-gray; }
+  // }
+  // .color--blue { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $blue; }
+  // }
+  // //UI
+  // .color--blue { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $blue; }
+  // }
+  // .color--green { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $green; }
+  // }
+  // .color--orange { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $orange; }
+  // }
+  // .color--red { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $red; }
+  // }
+  // .color--purple { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $purple; }
+  // }
+  // .color--gray { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $color-gray-3; }
+  // }
 }
 
 .x-accessibility-color-container {
   border-radius: 5px;
-  border: $gray-150 1px solid;
+  border: 1px solid $color-border;
   grid-gap: 0;
   .x-accessibility-color {
     &White {
       background-color: $color-white;
     }
     &Black {
-      background-color: $gray-900;
+      background-color: $color-text;
       h2, p { color: $color-white; }
     }
   }
   .x-accessibility-color {
-    &OffWhite {
-      background-color: $gray-300;
-      h2, p { color: $gray-500; }
-    }
     &OffBlack {
-      background-color: $gray-500;
-      h2, p { color: $gray-300; }
+      background-color: $color-gray-3-dark;
+      h2, p { color: $color-gray-3; }
+    }
+    &OffWhite {
+      background-color: $color-gray-3;
+      h2, p { color: $color-gray-3-dark; }
     }
   }
   .x-accessibility-colorBlack, .x-accessibility-colorWhite,
@@ -786,7 +787,7 @@ footer {
   right: 0.5rem;
   left: 0.5rem;
   width: auto;
-  background-color: $brand-2;
+  background-color: $color-blue;
   position: fixed;
   bottom: -5rem;
   max-width: calc(#{$global-content-width} - #{$grid-gutter}*2);
@@ -840,7 +841,7 @@ footer {
       .button--copy-code {
         opacity: 1;
         &.copied {
-          color: $green;
+          color: $color-green;
         }
       }
     }
@@ -849,7 +850,7 @@ footer {
 
 //SPACING
 .x-space { //spacing examples
-  background-color: $brand-yellow;
+  background-color: $color-orange;
   display: inline-block;
   &.x-space--xxs { height: $space-xxs; width: $space-xxs; }
   &.x-space--xs { height: $space-xs; width: $space-xs; }
@@ -863,22 +864,22 @@ footer {
 .x-i-space { //individualSpacing examples
   height: 2rem;
   width: 2rem;
-  background-color: $gray-200;
+  background-color: $color-gray-3;
   display: block;
-  &--m { border: 8px solid $brand-red; box-sizing: content-box; }
-  &--mt { border-top: 8px solid $brand-red; box-sizing: content-box; }
-  &--mr { border-right: 8px solid $brand-red; box-sizing: content-box; }
-  &--mb { border-bottom: 8px solid $brand-red; box-sizing: content-box; }
-  &--ml { border-left: 8px solid $brand-red; box-sizing: content-box; }
-  &--mx { border-left: 8px solid $brand-red; border-right: 8px solid $brand-red; box-sizing: content-box; }
-  &--my { border-top: 8px solid $brand-red; border-bottom: 8px solid $brand-red; box-sizing: content-box; }
-  &--p { border: 8px solid $brand-blue; }
-  &--pt { border-top: 8px solid $brand-blue; }
-  &--pr { border-right: 8px solid $brand-blue; }
-  &--pb { border-bottom: 8px solid $brand-blue; }
-  &--pl { border-left: 8px solid $brand-blue; }
-  &--px { border-left: 8px solid $brand-blue; border-right: 8px solid $brand-blue; }
-  &--py { border-top: 8px solid $brand-blue; border-bottom: 8px solid $brand-blue; }
+  &--m { border: 8px solid $color-red; box-sizing: content-box; }
+  &--mt { border-top: 8px solid $color-red; box-sizing: content-box; }
+  &--mr { border-right: 8px solid $color-red; box-sizing: content-box; }
+  &--mb { border-bottom: 8px solid $color-red; box-sizing: content-box; }
+  &--ml { border-left: 8px solid $color-red; box-sizing: content-box; }
+  &--mx { border-left: 8px solid $color-red; border-right: 8px solid $color-red; box-sizing: content-box; }
+  &--my { border-top: 8px solid $color-red; border-bottom: 8px solid $color-red; box-sizing: content-box; }
+  &--p { border: 8px solid $color-purple; }
+  &--pt { border-top: 8px solid $color-purple; }
+  &--pr { border-right: 8px solid $color-purple; }
+  &--pb { border-bottom: 8px solid $color-purple; }
+  &--pl { border-left: 8px solid $color-purple; }
+  &--px { border-left: 8px solid $color-purple; border-right: 8px solid $color-purple; }
+  &--py { border-top: 8px solid $color-purple; border-bottom: 8px solid $color-purple; }
 }
 
 .h1-spacing,
@@ -892,7 +893,7 @@ footer {
 .input-spacing:after {
   content: "";
   position: absolute;
-  background-color: $brand-yellow;
+  background-color: $color-orange;
   width: 100%;
   display: block;
   height: 0.25rem;
@@ -907,4 +908,51 @@ footer {
 .input-spacing:after {
   height: 1rem;
   bottom: 0;
+}
+
+//Colors
+.color-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.color-square,
+.color-rectangle {
+  height: 75px;
+  width: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-right: $space-xs;
+  margin-bottom: $space-xs;
+
+  &.color-gradient { width: calc((125px * 2) + #{$space-xs}); }
+
+  input {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    margin: -1rem;
+    outline: none;
+  }
+
+  &.color-purple { background-color: $color-purple; color: $color-white; }
+  &.color-blue { background-color: $color-blue; color: $color-white; }
+  &.color-green { background-color: $color-green; color: $color-white; }
+  &.color-orange { background-color: $color-orange; color: $color-white; }
+  &.color-red { background-color: $color-red; color: $color-white; }
+
+  &.color-black { background-color: $color-black; color: $color-white; }
+  &.color-gray-4 { background-color: $color-gray-4; color: $color-white; }
+  &.color-gray-3 { background-color: $color-gray-3; color: $color-black; }
+  &.color-gray-2 { background-color: $color-gray-2; color: $color-black; }
+  &.color-gray-1 { background-color: $color-gray-1; color: $color-black; }
+  &.color-white { background-color: $color-white; color: $color-black; border: 2px solid $color-gray-2; }
+
+  &.color-gradient { background-image: $color-gradient; color: $color-white; }
 }

@@ -12,8 +12,11 @@ $gray-150:      #E0E0E0;
 $gray-900:      #222222;
 $gray-300c:     #B6BBC2;
 $gray-700c:     #575D64;
+$gray-800:      #3B3B3B;
 $gray-900c:     #24292C;
 $yellow-500:    #F2E670;
+$orange-200:    #FFE07E;
+$code-toggle:		#313538;
 
 $tablet:        "all and (min-width: 40em)" !default;
 
@@ -38,9 +41,9 @@ $tablet:        "all and (min-width: 40em)" !default;
 }
 
 .example-text {
-	background-color: $gray-150;
+	background-color: $color-gray-3;
 	border-radius: 5px;
-	color: $gray-900;
+	color: $color-text;
 	font-size: 0.9rem;
 	padding: 0.1rem 0.3rem;
 }
@@ -55,9 +58,9 @@ $tablet:        "all and (min-width: 40em)" !default;
 }
 
 .example-tip {
-	background-color: $gray-50;
+	background-color: $color-background;
 	border-radius: 5px;
-	border: 2px solid $gray-150;
+	border: 2px solid $color-border;
 	margin-bottom: 1rem;
 	padding: 0.5rem;
 
@@ -68,7 +71,7 @@ $tablet:        "all and (min-width: 40em)" !default;
 }
 
 .page-header {
-  // background-color: $gray-200;
+  // background-color: $color-gray-3;
 	background-color: #393e41;
 	line-height: 1.7rem;
   text-align: center;
@@ -139,7 +142,7 @@ pre.language-scss {
 
 pre.language-html:before {
   content: "html";
-  background-color: $gray-300c;
+  background-color: $color-gray-2;
 }
 
 pre.language-scss:before {
@@ -149,17 +152,17 @@ pre.language-scss:before {
 
 pre.language-jsx:before {
 	content: "jsx";
-	background-color: $orange-200;
+	background-color: $color-orange;
 }
 
 pre.language-css:before {
 	content: "css";
-	background-color: $yellow-500;
+	background-color: $color-orange;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background-color: rgba($gray-900c, .9);
+	background-color: rgba($code-toggle, .9);
 }
 
 /* Inline code */
@@ -293,7 +296,7 @@ pre.line-numbers > code {
 
 //code toggle
 .code-toggle {
-  background-color: $gray-200;
+  background-color: $color-gray-3;
   border-radius: 0 0 5px 5px;
   cursor: pointer;
   display: block;
@@ -318,7 +321,7 @@ pre.line-numbers > code {
   }
 
   &:hover {
-    background-color: #313538;
+    background-color: $code-toggle;
     &:after { color: $color-white; }
     .icon--code {
       background-image: url(../../img/icon--code.svg);
@@ -328,11 +331,11 @@ pre.line-numbers > code {
   &:after {
     content: "SHOW CODE";
 		font-weight: 600;
-    color: $gray-800;
+    color: $color-text;
   }
 
   &.is-open {
-    background-color: #313538;
+    background-color: $code-toggle;
     border-radius: 5px 5px 0 0;
     .icon--code { background-image: url(../../img/icon--code.svg); }
     &:after {

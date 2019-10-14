@@ -32,14 +32,14 @@
   ================================================== */
 
 blockquote {
-  border-left: 4px solid $gray;
+  border-left: 4px solid $color-border;
   margin-left: $space-m;
   padding-left: $space-m;
 
-  &.tips { border-left: 4px solid $green; }
-  &.warning { border-left: 4px solid $orange; }
-  &.caution { border-left: 4px solid $red; }
-  &.related { border-left: 4px solid $blue; }
+  &.tips { border-left: 4px solid $color-green; }
+  &.warning { border-left: 4px solid $color-orange; }
+  &.caution { border-left: 4px solid $color-red; }
+  &.related { border-left: 4px solid $color-blue; }
   p { margin-top: 0.5rem; }
   .tips-list { line-height: 1.5rem; }
 }

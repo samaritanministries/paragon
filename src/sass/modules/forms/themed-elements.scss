@@ -311,18 +311,18 @@ $switch--off: $color-gray-2 !default; //Color of switch when off
 
   input[type="range"]::-webkit-slider-runnable-track {
     -webkit-appearance: none;
-    background-color: $gray-200;
+    background-color: $color-gray-3;
     border-radius: 30px;
     height: 0.5rem;
-    &:active { background-color: $gray-250; }
+    &:active { background-color: $color-gray-3; }
   }
 
   input[type="range"]::-moz-range-track {
     border: inherit;
-    background-color: $gray-200;
+    background-color: $color-gray-3;
     border-radius: 30px;
     height: 0.5rem;
-    &:active { background-color: $gray-250; }
+    &:active { background-color: $color-gray-3; }
   }
 
   input[type=range]::-moz-focus-outer { border: 0; }
@@ -346,7 +346,7 @@ $switch--off: $color-gray-2 !default; //Color of switch when off
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     background-color: $color-white;
-    border: 2px solid $gray-200;
+    border: 2px solid $color-gray-3;
     width: 20px;
     height: 20px;
     border-radius: 30px;
@@ -355,7 +355,7 @@ $switch--off: $color-gray-2 !default; //Color of switch when off
 
   input[type="range"]::-moz-range-thumb {
     background-color: $color-white;
-    border: 2px solid $gray-200;
+    border: 2px solid $color-gray-3;
     width: 20px;
     height: 20px;
     border-radius: 30px;
@@ -364,7 +364,7 @@ $switch--off: $color-gray-2 !default; //Color of switch when off
   input[type="range"]::-ms-thumb {
     -webkit-appearance: none;
     background-color: $color-white;
-    border: 2px solid $gray-200;
+    border: 2px solid $color-gray-3;
     width: 20px;
     height: 20px;
   }

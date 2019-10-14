@@ -24,7 +24,7 @@ $container-colors: transparent;//#413552
 .crumbs {
   margin-left: 0;
   padding-left: 1rem;
-  color: #fff;
+  color: $color-white;
   font-weight: 600;
   margin-right: auto;
 
@@ -44,7 +44,7 @@ $container-colors: transparent;//#413552
   .profile-image {
     height: 2rem;
     width: 2rem;
-    background-color: $color-white;
+    background-color: $color-background;
     border-radius: 50%;
     position: relative;
     margin-right: $space-xs;
@@ -67,7 +67,6 @@ $container-colors: transparent;//#413552
       display: inline-block;
     }
   }
-  @extend %icon-white;
 }
 
 .alert {
@@ -77,13 +76,13 @@ $container-colors: transparent;//#413552
   background-color: $container-colors;
   margin-left: 0.5rem;
   position: relative;
-  .dashing-icon::before { color: #f5cd66; font-size: 1.5rem; }
+  .dashing-icon::before { color: $color-orange; font-size: 1.5rem; }
 
   .count {
   	position: absolute;
   	bottom: 1rem;
   	right: 1rem;
-  	background-color: $red-500;
+  	background-color: $color-red;
   	border-radius: 50px;
   	color: $color-white;
     font-weight: bold;

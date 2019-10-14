@@ -118,13 +118,12 @@ $sides: (
 
 .text-color--white { color: $color-white; }
 .text-color--black { color: $color-black; }
-.text-color--gray, .text-color--grey { color: $gray; }
-.text-color--blue { color: $blue; }
-.text-color--green { color: $green; }
-.text-color--orange { color: $orange; }
-.text-color--purple { color: $purple; }
-.text-color--red { color: $red; }
-.text-color--yellow { color: $yellow; }
+.text-color--gray, .text-color--grey { color: $color-subtext; }
+.text-color--blue { color: $color-blue; }
+.text-color--green { color: $color-green; }
+.text-color--orange { color: $color-orange; }
+.text-color--purple { color: $color-purple; }
+.text-color--red { color: $color-red; }
 
 //Flex utilities
 .space-between {

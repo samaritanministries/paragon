@@ -89,7 +89,8 @@ $action--focus: $color-focus !default;
   &.button--white     { @include button($color-white, $color-hover, $color-black); }
   &.button--black     { @include button($color-black, $color-black, $color-white); }
   &.button--gray,
-  &.button--grey      { @include button($button-gray-bg, $button-gray-hover, $button-gray-text); }
+  &.button--grey,
+  &.button--secondary { @include button($button-gray-bg, $button-gray-hover, $button-gray-text); }
 
   //Used to display actions and icons with a transparent background
   //transparentize(white, 1) used instead of transparent because "darken" requires an rgb color value

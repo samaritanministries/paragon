@@ -25,7 +25,7 @@ export default () => (
 		<div className="profile">
 			<div className="profile-image"><span className="initials">RF</span></div>
 			<span className="profile-name">Ryan Fitzgerald</span>
-			<i className="dashing-icon dashing-icon--arrow-down"></i>
+			<i className="dashing-icon dashing-icon--arrow-down dashing-icon--black"></i>
 		</div>
 
 	</header>

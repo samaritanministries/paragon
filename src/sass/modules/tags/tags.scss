@@ -25,7 +25,7 @@ $tag-default-color: $color-gray-2;
 	&:not(.tag--no-link):hover,
 	&:not(.tag--no-link):focus {
 		border: 2px solid $color-blue;
-		color: $blue;
+		color: $color-blue;
 		transition: border-color .1s ease-in-out;
 		text-decoration: none;
 	}

@@ -1,7 +1,7 @@
 /* Banner Styles
   =========================================================================== */
 .page-banner {
-  background-color: $gray-150;
+  background-color: $color-gray-3;
   text-align: center;
   padding: 2rem 1rem;
   position: absolute;
@@ -10,7 +10,7 @@
   width: 100%;
 
   h4 {
-    color: $gray-700;
+    color: $color-subtext;
     margin-top: 0.5rem;
   }
 

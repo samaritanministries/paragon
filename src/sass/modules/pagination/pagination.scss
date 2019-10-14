@@ -19,7 +19,7 @@
   &.pagination--group {
     li {
       .button {
-        border: 1px solid $gray-300;
+        border: 1px solid $color-border;
         border-radius: 0;
         margin-left: -1px;
       }
@@ -39,6 +39,6 @@
     &:hover, &:focus, &:active { color: $color-white; }
   }
   .button--gray {
-    &:hover, &:focus, &:active { color: $gray-800; }
+    &:hover, &:focus, &:active { color: $color-gray-4; }
   }
 }
