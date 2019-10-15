@@ -28,7 +28,7 @@ export default () => (
   <div className="grid-phoenix fullscreen">
 		<header className="header">
 			<a href="/templates/mobile" className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></a>
-			<div className="logo"><p className="text-color--white">LOGO</p></div>
+			<div className="logo"><p className="text-color--purple">LOGO</p></div>
 			<div className="crumbs">A Title of This Page</div>
 			<div className="alert"><i className="dashing-icon dashing-icon--notification"></i><div className="count">100</div></div>
 			<div className="profile"><i className="dashing-icon dashing-icon--face-good"></i></div>

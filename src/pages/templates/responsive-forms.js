@@ -11,7 +11,7 @@ export default () => (
 <React.Fragment>
 	<header className="header">
 		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
-		<div className="logo"><p className="text-color--white">LOGO</p></div>
+		<div className="logo"><p className="text-color--purple">LOGO</p></div>
 
 		<nav className="header-nav">
 			<ul>

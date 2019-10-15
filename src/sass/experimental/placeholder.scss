@@ -62,6 +62,7 @@ $container-colors: transparent;//#413552
   .profile-name {
     display: none;
     font-weight: 600;
+    color: $color-text;
     margin-right: $space-xs;
     @media #{$desktop} {
       display: inline-block;
