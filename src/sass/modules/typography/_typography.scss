@@ -12,8 +12,8 @@ $font-weight-normal:    400;
 $font-weight-semibold:  600;
 $font-weight-bold:      700;
 
-$font-family-header:    "Source Sans Pro", sans-serif;
-$font-family-body:      "Source Sans Pro", sans-serif;
+$font-family-header:    "Source Sans Pro", sans-serif !default;
+$font-family-body:      "Source Sans Pro", sans-serif !default;
 
 /* Typography Utility Classes
   =========================================================================== */
@@ -71,17 +71,11 @@ a {
   color: $color-link;
   cursor: pointer;
   font-weight: $font-weight-semibold;
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover, &:focus {
-    // opacity: .7;
-    text-decoration: underline;
+    opacity: .7;
     text-decoration-color: inherit;
-  }
-
-  &.button {
-    text-decoration: none;
-    display: inline-block;
   }
 
   &.no-decoration {

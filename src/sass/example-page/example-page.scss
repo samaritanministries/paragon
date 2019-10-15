@@ -66,12 +66,14 @@ $sidebar-width:  13rem;
   a {
     padding-left: 0.5rem;
     display: block;
-    color: lighten($color-text, 20%);
+    color: lighten($color-text, 20%) !important;
+    text-decoration: none !important;
   }
   .active {
-    color: $color-white;
+    color: $color-white !important;
     background-color: $color-purple;
     border-radius: 5px;
+    &:hover { opacity: 1; }
   }
 
   .group-container {
@@ -214,8 +216,8 @@ $sidebar-width:  13rem;
     padding-left: 1rem;
     a {
       text-transform: uppercase;
-      text-decoration: none;
-      color: white;
+      text-decoration: none !important;
+      color: $color-white !important;
       margin-right: 1rem;
       padding-bottom: 0.3rem;
       &.active {

@@ -4,8 +4,10 @@ $selectable-icon-space:   2rem;
 $expandable-icon-space:   2.5rem;
 $expandable-left-border:  5px;
 
-$flex-table--border-width: 2px !default;
+$flex-table--border-width: 1px !default;
 $flex-table--border-color: $color-border !default;
+$flex-table--header-color: $color-purple;
+$flex-table--header-text:  $color-white;
 
 .flex-table {
   @extend .card;
@@ -18,7 +20,7 @@ $flex-table--border-color: $color-border !default;
     margin: 0;
     + .table-row--header {
       border-radius: 0 !important;
-      border-top: $flex-table--border-width solid $flex-table--border-color;
+      // border-top: $flex-table--border-width solid $flex-table--border-color;
     }
   }
 
@@ -49,7 +51,9 @@ $flex-table--border-color: $color-border !default;
   .table-row--header {
     font-weight: $font-weight-semibold;
     border-radius: 5px 5px 0 0;
-    background-color: $color-hover;
+    background-color: $flex-table--header-color;
+    border: none;
+    color: $flex-table--header-text;
     cursor: default;
     padding: $grid-gutter/2 $grid-gutter;
   }
