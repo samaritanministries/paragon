@@ -82,7 +82,7 @@ $flex-table--header-text:  $color-white;
       text-decoration: none;
       transition: background-color 0.2s ease-in-out;
       border-bottom: $flex-table--border-width solid $flex-table--border-color;
-      &:hover { background-color: $color-hover; }
+      &:hover { background-color: $color-hover; opacity: 1; }
       &:last-of-type {
         border: none;
       }

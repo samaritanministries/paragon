@@ -21,6 +21,7 @@ $tag-default-color: $color-gray-2;
 	min-width: 1rem;
 	padding: 0.1rem 0.25rem;
 	text-transform: uppercase;
+	text-decoration: none;
 	margin: 0.25rem;
 	&:not(.tag--no-link):hover,
 	&:not(.tag--no-link):focus {
@@ -28,6 +29,7 @@ $tag-default-color: $color-gray-2;
 		color: $color-blue;
 		transition: border-color .1s ease-in-out;
 		text-decoration: none;
+		opacity: 1;
 	}
 }
 
