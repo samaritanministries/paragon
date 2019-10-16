@@ -73,6 +73,14 @@ class ColorCode extends React.Component {
       </div>
 
       <div className="mb-space-m">
+        <h3 className="mb-space-xs">Data Visuals</h3>
+        <div className="color-group">
+          <div className="color-square color-data-teal">$color-data-teal</div>
+          <div className="color-square color-data-purple">$color-data-purple</div>
+        </div>
+      </div>
+
+      <div className="mb-space-m">
         <h3 className="mb-space-xs">Gradient</h3>
         <div className="color-group">
           <div className="color-rectangle color-gradient">$color-gradient</div>

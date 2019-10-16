@@ -491,6 +491,9 @@ Code tab color sass
   &.color-gray-1 { background-color: $color-gray-1; color: $color-black; }
   &.color-white { background-color: $color-white; color: $color-black; border: 2px solid $color-gray-2; }
 
+  &.color-data-teal { background-color: $color-data-teal; color: $color-white; }
+  &.color-data-purple { background-color: $color-data-purple; color: $color-white; }
+
   &.color-gradient { background-image: $color-gradient; color: $color-white; }
 }
 
