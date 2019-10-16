@@ -103,6 +103,7 @@
         a {
           margin: -#{$space-s} -#{$space-m};
           padding: $space-s $space-m;
+          &:hover { opacity: 1; }
         }
       }
     }
