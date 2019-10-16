@@ -20,8 +20,8 @@ $action--focus: $color-focus !default;
   transition: all 50ms ease-in-out;
   &:first-of-type { margin-left: 0; } //Clears left margin of first %action element
   &:last-of-type { margin-right: 0; } //Clears right margin of last %action element
-  &:hover { transition: all .1s ease-in-out; }
-  &:focus { box-shadow: 0 0 0 4px $action--focus; }
+  &:hover { transition: all .1s ease-in-out; opacity: 1; }
+  &:focus { box-shadow: 0 0 0 4px $action--focus; opacity: 1; }
 }
 
 /* Actions Styles
@@ -93,7 +93,7 @@ $action--focus: $color-focus !default;
   //Used to display actions and icons with a transparent background
   //transparentize(white, 1) used instead of transparent because "darken" requires an rgb color value
   &.button--transparent {
-    @include transparent--button($button-primary-bg);
+    @include transparent--button($color-blue);
     &:not(.button--icon) { //Retains button--icon padding
       padding-left: 0.5rem;
       padding-right: 0.5rem;
