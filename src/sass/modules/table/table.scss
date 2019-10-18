@@ -171,7 +171,7 @@ $flex-table--header-text:  $color-white;
       left: 100%;
       right: 0;
       bottom: 0;
-      z-index: 6;
+      z-index: $zindex-overpanel;
 
       @media #{$tablet} {
         overflow: hidden;
