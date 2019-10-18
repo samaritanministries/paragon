@@ -134,7 +134,7 @@ $flex-table--header-text:  $color-white;
         }
       }
       &.expanded {
-        border-left: 5px solid $color-blue;
+        border-left: 5px solid $color-data-teal;
         border-bottom: none;
         @media #{$tablet} {
           li:first-of-type { transform: rotate(90deg); }
@@ -175,7 +175,7 @@ $flex-table--header-text:  $color-white;
 
       @media #{$tablet} {
         overflow: hidden;
-        border-left: 5px solid $color-blue;
+        border-left: 5px solid $color-data-teal;
 
         //for example app only
         transition: height 0.25s;
