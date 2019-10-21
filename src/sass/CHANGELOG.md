@@ -2,6 +2,16 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.0.0] - 2019-10-21
+### Added
+- Add new branding colors
+
+### Removed
+- Remove old color variables
+
+### Changed
+- Change all components to use the new branding colors
+
 ## [1.4.0] - 2019-09-04
 ### Added
 - Add font weight 700
