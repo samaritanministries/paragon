@@ -4,10 +4,6 @@
   font-style: normal;
 }
 
-// [class^="icon--"]:before, [class*=" icon-"]:before  {
-//
-// }
-
 .dashing-icon {
   line-height: 0;
 
@@ -140,4 +136,8 @@
 
   //Added Feb 16, 2018
   &.dashing-icon--pause:before            { content: '\e846'; } /* '' */
+}
+
+.flex.has-icon {
+  .dashing-icon { margin-right: $space-xs; }
 }
