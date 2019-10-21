@@ -49,15 +49,15 @@ class OverpanelCode extends React.Component {
               <Modal
                 show={this.state.isOpen}
                 onClose={this.toggleModal}>
-                  <div class="modal-header">
+                  <div className="modal-header">
                     <h3>Modal Header</h3>
                   </div>
 
-                  <div class="modal-content">
+                  <div className="modal-content">
                     <p>Modal content</p>
                   </div>
 
-                  <div class="modal-footer align-left">
+                  <div className="modal-footer align-left">
                     Modal footer
                   </div>
               </Modal>
