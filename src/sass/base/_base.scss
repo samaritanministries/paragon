@@ -4,7 +4,7 @@
 
 /* Imported base components
   ================================================== */
-@import "colors/colors";
+@import "colors/given-colors";
 @import "mixins/mixins";
 @import "variables/variables";
 @import "utilities/utilities";
@@ -15,5 +15,5 @@
 
 hr {
   border: 0;
-  border-top: 2px solid $gray-100;
+  border-top: 2px solid $color-border;
 }

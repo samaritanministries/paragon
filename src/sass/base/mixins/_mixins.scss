@@ -62,38 +62,35 @@
 /* Actions Mixins
   =========================================================================== */
 //Default Button
-@mixin button($background-color, $color) {
+@mixin button($background-color, $background-color-dark, $color) {
   background-color: $background-color;
   color: $color;
-  &:hover, &:focus { background-color: darken($background-color, 10%); }
-  &:active { background-color: darken($background-color, 15%); }
+  &:hover, &:focus, &:active { background-color: $background-color-dark; }
   .dashing-icon:before { color: $color; } //matches icon to text color
 }
 
 //Border Button
-@mixin border--button($color) {
+@mixin border--button($border-color, $background-color-dark) {
   background-color: transparentize(white, 1);
-  border-color: $color;
-  color: $color;
-  .dashing-icon:before { color: $color; }
-  &:hover, &:focus {
-    background-color: darken($color, 10%);
+  border-color: $border-color;
+  color: $border-color;
+  .dashing-icon:before { color: $border-color; }
+  &:hover, &:focus, &:active {
+    background-color: $background-color-dark;
     border-color: transparentize(white, 1);
-    color: $white;
+    color: $color-white;
     .dashing-icon:before {
-      color: $white;
+      color: $color-white;
       transition: all 50ms ease-in-out;
     }
   }
-  &:active { background-color: darken($color, 15%); }
 }
 
 //Transparent Button
 @mixin transparent--button($color) {
   background-color: transparentize(white, 1);
   color: $color;
-  &:hover, &:focus { background-color: rgba(85,85,85,.1) }
-  &:active { background-color: rgba(85,85,85,.2) }
+  &:hover, &:focus, &:active { background-color: $color-hover }
   .dashing-icon:before { color: $color; }
 }
 
@@ -112,8 +109,8 @@
 
 //Action Tag
 @mixin tag--action($color) {
-  background-color: $gray-150;
-  border-color: $gray-150;
+  background-color: $color-gray-3;
+  border-color: $color-gray-3;
   color: $color;
   &:not(.tag--no-link):hover, &:not(.tag--no-link):focus {
     border-color: $color;

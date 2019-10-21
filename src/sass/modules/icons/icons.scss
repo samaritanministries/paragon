@@ -4,17 +4,13 @@
   font-style: normal;
 }
 
-// [class^="icon--"]:before, [class*=" icon-"]:before  {
-//
-// }
-
 .dashing-icon {
   line-height: 0;
 
   &:before {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: $gray-700;
+    color: $color-icon-primary;
     display: inline-block;
     font-family: "dashing-icons";
     font-size: 16px;
@@ -48,25 +44,15 @@
     margin: 0;
   }
 
-  &.dashing-icon--white:before  { color: $white; }
-  &.dashing-icon--black:before  { color: $black; }
-  &.dashing-icon--blue:before   { color: $blue-600; }
+  &.dashing-icon--white:before  { color: $color-white; }
+  &.dashing-icon--black:before  { color: $color-black; }
+  &.dashing-icon--blue:before   { color: $color-blue; }
   &.dashing-icon--gray:before,
-  &.dashing-icon--grey:before   { color: $gray; }
-  &.dashing-icon--green:before  { color: $green; }
-  &.dashing-icon--orange:before { color: $orange; }
-  &.dashing-icon--red:before    { color: $red; }
-  &.dashing-icon--purple:before { color: $purple; }
-
-  //ui-colors
-  &.dashing-icon--ui-black:before  { color: $ui-black; }
-  &.dashing-icon--ui-blue:before   { color: $ui-blue; }
-  &.dashing-icon--ui-green:before  { color: $ui-green; }
-  &.dashing-icon--ui-red:before    { color: $ui-red; }
-  &.dashing-icon--ui-orange:before { color: $ui-orange; }
-
-  //brand-colors
-  &.dashing-icon--brand-purple:before { color: $ui-purple; }
+  &.dashing-icon--grey:before   { color: $color-gray-3; }
+  &.dashing-icon--green:before  { color: $color-green; }
+  &.dashing-icon--orange:before { color: $color-orange; }
+  &.dashing-icon--red:before    { color: $color-red; }
+  &.dashing-icon--purple:before { color: $color-purple; }
 
   //icon font codes
 

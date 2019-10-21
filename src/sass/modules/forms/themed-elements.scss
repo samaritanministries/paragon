@@ -1,22 +1,32 @@
 /* Form Variables
   =========================================================================== */
 //Custom checkbox color theme
-$checkbox--active: $blue !default; //Color of checkbox when checked
-$checkbox--icon: $white !default; //Color of check icon when checked
-$checkbox--focus: $blue-300 !default; //Color of border around checkbox when focused
-$checkbox--disabled: $gray-150 !default; //Color of checkbox when checked and disabled
-$checkbox--icon-disabled: $gray-500 !default; //Color of check icon when checked and disabled
+$checkbox--active: $color-blue !default; //Color of checkbox when checked
+$checkbox--icon: $color-white !default; //Color of check icon when checked
+$checkbox--focus: $color-focus !default; //Color of border around checkbox when focused
+$checkbox--disabled: $color-gray-3 !default; //Color of checkbox when checked and disabled
+$checkbox--icon-disabled: $color-gray-4 !default; //Color of check icon when checked and disabled
+$checkbox--border: $color-border;
+$checkbox--border-error: $color-red-light;
+$checkbox--color-error: $color-red;
+$checkbox--border-warning: $color-orange-light;
+$checkbox--color-warning: $color-orange;
 
 //Custom radio button color theme
-$radio--active: $blue !default; //Color of radio button when checked
-$radio--icon: $white !default; //Color of radio icon when checked
-$radio--focus: $blue-300 !default; //Color of border around radio when focused
-$radio--disabled: $gray-150 !default; //Color of radio when checked and disabled
-$radio--icon-disabled: $gray-500 !default; //Color of radio icon when checked and disabled
+$radio--active: $color-blue !default; //Color of radio button when checked
+$radio--icon: $color-white !default; //Color of radio icon when checked
+$radio--focus: $color-focus !default; //Color of border around radio when focused
+$radio--disabled: $color-gray-3 !default; //Color of radio when checked and disabled
+$radio--icon-disabled: $color-gray-4 !default; //Color of radio icon when checked and disabled
+$radio--border: $color-border;
+$radio--border-error: $color-red-light;
+$radio--color-error: $color-red;
+$radio--border-warning: $color-orange-light;
+$radio--color-warning: $color-orange;
 
 //Switch color theme
-$switch--on: $blue !default; //Color of switch when on
-$switch--off: $gray-250 !default; //Color of switch when off
+$switch--on: $color-blue !default; //Color of switch when on
+$switch--off: $color-gray-3 !default; //Color of switch when off
 
 /* Custom Checkboxes
   ================================================== */
@@ -42,7 +52,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
     @supports(display: flex) { display: flex; }
 
     &:before {
-      border: 2px solid $gray-200;
+      border: 2px solid $checkbox--border;
       display: inline-block; //required for IE11
       color: transparent;
       height: 20px; width: 20px;
@@ -96,9 +106,9 @@ $switch--off: $gray-250 !default; //Color of switch when off
 
   //Checkbox Hover
   input:hover ~ label { //Text Hover
-    color: rgba($black, .6);
+    color: rgba($color-black, .6);
     &:before { //Checkbox Hover
-      color: $gray-200;
+      color: $checkbox--border;
     }
   }
 
@@ -132,40 +142,40 @@ $switch--off: $gray-250 !default; //Color of switch when off
 
   &.has-error,
   .has-error & {
-    label:before { border: 2px solid $red-400; }
+    label:before { border: 2px solid $checkbox--border-error; }
     input:hover ~ label {
-      color: rgba($red, .6); //Text Hover
-      &:before { color: $red-200; } //Checkbox Hover
+      color: rgba($checkbox--color-error, .6); //Text Hover
+      &:before { color: rgba($checkbox--color-error, .6); } //Checkbox Hover
     }
 
     //Checkbox Active
     input:checked ~ label:before, input:active ~ label:before {
-      color: $white; //Checkbox Icon
-      background-color: $red-500; // Checkbox Active
-      border: 2px solid $red-500; // Checkbox Active
+      color: $color-white; //Checkbox Icon
+      background-color: $checkbox--color-error; // Checkbox Active
+      border: 2px solid $checkbox--color-error; // Checkbox Active
     }
 
     //Checkbox Focus
-    input:focus ~ label:before { box-shadow: 0 0 0 4px $red-200; }
+    input:focus ~ label:before { box-shadow: 0 0 0 4px rgba($checkbox--border-error, .6); }
   }
 
   &.has-warning,
   .has-warning & {
-    label:before { border: 2px solid $orange-400; }
+    label:before { border: 2px solid $checkbox--border-warning; }
     input:hover ~ label {
-      color: rgba($orange, .6); //Text Hover
-      &:before { color: $orange-300; } //Checkbox Hover
+      color: rgba($checkbox--color-warning, .6); //Text Hover
+      &:before { color: rgba($checkbox--color-warning, .6); } //Checkbox Hover
     }
 
     //Checkbox Active
     input:checked ~ label:before, input:active ~ label:before {
-      color: $white; //Checkbox Icon
-      background-color: $orange-400; // Checkbox Active
-      border: 2px solid $orange-400; // Checkbox Active
+      color: $color-white; //Checkbox Icon
+      background-color: $checkbox--color-warning; // Checkbox Active
+      border: 2px solid $checkbox--color-warning; // Checkbox Active
     }
 
     //Checkbox Focus
-    input:focus ~ label:before { box-shadow: 0 0 0 4px $orange-200; }
+    input:focus ~ label:before { box-shadow: 0 0 0 4px rgba($checkbox--border-warning, .6); }
   }
 }
 
@@ -207,16 +217,16 @@ $switch--off: $gray-250 !default; //Color of switch when off
 
   //Radio Hover
   input:hover:not(:checked) ~ label { //Text Hover
-    color: rgba($black, .6);
+    color: rgba($color-black, .6);
     &:before { //Button Hover
-      color: $gray-200;
+      color: $radio--border;
     }
   }
 
   //Radio Active
   input:checked ~ label {
     &:before {
-      color: $white;
+      color: $color-white;
     }
   }
 
@@ -224,7 +234,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
     &:before {
       background-color: $radio--active;
       border-color: $radio--active;
-      color: $white;
+      color: $color-white;
     }
   }
 
@@ -251,32 +261,32 @@ $switch--off: $gray-250 !default; //Color of switch when off
 
   &.has-error,
   .has-error & {
-    label:before { border: 2px solid $red-400; }
+    label:before { border: 2px solid $radio--border-error; }
     input:hover:not(:checked) ~ label {
-      color: rgba($red, .6); //Text Hover
-      &:before { color: $red-200; } //Button Hover
+      color: rgba($radio--color-error, .6); //Text Hover
+      &:before { color: rgba($radio--color-error, .6); } //Button Hover
     }
     input:checked ~ label:before {
-      background-color: $red-500;
-      border-color: $red-500;
-      color: $white;
+      background-color: $radio--color-error;
+      border-color: $radio--color-error;
+      color: $color-white;
     }
-    input:focus ~ label:before { box-shadow: 0 0 0 4px $red-200; }
+    input:focus ~ label:before { box-shadow: 0 0 0 4px rgba($radio--border-error, .6); }
   }
 
   &.has-warning,
   .has-warning & {
-    label:before { border: 2px solid $orange-400; }
+    label:before { border: 2px solid $radio--border-warning; }
     input:hover:not(:checked) ~ label {
-      color: rgba($orange, .6); //Text Hover
-      &:before { color: $orange-300; } //Button Hover
+      color: rgba($radio--color-warning, .6); //Text Hover
+      &:before { color: rgba($radio--color-warning, .6); } //Button Hover
     }
     input:checked ~ label:before {
-      background-color: $orange-400;
-      border-color: $orange-400;
-      color: $white;
+      background-color: $radio--color-warning;
+      border-color: $radio--color-warning;
+      color: $color-white;
     }
-    input:focus ~ label:before { box-shadow: 0 0 0 4px $orange-200; }
+    input:focus ~ label:before { box-shadow: 0 0 0 4px rgba($radio--border-warning, .6); }
   }
 }
 
@@ -301,18 +311,18 @@ $switch--off: $gray-250 !default; //Color of switch when off
 
   input[type="range"]::-webkit-slider-runnable-track {
     -webkit-appearance: none;
-    background-color: $gray-200;
+    background-color: $color-gray-3;
     border-radius: 30px;
     height: 0.5rem;
-    &:active { background-color: $gray-250; }
+    &:active { background-color: $color-gray-3; }
   }
 
   input[type="range"]::-moz-range-track {
     border: inherit;
-    background-color: $gray-200;
+    background-color: $color-gray-3;
     border-radius: 30px;
     height: 0.5rem;
-    &:active { background-color: $gray-250; }
+    &:active { background-color: $color-gray-3; }
   }
 
   input[type=range]::-moz-focus-outer { border: 0; }
@@ -335,8 +345,8 @@ $switch--off: $gray-250 !default; //Color of switch when off
   //THUMB
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-color: $white;
-    border: 2px solid $gray-200;
+    background-color: $color-white;
+    border: 2px solid $color-gray-3;
     width: 20px;
     height: 20px;
     border-radius: 30px;
@@ -344,8 +354,8 @@ $switch--off: $gray-250 !default; //Color of switch when off
   }
 
   input[type="range"]::-moz-range-thumb {
-    background-color: $white;
-    border: 2px solid $gray-200;
+    background-color: $color-white;
+    border: 2px solid $color-gray-3;
     width: 20px;
     height: 20px;
     border-radius: 30px;
@@ -353,8 +363,8 @@ $switch--off: $gray-250 !default; //Color of switch when off
 
   input[type="range"]::-ms-thumb {
     -webkit-appearance: none;
-    background-color: $white;
-    border: 2px solid $gray-200;
+    background-color: $color-white;
+    border: 2px solid $color-gray-3;
     width: 20px;
     height: 20px;
   }
@@ -420,7 +430,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
     width: 200%;
     margin-left: -100%;
     &:before, &:after {
-      color: $white;
+      color: $color-white;
       display: block;
       float: left;
       height: 2rem;
@@ -446,7 +456,7 @@ $switch--off: $gray-250 !default; //Color of switch when off
   //Inactive circle position
   .switch--handle {
     @include transition(all 0.05s ease-in 0s);
-    background-color: $white;
+    background-color: $color-white;
     border-radius: 50%;
     display: block;
     margin: 3px;

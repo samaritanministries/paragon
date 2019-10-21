@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import $ from 'jquery';
 //import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
+import StillWorking from '../../../components/stillworking'
 
 const currentPageName = "Color";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -35,7 +36,7 @@ class ColorGuidelines extends React.Component {
     </header>
     <AppContent>
 
-      <div className="row">
+      {/* <div className="row">
         <div className="column column--full">
           <p className="intro">Samaritan UI elements that are used to display or contain textual content are required to meet <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head" target="_blank" rel="noopener noreferrer">WCAG Contrast Level AA</a> standards. Samaritan Brand and UI Themes have been tested against both Level AA and Level AAA standards.</p>
 
@@ -215,7 +216,7 @@ class ColorGuidelines extends React.Component {
         <p>Use the System Theme when creating new interface elements to keep to a unified pallet.</p>
 
 
-        {/* GRAY THEME */}
+
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--gray-500">Gray</div>
@@ -427,7 +428,7 @@ class ColorGuidelines extends React.Component {
             </div>
           </div>
 
-        {/* COOL GRAY THEME */}
+
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--gray-500c">Cool Gray</div>
@@ -637,7 +638,7 @@ class ColorGuidelines extends React.Component {
             </div>
           </div>
 
-        {/* BLUE THEME */}
+
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--blue">Blue</div>
@@ -813,7 +814,7 @@ class ColorGuidelines extends React.Component {
             </div>
           </div>
 
-        {/* GREEN THEME */}
+
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--green">Green</div>
@@ -990,7 +991,7 @@ class ColorGuidelines extends React.Component {
           </div>
 
 
-        {/* ORANGE THEME */}
+
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--orange">Orange</div>
@@ -1166,7 +1167,7 @@ class ColorGuidelines extends React.Component {
             </div>
           </div>
 
-        {/* RED THEME */}
+
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--red">Red</div>
@@ -1343,7 +1344,7 @@ class ColorGuidelines extends React.Component {
           </div>
 
 
-        {/* PURPLE THEME */}
+
           <div className="column column--full">
             <div className="card no-margin" style={{ overflow: "hidden" }}>
               <div className="card--header card--header--color has-border color--purple">Purple</div>
@@ -1518,8 +1519,10 @@ class ColorGuidelines extends React.Component {
               </div>
             </div>
           </div>
+      </div> */}
+      <div className="grid grid-padding">
+        <StillWorking />
       </div>
-
     </AppContent>
   </Layout>
 )

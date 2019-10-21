@@ -25,7 +25,7 @@ class BannerCode extends React.Component {
         <AppContent>
           <div className="grid grid-padding">
 
-            <h2 id="pageBanner">Page Banner
+            {/* <h2 id="pageBanner">Page Banner
               <Link to={location.pathname + "/#pageBanner"} className="button button--transparent button--copy-link"></Link>
             </h2>
             <div className="example-container">
@@ -54,10 +54,10 @@ class BannerCode extends React.Component {
   <h4>Need #481516 – Broken Arm</h4>
 </div>`}
                 </CodeToggle>
-              </div>
+              </div> */}
 
 
-              <h2 className="mt-space-xl" id="defaultCardBanner">Default Card Banner
+              <h2 id="defaultCardBanner">Default Card Banner
                 <Link to={location.pathname + "/#defaultCardBanner"} className="button button--transparent button--copy-link"></Link>
               </h2>
               <div className="example-container">

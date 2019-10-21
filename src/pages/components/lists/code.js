@@ -53,20 +53,20 @@ class ListsCode extends React.Component {
               </h2>
               <div className="row example-container">
                 <div className="column column--full" style={{ overflow: "auto" }}>
-                  <ol className="ordered-list--custom ordered-list--sharing-blue">
+                  <ol className="ordered-list--custom ordered-list--color-blue">
                     <li>This is a custom colored list item</li>
                   </ol>
                 </div>
               </div>
               <CodeToggle>
-{`<ol class="ordered-list--custom ordered-list--sharing-blue">
+{`<ol class="ordered-list--custom ordered-list--color-blue">
   <li>This is a custom colored list item</li>
 </ol>`}
               </CodeToggle>
               <CodeToggleSCSS>
 {`//Example: Custom Colored Lists
-.ordered-list--sharing-blue {
-  @include ordered-list($sharing-blue, $white);
+.ordered-list--color-blue {
+  @include ordered-list($color-blue, $color-white);
 }`}
               </CodeToggleSCSS>
 

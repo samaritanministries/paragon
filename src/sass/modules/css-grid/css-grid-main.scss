@@ -5,7 +5,7 @@ Actual CSS Grid Classes
 .grid-wrapper {
 	max-width: $global-content-width;
 	margin: auto;
-  	width: 100%;
+  width: 100%;
 }
 
 //use grid to make a new 12 column grid
@@ -14,12 +14,6 @@ Actual CSS Grid Classes
 	//Pad the grid
 	&.grid-padding {
 		padding: $grid-gutter;
-		// @supports(display: grid) {
-			// padding: $grid-gutter 0;
-			// @media #{$tablet}{
-			// 	padding: $grid-gutter;
-			// }
-		// }
 	}
 
 	display: block;//For IE and Safari mobile
@@ -51,6 +45,14 @@ Actual CSS Grid Classes
 	.grid--third_desktop,         .grid-4_desktop   { @include grid-column_desktop(4); }
 	.grid--fourth_desktop,        .grid-3_desktop   { @include grid-column_desktop(3); }
 	.grid--sixth_desktop,         .grid-2_desktop   { @include grid-column_desktop(2); }
+
+	//Make grid full width and centered on tablet
+	&.grid--tablet_full {
+	  @media #{$tablet-and-below} {
+	    max-width: 45rem;
+	    margin: 0 auto;
+	  }
+	}
 }
 
 .grid { .card { margin: 0; } } //required to span cards 100%

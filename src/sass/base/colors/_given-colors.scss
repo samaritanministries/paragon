@@ -1,0 +1,89 @@
+
+  /* Base Colors */
+  $color-purple:                      #595478 !default;
+  $color-purple-light:                lighten($color-purple, 10%) !default;
+  $color-purple-dark:                 darken($color-purple, 10%) !default;
+
+  $color-blue:                        #097CBF !default;
+  $color-blue-light:                  lighten($color-blue, 10%) !default;
+  $color-blue-dark:                   darken($color-blue, 10%) !default;
+
+  $color-green:                       #00875D !default;
+  $color-green-light:                 lighten($color-green, 10%) !default;
+  $color-green-dark:                  darken($color-green, 10%) !default;
+
+  $color-orange:                      #F8652A !default;
+  $color-orange-light:                lighten($color-orange, 10%) !default;
+  $color-orange-dark:                 darken($color-orange, 10%) !default;
+
+  $color-red:                         #D1323F !default;
+  $color-red-light:                   lighten($color-red, 10%) !default;
+  $color-red-dark:                    darken($color-red, 10%) !default;
+
+  $color-black:                       #222228 !default;
+  $color-gray-4:                      #6F6F75 !default;
+  $color-gray-3:                      #E1E1E7 !default;
+  $color-gray-3-dark:                 darken($color-gray-3, 10%) !default;
+  $color-gray-2:                      #EEEEF4 !default;
+  $color-gray-1:                      #F3F3F9 !default;
+  $color-white:                       #FFFFFF !default;
+
+  /* Data Visuals */
+  $color-data-teal:                   #64CCC9;
+  $color-data-purple:                 #9F8FCA;
+
+  /* Gradient */
+  $color-gradient:                    linear-gradient(-45deg, $color-data-teal, $color-purple);
+
+  /* Primary and Accent */
+  $color-primary:               $color-purple !default;
+  $color-primary-light:         $color-purple-light !default;
+  $color-primary-dark:          $color-purple-dark !default;
+
+  $color-accent:                $color-blue !default;
+  $color-accent-light:          $color-blue-light !default;
+  $color-accent-dark:           $color-blue-dark !default;
+
+  /* Semantic */
+  $color-success:               $color-green;
+  $color-warning:               $color-orange;
+  $color-error:                 $color-red;
+
+  /* Border */
+  $color-border:                $color-gray-3;
+
+  /* Hover/Selectable */
+  $color-hover:                 $color-gray-1;
+
+  /* Body Background */
+  $color-background:            $color-gray-2;
+
+  /* Focus */
+  $color-focus:                 rgba($color-blue-light, .6);
+
+  /* Typography */
+  $color-text:                  $color-black;
+  $color-subtext:               $color-gray-4;
+  $color-link:                  $color-accent;
+
+  /* Forms */
+  $form-element-border:         $color-border;
+  $form-element-border-focus:   $color-accent;
+  $form-element-border-error:   $color-error;
+  $form-element-bg:             $color-white;
+  $form-text-placeholder:       $color-subtext;
+
+  /* Buttons */
+  $button-primary-bg:           $color-primary;
+  $button-primary-hover:        $color-primary-dark;
+  $button-primary-text:         $color-white;
+
+  $button-gray-bg:              $color-gray-3;
+  $button-gray-hover:           $color-gray-3-dark;
+  $button-gray-text:            $color-black;
+
+  /* Icons */
+  $color-icon-primary:          $color-gray-4;
+
+  /* Shadows */
+  $color-shadow:                #3c4043;

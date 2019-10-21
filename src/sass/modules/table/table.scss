@@ -4,8 +4,10 @@ $selectable-icon-space:   2rem;
 $expandable-icon-space:   2.5rem;
 $expandable-left-border:  5px;
 
-$flex-table--border-width: 2px !default;
-$flex-table--border-color: $gray-50 !default;
+$flex-table--border-width: 1px !default;
+$flex-table--border-color: $color-border !default;
+$flex-table--header-color: $color-purple;
+$flex-table--header-text:  $color-white;
 
 .flex-table {
   @extend .card;
@@ -16,13 +18,17 @@ $flex-table--border-color: $gray-50 !default;
   .flex-table--title {
     padding: $grid-gutter;
     margin: 0;
-    + .table-row--header { border-radius: 0 !important; }
+    + .table-row--header {
+      border-radius: 0 !important;
+      // border-top: $flex-table--border-width solid $flex-table--border-color;
+    }
   }
 
   .table-row--header,
   .table-row {
     @extend %remove-list-style;
     padding: $grid-gutter;
+    border-bottom: $flex-table--border-width solid $flex-table--border-color;
     display: block;
     align-items: center;
     justify-content: space-between;
@@ -45,15 +51,14 @@ $flex-table--border-color: $gray-50 !default;
   .table-row--header {
     font-weight: $font-weight-semibold;
     border-radius: 5px 5px 0 0;
-    background-color: $gray-50;
+    background-color: $flex-table--header-color;
+    border: none;
+    color: $flex-table--header-text;
     cursor: default;
     padding: $grid-gutter/2 $grid-gutter;
   }
 
-  .table-row {
-    border-bottom: $flex-table--border-width solid $flex-table--border-color;
-    &:last-of-type { border: none; }
-  }
+  .table-row:last-of-type { border: none; }
 
   &.row-selectable {
     //Space for arrow icon
@@ -72,12 +77,12 @@ $flex-table--border-color: $gray-50 !default;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: $gray-900;
+      color: $color-text;
       font-weight: $font-weight-normal;
       text-decoration: none;
       transition: background-color 0.2s ease-in-out;
       border-bottom: $flex-table--border-width solid $flex-table--border-color;
-      &:hover { background-color: $gray-50; }
+      &:hover { background-color: $color-hover; opacity: 1; }
       &:last-of-type {
         border: none;
       }
@@ -110,7 +115,7 @@ $flex-table--border-color: $gray-50 !default;
       cursor: pointer;
       position: relative;
       transition: background-color 0.2s ease-in-out;
-      &:hover { background-color: $gray-50; }
+      &:hover { background-color: $color-hover; }
       li:first-of-type {
         @media #{$phone} {
           right: $grid-gutter/2;
@@ -129,7 +134,7 @@ $flex-table--border-color: $gray-50 !default;
         }
       }
       &.expanded {
-        border-left: 5px solid $blue-500;
+        border-left: 5px solid $color-data-teal;
         border-bottom: none;
         @media #{$tablet} {
           li:first-of-type { transform: rotate(90deg); }
@@ -154,23 +159,23 @@ $flex-table--border-color: $gray-50 !default;
         }
       }
     }
-    //Caleb's custom content
+    //Custom table row content
     .table-row--content {
       overflow: auto;
       transition: left 0.25s;
 
-      background-color: $white;
+      background-color: $color-white;
 
       position: fixed;
       top: 0;
       left: 100%;
       right: 0;
       bottom: 0;
-      z-index: 6;
+      z-index: $zindex-overpanel;
 
       @media #{$tablet} {
         overflow: hidden;
-        border-left: 5px solid $blue-500;
+        border-left: 5px solid $color-data-teal;
 
         //for example app only
         transition: height 0.25s;
@@ -198,16 +203,16 @@ $flex-table--border-color: $gray-50 !default;
 
 /* Default Table Styles
   =========================================================================== */
-$table--header-row: $white !default;
-$table--odd-row: $gray-50 !default;
-$table--even-row: $white !default;
-$table--dividers: $gray-100 !default;
-$table--border: $gray-200 !default;
+$table--header-row: $color-white !default;
+$table--odd-row: $color-hover !default;
+$table--even-row: $color-white !default;
+$table--dividers: $color-border !default;
+$table--border: $color-gray-3-dark !default;
 
 .table--container,
 .card-table {
   .table {
-    background-color: $white;
+    background-color: $color-white;
     font-size: $font-size-small;
     margin: 0;
     max-width: 100%;
@@ -221,7 +226,7 @@ $table--border: $gray-200 !default;
     }
 
     td { vertical-align: middle; }
-    th { border-bottom: 2px solid $gray-200; }
+    th { border-bottom: 2px solid $color-border; }
   }
 }
 
@@ -261,7 +266,7 @@ $table--border: $gray-200 !default;
 //Add hover table rows
 .table.has-hover {
   td { @include transition(all 0.15s ease-in-out); }
-  tr:hover { td { background-color: $gray-100; } }
+  tr:hover { td { background-color: $color-hover; } }
   tr.disabled {
     &:hover {
       td {

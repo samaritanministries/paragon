@@ -28,7 +28,7 @@ export default () => (
 	<div class="grid-phoenix">
 		<header class="header">
 			<a href="/templates/mobile" class="button--mobile-sidebar" id="close-button"><i class="dashing-icon dashing-icon--menu"></i></a>
-			<div class="logo"><p class="text-color--white">LOGO</p></div>
+			<div class="logo"><p class="text-color--purple no-margin">LOGO</p></div>
 			<div class="crumbs">A Title of This Page</div>
 			<div class="alert"><i class="dashing-icon dashing-icon--notification"></i><div class="count">100</div></div>
 			<div class="profile"><i class="dashing-icon dashing-icon--face-good"></i></div>

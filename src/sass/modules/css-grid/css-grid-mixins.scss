@@ -27,7 +27,7 @@
 
 %fallback-gap {
 	margin: $grid-gutter 0;
-	&:first-of-type, &:last-of-type { margin-top:    0; }
+	&:first-of-type, &:last-of-type { margin-top: 0; }
 	@media #{$tablet} {
 		margin: calc(#{$grid-gutter} / 2);
 		&:first-of-type, &:last-of-type { margin: calc(#{$grid-gutter} / 2); }

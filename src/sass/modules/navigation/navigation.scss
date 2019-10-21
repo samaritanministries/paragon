@@ -2,14 +2,17 @@
 //---------- VARIABLES  ----------\\
 //--------------------------------\\
 
-$content-width: 1200px !default;
+$content-width: $global-content-width;
 
 $header-height: 4rem;
 $sub-nav-height: 3rem;
+$nav-separator-width: 2px;
 
 //Theme
-$header-color: $brand-blue !default;
-$sub-nav-color: $white !default;
+$header-color: $color-white !default;
+$header-text-color: $color-purple !default;
+$sub-nav-color: $color-white !default;
+$sub-nav-text-color: $color-purple !default;
 $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 
 .header {
@@ -53,14 +56,17 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
           margin: 0 $space-m;
           display: flex;
           align-items: center;
-          color: $sub-nav-color;
+          color: $header-text-color;
           font-weight: 600;
           font-size: 1.1rem;
           border-bottom: 2px solid transparent;
           text-decoration: none;
           @include transition(border-bottom 0.2s ease-out);
 
-          &:hover, &.active { border-bottom: 2px solid $sub-nav-color; }
+          &:hover, &.active {
+            border-bottom: 2px solid $header-text-color;
+            opacity: 1;
+          }
 
         }
       }
@@ -77,8 +83,8 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 }
 
 .sub-nav {
-  z-index: $zindex-header;
-  height: $sub-nav-height;
+  z-index: calc(#{$zindex-header} - 1);
+  height: calc(#{$sub-nav-height} + #{$nav-separator-width});
 
   ~.content {
     margin-top: calc(#{$header-height} + #{$sub-nav-height});
@@ -98,12 +104,13 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
   	content: "";
     box-shadow: $header-shadow;
   	width: 100%;
-  	height: $sub-nav-height;
+  	height: calc(#{$sub-nav-height} + #{$nav-separator-width});
     background-color: $sub-nav-color;
   	position: fixed;
   	top: $header-height;
   	left: 0;
   	z-index: $zindex-negative;
+    border-top: $nav-separator-width solid $color-background;
   }
 
   ul, li, a {
@@ -123,14 +130,17 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
       a {
         display: flex;
         align-items: center;
-        color: $header-color;
+        color: $sub-nav-text-color;
         font-weight: 600;
         font-size: 1rem;
         text-decoration: none;
         border-bottom: 3px solid transparent;
         @include transition(border-bottom 0.2s ease-out);
 
-        &:hover, &.active  { border-bottom: 3px solid $header-color; }
+        &:hover, &.active  {
+          border-bottom: 3px solid $sub-nav-text-color;
+          opacity: 1;
+        }
       }
     }
   }
@@ -138,11 +148,11 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 
 /* Mobile Navigation Icon
   =========================================================================== */
-.button--mobile-sidebar {
-  @extend %icon-white;
-  @extend .button;
-  @extend .button--transparent;
-  @extend .button--icon;
-  @extend .button--white;
-  @media #{$tablet} { display: none; }
-}
+// .button--mobile-sidebar {
+//   @extend %icon-purple;
+//   @extend .button;
+//   @extend .button--transparent;
+//   @extend .button--icon;
+//   @extend .button--purple;
+//   @media #{$tablet} { display: none; }
+// }

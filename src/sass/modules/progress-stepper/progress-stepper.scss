@@ -1,4 +1,4 @@
-$progress-color: $green !default; //Override this variable to change the color of your progress-stepper
+$progress-color: $color-green !default; //Override this variable to change the color of your progress-stepper
 
 //Centers the progress stepper and gives it more padding
 .progress-container {
@@ -9,7 +9,7 @@ $progress-color: $green !default; //Override this variable to change the color o
 
 //Styles the progress stepper
 .progress {
-  background-color: $gray-150;
+  background-color: $color-gray-3;
   border-radius: 15px;
   height: 15px;
   width: 100%;
@@ -27,7 +27,7 @@ $progress-color: $green !default; //Override this variable to change the color o
 
 .progress-label,
 .progress-label a {
-  color: $gray-600;
+  color: $color-subtext;
   display: flex;
   padding: 0;
   padding-top: 0.5rem;
