@@ -14,20 +14,20 @@
 	grid-column: 1 / -1;
 	@media #{$tablet} {
 		grid-column: span $span;
-		@supports(display: grid) { width: auto; }
+		@supports(display: grid) { width: 100%; }
 	}
 }
 
 @mixin grid-column_desktop($span) {
 	@media #{$desktop} {
 		grid-column: span $span;
-		@supports(display: grid) { width: auto; }
+		@supports(display: grid) { width: 100%; }
 	}
 }
 
 %fallback-gap {
 	margin: $grid-gutter 0;
-	&:first-of-type, &:last-of-type { margin-top:    0; }
+	&:first-of-type, &:last-of-type { margin-top: 0; }
 	@media #{$tablet} {
 		margin: calc(#{$grid-gutter} / 2);
 		&:first-of-type, &:last-of-type { margin: calc(#{$grid-gutter} / 2); }

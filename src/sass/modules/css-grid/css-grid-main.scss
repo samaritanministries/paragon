@@ -14,12 +14,6 @@ Actual CSS Grid Classes
 	//Pad the grid
 	&.grid-padding {
 		padding: $grid-gutter;
-		// @supports(display: grid) {
-			// padding: $grid-gutter 0;
-			// @media #{$tablet}{
-			// 	padding: $grid-gutter;
-			// }
-		// }
 	}
 
 	display: block;//For IE and Safari mobile
