@@ -2,7 +2,7 @@
 //---------- VARIABLES  ----------\\
 //--------------------------------\\
 
-$content-width: 1200px !default;
+$content-width: $global-content-width;
 
 $header-height: 4rem;
 $sub-nav-height: 3rem;
