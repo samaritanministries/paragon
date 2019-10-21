@@ -24,13 +24,13 @@ $container-colors: transparent;//#413552
 .crumbs {
   margin-left: 0;
   padding-left: 1rem;
-  color: #fff;
+  color: $color-white;
   font-weight: 600;
   margin-right: auto;
 
   @media #{$tablet} {
     padding-left: 2rem;
-    color: $black;
+    color: $color-black;
   }
 }
 
@@ -39,12 +39,12 @@ $container-colors: transparent;//#413552
   width: auto;
   border-radius: 5px;
   padding: $space-xs;
-  color: $white;
+  color: $color-white;
 
   .profile-image {
     height: 2rem;
     width: 2rem;
-    background-color: $white;
+    background-color: $color-background;
     border-radius: 50%;
     position: relative;
     margin-right: $space-xs;
@@ -55,19 +55,19 @@ $container-colors: transparent;//#413552
       display: flex;
       align-items: center;
       justify-content: center;
-      color: $black;
+      color: $color-black;
     }
   }
 
   .profile-name {
     display: none;
     font-weight: 600;
+    color: $color-text;
     margin-right: $space-xs;
     @media #{$desktop} {
       display: inline-block;
     }
   }
-  @extend %icon-white;
 }
 
 .alert {
@@ -77,15 +77,15 @@ $container-colors: transparent;//#413552
   background-color: $container-colors;
   margin-left: 0.5rem;
   position: relative;
-  .dashing-icon::before { color: #f5cd66; font-size: 1.5rem; }
+  .dashing-icon::before { color: $color-orange; font-size: 1.5rem; }
 
   .count {
   	position: absolute;
   	bottom: 1rem;
   	right: 1rem;
-  	background-color: $red-500;
+  	background-color: $color-red;
   	border-radius: 50px;
-  	color: $white;
+  	color: $color-white;
     font-weight: bold;
     padding: 0rem 0.25rem;
     text-align: center;

@@ -45,7 +45,7 @@ class ProgressStepperCode extends React.Component {
               </CodeToggle>
               <CodeToggleSCSS>
 {`//Include this variable in your theme file to customize the color
-$progress-color: $green;`}
+$progress-color: $color-green;`}
               </CodeToggleSCSS>
 
               <h2 className="example-header" id="widthOptions">Width Options

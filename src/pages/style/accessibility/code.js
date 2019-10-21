@@ -4,6 +4,7 @@ import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 // import CodeToggle from '../../../components/codetoggle'
+import StillWorking from '../../../components/stillworking'
 
 const currentPageName = "Accessibility";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -17,7 +18,8 @@ export default () => (
     <AppContent>
 
     <div className="grid grid-padding">
-      <h1>Color Accessibility Guidelines</h1>
+      <StillWorking />
+      {/* <h1>Color Accessibility Guidelines</h1>
       <p>When using color in buttons, links, and navigation, it is important that the foreground-to-background contrast ratio passes <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">WCAG 2.1 AA rating</a> rating for accessibility. Paragon UI colors have been tested against Level AA standards are displayed below with examples of usage.</p>
       <ul style={{marginTop: "0"}}>
         <li><strong>Level AA</strong> requires a contrast ratio of at least <strong>4.5:1</strong> for normal text, and <strong>3:1</strong> for large text 24px or larger.</li>
@@ -233,7 +235,7 @@ export default () => (
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> */}
     </div>
   </AppContent>
 </Layout>

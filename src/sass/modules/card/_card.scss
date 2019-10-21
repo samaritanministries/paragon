@@ -4,7 +4,7 @@
 //TODO remove .card--header, .card--content, .card--footer with major release
 
 .card {
-  background-color: $white;
+  background-color: $color-white;
   border-radius: 5px;
   margin: 1.5rem auto;
   @extend %card-shadow;
@@ -22,7 +22,7 @@
     padding: $grid-gutter $grid-gutter 0 $grid-gutter;
     padding-bottom: 0;
     &.has-border {
-      border-bottom: 2px solid $gray-100;
+      border-bottom: 2px solid $color-border;
       padding-bottom: $grid-gutter;
       +.card--content .card-banner,
       +.card-content .card-banner  {
@@ -48,7 +48,7 @@
   .card-footer {
     padding: 0 $grid-gutter $grid-gutter $grid-gutter;
     &.has-border {
-      border-top: 2px solid $gray-100;
+      border-top: 2px solid $color-border;
       padding-top: $grid-gutter;
     }
   }
@@ -74,12 +74,11 @@
   &.is-selectable.disabled {
     opacity: 0.4;
     pointer-events: none;
-    background-color: $gray-200;
     box-shadow: none;
   }
 
   &.card--dashed {
-    border: 2px dashed $gray-200;
+    border: 2px dashed $color-border;
     box-shadow: none;
   }
 
@@ -99,17 +98,18 @@
       li {
         cursor: pointer;
         &:hover {
-          background-color: $gray-100;
+          background-color: $color-hover;
         }
         a {
           margin: -#{$space-s} -#{$space-m};
           padding: $space-s $space-m;
+          &:hover { opacity: 1; }
         }
       }
     }
     &.has-border {
       li {
-        border-bottom: 1px solid $gray-100;
+        border-bottom: 1px solid $color-border;
         &:last-of-type { border: 0; }
       }
     }
@@ -124,9 +124,9 @@
       border-radius: 0 0 5px 5px;
       th {
         border-top: 2px solid;
-        border-color: $gray-200;
+        border-color: $color-border;
         padding: $space-xs $space-m !important;
-        background-color: $gray-100;
+        background-color: $color-background;
       }
       &.has-arrow {
         th,tr {
@@ -140,7 +140,7 @@
           transition: $global-transition;
           &:hover {
             cursor: pointer;
-            background-color: $gray-100;
+            background-color: $color-hover;
           }
         }
       }
@@ -153,7 +153,7 @@
   }
   &.card-info--gray,
   &.card-info--grey {
-    background-color: $gray-100;
+    background-color: $color-gray-2;
     box-shadow: none;
   }
 }
@@ -182,7 +182,7 @@
     overflow: hidden;
     * { //Targets all elements inside the card header, content, and footer
       position: relative;
-      background-color: $gray-100;
+      background-color: $color-background;
       border-radius: 3px;
       height: 1.25rem;
       overflow: hidden;
@@ -194,7 +194,7 @@
         width: 100%;
         height: 100%;
         transform: translateX(-100%);
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .7), transparent);
+        background: linear-gradient(90deg, transparent, rgba($color-black, .07), transparent);
         animation: loadingCard 1.2s infinite;
         top: 0;
       }

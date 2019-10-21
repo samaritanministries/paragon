@@ -1,7 +1,7 @@
 $global-content-width: 800px !default;
 
 @import '../paragon.scss';
-@import 'color';
+@import '../base/colors/given-colors';
 @import 'typography';
 @import 'image';
 @import 'prism';
@@ -10,7 +10,7 @@ $global-content-width: 800px !default;
 $sidebar-width:  13rem;
 
 //Give example pages gray background
-.app { background-color: $gray-100; }
+.app { background-color: $color-background; }
 
 .content--example-page {
   margin-top: $space-m !important;
@@ -28,9 +28,9 @@ $sidebar-width:  13rem;
 
 .example-sidebar {
   width: $sidebar-width;
-  background-color: $gray-100;
+  background-color: $color-background;
   line-height: 2rem;
-  border-right: 2px solid $gray-200;
+  border-right: 2px solid $color-border;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -56,7 +56,7 @@ $sidebar-width:  13rem;
     height: 81px;
     width: 170px;
     text-align: center;
-    background-color: $white;
+    background-color: $color-white;
     margin: 1rem auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 1rem;
@@ -65,12 +65,14 @@ $sidebar-width:  13rem;
   a {
     padding-left: 0.5rem;
     display: block;
-    color: $gray-700;
+    color: lighten($color-text, 20%) !important;
+    text-decoration: none !important;
   }
   .active {
-    color: $white;
-    background-color: $brand-blue;
+    color: $color-white !important;
+    background-color: $color-purple;
     border-radius: 5px;
+    &:hover { opacity: 1; }
   }
 
   .group-container {
@@ -78,7 +80,7 @@ $sidebar-width:  13rem;
     cursor: pointer;
 
     &:last-of-type {
-      border-bottom: 2px solid $gray-200;
+      border-bottom: 2px solid $color-border;
     }
 
     &.expanded {
@@ -92,9 +94,9 @@ $sidebar-width:  13rem;
   .group-title {
     display: flex;
     align-items: center;
-    background-color: $white;
+    background-color: $color-white;
     padding: 0.3rem 1rem;
-    border-top: 2px solid $gray-200;
+    border-top: 2px solid $color-border;
     font-size: 1.1rem;
   }
 
@@ -105,11 +107,11 @@ $sidebar-width:  13rem;
   }
   .menu-group {
     padding: 0.5rem 1rem;
-    background-color: $gray-100;
+    background-color: $color-background;
     display: none;
     line-height: 1.9rem;
     font-size: 0.9rem;
-    border-top: 2px solid $gray-200;
+    border-top: 2px solid $color-border;
     &.expanded {
       display: block;
     }
@@ -121,7 +123,7 @@ $sidebar-width:  13rem;
   ================================================== */
 
 .splash-image {
-  background-image: linear-gradient(-45deg, $brand-blue, $brand-purple);
+  background-image: $color-gradient;
   height: 22rem;
   margin-top: -1rem;
   position: relative;
@@ -131,11 +133,11 @@ $sidebar-width:  13rem;
   }
   .splash-image--title {
     margin-bottom: 0.5rem;
-    color: $white;
+    color: $color-white;
   }
   .splash-image--subtitle {
     margin-bottom: 1rem;
-    color: $white;
+    color: $color-white;
   }
   .splash-image--title { font-size: 3rem; }
   button {
@@ -156,13 +158,13 @@ $sidebar-width:  13rem;
     display: none;
     height: 90px;
     width: 90px;
-    background-color: gray;
+    background-color: $color-gray-2;
     border-radius: 10px;
     margin-right: 1rem;
     @extend %shadow-50;
-    &.consistent { background-color: $brand-gray; }
-    &.clean { background-color: $brand-blue; }
-    &.confident { background-color: $brand-purple; }
+    &.consistent { background-color: $color-gray-2; }
+    &.clean { background-color: $color-blue; }
+    &.confident { background-color: $color-purple; }
     @media #{$tablet} {
       display: block;
     }
@@ -175,7 +177,7 @@ $sidebar-width:  13rem;
 }
 
 .app-content {
-  background-color: $white;
+  background-color: $color-white;
   @media all and (min-width: 40em) {
     margin-left: 13rem;
   }
@@ -197,12 +199,12 @@ $sidebar-width:  13rem;
 }
 
 .subnav {
-  background-color: $brand-blue;
-  box-shadow: 0 2px 6px $gray-200;
+  background-color: $color-purple;
+  box-shadow: 0 2px 6px $color-gray-3;
   h1 {
     max-width: $global-content-width;
     margin: auto;
-    color: $white;
+    color: $color-white;
     padding: 2rem 0;
     padding-left: 1rem;
   }
@@ -213,12 +215,12 @@ $sidebar-width:  13rem;
     padding-left: 1rem;
     a {
       text-transform: uppercase;
-      text-decoration: none;
-      color: white;
+      text-decoration: none !important;
+      color: $color-white !important;
       margin-right: 1rem;
       padding-bottom: 0.3rem;
       &.active {
-        border-bottom: 4px solid white;
+        border-bottom: 4px solid $color-white;
       }
     }
   }
@@ -230,7 +232,7 @@ $sidebar-width:  13rem;
 .example-mobile-sidebar {
   .button--sidebar-icon {
     border-radius: 5px 0 0 5px;
-    background-color: $gray-100;
+    background-color: $color-gray-2;
     position: fixed;
     top: 1.9rem;
     right: 0;
@@ -266,13 +268,13 @@ h2 {
     &:after {
       content: "Add to URL";
     }
-      width: 100px;
-      pointer-events: initial;
-      transition: all 0.25s;
-      opacity: 1;
-      text-align: left;
-      margin-left: 1rem !important;
-      display: inline;
+    width: 120px;
+    pointer-events: initial;
+    transition: all 0.25s;
+    opacity: 1;
+    text-align: center;
+    margin-left: 1rem !important;
+    display: inline;
 
     @media #{$tablet} {
       width: 0px;
@@ -291,9 +293,9 @@ h2 {
           &:after {
             content: "Added to URL";
           }
-          color: $green-500;
+          color: $color-green;
         }
-      width: 100px;
+      width: 120px;
       pointer-events: initial;
       opacity: 1;
     }
@@ -394,33 +396,19 @@ h2 {
   cursor: pointer;
   border: 2px solid transparent;
   &.active {
-    background-color: #E0E0E0;
-    border: 2px solid $brand-2;
+    background-color: $color-background;
+    border: 2px solid $color-blue;
   }
 }
 
-.example--icon-container:hover { background-color: #E0E0E0; }
+.example--icon-container:hover { background-color: $color-background; }
 .example--icon-container .dashing-icon:before { font-size: 32px; }
 
 .example--caption {
-  color: #555555;
+  color: $color-subtext;
   display: block;
   font-size: 12px;
   margin-top: 1rem;
-}
-
-/* Navigation Page
-  ================================================== */
-
-.example-page--app-navigation {
-  li a {
-    color: #FFFFFF !important;
-    opacity: 0.7;
-    &.active { border-bottom-color: #FFFFFF; opacity: 1; color: #FFFFFF !important; }
-  }
-}
-.app-menu .app-context .app-title .button--navigation.example-button--navigation:before {
-  color: #FFFFFF !important;
 }
 
 .hide-HTML-code {
@@ -472,28 +460,6 @@ h2 {
     height: 500px;
     margin-top: -2rem;
     padding-bottom: 0;
-  }
-}
-
-/* Intro Page
-  ================================================== */
-
-.intro {
-  .hero {
-    padding: 2rem;
-    margin: 5rem 0 -1rem;
-  }
-
-  .note {
-    border-radius: 5px;
-    background-color: #DCDCDC;
-    color: #555;
-    padding: 1rem;
-  }
-
-  .underline {
-    border-bottom: 2px solid #6E6E6E;
-    padding-bottom: 0.1rem;
   }
 }
 
@@ -569,7 +535,7 @@ h2 {
 
 
 .resource-image-container {
-  background-color: $gray-150;
+  background-color: $color-background;
   border-radius: 8px;
   overflow: hidden;
   min-width: 94px;
@@ -596,7 +562,7 @@ h2 {
   ================================================== */
 
 footer {
-  background-color: $gray-50c;
+  background-color: $color-background;
   float: right;
   position: relative;
   width: 100%;
@@ -606,14 +572,6 @@ footer {
     display: inline-block;
     margin: $space-m;
   }
-}
-
-.img-placeholder {
-  background-color: $gray-200;
-  border-color: $gray-200;
-  height: 4rem;
-  width: 100%;
-  border-radius: 5px 5px 0 0;
 }
 
 .ex {
@@ -638,17 +596,12 @@ footer {
       left: 5rem;
     }
   }
-  &.card--blue .card-content:after { background: $blue; }
-  &.card--green .card-content:after { background: $green; }
-  &.card--red .card-content:after { background: $red; }
-  &.card--orange .card-content:after { background: $orange; }
-  &.card--purple .card-content:after { background: $purple; }
-  &.card--gray .card-content:after { background: $gray-200; }
-  &.card--brand-red .card-content:after { background: #E96A63; }
-  &.card--brand-purple .card-content:after { background: #72569B; }
-  &.card--brand-darkBlue .card-content:after { background: #28336D; }
-  &.card--brand-yellow .card-content:after { background: #F5CD66; }
-  &.card--brand-gray .card-content:after { background: #F1F2F2; }
+  &.card--blue .card-content:after { background: $color-blue; }
+  &.card--green .card-content:after { background: $color-green; }
+  &.card--red .card-content:after { background: $color-red; }
+  &.card--orange .card-content:after { background: $color-orange; }
+  &.card--purple .card-content:after { background: $color-purple; }
+  &.card--gray .card-content:after { background: $color-gray-3; }
 }
 
 .x-accessibility-group {
@@ -664,65 +617,65 @@ footer {
   }
   .tag { min-width: 3rem; text-align: center; }
 }
-
-.x-button--blueWhite  {@include button($background-color: $blue, $color: $white); }
-.x-button--whiteBlue  {@include button($background-color: $white, $color: $blue); }
-.x-button--blueBlack  {@include button($background-color: $blue, $color: $black); }
-.x-button--blackBlue  {@include button($background-color: $black, $color: $blue); }
-
-.x-button--greenWhite  {@include button($background-color: $green, $color: $white); }
-.x-button--whiteGreen  {@include button($background-color: $white, $color: $green); }
-.x-button--greenBlack  {@include button($background-color: $green, $color: $black); }
-.x-button--blackGreen  {@include button($background-color: $black, $color: $green); }
-
-.x-button--redWhite  {@include button($background-color: $red, $color: $white); }
-.x-button--whiteRed  {@include button($background-color: $white, $color: $red); }
-.x-button--redBlack  {@include button($background-color: $red, $color: $black); }
-.x-button--blackRed  {@include button($background-color: $black, $color: $red); }
-
-.x-button--orangeWhite  {@include button($background-color: $orange, $color: $white); }
-.x-button--whiteOrange  {@include button($background-color: $white, $color: $orange); }
-.x-button--orangeBlack  {@include button($background-color: $orange, $color: $black); }
-.x-button--blackOrange  {@include button($background-color: $black, $color: $orange); }
-
-.x-button--purpleWhite  {@include button($background-color: $purple, $color: $white); }
-.x-button--whitePurple  {@include button($background-color: $white, $color: $purple); }
-.x-button--purpleBlack  {@include button($background-color: $purple, $color: $black); }
-.x-button--blackPurple  {@include button($background-color: $black, $color: $purple); }
-
-.x-button--grayWhite  {@include button($background-color: $gray-200, $color: $white); }
-.x-button--whiteGray  {@include button($background-color: $white, $color: $gray-200); }
-.x-button--grayBlack  {@include button($background-color: $gray-200, $color: $black); }
-.x-button--blackGray  {@include button($background-color: $black, $color: $gray-200); }
-
-.x-button--brand-redWhite  {@include button($background-color: #E96A63, $color: $white); }
-.x-button--brand-whiteRed  {@include button($background-color: $white, $color: #E96A63); }
-.x-button--brand-redBlack  {@include button($background-color: #E96A63, $color: $black); }
-.x-button--brand-blackRed  {@include button($background-color: $black, $color: #E96A63); }
-
-.x-button--brand-purpleWhite  {@include button($background-color: #72569B, $color: $white); }
-.x-button--brand-whitePurple  {@include button($background-color: $white, $color: #72569B); }
-.x-button--brand-purpleBlack  {@include button($background-color: #72569B, $color: $black); }
-.x-button--brand-blackPurple  {@include button($background-color: $black, $color: #72569B); }
-
-.x-button--brand-blueWhite  {@include button($background-color: #28336D, $color: $white); }
-.x-button--brand-whiteBlue  {@include button($background-color: $white, $color: #28336D); }
-.x-button--brand-blueBlack  {@include button($background-color: #28336D, $color: $black); }
-.x-button--brand-blackBlue  {@include button($background-color: $black, $color: #28336D); }
-
-.x-button--brand-yellowWhite  {@include button($background-color: #F5CD66, $color: $white); }
-.x-button--brand-whiteYellow  {@include button($background-color: $white, $color: #F5CD66); }
-.x-button--brand-yellowBlack  {@include button($background-color: #F5CD66, $color: $black); }
-.x-button--brand-blackYellow  {@include button($background-color: $black, $color: #F5CD66); }
-
-.x-button--brand-grayWhite  {@include button($background-color: #F1F2F2, $color: $white); }
-.x-button--brand-whiteGray  {@include button($background-color: $white, $color: #F1F2F2); }
-.x-button--brand-grayBlack  {@include button($background-color: #F1F2F2, $color: $black); }
-.x-button--brand-blackGray  {@include button($background-color: $black, $color: #F1F2F2); }
+//
+// .x-button--blueWhite  {@include button($background-color: $blue, $color: $white); }
+// .x-button--whiteBlue  {@include button($background-color: $white, $color: $blue); }
+// .x-button--blueBlack  {@include button($background-color: $blue, $color: $black); }
+// .x-button--blackBlue  {@include button($background-color: $black, $color: $blue); }
+//
+// .x-button--greenWhite  {@include button($background-color: $green, $color: $white); }
+// .x-button--whiteGreen  {@include button($background-color: $white, $color: $green); }
+// .x-button--greenBlack  {@include button($background-color: $green, $color: $black); }
+// .x-button--blackGreen  {@include button($background-color: $black, $color: $green); }
+//
+// .x-button--redWhite  {@include button($background-color: $red, $color: $white); }
+// .x-button--whiteRed  {@include button($background-color: $white, $color: $red); }
+// .x-button--redBlack  {@include button($background-color: $red, $color: $black); }
+// .x-button--blackRed  {@include button($background-color: $black, $color: $red); }
+//
+// .x-button--orangeWhite  {@include button($background-color: $orange, $color: $white); }
+// .x-button--whiteOrange  {@include button($background-color: $white, $color: $orange); }
+// .x-button--orangeBlack  {@include button($background-color: $orange, $color: $black); }
+// .x-button--blackOrange  {@include button($background-color: $black, $color: $orange); }
+//
+// .x-button--purpleWhite  {@include button($background-color: $purple, $color: $white); }
+// .x-button--whitePurple  {@include button($background-color: $white, $color: $purple); }
+// .x-button--purpleBlack  {@include button($background-color: $purple, $color: $black); }
+// .x-button--blackPurple  {@include button($background-color: $black, $color: $purple); }
+//
+// .x-button--grayWhite  {@include button($background-color: $gray-200, $color: $white); }
+// .x-button--whiteGray  {@include button($background-color: $white, $color: $gray-200); }
+// .x-button--grayBlack  {@include button($background-color: $gray-200, $color: $black); }
+// .x-button--blackGray  {@include button($background-color: $black, $color: $gray-200); }
+//
+// .x-button--brand-redWhite  {@include button($background-color: #E96A63, $color: $white); }
+// .x-button--brand-whiteRed  {@include button($background-color: $white, $color: #E96A63); }
+// .x-button--brand-redBlack  {@include button($background-color: #E96A63, $color: $black); }
+// .x-button--brand-blackRed  {@include button($background-color: $black, $color: #E96A63); }
+//
+// .x-button--brand-purpleWhite  {@include button($background-color: #72569B, $color: $white); }
+// .x-button--brand-whitePurple  {@include button($background-color: $white, $color: #72569B); }
+// .x-button--brand-purpleBlack  {@include button($background-color: #72569B, $color: $black); }
+// .x-button--brand-blackPurple  {@include button($background-color: $black, $color: #72569B); }
+//
+// .x-button--brand-blueWhite  {@include button($background-color: #28336D, $color: $white); }
+// .x-button--brand-whiteBlue  {@include button($background-color: $white, $color: #28336D); }
+// .x-button--brand-blueBlack  {@include button($background-color: #28336D, $color: $black); }
+// .x-button--brand-blackBlue  {@include button($background-color: $black, $color: #28336D); }
+//
+// .x-button--brand-yellowWhite  {@include button($background-color: #F5CD66, $color: $white); }
+// .x-button--brand-whiteYellow  {@include button($background-color: $white, $color: #F5CD66); }
+// .x-button--brand-yellowBlack  {@include button($background-color: #F5CD66, $color: $black); }
+// .x-button--brand-blackYellow  {@include button($background-color: $black, $color: #F5CD66); }
+//
+// .x-button--brand-grayWhite  {@include button($background-color: #F1F2F2, $color: $white); }
+// .x-button--brand-whiteGray  {@include button($background-color: $white, $color: #F1F2F2); }
+// .x-button--brand-grayBlack  {@include button($background-color: #F1F2F2, $color: $black); }
+// .x-button--brand-blackGray  {@include button($background-color: $black, $color: #F1F2F2); }
 
 .x-accessiblity-table {
   span, p, h2, .x-accessibility--white, .x-accessibility--black {
-    background-color: $gray-100;
+    background-color: $color-gray-2;
     display: inline-flex;
     align-items: center;
     padding: 0 $space-s;
@@ -753,66 +706,66 @@ footer {
     @extend .dashing-icon--checkmark;
     @extend .dashing-icon--green;
   }
-  .color--brand-purple { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $brand-purple; }
-  }
-  .color--brand-blue { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $brand-blue; }
-  }
-  .color--brand-red { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $brand-red; }
-  }
-  .color--brand-yellow { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $brand-yellow; }
-  }
-  .color--brand-gray { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $brand-gray; }
-  }
-  .color--blue { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $blue; }
-  }
-  //UI
-  .color--blue { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $blue; }
-  }
-  .color--green { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $green; }
-  }
-  .color--orange { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $orange; }
-  }
-  .color--red { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $red; }
-  }
-  .color--purple { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $purple; }
-  }
-  .color--gray { p, h2, .x-accessibility--white, .x-accessibility--black
-    { background-color: $gray-200; }
-  }
+  // .color--brand-purple { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $brand-purple; }
+  // }
+  // .color--brand-blue { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $color-purple; }
+  // }
+  // .color--brand-red { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $brand-red; }
+  // }
+  // .color--brand-yellow { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $brand-yellow; }
+  // }
+  // .color--brand-gray { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $brand-gray; }
+  // }
+  // .color--blue { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $blue; }
+  // }
+  // //UI
+  // .color--blue { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $blue; }
+  // }
+  // .color--green { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $green; }
+  // }
+  // .color--orange { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $orange; }
+  // }
+  // .color--red { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $red; }
+  // }
+  // .color--purple { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $purple; }
+  // }
+  // .color--gray { p, h2, .x-accessibility--white, .x-accessibility--black
+  //   { background-color: $color-gray-3; }
+  // }
 }
 
 .x-accessibility-color-container {
   border-radius: 5px;
-  border: $gray-150 1px solid;
+  border: 1px solid $color-border;
   grid-gap: 0;
   .x-accessibility-color {
     &White {
-      background-color: $white;
+      background-color: $color-white;
     }
     &Black {
-      background-color: $gray-900;
-      h2, p { color: $white; }
+      background-color: $color-text;
+      h2, p { color: $color-white; }
     }
   }
   .x-accessibility-color {
-    &OffWhite {
-      background-color: $gray-300;
-      h2, p { color: $gray-500; }
-    }
     &OffBlack {
-      background-color: $gray-500;
-      h2, p { color: $gray-300; }
+      background-color: $color-gray-3-dark;
+      h2, p { color: $color-gray-3; }
+    }
+    &OffWhite {
+      background-color: $color-gray-3;
+      h2, p { color: $color-gray-3-dark; }
     }
   }
   .x-accessibility-colorBlack, .x-accessibility-colorWhite,
@@ -833,7 +786,7 @@ footer {
   right: 0.5rem;
   left: 0.5rem;
   width: auto;
-  background-color: $brand-2;
+  background-color: $color-blue;
   position: fixed;
   bottom: -5rem;
   max-width: calc(#{$global-content-width} - #{$grid-gutter}*2);
@@ -887,7 +840,7 @@ footer {
       .button--copy-code {
         opacity: 1;
         &.copied {
-          color: $green;
+          color: $color-green;
         }
       }
     }
@@ -896,7 +849,7 @@ footer {
 
 //SPACING
 .x-space { //spacing examples
-  background-color: $brand-yellow;
+  background-color: $color-orange;
   display: inline-block;
   &.x-space--xxs { height: $space-xxs; width: $space-xxs; }
   &.x-space--xs { height: $space-xs; width: $space-xs; }
@@ -910,22 +863,22 @@ footer {
 .x-i-space { //individualSpacing examples
   height: 2rem;
   width: 2rem;
-  background-color: $gray-200;
+  background-color: $color-gray-3;
   display: block;
-  &--m { border: 8px solid $brand-red; box-sizing: content-box; }
-  &--mt { border-top: 8px solid $brand-red; box-sizing: content-box; }
-  &--mr { border-right: 8px solid $brand-red; box-sizing: content-box; }
-  &--mb { border-bottom: 8px solid $brand-red; box-sizing: content-box; }
-  &--ml { border-left: 8px solid $brand-red; box-sizing: content-box; }
-  &--mx { border-left: 8px solid $brand-red; border-right: 8px solid $brand-red; box-sizing: content-box; }
-  &--my { border-top: 8px solid $brand-red; border-bottom: 8px solid $brand-red; box-sizing: content-box; }
-  &--p { border: 8px solid $brand-blue; }
-  &--pt { border-top: 8px solid $brand-blue; }
-  &--pr { border-right: 8px solid $brand-blue; }
-  &--pb { border-bottom: 8px solid $brand-blue; }
-  &--pl { border-left: 8px solid $brand-blue; }
-  &--px { border-left: 8px solid $brand-blue; border-right: 8px solid $brand-blue; }
-  &--py { border-top: 8px solid $brand-blue; border-bottom: 8px solid $brand-blue; }
+  &--m { border: 8px solid $color-red; box-sizing: content-box; }
+  &--mt { border-top: 8px solid $color-red; box-sizing: content-box; }
+  &--mr { border-right: 8px solid $color-red; box-sizing: content-box; }
+  &--mb { border-bottom: 8px solid $color-red; box-sizing: content-box; }
+  &--ml { border-left: 8px solid $color-red; box-sizing: content-box; }
+  &--mx { border-left: 8px solid $color-red; border-right: 8px solid $color-red; box-sizing: content-box; }
+  &--my { border-top: 8px solid $color-red; border-bottom: 8px solid $color-red; box-sizing: content-box; }
+  &--p { border: 8px solid $color-purple; }
+  &--pt { border-top: 8px solid $color-purple; }
+  &--pr { border-right: 8px solid $color-purple; }
+  &--pb { border-bottom: 8px solid $color-purple; }
+  &--pl { border-left: 8px solid $color-purple; }
+  &--px { border-left: 8px solid $color-purple; border-right: 8px solid $color-purple; }
+  &--py { border-top: 8px solid $color-purple; border-bottom: 8px solid $color-purple; }
 }
 
 .h1-spacing,
@@ -939,7 +892,7 @@ footer {
 .input-spacing:after {
   content: "";
   position: absolute;
-  background-color: $brand-yellow;
+  background-color: $color-orange;
   width: 100%;
   display: block;
   height: 0.25rem;
@@ -954,4 +907,55 @@ footer {
 .input-spacing:after {
   height: 1rem;
   bottom: 0;
+}
+
+//Colors
+.color-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.color-square,
+.color-rectangle {
+  height: 75px;
+  width: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-right: $space-xs;
+  margin-bottom: $space-xs;
+  text-align: center;
+
+  &.color-gradient { width: calc((125px * 2) + #{$space-xs}); }
+
+  input {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    margin: -1rem;
+    outline: none;
+  }
+
+  &.color-purple { background-color: $color-purple; color: $color-white; }
+  &.color-blue { background-color: $color-blue; color: $color-white; }
+  &.color-green { background-color: $color-green; color: $color-white; }
+  &.color-orange { background-color: $color-orange; color: $color-white; }
+  &.color-red { background-color: $color-red; color: $color-white; }
+
+  &.color-black { background-color: $color-black; color: $color-white; }
+  &.color-gray-4 { background-color: $color-gray-4; color: $color-white; }
+  &.color-gray-3 { background-color: $color-gray-3; color: $color-black; }
+  &.color-gray-2 { background-color: $color-gray-2; color: $color-black; }
+  &.color-gray-1 { background-color: $color-gray-1; color: $color-black; }
+  &.color-white { background-color: $color-white; color: $color-black; border: 2px solid $color-gray-2; }
+
+  &.color-data-teal { background-color: $color-data-teal; color: $color-white; }
+  &.color-data-purple { background-color: $color-data-purple; color: $color-white; }
+
+  &.color-gradient { background-image: $color-gradient; color: $color-white; }
 }

@@ -120,7 +120,7 @@ class Sidebar extends React.Component {
               <i onClick={this.toggleStyle} className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
 
               <div className="menu-group">
-                <Link to="/style/accessibility/code">Accessibility</Link>
+                <Link to="/style/accessibility/guidelines">Accessibility</Link>
                 <Link to="/style/color/code">Color</Link>
                 <Link to="/style/spacing/code">Spacing</Link>
                 <Link to="/style/typography/code">Typography</Link>
@@ -142,7 +142,7 @@ class Sidebar extends React.Component {
                 <Link to="/components/footer/code">Footer</Link>
                 <Link to="/components/forms/code">Forms</Link>
                 <Link to="/components/css-grid/code" id="css-grid">CSS Grid</Link>
-                <Link to="/components/grid/code">Grid</Link>
+                {/* <Link to="/components/grid/code">Grid</Link> */}
                 <Link to="/components/icons/code">Icons</Link>
                 <Link to="/components/lists/code">Lists</Link>
                 <Link to="/components/modal/code">Modal</Link>

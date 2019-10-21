@@ -6,7 +6,6 @@ import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 import CodeToggle from '../../../components/codetoggle'
-import CodeToggleSCSS from '../../../components/codetoggle-scss'
 
 const currentPageName = "Tags";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -143,34 +142,6 @@ class TagsCode extends React.Component {
 <a class="tag tag--purple tag--solid">Purple Tag</a>
 <a class="tag tag--red tag--solid">Red Tag</a>`}
                </CodeToggle>
-
-               <h2 className="example-header" id="tagCustom">Tag Custom
-                <Link to={location.pathname + "/#tagCustom"} className="button button--transparent button--copy-link"></Link>
-               </h2>
-          			<div className="row example-container hide-HTML-code">
-            			<div className="column column--full ">
-            				<div className="tag plan-1 tag--large tag--no-link" href=" ">classNameic</div>
-        					  <div className="tag plan-11 tag--no-link" href=" ">Basic</div>
-            			</div>
-              	</div>
-                <CodeToggle>
-                </CodeToggle>
-                <CodeToggleSCSS>
- {`//Example: Custom Tags
-.tag {
-	&.my-custom-tag {
-		@include tag($background-color: #FAA443, $color: $black, $border-color: #FAA443, $hover-color: $black, $hover-border-color: #FAA443)
-	}
-}
-
-.tag--counter {
-	#{$tag-hover-rules} {
-		&.my-custom-tag {
-			border-color: red;
-		}
-	}
-}`}
-                </CodeToggleSCSS>
 
             </div>
           </div>

@@ -10,7 +10,7 @@ class ColorCode extends React.Component {
   componentDidMount() {
     var colorSwatchText;
 
-    $('.example-flex .column-flex').hover( function() { showColor(this); }, function() { $(this).text(colorSwatchText); });
+    $('.color-square').hover( function() { showColor(this); }, function() { $(this).text(colorSwatchText); });
 
     function showColor(colorSwatch) {
       var colorSwatchHex = getHexColorOf($(colorSwatch).css('backgroundColor'));
@@ -43,13 +43,52 @@ class ColorCode extends React.Component {
       <SubNav pageName={currentPageNameLower} sectionName="style"/>
     </header>
     <AppContent>
-      <div className="row">
-        <div className="column column--full">
-          <h2>Color Theme</h2>
+      <div className="grid grid-padding">
+
+      <div className="mb-space-m">
+        <h3 className="mb-space-xs">Primary</h3>
+        <div className="color-square color-purple">$color-purple</div>
+      </div>
+
+      <div className="mb-space-m">
+        <h3 className="mb-space-xs">Semantic</h3>
+        <div className="color-group">
+          <div className="color-square color-blue">$color-blue</div>
+          <div className="color-square color-green">$color-green</div>
+          <div className="color-square color-orange">$color-orange</div>
+          <div className="color-square color-red">$color-red</div>
         </div>
       </div>
 
-      <div className="row">
+      <div className="mb-space-m">
+        <h3 className="mb-space-xs">Neutral</h3>
+        <div className="color-group">
+          <div className="color-square color-black">$color-black</div>
+          <div className="color-square color-gray-4">$color-gray-4</div>
+          <div className="color-square color-gray-3">$color-gray-3</div>
+          <div className="color-square color-gray-2">$color-gray-2</div>
+          <div className="color-square color-gray-1">$color-gray-1</div>
+          <div className="color-square color-white">$color-white</div>
+        </div>
+      </div>
+
+      <div className="mb-space-m">
+        <h3 className="mb-space-xs">Data Visuals</h3>
+        <div className="color-group">
+          <div className="color-square color-data-teal">$color-data-teal</div>
+          <div className="color-square color-data-purple">$color-data-purple</div>
+        </div>
+      </div>
+
+      <div className="mb-space-m">
+        <h3 className="mb-space-xs">Gradient</h3>
+        <div className="color-group">
+          <div className="color-rectangle color-gradient">$color-gradient</div>
+        </div>
+      </div>
+
+
+      {/* <div className="row">
         <div className="column column--full no-padding--top">
           <section className="example-flex card">
           <div className="row-flex row-column row-flex--example ">
@@ -171,6 +210,7 @@ class ColorCode extends React.Component {
           </div>
         </section>
         </div>
+      </div> */}
       </div>
 
     </AppContent>

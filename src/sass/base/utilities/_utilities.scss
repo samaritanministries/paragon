@@ -116,15 +116,14 @@ $sides: (
 .fixed { position: fixed !important; }
 .relative { position: relative !important; }
 
-.text-color--white { color: $white; }
-.text-color--black { color: $black; }
-.text-color--gray, .text-color--grey { color: $gray; }
-.text-color--blue { color: $blue; }
-.text-color--green { color: $green; }
-.text-color--orange { color: $orange; }
-.text-color--purple { color: $purple; }
-.text-color--red { color: $red; }
-.text-color--yellow { color: $yellow; }
+.text-color--white { color: $color-white; }
+.text-color--black { color: $color-black; }
+.text-color--gray, .text-color--grey { color: $color-subtext; }
+.text-color--blue { color: $color-blue; }
+.text-color--green { color: $color-green; }
+.text-color--orange { color: $color-orange; }
+.text-color--purple { color: $color-purple; }
+.text-color--red { color: $color-red; }
 
 //Flex utilities
 .space-between {
@@ -132,3 +131,24 @@ $sides: (
   align-items: center;
   justify-content: space-between;
 }
+
+.flex { display: flex; }
+
+.flex-column  { flex-direction: column; }
+.flex-wrap    { flex-wrap: wrap; }
+
+.flex-center   { align-items: center; }
+.flex-baseline { align-items: baseline; }
+.flex-stretch  { align-items: stretch; }
+.flex-start    { align-items: flex-start; }
+.flex-end      { align-items: flex-end; }
+
+.flex-justify  { justify-content: space-between; }
+
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+.flex-grow { flex: 1 0 auto; }
+.flex-none { flex: none; }

@@ -1,5 +1,5 @@
-$tooltip-color: $gray-700;
-$clippy-color: $white;
+$tooltip-color: $color-gray-4;
+$clippy-color: $color-white;
 
 //STATE
 .has-tooltip { @include user-select(none); }
@@ -9,7 +9,6 @@ i.paragon-tooltip,
 i.paragon-clippy {
 	@extend .dashing-icon;
 	@extend .dashing-icon--question-filled;
-	@extend .dashing-icon--gray;
 	cursor: help;
   display: inline-block;
 
@@ -17,7 +16,7 @@ i.paragon-clippy {
     margin: -0.6rem -0.4rem !important;
     padding: 0.6rem;
     border-radius: 50px;
-    &:hover { background-color: rgba(85, 85, 85, 0.1); }
+    &:hover { background-color: rgba($color-gray-4, 0.1); }
   }
 }
 
@@ -50,7 +49,7 @@ span.paragon-tooltip { display: inline-block; }
 	}
 
 	&.clippy-theme {
-		border: 2px solid $gray-200;
+		border: 2px solid $color-border;
 		box-shadow: 0 4px 8px rgba(0,0,0, 0.2) !important;
 		border-radius: 5px;
 		background-color: $clippy-color;
@@ -60,7 +59,7 @@ span.paragon-tooltip { display: inline-block; }
 			font-size: 0.9rem;
 			line-height: 1.2rem;
 			padding: 0;
-			color: $gray-900;
+			color: $color-text;
 			text-align: left;
 			padding: 0.2rem;
 

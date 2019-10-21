@@ -1,4 +1,4 @@
-$spinner-color: #000 !default;
+$spinner-color: $color-black !default;
 
 $spinner-default: 90px; //5rem
 $spinner-small: 32px; //2rem
@@ -26,7 +26,6 @@ $spinner-button: 24px; //1.2rem;
 }
 
 .has-spinner {
-  background-color: rgb(242, 242, 242);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -53,8 +52,8 @@ $spinner-button: 24px; //1.2rem;
     content: "";
     @extend .dash-spinner;
     border-width: 3px;
-    border-color: rgba($white, .15);
-    border-top-color: rgba($white, 1);
+    border-color: rgba($color-white, .15);
+    border-top-color: rgba($color-white, 1);
     position: absolute;
     height: $spinner-button;
     width: $spinner-button;

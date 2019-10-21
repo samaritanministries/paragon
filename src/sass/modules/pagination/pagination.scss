@@ -19,7 +19,7 @@
   &.pagination--group {
     li {
       .button {
-        border: 1px solid $gray-300;
+        border: 1px solid $color-border;
         border-radius: 0;
         margin-left: -1px;
       }
@@ -36,9 +36,9 @@
 
 .pagination li.is-active { //override for anchor tag hover
   .button {
-    &:hover, &:focus, &:active { color: $white; }
+    &:hover, &:focus, &:active { color: $color-white; }
   }
   .button--gray {
-    &:hover, &:focus, &:active { color: $gray-800; }
+    &:hover, &:focus, &:active { color: $color-gray-4; }
   }
 }

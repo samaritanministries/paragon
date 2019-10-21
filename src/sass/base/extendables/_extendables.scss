@@ -12,7 +12,8 @@
 /* Icon Extendables
 =========================================================================== */
 //TO DO: Add more colors for icons
-%icon-white { i:before { color: $white !important; } }
+%icon-white { i:before { color: $color-white !important; } }
+%icon-purple { i:before { color: $color-purple !important; } }
 
 /* Shadow Extendables
 =========================================================================== */
@@ -43,7 +44,7 @@
   }
   &::-webkit-scrollbar-thumb {
     background-clip: content-box;
-    background-color: $gray-400c;
+    background-color: $color-gray-3;
     border: 4px solid transparent;
     border-radius: 10px;
     min-height: 2rem;
@@ -61,7 +62,7 @@
   }
   &::-webkit-scrollbar-thumb {
     background-clip: content-box;
-    background-color: rgba($gray-200c, 0.3);
+    background-color: rgba($color-gray-2, 0.3);
     border: 4px solid transparent;
     border-radius: 10px;
     min-height: 2rem;

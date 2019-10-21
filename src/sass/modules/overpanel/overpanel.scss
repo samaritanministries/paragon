@@ -14,11 +14,11 @@
   right: 0;
   left: 0;
   z-index: $zindex-overpanel;
-  background-color: $gray-100;
+  background-color: $color-background;
   -webkit-overflow-scrolling: touch;
 
   .title-bar {
-    background-color: $white;
+    background-color: $color-white;
     box-shadow: $header-shadow;
 
     .title-content {

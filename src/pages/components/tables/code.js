@@ -6,7 +6,7 @@ import Layout from '../../../components/layout'
 import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 import CodeToggle from '../../../components/codetoggle'
-import CodeToggleSCSS from '../../../components/codetoggle-scss'
+// import CodeToggleSCSS from '../../../components/codetoggle-scss'
 
 const currentPageName = "Tables";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -60,7 +60,7 @@ class TablesCode extends React.Component {
         <AppContent>
           <div className="grid grid-padding">
 
-            <h2 id="default-table">Default Table
+            {/* <h2 id="default-table">Default Table
               <Link to={location.pathname + "/#default-table"} className="button button--transparent button--copy-link"></Link>
             </h2>
             <div className="example-container">
@@ -179,9 +179,9 @@ $table--even-row: $white !default;
 $table--dividers: $gray-100 !default;
 $table--border: $gray-200 !default;`}
           </CodeToggleSCSS>
-            </div>
+            </div> */}
 
-          <h2 className="mt-space-xl" id="flex-table">Flex Table
+          <h2 id="flex-table">Flex Table
             <Link to={location.pathname + "/#flex-table"} className="button button--transparent button--copy-link"></Link>
           </h2>
           <p className="no-margin">Use <code className="example-text">.is-condensed</code> to make the padding for the rows half the size.</p>

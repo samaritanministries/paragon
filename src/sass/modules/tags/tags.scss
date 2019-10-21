@@ -3,16 +3,17 @@
 
 $tags: ".tag";
 $tag-hover-rules: "&:not(.tag--no-link):hover .tag, &:not(.tag--no-link):focus .tag";
+$tag-default-color: $color-gray-2;
 
 /* Tag Extendables
   =========================================================================== */
 
 %tag {
 	@include user-select(none);
-	background-color: $gray-150;
+	background-color: $tag-default-color;
 	border-radius: 3px;
-	border: 2px solid $gray-150;
-	color: $blue;
+	border: 2px solid $tag-default-color;
+	color: $color-blue;
 	cursor: pointer;
 	display: inline-block;
 	font-size: $font-size-xsmall;
@@ -20,13 +21,15 @@ $tag-hover-rules: "&:not(.tag--no-link):hover .tag, &:not(.tag--no-link):focus .
 	min-width: 1rem;
 	padding: 0.1rem 0.25rem;
 	text-transform: uppercase;
+	text-decoration: none;
 	margin: 0.25rem;
 	&:not(.tag--no-link):hover,
 	&:not(.tag--no-link):focus {
-		border: 2px solid $blue;
-		color: $blue;
+		border: 2px solid $color-blue;
+		color: $color-blue;
 		transition: border-color .1s ease-in-out;
 		text-decoration: none;
+		opacity: 1;
 	}
 }
 
@@ -40,29 +43,29 @@ $tag-hover-rules: "&:not(.tag--no-link):hover .tag, &:not(.tag--no-link):focus .
 	&.tag--large { font-size: $font-size-normal; }
 
 	&.tag--primary,
-	&.tag--blue   	  { @include tag--action($color: $blue) }
+	&.tag--blue   	  { @include tag--action($color: $color-blue) }
 	&.tag--secondary,
 	&.tag--gray,
-	&.tag--grey   	  { @include tag--action($color: $gray-800) }
-	&.tag--green  	  { @include tag--action($color: $green-600) }
-	&.tag--orange 	  { @include tag--action($color: $orange-600) }
-	&.tag--purple 	  { @include tag--action($color: $purple) }
-	&.tag--red    	  { @include tag--action($color: $red) }
-	&.tag--white  	  { @include tag--action($color: $white) }
-	&.tag--black    	  { @include tag--action($color: $ui-black) }
+	&.tag--grey   	  { @include tag--action($color: $color-text) }
+	&.tag--green  	  { @include tag--action($color: $color-green) }
+	&.tag--orange 	  { @include tag--action($color: $color-orange) }
+	&.tag--purple 	  { @include tag--action($color: $color-purple) }
+	&.tag--red    	  { @include tag--action($color: $color-red) }
+	&.tag--white  	  { @include tag--action($color: $color-white) }
+	&.tag--black    	{ @include tag--action($color: $color-black) }
 }
 
 .tag--solid {
 	&.tag--primary,
-	&.tag--blue       { @include tag($tag-color: $blue, 		$color: $white) }
+	&.tag--blue       { @include tag($tag-color: $color-blue, 		$color: $color-white) }
 	&.tag--secondary,
 	&.tag--grey,
-	&.tag--gray       { @include tag($tag-color: $gray-200, $color: $brand-black) }
-	&.tag--green      { @include tag($tag-color: $green, 		$color: $white) }
-	&.tag--orange     { @include tag($tag-color: $orange, 	$color: $brand-black) }
-	&.tag--purple     { @include tag($tag-color: $purple, 	$color: $white) }
-	&.tag--red        { @include tag($tag-color: $red,    	$color: $white) }
-	&.tag--white      { @include tag($tag-color: $white,    $color: $brand-black) }
+	&.tag--gray       { @include tag($tag-color: $tag-default-color, 	$color: $color-black) }
+	&.tag--green      { @include tag($tag-color: $color-green, 				$color: $color-white) }
+	&.tag--orange     { @include tag($tag-color: $color-orange, 			$color: $color-black) }
+	&.tag--purple     { @include tag($tag-color: $color-purple, 			$color: $color-white) }
+	&.tag--red        { @include tag($tag-color: $color-red,    			$color: $color-white) }
+	&.tag--white      { @include tag($tag-color: $color-white,    		$color: $color-black) }
 }
 
 //Split the tag to hold values on the right
@@ -74,19 +77,19 @@ $tag-hover-rules: "&:not(.tag--no-link):hover .tag, &:not(.tag--no-link):focus .
 
 	#{$tag-hover-rules} {
 		//Default hover effects
-		border-color: $blue;
+		border-color: $color-blue;
 		transition: border-color .1s ease-in-out;
 
   	&.tag--primary,
-		&.tag--blue       { border-color: darken($blue, 20%); }
+		&.tag--blue       { border-color: darken($color-blue, 20%); }
 		&.tag--secondary,
 		&.tag--grey,
-		&.tag--gray       { border-color: darken($gray-200, 20%); }
-		&.tag--green  	  { border-color: darken($green, 20%); }
-		&.tag--orange     { border-color: darken($orange, 20%); }
-		&.tag--purple     { border-color: darken($purple, 20%);; }
-		&.tag--red        { border-color: darken($red, 20%);; }
-		&.tag--white      { border-color: darken($white, 20%);; }
+		&.tag--gray       { border-color: darken($tag-default-color, 20%); }
+		&.tag--green  	  { border-color: darken($color-green, 20%); }
+		&.tag--orange     { border-color: darken($color-orange, 20%); }
+		&.tag--purple     { border-color: darken($color-purple, 20%);; }
+		&.tag--red        { border-color: darken($color-red, 20%);; }
+		&.tag--white      { border-color: darken($color-white, 20%);; }
 	}
 
 	.tag:first-child {
@@ -97,34 +100,34 @@ $tag-hover-rules: "&:not(.tag--no-link):hover .tag, &:not(.tag--no-link):focus .
 
 	.tag:last-child {
 		border-radius: 0 3px 3px 0;
-		background-color: $white;
-		color: $gray-800;
+		background-color: $color-white;
+		color: $color-text;
 		border-left: transparent;
 		margin-left: 0;
 
 		&:not(.tag--no-link):hover,
 		&:not(.tag--no-link):focus {
-			color: $gray-800;
+			color: $color-text;
 		}
 	}
 }
 
 //Example: Custom Tags
 .tag {//Basic
-	&.plan-11 {	@include tag($tag-color: $orange, $color: $black) }
+	&.plan-11 {	@include tag($tag-color: $color-orange, $color: $color-black) }
 }
 
 .tag--counter {
 	#{$tag-hover-rules} {
 		&.plan-11 {
-			border-color: darken($orange, 20%);
+			border-color: darken($color-orange, 20%);
 		}
 	}
 }
 
 .plan-1 {//Classic
 	&.tag {
-		@include tag($tag-color: #8560A8, $color: $white)
+		@include tag($tag-color: #8560A8, $color: $color-white)
 	}
 }
 
@@ -138,14 +141,14 @@ $tag-hover-rules: "&:not(.tag--no-link):hover .tag, &:not(.tag--no-link):focus .
 
 .plan-0 {//Some other one!
 	&.tag {
-		@include tag($tag-color: $green, $color: $white)
+		@include tag($tag-color: $color-green, $color: $color-white)
 	}
 }
 
 .tag--counter {
 	#{$tag-hover-rules} {
 		&.plan-0 {
-			border-color: darken($green, 20%);
+			border-color: darken($color-green, 20%);
 		}
 	}
 }

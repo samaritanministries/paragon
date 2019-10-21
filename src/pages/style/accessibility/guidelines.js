@@ -34,7 +34,7 @@ export default () => (
           <p>Light on Dark</p>
         </div>
         <div className="grid--half x-accessibility-colorWhite">
-          <div className="space-between"><h2>Light on Dark</h2><span className="tag tag--no-link tag--solid tag--green">PASS</span></div>
+          <div className="space-between"><h2>Dark on Dark</h2><span className="tag tag--no-link tag--solid tag--green">PASS</span></div>
           <p>Dark on Light</p>
         </div>
       </div>
@@ -44,7 +44,7 @@ export default () => (
           <p>Light on Dark</p>
         </div>
         <div className="grid--half x-accessibility-colorOffWhite">
-          <div className="space-between"><h2>Light on Dark</h2><span className="tag tag--no-link tag--solid tag--red">FAIL</span></div>
+          <div className="space-between"><h2>Dark on Dark</h2><span className="tag tag--no-link tag--solid tag--red">FAIL</span></div>
           <p>Dark on Light</p>
         </div>
       </div>

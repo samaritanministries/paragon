@@ -12,7 +12,7 @@ export default () => (
           <div className="column column--full">
             <h1 className="splash-image--title">Paragon</h1>
             <h3 className="splash-image--subtitle">A web application framework to simply get it done.</h3>
-            <Link className="button button--primary" to="/setup">Get Started</Link>
+            <Link className="button button--gray" to="/setup">Get Started</Link>
           </div>
         </div>
       </div>

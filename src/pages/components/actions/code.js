@@ -132,10 +132,10 @@ class ActionsCode extends React.Component {
           <div className="example-container">
             <div className="card">
               <div className="card-content">
-                <button className="button">Blue</button>
-                <button className="button button--border">Blue</button>
-                <button className="button button--transparent">Blue</button>
-                <button className="button button--icon">
+                <button className="button button--blue">Blue</button>
+                <button className="button button--blue button--border">Blue</button>
+                <button className="button button--blue button--transparent">Blue</button>
+                <button className="button button--blue button--icon">
                   <i className="dashing-icon dashing-icon--pencil"></i>
                 </button>
                 <button className="button button--blue button--icon button--transparent">
@@ -390,7 +390,7 @@ class ActionsCode extends React.Component {
           <div className="example-container">
             <div className="card">
               <div className="card-content">
-                <ul className="button-group button--gray">
+                <ul className="button-group button--blue">
                   <li className="button--radio">
                     <input type="radio" name="options-blue" id="blue1" defaultChecked />
                     <label htmlFor="blue1" className="button">Left</label>
@@ -425,7 +425,7 @@ class ActionsCode extends React.Component {
               </div>
             </div>
             <CodeToggle>
-{`<ul class="button-group button--gray">
+{`<ul class="button-group button--blue">
   <li class="button--radio">
     <input type="radio" name="options-blue" id="blue1" defaultChecked />
     <label for="blue1" class="button">Left</label>
