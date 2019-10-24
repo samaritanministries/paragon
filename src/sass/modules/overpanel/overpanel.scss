@@ -20,7 +20,7 @@
   .title-bar {
     background-color: $color-white;
     box-shadow: $header-shadow;
-    position: sticky;
+    @include position(sticky)
     top: 0;
 
     .title-content {
