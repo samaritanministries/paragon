@@ -24,8 +24,8 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
   top: 0;
   left: 0;
   right: 0;
-  height: $header-height;
-  max-height: $header-height;
+  height: calc(#{$header-height} + #{$nav-separator-width});
+  max-height: calc(#{$header-height} + #{$nav-separator-width});
 
   max-width: $content-width;
   margin: auto;
@@ -34,13 +34,22 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 
   &::after {
     z-index: $zindex-negative;
+    border-bottom: $nav-separator-width solid $color-border;
   	content: "";
   	width: 100%;
-  	height: $header-height;
+  	height: calc(#{$header-height} + #{$nav-separator-width});
     background: $header-color;
   	position: fixed;
   	top: 0;
   	left: 0;
+  }
+
+  &.sub-nav + {
+    background-color: red !important;
+  }
+
+  &.has-subnav {
+    &::after { box-shadow: none; }
   }
 
   .header-nav {
@@ -84,7 +93,7 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 
 .sub-nav {
   z-index: calc(#{$zindex-header} - 1);
-  height: calc(#{$sub-nav-height} + #{$nav-separator-width});
+  height: $sub-nav-height;
 
   ~.content {
     margin-top: calc(#{$header-height} + #{$sub-nav-height});
@@ -104,13 +113,12 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
   	content: "";
     box-shadow: $header-shadow;
   	width: 100%;
-  	height: calc(#{$sub-nav-height} + #{$nav-separator-width});
+  	height: $sub-nav-height;
     background-color: $sub-nav-color;
   	position: fixed;
   	top: $header-height;
   	left: 0;
   	z-index: $zindex-negative;
-    border-top: $nav-separator-width solid $color-background;
   }
 
   ul, li, a {

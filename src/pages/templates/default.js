@@ -8,7 +8,7 @@ import '../../sass/experimental/placeholder.scss'
 export default () => (
 
 <React.Fragment>
-	<header className="header">
+	<header className="header has-subnav">
 		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 		<div className="logo"><p className="text-color--purple">LOGO</p></div>
 
