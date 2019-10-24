@@ -20,6 +20,8 @@
   .title-bar {
     background-color: $color-white;
     box-shadow: $header-shadow;
+    position: sticky;
+    top: 0;
 
     .title-content {
       display: flex;
