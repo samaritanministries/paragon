@@ -11,8 +11,14 @@ $nav-separator-width: 2px;
 //Theme
 $header-color: $color-white !default;
 $header-text-color: $color-purple !default;
+$header-underline-width: 4px;
+$header-underline-color: $color-data-teal !default;
+
 $sub-nav-color: $color-white !default;
 $sub-nav-text-color: $color-purple !default;
+$sub-nav-underline-width: 4px;
+$sub-nav-underline-color: $color-data-teal !default;
+
 $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 
 .header {
@@ -44,14 +50,6 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
   	left: 0;
   }
 
-  &.sub-nav + {
-    background-color: red !important;
-  }
-
-  &.has-subnav {
-    &::after { box-shadow: none; }
-  }
-
   .header-nav {
 
     ul {
@@ -68,13 +66,38 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
           color: $header-text-color;
           font-weight: 600;
           font-size: 1.1rem;
-          border-bottom: 2px solid transparent;
           text-decoration: none;
-          @include transition(border-bottom 0.2s ease-out);
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: calc(-#{$header-underline-width} - 2px);
+            right: 0;
+            left: 0;
+            height: $header-underline-width;
+
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+
+            @include transition(all 0.2s ease-out);
+          }
 
           &:hover, &.active {
-            border-bottom: 2px solid $header-text-color;
             opacity: 1;
+            &::after {
+              bottom: calc(-#{$header-underline-width} - 2px);
+              right: 0;
+              left: 0;
+              height: $header-underline-width;
+
+              background-color: $color-data-teal;
+              border-radius: 10px;
+
+              visibility: visible;
+              -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+            }
           }
 
         }
@@ -142,12 +165,37 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
         font-weight: 600;
         font-size: 1rem;
         text-decoration: none;
-        border-bottom: 3px solid transparent;
-        @include transition(border-bottom 0.2s ease-out);
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          height: $header-underline-width;
+
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+
+          @include transition(all 0.2s ease-out);
+        }
 
         &:hover, &.active  {
-          border-bottom: 3px solid $sub-nav-text-color;
           opacity: 1;
+          &::after {
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: $header-underline-width;
+
+            background-color: $color-data-teal;
+            border-radius: 10px;
+
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+          }
         }
       }
     }
