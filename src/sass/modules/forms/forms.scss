@@ -256,7 +256,7 @@ fieldset {
     @media #{$tablet} {
       margin-left: 1rem;
       margin-right: 0;
-      flex: 1 1 0;
+      flex: 1 1 0px;
       -ms-flex: 1 1 auto;
       min-width: 180px;
       &:last-of-type { margin-right: 0; }
