@@ -11,12 +11,18 @@ $nav-separator-width: 2px;
 //Theme
 $header-color: $color-white !default;
 $header-text-color: $color-purple !default;
+$header-underline-width: 4px;
+$header-underline-color: $color-data-teal !default;
+
 $sub-nav-color: $color-white !default;
 $sub-nav-text-color: $color-purple !default;
+$sub-nav-underline-width: 4px;
+$sub-nav-underline-color: $color-data-teal !default;
+
 $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 
 .header {
-  z-index: $zindex-header;
+  z-index: calc(#{$zindex-header} + 1);
   display: flex;
   align-items: center;
   padding: $space-xs;
@@ -34,9 +40,10 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 
   &::after {
     z-index: $zindex-negative;
+    border-bottom: $nav-separator-width solid $color-border;
   	content: "";
   	width: 100%;
-  	height: $header-height;
+  	height: calc(#{$header-height} + #{$nav-separator-width});
     background: $header-color;
   	position: fixed;
   	top: 0;
@@ -57,20 +64,48 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
           display: flex;
           align-items: center;
           color: $header-text-color;
-          font-weight: 600;
+          font-weight: $font-weight-semibold;
           font-size: 1.1rem;
-          border-bottom: 2px solid transparent;
           text-decoration: none;
-          @include transition(border-bottom 0.2s ease-out);
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: calc(-#{$header-underline-width} - 2px);
+            right: 0;
+            left: 0;
+            height: $header-underline-width;
+
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+
+            @include transition(all 0.2s ease-out);
+          }
 
           &:hover, &.active {
-            border-bottom: 2px solid $header-text-color;
             opacity: 1;
+            &::after {
+              bottom: calc(-#{$header-underline-width} - 2px);
+              right: 0;
+              left: 0;
+              height: $header-underline-width;
+
+              background-color: $color-data-teal;
+              border-radius: 10px;
+
+              visibility: visible;
+              -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+            }
           }
 
         }
       }
     }
+  }
+  .logo + .header-nav {
+    margin-left: $space-m;
   }
 }
 
@@ -83,8 +118,8 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 }
 
 .sub-nav {
-  z-index: calc(#{$zindex-header} - 1);
-  height: calc(#{$sub-nav-height} + #{$nav-separator-width});
+  z-index: $zindex-header;
+  height: $sub-nav-height;
 
   ~.content {
     margin-top: calc(#{$header-height} + #{$sub-nav-height});
@@ -104,13 +139,12 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
   	content: "";
     box-shadow: $header-shadow;
   	width: 100%;
-  	height: calc(#{$sub-nav-height} + #{$nav-separator-width});
+  	height: $sub-nav-height;
     background-color: $sub-nav-color;
   	position: fixed;
   	top: $header-height;
   	left: 0;
   	z-index: $zindex-negative;
-    border-top: $nav-separator-width solid $color-background;
   }
 
   ul, li, a {
@@ -131,15 +165,40 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
         display: flex;
         align-items: center;
         color: $sub-nav-text-color;
-        font-weight: 600;
+        font-weight: $font-weight-semibold;
         font-size: 1rem;
         text-decoration: none;
-        border-bottom: 3px solid transparent;
-        @include transition(border-bottom 0.2s ease-out);
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          height: $header-underline-width;
+
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+
+          @include transition(all 0.2s ease-out);
+        }
 
         &:hover, &.active  {
-          border-bottom: 3px solid $sub-nav-text-color;
           opacity: 1;
+          &::after {
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: $header-underline-width;
+
+            background-color: $color-data-teal;
+            border-radius: 10px;
+
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+          }
         }
       }
     }

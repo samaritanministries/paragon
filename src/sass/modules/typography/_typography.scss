@@ -8,9 +8,9 @@ $font-size-normal:      1rem;     //18px
 $font-size-small:       0.9rem;   //16px
 $font-size-xsmall:      0.8rem;   //14px
 
-$font-weight-normal:    400;
-$font-weight-semibold:  600;
-$font-weight-bold:      700;
+$font-weight-normal:    400 !default;
+$font-weight-semibold:  600 !default;
+$font-weight-bold:      700 !default;
 
 $font-family-header:    "Source Sans Pro", sans-serif !default;
 $font-family-body:      "Source Sans Pro", sans-serif !default;
@@ -50,6 +50,7 @@ body {
   background-color: $color-background;
   font-family: $font-family-body;
   font-size: $font-size-normal;
+  color: $color-text;
 }
 
 h1, h2, h3, h4, h5, h6 {

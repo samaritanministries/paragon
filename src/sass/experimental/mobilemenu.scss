@@ -152,7 +152,7 @@ $sidebar-background: #354052;
   .profile-name {
     color: $color-white;
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
     grid-column: 1 / 3;
 
     clear: both;//fallback

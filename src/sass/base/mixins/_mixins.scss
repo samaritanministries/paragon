@@ -59,6 +59,14 @@
   }
 }
 
+@mixin position($position) {
+  -webkit-position: $position;
+  -moz-position: $position;
+  -ms-position: $position;
+   -o-position: $position;
+      position: $position;
+}
+
 /* Actions Mixins
   =========================================================================== */
 //Default Button
