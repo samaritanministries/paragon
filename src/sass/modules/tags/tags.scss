@@ -17,7 +17,7 @@ $tag-default-color: $color-gray-2;
 	cursor: pointer;
 	display: inline-block;
 	font-size: $font-size-xsmall;
-	font-weight: 600;
+	font-weight: $font-weight-semibold;
 	min-width: 1rem;
 	padding: 0.1rem 0.25rem;
 	text-transform: uppercase;

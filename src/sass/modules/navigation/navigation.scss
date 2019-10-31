@@ -22,7 +22,7 @@ $sub-nav-underline-color: $color-data-teal !default;
 $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 
 .header {
-  z-index: $zindex-header;
+  z-index: calc(#{$zindex-header} + 1);
   display: flex;
   align-items: center;
   padding: $space-xs;
@@ -30,8 +30,8 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
   top: 0;
   left: 0;
   right: 0;
-  height: calc(#{$header-height} + #{$nav-separator-width});
-  max-height: calc(#{$header-height} + #{$nav-separator-width});
+  height: $header-height;
+  max-height: $header-height;
 
   max-width: $content-width;
   margin: auto;
@@ -64,7 +64,7 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
           display: flex;
           align-items: center;
           color: $header-text-color;
-          font-weight: 600;
+          font-weight: $font-weight-semibold;
           font-size: 1.1rem;
           text-decoration: none;
           position: relative;
@@ -103,6 +103,9 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
         }
       }
     }
+  }
+  .logo + .header-nav {
+    margin-left: $space-m;
   }
 }
 
@@ -162,7 +165,7 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
         display: flex;
         align-items: center;
         color: $sub-nav-text-color;
-        font-weight: 600;
+        font-weight: $font-weight-semibold;
         font-size: 1rem;
         text-decoration: none;
         position: relative;

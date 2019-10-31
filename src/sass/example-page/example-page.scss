@@ -338,7 +338,7 @@ h2 {
   flex-grow: 1;
   h3 {
     margin-bottom: 0;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
   }
 }
 
@@ -365,7 +365,7 @@ h2 {
 .grid--example {
   background-color: #6A8DD3;
   color: white;
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
   padding: 0.5rem;
 }
 .column--nested .grid--example { background-color: #2DB16C; }
@@ -476,7 +476,7 @@ h2 {
 
   h3 {
     display: inline-block;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
   }
 
   .text-container {
@@ -923,7 +923,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
   border-radius: 5px;
   margin-right: $space-xs;
   margin-bottom: $space-xs;
