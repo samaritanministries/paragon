@@ -9,6 +9,7 @@ _______   _______ ___________ ________  ________ _   _ _____ ___  _
 This is an EXPERIMENT and is not ready to be included in production!
 */
 @import '../base/base';
+@import '../modules/typography/typography.scss';
 
 //This file is for placeholder pieces that have been needed but should be replaced by official modules.
 
@@ -25,7 +26,7 @@ $container-colors: transparent;//#413552
   margin-left: 0;
   padding-left: 1rem;
   color: $color-white;
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
   margin-right: auto;
 
   @media #{$tablet} {
@@ -61,7 +62,7 @@ $container-colors: transparent;//#413552
 
   .profile-name {
     display: none;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
     color: $color-text;
     margin-right: $space-xs;
     @media #{$desktop} {
@@ -86,7 +87,7 @@ $container-colors: transparent;//#413552
   	background-color: $color-red;
   	border-radius: 50px;
   	color: $color-white;
-    font-weight: bold;
+    font-weight: $font-weight-bold;
     padding: 0rem 0.25rem;
     text-align: center;
     min-width: 1.25rem;

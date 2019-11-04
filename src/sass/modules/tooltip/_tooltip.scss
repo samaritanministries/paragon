@@ -39,7 +39,7 @@ span.paragon-tooltip { display: inline-block; }
 		border-radius: 5px;
 		.tippy-backdrop { background-color: $tooltip-color; }
 		.tippy-content {
-			font-weight: 600;
+			font-weight: $font-weight-semibold;
 			font-size: 0.9rem;
 			line-height: 1.1rem;
 		}
@@ -55,7 +55,7 @@ span.paragon-tooltip { display: inline-block; }
 		background-color: $clippy-color;
 		.tippy-backdrop { background-color: $clippy-color; }
 		.tippy-content {
-			font-weight: 400;
+			font-weight: $font-weight-normal;
 			font-size: 0.9rem;
 			line-height: 1.2rem;
 			padding: 0;
@@ -65,7 +65,7 @@ span.paragon-tooltip { display: inline-block; }
 
 			h4, p { font-size: 0.9rem; }
 			p { line-height: 1.2rem; }
-			h4 { font-weight: 600;}
+			h4 { font-weight: $font-weight-semibold;}
 			a { margin-top: 0.5rem; }
 		}
 	}

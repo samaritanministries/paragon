@@ -298,7 +298,7 @@ $green10: #78C696;
 
 .card--header--color {
   color: $color-white;
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
   font-size: $font-size-medium;
   padding: 0.5rem 0.7rem !important;
 }
@@ -381,12 +381,12 @@ $green10: #78C696;
 .aaa:after {
   content: "AAA";
   font-size: 16px;
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
 }
 
 .color-right, .card-color--small {
   label, span { display: block; }
-  label { font-size: .8rem; font-weight: 600; color: $color-black; margin-bottom: -0.5rem;}
+  label { font-size: .8rem; font-weight: $font-weight-semibold; color: $color-black; margin-bottom: -0.5rem;}
   span { font-size: .9rem; }
 }
 
@@ -402,7 +402,7 @@ Code tab color sass
 
   .column-flex {
     color: $color-white;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
     text-align: center;
     padding: 3rem 0;
     margin: 0;
@@ -461,7 +461,7 @@ Code tab color sass
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
   border-radius: 5px;
   margin-right: $space-xs;
   margin-bottom: $space-xs;

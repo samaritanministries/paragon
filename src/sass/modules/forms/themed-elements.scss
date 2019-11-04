@@ -47,7 +47,7 @@ $switch--off: $color-gray-3 !default; //Color of switch when off
     cursor: pointer;
     display: inline-block;
     font-size: $font-size-normal;
-    font-weight: normal;
+    font-weight: $font-weight-normal;
     margin: 0.2rem 0;
     @supports(display: flex) { display: flex; }
 

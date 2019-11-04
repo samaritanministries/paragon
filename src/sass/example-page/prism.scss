@@ -79,7 +79,7 @@ $tablet:        "all and (min-width: 40em)" !default;
   margin-bottom: 1rem;
   h1 {
 		color: $color-white;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
     margin: 0;
   }
 	.button {
@@ -94,7 +94,7 @@ pre[class*="language-"] {
   color: $color-white;
   font-family: monaco, 'Inconsolata', sans-serif;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: $font-weight-semibold;
 	display: none;
   padding: 0;
   top: 0;
@@ -236,7 +236,7 @@ pre[class*="language-"] {
 
 .token.important,
 .token.bold {
-	font-weight: bold;
+	font-weight: $font-weight-bold;
 }
 .token.italic {
 	font-style: italic;
@@ -330,7 +330,7 @@ pre.line-numbers > code {
 
   &:after {
     content: "SHOW CODE";
-		font-weight: 600;
+		font-weight: $font-weight-semibold;
     color: $color-text;
   }
 
@@ -341,7 +341,7 @@ pre.line-numbers > code {
     &:after {
       color: $color-white;
       content: "HIDE CODE";
-			font-weight: 600;
+			font-weight: $font-weight-semibold;
     }
   }
 }
