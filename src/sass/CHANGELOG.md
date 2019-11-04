@@ -2,6 +2,14 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.0.1] - 2019-11-04
+### Changed
+- Change all components that use font weight to now use the variable
+- Change navigation bar active color and update animation used
+
+### Fixed
+- Fix a bug with flex tables not reading the shorthand correctly in IE
+
 ## [2.0.0] - 2019-10-21
 ### Added
 - Add new branding colors
