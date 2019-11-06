@@ -20,8 +20,9 @@
   .title-bar {
     background-color: $color-white;
     box-shadow: $header-shadow;
-    @include position(sticky)
+    @include position(sticky);
     top: 0;
+    z-index: $zindex-header;
 
     .title-content {
       display: flex;

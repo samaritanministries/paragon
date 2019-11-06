@@ -2,6 +2,10 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.0.2] - 2019-11-06
+### Fixed
+- Fix missing semicolon in the overpanel file
+
 ## [2.0.1] - 2019-11-04
 ### Changed
 - Change all components that use font weight to now use the variable
