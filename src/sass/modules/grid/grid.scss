@@ -9,12 +9,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 110%;
-  @media #{$tablet} { font-size: 105%; }
-  @media #{$desktop} { font-size: 100%; }
-}
-
 /* Grid Styles
   =========================================================================== */
 
