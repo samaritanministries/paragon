@@ -4,9 +4,10 @@ $global-content-width: 1200px !default;
 $global-transition: all 0.2s ease-in-out !default;
 $grid-gutter: 1rem !default;
 
-$phone:             "all and (max-width: 40em)" !default;
+// Min breakpoints are even. Max breakpoints are odd.
+$phone:             "all and (max-width: 39.99em)" !default;
 $tablet:            "all and (min-width: 40em)" !default;
-$tablet-and-below:  "all and (max-width: 64em)" !default;
+$tablet-and-below:  "all and (max-width: 63.99em)" !default;
 $desktop:           "all and (min-width: 64em)" !default;
 $desktop-large:     "all and (min-width: 96em)" !default;
 
