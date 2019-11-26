@@ -2,6 +2,11 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.0.3] - 2019-11-26
+### Changed
+- Change media query breakpoints to not have overlapping values
+- Change font-size to not increase on tablet and mobile
+
 ## [2.0.2] - 2019-11-06
 ### Fixed
 - Fix missing semicolon in the overpanel file
