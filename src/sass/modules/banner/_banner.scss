@@ -7,18 +7,18 @@ $global-banner-height_phone: 4rem;
 @mixin shared-banner {
   &.has-success,
   &.has-error {
-    p { color: $white; }
-    .dashing-icon:before { color: $white;}
+    p { color: $color-white; }
+    .dashing-icon:before { color: $color-white;}
   }
 
   &.has-warning {
-    p { color: $black; }
-    .dashing-icon:before { color: $black;}
+    p { color: $color-black; }
+    .dashing-icon:before { color: $color-black;}
   }
 
-  &.has-success { background-color: $green; }
-  &.has-warning { background-color: $orange; }
-  &.has-error   { background-color: $red; }
+  &.has-success { background-color: $color-green; }
+  &.has-warning { background-color: $color-orange; }
+  &.has-error   { background-color: $color-red; }
 
   .dashing-icon {
     margin-right: $space-xs;
@@ -35,6 +35,7 @@ $global-banner-height_phone: 4rem;
     border-bottom: solid 2px;
     color: inherit;
     cursor: pointer;
+    text-decoration: none;
 
     &:focus,
     &:hover {
