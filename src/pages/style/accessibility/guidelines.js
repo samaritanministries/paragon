@@ -95,7 +95,7 @@ export default () => (
     <div className="example-container">
       <fieldset>
         <button className="mr-space-m">Button</button>
-        <button className="button button--icon button--gray mr-space-l"><i className="dashing-icon dashing-icon--close" /></button>
+        <button className="button button--icon button--red mr-space-l"><i className="dashing-icon dashing-icon--trash" /></button>
         <div className="checkbox--custom inline">
           <input type="checkbox" id="touch-target-checkbox" defaultChecked={true}/>
           <label htmlFor="touch-target-checkbox">Checkbox</label>
