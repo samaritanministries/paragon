@@ -150,12 +150,59 @@
   &.card-info {
     background-color: #eaf9ff;
     box-shadow: none;
+    &.is-warning {
+      background-color: #eaf9ff;
+    }
+    &.is-error {
+      border-left: 4px solid $color-red;
+      background-color: $color-white;
+      .dashing-icon::before { color: $color-red; }
+    }
   }
   &.card-info--gray,
   &.card-info--grey {
     background-color: $color-gray-2;
     box-shadow: none;
   }
+}
+
+.error-card {
+  border: 2px solid $color-border;
+  border-radius: 5px;
+  border-left: 4px solid $color-red;
+  background-color: $color-white;
+  .dashing-icon::before { color: $color-red; }
+}
+
+.error-card-2 {
+  border: 2px solid $color-red;
+  border-radius: 5px;
+  background-color: $color-white;
+  .dashing-icon::before { color: $color-red; }
+}
+
+.error-card-3 {
+  box-shadow: none;
+  border: 2px solid $color-border;
+  border-left: 5px solid $color-red;
+  background-color: $color-white;
+  .dashing-icon::before { color: $color-red; }
+}
+
+.warning-card-3 {
+  box-shadow: none;
+  border: 2px solid $color-border;
+  border-left: 5px solid $color-orange;
+  background-color: $color-white;
+  .dashing-icon::before { color: $color-orange; }
+}
+
+.info-card-3 {
+  box-shadow: none;
+  border: 2px solid $color-border;
+  border-left: 5px solid $color-blue;
+  background-color: $color-white;
+  .dashing-icon::before { color: $color-blue; }
 }
 
 //Set the margin of Cards when they are within a Grid

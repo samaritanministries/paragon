@@ -401,7 +401,7 @@ export default class CardsCode extends React.Component {
 
               <p className="mb-space-m">Information cards are nested inside another card and are a good way to spotlight instructions or to give text more emphasis.</p>
 
-              <div className="card card-info">
+              <div className="card card-info mb-space-m">
                 <div className="card-header has-icon">
                   <i className="dashing-icon dashing-icon--info-filled dashing-icon--black" />
                   <h4>Default Info Card</h4>
@@ -411,14 +411,52 @@ export default class CardsCode extends React.Component {
                 </div>
               </div>
 
-              <div className="card card-info--gray mt-space-m">
+              <div className="error-card mb-space-m">
+                <div className="flex flex-baseline has-icon p-space-m">
+                  <i className="dashing-icon dashing-icon--alert-filled dashing-icon--red" />
+                  <p className="strong no-margin">This is an info card with an icon.</p>
+                </div>
+              </div>
+
+              <div className="error-card-2 mb-space-m">
+                <div className="flex flex-baseline has-icon p-space-m">
+                  <i className="dashing-icon dashing-icon--alert-filled dashing-icon--red" />
+                  <p className="no-margin">This is an error info card.</p>
+                </div>
+              </div>
+
+              <div className="card error-card-3 mb-space-m">
+                <div className="card-header flex flex-baseline has-icon">
+                  <i className="dashing-icon dashing-icon--alert-filled dashing-icon--red" />
+                  <h4 className="text-color--red no-margin">Important</h4>
+                </div>
+                <p className="card-content no-margin">This is an error info card.</p>
+              </div>
+
+              <div className="card warning-card-3 mb-space-m">
+                <div className="card-header flex flex-baseline has-icon">
+                  <i className="dashing-icon dashing-icon--alert-filled" />
+                  <h4 className="text-color--orange no-margin">Warning</h4>
+                </div>
+                <p className="card-content no-margin">This is an warning info card.</p>
+              </div>
+
+              <div className="card info-card-3">
+                <div className="card-header flex flex-baseline has-icon">
+                  <i className="dashing-icon dashing-icon--info-filled" />
+                  <h4 className="text-color--blue no-margin">Information</h4>
+                </div>
+                <p className="card-content no-margin">This is an info card.</p>
+              </div>
+
+              {/* <div className="card card-info--gray mt-space-m">
                 <div className="card-header">
                   <h4>Gray Info Card</h4>
                 </div>
                 <div className="card-content">
                   <p className="no-margin">This is a gray info card.</p>
                 </div>
-              </div>
+              </div> */}
 
             </div>
 
