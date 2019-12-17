@@ -33,6 +33,12 @@ export default () => (
                 <li>Example</li>
               </ol>
               <ol className="table-row">
+                <li><span className="example-text">$space-none</span></li>
+                <li>0rem</li>
+                <li>0px</li>
+                <li><span className="x-space x-space--none" /></li>
+              </ol>
+              <ol className="table-row">
                 <li><span className="example-text">$space-xxs</span></li>
                 <li>0.25rem</li>
                 <li>4px</li>
