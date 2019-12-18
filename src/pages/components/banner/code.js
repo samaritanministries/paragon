@@ -25,36 +25,49 @@ class BannerCode extends React.Component {
         <AppContent>
           <div className="grid grid-padding">
 
-            {/* <h2 id="pageBanner">Page Banner
-              <Link to={location.pathname + "/#pageBanner"} className="button button--transparent button--copy-link"></Link>
+            <h2 id="globalErrorBanner">Global Error Banner
+              <Link to={location.pathname + "/#globalErrorBanner"} className="button button--transparent button--copy-link"></Link>
             </h2>
             <div className="example-container">
-              <div className="page-banner" style={{ position: "relative", marginBottom: "1rem" }}>
-                <h1>Page Banner</h1>
-              </div>
+              <header className="global-banner-container has-error global-banner--example mb-space-m">
+                <div className="global-banner">
+              		<i className="dashing-icon dashing-icon--alert-filled" />
+              		<p>This is an error banner with an <a href="../code">action</a>.</p>
+                </div>
+            	</header>
 
               <CodeToggle>
-{`<div class="page-banner">
-  <h1>Page Banner</h1>
-</div>`}
+{`<!-- Use has-error for error banners -->
+  <header class="global-banner-container has-error">
+    <div class="global-banner">
+      <i class="dashing-icon dashing-icon--info-filled" />
+      <p>This is an error banner with an <a>action</a>.</p>
+    </div>
+  </header>`}
               </CodeToggle>
             </div>
 
-            <h2 className="mt-space-xl" id="pageBannerWithSubhead">Page Banner with subhead
-              <Link to={location.pathname + "/#pageBannerWithSubhead"} className="button button--transparent button--copy-link"></Link>
+            <h2 id="globalWarningBanner">Global Warning Banner
+              <Link to={location.pathname + "/#globalWarningBanner"} className="button button--transparent button--copy-link"></Link>
             </h2>
-              <div className="example-container">
-                <div className="page-banner" style={{ position: "relative", marginBottom: "1rem" }}>
-                  <h2>Add a Bill to this Need</h2>
-                  <h4>Need #481516 – Broken Arm</h4>
+            <div className="example-container">
+              <header className="global-banner-container has-warning global-banner--example mb-space-m">
+                <div className="global-banner">
+              		<i class="dashing-icon dashing-icon--info-filled" />
+              		<p>This is a warning banner with an <a href="../code">action</a>.</p>
                 </div>
-                <CodeToggle>
-{`<div class="page-banner">
-  <h2>Add a Bill to this Need</h2>
-  <h4>Need #481516 – Broken Arm</h4>
-</div>`}
-                </CodeToggle>
-              </div> */}
+            	</header>
+
+              <CodeToggle>
+{`<!-- Use has-error for error banners -->
+<header class="global-banner-container has-warning">
+  <div class="global-banner">
+    <i class="dashing-icon dashing-icon--info-filled" />
+    <p>This is a warning banner with an <a>action</a>.</p>
+  </div>
+</header>`}
+              </CodeToggle>
+            </div>
 
 
               <h2 id="defaultCardBanner">Default Card Banner

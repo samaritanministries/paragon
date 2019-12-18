@@ -12,7 +12,7 @@ $widths: (
   "-s":     #{$content-s},
   "-m":     #{$content-m},
   "-l":     #{$content-l},
-  "-full":  "auto",
+  "-full":  "auto"
 );
 
 @each $width, $width-var in $widths {
@@ -31,6 +31,7 @@ $space-l:     1.5rem;
 $space-xl:    2rem;
 $space-xxl:   3rem;
 $space-auto:  auto;
+$space-none:  0;
 
 //SPACING UTILITY
 $spaceamounts: (
@@ -42,6 +43,8 @@ $spaceamounts: (
   "space-xl":   #{$space-xl},
   "space-xxl":  #{$space-xxl},
   "auto":       #{$space-auto},
+  "space-none": #{$space-none},
+  "none":       #{$space-none}
 );
 
 $sides: (

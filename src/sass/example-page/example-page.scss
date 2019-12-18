@@ -959,3 +959,10 @@ footer {
 
   &.color-gradient { background-image: $color-gradient; color: $color-white; }
 }
+
+.global-banner--example {
+  position: relative;
+  &::after {
+    position: absolute;
+  }
+}

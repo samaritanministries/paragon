@@ -125,6 +125,11 @@ fieldset {
   &.select--has-icon,
   .select--has-icon {
     position: relative;
+
+    select {
+      padding-right: $space-xl;
+    }
+
     &:after {
       content: '\e800';
       color: $color-icon-primary;
