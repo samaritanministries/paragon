@@ -2,6 +2,18 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.1.0] - 2019-12-18
+### Added
+- Add global banner styles
+- Add space-none utility
+
+### Changed
+- Change Tag text-transform to capitalize
+
+### Fixed
+- Fix icon in images accessibility touch target
+- Fix Select text from overflow behind icon
+
 ## [2.0.3] - 2019-11-26
 ### Changed
 - Change media query breakpoints to not have overlapping values
