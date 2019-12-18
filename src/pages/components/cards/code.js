@@ -399,115 +399,75 @@ export default class CardsCode extends React.Component {
             </div>
             <div className="card-content">
 
-              {/* <p className="mb-space-m">Information cards are nested inside another card and are a good way to spotlight instructions or to give text more emphasis.</p> */}
+              <p className="mb-space-m">Information cards are nested inside another card and are a good way to spotlight instructions or to give text more emphasis.</p>
 
-              <div className="card card-info mb-space-xl">
-                <div className="card-header has-icon">
-                  <i className="dashing-icon dashing-icon--info-filled dashing-icon--black" />
-                  <h4>Default Info Card</h4>
-                </div>
-                <div className="card-content">
-                  <p className="no-margin">This is an info card with an icon.</p>
-                </div>
-              </div>
-
-              <div className="card error-card-3 has-info mb-space-m">
-                <div className="card-header flex flex-baseline has-icon">
+              <div className="card-info has-info">
+                <div className="card-header flex has-icon">
                   <i className="dashing-icon dashing-icon--info-filled" />
                   <h4 className="text-color--blue no-margin">Please Note</h4>
                 </div>
                 <p className="card-content no-margin">This is an info card.</p>
               </div>
 
-              <div className="card error-card-3 has-warning mb-space-m">
-                <div className="card-header flex flex-baseline has-icon">
+              <div className="card-info has-success">
+                <div className="card-header flex has-icon">
+                  <i className="dashing-icon dashing-icon--checkmark-filled" />
+                  <h4 className="text-color--green no-margin">Success</h4>
+                </div>
+                <p className="card-content no-margin">This is an success info card.</p>
+              </div>
+
+              <div className="card-info has-warning">
+                <div className="card-header flex has-icon">
                   <i className="dashing-icon dashing-icon--alert-filled" />
                   <h4 className="text-color--orange no-margin">Warning</h4>
                 </div>
                 <p className="card-content no-margin">This is an warning info card.</p>
               </div>
 
-              <div className="card error-card-3 has-error mb-space-xl">
-                <div className="card-header flex flex-baseline has-icon">
+              <div className="card-info has-error">
+                <div className="card-header flex has-icon">
                   <i className="dashing-icon dashing-icon--alert-filled" />
-                  <h4 className="text-color--red no-margin">Important</h4>
+                  <h4 className="text-color--red no-margin">Error</h4>
                 </div>
                 <p className="card-content no-margin">This is an error info card.</p>
               </div>
-
-              <div className="card error-card-4 has-info mb-space-m">
-                <div className="card-header flex flex-baseline has-icon">
-                  <i className="dashing-icon dashing-icon--alert-filled" />
-                  <h4 className="text-color--blue no-margin">Please Note</h4>
-                </div>
-                <p className="card-content no-margin">This is an error info card.</p>
-              </div>
-
-              <div className="card error-card-4 has-warning mb-space-m">
-                <div className="card-header flex flex-baseline has-icon">
-                  <i className="dashing-icon dashing-icon--alert-filled" />
-                  <h4 className="text-color--orange no-margin">Warning</h4>
-                </div>
-                <p className="card-content no-margin">This is an error info card.</p>
-              </div>
-
-              <div className="card error-card-4 has-error mb-space-m">
-                <div className="card-header flex flex-baseline has-icon">
-                  <i className="dashing-icon dashing-icon--alert-filled dashing-icon--red" />
-                  <h4 className="text-color--red no-margin">Important</h4>
-                </div>
-                <p className="card-content no-margin">This is an error info card.</p>
-              </div>
-
-              {/* <div className="card warning-card-3 mb-space-m">
-                <div className="card-header flex flex-baseline has-icon">
-                  <i className="dashing-icon dashing-icon--alert-filled" />
-                  <h4 className="text-color--orange no-margin">Warning</h4>
-                </div>
-                <p className="card-content no-margin">This is an warning info card.</p>
-              </div>
-
-              <div className="card info-card-3">
-                <div className="card-header flex flex-baseline has-icon">
-                  <i className="dashing-icon dashing-icon--info-filled" />
-                  <h4 className="text-color--blue no-margin">Information</h4>
-                </div>
-                <p className="card-content no-margin">This is an info card.</p>
-              </div> */}
-
-              {/* <div className="card card-info--gray mt-space-m">
-                <div className="card-header">
-                  <h4>Gray Info Card</h4>
-                </div>
-                <div className="card-content">
-                  <p className="no-margin">This is a gray info card.</p>
-                </div>
-              </div> */}
 
             </div>
 
           </div>
 
           <CodeToggle>
-{`<div class="card-content">
-  <div class="card card-info">
-    <div class="card-header has-icon">
-      <i class="dashing-icon dashing-icon--info-filled dashing-icon--black" />
-      <h4>Default Info Card</h4>
-    </div>
-    <div class="card-content">
-      <p class="no-margin">This is an info card with an icon.</p>
-    </div>
+{`<div class="card-info has-info">
+  <div class="card-header flex has-icon">
+    <i class="dashing-icon dashing-icon--info-filled"></i>
+    <h4 class="text-color--blue no-margin">Please Note</h4>
   </div>
+  <p class="card-content no-margin">This is an info card.</p>
+</div>
 
-  <div class="card card-info--gray">
-    <div class="card-header">
-      <h4>Gray Info Card</h4>
-    </div>
-    <div class="card-content">
-      <p class="no-margin">This is a gray info card.</p>
-    </div>
+<div class="card-info has-success">
+  <div class="card-header flex has-icon">
+    <i class="dashing-icon dashing-icon--checkmark-filled"></i>
+    <h4 class="text-color--green no-margin">Success</h4>
   </div>
+  <p class="card-content no-margin">This is an success info card.</p>
+</div>
+
+<div class="card-info has-warning">
+  <div class="card-header flex has-icon">
+    <i class="dashing-icon dashing-icon--alert-filled"></i>
+    <h4 class="text-color--orange no-margin">Warning</h4>
+  </div>
+  <p class="card-content no-margin">This is an warning info card.</p>
+</div>
+
+<div class="card-info has-error">
+  <div class="card-header flex has-icon">
+    <i class="dashing-icon dashing-icon--alert-filled"></i>
+    <h4 class="text-color--red no-margin">Error</h4>
+  </div>
+  <p class="card-content no-margin">This is an error info card.</p>
 </div>
 `}
           </CodeToggle>

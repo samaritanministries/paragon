@@ -3,7 +3,7 @@
 
 //TODO remove .card--header, .card--content, .card--footer with major release
 
-.card {
+.card, %card {
   background-color: $color-white;
   border-radius: 5px;
   margin: 1.5rem auto;
@@ -150,126 +150,35 @@
       }
     }
   }
-  //Informational card
-  &.card-info {
-    background-color: #eaf9ff;
-    box-shadow: none;
-    &.is-warning {
-      background-color: #eaf9ff;
-    }
-    &.is-error {
-      border-left: 4px solid $color-red;
-      background-color: $color-white;
-      .dashing-icon::before { color: $color-red; }
-    }
-  }
-  &.card-info--gray,
-  &.card-info--grey {
-    background-color: $color-gray-2;
-    box-shadow: none;
-  }
 }
 
-.error-card {
-  border: 2px solid $color-border;
-  border-radius: 5px;
-  // border-left: 4px solid $color-red;
-  background-color: $color-white;
-  position: relative;
-  .dashing-icon::before { color: $color-red; }
-  &::before {
-    content: "";
-    border-left: 6px solid $color-red;
-    top: -2px;
-    bottom: -2px;
-    left: -2px;
-    position: absolute;
-  }
-}
-
-.error-card-3 {
-  // box-shadow: none;
-  border-left: 6px solid $color-border;
-  background-color: $color-white;
-  position: relative;
+.card-info {
+  @extend %card;
   overflow: hidden;
+  border-left: 6px solid $color-blue;
+  background-color: lighten($color-blue, 55%);
+  .dashing-icon::before { color: $color-blue; }
 
-  .card-header { padding-top: 0.75rem; }
-  .card-content { padding: 0.75rem 1rem; }
-
-  // &::before {
-  //   content: "";
-  //   border-left: 8px solid $color-gray-2;
-  //   top: -2px;
-  //   bottom: -2px;
-  //   left: -2px;
-  //   position: absolute;
-  // }
-
-  &.has-info {
-    background-color: lighten($color-blue, 55%);
-    .dashing-icon::before { color: $color-blue; }
-    // &::before { border-left-color: $color-blue; }
-    border-left-color: $color-blue;
-  }
+  .card-header { padding-top: $space-s; }
+  .card-content { padding: $space-s $space-m; }
 
   &.has-warning {
     .dashing-icon::before { color: $color-orange; }
     background-color: lighten($color-orange, 40%);
-    // &::before { border-left-color: $color-orange; }
     border-left-color: $color-orange;
   }
 
   &.has-error {
     .dashing-icon::before { color: $color-red; }
     background-color: lighten($color-red, 45%);
-    // &::before { border-left-color: $color-red; }
     border-left-color: $color-red;
   }
-}
 
-.error-card-4 {
-  box-shadow: none;
-  border: 2px solid $color-gray-2;
-  background-color: lighten($color-red, 45%);
-  position: relative;
-
-  .card-header { padding-top: 0.75rem; }
-  .card-content { padding: 0.75rem 1rem; }
-
-  &.has-info {
-    border-color: $color-blue;
-    background-color: lighten($color-blue, 55%);
-    .dashing-icon::before { color: $color-blue; }
+  &.has-success{
+    .dashing-icon::before { color: $color-green; }
+    background-color: lighten($color-green, 70%);
+    border-left-color: $color-green;
   }
-
-  &.has-warning {
-    border-color: $color-orange;
-    background-color: lighten($color-orange, 40%);
-    .dashing-icon::before { color: $color-orange; }
-  }
-
-  &.has-error {
-    border-color: $color-red;
-    background-color: lighten($color-red, 45%);
-    .dashing-icon::before { color: $color-red; }
-  }
-}
-
-.warning-card-3 {
-  box-shadow: none;
-  border: 2px solid $color-border;
-  border-left: 5px solid $color-orange;
-  background-color: $color-white;
-  .dashing-icon::before { color: $color-orange; }
-}
-
-.info-card-3 {
-  box-shadow: none;
-  border: 2px solid $color-border;
-  border-left: 5px solid $color-blue;
-  background-color: $color-white;
-  .dashing-icon::before { color: $color-blue; }
 }
 
 //Set the margin of Cards when they are within a Grid
