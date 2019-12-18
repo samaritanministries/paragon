@@ -20,7 +20,7 @@ $tag-default-color: $color-gray-2;
 	font-weight: $font-weight-semibold;
 	min-width: 1rem;
 	padding: 0.1rem 0.25rem;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	text-decoration: none;
 	margin: 0.25rem;
 	&:not(.tag--no-link):hover,
