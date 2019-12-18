@@ -31,8 +31,12 @@
     }
     &.has-icon {
       display: flex;
-      align-items: center;
-      i { margin-right: $space-xxs; }
+      align-items: baseline;
+      i {
+        position: relative;
+        top: -1px;
+        margin-right: $space-xxs;
+      }
     }
     h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in card-headers
   }
@@ -169,24 +173,87 @@
 .error-card {
   border: 2px solid $color-border;
   border-radius: 5px;
-  border-left: 4px solid $color-red;
+  // border-left: 4px solid $color-red;
   background-color: $color-white;
+  position: relative;
   .dashing-icon::before { color: $color-red; }
-}
-
-.error-card-2 {
-  border: 2px solid $color-red;
-  border-radius: 5px;
-  background-color: $color-white;
-  .dashing-icon::before { color: $color-red; }
+  &::before {
+    content: "";
+    border-left: 6px solid $color-red;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    position: absolute;
+  }
 }
 
 .error-card-3 {
-  box-shadow: none;
-  border: 2px solid $color-border;
-  border-left: 5px solid $color-red;
+  // box-shadow: none;
+  border-left: 6px solid $color-border;
   background-color: $color-white;
-  .dashing-icon::before { color: $color-red; }
+  position: relative;
+  overflow: hidden;
+
+  .card-header { padding-top: 0.75rem; }
+  .card-content { padding: 0.75rem 1rem; }
+
+  // &::before {
+  //   content: "";
+  //   border-left: 8px solid $color-gray-2;
+  //   top: -2px;
+  //   bottom: -2px;
+  //   left: -2px;
+  //   position: absolute;
+  // }
+
+  &.has-info {
+    background-color: lighten($color-blue, 55%);
+    .dashing-icon::before { color: $color-blue; }
+    // &::before { border-left-color: $color-blue; }
+    border-left-color: $color-blue;
+  }
+
+  &.has-warning {
+    .dashing-icon::before { color: $color-orange; }
+    background-color: lighten($color-orange, 40%);
+    // &::before { border-left-color: $color-orange; }
+    border-left-color: $color-orange;
+  }
+
+  &.has-error {
+    .dashing-icon::before { color: $color-red; }
+    background-color: lighten($color-red, 45%);
+    // &::before { border-left-color: $color-red; }
+    border-left-color: $color-red;
+  }
+}
+
+.error-card-4 {
+  box-shadow: none;
+  border: 2px solid $color-gray-2;
+  background-color: lighten($color-red, 45%);
+  position: relative;
+
+  .card-header { padding-top: 0.75rem; }
+  .card-content { padding: 0.75rem 1rem; }
+
+  &.has-info {
+    border-color: $color-blue;
+    background-color: lighten($color-blue, 55%);
+    .dashing-icon::before { color: $color-blue; }
+  }
+
+  &.has-warning {
+    border-color: $color-orange;
+    background-color: lighten($color-orange, 40%);
+    .dashing-icon::before { color: $color-orange; }
+  }
+
+  &.has-error {
+    border-color: $color-red;
+    background-color: lighten($color-red, 45%);
+    .dashing-icon::before { color: $color-red; }
+  }
 }
 
 .warning-card-3 {
