@@ -75,12 +75,18 @@ class BannerCode extends React.Component {
               </h2>
               <div className="example-container">
                 <div className="card">
-                  <div className="card-header">
+                  <div className="card-header has-border">
                     <h3>Default Banner</h3>
                   </div>
                   <div className="card-content">
-                    <div className="card-banner">
-                      <p>This is a card banner</p>
+                    <div className="card-info no-margin">
+                      <div className="card-header has-icon">
+                        <i className="dashing-icon dashing-icon--info-filled" />
+                        <h4 className="card-info--title">Please Note</h4>
+                      </div>
+                      <div className="card-content">
+                        <p className="no-margin">This is an info card.</p>
+                      </div>
                     </div>
                   </div>
                   <div className="card-footer">
@@ -88,17 +94,13 @@ class BannerCode extends React.Component {
                   </div>
                 </div>
                 <CodeToggle>
-{`<div class="card">
-  <div class="card-header">
-    <h3>Default Banner</h3>
+{`<div class="card-info no-margin">
+  <div class="card-header has-icon">
+    <i class="dashing-icon dashing-icon--info-filled" />
+    <h4 class="card-info--title">Please Note</h4>
   </div>
   <div class="card-content">
-    <div class="card-banner">
-      <p>This is a card banner</p>
-    </div>
-  </div>
-  <div class="card-footer">
-    <p>Use a banner within a card to display additional context</p>
+    <p class="no-margin">This is an info card.</p>
   </div>
 </div>`}
                 </CodeToggle>
@@ -110,13 +112,18 @@ class BannerCode extends React.Component {
               </h2>
               <div className="example-container">
                 <div className="card">
-                  <div className="card-header">
+                  <div className="card-header has-border">
                     <h3>Success Banner</h3>
                   </div>
                   <div className="card-content">
-                    <div className="card-banner has-success">
-                      <i className="dashing-icon dashing-icon--checkmark-filled"></i>
-                      <p>Your file is ready to upload</p>
+                    <div className="card-info has-success no-margin">
+                      <div className="card-header has-icon">
+                        <i className="dashing-icon dashing-icon--checkmark-filled" />
+                        <h4 className="card-info--title">Success</h4>
+                      </div>
+                      <div className="card-content">
+                        <p className="no-margin">This is a success card.</p>
+                      </div>
                     </div>
                   </div>
                   <div className="card-footer">
@@ -124,18 +131,13 @@ class BannerCode extends React.Component {
                   </div>
                 </div>
                 <CodeToggle>
-{`<div class="card">
-  <div class="card-header">
-    <h3>Success Banner</h3>
+{`<div class="card-info has-success">
+  <div class="card-header has-icon no-margin">
+    <i class="dashing-icon dashing-icon--checkmark-filled" />
+    <h4 class="card-info--title">Success</h4>
   </div>
   <div class="card-content">
-    <div class="card-banner has-success">
-      <i class="dashing-icon dashing-icon--checkmark-filled"></i>
-      <p>Your file is ready to upload</p>
-    </div>
-  </div>
-  <div class="card-footer">
-    <p>Use success banners to notify users of a successful action.</p>
+    <p class="no-margin">This is a success card.</p>
   </div>
 </div>`}
                 </CodeToggle>
@@ -146,13 +148,18 @@ class BannerCode extends React.Component {
               </h2>
               <div className="example-container">
                 <div className="card">
-                  <div className="card-header">
+                  <div className="card-header has-border">
                     <h3>Warning Banner</h3>
                   </div>
                   <div className="card-content">
-                    <div className="card-banner has-warning">
-                      <i className="dashing-icon dashing-icon--info-filled"></i>
-                      <p>You may only submit bill information and upload images for one statement at a time. If you have multiple statements to submit, please enter them separately.</p>
+                    <div className="card-info has-warning no-margin">
+                      <div className="card-header has-icon">
+                        <i className="dashing-icon dashing-icon--alert-filled" />
+                        <h4 className="card-info--title">Warning</h4>
+                      </div>
+                      <div className="card-content">
+                        <p className="no-margin">This is a warning card.</p>
+                      </div>
                     </div>
                   </div>
                   <div className="card-footer">
@@ -160,18 +167,13 @@ class BannerCode extends React.Component {
                   </div>
                 </div>
                 <CodeToggle>
-{`<div class="card">
-  <div class="card-header">
-    <h3>Warning Banner</h3>
+{`<div class="card-info has-warning no-margin">
+  <div class="card-header has-icon">
+    <i class="dashing-icon dashing-icon--alert-filled" />
+    <h4 class="card-info--title">Warning</h4>
   </div>
   <div class="card-content">
-    <div class="card-banner has-warning">
-      <i class="dashing-icon dashing-icon--info-filled"></i>
-      <p>You may only submit bill information and upload images for one statement at a time. If you have multiple statements to submit, please enter them separately.</p>
-    </div>
-  </div>
-  <div class="card-footer">
-    <p>Use warning banners to inform your user of potential errors.</p>
+    <p class="no-margin">This is a warning card.</p>
   </div>
 </div>`}
                 </CodeToggle>
@@ -182,13 +184,18 @@ class BannerCode extends React.Component {
               </h2>
               <div className="example-container">
                 <div className="card">
-                  <div className="card-header">
+                  <div className="card-header has-border">
                     <h3>Error Banner</h3>
                   </div>
                   <div className="card-content">
-                    <div className="card-banner has-error">
-                      <i className="dashing-icon dashing-icon--alert-filled"></i>
-                      <p>You must complete all fields below before continuing</p>
+                    <div className="card-info has-error no-margin">
+                      <div className="card-header has-icon">
+                        <i className="dashing-icon dashing-icon--alert-filled" />
+                        <h4 className="card-info--title">Error</h4>
+                      </div>
+                      <div className="card-content">
+                        <p className="no-margin">This is a error card.</p>
+                      </div>
                     </div>
                   </div>
                   <div className="card-footer">
@@ -196,18 +203,43 @@ class BannerCode extends React.Component {
                   </div>
                 </div>
                 <CodeToggle>
-{`<div class="card">
-  <div class="card-header">
-    <h3>Error Banner</h3>
+{`<div class="card-info has-error no-margin">
+  <div class="card-header has-icon">
+    <i class="dashing-icon dashing-icon--alert-filled" />
+    <h4 class="card-info--title">Error</h4>
   </div>
   <div class="card-content">
-    <div class="card-banner has-error">
-      <i class="dashing-icon dashing-icon--alert-filled"></i>
-      <p>You must complete all fields below before continuing</p>
-    </div>
+    <p class="no-margin">This is a error card.</p>
   </div>
-  <div class="card-footer">
-    <p>Use error banners to display critical and important information to your user after they have performed an action.</p>
+</div>`}
+                </CodeToggle>
+              </div>
+
+              <h2 className="mt-space-xl" id="cardBannerWithButton">Card Banner without header
+                <Link to={location.pathname + "/#cardBannerWithButton"} className="button button--transparent button--copy-link"></Link>
+              </h2>
+              <div className="example-container">
+                <div className="card">
+                  <div className="card-header has-border">
+                    <h3>Banner without header</h3>
+                  </div>
+                  <div className="card-content">
+                    <div className="card-info no-margin">
+                      <div className="card-content has-icon">
+                        <i class="dashing-icon dashing-icon--alert-filled" />
+                        <p className="no-margin">This is an error card with a icon.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-footer">
+                    <p>Card banners can be used without a title when that additional information is not needed.</p>
+                  </div>
+                </div>
+                <CodeToggle>
+{`<div class="card-info no-margin">
+  <div class="card-content has-icon">
+    <i class="dashing-icon dashing-icon--alert-filled" />
+    <p class="no-margin">This is an error card with a icon.</p>
   </div>
 </div>`}
                 </CodeToggle>
@@ -218,13 +250,15 @@ class BannerCode extends React.Component {
               </h2>
               <div className="example-container">
                 <div className="card">
-                  <div className="card-header">
+                  <div className="card-header has-border">
                     <h3>Banner with Button</h3>
                   </div>
                   <div className="card-content">
-                    <div className="card-banner has-button">
-                      <p>This is a card banner</p>
-                      <button type="button" className="button button--border button--gray button--smooth" style={{ marginLeft: "auto" }}>Learn More</button>
+                    <div className="card-info no-margin">
+                      <div className="card-content has-button">
+                        <p className="no-margin">This is a card banner</p>
+                        <button type="button" className="button button--border button--blue button--smooth" style={{ marginLeft: "auto" }}>Learn More</button>
+                      </div>
                     </div>
                   </div>
                   <div className="card-footer">
@@ -237,47 +271,15 @@ class BannerCode extends React.Component {
     <h3>Banner with Button</h3>
   </div>
   <div class="card-content">
-    <div class="card-banner has-button">
-      <p>This is a card banner</p>
-      <button type="button" class="button button--border button--gray button--smooth" style="margin-left: auto;">Learn More</button>
+    <div class="card-info no-margin">
+      <div class="card-content has-button">
+        <p class="no-margin">This is a card banner</p>
+        <button type="button" class="button button--border button--blue button--smooth" style={{ marginLeft: "auto" }}>Learn More</button>
+      </div>
     </div>
   </div>
   <div class="card-footer">
     <p>Use a banner within a card to display additional context. If you have a button make sure to add <code class="example-text">.has-button</code> to reduce the padding.</p>
-  </div>
-</div>`}
-                </CodeToggle>
-              </div>
-
-              <h2 className="mt-space-xl" id="cardBannerWithLink">Card Banner with link
-                <Link to={location.pathname + "/#cardBannerWithLink"} className="button button--transparent button--copy-link"></Link>
-              </h2>
-              <div className="example-container">
-                <div className="card">
-                  <div className="card-header">
-                    <h3>Banner with Link</h3>
-                  </div>
-                  <div className="card-content">
-                    <div className="card-banner">
-                      <p>This is a card banner with <Link to="components/banner/code">link here</Link></p>
-                    </div>
-                  </div>
-                  <div className="card-footer">
-                    <p>Links within in <code className="example-text">.card-banner</code> get an underline border and transition.</p>
-                  </div>
-                </div>
-                <CodeToggle>
-{`<div class="card">
-  <div class="card-header">
-    <h3>Banner with Link</h3>
-  </div>
-  <div class="card-content">
-    <div class="card-banner">
-      <p>This is a card banner with <a>link here</a></p>
-    </div>
-  </div>
-  <div class="card-footer">
-    <p>Links within in <code class="example-text">.card-banner</code> get an underline border and transition.</p>
   </div>
 </div>`}
                 </CodeToggle>

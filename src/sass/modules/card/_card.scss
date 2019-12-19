@@ -154,27 +154,50 @@
 
 .card-info {
   @extend %card;
+
   overflow: hidden;
   border-left: 6px solid $color-blue;
   background-color: lighten($color-blue, 55%);
   .dashing-icon::before { color: $color-blue; }
 
+  .card-info--title {
+    color: $color-blue;
+    margin: 0;
+  }
+
   .card-header { padding-top: $space-s; }
   .card-content { padding: $space-s $space-m; }
 
+  .card-header,
+  .card-content {
+    &.has-icon {
+      display: flex;
+      align-items: baseline;
+      .dashing-icon { margin-right: $space-xs; }
+    }
+    &.has-button {
+      display: flex;
+      align-items: center;
+      button { white-space: nowrap; }
+    }
+  }
+
   &.has-warning {
+    .card-info--title { color: $color-orange; }
     .dashing-icon::before { color: $color-orange; }
     background-color: lighten($color-orange, 40%);
     border-left-color: $color-orange;
   }
 
   &.has-error {
+    .card-info--title { color: $color-red; }
     .dashing-icon::before { color: $color-red; }
     background-color: lighten($color-red, 45%);
     border-left-color: $color-red;
   }
 
-  &.has-success{
+  &.has-success {
+    .card-info--title { color: $color-green; }
     .dashing-icon::before { color: $color-green; }
     background-color: lighten($color-green, 70%);
     border-left-color: $color-green;
