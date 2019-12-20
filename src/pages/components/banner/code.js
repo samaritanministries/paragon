@@ -25,6 +25,8 @@ class BannerCode extends React.Component {
         <AppContent>
           <div className="grid grid-padding">
 
+            <p className="intro">Banners can be used to show important information to a user. Card banners should have text that is directly related to an action that has been completed or is about to be performed.</p>
+
             <h2 id="globalErrorBanner">Global Error Banner
               <Link to={location.pathname + "/#globalErrorBanner"} className="button button--transparent button--copy-link"></Link>
             </h2>
@@ -70,9 +72,10 @@ class BannerCode extends React.Component {
             </div>
 
 
-              <h2 id="defaultCardBanner">Default Card Banner
+              <h2 className="mt-space-xl" id="defaultCardBanner">Default Card Banner
                 <Link to={location.pathname + "/#defaultCardBanner"} className="button button--transparent button--copy-link"></Link>
               </h2>
+              <p>Add the class <code className="example-text">.has-icon</code> to <code className="example-text">.card-header</code> when using an icon.</p>
               <div className="example-container">
                 <div className="card">
                   <div className="card-header has-border">
@@ -131,8 +134,8 @@ class BannerCode extends React.Component {
                   </div>
                 </div>
                 <CodeToggle>
-{`<div class="card-info has-success">
-  <div class="card-header has-icon no-margin">
+{`<div class="card-info has-success no-margin">
+  <div class="card-header has-icon">
     <i class="dashing-icon dashing-icon--checkmark-filled" />
     <h4 class="card-info--title">Success</h4>
   </div>
@@ -218,6 +221,7 @@ class BannerCode extends React.Component {
               <h2 className="mt-space-xl" id="cardBannerWithButton">Card Banner without header
                 <Link to={location.pathname + "/#cardBannerWithButton"} className="button button--transparent button--copy-link"></Link>
               </h2>
+              <p>Add the class <code className="example-text">.has-icon</code> to <code className="example-text">.card-content</code> when using an icon.</p>
               <div className="example-container">
                 <div className="card">
                   <div className="card-header has-border">
@@ -236,7 +240,8 @@ class BannerCode extends React.Component {
                   </div>
                 </div>
                 <CodeToggle>
-{`<div class="card-info no-margin">
+{`<!-- .has-icon is added to .card-content to give appropriate display and spacing -->
+<div class="card-info no-margin">
   <div class="card-content has-icon">
     <i class="dashing-icon dashing-icon--alert-filled" />
     <p class="no-margin">This is an error card with a icon.</p>
