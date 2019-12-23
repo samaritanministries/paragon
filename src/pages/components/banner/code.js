@@ -88,7 +88,7 @@ class BannerCode extends React.Component {
                         <h4 className="card-info--title">Please Note</h4>
                       </div>
                       <div className="card-content">
-                        <p className="no-margin">This is an info card.</p>
+                        <p className="no-margin">This is an info card banner.</p>
                       </div>
                     </div>
                   </div>
@@ -103,7 +103,7 @@ class BannerCode extends React.Component {
     <h4 class="card-info--title">Please Note</h4>
   </div>
   <div class="card-content">
-    <p class="no-margin">This is an info card.</p>
+    <p class="no-margin">This is an info card banner.</p>
   </div>
 </div>`}
                 </CodeToggle>
@@ -125,7 +125,7 @@ class BannerCode extends React.Component {
                         <h4 className="card-info--title">Success</h4>
                       </div>
                       <div className="card-content">
-                        <p className="no-margin">This is a success card.</p>
+                        <p className="no-margin">This is a success card banner.</p>
                       </div>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ class BannerCode extends React.Component {
     <h4 class="card-info--title">Success</h4>
   </div>
   <div class="card-content">
-    <p class="no-margin">This is a success card.</p>
+    <p class="no-margin">This is a success card banner.</p>
   </div>
 </div>`}
                 </CodeToggle>
@@ -161,7 +161,7 @@ class BannerCode extends React.Component {
                         <h4 className="card-info--title">Warning</h4>
                       </div>
                       <div className="card-content">
-                        <p className="no-margin">This is a warning card.</p>
+                        <p className="no-margin">This is a warning card banner.</p>
                       </div>
                     </div>
                   </div>
@@ -176,7 +176,7 @@ class BannerCode extends React.Component {
     <h4 class="card-info--title">Warning</h4>
   </div>
   <div class="card-content">
-    <p class="no-margin">This is a warning card.</p>
+    <p class="no-margin">This is a warning card banner.</p>
   </div>
 </div>`}
                 </CodeToggle>
@@ -197,7 +197,7 @@ class BannerCode extends React.Component {
                         <h4 className="card-info--title">Error</h4>
                       </div>
                       <div className="card-content">
-                        <p className="no-margin">This is a error card.</p>
+                        <p className="no-margin">This is a error card banner.</p>
                       </div>
                     </div>
                   </div>
@@ -212,7 +212,7 @@ class BannerCode extends React.Component {
     <h4 class="card-info--title">Error</h4>
   </div>
   <div class="card-content">
-    <p class="no-margin">This is a error card.</p>
+    <p class="no-margin">This is a error card banner.</p>
   </div>
 </div>`}
                 </CodeToggle>
@@ -231,7 +231,7 @@ class BannerCode extends React.Component {
                     <div className="card-info no-margin">
                       <div className="card-content has-icon">
                         <i class="dashing-icon dashing-icon--alert-filled" />
-                        <p className="no-margin">This is an error card with a icon.</p>
+                        <p className="no-margin">This is an error card banner with a icon.</p>
                       </div>
                     </div>
                   </div>
@@ -244,7 +244,7 @@ class BannerCode extends React.Component {
 <div class="card-info no-margin">
   <div class="card-content has-icon">
     <i class="dashing-icon dashing-icon--alert-filled" />
-    <p class="no-margin">This is an error card with a icon.</p>
+    <p class="no-margin">This is an error card banner with a icon.</p>
   </div>
 </div>`}
                 </CodeToggle>
