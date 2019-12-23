@@ -19,6 +19,8 @@
       ],
     } ],
     "no-empty-first-line": true,
-    "no-eol-whitespace": true
+    "no-eol-whitespace": true,
+    # Would like to fix these issues eventually
+    "no-descending-specificity": null
   }
 }

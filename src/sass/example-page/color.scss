@@ -72,6 +72,8 @@ $green10: #78C696;
 	margin: 0;
 	line-height: 1.75rem;
 
+	button { display: none; }
+
 	.color-left, .color-center, .color-right {
 		border: 2px solid;
 		float: left;
@@ -153,9 +155,9 @@ $green10: #78C696;
 	}
 }
 
-.card-color--large {
-	button { display: none; }
-}
+// .card-color--large {
+// 	button { display: none; }
+// }
 
 .card-color--large:hover {
 	cursor: pointer;
@@ -661,7 +663,7 @@ Code tab color sass
 	margin-right: $space-xs;
 	margin-bottom: $space-xs;
 
-	&.color-gradient { width: calc((125px * 2) + #{$space-xs}); }
+	// &.color-gradient { width: calc((125px * 2) + #{$space-xs}); }
 
 	input {
 		background-color: transparent;
@@ -713,8 +715,11 @@ Code tab color sass
 	&.color-data-purple { background-color: $color-data-purple;
 		color: $color-white; }
 
-	&.color-gradient { background-image: $color-gradient;
-		color: $color-white; }
+	&.color-gradient {
+		background-image: $color-gradient;
+		color: $color-white;
+		width: calc((125px * 2) + #{$space-xs});
+	}
 }
 
 // .example-flex .column-flex {

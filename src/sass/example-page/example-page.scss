@@ -144,17 +144,12 @@ $sidebar-width:  13rem;
 	.splash-image--title {
 		margin-bottom: 0.5rem;
 		color: $color-white;
+		font-size: 3rem;
 	}
 
 	.splash-image--subtitle {
 		margin-bottom: 1rem;
 		color: $color-white;
-	}
-
-	.splash-image--title { font-size: 3rem; }
-
-	button {
-
 	}
 }
 
@@ -428,7 +423,6 @@ h2 {
 	padding: 1rem 0.2rem;
 	text-align: center;
 	cursor: pointer;
-	border: 2px solid transparent;
 
 	&.active {
 		background-color: $color-background;
@@ -821,9 +815,7 @@ footer {
 
 			h2, p { color: $color-white; }
 		}
-	}
 
-	.x-accessibility-color {
 		&OffBlack {
 			background-color: $color-gray-3-dark;
 
@@ -860,7 +852,7 @@ footer {
 	background-color: $color-blue;
 	position: fixed;
 	bottom: -5rem;
-	max-width: calc(#{$global-content-width} - #{$grid-gutter}*2);
+	max-width: calc(#{$global-content-width} - #{$grid-gutter} * 2);
 	z-index: 1;
 	border-radius: 5px 5px 0 0;
 	opacity: 0;
@@ -1045,7 +1037,7 @@ footer {
 	margin-bottom: $space-xs;
 	text-align: center;
 
-	&.color-gradient { width: calc((125px * 2) + #{$space-xs}); }
+	// &.color-gradient { width: calc((125px * 2) + #{$space-xs}); }
 
 	input {
 		background-color: transparent;
@@ -1097,8 +1089,11 @@ footer {
 	&.color-data-purple { background-color: $color-data-purple;
 		color: $color-white; }
 
-	&.color-gradient { background-image: $color-gradient;
-		color: $color-white; }
+	&.color-gradient {
+		background-image: $color-gradient;
+		color: $color-white;
+		width: calc((125px * 2) + #{$space-xs});
+	}
 }
 
 .global-banner--example {
