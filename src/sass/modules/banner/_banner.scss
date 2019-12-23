@@ -5,122 +5,129 @@ $global-banner-height_phone: 4rem;
 /* Shared Banner Styles
   =========================================================================== */
 @mixin shared-banner {
-  &.has-success,
-  &.has-error {
-    p { color: $color-white; }
-    .dashing-icon:before { color: $color-white;}
-  }
+	&.has-success,
+	&.has-error {
+		p { color: $color-white; }
 
-  &.has-warning {
-    p { color: $color-black; }
-    .dashing-icon:before { color: $color-black;}
-  }
+		.dashing-icon:before { color: $color-white;}
+	}
 
-  &.has-success { background-color: $color-green; }
-  &.has-warning { background-color: $color-orange; }
-  &.has-error   { background-color: $color-red; }
+	&.has-warning {
+		p { color: $color-black; }
 
-  .dashing-icon {
-    margin-right: $space-xs;
-    &::before { padding: 1px; }
-  }
+		.dashing-icon:before { color: $color-black;}
+	}
 
-  p {
-    font-size: $font-size-small;
-    font-weight: $font-weight-semibold;
-    margin: 0;
-  }
+	&.has-success { background-color: $color-green; }
 
-  a {
-    border-bottom: solid 2px;
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
+	&.has-warning { background-color: $color-orange; }
 
-    &:focus,
-    &:hover {
-      opacity: 0.6;
-      transition: all 50ms ease-in-out;
-      text-decoration: none;
-      color: inherit;
-    }
-  }
+	&.has-error   { background-color: $color-red; }
+
+	.dashing-icon {
+		margin-right: $space-xs;
+
+		&::before { padding: 1px; }
+	}
+
+	p {
+		font-size: $font-size-small;
+		font-weight: $font-weight-semibold;
+		margin: 0;
+	}
+
+	a {
+		border-bottom: solid 2px;
+		color: inherit;
+		cursor: pointer;
+		text-decoration: none;
+
+		&:focus,
+		&:hover {
+			opacity: 0.6;
+			transition: all 50ms ease-in-out;
+			text-decoration: none;
+			color: inherit;
+		}
+	}
 }
 
 /* Banner Styles
   =========================================================================== */
 .page-banner {
-  background-color: $color-gray-3;
-  text-align: center;
-  padding: 2rem 1rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+	background-color: $color-gray-3;
+	text-align: center;
+	padding: 2rem 1rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 
-  h4 {
-    color: $color-subtext;
-    margin-top: 0.5rem;
-  }
+	h4 {
+		color: $color-subtext;
+		margin-top: 0.5rem;
+	}
 
-  .button--banner {
-    //@include button($gray-400, $color-white);
-    @extend %button--smooth;
-    position: absolute;
-    top: 2.15rem;
-    right: 1rem;
-  }
+	.button--banner {
+		//@include button($gray-400, $color-white);
+		@extend %button--smooth;
+		position: absolute;
+		top: 2.15rem;
+		right: 1rem;
+	}
 }
 
 .card-banner {
-  @include shared-banner;
-  align-items: baseline;
-  background-color: $color-gray-3;
-  display: flex;
-  padding: $grid-gutter;
-  margin: 0 -#{$grid-gutter};
+	@include shared-banner;
+	align-items: baseline;
+	background-color: $color-gray-3;
+	display: flex;
+	padding: $grid-gutter;
+	margin: 0 -#{$grid-gutter};
 
-  &.has-button {
-    padding: $grid-gutter/2 $grid-gutter;
-    align-items: center;
-    button { white-space: nowrap; }
-    p { margin-right: $grid-gutter; }
-  }
+	&.has-button {
+		padding: $grid-gutter/2 $grid-gutter;
+		align-items: center;
+
+		button { white-space: nowrap; }
+
+		p { margin-right: $grid-gutter; }
+	}
 }
 
 .global-banner-container {
-  @include shared-banner;
-  animation: fadein 0.25s;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 4;
-  height: $global-banner-height_phone;
-  max-height: $global-banner-height_phone;
+	@include shared-banner;
+	animation: fadein 0.25s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 4;
+	height: $global-banner-height_phone;
+	max-height: $global-banner-height_phone;
 
-  @media #{$tablet} {
-    height: $global-banner-height;
-    max-height: $global-banner-height;
-  }
+	@media #{$tablet} {
+		height: $global-banner-height;
+		max-height: $global-banner-height;
+	}
 }
 
 .global-banner {
-  display: flex;
-  align-items: center;
-  padding: 0 $space-m;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
+	display: flex;
+	align-items: center;
+	padding: 0 $space-m;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
 
-  max-width: $content-width;
-  margin: auto;
+	max-width: $content-width;
+	margin: auto;
 
-  width: 100%;//IE wants this... okay IE. Here you are.
-  height: 100%;
+	width: 100%;//IE wants this... okay IE. Here you are.
+	height: 100%;
 
-  p {
-    font-size: $font-size-normal;
-    padding-right: $space-m;
-  }
+	p {
+		font-size: $font-size-normal;
+		padding-right: $space-m;
+	}
 }

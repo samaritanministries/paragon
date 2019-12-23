@@ -10,194 +10,210 @@ $flex-table--header-color: $color-purple;
 $flex-table--header-text:  $color-white;
 
 .flex-table {
-  @extend .card;
-  @extend %card-shadow;
-  margin: 0;
-  overflow: hidden;
+	@extend .card;
+	@extend %card-shadow;
+	margin: 0;
+	overflow: hidden;
 
-  .flex-table--title {
-    padding: $grid-gutter;
-    margin: 0;
-    + .table-row--header {
-      border-radius: 0 !important;
-      // border-top: $flex-table--border-width solid $flex-table--border-color;
-    }
-  }
+	.flex-table--title {
+		padding: $grid-gutter;
+		margin: 0;
 
-  .table-row--header,
-  .table-row {
-    @extend %remove-list-style;
-    padding: $grid-gutter;
-    border-bottom: $flex-table--border-width solid $flex-table--border-color;
-    display: block;
-    align-items: center;
-    justify-content: space-between;
-    @media #{$tablet} { display: flex; }
-    li {
-      @media #{$phone} {
-        white-space: normal;
-      }
-      flex: 1 1 0px;
-      @extend .no-wrap;
-      padding-right: 0.5rem;
-    }
-  }
+		+ .table-row--header {
+			border-radius: 0 !important;
+			// border-top: $flex-table--border-width solid $flex-table--border-color;
+		}
+	}
 
-  &.is-condensed {
-    .table-row { padding: $grid-gutter/2 $grid-gutter; }
-  }
-  &.font-small { font-size: 0.9rem; }
+	.table-row--header {
+		font-weight: $font-weight-semibold;
+		border-radius: 5px 5px 0 0;
+		background-color: $flex-table--header-color;
+		border: none;
+		color: $flex-table--header-text;
+		cursor: default;
+		padding: $grid-gutter/2 $grid-gutter;
+	}
 
-  .table-row--header {
-    font-weight: $font-weight-semibold;
-    border-radius: 5px 5px 0 0;
-    background-color: $flex-table--header-color;
-    border: none;
-    color: $flex-table--header-text;
-    cursor: default;
-    padding: $grid-gutter/2 $grid-gutter;
-  }
+	.table-row--header,
+	.table-row {
+		@extend %remove-list-style;
+		padding: $grid-gutter;
+		border-bottom: $flex-table--border-width solid $flex-table--border-color;
+		display: block;
+		align-items: center;
+		justify-content: space-between;
+		@media #{$tablet} { display: flex; }
 
-  .table-row:last-of-type { border: none; }
+		li {
+			@media #{$phone} {
+				white-space: normal;
+			}
+			flex: 1 1 0px;
+			@extend .no-wrap;
+			padding-right: 0.5rem;
+		}
+	}
 
-  &.row-selectable {
-    //Space for arrow icon
-    .table-row--header {
-      padding-right: $selectable-icon-space;
-    }
-    .table-row {
-      width: 100%;
-      padding-right: $selectable-icon-space;
-    }
-    a {
-      cursor: pointer;
-      position: relative;
-      margin: 0;
-      @extend %remove-list-style;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: $color-text;
-      font-weight: $font-weight-normal;
-      text-decoration: none;
-      transition: background-color 0.2s ease-in-out;
-      border-bottom: $flex-table--border-width solid $flex-table--border-color;
-      &:hover { background-color: $color-hover; opacity: 1; }
-      &:last-of-type {
-        border: none;
-      }
-      li:last-of-type {
-        position: absolute;
-        padding: 0;
-        right: $grid-gutter/2;
-        top: 50%;
-        margin-top: -11px; //half of icon height
-      }
-    }
-    &.font-small {
-      .table-row li:last-of-type { margin-top: -8px; }
-    }
-  }
+	&.is-condensed {
+		.table-row { padding: $grid-gutter/2 $grid-gutter; }
+	}
 
-  &.row-expandable {
-    //Space for arrow icon
-    .table-row--header {
-      @media #{$phone} { display: none; }
-      padding-left: calc(#{$expandable-icon-space} + #{$expandable-left-border});
-    }
-    .table-row {
-      padding-right: $expandable-icon-space;
-      @media #{$tablet} {
-        padding-left: $expandable-icon-space;
-        padding-right: $grid-gutter;
-      }
-      border-left: 5px solid transparent;
-      cursor: pointer;
-      position: relative;
-      transition: background-color 0.2s ease-in-out;
-      &:hover { background-color: $color-hover; }
-      li:first-of-type {
-        @media #{$phone} {
-          right: $grid-gutter/2;
-          top: 50%;
-          margin-top: -11px; //half of icon height
-        }
-        padding: 0;
-        position: absolute;
-        transition: transform 0.3s;
-        @media #{$tablet} {
-          left: calc(#{$grid-gutter} - #{$expandable-left-border});
-        }
-        i {
-          @extend .dashing-icon--arrow-right;
-          transition: transform 0.1s linear;
-        }
-      }
-      &.expanded {
-        border-left: 5px solid $color-data-teal;
-        border-bottom: none;
-        @media #{$tablet} {
-          li:first-of-type { transform: rotate(90deg); }
-        }
-        + .table-row--content {
-          padding: 1rem;
-          height: auto;
-          left: 0%;
-          transition: left 0.25s;
+	&.font-small { font-size: 0.9rem; }
 
-          border-top: $flex-table--border-width solid $flex-table--border-color;
-          border-bottom: $flex-table--border-width solid $flex-table--border-color;
+	.table-row:last-of-type { border: none; }
 
-          &:last-of-type {
-            border-bottom: none;
-          }
+	&.row-selectable {
+		//Space for arrow icon
+		.table-row--header {
+			padding-right: $selectable-icon-space;
+		}
 
-          @media #{$tablet} {
-            height: auto;
-            transition: height 0.25s;
-          }
-        }
-      }
-    }
-    //Custom table row content
-    .table-row--content {
-      overflow: auto;
-      transition: left 0.25s;
+		.table-row {
+			width: 100%;
+			padding-right: $selectable-icon-space;
+		}
 
-      background-color: $color-white;
+		a {
+			cursor: pointer;
+			position: relative;
+			margin: 0;
+			@extend %remove-list-style;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			color: $color-text;
+			font-weight: $font-weight-normal;
+			text-decoration: none;
+			transition: background-color 0.2s ease-in-out;
+			border-bottom: $flex-table--border-width solid $flex-table--border-color;
 
-      position: fixed;
-      top: 0;
-      left: 100%;
-      right: 0;
-      bottom: 0;
-      z-index: $zindex-overpanel;
+			&:hover { background-color: $color-hover;
+				opacity: 1; }
 
-      @media #{$tablet} {
-        overflow: hidden;
-        border-left: 5px solid $color-data-teal;
+			&:last-of-type {
+				border: none;
+			}
 
-        //for example app only
-        transition: height 0.25s;
-        transition: padding 0.5s;
+			li:last-of-type {
+				position: absolute;
+				padding: 0;
+				right: $grid-gutter/2;
+				top: 50%;
+				margin-top: -11px; //half of icon height
+			}
+		}
 
-        position: inherit;
-        height: 0;
-        padding: 0;
-        z-index: 0;
-      }
+		&.font-small {
+			.table-row li:last-of-type { margin-top: -8px; }
+		}
+	}
 
-      .close {
-        opacity: 1.0;
-        display: block;
+	&.row-expandable {
+		//Space for arrow icon
+		.table-row--header {
+			@media #{$phone} { display: none; }
+			padding-left: calc(#{$expandable-icon-space} + #{$expandable-left-border});
+		}
 
-        @media #{$tablet} {
-          opacity: 0.0;
-          display: none;
-        }
-      }
-    }
-  }
+		.table-row {
+			padding-right: $expandable-icon-space;
+			@media #{$tablet} {
+				padding-left: $expandable-icon-space;
+				padding-right: $grid-gutter;
+			}
+			border-left: 5px solid transparent;
+			cursor: pointer;
+			position: relative;
+			transition: background-color 0.2s ease-in-out;
+
+			&:hover { background-color: $color-hover; }
+
+			li:first-of-type {
+				@media #{$phone} {
+					right: $grid-gutter/2;
+					top: 50%;
+					margin-top: -11px; //half of icon height
+				}
+				padding: 0;
+				position: absolute;
+				transition: transform 0.3s;
+				@media #{$tablet} {
+					left: calc(#{$grid-gutter} - #{$expandable-left-border});
+				}
+
+				i {
+					@extend .dashing-icon--arrow-right;
+					transition: transform 0.1s linear;
+				}
+			}
+
+			&.expanded {
+				border-left: 5px solid $color-data-teal;
+				border-bottom: none;
+				@media #{$tablet} {
+					li:first-of-type { transform: rotate(90deg); }
+				}
+
+				+ .table-row--content {
+					padding: 1rem;
+					height: auto;
+					left: 0%;
+					transition: left 0.25s;
+
+					border-top: $flex-table--border-width solid $flex-table--border-color;
+					border-bottom: $flex-table--border-width solid $flex-table--border-color;
+
+					&:last-of-type {
+						border-bottom: none;
+					}
+
+					@media #{$tablet} {
+						height: auto;
+						transition: height 0.25s;
+					}
+				}
+			}
+		}
+		//Custom table row content
+		.table-row--content {
+			overflow: auto;
+			transition: left 0.25s;
+
+			background-color: $color-white;
+
+			position: fixed;
+			top: 0;
+			left: 100%;
+			right: 0;
+			bottom: 0;
+			z-index: $zindex-overpanel;
+
+			@media #{$tablet} {
+				overflow: hidden;
+				border-left: 5px solid $color-data-teal;
+
+				//for example app only
+				transition: height 0.25s;
+				transition: padding 0.5s;
+
+				position: inherit;
+				height: 0;
+				padding: 0;
+				z-index: 0;
+			}
+
+			.close {
+				opacity: 1;
+				display: block;
+
+				@media #{$tablet} {
+					opacity: 0;
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 
@@ -211,68 +227,75 @@ $table--border: $color-gray-3-dark !default;
 
 .table--container,
 .card-table {
-  .table {
-    background-color: $color-white;
-    font-size: $font-size-small;
-    margin: 0;
-    max-width: 100%;
-    width: 100%;
+	.table {
+		background-color: $color-white;
+		font-size: $font-size-small;
+		margin: 0;
+		max-width: 100%;
+		width: 100%;
 
-    thead tr { background-color: $table--header-row; }
+		thead tr { background-color: $table--header-row; }
 
-    th, td {
-      padding: $grid-gutter;
-      text-align: left;
-    }
+		th, td {
+			padding: $grid-gutter;
+			text-align: left;
+		}
 
-    td { vertical-align: middle; }
-    th { border-bottom: 2px solid $color-border; }
-  }
+		td { vertical-align: middle; }
+
+		th { border-bottom: 2px solid $color-border; }
+	}
 }
 
 /* Table States
   =========================================================================== */
 //Add border to container
 .table--container.has-border {
-  @media #{$tablet} {
-    border: 2px solid $table--border;
-    border-radius: 10px;
-    overflow: hidden;
-  }
+	@media #{$tablet} {
+		border: 2px solid $table--border;
+		border-radius: 10px;
+		overflow: hidden;
+	}
 }
 
 //Add dividing lines to table rows
 .table.has-dividers,
 .table.has-divider {
-  td { border-bottom: 2px solid $table--dividers; }
-  tr:last-of-type { td { border-bottom: none;} }
+	td { border-bottom: 2px solid $table--dividers; }
+
+	tr:last-of-type { td { border-bottom: none;} }
 }
 
 //Add alternating row colors to table rows
 .table.has-row-color {
-  tr {
-    &:nth-child(odd) { background-color: $table--odd-row; }
-    &:nth-child(even) { background-color: $table--even-row; }
-  }
-  thead tr:nth-child(odd) { background-color: $table--header-row; }
+	tr {
+		&:nth-child(odd) { background-color: $table--odd-row; }
 
-  //Adds specific hover styles for colored rows
-  &.has-hover {
-    tr:nth-child(odd):hover { td { background-color: darken($table--odd-row, 7%); }}
-    tr:nth-child(even):hover { td { background-color: darken($table--even-row, 7%); }}
-  }
+		&:nth-child(even) { background-color: $table--even-row; }
+	}
+
+	thead tr:nth-child(odd) { background-color: $table--header-row; }
+
+	//Adds specific hover styles for colored rows
+	&.has-hover {
+		tr:nth-child(odd):hover { td { background-color: darken($table--odd-row, 7%); }}
+
+		tr:nth-child(even):hover { td { background-color: darken($table--even-row, 7%); }}
+	}
 }
 
 //Add hover table rows
 .table.has-hover {
-  td { @include transition(all 0.15s ease-in-out); }
-  tr:hover { td { background-color: $color-hover; } }
-  tr.disabled {
-    &:hover {
-      td {
-        background-color: transparent;
-        cursor: not-allowed;
-      }
-    }
-  }
+	td { @include transition(all 0.15s ease-in-out); }
+
+	tr:hover { td { background-color: $color-hover; } }
+
+	tr.disabled {
+		&:hover {
+			td {
+				background-color: transparent;
+				cursor: not-allowed;
+			}
+		}
+	}
 }

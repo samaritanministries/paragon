@@ -4,219 +4,243 @@
 //TODO remove .card--header, .card--content, .card--footer with major release
 
 .card {
-  background-color: $color-white;
-  border-radius: 5px;
-  margin: 1.5rem auto;
-  @extend %card-shadow;
+	background-color: $color-white;
+	border-radius: 5px;
+	margin: 1.5rem auto;
+	@extend %card-shadow;
 
-  .card--header, &.card--content, &.card--footer,
-  .card-header, &.card-content, &.card-footer {
-    hr { margin: ($grid-gutter) 0; }
-  }
+	.card--header, &.card--content, &.card--footer,
+	.card-header, &.card-content, &.card-footer {
+		hr { margin: ($grid-gutter) 0; }
+	}
 
-  //Spans the hr full width within a card. card--header, card--content, card--footer will use padding for spacing.
-  hr { margin: 0; }
+	//Spans the hr full width within a card. card--header, card--content, card--footer will use padding for spacing.
+	hr { margin: 0; }
 
-  .card--header,
-  .card-header {
-    padding: $grid-gutter $grid-gutter 0 $grid-gutter;
-    padding-bottom: 0;
-    &.has-border {
-      border-bottom: 2px solid $color-border;
-      padding-bottom: $grid-gutter;
-      +.card--content .card-banner,
-      +.card-content .card-banner  {
-        margin-top: -$grid-gutter;
-      }
-    }
-    &.has-icon {
-      display: flex;
-      align-items: center;
-      i { margin-right: $space-xxs; }
-    }
-    h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in card-headers
-  }
+	.card--header,
+	.card-header {
+		padding: $grid-gutter $grid-gutter 0 $grid-gutter;
+		padding-bottom: 0;
+
+		&.has-border {
+			border-bottom: 2px solid $color-border;
+			padding-bottom: $grid-gutter;
+
+			+.card--content .card-banner,
+			+.card-content .card-banner  {
+				margin-top: -$grid-gutter;
+			}
+		}
+
+		&.has-icon {
+			display: flex;
+			align-items: center;
+
+			i { margin-right: $space-xxs; }
+		}
+
+		h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in card-headers
+	}
 
 
-  .card--content,
-  .card-content {
-    overflow: auto;
-    padding: $grid-gutter;
-  }
+	.card--content,
+	.card-content {
+		overflow: auto;
+		padding: $grid-gutter;
+	}
 
-  .card--footer,
-  .card-footer {
-    padding: 0 $grid-gutter $grid-gutter $grid-gutter;
-    &.has-border {
-      border-top: 2px solid $color-border;
-      padding-top: $grid-gutter;
-    }
-  }
+	.card--footer,
+	.card-footer {
+		padding: 0 $grid-gutter $grid-gutter $grid-gutter;
 
-  .card--header + &.card--footer,
-  .card-header + &.card-footer {
-    padding-top: $grid-gutter;
-  }
+		&.has-border {
+			border-top: 2px solid $color-border;
+			padding-top: $grid-gutter;
+		}
+	}
 
-  //Use "is-selectable" to indicate a clickable card, add disabled or is-disabled to fade back the card
-  &.is-selectable {
-    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	.card--header + &.card--footer,
+	.card-header + &.card-footer {
+		padding-top: $grid-gutter;
+	}
 
-    &:hover {
-      @extend %card-shadow--hover;
-      cursor: pointer;
-    }
-  }
+	//Use "is-selectable" to indicate a clickable card, add disabled or is-disabled to fade back the card
+	&.is-selectable {
+		transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
-  &.disabled,
-  &.is-disabled,
-  &.is-selectable.is-disabled,
-  &.is-selectable.disabled {
-    opacity: 0.4;
-    pointer-events: none;
-    box-shadow: none;
-  }
+		&:hover {
+			@extend %card-shadow--hover;
+			cursor: pointer;
+		}
+	}
 
-  &.card--dashed {
-    border: 2px dashed $color-border;
-    box-shadow: none;
-  }
+	&.disabled,
+	&.is-disabled,
+	&.is-selectable.is-disabled,
+	&.is-selectable.disabled {
+		opacity: 0.4;
+		pointer-events: none;
+		box-shadow: none;
+	}
 
-  .card--narrow{
-    max-width: 750px;
-  }
+	&.card--dashed {
+		border: 2px dashed $color-border;
+		box-shadow: none;
+	}
 
-  .card--list, .card-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    li {
-      padding: $space-s $space-m;
-      transition: $global-transition;
-    }
-    &.is-selectable {
-      li {
-        cursor: pointer;
-        &:hover {
-          background-color: $color-hover;
-        }
-        a {
-          margin: -#{$space-s} -#{$space-m};
-          padding: $space-s $space-m;
-          &:hover { opacity: 1; }
-        }
-      }
-    }
-    &.has-border {
-      li {
-        border-bottom: 1px solid $color-border;
-        &:last-of-type { border: 0; }
-      }
-    }
-  }
-  //Table within Card
-  .card-table {
-    overflow-x: auto;
-    border-radius: 0 0 5px 5px;
-    .table,
-    table {
-      margin-top: $grid-gutter !important;
-      border-radius: 0 0 5px 5px;
-      th {
-        border-top: 2px solid;
-        border-color: $color-border;
-        padding: $space-xs $space-m !important;
-        background-color: $color-background;
-      }
-      &.has-arrow {
-        th,tr {
-          td:last-of-type  {
-            width: 3rem;
-          }
-        }
-      }
-      &.is-selectable {
-        tbody tr {
-          transition: $global-transition;
-          &:hover {
-            cursor: pointer;
-            background-color: $color-hover;
-          }
-        }
-      }
-    }
-  }
-  //Informational card
-  &.card-info {
-    background-color: #eaf9ff;
-    box-shadow: none;
-  }
-  &.card-info--gray,
-  &.card-info--grey {
-    background-color: $color-gray-2;
-    box-shadow: none;
-  }
+	.card--narrow{
+		max-width: 750px;
+	}
+
+	.card--list, .card-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			padding: $space-s $space-m;
+			transition: $global-transition;
+		}
+
+		&.is-selectable {
+			li {
+				cursor: pointer;
+
+				&:hover {
+					background-color: $color-hover;
+				}
+
+				a {
+					margin: -#{$space-s} -#{$space-m};
+					padding: $space-s $space-m;
+
+					&:hover { opacity: 1; }
+				}
+			}
+		}
+
+		&.has-border {
+			li {
+				border-bottom: 1px solid $color-border;
+
+				&:last-of-type { border: 0; }
+			}
+		}
+	}
+	//Table within Card
+	.card-table {
+		overflow-x: auto;
+		border-radius: 0 0 5px 5px;
+
+		.table,
+		table {
+			margin-top: $grid-gutter !important;
+			border-radius: 0 0 5px 5px;
+
+			th {
+				border-top: 2px solid;
+				border-color: $color-border;
+				padding: $space-xs $space-m !important;
+				background-color: $color-background;
+			}
+
+			&.has-arrow {
+				th,tr {
+					td:last-of-type  {
+						width: 3rem;
+					}
+				}
+			}
+
+			&.is-selectable {
+				tbody tr {
+					transition: $global-transition;
+
+					&:hover {
+						cursor: pointer;
+						background-color: $color-hover;
+					}
+				}
+			}
+		}
+	}
+	//Informational card
+	&.card-info {
+		background-color: #eaf9ff;
+		box-shadow: none;
+	}
+
+	&.card-info--gray,
+	&.card-info--grey {
+		background-color: $color-gray-2;
+		box-shadow: none;
+	}
 }
 
 //Set the margin of Cards when they are within a Grid
 .grid {
-  :not(.checkbox-card):not(.radio-card):not(.card-content) > .card:not(.card--dashed) {
-    @media #{$phone} {
-      margin: 0 -#{$grid-gutter} $grid-gutter -#{$grid-gutter};
-      border-radius: 0;
-    }
-    @media #{$tablet} {
-      margin: 0 0 $grid-gutter 0;
-      &:last-of-type { margin-bottom: 0; }
-    }
-  }
+	:not(.checkbox-card):not(.radio-card):not(.card-content) > .card:not(.card--dashed) {
+		@media #{$phone} {
+			margin: 0 -#{$grid-gutter} $grid-gutter -#{$grid-gutter};
+			border-radius: 0;
+		}
+		@media #{$tablet} {
+			margin: 0 0 $grid-gutter 0;
+
+			&:last-of-type { margin-bottom: 0; }
+		}
+	}
 }
 
 /* Card Loading Animation
   =========================================================================== */
 .card.is-loading {
-  overflow: hidden;
-  .card-header, .card--header,
-  .card-content, .card--content,
-  .card-footer, .card--footer {
-    overflow: hidden;
-    * { //Targets all elements inside the card header, content, and footer
-      position: relative;
-      background-color: $color-background;
-      border-radius: 3px;
-      height: 1.25rem;
-      overflow: hidden;
+	overflow: hidden;
 
-      &::after {
-        display: block;
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transform: translateX(-100%);
-        background: linear-gradient(90deg, transparent, rgba($color-black, .07), transparent);
-        animation: loadingCard 1.2s infinite;
-        top: 0;
-      }
-    }
-  }
-  .card-header,
-  .card--header {
-    * {
-      width: 200px; //Sets a static width for the header
-    }
-  }
-  .card-footer,
-  .card--footer {
-    * {
-      width: 100px; //Sets a static width for footer buttons
-      margin: 0;
-    }
-  }
+	.card-header, .card--header,
+	.card-content, .card--content,
+	.card-footer, .card--footer {
+		overflow: hidden;
+
+		* { //Targets all elements inside the card header, content, and footer
+			position: relative;
+			background-color: $color-background;
+			border-radius: 3px;
+			height: 1.25rem;
+			overflow: hidden;
+
+			&::after {
+				display: block;
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				transform: translateX(-100%);
+				background: linear-gradient(90deg, transparent, rgba($color-black, 0.07), transparent);
+				animation: loadingCard 1.2s infinite;
+				top: 0;
+			}
+		}
+	}
+
+	.card-header,
+	.card--header {
+		* {
+			width: 200px; //Sets a static width for the header
+		}
+	}
+
+	.card-footer,
+	.card--footer {
+		* {
+			width: 100px; //Sets a static width for footer buttons
+			margin: 0;
+		}
+	}
 }
 
 @keyframes loadingCard {
-  100% {
-    transform: translateX(100%);
-  }
+	100% {
+		transform: translateX(100%);
+	}
 }

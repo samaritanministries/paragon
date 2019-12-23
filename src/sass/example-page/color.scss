@@ -64,132 +64,166 @@ $green10: #78C696;
 
 //large color card
 .card-color--large {
-  display: flex;
-  padding: 0;
-  height: 10rem;
-  border: none;
-  overflow: hidden;
-  margin: 0;
-  line-height: 1.75rem;
+	display: flex;
+	padding: 0;
+	height: 10rem;
+	border: none;
+	overflow: hidden;
+	margin: 0;
+	line-height: 1.75rem;
 
-  .color-left, .color-center, .color-right {
-    border: 2px solid;
-    float: left;
-    height: 100%;
-    padding: 0.5rem;
-  }
+	.color-left, .color-center, .color-right {
+		border: 2px solid;
+		float: left;
+		height: 100%;
+		padding: 0.5rem;
+	}
 
-  .color-left, .color-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
+	.color-left, .color-center {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
 
-  .color-left {
-    background-color: $neutral30;
-    border-color: $neutral30;
-    padding: 0.3rem 0.5rem;
-  }
-  .color-right {
-    border-radius: 0 10px 10px 0;
-    flex: 2;
-    overflow: hidden;
-  }
+	.color-left {
+		background-color: $neutral30;
+		border-color: $neutral30;
+		padding: 0.3rem 0.5rem;
+	}
+
+	.color-right {
+		border-radius: 0 10px 10px 0;
+		flex: 2;
+		overflow: hidden;
+	}
 }
 
 //small color card
 .card-color--small {
-  border-bottom: 2px solid $color-border;
-  display: flex;
-  padding: 0.2rem 0 0.2rem 0.5rem;
-  position: relative;
-  line-height: 1.7rem;
-  &:last-of-type { border-bottom: none; }
+	border-bottom: 2px solid $color-border;
+	display: flex;
+	padding: 0.2rem 0 0.2rem 0.5rem;
+	position: relative;
+	line-height: 1.7rem;
 
-  label { margin-top: 0 !important; }
-  button {
-    opacity: 0;
-    transition: all 0.3s;
-    width: 0;
-  }
+	&:last-of-type { border-bottom: none; }
 
-  .color-swatch {
-    // border-radius: 5px;
-    // height: 2.8rem;
-    // overflow: hidden;
-    // position: relative;
-    // min-width: 4rem;
-    // width: 4rem;
-    // float: left;
+	label { margin-top: 0 !important; }
 
-    border-radius: 0;
-    height: 3.25rem;
-    overflow: hidden;
-    position: relative;
-    min-width: 4rem;
-    width: 4rem;
-    float: left;
-    margin: -0.2rem 0 -0.2rem -0.5rem;
+	button {
+		opacity: 0;
+		transition: all 0.3s;
+		width: 0;
+	}
 
-    &:hover {
-      cursor: pointer;
-      transition: all 0.3s;
-      min-width: 6rem;
-      width: 20%;
-      ~.color-text, .color-text label, .color-text span { transition: all 0.3s; }
+	.color-swatch {
+		// border-radius: 5px;
+		// height: 2.8rem;
+		// overflow: hidden;
+		// position: relative;
+		// min-width: 4rem;
+		// width: 4rem;
+		// float: left;
 
-      button { display: block; opacity: 1; }
-    }
-  }
-  .color-detail {
-    margin-left: 1rem;
-    float: left;
-  }
+		border-radius: 0;
+		height: 3.25rem;
+		overflow: hidden;
+		position: relative;
+		min-width: 4rem;
+		width: 4rem;
+		float: left;
+		margin: -0.2rem 0 -0.2rem -0.5rem;
+
+		&:hover {
+			cursor: pointer;
+			transition: all 0.3s;
+			min-width: 6rem;
+			width: 20%;
+
+			~.color-text, .color-text label, .color-text span { transition: all 0.3s; }
+
+			button { display: block;
+				opacity: 1; }
+		}
+	}
+
+	.color-detail {
+		margin-left: 1rem;
+		float: left;
+	}
 }
 
 .card-color--large {
-  button { display: none; }
+	button { display: none; }
 }
 
 .card-color--large:hover {
-  cursor: pointer;
+	cursor: pointer;
 
-  .color-center, .color-right, label, span { transition: all 0.3s; }
+	.color-center, .color-right, label, span { transition: all 0.3s; }
 
-  .color-center { flex: 2; }
-  .color-right { flex: 0; margin-left: -2rem; border-left: none;}
-  label, span {
-    opacity: 0;
-    transform: translateX(8rem);
-  }
-  button { display: block; }
+	.color-center { flex: 2; }
+
+	.color-right { flex: 0;
+		margin-left: -2rem;
+		border-left: none;}
+
+	label, span {
+		opacity: 0;
+		transform: translateX(8rem);
+	}
+
+	button { display: block; }
 }
 
 
 @mixin color-guide($color, $hex, $sass) {
-  .color-center { background-color: $color; border-color: $color; }
-  .color-right { border-color: $color; }
-  .color-swatch { background-color: $color; }
-  &:not(.card-color--small):hover {
-    label, .aa, .aaa, span { display: none; }
-    .button--copy:before { content: $hex;}
-  }
-  span.hex-code:after { content: $hex; }
-  span.sass-variable:after { content: $sass; }
+	.color-center { background-color: $color;
+		border-color: $color; }
+
+	.color-right { border-color: $color; }
+
+	.color-swatch { background-color: $color; }
+
+	&:not(.card-color--small):hover {
+		label, .aa, .aaa, span { display: none; }
+
+		.button--copy:before { content: $hex;}
+	}
+
+	span.hex-code:after { content: $hex; }
+
+	span.sass-variable:after { content: $sass; }
 }
 
 .color--classic { @include color-guide($color--classic, "#9669AA", "$color--classic"); }
+
 .color--basic { @include color-guide($color--basic, "#FAA445", "$color--basic"); }
 
 //NEEDS THEME
 .color--discounts { @include color-guide($color--discounts, "#5678BC", "$color--discounts"); }
-.color--sharable { @include color-guide($color--sharable, "#47CB86", "$color--sharable"); .button--copy { color: $color-black !important;}}
+
+.color--sharable { @include color-guide($color--sharable, "#47CB86", "$color--sharable");
+
+	.button--copy { color: $color-black !important;}}
+
 .color--co-share { @include color-guide($color--co-share, "#268654", "$color--co-share"); }
-.color--threshold { @include color-guide($color--threshold, "#47CB86", "$color--threshold"); .button--copy { color: $color-black !important;}}
+
+.color--threshold { @include color-guide($color--threshold, "#47CB86", "$color--threshold");
+
+	.button--copy { color: $color-black !important;}}
+
 .color--spn { @include color-guide($color--spn, "#8F669C", "$color--spn"); }
-.color--missing-info { @include color-guide($color--missing-info, "#F7AD4B", "$color--missing-info"); .button--copy { color: $color-black !important;}}
+
+.color--missing-info { @include color-guide($color--missing-info, "#F7AD4B", "$color--missing-info");
+
+	.button--copy { color: $color-black !important;}}
+
 .color--not-sharable { @include color-guide($color--not-sharable, "#F76553", "$color--not-sharable"); }
-.color--pending { @include color-guide($color--pending, "#A1A1A1", "$color--pending"); .button--copy { color: $color-black !important;}}
+
+.color--pending { @include color-guide($color--pending, "#A1A1A1", "$color--pending");
+
+	.button--copy { color: $color-black !important;}}
 
 //UI THEME
 // .color--ui-blue     { @include color-guide($color-blue, "#3F70C9", "$blue"); }
@@ -203,161 +237,314 @@ $green10: #78C696;
 //SYSTEM THEME
 //GRAY
 .card--header--color.color--gray-500 { background-color: $gray-500; }
-.color--gray-50     { @include color-guide($gray-50, "#F2F2F2", "$gray-50"); .button--copy { color: $black !important;} }
-.color--gray-100    { @include color-guide($gray-100, "#EDEDED", "$gray-100"); .button--copy { color: $black !important;} }
-.color--gray-150    { @include color-guide($gray-150, "#E0E0E0", "$gray-150"); .button--copy { color: $black !important;} }
-.color--gray-200    { @include color-guide($gray-200, "#D4D4D4", "$gray-200"); .button--copy { color: $black !important;} }
-.color--gray-250    { @include color-guide($gray-250, "#C7C7C7", "$gray-250"); .button--copy { color: $black !important;} }
-.color--gray-300    { @include color-guide($gray-300, "#BABABA", "$gray-300"); .button--copy { color: $black !important;} }
+
+.color--gray-50     { @include color-guide($gray-50, "#F2F2F2", "$gray-50");
+
+	.button--copy { color: $black !important;} }
+
+.color--gray-100    { @include color-guide($gray-100, "#EDEDED", "$gray-100");
+
+	.button--copy { color: $black !important;} }
+
+.color--gray-150    { @include color-guide($gray-150, "#E0E0E0", "$gray-150");
+
+	.button--copy { color: $black !important;} }
+
+.color--gray-200    { @include color-guide($gray-200, "#D4D4D4", "$gray-200");
+
+	.button--copy { color: $black !important;} }
+
+.color--gray-250    { @include color-guide($gray-250, "#C7C7C7", "$gray-250");
+
+	.button--copy { color: $black !important;} }
+
+.color--gray-300    { @include color-guide($gray-300, "#BABABA", "$gray-300");
+
+	.button--copy { color: $black !important;} }
+
 .color--gray-400    { @include color-guide($gray-400, "#A1A1A1", "$gray-400"); }
+
 .color--gray-500    { @include color-guide($gray-500, "#878787", "$gray-500"); }
+
 .color--gray-600    { @include color-guide($gray-600, "#6E6E6E", "$gray-600"); }
+
 .color--gray-700    { @include color-guide($gray-700, "#555555", "$gray-700"); }
+
 .color--gray-800    { @include color-guide($gray-800, "#3B3B3B", "$gray-800"); }
+
 .color--gray-900    { @include color-guide($gray-900, "#222222", "$gray-900"); }
 
 //COOL GRAY
 .card--header--color.color--gray-500c { background-color: $gray-500c; }
-.color--gray-50c    { @include color-guide($gray-50c, "#F5F6F7", "$gray-50c"); .button--copy { color: $black !important;} }
-.color--gray-100c   { @include color-guide($gray-100c, "#EDF1F2", "$gray-100c"); .button--copy { color: $black !important;} }
-.color--gray-150c   { @include color-guide($gray-150c, "#DDE2E6", "$gray-150c"); .button--copy { color: $black !important;} }
-.color--gray-200c   { @include color-guide($gray-200c, "#D2D5D9", "$gray-200c"); .button--copy { color: $black !important;} }
-.color--gray-250c   { @include color-guide($gray-250c, "#C4C8CD", "$gray-250c"); .button--copy { color: $black !important;} }
-.color--gray-300c   { @include color-guide($gray-300c, "#B6BBC2", "$gray-300c"); .button--copy { color: $black !important;} }
+
+.color--gray-50c    { @include color-guide($gray-50c, "#F5F6F7", "$gray-50c");
+
+	.button--copy { color: $black !important;} }
+
+.color--gray-100c   { @include color-guide($gray-100c, "#EDF1F2", "$gray-100c");
+
+	.button--copy { color: $black !important;} }
+
+.color--gray-150c   { @include color-guide($gray-150c, "#DDE2E6", "$gray-150c");
+
+	.button--copy { color: $black !important;} }
+
+.color--gray-200c   { @include color-guide($gray-200c, "#D2D5D9", "$gray-200c");
+
+	.button--copy { color: $black !important;} }
+
+.color--gray-250c   { @include color-guide($gray-250c, "#C4C8CD", "$gray-250c");
+
+	.button--copy { color: $black !important;} }
+
+.color--gray-300c   { @include color-guide($gray-300c, "#B6BBC2", "$gray-300c");
+
+	.button--copy { color: $black !important;} }
+
 .color--gray-400c   { @include color-guide($gray-400c, "#9CA3AA", "$gray-400c"); }
+
 .color--gray-500c   { @include color-guide($gray-500c, "#828B94", "$gray-500c"); }
+
 .color--gray-600c   { @include color-guide($gray-600c, "#6C747D", "$gray-600c"); }
+
 .color--gray-700c   { @include color-guide($gray-700c, "#575D64", "$gray-700c"); }
+
 .color--gray-800c   { @include color-guide($gray-800c, "#41464B", "$gray-800c"); }
+
 .color--gray-900c   { @include color-guide($gray-900c, "#24292C", "$gray-900c"); }
 
 //BLUE
 .card--header--color.color--blue { background-color: $blue-600; }
-.color--blue-50    { @include color-guide($blue-50, "#E9FFFF", "$blue-50"); .button--copy { color: $black !important;} }
-.color--blue-100   { @include color-guide($blue-100, "#D0F3FF", "$blue-100"); .button--copy { color: $black !important;} }
-.color--blue-200   { @include color-guide($blue-200, "#B7DAFF", "$blue-200"); .button--copy { color: $black !important;} }
-.color--blue-300   { @include color-guide($blue-300, "#9DC0FF", "$blue-300"); .button--copy { color: $black !important;} }
-.color--blue-400   { @include color-guide($blue-400, "#84A7ED", "$blue-400"); .button--copy { color: $black !important;} }
+
+.color--blue-50    { @include color-guide($blue-50, "#E9FFFF", "$blue-50");
+
+	.button--copy { color: $black !important;} }
+
+.color--blue-100   { @include color-guide($blue-100, "#D0F3FF", "$blue-100");
+
+	.button--copy { color: $black !important;} }
+
+.color--blue-200   { @include color-guide($blue-200, "#B7DAFF", "$blue-200");
+
+	.button--copy { color: $black !important;} }
+
+.color--blue-300   { @include color-guide($blue-300, "#9DC0FF", "$blue-300");
+
+	.button--copy { color: $black !important;} }
+
+.color--blue-400   { @include color-guide($blue-400, "#84A7ED", "$blue-400");
+
+	.button--copy { color: $black !important;} }
+
 .color--blue-500   { @include color-guide($blue-500, "#6A8DD3", "$blue-500"); }
+
 .color--blue-600   { @include color-guide($blue-600, "#5174BA", "$blue-600"); }
+
 .color--blue-700   { @include color-guide($blue-700, "#375AA0", "$blue-700"); }
+
 .color--blue-800   { @include color-guide($blue-800, "#1E4187", "$blue-800"); }
+
 .color--blue-900   { @include color-guide($blue-900, "#04276D", "$blue-900"); }
 
 //GREEN
 .card--header--color.color--green { background-color: $green-500; }
-.color--green-50    { @include color-guide($green-50, "#ACFFEB", "$green-50"); .button--copy { color: $black !important;} }
-.color--green-100   { @include color-guide($green-100, "#93FFD2", "$green-100"); .button--copy { color: $black !important;} }
-.color--green-200   { @include color-guide($green-200, "#7AFEB9", "$green-200"); .button--copy { color: $black !important;} }
-.color--green-300   { @include color-guide($green-300, "#60E49F", "$green-300"); .button--copy { color: $black !important;} }
-.color--green-400   { @include color-guide($green-400, "#47CB86", "$green-400"); .button--copy { color: $black !important;} }
+
+.color--green-50    { @include color-guide($green-50, "#ACFFEB", "$green-50");
+
+	.button--copy { color: $black !important;} }
+
+.color--green-100   { @include color-guide($green-100, "#93FFD2", "$green-100");
+
+	.button--copy { color: $black !important;} }
+
+.color--green-200   { @include color-guide($green-200, "#7AFEB9", "$green-200");
+
+	.button--copy { color: $black !important;} }
+
+.color--green-300   { @include color-guide($green-300, "#60E49F", "$green-300");
+
+	.button--copy { color: $black !important;} }
+
+.color--green-400   { @include color-guide($green-400, "#47CB86", "$green-400");
+
+	.button--copy { color: $black !important;} }
+
 .color--green-500   { @include color-guide($green-500, "#2DB16C", "$green-500"); }
+
 .color--green-600   { @include color-guide($green-600, "#149853", "$green-600"); }
+
 .color--green-700   { @include color-guide($green-700, "#007E39", "$green-700"); }
+
 .color--green-800   { @include color-guide($green-800, "#006520", "$green-800"); }
+
 .color--green-900   { @include color-guide($green-900, "#004B06", "$green-900"); }
 
 //ORANGE
 .card--header--color.color--orange { background-color: $orange-500; }
-.color--orange-50    { @include color-guide($orange-50, "#FFFFB0", "$orange-50"); .button--copy { color: $black !important;} }
-.color--orange-100   { @include color-guide($orange-100, "#FFF997", "$orange-100"); .button--copy { color: $black !important;} }
-.color--orange-200   { @include color-guide($orange-200, "#FFE07E", "$orange-200"); .button--copy { color: $black !important;} }
-.color--orange-300   { @include color-guide($orange-300, "#FFC664", "$orange-300"); .button--copy { color: $black !important;} }
-.color--orange-400   { @include color-guide($orange-400, "#F7AD4B", "$orange-400"); .button--copy { color: $black !important;} }
-.color--orange-500   { @include color-guide($orange-500, "#DD9331", "$orange-500"); .button--copy { color: $black !important;} }
+
+.color--orange-50    { @include color-guide($orange-50, "#FFFFB0", "$orange-50");
+
+	.button--copy { color: $black !important;} }
+
+.color--orange-100   { @include color-guide($orange-100, "#FFF997", "$orange-100");
+
+	.button--copy { color: $black !important;} }
+
+.color--orange-200   { @include color-guide($orange-200, "#FFE07E", "$orange-200");
+
+	.button--copy { color: $black !important;} }
+
+.color--orange-300   { @include color-guide($orange-300, "#FFC664", "$orange-300");
+
+	.button--copy { color: $black !important;} }
+
+.color--orange-400   { @include color-guide($orange-400, "#F7AD4B", "$orange-400");
+
+	.button--copy { color: $black !important;} }
+
+.color--orange-500   { @include color-guide($orange-500, "#DD9331", "$orange-500");
+
+	.button--copy { color: $black !important;} }
+
 .color--orange-600   { @include color-guide($orange-600, "#C47A18", "$orange-600"); }
+
 .color--orange-700   { @include color-guide($orange-700, "#AA6000", "$orange-700"); }
+
 .color--orange-800   { @include color-guide($orange-800, "#914700", "$orange-800"); }
+
 .color--orange-900   { @include color-guide($orange-900, "#772D00", "$orange-900"); }
 
 //RED
 .card--header--color.color--red { background-color: $red-500; }
-.color--red-50    { @include color-guide($red-50, "#FFCAB8", "$red-50"); .button--copy { color: $black !important;} }
-.color--red-100   { @include color-guide($red-100, "#FFB19F", "$red-100"); .button--copy { color: $black !important;} }
-.color--red-200   { @include color-guide($red-200, "#FF9886", "$red-200"); .button--copy { color: $black !important;} }
-.color--red-300   { @include color-guide($red-300, "#FF7E6C", "$red-300"); .button--copy { color: $black !important;} }
-.color--red-400   { @include color-guide($red-400, "#F76553", "$red-400"); .button--copy { color: $black !important;} }
+
+.color--red-50    { @include color-guide($red-50, "#FFCAB8", "$red-50");
+
+	.button--copy { color: $black !important;} }
+
+.color--red-100   { @include color-guide($red-100, "#FFB19F", "$red-100");
+
+	.button--copy { color: $black !important;} }
+
+.color--red-200   { @include color-guide($red-200, "#FF9886", "$red-200");
+
+	.button--copy { color: $black !important;} }
+
+.color--red-300   { @include color-guide($red-300, "#FF7E6C", "$red-300");
+
+	.button--copy { color: $black !important;} }
+
+.color--red-400   { @include color-guide($red-400, "#F76553", "$red-400");
+
+	.button--copy { color: $black !important;} }
+
 .color--red-500   { @include color-guide($red-500, "#DD4B39", "$red-500"); }
+
 .color--red-600   { @include color-guide($red-600, "#C43220", "$red-600"); }
+
 .color--red-700   { @include color-guide($red-700, "#AA1806", "$red-700"); }
+
 .color--red-800   { @include color-guide($red-800, "#910000", "$red-800"); }
+
 .color--red-900   { @include color-guide($red-900, "#770000", "$red-900"); }
 
 //PURPLE
 .card--header--color.color--purple { background-color: $purple-500; }
-.color--purple-50    { @include color-guide($purple-50, "#F4CBFF", "$purple-50"); .button--copy { color: $black !important;} }
-.color--purple-100   { @include color-guide($purple-100, "#DBB2E8", "$purple-100"); .button--copy { color: $black !important;} }
-.color--purple-200   { @include color-guide($purple-200, "#C299CF", "$purple-200"); .button--copy { color: $black !important;} }
-.color--purple-300   { @include color-guide($purple-300, "#A87FB5", "$purple-300"); .button--copy { color: $black !important;} }
+
+.color--purple-50    { @include color-guide($purple-50, "#F4CBFF", "$purple-50");
+
+	.button--copy { color: $black !important;} }
+
+.color--purple-100   { @include color-guide($purple-100, "#DBB2E8", "$purple-100");
+
+	.button--copy { color: $black !important;} }
+
+.color--purple-200   { @include color-guide($purple-200, "#C299CF", "$purple-200");
+
+	.button--copy { color: $black !important;} }
+
+.color--purple-300   { @include color-guide($purple-300, "#A87FB5", "$purple-300");
+
+	.button--copy { color: $black !important;} }
+
 .color--purple-400   { @include color-guide($purple-400, "#8F669C", "$purple-400"); }
+
 .color--purple-500   { @include color-guide($purple-500, "#754C82", "$purple-500"); }
+
 .color--purple-600   { @include color-guide($purple-600, "#5C3369", "$purple-600"); }
+
 .color--purple-700   { @include color-guide($purple-700, "#42194F", "$purple-700"); }
+
 .color--purple-800   { @include color-guide($purple-800, "#290036", "$purple-800"); }
+
 .color--purple-900   { @include color-guide($purple-900, "#0F001C", "$purple-900"); }
 
 .card--header--color {
-  color: $color-white;
-  font-weight: $font-weight-semibold;
-  font-size: $font-size-medium;
-  padding: 0.5rem 0.7rem !important;
+	color: $color-white;
+	font-weight: $font-weight-semibold;
+	font-size: $font-size-medium;
+	padding: 0.5rem 0.7rem !important;
 }
 
 .grade-container {
-  label, h2 {
-    margin: 0;
-    text-align: center;
-  }
+	label, h2 {
+		margin: 0;
+		text-align: center;
+	}
 }
 
 .card--pass {
-  background-color: $ui-green;
-  border-color: $ui-green;
-  color: $color-white;
-  label, h2 { color: $color-white; }
+	background-color: $ui-green;
+	border-color: $ui-green;
+	color: $color-white;
+
+	label, h2 { color: $color-white; }
 }
 
 .color-input { position: relative; }
 
 .text-color--container, .background-color--container {
-  border-radius: 3px;
-  display: inline-block;
-  height: 1.65rem;
-  width: 2.5rem;
-  position: absolute;
-  right: 1.5rem;
-  bottom: 1.5rem;
+	border-radius: 3px;
+	display: inline-block;
+	height: 1.65rem;
+	width: 2.5rem;
+	position: absolute;
+	right: 1.5rem;
+	bottom: 1.5rem;
 }
 
 .button--copy {
-  position: absolute;
-  margin: 0;
-  left: 2rem;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: calc(100% - 2rem);
-  &:hover { opacity: 1 !important; }
-  &:active { opacity: .6 !important; }
-  &:before {
-    content: "";
-    display: block;
-    margin: auto;
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
-  }
+	position: absolute;
+	margin: 0;
+	left: 2rem;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: calc(100% - 2rem);
+
+	&:hover { opacity: 1 !important; }
+
+	&:active { opacity: 0.6 !important; }
+
+	&:before {
+		content: "";
+		display: block;
+		margin: auto;
+		margin-bottom: 0.5rem;
+		font-size: 2rem;
+	}
 }
 
 .card-color--small .button--copy {
-  left: 0;
-  width: 100%;
-  margin: auto;
-  top: -5px;
-  min-width: 6rem;
-  &:before {
-    content: "";
-    display: inline;
-  }
+	left: 0;
+	width: 100%;
+	margin: auto;
+	top: -5px;
+	min-width: 6rem;
+
+	&:before {
+		content: "";
+		display: inline;
+	}
 }
 
 .color--ui-white,
@@ -366,28 +553,36 @@ $green10: #78C696;
 .color--ui-orange,
 .color--ui-gray,
 .color--basic {
-  .button--copy {
-    color: $black !important;
-  }
+	.button--copy {
+		color: $black !important;
+	}
 }
 
 //Color Guide Cards
 .color-white { color: white; }
+
 .color-black { color: #24292C; }
+
 .aa:after {
-  content: "AA";
-  font-size: 18px;
+	content: "AA";
+	font-size: 18px;
 }
+
 .aaa:after {
-  content: "AAA";
-  font-size: 16px;
-  font-weight: $font-weight-semibold;
+	content: "AAA";
+	font-size: 16px;
+	font-weight: $font-weight-semibold;
 }
 
 .color-right, .card-color--small {
-  label, span { display: block; }
-  label { font-size: .8rem; font-weight: $font-weight-semibold; color: $color-black; margin-bottom: -0.5rem;}
-  span { font-size: .9rem; }
+	label, span { display: block; }
+
+	label { font-size: 0.8rem;
+		font-weight: $font-weight-semibold;
+		color: $color-black;
+		margin-bottom: -0.5rem;}
+
+	span { font-size: 0.9rem; }
 }
 
 
@@ -398,103 +593,128 @@ Code tab color sass
 */
 
 .example-flex {
-  overflow: auto;
+	overflow: auto;
 
-  .column-flex {
-    color: $color-white;
-    font-weight: $font-weight-semibold;
-    text-align: center;
-    padding: 3rem 0;
-    margin: 0;
-    line-height: 0;
+	.column-flex {
+		color: $color-white;
+		font-weight: $font-weight-semibold;
+		text-align: center;
+		padding: 3rem 0;
+		margin: 0;
+		line-height: 0;
 
-    &.half-height {
-      @media all and (min-width: 840px) {
-        padding: 1.5rem 0;
-      }
-    }
+		&.half-height {
+			@media all and (min-width: 840px) {
+				padding: 1.5rem 0;
+			}
+		}
 
-    input {
-      background-color: transparent;
-      border: none;
-      text-align: center;
-      text-transform: uppercase;
-      width: 100%;
-      margin: -1rem;
-      outline: none;
-    }
-  }
+		input {
+			background-color: transparent;
+			border: none;
+			text-align: center;
+			text-transform: uppercase;
+			width: 100%;
+			margin: -1rem;
+			outline: none;
+		}
+	}
 
-  .row-flex.row-column {
-    flex-direction: column;
-    width: 100%;
-    float: left;
+	.row-flex.row-column {
+		flex-direction: column;
+		width: 100%;
+		float: left;
 
-    @media all and (min-width: 840px) {
-      width: 12.5%;
-    }
-  }
+		@media all and (min-width: 840px) {
+			width: 12.5%;
+		}
+	}
 
-  .column-flex:hover {
-    box-shadow: inset 0px 0px 0px 4px #000;
-    text-transform: uppercase;
-  }
+	.column-flex:hover {
+		box-shadow: inset 0px 0px 0px 4px #000;
+		text-transform: uppercase;
+	}
 
-  .default {
-    margin: 0 0 2rem 0 !important;
-    @media all and (min-width: 840px) {
-      margin: 0 0 1rem 0 !important;
-    }
-  }
+	.default {
+		margin: 0 0 2rem 0 !important;
+		@media all and (min-width: 840px) {
+			margin: 0 0 1rem 0 !important;
+		}
+	}
 }
 
 .color-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
 .color-square,
 .color-rectangle {
-  height: 75px;
-  width: 125px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: $font-weight-semibold;
-  border-radius: 5px;
-  margin-right: $space-xs;
-  margin-bottom: $space-xs;
+	height: 75px;
+	width: 125px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: $font-weight-semibold;
+	border-radius: 5px;
+	margin-right: $space-xs;
+	margin-bottom: $space-xs;
 
-  &.color-gradient { width: calc((125px * 2) + #{$space-xs}); }
+	&.color-gradient { width: calc((125px * 2) + #{$space-xs}); }
 
-  input {
-    background-color: transparent;
-    border: none;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-    margin: -1rem;
-    outline: none;
-  }
+	input {
+		background-color: transparent;
+		border: none;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+		margin: -1rem;
+		outline: none;
+	}
 
-  &.color-purple { background-color: $color-purple; color: $color-white; }
-  &.color-blue { background-color: $color-blue; color: $color-white; }
-  &.color-green { background-color: $color-green; color: $color-white; }
-  &.color-orange { background-color: $color-orange; color: $color-white; }
-  &.color-red { background-color: $color-red; color: $color-white; }
+	&.color-purple { background-color: $color-purple;
+		color: $color-white; }
 
-  &.color-black { background-color: $color-black; color: $color-white; }
-  &.color-gray-4 { background-color: $color-gray-4; color: $color-white; }
-  &.color-gray-3 { background-color: $color-gray-3; color: $color-black; }
-  &.color-gray-2 { background-color: $color-gray-2; color: $color-black; }
-  &.color-gray-1 { background-color: $color-gray-1; color: $color-black; }
-  &.color-white { background-color: $color-white; color: $color-black; border: 2px solid $color-gray-2; }
+	&.color-blue { background-color: $color-blue;
+		color: $color-white; }
 
-  &.color-data-teal { background-color: $color-data-teal; color: $color-white; }
-  &.color-data-purple { background-color: $color-data-purple; color: $color-white; }
+	&.color-green { background-color: $color-green;
+		color: $color-white; }
 
-  &.color-gradient { background-image: $color-gradient; color: $color-white; }
+	&.color-orange { background-color: $color-orange;
+		color: $color-white; }
+
+	&.color-red { background-color: $color-red;
+		color: $color-white; }
+
+	&.color-black { background-color: $color-black;
+		color: $color-white; }
+
+	&.color-gray-4 { background-color: $color-gray-4;
+		color: $color-white; }
+
+	&.color-gray-3 { background-color: $color-gray-3;
+		color: $color-black; }
+
+	&.color-gray-2 { background-color: $color-gray-2;
+		color: $color-black; }
+
+	&.color-gray-1 { background-color: $color-gray-1;
+		color: $color-black; }
+
+	&.color-white { background-color: $color-white;
+		color: $color-black;
+		border: 2px solid $color-gray-2; }
+
+	&.color-data-teal { background-color: $color-data-teal;
+		color: $color-white; }
+
+	&.color-data-purple { background-color: $color-data-purple;
+		color: $color-white; }
+
+	&.color-gradient { background-image: $color-gradient;
+		color: $color-white; }
 }
 
 // .example-flex .column-flex {

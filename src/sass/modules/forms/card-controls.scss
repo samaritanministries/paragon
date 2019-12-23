@@ -5,89 +5,96 @@ $card-disabled-border: $color-gray-4 !default;
 $card-checkbox--padding: 1rem !default; //Padding of checkbox
 
 .checkbox-card { @extend .checkbox--custom; }
+
 .radio-card { @extend .radio--custom; }
 
 .checkbox-card,
 .radio-card {
-  display: inline-flex;
-  margin: 0 $space-xs $space-xs 0;
+	display: inline-flex;
+	margin: 0 $space-xs $space-xs 0;
 
-  .card {
-    float: none;
-    margin: 0;
-    padding: $card-checkbox--padding;
-    border: 2px solid transparent;
-    @extend %card-shadow;
+	.card {
+		float: none;
+		margin: 0;
+		padding: $card-checkbox--padding;
+		border: 2px solid transparent;
+		@extend %card-shadow;
 
-    &:hover { @extend %card-shadow--hover; }
-    &:before { display: inline-block; }
+		&:hover { @extend %card-shadow--hover; }
 
-    //centers checkbox and radio button to card
-    &.center-align,
-    &.align-center {
-      float: none;
-    }
-  }
+		&:before { display: inline-block; }
 
-  &.checkbox-card--block,
-  &.radio-card--block,
-  &.block { //block cards
-    display: block;
-    width: 100%;
-    .card {
-      margin-bottom: $space-s;
-      width: 100%;
-    }
-  }
+		//centers checkbox and radio button to card
+		&.center-align,
+		&.align-center {
+			float: none;
+		}
+	}
 
-  .flex-row &,
-  .flex-row & .card { //flex cards in a row
-    flex-grow: 1;
-  }
+	&.checkbox-card--block,
+	&.radio-card--block,
+	&.block { //block cards
+		display: block;
+		width: 100%;
 
-  input:focus ~ label:before { box-shadow: none; }
-  input:checked ~ label, input:active ~ label {
-    color: $card-checkbox--active;
-    border: 2px solid $card-checkbox--active;
-  }
-  input:focus ~ label,
-  input:hover:focus ~ label { box-shadow: 0 0 0 4px $card-checkbox--focus; }
+		.card {
+			margin-bottom: $space-s;
+			width: 100%;
+		}
+	}
 
-  //disabled radio button
-  input[disabled] ~ label,
-  input[disabled]:active ~ label,
-  input[disabled]:checked ~ label { //disabled cards
-    cursor: default;
-    background-color: $card-disabled-background;
-    border-color: $card-disabled-background;
-    pointer-events: none;
-    opacity: 0.4;
-    color: $color-text;
-    &:before {
-      border-color: $card-disabled-border !important;
-      background-color: $card-disabled-background !important;
-    }
-  }
+	.flex-row &,
+	.flex-row & .card { //flex cards in a row
+		flex-grow: 1;
+	}
 
-  &.checkbox-card--small,
-  &.radio-card--small { //small card size
-    .card { padding: calc(#{$card-checkbox--padding} / 2); }
-  }
+	input:focus ~ label:before { box-shadow: none; }
+
+	input:checked ~ label, input:active ~ label {
+		color: $card-checkbox--active;
+		border: 2px solid $card-checkbox--active;
+	}
+
+	input:focus ~ label,
+	input:hover:focus ~ label { box-shadow: 0 0 0 4px $card-checkbox--focus; }
+
+	//disabled radio button
+	input[disabled] ~ label,
+	input[disabled]:active ~ label,
+	input[disabled]:checked ~ label { //disabled cards
+		cursor: default;
+		background-color: $card-disabled-background;
+		border-color: $card-disabled-background;
+		pointer-events: none;
+		opacity: 0.4;
+		color: $color-text;
+
+		&:before {
+			border-color: $card-disabled-border !important;
+			background-color: $card-disabled-background !important;
+		}
+	}
+
+	&.checkbox-card--small,
+	&.radio-card--small { //small card size
+		.card { padding: calc(#{$card-checkbox--padding} / 2); }
+	}
 }
 
 .radio-card {
-  .card {
-    &:before {
-      top: calc(#{$card-checkbox--padding} + 2px);
-      left: $card-checkbox--padding;
-    }
-  }
-  &.radio-card--small {
-    .card {
-      &:before {
-        top: calc((#{$card-checkbox--padding} / 2) + 2px);
-        left: calc((#{$card-checkbox--padding} / 2) + 3px);
-      }
-    }
-  }
+	.card {
+		&:before {
+			top: calc(#{$card-checkbox--padding} + 2px);
+			left: $card-checkbox--padding;
+		}
+	}
+
+	&.radio-card--small {
+		.card {
+			&:before {
+				top: calc((#{$card-checkbox--padding} / 2) + 2px);
+				left: calc((#{$card-checkbox--padding} / 2) + 3px);
+			}
+		}
+	}
 }

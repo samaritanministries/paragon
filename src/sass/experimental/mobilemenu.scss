@@ -26,168 +26,172 @@ $sidebar-background: #354052;
 //SIDEBAR
 
 .sidebar {
-  float: left;/*fallback*/
-  min-height: calc(100vh - #{$header-height});
-  min-width: $sidebar-width;
-  position: fixed;
-  left: 0;//left or right
-  top: $header-height;
+	float: left;/*fallback*/
+	min-height: calc(100vh - #{$header-height});
+	min-width: $sidebar-width;
+	position: fixed;
+	left: 0;//left or right
+	top: $header-height;
 
-  display: none;
+	display: none;
 
-  @media #{$tablet} {
-    display: flex;
-  }
+	@media #{$tablet} {
+		display: flex;
+	}
 }
 
 .mobile-sidebar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 90%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 90%;
 }
 
 .sidebar, .mobile-sidebar { background-color: $sidebar-background; }
+
 .sidebar-nav, .mobile-sidebar-nav {
-  list-style-type: none;
-  padding: 0;
+	list-style-type: none;
+	padding: 0;
 
-  li {
-    padding-left: $grid-gutter;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
+	li {
+		padding-left: $grid-gutter;
+		height: 2.5rem;
+		display: flex;
+		align-items: center;
 
-    &:hover { background-color: $sidebar-highlight; }
+		&:hover { background-color: $sidebar-highlight; }
 
-    a {
-      color: $sidebar-text-color;
-      width: 100%;
-      height: 100%;
-      padding-left: $space-xs;
-      display: flex;
-      align-items: center;
-    }
+		a {
+			color: $sidebar-text-color;
+			width: 100%;
+			height: 100%;
+			padding-left: $space-xs;
+			display: flex;
+			align-items: center;
+		}
 
-    @extend %icon-white;
-  }
+		@extend %icon-white;
+	}
 }
 
 .sidebar-nav { width: $sidebar-width; }
+
 .mobile-sidebar-nav { width: 100%; }
 
 .mobile-overlay {
-  transition: width $animation-time;
+	transition: width $animation-time;
 
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: $zindex-mobilemenu;
-  width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: $zindex-mobilemenu;
+	width: 100%;
 
-  *{
-    transition: opacity $animation-time;
-    opacity: 1.0;
-  }
+	*{
+		transition: opacity $animation-time;
+		opacity: 1;
+	}
 
-  &.is-collapsed {
-    transition: width $animation-time;
-    width: 0px;
-    overflow: hidden;
+	&.is-collapsed {
+		transition: width $animation-time;
+		width: 0px;
+		overflow: hidden;
 
-    *{
-      transition: opacity $animation-time;
-      opacity: 0.0;
-    }
-  }
+		*{
+			transition: opacity $animation-time;
+			opacity: 0;
+		}
+	}
 
-  .mobile-profile {
-    width: 100%;
-    max-height: 15rem;
-    background-color: #333333;
-  }
+	.mobile-profile {
+		width: 100%;
+		max-height: 15rem;
+		background-color: #333333;
+	}
 }
 
 .button--mobile-sidebar {
-  @extend %icon-white;
-  @extend .button;
-  @extend .button--transparent;
-  @extend .button--icon;
-  @extend .button--white;
-  @media #{$tablet} { display: none !important; }
+	@extend %icon-white;
+	@extend .button;
+	@extend .button--transparent;
+	@extend .button--icon;
+	@extend .button--white;
+	@media #{$tablet} { display: none !important; }
 }
 
 .mobile-profile{
-  padding-top: $space-m;
-  .button--mobile-sidebar {
-    display: inline-block;
-    margin-left: $space-m !important;
-  }
+	padding-top: $space-m;
+
+	.button--mobile-sidebar {
+		display: inline-block;
+		margin-left: $space-m !important;
+	}
 }
 
 .mobile-profile--account {
 	margin-top: 1.5rem;
 	padding: $grid-gutter;
-  display: block;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto auto;
+	display: block;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr auto auto;
 
-  .profile-image {
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	.profile-image {
+		width: 3rem;
+		height: 3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    border-radius: 50px;
-    background-color: $color-gray-3;
-    margin-right: auto;
+		border-radius: 50px;
+		background-color: $color-gray-3;
+		margin-right: auto;
 
-    float: left;//fallback
-  }
+		float: left;//fallback
+	}
 
-  .profile-name {
-    color: $color-white;
-    font-size: 1.25rem;
-    font-weight: $font-weight-semibold;
-    grid-column: 1 / 3;
+	.profile-name {
+		color: $color-white;
+		font-size: 1.25rem;
+		font-weight: $font-weight-semibold;
+		grid-column: 1 / 3;
 
-    clear: both;//fallback
-    padding: $space-xs 0rem;
-  }
+		clear: both;//fallback
+		padding: $space-xs 0rem;
+	}
 
-  .profile-email {
-    color: $color-white;
-    grid-column: 1 / 3;
-  }
+	.profile-email {
+		color: $color-white;
+		grid-column: 1 / 3;
+	}
 
-  .profile-edit {
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	.profile-edit {
+		width: 3rem;
+		height: 3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    margin-left: auto;
+		margin-left: auto;
 
-    i:before { color: $color-white; }
+		i:before { color: $color-white; }
 
-    float: right;//fallback
-  }
+		float: right;//fallback
+	}
 }
 
 //fallback
 @supports (display: grid) {
-  .mobile-profile--account > * { width: auto; }
-  .mobile-profile--account { display: grid; }
+	.mobile-profile--account > * { width: auto; }
+
+	.mobile-profile--account { display: grid; }
 }
 
 .map { //TODO rename this
-  .sidebar {
-    left: auto;
-    right: 0;
-  }
+	.sidebar {
+		left: auto;
+		right: 0;
+	}
 }

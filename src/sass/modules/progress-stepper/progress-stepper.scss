@@ -2,24 +2,24 @@ $progress-color: $color-green !default; //Override this variable to change the c
 
 //Centers the progress stepper and gives it more padding
 .progress-container {
-  margin: auto;
-  max-width: 750px;
-  padding: 2rem 1rem;
+	margin: auto;
+	max-width: 750px;
+	padding: 2rem 1rem;
 }
 
 //Styles the progress stepper
 .progress {
-  background-color: $color-gray-3;
-  border-radius: 15px;
-  height: 15px;
-  width: 100%;
-  overflow: hidden;
+	background-color: $color-gray-3;
+	border-radius: 15px;
+	height: 15px;
+	width: 100%;
+	overflow: hidden;
 
-  .progress-bar {
-    border-radius: 15px;
-    height: 100%;
-    background-color: $progress-color;
-  }
+	.progress-bar {
+		border-radius: 15px;
+		height: 100%;
+		background-color: $progress-color;
+	}
 }
 
 //Styles the progress labels below the stepper
@@ -27,25 +27,25 @@ $progress-color: $color-green !default; //Override this variable to change the c
 
 .progress-label,
 .progress-label a {
-  color: $color-subtext;
-  display: flex;
-  padding: 0;
-  padding-top: 0.5rem;
-  flex-grow: 1;
-  font-size: 0.8rem;
-  font-weight: $font-weight-semibold;
-  justify-content: center;
-  text-align: center;
-  // display: none;
+	color: $color-subtext;
+	display: flex;
+	padding: 0;
+	padding-top: 0.5rem;
+	flex-grow: 1;
+	font-size: 0.8rem;
+	font-weight: $font-weight-semibold;
+	justify-content: center;
+	text-align: center;
+	// display: none;
 
-  @media #{$tablet} {
-    font-size: 0.9rem;
-  }
+	@media #{$tablet} {
+		font-size: 0.9rem;
+	}
 
-  &.progress-label--completed,
-  &.progress-label--completed a {
-    color: $progress-color;
-  }
+	&.progress-label--completed,
+	&.progress-label--completed a {
+		color: $progress-color;
+	}
 }
 
 .progress-bar--1of2       { width: calc(1/4 * 100%); } //25%

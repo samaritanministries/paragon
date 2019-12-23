@@ -5,7 +5,7 @@ Actual CSS Grid Classes
 .grid-wrapper {
 	max-width: $global-content-width;
 	margin: auto;
-  width: 100%;
+	width: 100%;
 }
 
 //use grid to make a new 12 column grid
@@ -18,7 +18,9 @@ Actual CSS Grid Classes
 
 	display: block;//For IE and Safari mobile
 	overflow: auto;//For IE and Safari display
-	@supports(display: grid) { display: grid; grid-gap: 0; @media #{$tablet} { grid-gap: $grid-gutter; } }//For non-fallbacks use grid
+	@supports(display: grid) { display: grid;
+		grid-gap: 0;
+		@media #{$tablet} { grid-gap: $grid-gutter; } }//For non-fallbacks use grid
 
 	* {
 		@supports(display: grid) { @include grid-column(12); width: auto; }//By default, content will span all 12 columns
@@ -28,30 +30,44 @@ Actual CSS Grid Classes
 
 	//12 10 9 8 6 4 3 2
 	.grid--full,          .grid-12  { @include grid-column(12); }
+
 	.grid--five-sixths,   .grid-10  { @include grid-column(10); }
+
 	.grid--three-fourths, .grid-9   { @include grid-column(9); }
+
 	.grid--two-thirds,    .grid-8   { @include grid-column(8); }
+
 	.grid--half,          .grid-6   { @include grid-column(6); }
+
 	.grid--third,         .grid-4   { @include grid-column(4); }
+
 	.grid--fourth,        .grid-3   { @include grid-column(3); }
+
 	.grid--sixth,         .grid-2   { @include grid-column(2); }
 
 	//Desktop mixin for 12 10 9 8 6 4 3 2
 	.grid--full_desktop,  				.grid-12_desktop  { @include grid-column_desktop(12); }
+
 	.grid--five-sixths_desktop,   .grid-10_desktop  { @include grid-column_desktop(10); }
+
 	.grid--three-fourths_desktop, .grid-9_desktop   { @include grid-column_desktop(9); }
+
 	.grid--two-thirds_desktop,    .grid-8_desktop   { @include grid-column_desktop(8); }
+
 	.grid--half_desktop,          .grid-6_desktop   { @include grid-column_desktop(6); }
+
 	.grid--third_desktop,         .grid-4_desktop   { @include grid-column_desktop(4); }
+
 	.grid--fourth_desktop,        .grid-3_desktop   { @include grid-column_desktop(3); }
+
 	.grid--sixth_desktop,         .grid-2_desktop   { @include grid-column_desktop(2); }
 
 	//Make grid full width and centered on tablet
 	&.grid--tablet_full {
-	  @media #{$tablet-and-below} {
-	    max-width: 45rem;
-	    margin: 0 auto;
-	  }
+		@media #{$tablet-and-below} {
+			max-width: 45rem;
+			margin: 0 auto;
+		}
 	}
 }
 

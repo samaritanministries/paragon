@@ -10,264 +10,275 @@ $color-input-text-warning:    $color-orange;
 $inputs: 'select, textarea,input[type="date"],input[type="time"],input[type="email"],input[type="month"],input[type="number"],input[type="password"],input[type="tel"],input[type="text"]';
 
 fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
+	border: none;
+	padding: 0;
+	margin: 0;
 
-  label {
-    display: block;
-    font-size: $font-size-xsmall;
-    font-weight: $font-weight-semibold;
-    margin-bottom: 0.3rem;
-    text-align: left;
+	label {
+		display: block;
+		font-size: $font-size-xsmall;
+		font-weight: $font-weight-semibold;
+		margin-bottom: 0.3rem;
+		text-align: left;
 
-    &.inline {
-      @include user-select(none);
-      font-size: $font-size-normal;
-      display: inline-block;
-      font-weight: $font-weight-normal;
-      cursor: pointer;
-    }
-  }
+		&.inline {
+			@include user-select(none);
+			font-size: $font-size-normal;
+			display: inline-block;
+			font-weight: $font-weight-normal;
+			cursor: pointer;
+		}
+	}
 
-  //Supports all standard input types
-  #{$inputs} {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: $color-white;
-    border: 2px solid $color-input-border;
-    border-radius: 5px;
-    font-size: $font-size-normal;
-    max-width: 100%;
-    padding: 0.6rem;
-    width: 100%;
-    margin-bottom: $space-m;
+	//Supports all standard input types
+	#{$inputs} {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		background-color: $color-white;
+		border: 2px solid $color-input-border;
+		border-radius: 5px;
+		font-size: $font-size-normal;
+		max-width: 100%;
+		padding: 0.6rem;
+		width: 100%;
+		margin-bottom: $space-m;
 
-    &:focus {
-      border-color: $color-input-border-focus;
-      outline-color: transparent;
-      outline-style: none;
-    }
+		&:focus {
+			border-color: $color-input-border-focus;
+			outline-color: transparent;
+			outline-style: none;
+		}
 
-    //Adds light gray background color to disabled inputs
-    &[disabled] {
-      background-color: $color-input-disabled !important;
-      border-color: $color-input-disabled !important;
-      cursor: default !important;
-    }
-  }
+		//Adds light gray background color to disabled inputs
+		&[disabled] {
+			background-color: $color-input-disabled !important;
+			border-color: $color-input-disabled !important;
+			cursor: default !important;
+		}
+	}
 
-  input[type="date"],
-  input[type="time"],
-  input[type="month"] {
-    min-height: 2.75rem;
-    max-height: 2.75rem;
-    &::-webkit-inner-spin-button,
-    &::-webkit-calendar-picker-indicator {
-      display: none;
-      -webkit-appearance: none;
-    }
-  }
+	input[type="date"],
+	input[type="time"],
+	input[type="month"] {
+		min-height: 2.75rem;
+		max-height: 2.75rem;
 
-  input[type=checkbox],
-  input[type=radio] {
-    float: left;
-    margin-top: 0.3rem;
-    margin-right: 0.5rem;
-  }
+		&::-webkit-inner-spin-button,
+		&::-webkit-calendar-picker-indicator {
+			display: none;
+			-webkit-appearance: none;
+		}
+	}
 
-  textarea {
-    resize: vertical;
-    .grid & {
-      width: 100%; //needed to support css-grid
-    }
-  }
+	input[type=checkbox],
+	input[type=radio] {
+		float: left;
+		margin-top: 0.3rem;
+		margin-right: 0.5rem;
+	}
 
-  select {
-    cursor: pointer;
-    .grid & {
-      width: 100%; //needed to support css-grid
-    }
-  }
+	textarea {
+		resize: vertical;
 
-  //Add class to containing fieldset or div to display a button
-  .input--add-on {
-    display: flex;
-    margin-bottom: $space-m;
+		.grid & {
+			width: 100%; //needed to support css-grid
+		}
+	}
 
-    #{$inputs} { margin-bottom: 0; }
-    select {
-      padding-right: $space-xl;
-      width: auto !important;
-    }
+	select {
+		cursor: pointer;
 
-    .add-on--before {
-      border-radius: 5px 0 0 5px;
-      border-right: none;
-      flex: 1;
-    }
+		.grid & {
+			width: 100%; //needed to support css-grid
+		}
+	}
 
-    .add-on--after {
-      border-radius: 0 5px 5px 0 !important;
-      margin: 0;
+	//Add class to containing fieldset or div to display a button
+	.input--add-on {
+		display: flex;
+		margin-bottom: $space-m;
 
-      &.button--border {
-        @include border--button($color-border, $color-gray-3-dark); //makes button border the same color as the input
-        color: $color-icon-primary;
-        .dashing-icon:before {
-          color: $color-icon-primary;
-        }
-      }
-    }
-  }
+		#{$inputs} { margin-bottom: 0; }
 
-  //Add class to containing fieldset or div to display a down arrow icon in the menu
-  &.select--has-icon,
-  .select--has-icon {
-    position: relative;
+		select {
+			padding-right: $space-xl;
+			width: auto !important;
+		}
 
-    select {
-      padding-right: $space-xl;
-    }
+		.add-on--before {
+			border-radius: 5px 0 0 5px;
+			border-right: none;
+			flex: 1;
+		}
 
-    &:after {
-      content: '\e800';
-      color: $color-icon-primary;
-      font-family: 'dashing-icons';
-      font-size: 12px;
-      font-weight: $font-weight-semibold;
-      pointer-events: none;
-      position: absolute;
-      right: 2rem;
-      top: 2.4rem;
-    }
+		.add-on--after {
+			border-radius: 0 5px 5px 0 !important;
+			margin: 0;
 
-    .grid & { //supports select positioning in grid
-      &:after {
-        right: 1rem;
-      }
-    }
+			&.button--border {
+				@include border--button($color-border, $color-gray-3-dark); //makes button border the same color as the input
+				color: $color-icon-primary;
 
-    &.has-error:after { color: $color-input-text-error; }
-    &.has-warning:after { color: $color-input-text-warning; }
+				.dashing-icon:before {
+					color: $color-icon-primary;
+				}
+			}
+		}
+	}
 
-    &.column--nested {
-      &:after { right: 1.5rem; bottom: 1.5rem; }
-      @media #{$tablet} {
-        &:last-of-type:after { right: 0.5rem; }
-        }
-    }
+	//Add class to containing fieldset or div to display a down arrow icon in the menu
+	&.select--has-icon,
+	.select--has-icon {
+		position: relative;
 
-    //Removes default select icon in IE
-    select::-ms-expand { display: none; }
-  }
+		select {
+			padding-right: $space-xl;
+		}
 
-  //Add class to containing fieldset to display optional text
-  &.is-optional {
-    label::after {
-      content: "(Optional)";
-      color: $color-subtext;
-      font-weight: $font-weight-normal;
-      margin-left: $space-xxs;
-    }
-  }
+		&:after {
+			content: '\e800';
+			color: $color-icon-primary;
+			font-family: 'dashing-icons';
+			font-size: 12px;
+			font-weight: $font-weight-semibold;
+			pointer-events: none;
+			position: absolute;
+			right: 2rem;
+			top: 2.4rem;
+		}
+
+		.grid & { //supports select positioning in grid
+			&:after {
+				right: 1rem;
+			}
+		}
+
+		&.has-error:after { color: $color-input-text-error; }
+
+		&.has-warning:after { color: $color-input-text-warning; }
+
+		&.column--nested {
+			&:after { right: 1.5rem;
+				bottom: 1.5rem; }
+			@media #{$tablet} {
+				&:last-of-type:after { right: 0.5rem; }
+			}
+		}
+
+		//Removes default select icon in IE
+		select::-ms-expand { display: none; }
+	}
+
+	//Add class to containing fieldset to display optional text
+	&.is-optional {
+		label::after {
+			content: "(Optional)";
+			color: $color-subtext;
+			font-weight: $font-weight-normal;
+			margin-left: $space-xxs;
+		}
+	}
 }
 
 /* Form States
 */
 
 fieldset {
-  .message {
-    color: $color-subtext;
-    font-size: $font-size-small;
-    list-style: none;
-    margin: 0;
-    margin-top: -#{$space-s};
-    margin-bottom: $space-m;
-    overflow: auto;
-    padding: 0;
-    .dashing-icon { margin: 0 $space-xxs; }
-  }
+	.message {
+		color: $color-subtext;
+		font-size: $font-size-small;
+		list-style: none;
+		margin: 0;
+		margin-top: -#{$space-s};
+		margin-bottom: $space-m;
+		overflow: auto;
+		padding: 0;
 
-  //Adds red text to lables and inputs for error states
-  &.has-error,
-  .has-error {
-    label, #{$inputs} {
-      color: $color-input-text-error;
-      border-color: $color-input-border-error;
-    }
+		.dashing-icon { margin: 0 $space-xxs; }
+	}
 
-    #{$inputs} {
-      &:focus { border-color: $color-input-text-error; }
-    }
+	//Adds red text to lables and inputs for error states
+	&.has-error,
+	.has-error {
+		label, #{$inputs} {
+			color: $color-input-text-error;
+			border-color: $color-input-border-error;
+		}
 
-    .message {
-      color: $color-input-text-error;
-      .dashing-icon { @extend .dashing-icon--red; }
-    }
-  }
+		#{$inputs} {
+			&:focus { border-color: $color-input-text-error; }
+		}
 
-  //Adds orange text to lables and inputs for warning states
-  &.has-warning,
-  .has-warning {
-    label, #{$inputs} {
-      color: $color-input-text-warning;
-      border-color: $color-input-border-warning;
-    }
+		.message {
+			color: $color-input-text-error;
 
-    #{$inputs} {
-      &:focus { border-color: $color-input-text-warning; }
-    }
+			.dashing-icon { @extend .dashing-icon--red; }
+		}
+	}
 
-    .message {
-      color: $color-input-text-warning;
-      .dashing-icon { @extend .dashing-icon--orange; }
-    }
-  }
-  //Remove top margin on radio button and checkbox errors
-  .radio--custom,
-  .checkbox--custom,
-  .flex-row {
-    &~ .message {
-      margin-top: 0;
-    }
-  }
+	//Adds orange text to lables and inputs for warning states
+	&.has-warning,
+	.has-warning {
+		label, #{$inputs} {
+			color: $color-input-text-warning;
+			border-color: $color-input-border-warning;
+		}
+
+		#{$inputs} {
+			&:focus { border-color: $color-input-text-warning; }
+		}
+
+		.message {
+			color: $color-input-text-warning;
+
+			.dashing-icon { @extend .dashing-icon--orange; }
+		}
+	}
+	//Remove top margin on radio button and checkbox errors
+	.radio--custom,
+	.checkbox--custom,
+	.flex-row {
+		&~ .message {
+			margin-top: 0;
+		}
+	}
 }
 
 //flex form
 .flex-content {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  .flex-row {
-    display: flex;
-    flex-direction: column;
-    @media #{$tablet} {
-      flex-wrap: wrap;
-      flex-direction: row;
-      margin-left: -#{$grid-gutter};
-    }
+	.flex-row {
+		display: flex;
+		flex-direction: column;
+		@media #{$tablet} {
+			flex-wrap: wrap;
+			flex-direction: row;
+			margin-left: -#{$grid-gutter};
+		}
 
-    //fieldset:not(.spacer) { margin-bottom: 1rem;}
-  }
+		//fieldset:not(.spacer) { margin-bottom: 1rem;}
+	}
 
-  .flex-row fieldset,
-  .radio-card,
-  .checkbox-card {
-    flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    margin-bottom: $space-xs;
+	.flex-row fieldset,
+	.radio-card,
+	.checkbox-card {
+		flex: 1 1 auto;
+		-ms-flex: 1 1 auto;
+		margin-bottom: $space-xs;
 
-    @media #{$tablet} {
-      margin-left: 1rem;
-      margin-right: 0;
-      flex: 1 1 0px;
-      -ms-flex: 1 1 auto;
-      min-width: 180px;
-      &:last-of-type { margin-right: 0; }
-    }
-    @media #{$desktop} {
-      min-width: auto;
-    }
-  }
+		@media #{$tablet} {
+			margin-left: 1rem;
+			margin-right: 0;
+			flex: 1 1 0px;
+			-ms-flex: 1 1 auto;
+			min-width: 180px;
+
+			&:last-of-type { margin-right: 0; }
+		}
+		@media #{$desktop} {
+			min-width: auto;
+		}
+	}
 }

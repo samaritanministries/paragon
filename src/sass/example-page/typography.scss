@@ -2,69 +2,90 @@
   ================================================== */
 
 .image-container + p {
-  margin-top: 2rem;
+	margin-top: 2rem;
 }
 
 .intro {
-  font-size: 1.25rem;
-  line-height: 2rem;
-  margin-top: 0;
-  margin-bottom: 2rem;
+	font-size: 1.25rem;
+	line-height: 2rem;
+	margin-top: 0;
+	margin-bottom: 2rem;
 }
 
 .definition {
-  font-style: italic;
-  margin-left: 1rem;
+	font-style: italic;
+	margin-left: 1rem;
 }
 
 .version {
-  border-radius: 3px;
-  border: 1px solid;
-  display: inline-block;
-  font-size: 0.7rem;
-  line-height: 1rem;
-  padding: 0.3rem;
-  position: relative;
-  top: -0.75rem;
+	border-radius: 3px;
+	border: 1px solid;
+	display: inline-block;
+	font-size: 0.7rem;
+	line-height: 1rem;
+	padding: 0.3rem;
+	position: relative;
+	top: -0.75rem;
 }
 
 /* Blockquote
   ================================================== */
 
 blockquote {
-  border-left: 4px solid $color-border;
-  margin-left: $space-m;
-  padding-left: $space-m;
+	border-left: 4px solid $color-border;
+	margin-left: $space-m;
+	padding-left: $space-m;
 
-  &.tips { border-left: 4px solid $color-green; }
-  &.warning { border-left: 4px solid $color-orange; }
-  &.caution { border-left: 4px solid $color-red; }
-  &.related { border-left: 4px solid $color-blue; }
-  p { margin-top: 0.5rem; }
-  .tips-list { line-height: 1.5rem; }
+	&.tips { border-left: 4px solid $color-green; }
+
+	&.warning { border-left: 4px solid $color-orange; }
+
+	&.caution { border-left: 4px solid $color-red; }
+
+	&.related { border-left: 4px solid $color-blue; }
+
+	p { margin-top: 0.5rem; }
+
+	.tips-list { line-height: 1.5rem; }
 }
 
 .has-number {
-  margin-top: 3rem;
-  &:before {
-    content: "";
-    border-radius: 30px;
-    color: $color-white;
-    font-size: 18px;
-    font-weight: $font-weight-semibold;
-    line-height: 0;
-    margin: 0 0.6rem 0 0rem;
-    padding: 3px 10px;
-    position: relative;
-    top: -3px;
-  }
+	margin-top: 3rem;
 
-  &.has-number--one:before    { background-color: #F88C00; content: "1"; }
-  &.has-number--two:before    { background-color: #AF92C6; content: "2"; }
-  &.has-number--three:before  { background-color: #22BAAC; content: "3"; }
-  &.has-number--four:before   { background-color: #F2547B; content: "4"; }
-  &.has-number--five:before   { background-color: #78B1E2; content: "5"; }
-  &.has-number--six:before    { background-color: #F88C00; content: "6"; }
-  &.has-number--seven:before  { background-color: #AF92C6; content: "7"; }
-  &.has-number--eight:before  { background-color: #22BAAC; content: "8"; }
+	&:before {
+		content: "";
+		border-radius: 30px;
+		color: $color-white;
+		font-size: 18px;
+		font-weight: $font-weight-semibold;
+		line-height: 0;
+		margin: 0 0.6rem 0 0rem;
+		padding: 3px 10px;
+		position: relative;
+		top: -3px;
+	}
+
+	&.has-number--one:before    { background-color: #F88C00;
+		content: "1"; }
+
+	&.has-number--two:before    { background-color: #AF92C6;
+		content: "2"; }
+
+	&.has-number--three:before  { background-color: #22BAAC;
+		content: "3"; }
+
+	&.has-number--four:before   { background-color: #F2547B;
+		content: "4"; }
+
+	&.has-number--five:before   { background-color: #78B1E2;
+		content: "5"; }
+
+	&.has-number--six:before    { background-color: #F88C00;
+		content: "6"; }
+
+	&.has-number--seven:before  { background-color: #AF92C6;
+		content: "7"; }
+
+	&.has-number--eight:before  { background-color: #22BAAC;
+		content: "8"; }
 }

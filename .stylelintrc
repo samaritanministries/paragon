@@ -1,0 +1,24 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "rules": {
+    "indentation": "tab",
+    "number-leading-zero": "always",
+    "number-no-trailing-zeros": true,
+    "unit-case": "lower",
+    "declaration-colon-space-after": "always",
+    "declaration-colon-space-before": "never",
+    "declaration-block-semicolon-newline-after": "always",
+    "declaration-block-semicolon-space-after": "always-single-line",
+    "rule-empty-line-before": [ "always", {
+      except: [
+        "after-single-line-comment",
+        "first-nested"
+      ],
+      ignore: [
+        "after-comment"
+      ],
+    } ],
+    "no-empty-first-line": true,
+    "no-eol-whitespace": true
+  }
+}
