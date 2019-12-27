@@ -12,7 +12,8 @@
 		-moz-osx-font-smoothing: grayscale;
 		color: $color-icon-primary;
 		display: inline-block;
-		font-family: "dashing-icons";
+		/* stylelint-disable-next-line */
+		font-family: 'dashing-icons';
 		font-size: 16px;
 		font-style: normal;
 		font-weight: $font-weight-normal;

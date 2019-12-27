@@ -81,6 +81,7 @@ $switch--off: $color-gray-3 !default; //Color of switch when off
 		&:before {
 			content: '\e835';
 			border-radius: 5px;
+			/* stylelint-disable-next-line */
 			font-family: 'dashing-icons';
 			font-size: 12px;
 			padding: 2px;
@@ -237,14 +238,8 @@ $switch--off: $color-gray-3 !default; //Color of switch when off
 	input:checked ~ label {
 		&:before {
 			color: $color-white;
-		}
-	}
-
-	input:checked ~ label {
-		&:before {
 			background-color: $radio--active;
 			border-color: $radio--active;
-			color: $color-white;
 		}
 	}
 

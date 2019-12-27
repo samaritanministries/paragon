@@ -6,8 +6,6 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
 
 .checkbox-card { @extend .checkbox--custom; }
 
-.radio-card { @extend .radio--custom; }
-
 .checkbox-card,
 .radio-card {
 	display: inline-flex;
@@ -82,6 +80,8 @@ $card-checkbox--padding: 1rem !default; //Padding of checkbox
 }
 
 .radio-card {
+	@extend .radio--custom;
+
 	.card {
 		&:before {
 			top: calc(#{$card-checkbox--padding} + 2px);

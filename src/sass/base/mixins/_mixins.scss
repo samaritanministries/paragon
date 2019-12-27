@@ -109,6 +109,25 @@
 	.dashing-icon:before { color: $color; }
 }
 
+// Border Radius Options
+@mixin button-group--vertical-border {
+	//border radius for default vertical buttons
+	.button--radio:first-of-type label { border-radius: 10px 10px 0 0; }
+
+	.button--radio:last-of-type label { border-radius: 0 0 10px 10px; }
+
+	//border radius for smooth vertical buttons
+	&.button--smooth .button--radio {
+		&:first-of-type label { border-radius: 5px 5px 0 0; }
+
+		&:last-of-type label { border-radius: 0 0 5px 5px; }
+	}
+
+	//border radius for square vertical buttons
+	&.button--square .button--radio:first-of-type label,
+	&.button--square .button--radio:last-of-type label { border-radius: 0; }
+}
+
 /* Tag Mixins
   =========================================================================== */
 //Tag

@@ -69,6 +69,6 @@ Actual CSS Grid Classes
 			margin: 0 auto;
 		}
 	}
+	//required to span cards 100%
+	.card { margin: 0; }
 }
-
-.grid { .card { margin: 0; } } //required to span cards 100%

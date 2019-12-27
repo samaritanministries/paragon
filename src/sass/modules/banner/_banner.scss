@@ -13,14 +13,14 @@ $global-banner-height_phone: 4rem;
 	}
 
 	&.has-warning {
+		background-color: $color-orange;
+
 		p { color: $color-black; }
 
 		.dashing-icon:before { color: $color-black;}
 	}
 
 	&.has-success { background-color: $color-green; }
-
-	&.has-warning { background-color: $color-orange; }
 
 	&.has-error   { background-color: $color-red; }
 

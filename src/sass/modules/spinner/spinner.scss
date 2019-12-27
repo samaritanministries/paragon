@@ -13,15 +13,15 @@ $spinner-button: 24px; //1.2rem;
 	float: left;
 	height: $spinner-default;
 	width: $spinner-default;
-	top: calc(50% - (#{$spinner-default}/2));
-	left: calc(50% - (#{$spinner-default}/2));
+	top: calc(50% - (#{$spinner-default} / 2));
+	left: calc(50% - (#{$spinner-default} / 2));
 
 	&.small {
 		border-width: 3px;
 		height: $spinner-small;
 		width: $spinner-small;
-		top: calc(50% - (#{$spinner-small}/2));
-		left: calc(50% - (#{$spinner-small}/2));
+		top: calc(50% - (#{$spinner-small} / 2));
+		left: calc(50% - (#{$spinner-small} / 2));
 	}
 }
 
@@ -58,8 +58,8 @@ $spinner-button: 24px; //1.2rem;
 		position: absolute;
 		height: $spinner-button;
 		width: $spinner-button;
-		top: calc(50% - (#{$spinner-button}/2));
-		left: calc(50% - (#{$spinner-button}/2));
+		top: calc(50% - (#{$spinner-button} / 2));
+		left: calc(50% - (#{$spinner-button} / 2));
 	}
 }
 

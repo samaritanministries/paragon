@@ -28,8 +28,42 @@
 	padding: 0;
 	overflow: auto;
 
-	.button--radio    { @include button-group($color-blue, $color-white);} //default button-group style
-	&.button--blue    { .button--radio { @include button-group($color-blue, $color-white); } }
+	.button--radio {
+		@include button-group($color-blue, $color-white);
+		display: inline-block;
+		float: left;
+
+		&:first-of-type label {
+			margin-left: 0;
+			border-radius: 50px 0 0 50px;
+		}
+
+		&:last-of-type label {
+			border-radius: 0 50px 50px 0;
+		}
+
+		input { display: none; }
+
+		label {
+			border-radius: 0;
+			display: inline-block;
+			margin: 0 0 0 -1px;
+		}
+	}
+	//border radius for smooth buttons
+	&.button--smooth {
+		.button--radio:first-of-type label { border-radius: 5px 0 0 5px; }
+
+		.button--radio:last-of-type label { border-radius: 0 5px 5px 0; }
+	}
+
+	//border radius for square buttons
+	&.button--square {
+		.button--radio:first-of-type label,
+		.button--radio:last-of-type label { border-radius: 0; }
+	}
+
+	&.button--blue 		{ .button--radio { @include button-group($color-blue, $color-white); } }
 
 	&.button--green   { .button--radio { @include button-group($color-green, $color-white); } }
 
@@ -74,21 +108,6 @@
 		}
 	}
 
-	.button--radio {
-		display: inline-block;
-		float: left;
-
-		&:first-of-type label { margin-left: 0; }
-
-		input { display: none; }
-
-		label {
-			border-radius: 0;
-			display: inline-block;
-			margin: 0 0 0 -1px;
-		}
-	}
-
 	.dashing-icon { margin: 0 !important; }
 
 	.dashing-icon--arrow-left { width: 16px; } //fixes weird sizing difference between arrow-right and arrow-left
@@ -126,62 +145,19 @@
 
 .button-group.button-group--vertical {
 	@include button-group--vertical;
+	@include button-group--vertical-border;
 }
 
 .button-group.button-group--vertical_phone {
 	@media #{$phone} {
 		@include button-group--vertical;
+		@include button-group--vertical-border;
 	}
 }
 
 .button-group.button-group--vertical_tablet {
 	@media #{$tablet} {
 		@include button-group--vertical;
+		@include button-group--vertical-border;
 	}
-}
-
-/* Border Radius Options
-  =========================================================================== */
-@mixin button-group--vertical-border {
-	//border radius for default vertical buttons
-	.button--radio:first-of-type label { border-radius: 10px 10px 0 0; }
-
-	.button--radio:last-of-type label { border-radius: 0 0 10px 10px; }
-
-	//border radius for smooth vertical buttons
-	&.button--smooth .button--radio {
-		&:first-of-type label { border-radius: 5px 5px 0 0; }
-
-		&:last-of-type label { border-radius: 0 0 5px 5px; }
-	}
-
-	//border radius for square vertical buttons
-	&.button--square .button--radio:first-of-type label,
-	&.button--square .button--radio:last-of-type label { border-radius: 0; }
-}
-
-.button-group {
-	//border radius for default buttons
-	.button--radio:first-of-type label { border-radius: 50px 0 0 50px; }
-
-	.button--radio:last-of-type label { border-radius: 0 50px 50px 0; }
-
-	//border radius for smooth buttons
-	&.button--smooth {
-		.button--radio:first-of-type label { border-radius: 5px 0 0 5px; }
-
-		.button--radio:last-of-type label { border-radius: 0 5px 5px 0; }
-	}
-
-	//border radius for square buttons
-	&.button--square {
-		.button--radio:first-of-type label,
-		.button--radio:last-of-type label { border-radius: 0; }
-	}
-
-	&.button-group--vertical { @include button-group--vertical-border; }
-
-	&.button-group--vertical_phone { @media #{$phone} { @include button-group--vertical-border; } }
-
-	&.button-group--vertical_tablet { @media #{$tablet} { @include button-group--vertical-border; } }
 }

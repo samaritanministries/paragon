@@ -138,6 +138,7 @@ fieldset {
 		&:after {
 			content: '\e800';
 			color: $color-icon-primary;
+			/* stylelint-disable-next-line */
 			font-family: 'dashing-icons';
 			font-size: 12px;
 			font-weight: $font-weight-semibold;
@@ -178,12 +179,7 @@ fieldset {
 			margin-left: $space-xxs;
 		}
 	}
-}
-
-/* Form States
-*/
-
-fieldset {
+	// Form States
 	.message {
 		color: $color-subtext;
 		font-size: $font-size-small;

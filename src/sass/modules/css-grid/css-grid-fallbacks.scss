@@ -41,12 +41,9 @@ Fallback Classes (Must be First)
 		float: left;
 		width: 100%;//By default, content will span all 12 columns
 	}
-}
-
-/* -----------------------------
-Fake "grid-gap" for Old Browsers
--------------------------------- */
-.grid {
+	/* -----------------------------
+	Fake "grid-gap" for Old Browsers
+	-------------------------------- */
 	.grid--full,
 	.grid--half,
 	.grid--three-fourths,

@@ -73,7 +73,7 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 					&::after {
 						content: '';
 						position: absolute;
-						bottom: calc(-#{$header-underline-width} - 2px);
+						bottom: calc((#{$header-underline-width} * -1) - 2px);
 						right: 0;
 						left: 0;
 						height: $header-underline-width;
@@ -89,7 +89,7 @@ $header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
 						opacity: 1;
 
 						&::after {
-							bottom: calc(-#{$header-underline-width} - 2px);
+							bottom: calc((#{$header-underline-width} * -1) - 2px);
 							right: 0;
 							left: 0;
 							height: $header-underline-width;
