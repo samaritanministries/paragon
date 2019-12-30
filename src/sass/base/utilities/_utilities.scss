@@ -19,6 +19,7 @@ $widths: (
   $max-width: if($width == '', '', #{$width-var});
   .content#{$width} { //.content-s
     max-width: #{$max-width} !important; //max-width: 600px;
+		@media #{$phone} { max-width: 100% !important; }
   }
 }
 
