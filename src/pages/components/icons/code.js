@@ -136,7 +136,7 @@ class Icons extends React.Component {
             </h2>
             <div className="example-container">
               <div className="card">
-                <div className="card-header flex flex-center has-icon">
+                <div className="card-header has-icon">
                   <i className="dashing-icon dashing-icon--info-filled" />
                   <h3>Card Header with Icon</h3>
                 </div>
@@ -159,7 +159,7 @@ class Icons extends React.Component {
               <CodeToggle>
 {`<!-- Use flex to align the icon. Us has-icon to give the icon proper spacing -->
 <div class="card">
-  <div class="card-header flex flex-center has-icon">
+  <div class="card-header has-icon">
     <i class="dashing-icon dashing-icon--info-filled" />
     <h3>Card Header with Icons</h3>
   </div>

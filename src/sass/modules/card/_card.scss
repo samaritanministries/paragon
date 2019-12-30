@@ -31,8 +31,12 @@
     }
     &.has-icon {
       display: flex;
-      align-items: center;
-      i { margin-right: $space-xxs; }
+      align-items: baseline;
+      i {
+        margin-right: $space-xs;
+        position: relative;
+        top: -1px;
+      }
     }
     h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in card-headers
   }
