@@ -97,8 +97,8 @@ class Icons extends React.Component {
             <div className={`icon-code--container ${this.state.activeId === null ? "" : "slideIn" }`}>
               <div className="icon-code">
                 <h3 className="text-color--white no-margin">{this.state.iconText}</h3>
-                <div className="hover-code" onClick={() => this.copyToClipboard('code')}>
-                  <code className="language-html show" style={{ display: "inline-block" }}>
+                <div className="hover-code" onClick={() => this.copyToClipboard('code.text-to-copy')}>
+                  <code className="text-to-copy language-html show" style={{ display: "inline-block" }}>
                     {`<i class="dashing-icon dashing-icon--${this.state.iconText}"></i>`}
                   </code>
                   <button type="button" className={`button--secondary button--copy-code ${this.state.copyCodeClass}`}>{this.state.copyCodeText}</button>
