@@ -97,6 +97,7 @@ $space-xxl: 3rem;`}
 
 
           <h2 className="mt-space-xl">Individual Spacing</h2>
+          <p>Add <code className="example-text">_mobile</code> to the end of an individual spacing class to apply only on mobile.</p>
 
           <div className="example-container">
 
@@ -162,6 +163,9 @@ $space-xxl: 3rem;`}
 {`<div class="mt-space-xl"></div> <!-- margin-top: 2rem; -->
 <div class="ml-space-xs"></div> <!-- margin-left: 0.5rem; -->
 <div class="p-space-m"></div> <!-- padding: 1rem; -->
+
+<!-- Mobile only spacing -->
+<div class="p-space-m_mobile"></div> <!-- padding: 1rem; -->
 `}
             </CodeToggle>
             </div>
