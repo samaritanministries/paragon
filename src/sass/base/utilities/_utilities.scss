@@ -140,6 +140,9 @@ $sides: (
 
 .flex-column  { flex-direction: column; }
 .flex-wrap    { flex-wrap: wrap; }
+.flex-wrap_mobile {
+  @media #{$phone} { flex-wrap: wrap; }
+}
 
 .flex-center   { align-items: center; }
 .flex-baseline { align-items: baseline; }
@@ -156,3 +159,13 @@ $sides: (
 }
 .flex-grow { flex: 1 0 auto; }
 .flex-none { flex: none; }
+//Distribute children items in flex container evenly
+.flex-distribute > * { flex: 1 1 0px; }
+
+
+//Make item full width on mobile
+.flex-full_mobile {
+  @media #{$phone} {
+    flex: 1 100% !important;
+  }
+}
