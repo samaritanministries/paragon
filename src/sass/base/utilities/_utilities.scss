@@ -64,9 +64,19 @@ $sides: (
     .m#{$prefix}-#{$space} { //.mb-space-xs
       margin#{$property}: #{$space-var} !important; //margin-bottom: space-xs;
     }
+    .m#{$prefix}-#{$space}_mobile { //.mb-space-xs_mobile
+      @media #{$phone} {
+        margin#{$property}: #{$space-var} !important; //margin-bottom: space-xs;
+      }
+    }
 
     .p#{$prefix}-#{$space} { //.p-space-m
       padding#{$property}: #{$space-var} !important; //padding: space-m;
+    }
+    .p#{$prefix}-#{$space}_mobile { //.pb-space-xs_mobile
+      @media #{$phone} {
+        padding#{$property}: #{$space-var} !important; //padding: space-m;
+      }
     }
   }
 }
