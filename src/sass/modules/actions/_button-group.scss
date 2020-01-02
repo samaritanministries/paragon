@@ -1,157 +1,165 @@
 @mixin button-group($background-color, $color) {
-  .button { @include button($background-color, darken($background-color, 10%), $color); }
-  input:checked ~ label { //active state of button-group
-    background-color: darken($background-color, 10%);
-    border-color: darken($background-color, 10%);
-  }
+	.button { @include button($background-color, darken($background-color, 10%), $color); }
+
+	input:checked ~ label { //active state of button-group
+		background-color: darken($background-color, 10%);
+		border-color: darken($background-color, 10%);
+	}
 }
 
 @mixin button-group--border($background-color, $checked-color) {
-  .button { @include transparent--button($color-gray-4); }
-  input:checked ~ label { //active state of button-group
-    background-color: $background-color;
-    border-color: $background-color;
-    color: $checked-color;
-    &:hover { background-color: $background-color; }
-    .dashing-icon:before { color: $checked-color; }
-  }
+	.button { @include transparent--button($color-gray-4); }
+
+	input:checked ~ label { //active state of button-group
+		background-color: $background-color;
+		border-color: $background-color;
+		color: $checked-color;
+		&:hover { background-color: $background-color; }
+		.dashing-icon::before { color: $checked-color; }
+	}
 }
 
 // Toggle Button Styles
 .button-group {
-  @extend .button--smooth;
-  margin: 0;
-  padding: 0;
-  overflow: auto;
+	@extend .button--smooth;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
 
-  .button--radio    { @include button-group($color-blue, $color-white);} //default button-group style
-  &.button--blue    { .button--radio { @include button-group($color-blue, $color-white); } }
-  &.button--green   { .button--radio { @include button-group($color-green, $color-white); } }
-  &.button--orange  { .button--radio { @include button-group($color-orange, $color-black); } }
-  &.button--purple  { .button--radio { @include button-group($color-purple, $color-white); } }
-  &.button--red     { .button--radio { @include button-group($color-red, $color-white); } }
-  &.button--gray,
-  &.button--grey {
-    .button--radio { @include button-group($color-gray-4, $color-white); }
-    .button { border-color: $color-gray-3 !important; }
-  }
+	.button--radio { @include button-group($color-blue, $color-white);} //default button-group style
+	&.button--blue { .button--radio { @include button-group($color-blue, $color-white); } }
+	&.button--green { .button--radio { @include button-group($color-green, $color-white); } }
+	&.button--orange { .button--radio { @include button-group($color-orange, $color-black); } }
+	&.button--purple { .button--radio { @include button-group($color-purple, $color-white); } }
+	&.button--red { .button--radio { @include button-group($color-red, $color-white); } }
 
-  //Border Button Groups
-  &.button--border {
-    .button--radio    { @include button-group--border($color-blue, $color-white);} //default button-group--border style
-    &.button--blue    { .button--radio { @include button-group--border($color-blue, $color-white); } }
-    &.button--green   { .button--radio { @include button-group--border($color-green, $color-white); } }
-    &.button--orange  { .button--radio { @include button-group--border($color-orange, $color-black); } }
-    &.button--purple  { .button--radio { @include button-group--border($color-purple, $color-white); } }
-    &.button--red     { .button--radio { @include button-group--border($color-red, $color-white); } }
-    &.button--gray,
-    &.button--grey {
-      .button--radio { @include button-group--border($color-gray-3, $color-gray-4); }
-      .button { border-color: $color-gray-3 !important; }
-    }
-    .button {
-      border: 1px solid $color-border;
-      display: inline-block;
-      background-color: transparent;
-      color: $color-subtext;
-    }
-  }
+	&.button--gray,
+	&.button--grey {
+		.button--radio { @include button-group($color-gray-4, $color-white); }
+		.button { border-color: $color-gray-3 !important; }
+	}
 
-  .button--radio {
-    display: inline-block;
-    float: left;
-    &:first-of-type label { margin-left: 0; }
-    input { display: none; }
-    label {
-      border-radius: 0;
-      display: inline-block;
-      margin: 0 0 0 -1px;
-    }
-  }
+	//Border Button Groups
+	&.button--border {
+		.button--radio { @include button-group--border($color-blue, $color-white);} //default button-group--border style
+		&.button--blue { .button--radio { @include button-group--border($color-blue, $color-white); } }
+		&.button--green { .button--radio { @include button-group--border($color-green, $color-white); } }
+		&.button--orange { .button--radio { @include button-group--border($color-orange, $color-black); } }
+		&.button--purple { .button--radio { @include button-group--border($color-purple, $color-white); } }
+		&.button--red { .button--radio { @include button-group--border($color-red, $color-white); } }
 
-  .dashing-icon { margin: 0 !important; }
-  .dashing-icon--arrow-left { width: 16px; } //fixes weird sizing difference between arrow-right and arrow-left
+		&.button--gray,
+		&.button--grey {
+			.button--radio { @include button-group--border($color-gray-3, $color-gray-4); }
+			.button { border-color: $color-gray-3 !important; }
+		}
+
+		.button {
+			background-color: transparent;
+			border: 1px solid $color-border;
+			color: $color-subtext;
+			display: inline-block;
+		}
+	}
+
+	.button--radio {
+		display: inline-block;
+		float: left;
+		&:first-of-type label { margin-left: 0; }
+		input { display: none; }
+
+		label {
+			border-radius: 0;
+			display: inline-block;
+			margin: 0 0 0 -1px;
+		}
+	}
+
+	.dashing-icon { margin: 0 !important; }
+	.dashing-icon--arrow-left { width: 16px; } //fixes weird sizing difference between arrow-right and arrow-left
 }
 
 /* Vertical Button Styles
   =========================================================================== */
 @mixin button-group--vertical {
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
-  display: -webkit-inline-flex;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-orient: vertical;
-  -moz-box-direction: normal;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  .button--radio {
-    display: block;
-    &:first-of-type label { margin-top: 0; }
-    label {
-      display: block !important;
-      border-width: 1px;
-      margin: auto;
-      margin-top: -1px;
-    }
-  }
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	display: -webkit-inline-box;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+	.button--radio {
+		display: block;
+		&:first-of-type label { margin-top: 0; }
+
+		label {
+			border-width: 1px;
+			display: block !important;
+			margin: auto;
+			margin-top: -1px;
+		}
+	}
 }
 
 .button-group.button-group--vertical {
-  @include button-group--vertical;
+	@include button-group--vertical;
 }
 
 .button-group.button-group--vertical_phone {
-  @media #{$phone} {
-    @include button-group--vertical;
-  }
+	@media #{$phone} {
+		@include button-group--vertical;
+	}
 }
 
 .button-group.button-group--vertical_tablet {
-  @media #{$tablet} {
-    @include button-group--vertical;
-  }
+	@media #{$tablet} {
+		@include button-group--vertical;
+	}
 }
 
 /* Border Radius Options
   =========================================================================== */
 @mixin button-group--vertical-border {
-  //border radius for default vertical buttons
-  .button--radio:first-of-type label { border-radius: 10px 10px 0 0; }
-  .button--radio:last-of-type label { border-radius: 0 0 10px 10px; }
+	//border radius for default vertical buttons
+	.button--radio:first-of-type label { border-radius: 10px 10px 0 0; }
+	.button--radio:last-of-type label { border-radius: 0 0 10px 10px; }
 
-  //border radius for smooth vertical buttons
-  &.button--smooth .button--radio {
-    &:first-of-type label { border-radius: 5px 5px 0 0; }
-    &:last-of-type label { border-radius: 0 0 5px 5px; }
-  }
+	//border radius for smooth vertical buttons
+	&.button--smooth .button--radio {
+		&:first-of-type label { border-radius: 5px 5px 0 0; }
+		&:last-of-type label { border-radius: 0 0 5px 5px; }
+	}
 
-  //border radius for square vertical buttons
-  &.button--square .button--radio:first-of-type label,
-  &.button--square .button--radio:last-of-type label { border-radius: 0; }
+	//border radius for square vertical buttons
+	&.button--square .button--radio:first-of-type label,
+	&.button--square .button--radio:last-of-type label { border-radius: 0; }
 }
 
 .button-group {
-  //border radius for default buttons
-  .button--radio:first-of-type label { border-radius: 50px 0 0 50px; }
-  .button--radio:last-of-type label { border-radius: 0 50px 50px 0; }
+	//border radius for default buttons
+	.button--radio:first-of-type label { border-radius: 50px 0 0 50px; }
+	.button--radio:last-of-type label { border-radius: 0 50px 50px 0; }
 
-  //border radius for smooth buttons
-  &.button--smooth {
-    .button--radio:first-of-type label { border-radius: 5px 0 0 5px; }
-    .button--radio:last-of-type label { border-radius: 0 5px 5px 0; }
-  }
+	//border radius for smooth buttons
+	&.button--smooth {
+		.button--radio:first-of-type label { border-radius: 5px 0 0 5px; }
+		.button--radio:last-of-type label { border-radius: 0 5px 5px 0; }
+	}
 
-  //border radius for square buttons
-  &.button--square {
-    .button--radio:first-of-type label,
-    .button--radio:last-of-type label { border-radius: 0; }
-  }
+	//border radius for square buttons
+	&.button--square {
+		.button--radio:first-of-type label,
+		.button--radio:last-of-type label { border-radius: 0; }
+	}
 
-  &.button-group--vertical { @include button-group--vertical-border; }
-  &.button-group--vertical_phone { @media #{$phone} { @include button-group--vertical-border; } }
-  &.button-group--vertical_tablet { @media #{$tablet} { @include button-group--vertical-border; } }
+	&.button-group--vertical { @include button-group--vertical-border; }
+	&.button-group--vertical_phone { @media #{$phone} { @include button-group--vertical-border; } }
+	&.button-group--vertical_tablet { @media #{$tablet} { @include button-group--vertical-border; } }
 }

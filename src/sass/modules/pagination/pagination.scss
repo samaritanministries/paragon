@@ -1,44 +1,50 @@
 .pagination {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  li {
-    list-style: none;
-    display: inline-flex; //fixes whitespace bug present with inline-block
-    &:not(.is-active) .button { @extend .button--transparent; } //only shows transparent if not active
-    .button { padding: $space-xs $space-s !important; } //overrides smaller paddinng inherited from transparent buttons
-  }
-  .dashing-icon { margin: 0 !important; }
-  .dashing-icon--arrow-left { width: 16px; }
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
 
-  &:not(.pagination--group) li:not(:last-of-type) { //adds margin-right to default pagination list item
-    margin-right: $space-xxs;
-  }
+	li {
+		display: inline-flex; //fixes whitespace bug present with inline-block
+		list-style: none;
+		&:not(.is-active) .button { @extend .button--transparent; } //only shows transparent if not active
+		.button { padding: $space-xs $space-s !important; } //overrides smaller paddinng inherited from transparent buttons
+	}
+	.dashing-icon { margin: 0 !important; }
+	.dashing-icon--arrow-left { width: 16px; }
 
-  &.pagination--group {
-    li {
-      .button {
-        border: 1px solid $color-border;
-        border-radius: 0;
-        margin-left: -1px;
-      }
-    }
-    li:first-of-type .button { border-radius: 5px 0 0 5px; }
-    li:last-of-type .button { border-radius: 0 5px 5px 0; }
-    li.is-active .button { border-color: transparent; } //allows border to inherit button color
-  }
+	&:not(.pagination--group) li:not(:last-of-type) { //adds margin-right to default pagination list item
+		margin-right: $space-xxs;
+	}
 
-  &.center-align { justify-content: center; }
-  &.left-align { justify-content: flex-start; }
-  &.right-align { justify-content: flex-end; }
+	&.pagination--group {
+		li {
+			.button {
+				border: 1px solid $color-border;
+				border-radius: 0;
+				margin-left: -1px;
+			}
+		}
+		li:first-of-type .button { border-radius: 5px 0 0 5px; }
+		li:last-of-type .button { border-radius: 0 5px 5px 0; }
+		li.is-active .button { border-color: transparent; } //allows border to inherit button color
+	}
+
+	&.center-align { justify-content: center; }
+	&.left-align { justify-content: flex-start; }
+	&.right-align { justify-content: flex-end; }
 }
 
 .pagination li.is-active { //override for anchor tag hover
-  .button {
-    &:hover, &:focus, &:active { color: $color-white; }
-  }
-  .button--gray {
-    &:hover, &:focus, &:active { color: $color-gray-4; }
-  }
+	.button {
+		&:hover,
+		&:focus,
+		&:active { color: $color-white; }
+	}
+
+	.button--gray {
+		&:hover,
+		&:focus,
+		&:active { color: $color-gray-4; }
+	}
 }

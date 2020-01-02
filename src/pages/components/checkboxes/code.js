@@ -522,7 +522,7 @@ class CheckboxesCode extends React.Component {
         <CodeToggleSCSS>
 {`//Include these variables in your theme file to change the color of your checkbox
 $checkbox--active: $blue !default; //Color of checkbox when checked
-$checkbox--icon: $white !default; //Color of check icon when checked
+$checkbox--icon: $color-white !default; //Color of check icon when checked
 $checkbox--focus: $blue-300 !default; //Color of border around checkbox when focused
 $checkbox--disabled: $gray-150 !default; //Color of checkbox when checked and disabled
 $checkbox--icon-disabled: $gray-500 !default; //Color of check icon when checked and disabled`}

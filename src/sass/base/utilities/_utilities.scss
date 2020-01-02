@@ -1,118 +1,148 @@
 /* Core Utility Classes
   =========================================================================== */
 //content width
-$content-xs:     350px;
-$content-s:      600px;
-$content-m:      800px;
-$content-l:      1200px;
-$content-full:   auto;
+$content-xs: 350px;
+$content-s: 600px;
+$content-m: 800px;
+$content-l: 1200px;
+$content-full: auto;
 
 $widths: (
-  "-xs":    #{$content-xs},
-  "-s":     #{$content-s},
-  "-m":     #{$content-m},
-  "-l":     #{$content-l},
-  "-full":  "auto"
+	'-xs':    #{$content-xs},
+	'-s':     #{$content-s},
+	'-m':     #{$content-m},
+	'-l':     #{$content-l},
+	'-full':  'auto'
 );
 
 @each $width, $width-var in $widths {
-  $max-width: if($width == '', '', #{$width-var});
-  .content#{$width} { //.content-s
-    max-width: #{$max-width} !important; //max-width: 600px;
-  }
+	$max-width: if($width == '', '', #{$width-var});
+
+	.content#{$width} { //.content-s
+		max-width: #{$max-width} !important; //max-width: 600px;
+	}
 }
 
 //Spacing
-$space-xxs:   0.25rem;
-$space-xs:    0.5rem;
-$space-s:     0.75rem;
-$space-m:     1rem;
-$space-l:     1.5rem;
-$space-xl:    2rem;
-$space-xxl:   3rem;
-$space-auto:  auto;
-$space-none:  0;
+$space-xxs: 0.25rem;
+$space-xs: 0.5rem;
+$space-s: 0.75rem;
+$space-m: 1rem;
+$space-l: 1.5rem;
+$space-xl: 2rem;
+$space-xxl: 3rem;
+$space-auto: auto;
+$space-none: 0;
 
 //SPACING UTILITY
 $spaceamounts: (
-  "space-xxs":  #{$space-xxs},
-  "space-xs":   #{$space-xs},
-  "space-s":    #{$space-s},
-  "space-m":    #{$space-m},
-  "space-l":    #{$space-l},
-  "space-xl":   #{$space-xl},
-  "space-xxl":  #{$space-xxl},
-  "auto":       #{$space-auto},
-  "space-none": #{$space-none},
-  "none":       #{$space-none}
+	'space-xxs':  #{$space-xxs},
+	'space-xs':   #{$space-xs},
+	'space-s':    #{$space-s},
+	'space-m':    #{$space-m},
+	'space-l':    #{$space-l},
+	'space-xl':   #{$space-xl},
+	'space-xxl':  #{$space-xxl},
+	'auto':       #{$space-auto},
+	'space-none': #{$space-none},
+	'none':       #{$space-none}
 );
 
 $sides: (
-  "":     "all",
-  "t":    "top",
-  "b":    "bottom",
-  "l":    "left",
-  "r":    "right"
+	'':     'all',
+	't':    'top',
+	'b':    'bottom',
+	'l':    'left',
+	'r':    'right'
 );
 
 @each $space, $space-variable in $spaceamounts {
-  $space-var: if($space == '', '', #{$space-variable});
+	$space-var: if($space == '', '', #{$space-variable});
 
-  @each $prefix, $value in $sides {
-    $property: if($prefix == '', '', -#{$value});
-    .m#{$prefix}-#{$space} { //.mb-space-xs
-      margin#{$property}: #{$space-var} !important; //margin-bottom: space-xs;
-    }
+	@each $prefix, $value in $sides {
+		$property: if($prefix == '', '', -#{$value});
 
-    .p#{$prefix}-#{$space} { //.p-space-m
-      padding#{$property}: #{$space-var} !important; //padding: space-m;
-    }
-  }
+		.m#{$prefix}-#{$space} { //.mb-space-xs
+			margin#{$property}: #{$space-var} !important; //margin-bottom: space-xs;
+		}
+
+		.p#{$prefix}-#{$space} { //.p-space-m
+			padding#{$property}: #{$space-var} !important; //padding: space-m;
+		}
+	}
 }
 
 .screen-reader { //content is only "visible" to a screen reader
-  display: block;
-  height: 1px;
-  width: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  position: absolute;
+	clip: rect(0 0 0 0);
+	display: block;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
 
-.hide, .hidden, .is-hidden { display: none !important; }
+.hide,
+.hidden,
+.is-hidden { display: none !important; }
 
 //Hide on mobile
-.mobile-hide, .is-hidden_phone { @include hide-on('phone', $display: block); }
-.mobile-hide-inline, .is-hidden--inline_phone { @include hide-on('phone', $display: inline); }
+.mobile-hide,
+.is-hidden_phone { @include hide-on('phone', $display: block); }
+
+.mobile-hide-inline,
+.is-hidden--inline_phone { @include hide-on('phone', $display: inline); }
 
 //Hide on tablet
-.tablet-hide, .is-hidden_tablet { @include hide-on('tablet', $display: block); }
-.tablet-hide-inline, .is-hidden--inline_tablet { @include hide-on('tablet', $display: inline); }
+.tablet-hide,
+.is-hidden_tablet { @include hide-on('tablet', $display: block); }
+
+.tablet-hide-inline,
+.is-hidden--inline_tablet { @include hide-on('tablet', $display: inline); }
 
 //Hide on desktop
-.desktop-hide, .is-hidden_desktop { @media #{$desktop} { display: none; } }
+.desktop-hide,
+.is-hidden_desktop { @media #{$desktop} { display: none; } }
 
 //Add pointer cursor
-.pointer, .selectable { cursor: pointer !important; }
+.pointer,
+.selectable { cursor: pointer !important; }
 
 //Remove margin
-.remove-margin, .no-margin { margin: 0 !important; }
-.remove-margin--top, .no-margin--top { margin-top: 0 !important; }
-.remove-margin--right, .no-margin--right { margin-right: 0 !important; }
-.remove-margin--bottom, .no-margin--bottom { margin-bottom: 0 !important; }
-.remove-margin--left, .no-margin--left { margin-left: 0 !important; }
+.remove-margin,
+.no-margin { margin: 0 !important; }
+
+.remove-margin--top,
+.no-margin--top { margin-top: 0 !important; }
+
+.remove-margin--right,
+.no-margin--right { margin-right: 0 !important; }
+
+.remove-margin--bottom,
+.no-margin--bottom { margin-bottom: 0 !important; }
+
+.remove-margin--left,
+.no-margin--left { margin-left: 0 !important; }
 
 //Remove padding
-.remove-padding, .no-padding { padding: 0 !important; }
-.remove-padding--top, .no-padding--top { padding-top: 0 !important; }
-.remove-padding--right, .no-padding--right { padding-right: 0 !important; }
-.remove-padding--bottom, .no-padding--bottom { padding-bottom: 0 !important; }
-.remove-padding--left, .no-padding--left { padding-left: 0 !important; }
+.remove-padding,
+.no-padding { padding: 0 !important; }
 
-.remove-border { border: none !important; }
+.remove-padding--top,
+.no-padding--top { padding-top: 0 !important; }
+
+.remove-padding--right,
+.no-padding--right { padding-right: 0 !important; }
+
+.remove-padding--bottom,
+.no-padding--bottom { padding-bottom: 0 !important; }
+
+.remove-padding--left,
+.no-padding--left { padding-left: 0 !important; }
+
+.remove-border { border: 0 !important; }
 .float-left { float: left !important; }
 .float-right { float: right !important; }
 .float-none { float: none !important; }
@@ -121,7 +151,9 @@ $sides: (
 
 .text-color--white { color: $color-white; }
 .text-color--black { color: $color-black; }
-.text-color--gray, .text-color--grey { color: $color-subtext; }
+
+.text-color--gray,
+.text-color--grey { color: $color-subtext; }
 .text-color--blue { color: $color-blue; }
 .text-color--green { color: $color-green; }
 .text-color--orange { color: $color-orange; }
@@ -130,28 +162,28 @@ $sides: (
 
 //Flex utilities
 .space-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
 }
 
 .flex { display: flex; }
 
-.flex-column  { flex-direction: column; }
-.flex-wrap    { flex-wrap: wrap; }
+.flex-column { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
 
-.flex-center   { align-items: center; }
+.flex-center { align-items: center; }
 .flex-baseline { align-items: baseline; }
-.flex-stretch  { align-items: stretch; }
-.flex-start    { align-items: flex-start; }
-.flex-end      { align-items: flex-end; }
+.flex-stretch { align-items: stretch; }
+.flex-start { align-items: flex-start; }
+.flex-end { align-items: flex-end; }
 
-.flex-justify  { justify-content: space-between; }
+.flex-justify { justify-content: space-between; }
 
 .flex-auto {
-  flex: 1 1 auto;
-  min-width: 0;
-  min-height: 0;
+	flex: 1 1 auto;
+	min-height: 0;
+	min-width: 0;
 }
 .flex-grow { flex: 1 0 auto; }
 .flex-none { flex: none; }

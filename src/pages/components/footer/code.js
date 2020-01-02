@@ -50,7 +50,7 @@ class FooterCode extends React.Component {
               </CodeToggle>
               <CodeToggleSCSS>
 {`//Include these variables in your theme file to change the color theme of your footer
-$footer-color: $white !default; //Override this variable to change the color of your footer
+$footer-color: $color-white !default; //Override this variable to change the color of your footer
 $footer-border-color: $gray-200 !default; //Override this variable to change the color of the top border of your footer`}
               </CodeToggleSCSS>
 

@@ -528,7 +528,7 @@ class RadioButtonsCode extends React.Component {
           <CodeToggleSCSS>
 {`//Include these variables in your theme file
 $radio--active: $blue !default; //Color of radio button when checked
-$radio--icon: $white !default; //Color of radio icon when checked
+$radio--icon: $color-white !default; //Color of radio icon when checked
 $radio--focus: $blue-300 !default; //Color of border around radio when focused
 $radio--disabled: $gray-150 !default; //Color of radio when checked and disabled
 $radio--icon-disabled: $gray-500 !default; //Color of radio icon when checked and disabled`}

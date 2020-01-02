@@ -173,9 +173,9 @@ class TablesCode extends React.Component {
           </CodeToggle>
           <CodeToggleSCSS>
 {`//Override the default table styles in your theme file
-$table--header-row: $white !default;
+$table--header-row: $color-white !default;
 $table--odd-row: $gray-50 !default;
-$table--even-row: $white !default;
+$table--even-row: $color-white !default;
 $table--dividers: $gray-100 !default;
 $table--border: $gray-200 !default;`}
           </CodeToggleSCSS>
@@ -1018,7 +1018,7 @@ $table--dividers: $gray-100 !default;`}
               <CodeToggleSCSS>
 {`//Override the default table styles in your theme file
 $table--odd-row: $gray-50 !default;
-$table--even-row: $white !default;`}
+$table--even-row: $color-white !default;`}
               </CodeToggleSCSS>
 
               <h2 className="example-header" id="exampleTable">Example Table
@@ -1136,9 +1136,9 @@ $table--even-row: $white !default;`}
               </CodeToggle>
               <CodeToggleSCSS>
 {`//Override the default table styles in your theme file
-$table--header-row: $white !default;
+$table--header-row: $color-white !default;
 $table--odd-row: $gray-50 !default;
-$table--even-row: $white !default;
+$table--even-row: $color-white !default;
 $table--dividers: $gray-100 !default;
 $table--border: $gray-200 !default;`}
               </CodeToggleSCSS>

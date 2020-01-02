@@ -1,19 +1,19 @@
 /* Typography Variables
   =========================================================================== */
 
-$font-size-xlarge:      1.953rem; //35px
-$font-size-large:       1.563rem; //28px
-$font-size-medium:      1.25rem;  //23px
-$font-size-normal:      1rem;     //18px
-$font-size-small:       0.9rem;   //16px
-$font-size-xsmall:      0.8rem;   //14px
+$font-size-xlarge: 1.953rem; //35px
+$font-size-large: 1.563rem; //28px
+$font-size-medium: 1.25rem;  //23px
+$font-size-normal: 1rem;     //18px
+$font-size-small: 0.9rem;   //16px
+$font-size-xsmall: 0.8rem;   //14px
 
-$font-weight-normal:    400 !default;
-$font-weight-semibold:  600 !default;
-$font-weight-bold:      700 !default;
+$font-weight-normal: 400 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
 
-$font-family-header:    "Source Sans Pro", sans-serif !default;
-$font-family-body:      "Source Sans Pro", sans-serif !default;
+$font-family-header: 'Source Sans Pro', sans-serif !default;
+$font-family-body: 'Source Sans Pro', sans-serif !default;
 
 /* Typography Utility Classes
   =========================================================================== */
@@ -31,9 +31,9 @@ $font-family-body:      "Source Sans Pro", sans-serif !default;
 .align-right { text-align: right !important; }
 
 .no-wrap {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .break-word { word-wrap: break-word; }
@@ -42,69 +42,86 @@ $font-family-body:      "Source Sans Pro", sans-serif !default;
   =========================================================================== */
 
 * {
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 body {
-  background-color: $color-background;
-  font-family: $font-family-body;
-  font-size: $font-size-normal;
-  color: $color-text;
+	background-color: $color-background;
+	color: $color-text;
+	font-family: $font-family-body;
+	font-size: $font-size-normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: $color-text;
-  font-family: $font-family-header;
-  font-weight: $font-weight-semibold;
-  margin: 0;
-  margin-bottom: $space-xxs;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $color-text;
+	font-family: $font-family-header;
+	font-weight: $font-weight-semibold;
+	margin: 0;
+	margin-bottom: $space-xxs;
 }
 
-h1, .font-size--xlarge    { font-size: $font-size-xlarge; }
-h2, .font-size--large     { font-size: $font-size-large; }
-h3, .font-size--medium    { font-size: $font-size-medium; }
-h4, .font-size--normal    { font-size: $font-size-normal; }
-small, .font-size--small  { font-size: $font-size-small; }
-.font-size--xsmall        { font-size: $font-size-xsmall; }
+h1,
+.font-size--xlarge { font-size: $font-size-xlarge; }
+
+h2,
+.font-size--large { font-size: $font-size-large; }
+
+h3,
+.font-size--medium { font-size: $font-size-medium; }
+
+h4,
+.font-size--normal { font-size: $font-size-normal; }
+
+small,
+.font-size--small { font-size: $font-size-small; }
+.font-size--xsmall { font-size: $font-size-xsmall; }
 
 a {
-  color: $color-link;
-  cursor: pointer;
-  font-weight: $font-weight-semibold;
-  text-decoration: underline;
+	color: $color-link;
+	cursor: pointer;
+	font-weight: $font-weight-semibold;
+	text-decoration: underline;
 
-  &:hover, &:focus {
-    opacity: .7;
-    text-decoration-color: inherit;
-  }
+	&:hover,
+	&:focus {
+		opacity: 0.7;
+		text-decoration-color: inherit;
+	}
 
-  &.no-decoration {
-    text-decoration: none;
-    color: $color-text;
-    font-weight: $font-weight-normal;
-  }
+	&.no-decoration {
+		color: $color-text;
+		font-weight: $font-weight-normal;
+		text-decoration: none;
+	}
 }
 
-p, li.text-list_item {
-  color: $color-black;
-  font-size: $font-size-normal;
-  line-height: $space-l;
-  margin: 0;
-  margin-bottom: $space-xs;
+p,
+li.text-list_item {
+	color: $color-black;
+	font-size: $font-size-normal;
+	line-height: $space-l;
+	margin: 0;
+	margin-bottom: $space-xs;
 }
 
 ul.text-list {
-  margin: 0;
-  list-style: none;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 
-strong, .strong {
-  font-weight: $font-weight-semibold;
+strong,
+.strong {
+	font-weight: $font-weight-semibold;
 }
 
 .bold {
-  font-weight: $font-weight-bold;
+	font-weight: $font-weight-bold;
 }
