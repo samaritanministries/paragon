@@ -64,26 +64,32 @@ $sides: (
     .m#{$prefix}-#{$space} { //.mb-space-xs
       margin#{$property}: #{$space-var} !important; //margin-bottom: space-xs;
       &_mobile {
-        @media #{$phone} { margin#{$property}: #{$space-var} !important; //margin-bottom: space-xs;}
+        @media #{$phone} { margin#{$property}: #{$space-var} !important; /* margin-bottom: space-xs; */ }
       }
       &_tablet-and-below {
-        @media #{$tablet-and-below} { margin#{$property}: #{$space-var} !important; //margin-bottom: space-xs;}
+        @media #{$tablet-and-below} { margin#{$property}: #{$space-var} !important; /* margin-bottom: space-xs; */ }
       }
       &_tablet {
-        @media #{$tablet} { margin#{$property}: #{$space-var} !important; //margin-bottom: space-xs;}
+        @media #{$tablet} { margin#{$property}: #{$space-var} !important; /* margin-bottom: space-xs; */ }
+      }
+      &_desktop {
+        @media #{$desktop} { margin#{$property}: #{$space-var} !important; /* margin-bottom: space-xs; */ }
       }
     }
 
     .p#{$prefix}-#{$space} { //.p-space-m
       padding#{$property}: #{$space-var} !important; //padding: space-m;
       &_mobile {
-        @media #{$phone} { padding#{$property}: #{$space-var} !important; //padding: space-m;}
+        @media #{$phone} { padding#{$property}: #{$space-var} !important; /* padding: space-m; */ }
       }
       &_tablet-and-below {
-        @media #{$tablet-and-below} { padding#{$property}: #{$space-var} !important; //padding: space-m;}
+        @media #{$tablet-and-below} { padding#{$property}: #{$space-var} !important; /* padding: space-m; */ }
       }
       &_tablet {
-        @media #{$tablet} { padding#{$property}: #{$space-var} !important; //padding: space-m;}
+        @media #{$tablet} { padding#{$property}: #{$space-var} !important; /* padding: space-m; */ }
+      }
+      &_desktop {
+        @media #{$desktop} { padding#{$property}: #{$space-var} !important; /* padding: space-m; */ }
       }
     }
   }
@@ -165,9 +171,9 @@ $sides: (
 }
 
 .flex-vcenter,
-.flex-vc       { display: flex; align-items: center;}
+.flex-vc       { display: flex; align-items: center; }
 .flex-center,
-.flex-centered { display: flex; align-items: center; justify-content: center;  }
+.flex-centered { display: flex; align-items: center; justify-content: center; }
 .flex-baseline { display: flex; align-items: baseline; }
 .flex-stretch  { display: flex; align-items: stretch; }
 .flex-start    { display: flex; align-items: flex-start; }
