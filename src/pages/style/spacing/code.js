@@ -97,7 +97,8 @@ $space-xxl: 3rem;`}
 
 
           <h2 className="mt-space-xl">Individual Spacing</h2>
-          <p>Add <code className="example-text">_mobile</code> to the end of an individual spacing class to apply only on mobile.</p>
+          <p className="no-margin--bottom">Add the screen breakpoint to the end of an individual spacing class to apply only on that breakpoint.</p>
+          <p>For example: Adding margin to just mobile devices. <code className="example-text">m-space-m_mobile</code></p>
 
           <div className="example-container">
 
@@ -164,8 +165,11 @@ $space-xxl: 3rem;`}
 <div class="ml-space-xs"></div> <!-- margin-left: 0.5rem; -->
 <div class="p-space-m"></div> <!-- padding: 1rem; -->
 
-<!-- Mobile only spacing -->
+<!-- Breakpoint specific spacing -->
 <div class="p-space-m_mobile"></div> <!-- padding: 1rem; -->
+<div class="p-space-m_tablet-and-below"></div> <!-- padding: 1rem; -->
+<div class="p-space-m_tablet"></div> <!-- padding: 1rem; -->
+<div class="p-space-m_desktop"></div> <!-- padding: 1rem; -->
 `}
             </CodeToggle>
             </div>
