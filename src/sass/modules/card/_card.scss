@@ -3,7 +3,7 @@
 
 //TODO remove .card--header, .card--content, .card--footer with major release
 
-.card {
+.card, %card {
   background-color: $color-white;
   border-radius: 5px;
   margin: 1.5rem auto;
@@ -32,11 +32,7 @@
     &.has-icon {
       display: flex;
       align-items: baseline;
-      i {
-        margin-right: $space-xs;
-        position: relative;
-        top: -1px;
-      }
+      i { margin-right: $space-xs; }
     }
     h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in card-headers
   }
@@ -150,15 +146,57 @@
       }
     }
   }
-  //Informational card
-  &.card-info {
-    background-color: #eaf9ff;
-    box-shadow: none;
+}
+
+.card-info {
+  @extend %card;
+
+  overflow: hidden;
+  border-left: 6px solid $color-blue;
+  background-color: lighten($color-blue, 55%);
+  .dashing-icon::before { color: $color-blue; }
+
+  .card-info--title {
+    color: $color-blue;
+    margin: 0;
   }
-  &.card-info--gray,
-  &.card-info--grey {
-    background-color: $color-gray-2;
-    box-shadow: none;
+
+  .card-header { padding-top: $space-s; }
+  .card-content { padding: $space-s $space-m; }
+
+  .card-header,
+  .card-content {
+    &.has-icon {
+      display: flex;
+      align-items: baseline;
+      .dashing-icon { margin-right: $space-xs; }
+    }
+    &.has-button {
+      display: flex;
+      align-items: center;
+      button { white-space: nowrap; }
+    }
+  }
+
+  &.has-warning {
+    .card-info--title { color: $color-orange; }
+    .dashing-icon::before { color: $color-orange; }
+    background-color: lighten($color-orange, 40%);
+    border-left-color: $color-orange;
+  }
+
+  &.has-error {
+    .card-info--title { color: $color-red; }
+    .dashing-icon::before { color: $color-red; }
+    background-color: lighten($color-red, 45%);
+    border-left-color: $color-red;
+  }
+
+  &.has-success {
+    .card-info--title { color: $color-green; }
+    .dashing-icon::before { color: $color-green; }
+    background-color: lighten($color-green, 70%);
+    border-left-color: $color-green;
   }
 }
 

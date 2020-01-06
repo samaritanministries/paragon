@@ -23,20 +23,32 @@ export default () => (
             <p>Common types of card banners are success, warning, error, and generic. Like <Link to="/components/actions/guidelines">Actions</Link>, banners should use purposeful color when using them.</p>
             <div className="image-container double-padding">
               <div className="banner-container">
-                <div className="card-banner">
-                  <p>This is a card banner</p>
+                <div className="card-info no-margin--top">
+                  <div className="card-content has-icon">
+                    <i className="dashing-icon dashing-icon--info-filled" />
+                    <p className="no-margin">This is an info card.</p>
+                  </div>
                 </div>
-                <div className="card-banner has-success">
-                  <i className="dashing-icon dashing-icon--checkmark-filled"></i>
-                  <p>Your file is ready to upload</p>
+
+                <div className="card-info has-success no-margin--top">
+                  <div className="card-content has-icon">
+                    <i className="dashing-icon dashing-icon--checkmark-filled" />
+                    <p className="no-margin">This is a success card.</p>
+                  </div>
                 </div>
-                <div className="card-banner has-warning">
-                  <i className="dashing-icon dashing-icon--info-filled"></i>
-                  <p>You may only submit bill information and upload images for one statement at a time. If you have multiple statements to submit, please enter them separately.</p>
+
+                <div className="card-info has-warning no-margin--top">
+                  <div className="card-content has-icon">
+                    <i className="dashing-icon dashing-icon--alert-filled" />
+                    <p className="no-margin">This is a warning card.</p>
+                  </div>
                 </div>
-                <div className="card-banner has-error">
-                  <i className="dashing-icon dashing-icon--alert-filled"></i>
-                  <p>You must complete all fields below before continuing</p>
+
+                <div className="card-info has-error no-margin">
+                  <div className="card-content has-icon">
+                    <i className="dashing-icon dashing-icon--alert-filled" />
+                    <p className="no-margin">This is a error card.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -47,15 +59,18 @@ export default () => (
             </blockquote>
 
             <h2 className="has-number has-number--two">Placement</h2>
-            <p>When using a card banner, it should be placed directly under the card header to draw the user's attention right away.</p>
+            <p>When using a card banner, it can be placed directly under the card header to draw the user's attention right away or close to the action that was just completed.</p>
             <div className="image-container double-padding" style={{ marginBottom: "2rem" }}>
               <div className="card card--example-titles">
-                <div className="card-header">
+                <div className="card-header has-border">
                   <h3>Membership Options</h3>
                 </div>
                 <div className="card-content">
-                  <div className="card-banner">
-                    <p>This is a card banner</p>
+                  <div className="card-info has-error no-margin">
+                    <div className="card-content has-icon">
+                      <i className="dashing-icon dashing-icon--alert-filled" />
+                      <p className="no-margin">There was an error saving your Membership information.</p>
+                    </div>
                   </div>
                 </div>
               </div>
