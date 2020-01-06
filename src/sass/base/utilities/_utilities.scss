@@ -162,24 +162,22 @@ $sides: (
 
 .flex { display: flex; }
 
-.flex-column  { display: flex; flex-direction: column; }
-.flex-wrap    { display: flex; flex-wrap: wrap; }
+.flex-column  { flex-direction: column; }
+.flex-wrap    { flex-wrap: wrap; }
 .flex-wrap {
   &_mobile { @media #{$phone} { flex-wrap: wrap; } }
   &_tablet-and-below { @media #{$tablet-and-below} { flex-wrap: wrap; } }
   &_tablet { @media #{$tablet} { flex-wrap: wrap; } }
 }
 
-.flex-vcenter,
-.flex-vc       { display: flex; align-items: center; }
-.flex-center,
-.flex-centered { display: flex; align-items: center; justify-content: center; }
-.flex-baseline { display: flex; align-items: baseline; }
-.flex-stretch  { display: flex; align-items: stretch; }
-.flex-start    { display: flex; align-items: flex-start; }
-.flex-end      { display: flex; align-items: flex-end; }
+.flex-vcenter  { align-items: center; }
+.flex-center   { align-items: center; justify-content: center; }
+.flex-baseline { align-items: baseline; }
+.flex-stretch  { align-items: stretch; }
+.flex-start    { align-items: flex-start; }
+.flex-end      { align-items: flex-end; }
 
-.flex-justify  { display: flex; justify-content: space-between; }
+.flex-justify  { justify-content: space-between; }
 
 .flex-auto {
   flex: 1 1 auto;
