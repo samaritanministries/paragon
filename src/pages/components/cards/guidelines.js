@@ -20,7 +20,7 @@ export default () => (
           <p className="intro">Cards are used to visually group certain topics of information. This makes it easier for users to quickly find and compare information of interest. Avoid using to much content within a card to overload the user.</p>
 
           <h2 className="has-number has-number--one no-margin--top">Buttons within Cards</h2>
-            <p>Call to actions within cards should be placed in the card footer and left aligned. If there is only one action in the footer, this should be center aligned. This pattern supports the <Link to="https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/">F-pattern layout</Link>.</p>
+            <p>Call to actions within cards should be placed in the card footer and left aligned. If there is only one action in the footer, this should be center aligned. This pattern supports the <a href="https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/" target="_blank">F-pattern layout</a>.</p>
             <div className="image-container double-padding">
               <div className="card card--example-footer">
                 <div className="card--footer" style={{ paddingTop: "1rem" }}>

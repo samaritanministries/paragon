@@ -81,8 +81,12 @@ a {
 
   &.no-decoration {
     text-decoration: none;
-    color: $color-text;
-    font-weight: $font-weight-normal;
+    color: inherit;
+    font-weight: inherit;
+    
+    &:hover, &:focus {
+      opacity: 1;
+    }
   }
 }
 
