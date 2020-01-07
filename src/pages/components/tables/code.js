@@ -381,9 +381,7 @@ $table--border: $gray-200 !default;`}
                 <button onClick={this.toggleRow2} className="tablet-hide desktop-hide">Close</button>
                 <p className="p-space-m">Content inside the expandable row</p>
               </section>
-              <ol onClick={this.toggleRow3} className={`table-row ${this.state.expandRow3 ?
-                "expanded" :
-                ""}`}>
+              <ol className="table-row not-expandable">
                 <li>
                   <i className="dashing-icon dashing-icon--arrow-right"></i>
                 </li>
@@ -424,7 +422,8 @@ $table--border: $gray-200 !default;`}
     <li>Column 3</li>
     <li>Column 4</li>
   </ol>
-  <ol className="table-row">
+  <!-- Add .not-expandable to .table-row to remove expandable styles  -->
+  <ol className="table-row not-expandable">
     <li>
       <i className="dashing-icon dashing-icon--arrow-right"></i>
     </li>

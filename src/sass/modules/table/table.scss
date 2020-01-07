@@ -158,6 +158,16 @@ $flex-table--header-text:  $color-white;
           }
         }
       }
+      &.not-expandable {
+        cursor: default;
+        li:first-of-type {
+          i { display: none; }
+        }
+
+        &:hover {
+          background-color: inherit;
+        }
+      }
     }
     //Custom table row content
     .table-row--content {
