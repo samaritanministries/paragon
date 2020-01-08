@@ -1,0 +1,47 @@
+//Spacing
+$space-xxs:   0.25rem;
+$space-xs:    0.5rem;
+$space-s:     0.75rem;
+$space-m:     1rem;
+$space-l:     1.5rem;
+$space-xl:    2rem;
+$space-xxl:   3rem;
+$space-auto:  auto;
+$space-none:  0;
+
+//SPACING UTILITY
+$spaceamounts: (
+  "space-xxs":  #{$space-xxs},
+  "space-xs":   #{$space-xs},
+  "space-s":    #{$space-s},
+  "space-m":    #{$space-m},
+  "space-l":    #{$space-l},
+  "space-xl":   #{$space-xl},
+  "space-xxl":  #{$space-xxl},
+  "auto":       #{$space-auto},
+  "space-none": #{$space-none},
+  "none":       #{$space-none}
+);
+
+$sides: (
+  "":     "all",
+  "t":    "top",
+  "b":    "bottom",
+  "l":    "left",
+  "r":    "right"
+);
+
+@each $space, $space-variable in $spaceamounts {
+  $space-var: if($space == '', '', #{$space-variable});
+
+  @each $prefix, $value in $sides {
+    $property: if($prefix == '', '', -#{$value});
+    .m#{$prefix}-#{$space} { //.mb-space-xs
+      margin#{$property}: #{$space-var} !important; //margin-bottom: space-xs;
+    }
+
+    .p#{$prefix}-#{$space} { //.p-space-m
+      padding#{$property}: #{$space-var} !important; //padding: space-m;
+    }
+  }
+}
