@@ -394,29 +394,57 @@ export default class CardsCode extends React.Component {
         <div className="example-container">
 
           <div className="card">
-            <div className="card-header">
+            <div className="card-header has-border">
               <h3>Information Cards</h3>
             </div>
             <div className="card-content">
 
               <p className="mb-space-m">Information cards are nested inside another card and are a good way to spotlight instructions or to give text more emphasis.</p>
 
-              <div className="card card-info">
+              <div className="card-info">
                 <div className="card-header has-icon">
-                  <i className="dashing-icon dashing-icon--info-filled dashing-icon--black" />
-                  <h4>Default Info Card</h4>
+                  <i className="dashing-icon dashing-icon--info-filled" />
+                  <h4 className="card-info--title">Please Note</h4>
                 </div>
                 <div className="card-content">
-                  <p className="no-margin">This is an info card with an icon.</p>
+                  <p className="no-margin">This is an info card.</p>
                 </div>
               </div>
 
-              <div className="card card-info--gray mt-space-m">
-                <div className="card-header">
-                  <h4>Gray Info Card</h4>
+              <div className="card-info has-success">
+                <div className="card-header has-icon">
+                  <i className="dashing-icon dashing-icon--checkmark-filled" />
+                  <h4 className="card-info--title">Success</h4>
                 </div>
                 <div className="card-content">
-                  <p className="no-margin">This is a gray info card.</p>
+                  <p className="no-margin">This is a success card.</p>
+                </div>
+              </div>
+
+              <div className="card-info has-warning">
+                <div className="card-header has-icon">
+                  <i className="dashing-icon dashing-icon--alert-filled" />
+                  <h4 className="card-info--title">Warning</h4>
+                </div>
+                <div className="card-content">
+                  <p className="no-margin">This is a warning card.</p>
+                </div>
+              </div>
+
+              <div className="card-info has-error">
+                <div className="card-header has-icon">
+                  <i className="dashing-icon dashing-icon--alert-filled" />
+                  <h4 className="card-info--title">Error</h4>
+                </div>
+                <div className="card-content">
+                  <p className="no-margin">This is a error card.</p>
+                </div>
+              </div>
+
+              <div className="card-info has-error">
+                <div className="card-content has-icon">
+                  <i className="dashing-icon dashing-icon--alert-filled" />
+                  <p className="no-margin">This is a error card without a title.</p>
                 </div>
               </div>
 
@@ -425,24 +453,51 @@ export default class CardsCode extends React.Component {
           </div>
 
           <CodeToggle>
-{`<div class="card-content">
-  <div class="card card-info">
-    <div class="card-header has-icon">
-      <i class="dashing-icon dashing-icon--info-filled dashing-icon--black" />
-      <h4>Default Info Card</h4>
-    </div>
-    <div class="card-content">
-      <p class="no-margin">This is an info card with an icon.</p>
-    </div>
+{`<div class="card-info has-info">
+  <div class="card-header has-icon">
+    <i class="dashing-icon dashing-icon--info-filled"></i>
+    <h4 class="card-info--title">Please Note</h4>
   </div>
+  <div class="card-content">
+    <p class="no-margin">This is an info card.</p>
+  </div>
+</div>
 
-  <div class="card card-info--gray">
-    <div class="card-header">
-      <h4>Gray Info Card</h4>
-    </div>
-    <div class="card-content">
-      <p class="no-margin">This is a gray info card.</p>
-    </div>
+<div class="card-info has-success">
+  <div class="card-header has-icon">
+    <i class="dashing-icon dashing-icon--checkmark-filled"></i>
+    <h4 class="card-info--title">Success</h4>
+  </div>
+  <div class="card-content">
+    <p class="no-margin">This is a success card.</p>
+  </div>
+</div>
+
+<div class="card-info has-warning">
+  <div class="card-header has-icon">
+    <i class="dashing-icon dashing-icon--alert-filled"></i>
+    <h4 class="card-info--title">Warning</h4>
+  </div>
+  <div class="card-content">
+    <p class="no-margin">This is a warning card.</p>
+  </div>
+</div>
+
+<div class="card-info has-error">
+  <div class="card-header has-icon">
+    <i class="dashing-icon dashing-icon--alert-filled"></i>
+    <h4 class="card-info--title">Error</h4>
+  </div>
+  <div class="card-content">
+    <p class="no-margin">This is a error card.</p>
+  </div>
+</div>
+
+<!-- Error card without a title -->
+<div class="card-info has-error">
+  <div class="card-content has-icon">
+    <i class="dashing-icon dashing-icon--alert-filled" />
+    <p class="no-margin">This is a error card without a title.</p>
   </div>
 </div>
 `}
