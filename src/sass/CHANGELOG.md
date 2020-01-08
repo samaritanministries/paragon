@@ -2,6 +2,19 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.2.0] - 2020-01-08
+### Added
+- Add info cards
+
+### Removed
+- Remove card banner
+
+### Fixed
+- Fix broken link on card guidelines page
+
+### Updated 
+- Update flex and spacing utilities
+
 ## [2.1.0] - 2019-12-18
 ### Added
 - Add global banner styles
