@@ -62,14 +62,14 @@ $spinner-button: 24px; //1.2rem;
   }
 
   &.button--border {
-  &:after {
-    content: "";
-    border-top-color: inherit;
+    &:after {
+      content: "";
+      border-top-color: inherit;
+    }
+    .dashing-icon {
+      visibility: hidden;
+    }
   }
-  .dashing-icon {
-    visibility: hidden;
-  }
-}
 }
 
 @-webkit-keyframes rotation {
