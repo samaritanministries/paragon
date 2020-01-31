@@ -60,6 +60,16 @@ $spinner-button: 24px; //1.2rem;
     top: calc(50% - (#{$spinner-button}/2));
     left: calc(50% - (#{$spinner-button}/2));
   }
+
+  &.button--border {
+  &:after {
+    content: "";
+    border-top-color: inherit;
+  }
+  .dashing-icon {
+    visibility: hidden;
+  }
+}
 }
 
 @-webkit-keyframes rotation {
