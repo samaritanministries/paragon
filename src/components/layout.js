@@ -9,7 +9,7 @@ export default ({ children }) => (
     <div className="app-content">
       {children}
       <footer>
-        <div className="copyright">© 2019 Samaritan Ministries International</div>
+        <div className="copyright">© {(new Date().getFullYear())} Samaritan Ministries International</div>
         <a href="https://github.com/samaritanministries/paragon" target="_blank" rel="noopener noreferrer">Download on GitHub</a>
       </footer>
     </div>
