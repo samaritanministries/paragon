@@ -6,7 +6,9 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "deploy": "gatsby build && gh-pages -d public"
+    "deploy": "gatsby build && gh-pages -d public",
+    "stylelint": "stylelint 'src/sass/**/*.scss'",
+    "stylelint-fix": "stylelint 'src/sass/**/*.scss' --fix"
   },
   "dependencies": {
     "@tippy.js/react": "^2.1.1",
