@@ -95,6 +95,24 @@ $sides: (
   }
 }
 
+//Display utilities
+$display: (
+  "-none":          "none",
+  "-inline":        "inline",
+  "-inline-block":  "inline-block",
+  "-block":         "block",
+  "-table":         "table",
+  "-flex":          "flex",
+  "-inline-flex":   "inline-flex"
+);
+
+@each $display, $display-name in $display {
+  $display-type: if($display == '', '', #{$display-name});
+  .d#{$display} { //.display-block
+    display: #{$display-type} !important; //display: block;
+  }
+}
+
 .screen-reader { //content is only "visible" to a screen reader
   display: block;
   height: 1px;
