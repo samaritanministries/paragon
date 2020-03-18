@@ -3,7 +3,6 @@
   "defaultSeverity": "warning",
   "rules": {
     "indentation": "tab",
-    "function-calc-no-invalid": true,
     "unit-no-unknown": true,
     # Rules to fix #
     "scss/at-extend-no-missing-placeholder": null,

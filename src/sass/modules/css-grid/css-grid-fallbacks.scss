@@ -4,23 +4,54 @@ Fallback Classes (Must be First)
 
 //12 10 9 8 6 4 3 2
 .grid { grid-template-columns: repeat(12, 1fr);
-	.grid--full,          				.grid-12	{ @include fallback-grid(100%); }
-	.grid--five-sixths,   				.grid-10	{ @include fallback-grid(83.3333%); }
-	.grid--three-fourths, 				.grid-9	  { @include fallback-grid(75%); }
-	.grid--two-thirds,    				.grid-8	  { @include fallback-grid(66.6666%); }
-	.grid--half,          				.grid-6	  { @include fallback-grid(50%); }
-	.grid--third,         				.grid-4	  { @include fallback-grid(33.3333%); }
-	.grid--fourth,        				.grid-3   { @include fallback-grid(25%);  }
-	.grid--sixth,         				.grid-2   { @include fallback-grid(16.6666%); }
 
-	.grid--full_desktop,  				.grid-12_desktop { @include fallback-grid_desktop(100%); }
-	.grid--five-sixths_desktop,   .grid-10_desktop { @include fallback-grid_desktop(83.3333%); }
-	.grid--three-fourths_desktop, .grid-9_desktop  { @include fallback-grid_desktop(75%); }
-	.grid--two-thirds_desktop,    .grid-8_desktop  { @include fallback-grid_desktop(66.6666%); }
-	.grid--half_desktop,          .grid-6_desktop  { @include fallback-grid_desktop(50%); }
-	.grid--third_desktop,         .grid-4_desktop  { @include fallback-grid_desktop(33.3333%); }
-	.grid--fourth_desktop,        .grid-3_desktop  { @include fallback-grid_desktop(25%);  }
-	.grid--sixth_desktop,         .grid-2_desktop  { @include fallback-grid_desktop(16.6666%); }
+	.grid--full,
+	.grid-12 { @include fallback-grid(100%); }
+
+	.grid--five-sixths,
+	.grid-10 { @include fallback-grid(83.3333%); }
+
+	.grid--three-fourths,
+	.grid-9 { @include fallback-grid(75%); }
+
+	.grid--two-thirds,
+	.grid-8 { @include fallback-grid(66.6666%); }
+
+	.grid--half,
+	.grid-6 { @include fallback-grid(50%); }
+
+	.grid--third,
+	.grid-4 { @include fallback-grid(33.3333%); }
+
+	.grid--fourth,
+	.grid-3 { @include fallback-grid(25%);  }
+
+	.grid--sixth,
+	.grid-2 { @include fallback-grid(16.6666%); }
+
+	.grid--full_desktop,
+	.grid-12_desktop { @include fallback-grid_desktop(100%); }
+
+	.grid--five-sixths_desktop,
+	.grid-10_desktop { @include fallback-grid_desktop(83.3333%); }
+
+	.grid--three-fourths_desktop,
+	.grid-9_desktop { @include fallback-grid_desktop(75%); }
+
+	.grid--two-thirds_desktop,
+	.grid-8_desktop { @include fallback-grid_desktop(66.6666%); }
+
+	.grid--half_desktop,
+	.grid-6_desktop { @include fallback-grid_desktop(50%); }
+
+	.grid--third_desktop,
+	.grid-4_desktop { @include fallback-grid_desktop(33.3333%); }
+
+	.grid--fourth_desktop,
+	.grid-3_desktop { @include fallback-grid_desktop(25%);  }
+
+	.grid--sixth_desktop,
+	.grid-2_desktop { @include fallback-grid_desktop(16.6666%); }
 
 	> * {
 		float: left;
