@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "deploy": "gatsby build && gh-pages -d public",
     "stylelint": "stylelint 'src/sass/**/*.scss'",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@tippy.js/react": "^2.1.1",
-    "gatsby": "^2.1.19",
+    "gatsby": "^2.19.45",
     "gatsby-plugin-google-fonts": "0.0.4",
     "gatsby-plugin-manifest": "^2.0.20",
     "gatsby-plugin-react-helmet": "^3.0.7",
