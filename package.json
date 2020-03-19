@@ -10,6 +10,7 @@
     "stylelint": "stylelint 'src/sass/**/*.scss'",
     "stylelint-fix": "stylelint 'src/sass/**/*.scss' --fix"
   },
+  "pre-commit": "stylelint",
   "dependencies": {
     "@tippy.js/react": "^2.1.1",
     "gatsby": "^2.19.45",
@@ -21,6 +22,7 @@
     "gatsby-transformer-remark": "^2.3.0",
     "jquery": "^3.4.1",
     "node-sass": "^4.13.0",
+    "pre-commit": "^1.2.2",
     "prismjs": "^1.17.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.2",
