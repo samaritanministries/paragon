@@ -1,67 +1,75 @@
 .accordion {
-  @extend .card;
-  @extend %card-shadow;
-  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	@extend .card;
+	@extend %card-shadow;
+	transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
-  .accordion-header {
-    @extend .card-header;
-    padding-bottom: $grid-gutter;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    text-decoration: none;
-    h1, h2, h3, h4 { margin-bottom: 0; } //removes default margin-bottom in accordion headers
-    @media #{$tablet} {
-      border-radius: 5px;
-    }
+	.accordion-header {
+		@extend .card-header;
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		padding-bottom: $grid-gutter;
+		text-decoration: none;
+		transition: background-color 0.2s ease-in-out;
 
-    i.accordion-arrow {
-      transition: transform 0.1s linear;
-      @extend .dashing-icon--arrow-right;
-      &:before { color: $color-black; }
-    }
+		h1,
+		h2,
+		h3,
+		h4 { margin-bottom: 0; } //removes default margin-bottom in accordion headers
 
-    .title,
-    .secondary-title {
-      @media #{$phone} { font-size: $font-size-normal; }
-    }
+		i.accordion-arrow {
+			@extend .dashing-icon--arrow-right;
+			transition: transform 0.1s linear;
+			&::before { color: $color-black; }
+		}
 
-    .title { margin: 0 $space-xs; }
-    .secondary-title {
-      margin-left: auto;
-      white-space: nowrap;
-    }
+		.title,
+		.secondary-title {
+			@media #{$phone} { font-size: $font-size-normal; }
+		}
 
-    &:hover {
-      background-color: $color-hover;
-    }
+		.title { margin: 0 $space-xs; }
 
-  }
-  .accordion-content {
-    @extend .card-content;
-    border-top: 2px solid $color-border;
-    display: none;
-  }
+		.secondary-title {
+			margin-left: auto;
+			white-space: nowrap;
+		}
 
-  .accordion-footer {
-    @extend .card-footer;
-    @extend .has-border;
-    display: none;
-  }
+		&:hover {
+			background-color: $color-hover;
+		}
+		@media #{$tablet} {
+			border-radius: 5px;
+		}
 
-  &:focus,
-  &:hover {
-    outline: none;
-  }
+	}
 
-  &.expanded {
-    .accordion-header i.accordion-arrow { transform: rotate(90deg); }
-    .accordion-header {
-      border-radius: 5px 5px 0 0;
-      &:hover { background-color: none; }
-    }
-    .accordion-content,
-    .accordion-footer { display: block; }
-  }
+	.accordion-content {
+		@extend .card-content;
+		border-top: 2px solid $color-border;
+		display: none;
+	}
+
+	.accordion-footer {
+		@extend .card-footer;
+		@extend .has-border;
+		display: none;
+	}
+
+	&:focus,
+	&:hover {
+		outline: none;
+	}
+
+	&.expanded {
+		.accordion-header i.accordion-arrow { transform: rotate(90deg); }
+
+		.accordion-header {
+			border-radius: 5px 5px 0 0;
+			&:hover { background-color: none; }
+		}
+
+		.accordion-content,
+		.accordion-footer { display: block; }
+	}
 }

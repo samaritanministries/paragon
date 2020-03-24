@@ -1,77 +1,84 @@
 @keyframes slideUp {
-  0% {
-    transform: translateY(100vh);
-  }
-  100% {
-    transform: none;
-  }
+	0% {
+		transform: translateY(100vh);
+	}
+
+	100% {
+		transform: none;
+	}
 }
+
 .overpanel {
-  position: fixed;
-  overflow-y: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: $zindex-overpanel;
-  background-color: $color-background;
-  -webkit-overflow-scrolling: touch;
+	background-color: $color-background;
+	bottom: 0;
+	left: 0;
+	-webkit-overflow-scrolling: touch;
+	overflow-y: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: $zindex-overpanel;
 
-  .title-bar {
-    background-color: $color-white;
-    box-shadow: $header-shadow;
-    @include position(sticky);
-    top: 0;
-    z-index: $zindex-header;
+	.title-bar {
+		@include position(sticky);
+		background-color: $color-white;
+		box-shadow: $header-shadow;
+		top: 0;
+		z-index: $zindex-header;
 
-    .title-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: $content-s;
-      margin: 0 auto;
-      padding: $space-m;
-      * { margin-bottom: 0; } //to overwrite global margin bottom
-      button { white-space: nowrap; margin-left: $space-s; }
-    }
-    .title {
-      @media #{$phone} { font-size: $font-size-medium; }
-    }
-  }
+		.title-content {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin: 0 auto;
+			max-width: $content-s;
+			padding: $space-m;
+			* { margin-bottom: 0; } //to overwrite global margin bottom
+			button { margin-left: $space-s;
+				white-space: nowrap; }
+		}
 
-  .content {
-    max-width: $content-s;
-    margin-top: 0;
-  }
+		.title {
+			@media #{$phone} { font-size: $font-size-medium; }
+		}
+	}
 
-  &.slide-up {
-    animation: slideUp 0.3s ease-in-out;
-    animation-fill-mode: both;
-  }
+	.content {
+		margin-top: 0;
+		max-width: $content-s;
+	}
 
-  /* Utility classes for max-width of Overpanel */
-  &.overpanel-xs {
-    .title-content,
-    .content {
-      max-width: $content-xs;
-    }
-  }
-  &.overpanel-s {
-    .title-content,
-    .content {
-      max-width: $content-s;
-    }
-  }
-  &.overpanel-m {
-    .title-content,
-    .content {
-      max-width: $content-m;
-    }
-  }
-  &.overpanel-l {
-    .title-content,
-    .content {
-      max-width: $content-l;
-    }
-  }
+	&.slide-up {
+		animation: slideUp 0.3s ease-in-out;
+		animation-fill-mode: both;
+	}
+
+	/* Utility classes for max-width of Overpanel */
+	&.overpanel-xs {
+		.title-content,
+		.content {
+			max-width: $content-xs;
+		}
+	}
+
+	&.overpanel-s {
+		.title-content,
+		.content {
+			max-width: $content-s;
+		}
+	}
+
+	&.overpanel-m {
+		.title-content,
+		.content {
+			max-width: $content-m;
+		}
+	}
+
+	&.overpanel-l {
+		.title-content,
+		.content {
+			max-width: $content-l;
+		}
+	}
 }

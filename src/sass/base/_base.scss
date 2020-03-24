@@ -1,19 +1,19 @@
 /* Imported font family
   ================================================== */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700);
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
 
 /* Imported base components
   ================================================== */
-@import "colors/given-colors";
-@import "mixins/mixins";
-@import "variables/variables";
-@import "utilities/utilities";
-@import "extendables/extendables";
+@import 'colors/given-colors';
+@import 'mixins/mixins';
+@import 'variables/variables';
+@import 'utilities/utilities';
+@import 'extendables/extendables';
 
 /* Default base element styles
   ================================================== */
 
 hr {
-  border: 0;
-  border-top: 2px solid $color-border;
+	border: 0;
+	border-top: 2px solid $color-border;
 }

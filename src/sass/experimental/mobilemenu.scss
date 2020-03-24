@@ -18,7 +18,7 @@ This is an EXPERIMENT and is not ready to be included in production!
 
 //Variables
 $animation-time: 0.3s;
-$sidebar-highlight:  #9D6CDE;
+$sidebar-highlight: #9d6cde;
 $sidebar-text-color: $color-white;
 $sidebar-width: 12rem;
 $sidebar-background: #354052;
@@ -26,168 +26,172 @@ $sidebar-background: #354052;
 //SIDEBAR
 
 .sidebar {
-  float: left;/*fallback*/
-  min-height: calc(100vh - #{$header-height});
-  min-width: $sidebar-width;
-  position: fixed;
-  left: 0;//left or right
-  top: $header-height;
 
-  display: none;
+	display: none;
+	float: left;
+	left: 0;
+	min-height: calc(100vh - #{$header-height});
+	min-width: $sidebar-width;
+	position: fixed;
+	top: $header-height;/*fallback*///left or right
 
-  @media #{$tablet} {
-    display: flex;
-  }
+	@media #{$tablet} {
+		display: flex;
+	}
 }
 
 .mobile-sidebar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 90%;
+	bottom: 0;
+	position: absolute;
+	top: 0;
+	width: 90%;
 }
 
-.sidebar, .mobile-sidebar { background-color: $sidebar-background; }
-.sidebar-nav, .mobile-sidebar-nav {
-  list-style-type: none;
-  padding: 0;
+.sidebar,
+.mobile-sidebar { background-color: $sidebar-background; }
 
-  li {
-    padding-left: $grid-gutter;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
+.sidebar-nav,
+.mobile-sidebar-nav {
+	list-style-type: none;
+	padding: 0;
 
-    &:hover { background-color: $sidebar-highlight; }
+	li {
 
-    a {
-      color: $sidebar-text-color;
-      width: 100%;
-      height: 100%;
-      padding-left: $space-xs;
-      display: flex;
-      align-items: center;
-    }
+		@extend %icon-white;
+		align-items: center;
+		display: flex;
+		height: 2.5rem;
+		padding-left: $grid-gutter;
 
-    @extend %icon-white;
-  }
+		&:hover { background-color: $sidebar-highlight; }
+
+		a {
+			align-items: center;
+			color: $sidebar-text-color;
+			display: flex;
+			height: 100%;
+			padding-left: $space-xs;
+			width: 100%;
+		}
+	}
 }
 
 .sidebar-nav { width: $sidebar-width; }
 .mobile-sidebar-nav { width: 100%; }
 
 .mobile-overlay {
-  transition: width $animation-time;
 
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: $zindex-mobilemenu;
-  width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: width $animation-time;
+	width: 100%;
+	z-index: $zindex-mobilemenu;
 
-  *{
-    transition: opacity $animation-time;
-    opacity: 1.0;
-  }
+	* {
+		opacity: 1;
+		transition: opacity $animation-time;
+	}
 
-  &.is-collapsed {
-    transition: width $animation-time;
-    width: 0px;
-    overflow: hidden;
+	&.is-collapsed {
+		overflow: hidden;
+		transition: width $animation-time;
+		width: 0;
 
-    *{
-      transition: opacity $animation-time;
-      opacity: 0.0;
-    }
-  }
+		* {
+			opacity: 0;
+			transition: opacity $animation-time;
+		}
+	}
 
-  .mobile-profile {
-    width: 100%;
-    max-height: 15rem;
-    background-color: #333333;
-  }
+	.mobile-profile {
+		background-color: #333;
+		max-height: 15rem;
+		width: 100%;
+	}
 }
 
 .button--mobile-sidebar {
-  @extend %icon-white;
-  @extend .button;
-  @extend .button--transparent;
-  @extend .button--icon;
-  @extend .button--white;
-  @media #{$tablet} { display: none !important; }
+	@extend %icon-white;
+	@extend .button;
+	@extend .button--transparent;
+	@extend .button--icon;
+	@extend .button--white;
+	@media #{$tablet} { display: none !important; }
 }
 
-.mobile-profile{
-  padding-top: $space-m;
-  .button--mobile-sidebar {
-    display: inline-block;
-    margin-left: $space-m !important;
-  }
+.mobile-profile {
+	padding-top: $space-m;
+
+	.button--mobile-sidebar {
+		display: inline-block;
+		margin-left: $space-m !important;
+	}
 }
 
 .mobile-profile--account {
+	display: block;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr auto auto;
 	margin-top: 1.5rem;
 	padding: $grid-gutter;
-  display: block;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto auto;
 
-  .profile-image {
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	.profile-image {
+		align-items: center;
+		background-color: $color-gray-3;
 
-    border-radius: 50px;
-    background-color: $color-gray-3;
-    margin-right: auto;
+		border-radius: 50px;
+		display: flex;
 
-    float: left;//fallback
-  }
+		float: left;
+		height: 3rem;
+		justify-content: center;
+		margin-right: auto;
+		width: 3rem;//fallback
+	}
 
-  .profile-name {
-    color: $color-white;
-    font-size: 1.25rem;
-    font-weight: $font-weight-semibold;
-    grid-column: 1 / 3;
+	.profile-name {
 
-    clear: both;//fallback
-    padding: $space-xs 0rem;
-  }
+		clear: both;
+		color: $color-white;
+		font-size: 1.25rem;
+		font-weight: $font-weight-semibold;
+		grid-column: 1 / 3;
+		padding: $space-xs 0;//fallback
+	}
 
-  .profile-email {
-    color: $color-white;
-    grid-column: 1 / 3;
-  }
+	.profile-email {
+		color: $color-white;
+		grid-column: 1 / 3;
+	}
 
-  .profile-edit {
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	.profile-edit {
+		align-items: center;
+		display: flex;
 
-    margin-left: auto;
+		float: right;
+		height: 3rem;
+		justify-content: center;
 
-    i:before { color: $color-white; }
+		margin-left: auto;
+		width: 3rem;
 
-    float: right;//fallback
-  }
+		i::before { color: $color-white; }//fallback
+	}
 }
 
 //fallback
 @supports (display: grid) {
-  .mobile-profile--account > * { width: auto; }
-  .mobile-profile--account { display: grid; }
+	.mobile-profile--account > * { width: auto; }
+	.mobile-profile--account { display: grid; }
 }
 
 .map { //TODO rename this
-  .sidebar {
-    left: auto;
-    right: 0;
-  }
+	.sidebar {
+		left: auto;
+		right: 0;
+	}
 }

@@ -21,230 +21,242 @@ $sub-nav-text-color: $color-purple !default;
 $sub-nav-underline-width: 4px;
 $sub-nav-underline-color: $color-data-teal !default;
 
-$header-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5) !default;
+$header-shadow: 0 1px 5px rgba(0, 0, 0, 0.5) !default;
 
 .header {
-  z-index: calc(#{$zindex-header} + 1);
-  display: flex;
-  align-items: center;
-  padding: $space-xs;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: $header-height;
-  max-height: $header-height;
+	align-items: center;
+	display: flex;
+	height: $header-height;
+	left: 0;
+	margin: auto;
+	max-height: $header-height;
 
-  max-width: $content-width;
-  margin: auto;
+	max-width: $content-width;
+	padding: $space-xs;
+	position: fixed;
+	right: 0;
+	top: 0;
 
-  width: 100%;//IE wants this... okay IE. Here you are.
+	width: 100%;
+	z-index: calc(#{$zindex-header} + 1);
 
-  &::after {
-    z-index: $zindex-negative;
-    border-bottom: $nav-separator-width solid $color-border;
-  	content: "";
-  	width: 100%;
-  	height: calc(#{$header-height} + #{$nav-separator-width});
-    background: $header-color;
-  	position: fixed;
-  	top: 0;
-  	left: 0;
-  }
+	&::after {
+		background: $header-color;
+		border-bottom: $nav-separator-width solid $color-border;
+		content: '';
+		height: calc(#{$header-height} + #{$nav-separator-width});
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: $zindex-negative;
+	}
 
-  .header-nav {
+	.header-nav {
+		ul {
+			@extend %remove-list-style;
 
-    ul {
-      @extend %remove-list-style;
+			li {
+				align-items: center;
+				display: inline-block;
 
-      li {
-        display: inline-block;
-        align-items: center;
+				a {
+					align-items: center;
+					color: $header-text-color;
+					display: flex;
+					font-size: 1.1rem;
+					font-weight: $font-weight-semibold;
+					margin: 0 $space-m;
+					position: relative;
+					text-decoration: none;
 
-        a {
-          margin: 0 $space-m;
-          display: flex;
-          align-items: center;
-          color: $header-text-color;
-          font-weight: $font-weight-semibold;
-          font-size: 1.1rem;
-          text-decoration: none;
-          position: relative;
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: calc(-#{$header-underline-width} - 2px);
-            right: 0;
-            left: 0;
-            height: $header-underline-width;
+					&::after {
 
-            visibility: hidden;
-            -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+						@include transition(all 0.2s ease-out);
+						bottom: calc(-#{$header-underline-width} - 2px);
+						content: '';
+						height: $header-underline-width;
+						left: 0;
+						position: absolute;
+						right: 0;
+						-webkit-transform: scaleX(0);
+						transform: scaleX(0);
 
-            @include transition(all 0.2s ease-out);
-          }
+						visibility: hidden;
+					}
 
-          &:hover, &.active {
-            opacity: 1;
-            &::after {
-              bottom: calc(-#{$header-underline-width} - 2px);
-              right: 0;
-              left: 0;
-              height: $header-underline-width;
+					&:hover,
+					&.active {
+						opacity: 1;
 
-              background-color: $color-data-teal;
-              border-radius: 10px;
+						&::after {
 
-              visibility: visible;
-              -webkit-transform: scaleX(1);
-              transform: scaleX(1);
-            }
-          }
+							background-color: $color-data-teal;
+							border-radius: 10px;
+							bottom: calc(-#{$header-underline-width} - 2px);
+							height: $header-underline-width;
+							left: 0;
+							right: 0;
+							-webkit-transform: scaleX(1);
+							transform: scaleX(1);
 
-        }
-      }
-    }
-  }
-  .logo + .header-nav {
-    margin-left: $space-m;
-  }
+							visibility: visible;
+						}
+					}
+
+				}
+			}
+		}
+	}
+
+	.logo + .header-nav {
+		margin-left: $space-m;
+	}//IE wants this... okay IE. Here you are.
 }
 
 .content {
-  z-index: $zindex-content;
-  max-width: $content-width;
-  margin: auto;
-  margin-top: $header-height;
-  -webkit-overflow-scrolling: touch;
+	margin: auto;
+	margin-top: $header-height;
+	max-width: $content-width;
+	-webkit-overflow-scrolling: touch;
+	z-index: $zindex-content;
 }
 
 .sub-nav {
-  z-index: $zindex-header;
-  height: $sub-nav-height;
+	height: $sub-nav-height;
+	left: 0;
+	margin: auto;
 
-  ~.content {
-    margin-top: calc(#{$header-height} + #{$sub-nav-height});
-  }
+	max-width: $content-width;
 
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: $header-height;
+	position: fixed;
+	right: 0;
+	top: $header-height;
 
-  max-width: $content-width;
-  margin: auto;
+	width: 100%;
+	z-index: $zindex-header;
 
-  width: 100%;
+	~.content {
+		margin-top: calc(#{$header-height} + #{$sub-nav-height});
+	}
 
-  &::after {
-  	content: "";
-    box-shadow: $header-shadow;
-  	width: 100%;
-  	height: $sub-nav-height;
-    background-color: $sub-nav-color;
-  	position: fixed;
-  	top: $header-height;
-  	left: 0;
-  	z-index: $zindex-negative;
-  }
+	&::after {
+		background-color: $sub-nav-color;
+		box-shadow: $header-shadow;
+		content: '';
+		height: $sub-nav-height;
+		left: 0;
+		position: fixed;
+		top: $header-height;
+		width: 100%;
+		z-index: $zindex-negative;
+	}
 
-  ul, li, a {
-    height: 100%;
-  }
+	ul,
+	li,
+	a {
+		height: 100%;
+	}
 
-  ul {
-    @extend %remove-list-style;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
+	ul {
+		@extend %remove-list-style;
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
 
-    li {
-      display: inline-block;
-      margin: 0 $space-m;
+		li {
+			display: inline-block;
+			margin: 0 $space-m;
 
-      a {
-        display: flex;
-        align-items: center;
-        color: $sub-nav-text-color;
-        font-weight: $font-weight-semibold;
-        font-size: 1rem;
-        text-decoration: none;
-        position: relative;
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          height: $header-underline-width;
+			a {
+				align-items: center;
+				color: $sub-nav-text-color;
+				display: flex;
+				font-size: 1rem;
+				font-weight: $font-weight-semibold;
+				position: relative;
+				text-decoration: none;
 
-          visibility: hidden;
-          -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+				&::after {
 
-          @include transition(all 0.2s ease-out);
-        }
+					@include transition(all 0.2s ease-out);
+					bottom: 0;
+					content: '';
+					height: $header-underline-width;
+					left: 0;
+					position: absolute;
+					right: 0;
+					-webkit-transform: scaleX(0);
+					transform: scaleX(0);
 
-        &:hover, &.active  {
-          opacity: 1;
-          &::after {
-            bottom: 0;
-            right: 0;
-            left: 0;
-            height: $header-underline-width;
+					visibility: hidden;
+				}
 
-            background-color: $color-data-teal;
-            border-radius: 10px;
+				&:hover,
+				&.active {
+					opacity: 1;
 
-            visibility: visible;
-            -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-          }
-        }
-      }
-    }
-  }
+					&::after {
+
+						background-color: $color-data-teal;
+						border-radius: 10px;
+						bottom: 0;
+						height: $header-underline-width;
+						left: 0;
+						right: 0;
+						-webkit-transform: scaleX(1);
+						transform: scaleX(1);
+
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
 }
 
 /* Global Banner Adjustment
   =========================================================================== */
 .global-banner-container {
-  + .header {
-    top: $global-banner-height_phone;
-    &::after { top: $global-banner-height_phone; }
+	+ .header {
+		top: $global-banner-height_phone;
+		&::after { top: $global-banner-height_phone; }
 
-    @media #{$tablet} {
-      top: $global-banner-height;
-      &::after { top: $global-banner-height; }
-    }
+		+ .sub-nav {
+			top: calc(#{$global-banner-height_phone} + #{$header-height});
 
-    + .sub-nav {
-      top: calc(#{$global-banner-height_phone} + #{$header-height});
-      &::after {
-        top: calc(#{$global-banner-height_phone} + #{$header-height});
-      }
-      ~.content {
-        margin-top: calc(#{$global-banner-height_phone} + #{$header-height} + #{$sub-nav-height});
-      }
-      @media #{$tablet} {
-        top: calc(#{$global-banner-height} + #{$header-height});
-        &::after {
-          top: calc(#{$global-banner-height} + #{$header-height});
-        }
-        ~.content {
-          margin-top: calc(#{$global-banner-height} + #{$header-height} + #{$sub-nav-height});
-        }
-      }
-    }
+			&::after {
+				top: calc(#{$global-banner-height_phone} + #{$header-height});
+			}
 
-    ~.content {
-      margin-top: calc(#{$global-banner-height_phone} + #{$header-height});
-    }
-    @media #{$tablet} {
-      ~.content {
-        margin-top: calc(#{$global-banner-height} + #{$header-height});
-      }
-    }
-  }
+			~.content {
+				margin-top: calc(#{$global-banner-height_phone} + #{$header-height} + #{$sub-nav-height});
+			}
+			@media #{$tablet} {
+				top: calc(#{$global-banner-height} + #{$header-height});
+
+				&::after {
+					top: calc(#{$global-banner-height} + #{$header-height});
+				}
+
+				~.content {
+					margin-top: calc(#{$global-banner-height} + #{$header-height} + #{$sub-nav-height});
+				}
+			}
+		}
+
+		~.content {
+			margin-top: calc(#{$global-banner-height_phone} + #{$header-height});
+		}
+
+		@media #{$tablet} {
+			top: $global-banner-height;
+			&::after { top: $global-banner-height; }
+		}
+		@media #{$tablet} {
+			~.content {
+				margin-top: calc(#{$global-banner-height} + #{$header-height});
+			}
+		}
+	}
 }
