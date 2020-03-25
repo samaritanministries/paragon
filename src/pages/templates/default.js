@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { Container, Header } from '../../sass/modules/accordion';
 // The scss needs to be imported here for running 'gatsby build'
 import '../../sass/example-page/example-page.scss'
 import '../../sass/experimental/mobilemenu.scss'
@@ -45,6 +46,10 @@ export default () => (
 					<div className="card-content">
 						<h1>Primary Header</h1>
 						<p>Header description</p>
+						<Container>
+							<Header title={"Test"}>
+							</Header>
+						</Container>
 						<Link to="/templates/overpanel">Full Page</Link>
 					</div>
 				</div>
