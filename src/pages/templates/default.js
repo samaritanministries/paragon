@@ -8,7 +8,7 @@ import '../../sass/experimental/placeholder.scss'
 export default () => (
 
 <React.Fragment>
-	
+
 	<div className="header-container">
 		<header className="header">
 			<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
@@ -50,7 +50,7 @@ export default () => (
 					<div className="card-content">
 						<h1>Primary Header</h1>
 						<p>Header description</p>
-						<Link to="/templates/overpanel">Full Page</Link>
+						<Link to="/templates/global-banner">Full Page</Link>
 					</div>
 				</div>
 

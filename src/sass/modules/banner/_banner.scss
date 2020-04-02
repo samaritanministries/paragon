@@ -91,18 +91,18 @@ $global-banner-height_phone: 4rem;
 .global-banner-container {
 	@include shared-banner;
 	animation: fadein 0.25s;
-	height: $global-banner-height_phone;
-	left: 0;
-	max-height: $global-banner-height_phone;
-	position: fixed;
-	right: 0;
-	top: 0;
+	// height: $global-banner-height_phone;
+	// left: 0;
+	// max-height: $global-banner-height_phone;
+	// position: fixed;
+	// right: 0;
+	// top: 0;
 	z-index: 4;
 
-	@media #{$tablet} {
-		height: $global-banner-height;
-		max-height: $global-banner-height;
-	}
+	// @media #{$tablet} {
+	// 	height: $global-banner-height;
+	// 	max-height: $global-banner-height;
+	// }
 }
 
 .global-banner {
@@ -112,12 +112,14 @@ $global-banner-height_phone: 4rem;
 	margin: auto;
 
 	max-width: $content-width;
-	overflow-x: auto;
-	overflow-y: hidden;
-	padding: 0 $space-m;
-	white-space: nowrap;
+	padding: $space-s $space-m;
 
 	width: 100%;//IE wants this... okay IE. Here you are.
+
+	i {
+		align-self: baseline;
+		margin-top: 0.2rem;
+	}
 
 	p {
 		font-size: $font-size-normal;
