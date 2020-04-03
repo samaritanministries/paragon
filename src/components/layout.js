@@ -8,7 +8,7 @@ export default ({ children }) => (
     <Sidebar />
     <div className="app-content">
       {children}
-      <footer>
+      <footer className="example">
         <div className="copyright">© {(new Date().getFullYear())} Samaritan Ministries International</div>
         <a href="https://github.com/samaritanministries/paragon" target="_blank" rel="noopener noreferrer">Download on GitHub</a>
       </footer>

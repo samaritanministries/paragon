@@ -16,7 +16,7 @@ export default ({ children }) => (
 
     <div className="app-content">
       {children}
-      <footer>
+      <footer className="example">
         <div className="copyright">
           © 2018 Samaritan Ministries International
         </div>

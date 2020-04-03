@@ -1,3 +1,4 @@
+import AppFooter from './footer';
 import React from 'react'
 import { Link } from 'gatsby'
 // The scss needs to be imported here for running 'gatsby build'
@@ -126,6 +127,7 @@ export default () => (
 			</div>
 		</div>
 	</main>
+	<AppFooter />
 </React.Fragment>
 
 )
