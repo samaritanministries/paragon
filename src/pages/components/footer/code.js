@@ -31,7 +31,7 @@ class FooterCode extends React.Component {
             </h2>
 
             <div className="example-container">
-              <footer className="footer" style={{ marginTop: "0" }}>
+              <footer className="footer" style={{ marginTop: "0", marginBottom: "1rem" }}>
 
                 <nav className="footer-nav">
                   <ul>
@@ -54,6 +54,32 @@ class FooterCode extends React.Component {
                 </nav>
 
               </footer>
+
+              <CodeToggle>
+{`<footer class="footer">
+
+  <nav class="footer-nav">
+    <ul>
+      <li>
+        <a href="" target="_blank">
+          Careers <i class="dashing-icon dashing-icon--new-tab dashing-icon--blue"></i>
+        </a>
+      </li>
+      <li>
+        <a href="" target="_blank">
+        Guidelines <i class="dashing-icon dashing-icon--new-tab dashing-icon--blue"></i>
+        </a>
+      </li>
+      <li>
+        <a href="" target="_blank">
+          {"What's New"}
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</footer>`}
+              </CodeToggle>
             </div>
           </div>
         </AppContent>

@@ -43,14 +43,16 @@ class NavigationCode extends React.Component {
             </div>
 
               <CodeToggle>
-{`<header className="header">
-  <nav class="header-nav">
-    <ul>
-      <li><Link to={"/"} class="active">Page 1</Link></li>
-      <li><Link to={"/"}>Page 2</Link></li>
-      <li><Link to={"/"}>Page 3</Link></li>
-    </ul>
-  </nav>
+{`<header class="header-container">
+  <div class="header">
+    <nav class="header-nav">
+      <ul>
+        <li><a class="active">Page 1</a></li>
+        <li><a>Page 2</a></li>
+        <li><a>Page 3</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>`}
               </CodeToggle>
               </div>
@@ -60,8 +62,8 @@ class NavigationCode extends React.Component {
             </h2>
             <div className="example-container relative">
 
-              <div className="header-container">
-                <header className="header">
+              <header className="header-container">
+                <div className="header">
               		<nav className="header-nav">
               			<ul>
               				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
@@ -69,8 +71,8 @@ class NavigationCode extends React.Component {
               				<li><Link to={"/components/navigation/code"}>Page 3</Link></li>
               			</ul>
               		</nav>
-              	</header>
-              </div>
+              	</div>
+              </header>
 
               <div className="sub-nav-container" style={{ marginBottom: "1rem" }}>
                 <nav className="sub-nav">
@@ -83,23 +85,27 @@ class NavigationCode extends React.Component {
                 </nav>
               </div>
               <CodeToggle>
-{`<header className="header">
-  <nav class="header-nav">
+{`<header class="header-container">
+  <div class="header">
+    <nav class="header-nav">
+      <ul>
+        <li><a class="active">Page 1</a></li>
+        <li><a>Page 2</a></li>
+        <li><a>Page 3</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="sub-nav-container">
+  <nav class="sub-nav">
     <ul>
-      <li><Link to={"/"} class="active">Page 1</Link></li>
-      <li><Link to={"/"}>Page 2</Link></li>
-      <li><Link to={"/"}>Page 3</Link></li>
+      <li><a class="active">Option 1</a></li>
+      <li><a>Option 2</a></li>
+      <li><a>Option 3</a></li>
+      <li><a>Option 4</a></li>
     </ul>
   </nav>
-</header>
-<nav class="sub-nav">
-  <ul>
-    <li><Link to={"/"} class="active">Option 1</Link></li>
-    <li><Link to={"/"}>Option 2</Link></li>
-    <li><Link to={"/"}>Option 3</Link></li>
-    <li><Link to={"/"}>Option 4</Link></li>
-  </ul>
-</nav>`}
+</div>`}
               </CodeToggle>
               </div>
 
