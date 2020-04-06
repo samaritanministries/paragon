@@ -1,9 +1,13 @@
 .footer-container {
 	bottom: 0;
-	margin-top: -#{$footer-height};
+	margin-top: -#{$footer-height_phone};
 	position: absolute;
 	top: unset;
 	width: 100%;
+
+	@media #{$tablet} {
+		margin-top: -#{$footer-height};
+	}
 }
 
 .footer {
