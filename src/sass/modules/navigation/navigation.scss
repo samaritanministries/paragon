@@ -6,6 +6,7 @@ $content-width: $global-content-width;
 
 $header-height: 4rem;
 $sub-nav-height: 3rem;
+$footer-height: 6rem; //includes padding
 $nav-separator-width: 2px;
 $global-banner-height: 3.5rem;
 $global-banner-height_phone: 4rem;
@@ -110,11 +111,12 @@ $header-shadow: 0 1px 5px rgba(0, 0, 0, 0.5) !default;
 .content {
 	margin: auto;
 	max-width: $content-width;
+	min-height: calc(100vh - #{$header-height} - #{$sub-nav-height} - #{$footer-height});
 	-webkit-overflow-scrolling: touch;
 	z-index: $zindex-content;
 }
 
-.sub-nav--container {
+.sub-nav-container {
 	background-color: $sub-nav-color;
 	box-shadow: $header-shadow;
 	position: relative;
@@ -194,46 +196,46 @@ $header-shadow: 0 1px 5px rgba(0, 0, 0, 0.5) !default;
 
 /* Global Banner Adjustment
   =========================================================================== */
-.global-banner-container {
-	+ .header {
-		top: $global-banner-height_phone;
-		&::after { top: $global-banner-height_phone; }
-
-		+ .sub-nav {
-			top: calc(#{$global-banner-height_phone} + #{$header-height});
-
-			&::after {
-				top: calc(#{$global-banner-height_phone} + #{$header-height});
-			}
-
-			~.content {
-				margin-top: calc(#{$global-banner-height_phone} + #{$header-height} + #{$sub-nav-height});
-			}
-			@media #{$tablet} {
-				top: calc(#{$global-banner-height} + #{$header-height});
-
-				&::after {
-					top: calc(#{$global-banner-height} + #{$header-height});
-				}
-
-				~.content {
-					margin-top: calc(#{$global-banner-height} + #{$header-height} + #{$sub-nav-height});
-				}
-			}
-		}
-
-		~.content {
-			margin-top: calc(#{$global-banner-height_phone} + #{$header-height});
-		}
-
-		@media #{$tablet} {
-			top: $global-banner-height;
-			&::after { top: $global-banner-height; }
-		}
-		@media #{$tablet} {
-			~.content {
-				margin-top: calc(#{$global-banner-height} + #{$header-height});
-			}
-		}
-	}
-}
+// .global-banner-container {
+// 	+ .header {
+// 		top: $global-banner-height_phone;
+// 		&::after { top: $global-banner-height_phone; }
+//
+// 		+ .sub-nav {
+// 			top: calc(#{$global-banner-height_phone} + #{$header-height});
+//
+// 			&::after {
+// 				top: calc(#{$global-banner-height_phone} + #{$header-height});
+// 			}
+//
+// 			~.content {
+// 				margin-top: calc(#{$global-banner-height_phone} + #{$header-height} + #{$sub-nav-height});
+// 			}
+// 			@media #{$tablet} {
+// 				top: calc(#{$global-banner-height} + #{$header-height});
+//
+// 				&::after {
+// 					top: calc(#{$global-banner-height} + #{$header-height});
+// 				}
+//
+// 				~.content {
+// 					margin-top: calc(#{$global-banner-height} + #{$header-height} + #{$sub-nav-height});
+// 				}
+// 			}
+// 		}
+//
+// 		~.content {
+// 			margin-top: calc(#{$global-banner-height_phone} + #{$header-height});
+// 		}
+//
+// 		@media #{$tablet} {
+// 			top: $global-banner-height;
+// 			&::after { top: $global-banner-height; }
+// 		}
+// 		@media #{$tablet} {
+// 			~.content {
+// 				margin-top: calc(#{$global-banner-height} + #{$header-height});
+// 			}
+// 		}
+// 	}
+// }

@@ -33,7 +33,7 @@ export default () => (
 		</header>
 	</div>
 
-	<div className="sub-nav--container">
+	<div className="sub-nav-container">
 		<nav className="sub-nav">
 			<ul>
 				<li><Link to={"/"} className="active">Option 1</Link></li>

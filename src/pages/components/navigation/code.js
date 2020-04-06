@@ -30,7 +30,8 @@ class NavigationCode extends React.Component {
             </h2>
             <div className="example-container relative">
 
-              <header className="header mb-space-m">
+            <div className="header-container" style={{ marginBottom: "1rem" }}>
+              <header className="header">
             		<nav className="header-nav">
             			<ul>
             				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
@@ -39,6 +40,7 @@ class NavigationCode extends React.Component {
             			</ul>
             		</nav>
             	</header>
+            </div>
 
               <CodeToggle>
 {`<header className="header">
@@ -58,24 +60,28 @@ class NavigationCode extends React.Component {
             </h2>
             <div className="example-container relative">
 
-              <header className="header">
-            		<nav className="header-nav">
-            			<ul>
-            				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
-            				<li><Link to={"/components/navigation/code"}>Page 2</Link></li>
-            				<li><Link to={"/components/navigation/code"}>Page 3</Link></li>
-            			</ul>
-            		</nav>
-            	</header>
-              <nav className="sub-nav mb-space-m">
-                <ul>
-                  <li><Link to={"/components/navigation/code"} className="active">Option 1</Link></li>
-                  <li><Link to={"/components/navigation/code"}>Option 2</Link></li>
-                  <li><Link to={"/components/navigation/code"}>Option 3</Link></li>
-                  <li><Link to={"/components/navigation/code"}>Option 4</Link></li>
-                </ul>
-              </nav>
+              <div className="header-container">
+                <header className="header">
+              		<nav className="header-nav">
+              			<ul>
+              				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
+              				<li><Link to={"/components/navigation/code"}>Page 2</Link></li>
+              				<li><Link to={"/components/navigation/code"}>Page 3</Link></li>
+              			</ul>
+              		</nav>
+              	</header>
+              </div>
 
+              <div className="sub-nav-container" style={{ marginBottom: "1rem" }}>
+                <nav className="sub-nav">
+                  <ul>
+                    <li><Link to={"/components/navigation/code"} className="active">Option 1</Link></li>
+                    <li><Link to={"/components/navigation/code"}>Option 2</Link></li>
+                    <li><Link to={"/components/navigation/code"}>Option 3</Link></li>
+                    <li><Link to={"/components/navigation/code"}>Option 4</Link></li>
+                  </ul>
+                </nav>
+              </div>
               <CodeToggle>
 {`<header className="header">
   <nav class="header-nav">

@@ -21,14 +21,13 @@
 // 		max-width: calc(1200px - 2rem);
 // 	}
 // }
-
-$footer-height: 4rem;
-
-html,
-body,
-#application {
-	height: 100%;
-}
+//
+//
+// html,
+// body,
+// #application {
+// 	height: 100%;
+// }
 
 .footer {
 	align-items: center;
@@ -38,7 +37,7 @@ body,
 	margin-top: 2rem;
 	// max-width: $global-content-width;
 	max-width: 1200px;
-	padding: $space-m;
+	padding: $space-m $space-m $space-xs $space-m;
 	width: 100%;
 }
 
@@ -48,8 +47,12 @@ body,
 		display: flex;
 		flex-wrap: wrap;
 
-		li:not(:last-of-type) {
+		li {
 			margin: 0 $space-l $space-xs 0;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
 		}
 	}
 }
