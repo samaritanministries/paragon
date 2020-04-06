@@ -1,33 +1,10 @@
-// $footer-color: $color-white !default; //Override this variable to change the color of your footer
-//
-// .app-footer {
-// 	background-color: rgba($footer-color, 0.95);
-// 	box-shadow: 0 -2px 30px 0 rgba($color-shadow, 0.16);
-// 	float: left;
-// 	left: 0;
-// 	max-width: 100%;
-// 	padding: 1rem;
-// 	position: absolute;
-// 	width: 100%;
-//
-// 	&.fixed {
-// 		bottom: 0;
-// 		left: 0;
-// 		position: fixed;
-// 		right: 0;
-// 	}
-//
-// 	.row.no-padding {
-// 		max-width: calc(1200px - 2rem);
-// 	}
-// }
-//
-//
-// html,
-// body,
-// #application {
-// 	height: 100%;
-// }
+.footer-container {
+	bottom: 0;
+	margin-top: -#{$footer-height};
+	position: absolute;
+	top: unset;
+	width: 100%;
+}
 
 .footer {
 	align-items: center;

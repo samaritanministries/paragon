@@ -4,28 +4,30 @@ export default class AppFooter extends React.Component {
 
   render() {
     return (
-      <footer className="footer">
+      <footer className="footer-container">
+        <div className="footer">
 
-        <nav className="footer-nav">
-          <ul>
-            <li>
-              <a href="" target="_blank">
-                Careers <i className="dashing-icon dashing-icon--new-tab dashing-icon--blue" />
-              </a>
-            </li>
-            <li>
-              <a href="" target="_blank">
-              Guidelines <i className="dashing-icon dashing-icon--new-tab dashing-icon--blue" />
-              </a>
-            </li>
-            <li>
-              <a href="" target="_blank">
-                {"What's New"}
-              </a>
-            </li>
-          </ul>
-        </nav>
-
+          <nav className="footer-nav">
+            <ul>
+              <li>
+                <a href="" target="_blank">
+                  Careers <i className="dashing-icon dashing-icon--new-tab dashing-icon--blue" />
+                </a>
+              </li>
+              <li>
+                <a href="" target="_blank">
+                Guidelines <i className="dashing-icon dashing-icon--new-tab dashing-icon--blue" />
+                </a>
+              </li>
+              <li>
+                <a href="" target="_blank">
+                  {"What's New"}
+                </a>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
       </footer>
     );
   }

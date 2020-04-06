@@ -25,6 +25,12 @@ $header-z-index: calc(#{$zindex-header} + 1);
 
 $header-shadow: 0 1px 5px rgba(0, 0, 0, 0.5) !default;
 
+//used to give the footer the proper positioning
+body {
+	min-height: 100vh;
+	position: relative;
+}
+
 .header-container {
 	background: $header-color;
 	border-bottom: $nav-separator-width solid $color-border;
@@ -111,8 +117,9 @@ $header-shadow: 0 1px 5px rgba(0, 0, 0, 0.5) !default;
 .content {
 	margin: auto;
 	max-width: $content-width;
-	min-height: calc(100vh - #{$header-height} - #{$sub-nav-height} - #{$footer-height});
 	-webkit-overflow-scrolling: touch;
+	padding-bottom: $footer-height;
+	position: relative;
 	z-index: $zindex-content;
 }
 
