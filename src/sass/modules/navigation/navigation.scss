@@ -9,8 +9,6 @@ $sub-nav-height: 3rem;
 $footer-height: 6rem; //includes padding
 $footer-height_phone: 7rem;
 $nav-separator-width: 2px;
-$global-banner-height: 3.5rem;
-$global-banner-height_phone: 4rem;
 
 //Theme
 $header-color: $color-white !default;
@@ -33,17 +31,22 @@ body {
 }
 
 .header-container {
+	position: sticky;
+	top: 0;
+	z-index: $header-z-index;
+}
+
+.primary-nav-container {
 	background: $header-color;
 	border-bottom: $nav-separator-width solid $color-border;
 	position: relative;
 	z-index: $header-z-index;
 }
 
-.header {
+.primary-nav {
 	align-items: center;
 	display: flex;
 	height: $header-height;
-	left: 0;
 	margin: auto;
 	max-height: $header-height;
 
@@ -53,59 +56,57 @@ body {
 
 	width: 100%;
 
-	.header-nav {
-		ul {
-			@extend %remove-list-style;
+	ul {
+		@extend %remove-list-style;
 
-			li {
+		li {
+			align-items: center;
+			display: inline-block;
+
+			a {
 				align-items: center;
-				display: inline-block;
+				color: $header-text-color;
+				display: flex;
+				font-size: 1.1rem;
+				font-weight: $font-weight-semibold;
+				margin: 0 $space-m;
+				position: relative;
+				text-decoration: none;
 
-				a {
-					align-items: center;
-					color: $header-text-color;
-					display: flex;
-					font-size: 1.1rem;
-					font-weight: $font-weight-semibold;
-					margin: 0 $space-m;
-					position: relative;
-					text-decoration: none;
+				&::after {
+
+					@include transition(all 0.2s ease-out);
+					bottom: calc(-#{$header-underline-width} - 2px);
+					content: '';
+					height: $header-underline-width;
+					left: 0;
+					position: absolute;
+					right: 0;
+					-webkit-transform: scaleX(0);
+					transform: scaleX(0);
+
+					visibility: hidden;
+				}
+
+				&:hover,
+				&.active {
+					opacity: 1;
 
 					&::after {
 
-						@include transition(all 0.2s ease-out);
+						background-color: $header-underline-color;
+						border-radius: 10px;
 						bottom: calc(-#{$header-underline-width} - 2px);
-						content: '';
 						height: $header-underline-width;
 						left: 0;
-						position: absolute;
 						right: 0;
-						-webkit-transform: scaleX(0);
-						transform: scaleX(0);
+						-webkit-transform: scaleX(1);
+						transform: scaleX(1);
 
-						visibility: hidden;
+						visibility: visible;
 					}
-
-					&:hover,
-					&.active {
-						opacity: 1;
-
-						&::after {
-
-							background-color: $color-data-teal;
-							border-radius: 10px;
-							bottom: calc(-#{$header-underline-width} - 2px);
-							height: $header-underline-width;
-							left: 0;
-							right: 0;
-							-webkit-transform: scaleX(1);
-							transform: scaleX(1);
-
-							visibility: visible;
-						}
-					}
-
 				}
+
 			}
 		}
 	}
@@ -137,7 +138,6 @@ body {
 
 .sub-nav {
 	height: $sub-nav-height;
-	left: 0;
 	margin: auto;
 	max-width: $content-width;
 
@@ -189,7 +189,7 @@ body {
 
 					&::after {
 
-						background-color: $color-data-teal;
+						background-color: $sub-nav-underline-color;
 						border-radius: 10px;
 						bottom: 0;
 						height: $header-underline-width;
@@ -205,49 +205,3 @@ body {
 		}
 	}
 }
-
-/* Global Banner Adjustment
-  =========================================================================== */
-// .global-banner-container {
-// 	+ .header {
-// 		top: $global-banner-height_phone;
-// 		&::after { top: $global-banner-height_phone; }
-//
-// 		+ .sub-nav {
-// 			top: calc(#{$global-banner-height_phone} + #{$header-height});
-//
-// 			&::after {
-// 				top: calc(#{$global-banner-height_phone} + #{$header-height});
-// 			}
-//
-// 			~.content {
-// 				margin-top: calc(#{$global-banner-height_phone} + #{$header-height} + #{$sub-nav-height});
-// 			}
-// 			@media #{$tablet} {
-// 				top: calc(#{$global-banner-height} + #{$header-height});
-//
-// 				&::after {
-// 					top: calc(#{$global-banner-height} + #{$header-height});
-// 				}
-//
-// 				~.content {
-// 					margin-top: calc(#{$global-banner-height} + #{$header-height} + #{$sub-nav-height});
-// 				}
-// 			}
-// 		}
-//
-// 		~.content {
-// 			margin-top: calc(#{$global-banner-height_phone} + #{$header-height});
-// 		}
-//
-// 		@media #{$tablet} {
-// 			top: $global-banner-height;
-// 			&::after { top: $global-banner-height; }
-// 		}
-// 		@media #{$tablet} {
-// 			~.content {
-// 				margin-top: calc(#{$global-banner-height} + #{$header-height});
-// 			}
-// 		}
-// 	}
-// }

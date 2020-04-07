@@ -91,18 +91,7 @@ $global-banner-height_phone: 4rem;
 .global-banner-container {
 	@include shared-banner;
 	animation: fadein 0.25s;
-	// height: $global-banner-height_phone;
-	// left: 0;
-	// max-height: $global-banner-height_phone;
-	// position: fixed;
-	// right: 0;
-	// top: 0;
 	z-index: 4;
-
-	// @media #{$tablet} {
-	// 	height: $global-banner-height;
-	// 	max-height: $global-banner-height;
-	// }
 }
 
 .global-banner {
