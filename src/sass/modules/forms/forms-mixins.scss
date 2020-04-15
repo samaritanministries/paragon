@@ -1,0 +1,17 @@
+.flex-column {
+	flex-basis: 0;
+	flex-grow: 1;
+	max-width: 100%;
+}
+
+@for $i from 1 through 12 {
+	@media #{$desktop} {
+		.flex-column-#{$i} {
+			$width-value: calc(100% * #{$i} / 12);
+
+			-ms-flex: 0 0 $width-value;
+			flex-basis: $width-value;
+			max-width: $width-value;
+		}
+	}
+}

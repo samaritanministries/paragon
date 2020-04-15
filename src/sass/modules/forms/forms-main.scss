@@ -1,0 +1,278 @@
+$color-input-border: $color-border;
+$color-input-border-focus: $color-blue;
+$color-input-disabled: $color-gray-2;
+
+$color-input-border-error: $color-red-light;
+$color-input-text-error: $color-red;
+$color-input-border-warning: $color-orange-light;
+$color-input-text-warning: $color-orange;
+
+$inputs: 'select, textarea,input[type="date"],input[type="time"],input[type="email"],input[type="month"],input[type="number"],input[type="password"],input[type="tel"],input[type="text"]';
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+
+	label {
+		display: block;
+		font-size: $font-size-xsmall;
+		font-weight: $font-weight-semibold;
+		margin-bottom: 0.3rem;
+		text-align: left;
+
+		&.inline {
+			@include user-select(none);
+			cursor: pointer;
+			display: inline-block;
+			font-size: $font-size-normal;
+			font-weight: $font-weight-normal;
+		}
+	}
+
+	//Supports all standard input types
+	#{$inputs} {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		background-color: $color-white;
+		border: 2px solid $color-input-border;
+		border-radius: 5px;
+		font-size: $font-size-normal;
+		margin-bottom: $space-m;
+		max-width: 100%;
+		padding: 0.6rem;
+		width: 100%;
+
+		&:focus {
+			border-color: $color-input-border-focus;
+			outline-color: transparent;
+			outline-style: none;
+		}
+
+		//Adds light gray background color to disabled inputs
+		&[disabled] {
+			background-color: $color-input-disabled !important;
+			border-color: $color-input-disabled !important;
+			cursor: default !important;
+		}
+	}
+
+	input[type='date'],
+	input[type='time'],
+	input[type='month'] {
+		max-height: 2.75rem;
+		min-height: 2.75rem;
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-calendar-picker-indicator {
+			-webkit-appearance: none;
+			display: none;
+		}
+	}
+
+	input[type=checkbox],
+	input[type=radio] {
+		float: left;
+		margin-right: 0.5rem;
+		margin-top: 0.3rem;
+	}
+
+	textarea {
+		resize: vertical;
+
+		.grid & {
+			width: 100%; //needed to support css-grid
+		}
+	}
+
+	select {
+		cursor: pointer;
+
+		.grid & {
+			width: 100%; //needed to support css-grid
+		}
+	}
+
+	//Add class to containing fieldset or div to display a button
+	.input--add-on {
+		display: flex;
+		margin-bottom: $space-m;
+
+		#{$inputs} { margin-bottom: 0; }
+
+		select {
+			padding-right: $space-xl;
+			width: auto !important;
+		}
+
+		.add-on--before {
+			border-radius: 5px 0 0 5px;
+			border-right: 0;
+			flex: 1;
+		}
+
+		.add-on--after {
+			border-radius: 0 5px 5px 0 !important;
+			margin: 0;
+
+			&.button--border {
+				@include border--button($color-border, $color-gray-3-dark); //makes button border the same color as the input
+				color: $color-icon-primary;
+
+				.dashing-icon::before {
+					color: $color-icon-primary;
+				}
+			}
+		}
+	}
+
+	//Add class to containing fieldset or div to display a down arrow icon in the menu
+	&.select--has-icon,
+	.select--has-icon {
+		position: relative;
+
+		select {
+			padding-right: $space-xl;
+		}
+
+		&::after {
+			color: $color-icon-primary;
+			content: '\e800';
+			font-family: 'dashing-icons';
+			font-size: 12px;
+			font-weight: $font-weight-semibold;
+			pointer-events: none;
+			position: absolute;
+			right: 2rem;
+			top: 2.4rem;
+		}
+
+		.grid & { //supports select positioning in grid
+			&::after {
+				right: 1rem;
+			}
+		}
+
+		&.has-error::after { color: $color-input-text-error; }
+		&.has-warning::after { color: $color-input-text-warning; }
+
+		&.column--nested {
+			&::after { bottom: 1.5rem;
+				right: 1.5rem; }
+			@media #{$tablet} {
+				&:last-of-type::after { right: 0.5rem; }
+			}
+		}
+
+		//Removes default select icon in IE
+		select::-ms-expand { display: none; }
+	}
+
+	//Add class to containing fieldset to display optional text
+	&.is-optional {
+		label::after {
+			color: $color-subtext;
+			content: '(Optional)';
+			font-weight: $font-weight-normal;
+			margin-left: $space-xxs;
+		}
+	}
+}
+
+/* Form States
+*/
+
+fieldset {
+	.message {
+		color: $color-subtext;
+		font-size: $font-size-small;
+		list-style: none;
+		margin: 0;
+		margin-bottom: $space-m;
+		margin-top: -#{$space-s};
+		overflow: auto;
+		padding: 0;
+		.dashing-icon { margin: 0 $space-xxs; }
+	}
+
+	//Adds red text to lables and inputs for error states
+	&.has-error,
+	.has-error {
+		label,
+		#{$inputs} {
+			border-color: $color-input-border-error;
+			color: $color-input-text-error;
+		}
+
+		#{$inputs} {
+			&:focus { border-color: $color-input-text-error; }
+		}
+
+		.message {
+			color: $color-input-text-error;
+			.dashing-icon { @extend .dashing-icon--red; }
+		}
+	}
+
+	//Adds orange text to lables and inputs for warning states
+	&.has-warning,
+	.has-warning {
+		label,
+		#{$inputs} {
+			border-color: $color-input-border-warning;
+			color: $color-input-text-warning;
+		}
+
+		#{$inputs} {
+			&:focus { border-color: $color-input-text-warning; }
+		}
+
+		.message {
+			color: $color-input-text-warning;
+			.dashing-icon { @extend .dashing-icon--orange; }
+		}
+	}
+	//Remove top margin on radio button and checkbox errors
+	.radio--custom,
+	.checkbox--custom,
+	.flex-row {
+		&~ .message {
+			margin-top: 0;
+		}
+	}
+}
+
+//flex form
+.flex-content {
+	display: flex;
+	flex-direction: column;
+
+	.flex-row {
+		display: flex;
+		flex-direction: column;
+		@media #{$desktop} {
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin-left: -#{$grid-gutter};
+		}
+
+		//fieldset:not(.spacer) { margin-bottom: 1rem;}
+	}
+
+	.flex-row fieldset,
+	.radio-card,
+	.checkbox-card {
+		-ms-flex: 1 1 auto;
+		flex: 1 1 auto;
+		margin-bottom: $space-xs;
+
+		@media #{$desktop} {
+			-ms-flex: 1 1 auto;
+			flex: 1 1 0;
+			margin-left: 1rem;
+			margin-right: 0;
+			min-width: auto;
+			&:last-of-type { margin-right: 0; }
+		}
+	}
+}
