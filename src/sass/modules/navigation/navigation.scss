@@ -56,7 +56,10 @@ body {
 
 	width: 100%;
 
-	ul {
+	ul.primary-nav-links {
+		//Hide of mobile
+		@media #{$phone} { display: none; }
+
 		@extend %remove-list-style;
 
 		li {
@@ -111,7 +114,7 @@ body {
 		}
 	}
 
-	.logo + .header-nav {
+	.logo + .primary-nav-links {
 		margin-left: $space-m;
 	}//IE wants this... okay IE. Here you are.
 }
@@ -121,7 +124,7 @@ body {
 	max-width: $content-width;
 	-webkit-overflow-scrolling: touch;
 	padding-bottom: $footer-height_phone;
-	position: relative;
+	// position: relative;
 	z-index: $zindex-content;
 
 	@media #{$tablet} {
@@ -149,7 +152,7 @@ body {
 		height: 100%;
 	}
 
-	ul {
+	ul.sub-nav-links {
 		@extend %remove-list-style;
 		overflow-x: auto;
 		overflow-y: hidden;

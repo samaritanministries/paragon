@@ -17,7 +17,7 @@ export default () => (
 				<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
 				<div className="logo"><p className="text-color--purple">LOGO</p></div>
 
-				<ul>
+				<ul className="primary-nav-links">
 					<li><Link to={"/"} className="active">Page 1</Link></li>
 					<li><Link to={"/"}>Page 2</Link></li>
 					<li><Link to={"/"}>Page 3</Link></li>
@@ -35,7 +35,7 @@ export default () => (
 
 		<nav className="sub-nav-container">
 			<section className="sub-nav">
-				<ul>
+				<ul className="sub-nav-links">
 					<li><Link to={"/"} className="active">Option 1</Link></li>
 					<li><Link to={"/"}>Option 2</Link></li>
 					<li><Link to={"/"}>Option 3</Link></li>

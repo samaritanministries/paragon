@@ -34,7 +34,7 @@ class NavigationCode extends React.Component {
 
             		<nav className="primary-nav-container">
             			<section className="primary-nav">
-            				<ul>
+            				<ul className="primary-nav-links">
             					<li><Link to={"/"} className="active">Page 1</Link></li>
             					<li><Link to={"/"}>Page 2</Link></li>
             					<li><Link to={"/"}>Page 3</Link></li>
@@ -70,7 +70,7 @@ class NavigationCode extends React.Component {
 
             		<nav className="primary-nav-container">
             			<section className="primary-nav">
-            				<ul>
+            				<ul className="primary-nav-links">
             					<li><Link to={"/"} className="active">Page 1</Link></li>
             					<li><Link to={"/"}>Page 2</Link></li>
             					<li><Link to={"/"}>Page 3</Link></li>
@@ -80,7 +80,7 @@ class NavigationCode extends React.Component {
 
                 <nav className="sub-nav-container">
             			<section className="sub-nav">
-            				<ul>
+            				<ul className="sub-nav-links">
             					<li><Link to={"/"} className="active">Option 1</Link></li>
             					<li><Link to={"/"}>Option 2</Link></li>
             					<li><Link to={"/"}>Option 3</Link></li>
@@ -95,7 +95,7 @@ class NavigationCode extends React.Component {
 
   <nav class="primary-nav-container">
     <section class="primary-nav">
-      <ul>
+      <ul class="primary-nav-links">
         <li><Link to={"/"} class="active">Page 1</Link></li>
         <li><Link to={"/"}>Page 2</Link></li>
         <li><Link to={"/"}>Page 3</Link></li>
@@ -105,7 +105,7 @@ class NavigationCode extends React.Component {
 
   <nav class="sub-nav-container">
     <section class="sub-nav">
-      <ul>
+      <ul class="sub-nav-links">
         <li><Link to={"/"} class="active">Option 1</Link></li>
         <li><Link to={"/"}>Option 2</Link></li>
         <li><Link to={"/"}>Option 3</Link></li>
