@@ -1,4 +1,4 @@
-$global-content-width: 800px !default;
+$example-global-content-width: 800px !default;
 
 @import '../paragon';
 @import '../base/colors/given-colors';
@@ -216,14 +216,14 @@ $sidebar-width: 13rem;
 	h1 {
 		color: $color-white;
 		margin: auto;
-		max-width: $global-content-width;
+		max-width: $example-global-content-width;
 		padding: 2rem 0;
 		padding-left: 1rem;
 	}
 
 	.subnav-links {
 		margin: auto;
-		max-width: $global-content-width;
+		max-width: $example-global-content-width;
 		padding-bottom: 0.55rem;
 		padding-left: 1rem;
 
@@ -591,7 +591,7 @@ h2 {
 /* Footer
   ================================================== */
 
-footer {
+footer.example-footer {
 	background-color: $color-background;
 	float: right;
 	position: relative;
@@ -856,7 +856,7 @@ footer {
 	bottom: -5rem;
 	left: 0.5rem;
 	/* stylelint-disable-next-line */
-	max-width: calc(#{$global-content-width} - #{$grid-gutter}*2);
+	max-width: calc(#{$example-global-content-width} - #{$grid-gutter}*2);
 	opacity: 0;
 	position: fixed;
 	right: 0.5rem;
