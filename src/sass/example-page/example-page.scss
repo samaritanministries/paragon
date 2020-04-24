@@ -136,8 +136,12 @@ $sidebar-width: 13rem;
 	position: relative;
 
 	.splash-image--content {
+		align-items: flex-end;
 		display: flex;
 		height: 100%;
+		margin: auto;
+		max-width: $example-global-content-width;
+		padding-bottom: 2rem;
 	}
 
 	.splash-image--title {

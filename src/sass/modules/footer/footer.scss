@@ -16,7 +16,7 @@
 	border-top: 2px solid $color-border;
 	margin: auto;
 	max-width: $global-content-width;
-	padding: $space-m $space-m $space-xs $space-m;
+	padding: $space-m $space-m 0 $space-m;
 	width: 100%;
 }
 
@@ -27,7 +27,7 @@
 		flex-wrap: wrap;
 
 		li {
-			margin: 0 $space-l $space-xs 0;
+			margin: 0 $space-l $space-m 0;
 
 			&:last-of-type {
 				margin-right: 0;
