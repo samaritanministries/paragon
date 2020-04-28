@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import AppFooter from './footer'
 // The scss needs to be imported here for running 'gatsby build'
 import '../../sass/example-page/example-page.scss'
 import '../../sass/experimental/mobilemenu.scss'
@@ -15,7 +16,7 @@ export default () => (
 		<nav className="header-nav">
 			<ul>
 				<li><Link to={"/"} className="active">Page 1</Link></li>
-				<li><Link to={"/"}>Page 2</Link></li>
+				<li><Link to={"/templates/default-long-content"}>Page 2</Link></li>
 				<li><Link to={"/"}>Page 3</Link></li>
 			</ul>
 		</nav>
@@ -45,13 +46,14 @@ export default () => (
 					<div className="card-content">
 						<h1>Primary Header</h1>
 						<p>Header description</p>
-						<Link to="/templates/overpanel">Full Page</Link>
+						<Link to="/templates/overpanel">View Overpanel</Link>
 					</div>
 				</div>
 
 			</div>
 		</div>
 	</main>
+	<AppFooter />
 </React.Fragment>
 
 )

@@ -9,6 +9,8 @@ $sub-nav-height: 3rem;
 $nav-separator-width: 2px;
 $global-banner-height: 3.5rem;
 $global-banner-height_phone: 4rem;
+$footer-height: 6rem;
+$footer-height_phone: 6rem;
 
 //Theme
 $header-color: $color-white !default;
@@ -22,6 +24,11 @@ $sub-nav-underline-width: 4px;
 $sub-nav-underline-color: $color-data-teal !default;
 
 $header-shadow: 0 1px 5px rgba(0, 0, 0, 0.5) !default;
+
+body {
+	min-height: calc(100vh - #{$header-height} - #{$sub-nav-height});
+	position: relative;
+}
 
 .header {
 	align-items: center;
@@ -119,7 +126,13 @@ $header-shadow: 0 1px 5px rgba(0, 0, 0, 0.5) !default;
 	margin-top: $header-height;
 	max-width: $content-width;
 	-webkit-overflow-scrolling: touch;
+	//Add padding to account for footer space
+	padding-bottom: $footer-height_phone;
 	z-index: $zindex-content;
+
+	@media #{$tablet} {
+		padding-bottom: $footer-height;
+	}
 }
 
 .sub-nav {
