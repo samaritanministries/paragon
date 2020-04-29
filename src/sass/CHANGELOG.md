@@ -2,6 +2,16 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.2.1] - 2020-04-29
+### Added
+- Add utility classes to change the display type
+
+### Updated
+- Update footer component
+
+### Fixed
+- Fix border button spinner color
+
 ## [2.2.0] - 2020-01-08
 ### Added
 - Add info cards
@@ -12,7 +22,7 @@ This changelog was started using [these conventions](http://keepachangelog.com/)
 ### Fixed
 - Fix broken link on card guidelines page
 
-### Updated 
+### Updated
 - Update flex and spacing utilities
 
 ## [2.1.0] - 2019-12-18
