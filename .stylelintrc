@@ -1,0 +1,20 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "indentation": "tab",
+    "unit-no-unknown": true,
+    # Rules to fix #
+    "scss/at-extend-no-missing-placeholder": null,
+    "max-nesting-depth": 7, # This should be 3
+    "selector-max-compound-selectors": null,
+    "property-no-vendor-prefix": null, # Update to use mixins for this
+    "at-rule-no-vendor-prefix": null,
+    "scss/dollar-variable-pattern": null,
+    "value-no-vendor-prefix": null,
+    "selector-no-qualifying-type": null,
+    "selector-class-pattern": null,
+    "scss/selector-no-redundant-nesting-selector": null,
+    "selector-max-id": null,
+    "scss/at-mixin-pattern": null
+  }
+}

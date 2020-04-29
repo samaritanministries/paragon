@@ -1,23 +1,37 @@
-$footer-color: $color-white !default; //Override this variable to change the color of your footer
+.footer-container {
+	bottom: 0;
+	margin-top: -#{$footer-height_phone};
+	position: absolute;
+	top: unset;
+	width: 100%;
 
-.app-footer {
-  background-color: rgba($footer-color, .95);
-  box-shadow: 0 -2px 30px 0 rgba($color-shadow, .16);
-  float: left;
-  max-width: 100%;
-  padding: 1rem;
-  position: absolute;
-  left: 0;
-  width: 100%;
+	@media #{$tablet} {
+		margin-top: -#{$footer-height};
+	}
+}
 
-  &.fixed {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+.footer {
+	align-items: center;
 
-  .row.no-padding {
-    max-width: calc(1200px - 2rem);
-  }
+	border-top: 2px solid $color-border;
+	margin: auto;
+	max-width: $global-content-width;
+	padding: $space-m $space-m 0 $space-m;
+	width: 100%;
+}
+
+.footer-nav {
+	ul.footer-nav-links {
+		@extend %remove-list-style;
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			margin: 0 $space-l $space-m 0;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
 }

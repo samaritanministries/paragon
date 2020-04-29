@@ -1,7 +1,7 @@
 {
   "name": "paragon-framework",
   "description": "Style Framework for Samaritan Ministries",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "main": "index.js",
   "keywords": [
     "paragon",
