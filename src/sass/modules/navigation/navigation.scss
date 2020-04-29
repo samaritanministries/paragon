@@ -25,9 +25,17 @@ $sub-nav-underline-color: $color-data-teal !default;
 
 $header-shadow: 0 1px 5px rgba(0, 0, 0, 0.5) !default;
 
-body {
+body.has-footer {
 	min-height: calc(100vh - #{$header-height} - #{$sub-nav-height});
 	position: relative;
+
+	.content {
+		padding-bottom: $footer-height_phone;
+
+		@media #{$tablet} {
+			padding-bottom: $footer-height;
+		}
+	}
 }
 
 .header {
@@ -126,13 +134,7 @@ body {
 	margin-top: $header-height;
 	max-width: $content-width;
 	-webkit-overflow-scrolling: touch;
-	//Add padding to account for footer space
-	padding-bottom: $footer-height_phone;
 	z-index: $zindex-content;
-
-	@media #{$tablet} {
-		padding-bottom: $footer-height;
-	}
 }
 
 .sub-nav {
