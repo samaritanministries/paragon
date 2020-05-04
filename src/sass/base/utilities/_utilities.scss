@@ -247,7 +247,7 @@ $display: (
 .flex-grow { flex: 1 0 auto; }
 .flex-none { flex: none; }
 //Distribute children items in flex container evenly
-.flex-distribute > * { flex: 1 1 0; }
+.flex-distribute > * { flex: 1 1 0px; }
 
 
 //Make item full width

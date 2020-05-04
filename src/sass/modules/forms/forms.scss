@@ -268,7 +268,7 @@ fieldset {
 
 		@media #{$tablet} {
 			-ms-flex: 1 1 auto;
-			flex: 1 1 0;
+			flex: 1 1 0px;
 			margin-left: 1rem;
 			margin-right: 0;
 			min-width: 180px;
