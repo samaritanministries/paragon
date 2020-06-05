@@ -36,7 +36,7 @@ $flex-table--header-text: $color-white;
 
 		li {
 			@extend .no-wrap;
-			flex: 1 1 0;
+			flex: 1 1 0px;
 			padding-right: 0.5rem;
 			@media #{$phone} {
 				white-space: normal;
