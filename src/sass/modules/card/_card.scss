@@ -145,8 +145,7 @@
 
 			th {
 				background-color: $color-background;
-				border-color: $color-border;
-				border-top: 2px solid;
+				border-top: 2px solid $color-border;
 				padding: $space-xs $space-m !important;
 			}
 
@@ -179,7 +178,7 @@
 	border-left: 6px solid $color-blue;
 	min-width: 100%;
 	overflow: hidden;
-	
+
 	.dashing-icon::before { color: $color-blue; }
 
 	.card-info--title {
