@@ -177,8 +177,9 @@
 	@extend %card;
 	background-color: lighten($color-blue, 55%);
 	border-left: 6px solid $color-blue;
-
+	min-width: 100%;
 	overflow: hidden;
+	
 	.dashing-icon::before { color: $color-blue; }
 
 	.card-info--title {
