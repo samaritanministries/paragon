@@ -214,6 +214,29 @@ $flex-table--header-text: $color-white;
 	}
 }
 
+/* Flex Table Loading Animation
+  =========================================================================== */
+.flex-table.is-loading {
+	overflow: hidden;
+
+	.table-row {
+		@extend %loading-animation;
+		overflow: hidden;
+
+		li { margin-right: 2rem; }
+	}
+
+	// Fixes li spacing for icon for expandable loading table
+	&.row-expandable {
+		.table-row li:first-of-type {
+			left: inherit;
+			padding-right: inherit;
+			position: inherit;
+		}
+	}
+
+}
+
 
 /* Default Table Styles
   =========================================================================== */
