@@ -470,8 +470,7 @@ $table--border: $gray-200 !default;`}
           </div>
         </div>
         <CodeToggle>
-{`<!-- Use row-expandable to give space for the dashing-icon -->
-<div className="flex-table is-condensed is-loading">
+{`<div className="flex-table is-loading">
 <ol className="table-row--header">
   <li>Column 1</li>
   <li>Column 2</li>
