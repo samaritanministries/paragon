@@ -234,13 +234,13 @@ $flex-table--header-text: $color-white;
 			right: 0;
 
 			&:not(:last-child) {
-				margin-bottom: 0.5rem;
+				margin-bottom: $space-xs;
 				@media #{$tablet} {
 					margin-bottom: 0;
 				}
 			}
 			@media #{$tablet} {
-				margin-right: 2rem;
+				margin-right: $space-xl;
 			}
 		}
 	}
