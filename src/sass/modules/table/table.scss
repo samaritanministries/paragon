@@ -223,15 +223,36 @@ $flex-table--header-text: $color-white;
 		@extend %loading-animation;
 		overflow: hidden;
 
-		li { margin-right: 2rem; }
+		&:hover {
+			background-color: inherit;
+			cursor: default;
+		}
+
+		li {
+			margin-top: 0;
+			padding-right: 0 !important;
+			right: 0;
+
+			&:not(:last-child) {
+				margin-bottom: 0.5rem;
+				@media #{$tablet} {
+					margin-bottom: 0;
+				}
+			}
+			@media #{$tablet} {
+				margin-right: 2rem;
+			}
+		}
 	}
 
 	// Fixes li spacing for icon for expandable loading table
 	&.row-expandable {
 		.table-row li:first-of-type {
 			left: inherit;
+			margin-top: 0;
 			padding-right: inherit;
 			position: inherit;
+			right: 0;
 		}
 	}
 

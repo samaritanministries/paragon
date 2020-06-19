@@ -442,7 +442,7 @@ $table--border: $gray-200 !default;`}
         </h2>
         <div className="example-container">
 
-          <div className="flex-table row-expandable is-loading">
+          <div className="flex-table is-loading">
             <ol className="table-row--header">
               <li>Column 1</li>
               <li>Column 2</li>
