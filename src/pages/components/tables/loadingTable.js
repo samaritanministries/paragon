@@ -67,8 +67,6 @@ export default class LoadingTable extends React.Component {
 }
 
 LoadingTable.defaultProps = {
-  hasTitle: false,
-  hasFooter: false,
   isExpandable: false,
   isSelectable: false,
   numberOfColumns: 4,
@@ -77,8 +75,6 @@ LoadingTable.defaultProps = {
 };
 
 LoadingTable.propTypes = {
-  hasTitle: PropTypes.bool,
-  hasFooter: PropTypes.bool,
   isExpandable: PropTypes.bool,
   isSelectable: PropTypes.bool,
   numberOfColumns: PropTypes.number,
