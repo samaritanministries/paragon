@@ -436,6 +436,67 @@ $table--border: $gray-200 !default;`}
 </div>`}
           </CodeToggle>
         </div>
+
+        <h2 className="mt-space-xl" id="flex-table">Flex Table - Loading
+          <Link to={location.pathname + "/#flex-table-loading"} className="button button--transparent button--copy-link"></Link>
+        </h2>
+        <div className="example-container">
+
+          <div className="flex-table is-loading">
+            <ol className="table-row--header">
+              <li>Column 1</li>
+              <li>Column 2</li>
+              <li>Column 3</li>
+              <li>Column 4</li>
+            </ol>
+            <ol className="table-row">
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+            </ol>
+            <ol className="table-row">
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+            </ol>
+            <ol className="table-row">
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+            </ol>
+          </div>
+        </div>
+        <CodeToggle>
+{`<div className="flex-table is-loading">
+<ol className="table-row--header">
+  <li>Column 1</li>
+  <li>Column 2</li>
+  <li>Column 3</li>
+  <li>Column 4</li>
+</ol>
+<ol className="table-row">
+  <li>&nbsp;</li>
+  <li>&nbsp;</li>
+  <li>&nbsp;</li>
+  <li>&nbsp;</li>
+</ol>
+<ol className="table-row">
+  <li>&nbsp;</li>
+  <li>&nbsp;</li>
+  <li>&nbsp;</li>
+  <li>&nbsp;</li>
+</ol>
+<ol className="table-row">
+  <li>&nbsp;</li>
+  <li>&nbsp;</li>
+  <li>&nbsp;</li>
+  <li>&nbsp;</li>
+</ol>
+</div>`}
+        </CodeToggle>
       </div>
             {/* <div className="column column--full">
               <h2 className="example-header no-margin--top" id="defaultTable">Default Table
