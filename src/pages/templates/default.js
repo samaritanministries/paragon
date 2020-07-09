@@ -42,11 +42,10 @@ export default () => (
 	<div className="toast-container">
 		<div className="toast-message success animate">
 			<i className="toast-message--icon"></i>
-			<h4>Success</h4>
 			<p>Address saved successfully</p>
-			<button className="button button--icon toast-message--close">
+			{/* <button className="button button--icon toast-message--close">
 				<i className="dashing-icon dashing-icon--close"></i>
-			</button>
+			</button> */}
 		</div>
 	</div>
 
