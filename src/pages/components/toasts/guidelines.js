@@ -15,7 +15,7 @@ export default () => (
       <SubNav pageName={currentPageNameLower}/>
     </header>
     <AppContent>
-      <StillWorking />
+      <p className="intro">Toasts are used to show the user a response to an action they just completed. They appear temporaily toward the bottom of the screen.</p>
     </AppContent>
   </Layout>
 )
