@@ -40,7 +40,7 @@ export default () => (
 
         <h2 className="has-number has-number--two">Importance</h2>
         <p>Toasts should be used to provide instant feedback to a user after an action. They should not interupt the user and don't require the user to close them.</p>
-        <p>If you would like to notify the user more permanently, you may use a <Link to="components/banner/code/#defaultCardBanner">Card Banner</Link>.</p>
+        <p>If you would like to notify the user more permanently, you may use a <Link to="/components/banner/code/#defaultCardBanner">Card Banner</Link>.</p>
       </div>
     </AppContent>
   </Layout>

@@ -55,7 +55,7 @@ export default () => (
 
             <blockquote className="tips" style={{ marginTop: "2rem" }}>
               <strong>Tip: Icons in Banners</strong>
-              <p>To add more attention to card banners, use <Link to="components/icons/code">icons</Link> before the banner text. Banners are setup to automatically add the appropriate spacing.</p>
+              <p>To add more attention to card banners, use <Link to="/components/icons/code">icons</Link> before the banner text. Banners are setup to automatically add the appropriate spacing.</p>
             </blockquote>
 
             <h2 className="has-number has-number--two">Placement</h2>

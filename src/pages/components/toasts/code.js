@@ -41,6 +41,7 @@ class ToggleCode extends React.Component {
             <h2 id="toast-styles">Styles
               <Link to={location.pathname + "/#toast-styles"} className="button button--transparent button--copy-link"></Link>
             </h2>
+            <p>To show and animate a toast message onto the screen, add the class <code className="example-text">.is-visible</code> to the <code className="example-text">.toast-message</code>.</p>
             <div className="example-container">
 
             		<div className="toast-message success toast-message--example">
@@ -94,11 +95,10 @@ class ToggleCode extends React.Component {
             <h2 className="mt-space-xl" id="toast-styles">Example
               <Link to={location.pathname + "/#toast-example"} className="button button--transparent button--copy-link"></Link>
             </h2>
-            <p>Check out this cool example of a Toast message.</p>
             <div className="example-container">
               <button className="button button--primary" onClick={this.toggleToast}>Show Toast</button>
             </div>
-            { this.state.showToast && <Toast isSuccess={true} message="Email notification has been resent" /> }
+            { this.state.showToast && <Toast isSuccess={true} message="This is a success toast message" /> }
 
           </div>
         </AppContent>
