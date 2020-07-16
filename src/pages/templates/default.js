@@ -2,24 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby'
 import AppFooter from './footer'
 // The scss needs to be imported here for running 'gatsby build'
-import '../../sass/experimental/toast.scss'
 import '../../sass/example-page/example-page.scss'
 import '../../sass/experimental/mobilemenu.scss'
 import '../../sass/experimental/placeholder.scss'
 
 class Default extends React.Component {
-
-	constructor(props) {
-    super(props);
-		this.state = { showToast: false };
-    this.toggleToast = this.toggleToast.bind(this);
-  }
-
-	toggleToast() {
-		this.setState(prevState => ({
-      showToast: !prevState.showToast
-    }));
-	}
 
 	render() {
 		return (
