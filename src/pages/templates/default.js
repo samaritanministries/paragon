@@ -7,64 +7,71 @@ import '../../sass/example-page/example-page.scss'
 import '../../sass/experimental/mobilemenu.scss'
 import '../../sass/experimental/placeholder.scss'
 
-export default () => (
+class Default extends React.Component {
 
-<React.Fragment>
-	<header className="header">
-		<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
-		<div className="logo"><p className="text-color--purple">LOGO</p></div>
+	constructor(props) {
+    super(props);
+		this.state = { showToast: false };
+    this.toggleToast = this.toggleToast.bind(this);
+  }
 
-		<nav className="header-nav">
-			<ul>
-				<li><Link to={"/"} className="active">Page 1</Link></li>
-				<li><Link to={"/templates/default-long-content"}>Page 2</Link></li>
-				<li><Link to={"/"}>Page 3</Link></li>
-			</ul>
-		</nav>
+	toggleToast() {
+		this.setState(prevState => ({
+      showToast: !prevState.showToast
+    }));
+	}
 
-		<div className="alert"><i className="dashing-icon dashing-icon--notification"></i><div className="count">100</div></div>
-		<div className="profile">
-			<div className="profile-image"><span className="initials">RF</span></div>
-			<span className="profile-name">Ryan Fitzgerald</span>
-			<i className="dashing-icon dashing-icon--arrow-down"></i>
-		</div>
+	render() {
+		return (
+			<React.Fragment>
+				<header className="header">
+					<Link to={"/templates/mobile"} className="button--mobile-sidebar" id="close-button"><i className="dashing-icon dashing-icon--menu"></i></Link>
+					<div className="logo"><p className="text-color--purple">LOGO</p></div>
 
-	</header>
+					<nav className="header-nav">
+						<ul>
+							<li><Link to={"/"} className="active">Page 1</Link></li>
+							<li><Link to={"/templates/default-long-content"}>Page 2</Link></li>
+							<li><Link to={"/"}>Page 3</Link></li>
+						</ul>
+					</nav>
 
-	<nav className="sub-nav">
-		<ul>
-			<li><Link to={"/"} className="active">Option 1</Link></li>
-			<li><Link to={"/"}>Option 2</Link></li>
-			<li><Link to={"/"}>Option 3</Link></li>
-		</ul>
-	</nav>
-
-	<div className="toast-container">
-		<div className="toast-message success animate">
-			<i className="toast-message--icon"></i>
-			<p>Address saved successfully</p>
-			{/* <button className="button button--icon toast-message--close">
-				<i className="dashing-icon dashing-icon--close"></i>
-			</button> */}
-		</div>
-	</div>
-
-	<main className="content">
-		<div className="grid grid-padding">
-			<div className="grid--full grid--half_desktop">
-
-				<div className="card">
-					<div className="card-content">
-						<h1>Primary Header</h1>
-						<p>Header description</p>
-						<Link to="/templates/overpanel">View Overpanel</Link>
+					<div className="alert"><i className="dashing-icon dashing-icon--notification"></i><div className="count">100</div></div>
+					<div className="profile">
+						<div className="profile-image"><span className="initials">RF</span></div>
+						<span className="profile-name">Ryan Fitzgerald</span>
+						<i className="dashing-icon dashing-icon--arrow-down"></i>
 					</div>
-				</div>
 
-			</div>
-		</div>
-	</main>
-	<AppFooter />
-</React.Fragment>
+				</header>
 
-)
+				<nav className="sub-nav">
+					<ul>
+						<li><Link to={"/"} className="active">Option 1</Link></li>
+						<li><Link to={"/"}>Option 2</Link></li>
+						<li><Link to={"/"}>Option 3</Link></li>
+					</ul>
+				</nav>
+
+				<main className="content">
+					<div className="grid grid-padding">
+						<div className="grid--full grid--half_desktop">
+
+							<div className="card">
+								<div className="card-content">
+									<h1>Primary Header</h1>
+									<p>Header description</p>
+									<Link to="/templates/overpanel">View Overpanel</Link> <br/>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</main>
+				<AppFooter />
+			</React.Fragment>
+		)
+	}
+}
+
+export default Default;

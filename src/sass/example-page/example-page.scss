@@ -211,10 +211,16 @@ $sidebar-width: 13rem;
 			top: 0;
 		}
 	}
+}
 
-	.toast-message {
-		bottom: 0;
-	}
+.toast-message--example {
+	bottom: 0 !important;
+	left: 0 !important;
+	margin-left: 0 !important;
+	max-width: 300px !important;
+	opacity: 1 !important;
+	position: relative !important;
+	visibility: visible !important;
 }
 
 .subnav {

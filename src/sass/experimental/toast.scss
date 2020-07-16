@@ -5,55 +5,29 @@
 
 $toast-width: 300px;
 
-.toast-container {
-	align-items: center;
-	bottom: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	right: 0;
-	width: 100%;
-	z-index: 3;
-	@media #{$tablet} {
-		bottom: 1rem;
-		left: auto; //Positions to bottom right of screen
-	}
-}
-
 .toast-message {
 	@extend %card-shadow--hover;
 	background-color: $color-purple;
 	border-radius: 5px;
-	bottom: -130px; //hide by default (for demo)
-	margin: $space-m $space-xl 0 $space-m;
+	bottom: 1rem;
+	margin: $space-m $space-m 0 $space-m;
+	opacity: 0;
 	padding: $space-s $space-m $space-s calc(#{$space-xl} + #{$space-xs});
 
-	position: relative;
-	width: $toast-width;
+	position: fixed;
+	visibility: hidden;
+	z-index: 999;
+
+	@media #{$tablet} {
+		left: 50%;
+		margin-left: calc(-#{$toast-width} / 2);
+		min-width: $toast-width;
+	}
 	* { color: $color-white; }
 
 	p {
 		font-weight: $font-weight-semibold;
 		margin: 0;
-	}
-
-	.toast-message--close {
-
-		@extend .button--transparent;
-		@extend .button--gray;
-		@extend .button--icon;
-		@include transition(opacity 0.3s ease-out);
-		opacity: 1;
-		position: absolute;
-		right: $space-xs;
-		top: $space-xs;
-
-		@media #{$desktop} {
-			opacity: 0;
-		}
 	}
 
 	.toast-message--icon {
@@ -92,54 +66,32 @@ $toast-width: 300px;
 		}
 	}
 
-	&:hover {
-		.toast-message--close {
-			opacity: 1;
-		}
-	}
-
-	&.animate {
+	&.is-visible {
 		animation-duration: 4s;
 		animation-name: slideInUpThenOut;
 		animation-timing-function: ease-in-out;
-	}
-
-	&.has-close-button {
-		padding: $space-s calc(#{$space-xl} + #{$space-xs});
+		visibility: visible;
 	}
 }
 
-@keyframes slideInLeftThenOut {
-	0% {
-		right: calc(-#{$toast-width} - 2.5rem);
-	}
-
-	10% {
-		right: 0;
-	}
-
-	90% {
-		right: 0;
-	}
-
-	100% {
-		right: calc(-#{$toast-width} - 2.5rem);
-	}
-}
 @keyframes slideInUpThenOut {
 	0% {
-		bottom: calc(-130px);
+		bottom: 0rem;
+		opacity: 0;
 	}
 
 	10% {
 		bottom: 1rem;
+		opacity: 1;
 	}
 
 	90% {
 		bottom: 1rem;
+		opacity: 1;
 	}
 
 	100% {
-		bottom: calc(-130px);
+		bottom: 0rem;
+		opacity: 0;
 	}
 }
