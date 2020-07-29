@@ -5,12 +5,12 @@ import React from "react";
 export function Toast({ className, message, isError, isSuccess, isWarning }) {
   return (
     <div
-      className={cn("toast-message is-visible", {
+      className={cn("toast-message", {
         [className]: !!className,
         error: isError,
         success: isSuccess
       })}
-      data-id="toast"
+      data-id="toast-message"
     >
       <i className="toast-message--icon"></i>
       <p>{message}</p>
@@ -22,7 +22,6 @@ Toast.propTypes = {
   className: PropTypes.string,
   isError: PropTypes.bool,
   isSuccess: PropTypes.bool,
-  isWarning: PropTypes.bool,
   message: PropTypes.string
 };
 
@@ -30,7 +29,6 @@ Toast.defaultProps = {
   className: undefined,
   isError: false,
   isSuccess: false,
-  isWarning: false,
   message: undefined
 };
 

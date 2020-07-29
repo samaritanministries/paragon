@@ -13,7 +13,8 @@ $desktop-large: 'all and (min-width: 96em)' !default;
 
 /* z-index
   =========================================================================== */
-$zindex-chat: 8000;
+$zindex-chat: 9000;
+$zindex-toast: 8000;
 $zindex-modal: 7001;
 $zindex-modaloverlay: 7000;
 $zindex-overpanel: 6000;

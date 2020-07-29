@@ -3,16 +3,19 @@ $toast-bottom-position: 1rem;
 
 .toast-message {
 	@extend %card-shadow--hover;
+
+	animation-duration: 4s;
+	animation-name: slideInUpThenOut;
+	animation-timing-function: ease-in-out;
+	
 	background-color: $color-purple;
 	border-radius: 5px;
 	bottom: $toast-bottom-position;
 	margin: $space-m $space-m 0 $space-m;
 	opacity: 0;
 	padding: $space-s $space-m $space-s calc(#{$space-xl} + #{$space-xs});
-
 	position: fixed;
-	visibility: hidden;
-	z-index: 999;
+	z-index: $zindex-toast;
 
 	@media #{$tablet} {
 		left: 50%;
@@ -34,7 +37,7 @@ $toast-bottom-position: 1rem;
 		left: $space-m;
 		position: absolute;
 		top: $space-m;
-		@media #{$tablet} { top: $space-m;}
+		@media #{$tablet} { top: $space-m; }
 	}
 
 	&.success {
@@ -51,13 +54,6 @@ $toast-bottom-position: 1rem;
 		.toast-message--icon {
 			@extend .dashing-icon--alert-filled;
 		}
-	}
-
-	&.is-visible {
-		animation-duration: 4s;
-		animation-name: slideInUpThenOut;
-		animation-timing-function: ease-in-out;
-		visibility: visible;
 	}
 }
 
