@@ -49,11 +49,6 @@ class ToggleCode extends React.Component {
             			<p>This is a success toast message</p>
             		</div>
 
-                <div className="toast-message warning toast-message--example">
-            			<i className="toast-message--icon"></i>
-            			<p>This is a warning toast message</p>
-            		</div>
-
                 <div className="toast-message error toast-message--example">
             			<i className="toast-message--icon"></i>
             			<p>This is an error toast message</p>
@@ -69,12 +64,6 @@ class ToggleCode extends React.Component {
 <div class="toast-message success">
   <i class="toast-message--icon"></i>
   <p>This is a success toast message</p>
-</div>
-
-<!-- Warning Toast Message -->
-<div class="toast-message warning">
-  <i class="toast-message--icon"></i>
-  <p>This is a warning toast message</p>
 </div>
 
 <!-- Error Toast Message -->

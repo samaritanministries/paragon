@@ -1,10 +1,11 @@
 $toast-width: 300px;
+$toast-bottom-position: 1rem;
 
 .toast-message {
 	@extend %card-shadow--hover;
 	background-color: $color-purple;
 	border-radius: 5px;
-	bottom: 1rem;
+	bottom: $toast-bottom-position;
 	margin: $space-m $space-m 0 $space-m;
 	opacity: 0;
 	padding: $space-s $space-m $space-s calc(#{$space-xl} + #{$space-xs});
@@ -23,11 +24,12 @@ $toast-width: 300px;
 	p {
 		font-weight: $font-weight-semibold;
 		margin: 0;
+		text-align: left;
 	}
 
 	.toast-message--icon {
 		@extend .dashing-icon;
-		@extend .dashing-icon--info-stroke;
+		@extend .dashing-icon--info-filled;
 		@extend .dashing-icon--white;
 		left: $space-m;
 		position: absolute;
@@ -40,16 +42,6 @@ $toast-width: 300px;
 
 		.toast-message--icon {
 			@extend .dashing-icon--checkmark-filled;
-		}
-	}
-
-	&.warning {
-		background-color: $color-orange;
-		* { color: $color-black; }
-
-		.toast-message--icon {
-			@extend .dashing-icon--black;
-			@extend .dashing-icon--info-filled;
 		}
 	}
 
@@ -76,12 +68,12 @@ $toast-width: 300px;
 	}
 
 	10% {
-		bottom: 1rem;
+		bottom: $toast-bottom-position;
 		opacity: 1;
 	}
 
 	90% {
-		bottom: 1rem;
+		bottom: $toast-bottom-position;
 		opacity: 1;
 	}
 

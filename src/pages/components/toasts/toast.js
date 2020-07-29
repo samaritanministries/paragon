@@ -8,8 +8,7 @@ export function Toast({ className, message, isError, isSuccess, isWarning }) {
       className={cn("toast-message is-visible", {
         [className]: !!className,
         error: isError,
-        success: isSuccess,
-        warning: isWarning
+        success: isSuccess
       })}
       data-id="toast"
     >
