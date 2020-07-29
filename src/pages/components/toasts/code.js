@@ -11,7 +11,7 @@ import CodeToggle from '../../../components/codetoggle'
 const currentPageName = "Toasts";
 const currentPageNameLower = currentPageName.toLowerCase();
 
-class ToggleCode extends React.Component {
+class ToastCode extends React.Component {
   static propTypes = { location: PropTypes.object.isRequired }
 
   constructor(props) {
@@ -96,4 +96,4 @@ class ToggleCode extends React.Component {
   }
 }
 
-export default ToggleCode;
+export default ToastCode;
