@@ -7,7 +7,7 @@ $toast-bottom-position: 1rem;
 	animation-duration: 4s;
 	animation-name: slideInUpThenOut;
 	animation-timing-function: ease-in-out;
-	
+
 	background-color: $color-purple;
 	border-radius: 5px;
 	bottom: $toast-bottom-position;
@@ -37,7 +37,7 @@ $toast-bottom-position: 1rem;
 		left: $space-m;
 		position: absolute;
 		top: $space-m;
-		@media #{$tablet} { top: $space-m; }
+		&::before { opacity: 1; }
 	}
 
 	&.success {
