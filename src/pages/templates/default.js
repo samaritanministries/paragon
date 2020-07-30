@@ -32,7 +32,8 @@ class Default extends React.Component {
 
 				</header>
 
-				<nav className="sub-nav">
+				<nav className="sub-nav has-title">
+					<div className="sub-nav--title">Settings</div>
 					<ul>
 						<li><Link to={"/"} className="active">Option 1</Link></li>
 						<li><Link to={"/"}>Option 2</Link></li>

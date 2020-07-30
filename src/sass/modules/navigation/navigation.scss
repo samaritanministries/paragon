@@ -167,6 +167,19 @@ body.has-footer {
 		z-index: $zindex-negative;
 	}
 
+	&.has-title {
+		align-items: center;
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.sub-nav--title {
+		color: $color-purple;
+		font-size: $font-size-medium;
+		font-weight: $font-weight-semibold;
+		margin: 0 $grid-gutter 0 $grid-gutter;
+	}
+
 	ul,
 	li,
 	a {
