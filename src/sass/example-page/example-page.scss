@@ -213,6 +213,16 @@ $sidebar-width: 13rem;
 	}
 }
 
+.toast-message--example {
+	bottom: 0 !important;
+	left: 0 !important;
+	margin-left: 0 !important;
+	max-width: 300px !important;
+	opacity: 1 !important;
+	position: relative !important;
+	visibility: visible !important;
+}
+
 .subnav {
 	background-color: $color-purple;
 	box-shadow: 0 2px 6px $color-gray-3;
