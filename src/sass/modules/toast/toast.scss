@@ -21,6 +21,7 @@ $toast-bottom-position: 1rem;
 		left: 50%;
 		margin-left: calc(-#{$toast-width} / 2);
 		min-width: $toast-width;
+		width: $toast-width;
 	}
 	* { color: $color-white; }
 
