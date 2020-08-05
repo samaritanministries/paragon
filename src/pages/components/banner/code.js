@@ -55,7 +55,7 @@ class BannerCode extends React.Component {
             <div className="example-container">
               <header className="global-banner-container has-warning global-banner--example mb-space-m">
                 <div className="global-banner">
-              		<i class="dashing-icon dashing-icon--info-filled" />
+              		<i className="dashing-icon dashing-icon--info-filled" />
               		<p>This is a warning banner with an <a href="../code">action</a>.</p>
                 </div>
             	</header>
@@ -230,7 +230,7 @@ class BannerCode extends React.Component {
                   <div className="card-content">
                     <div className="card-info no-margin">
                       <div className="card-content has-icon">
-                        <i class="dashing-icon dashing-icon--alert-filled" />
+                        <i className="dashing-icon dashing-icon--alert-filled" />
                         <p className="no-margin">This is an error card banner with a icon.</p>
                       </div>
                     </div>

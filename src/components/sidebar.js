@@ -154,6 +154,7 @@ class Sidebar extends React.Component {
                 <Link to="/components/spinner/code">Spinner</Link>
                 <Link to="/components/tables/code">Tables</Link>
                 <Link to="/components/tags/code">Tags</Link>
+                <Link to="/components/toasts/code">Toasts</Link>
                 <Link to="/components/toggle/code">Toggle</Link>
                 <Link to="/components/tooltip/code">Tooltip</Link>
               </div>

@@ -36,7 +36,7 @@ $flex-table--header-text: $color-white;
 
 		li {
 			@extend .no-wrap;
-			flex: 1 1 0;
+			flex: 1 1 0px;
 			padding-right: 0.5rem;
 			@media #{$phone} {
 				white-space: normal;
@@ -212,6 +212,50 @@ $flex-table--header-text: $color-white;
 			}
 		}
 	}
+}
+
+/* Flex Table Loading Animation
+  =========================================================================== */
+.flex-table.is-loading {
+	overflow: hidden;
+
+	.table-row {
+		@extend %loading-animation;
+		overflow: hidden;
+
+		&:hover {
+			background-color: inherit;
+			cursor: default;
+		}
+
+		li {
+			margin-top: 0;
+			padding-right: 0 !important;
+			right: 0;
+
+			&:not(:last-child) {
+				margin-bottom: $space-xs;
+				@media #{$tablet} {
+					margin-bottom: 0;
+				}
+			}
+			@media #{$tablet} {
+				margin-right: $space-xl;
+			}
+		}
+	}
+
+	// Fixes li spacing for icon for expandable loading table
+	&.row-expandable {
+		.table-row li:first-of-type {
+			left: inherit;
+			margin-top: 0;
+			padding-right: inherit;
+			position: inherit;
+			right: 0;
+		}
+	}
+
 }
 
 

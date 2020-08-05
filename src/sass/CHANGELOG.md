@@ -2,6 +2,15 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.3.0] - 2020-08-05
+### Added
+- Add Loading Table code and component
+- Add Toast code and component
+
+### Fixed
+- Fix width issues for info cards
+- Fix flex spacing issues on IE11
+
 ## [2.2.1] - 2020-04-29
 ### Added
 - Add utility classes to change the display type
