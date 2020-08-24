@@ -136,7 +136,7 @@ class TooltipCode extends React.Component {
 
             <div className="show-code">
               <CodeToggleJSX>
-{`/* Tooltip Default Props */ 
+{`/* Tooltip Default Props */
 export const Tooltip = props => <Tippy {...props} />
 Tooltip.defaultProps = {
   animation: 'fade',

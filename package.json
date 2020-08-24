@@ -12,7 +12,7 @@
   },
   "pre-commit": "stylelint",
   "dependencies": {
-    "@tippy.js/react": "^2.1.1",
+    "@tippyjs/react": "^4.0.2",
     "classnames": "^2.2.6",
     "gatsby": "^2.19.45",
     "gatsby-plugin-google-fonts": "0.0.4",
@@ -30,7 +30,7 @@
     "react-helmet": "^5.2.1",
     "react-prism": "^4.3.2",
     "stylelint-config-sass-guidelines": "^6.2.0",
-    "tippy.js": "^4.0.3"
+    "tippy.js": "^6.2.3"
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",

@@ -1,5 +1,6 @@
-import React from 'react'
-import Tippy from '@tippy.js/react'
+import React from 'react';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 export const Tooltip = props => <Tippy {...props} />
 Tooltip.defaultProps = {
@@ -13,9 +14,11 @@ Tooltip.defaultProps = {
 
 export const Clippy = props => <Tippy {...props} />
 Clippy.defaultProps = {
+  arrow: false,
   boundary: 'viewport',
   animation: 'fade',
   interactiveBorder: 10,
+  interactive: true,
   theme: 'clippy',
   maxWidth: 350,
   hideOnClick: false,
