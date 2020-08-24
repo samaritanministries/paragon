@@ -171,6 +171,36 @@ body.has-footer {
 		align-items: center;
 		display: flex;
 		justify-content: flex-start;
+
+		@media #{$phone} {
+			ul {
+				display: flex;
+				flex-direction: column;
+				height: auto;
+				left: 1rem;
+				padding: $space-m;
+				top: 2.9rem;
+
+				li {
+					margin: 0;
+
+					a::after {
+						height: 100% !important;
+						-webkit-transform: scaleY(0);
+						transform: scaleY(0);
+						width: 4px;
+
+						&:hover,
+						&.active {
+							height: 100%;
+							-webkit-transform: scaleY(1);
+							transform: scaleY(1);
+							width: 4px;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	.sub-nav--title {
@@ -178,6 +208,8 @@ body.has-footer {
 		font-size: $font-size-medium;
 		font-weight: $font-weight-semibold;
 		margin: 0 $grid-gutter 0 $grid-gutter;
+
+		position: relative;
 	}
 
 	ul,
@@ -286,5 +318,59 @@ body.has-footer {
 				margin-top: calc(#{$global-banner-height} + #{$header-height});
 			}
 		}
+	}
+}
+
+/////
+
+
+@media #{$phone} {
+	.profile-menu {
+		// @extend %remove-list-style;
+
+		background-color: $color-white;
+		border-radius: 3px;
+		box-shadow: (0 4px 8px rgba(0, 0, 0, 0.3));
+		color: $color-black;
+		font-size: 1rem;
+		font-weight: $font-weight-normal;
+
+		position: absolute;
+		right: 1rem;
+		top: 3.5rem;
+		width: 200px;
+
+		hr { margin: 0; }
+
+		li {
+
+			cursor: pointer;
+
+			a {
+				color: $color-text;
+				display: block;
+				font-weight: $font-weight-normal;
+				padding: 0.5rem 1rem;
+				text-decoration: none;
+				&:hover { opacity: 1; }
+			}
+
+			&:hover {
+				background-color: $color-hover;
+			}
+
+			&:first-of-type {
+				border-radius: 3px 3px 0 0;
+			}
+
+			&.logout {
+				border-radius: 0 0 3px 3px;
+
+				a {
+					color: $color-red;
+					font-weight: $font-weight-semibold;
+				}
+			}
+		}//calculate this later to match whatever the heaer settings are?//just under header height
 	}
 }
