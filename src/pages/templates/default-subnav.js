@@ -9,18 +9,6 @@ import '../../sass/experimental/placeholder.scss'
 
 class DefaultSubNav extends React.Component {
 
-	constructor(props) {
-    super(props);
-    this.state = { hideMenu: true };
-    this.toggleMenu = this.toggleMenu.bind(this);
-  }
-
-	toggleMenu() {
-    this.setState(prevState => ({
-      hideMenu: !prevState.hideMenu
-    }));
-   }
-
 	render() {
 		return (
 			<React.Fragment>
@@ -45,7 +33,7 @@ class DefaultSubNav extends React.Component {
 
 				</header>
 
-				<SubNavigation title="Settings">
+				<SubNavigation>
 					<li><Link to={"/"} className="active">Option 1</Link></li>
 					<li><Link to={"/"}>Option 2</Link></li>
 					<li><Link to={"/"}>Option 3</Link></li>
