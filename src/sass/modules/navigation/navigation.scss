@@ -178,38 +178,39 @@ body.has-footer {
 				flex-direction: column;
 				height: auto;
 				left: 1rem;
-				padding: $space-m;
 				top: 2.9rem;
 
 				li {
 					margin: 0;
 
-					a::after {
-						height: 100% !important;
-						-webkit-transform: scaleY(0);
-						transform: scaleY(0);
-						width: 4px;
-
-						&:hover,
-						&.active {
-							height: 100%;
-							-webkit-transform: scaleY(1);
-							transform: scaleY(1);
-							width: 4px;
-						}
-					}
+					a::after { display: none; }
 				}
 			}
 		}
 	}
 
 	.sub-nav--title {
+		align-items: center;
 		color: $color-purple;
+		display: flex;
 		font-size: $font-size-medium;
 		font-weight: $font-weight-semibold;
+		height: 100%;
 		margin: 0 $grid-gutter 0 $grid-gutter;
 
-		position: relative;
+		.sub-nav--icon { display: none; }
+
+		@media #{$phone} {
+			cursor: pointer;
+			position: relative;
+
+			.sub-nav--icon {
+				display: inline-block;
+				left: 0.3rem;
+				position: relative;
+				top: 0.1rem;
+			}
+		}
 	}
 
 	ul,
