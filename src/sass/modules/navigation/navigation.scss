@@ -325,7 +325,7 @@ body.has-footer {
 
 
 @media #{$phone} {
-	.profile-menu {
+	.dropdown-menu_mobile {
 		// @extend %remove-list-style;
 
 		background-color: $color-white;
@@ -339,6 +339,8 @@ body.has-footer {
 		right: 1rem;
 		top: 3.5rem;
 		width: 200px;
+
+		&.hide-menu { display: none !important; }
 
 		hr { margin: 0; }
 

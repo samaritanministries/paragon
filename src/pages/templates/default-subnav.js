@@ -8,6 +8,18 @@ import '../../sass/experimental/placeholder.scss'
 
 class DefaultSubNav extends React.Component {
 
+	constructor(props) {
+    super(props);
+    this.state = { hideMenu: true };
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+	toggleMenu() {
+    this.setState(prevState => ({
+      hideMenu: !prevState.hideMenu
+    }));
+   }
+
 	render() {
 		return (
 			<React.Fragment>
@@ -33,8 +45,8 @@ class DefaultSubNav extends React.Component {
 				</header>
 
 				<nav className="sub-nav has-title">
-					<div className="sub-nav--title">Settings</div>
-					<ul className="profile-menu">
+					<div className="sub-nav--title" onClick={this.toggleMenu}>Settings <i className="dashing-icon dashing-icon--arrow-down tablet-hide-inline desktop-hide" /></div>
+					<ul className={this.state.hideMenu ? 'dropdown-menu_mobile hide-menu' : 'dropdown-menu_mobile'}>
 						<li><Link to={"/"} className="active">Option 1</Link></li>
 						<li><Link to={"/"}>Option 2</Link></li>
 						<li><Link to={"/"}>Option 3</Link></li>
