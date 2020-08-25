@@ -67,8 +67,7 @@ class NavigationCode extends React.Component {
             			</ul>
             		</nav>
             	</header>
-              <nav className="sub-nav mb-space-m has-title">
-                <div className="sub-nav--title">Settings</div>
+              <nav className="sub-nav mb-space-m">
                 <ul>
                   <li><Link to={"/components/navigation/code"} className="active">Option 1</Link></li>
                   <li><Link to={"/components/navigation/code"}>Option 2</Link></li>
@@ -87,8 +86,7 @@ class NavigationCode extends React.Component {
     </ul>
   </nav>
 </header>
-<nav class="sub-nav has-title">
-  <div class="sub-nav--title">Settings</div>
+<nav class="sub-nav">
   <ul>
     <li><Link to={"/"} class="active">Option 1</Link></li>
     <li><Link to={"/"}>Option 2</Link></li>

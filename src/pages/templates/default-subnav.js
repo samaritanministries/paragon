@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import AppFooter from './footer'
+import SubNavigation from '../components/navigation/subnav'
 // The scss needs to be imported here for running 'gatsby build'
 import '../../sass/example-page/example-page.scss'
 import '../../sass/experimental/mobilemenu.scss'
@@ -44,14 +45,11 @@ class DefaultSubNav extends React.Component {
 
 				</header>
 
-				<nav className="sub-nav has-title">
-					<div className="sub-nav--title" onClick={this.toggleMenu}>Settings <i className="dashing-icon dashing-icon--arrow-down dashing-icon--purple sub-nav--icon" /></div>
-					<ul className={this.state.hideMenu ? 'dropdown-menu_mobile hide-menu' : 'dropdown-menu_mobile'}>
-						<li><Link to={"/"} className="active">Option 1</Link></li>
-						<li><Link to={"/"}>Option 2</Link></li>
-						<li><Link to={"/"}>Option 3</Link></li>
-					</ul>
-				</nav>
+				<SubNavigation title="Settings">
+					<li><Link to={"/"} className="active">Option 1</Link></li>
+					<li><Link to={"/"}>Option 2</Link></li>
+					<li><Link to={"/"}>Option 3</Link></li>
+				</SubNavigation>
 
 				<main className="content">
 					<div className="grid grid-padding">

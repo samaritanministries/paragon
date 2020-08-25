@@ -327,7 +327,6 @@ body.has-footer {
 
 @media #{$phone} {
 	.dropdown-menu_mobile {
-		// @extend %remove-list-style;
 
 		background-color: $color-white;
 		border-radius: 3px;
