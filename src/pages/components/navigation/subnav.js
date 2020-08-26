@@ -20,7 +20,7 @@ export default class SubNavigation extends React.Component {
 
   SubNavigation() {
     const SubNavTitle = this.SubNavTitle.bind(this);
-    const { children, className, title } = this.props;
+    const { children, className, listClassName, title } = this.props;
 
     return (
       <nav
@@ -32,7 +32,7 @@ export default class SubNavigation extends React.Component {
         {title != null && <SubNavTitle/>}
         <ul
           className={cn({
-          [className]: !!className,
+          [listClassName]: !!listClassName,
           "subnav-dropdown": title != null,
           "hide-menu": this.state.hideMenu
         })}>
@@ -63,10 +63,12 @@ export default class SubNavigation extends React.Component {
 
 SubNavigation.propTypes = {
   className: PropTypes.string,
+  listClassName: PropTypes.string,
   title: PropTypes.string
 };
 
 SubNavigation.defaultProps = {
   className: undefined,
+  listClassName: undefined,
   message: undefined
 };
