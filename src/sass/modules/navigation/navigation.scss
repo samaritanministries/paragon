@@ -178,7 +178,7 @@ body.has-footer {
 				flex-direction: column;
 				height: auto;
 				left: 1rem;
-				top: 2.9rem;
+				top: calc(#{$sub-nav-height} - 0.2rem);
 
 				li {
 					margin: 0;
@@ -196,7 +196,7 @@ body.has-footer {
 		font-size: $font-size-medium;
 		font-weight: $font-weight-semibold;
 		height: 100%;
-		margin: 0 $grid-gutter 0 $grid-gutter;
+		padding: 0 $grid-gutter 0 $grid-gutter;
 
 		.sub-nav--icon { display: none; }
 
@@ -322,53 +322,11 @@ body.has-footer {
 	}
 }
 
+//Had to use a mixin to share the styles within a media query
 @media #{$phone} {
-	.dropdown-menu_mobile {
-		background-color: $color-white;
-		border-radius: 3px;
-		box-shadow: (0 4px 8px rgba(0, 0, 0, 0.3));
-		color: $color-black;
-		font-size: 1rem;
-		font-weight: $font-weight-normal;
-
-		position: absolute;
-		right: 1rem;
-		top: 3.5rem;
-		width: 200px;
+	.subnav-dropdown {
+		@include dropdown-menu;
 
 		&.hide-menu { display: none !important; }
-
-		hr { margin: 0; }
-
-		li {
-
-			cursor: pointer;
-
-			a {
-				color: $color-text;
-				display: block;
-				font-weight: $font-weight-normal;
-				padding: 0.5rem 1rem;
-				text-decoration: none;
-				&:hover { opacity: 1; }
-			}
-
-			&:hover {
-				background-color: $color-hover;
-			}
-
-			&:first-of-type {
-				border-radius: 3px 3px 0 0;
-			}
-
-			&.logout {
-				border-radius: 0 0 3px 3px;
-
-				a {
-					color: $color-red;
-					font-weight: $font-weight-semibold;
-				}
-			}
-		}//calculate this later to match whatever the heaer settings are?//just under header height
 	}
 }

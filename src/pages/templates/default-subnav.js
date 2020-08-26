@@ -33,7 +33,7 @@ class DefaultSubNav extends React.Component {
 
 				</header>
 
-				<SubNavigation>
+				<SubNavigation title="Settings">
 					<li><Link to={"/"} className="active">Option 1</Link></li>
 					<li><Link to={"/"}>Option 2</Link></li>
 					<li><Link to={"/"}>Option 3</Link></li>

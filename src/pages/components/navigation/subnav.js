@@ -33,7 +33,7 @@ export default class SubNavigation extends React.Component {
         <ul
           className={cn({
           [className]: !!className,
-          "dropdown-menu_mobile": title != null,
+          "subnav-dropdown": title != null,
           "hide-menu": this.state.hideMenu
         })}>
           {children}
