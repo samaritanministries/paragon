@@ -38,7 +38,7 @@ class ClippyCode extends React.Component {
             <p className="no-margin--bottom">Paragon utilizes the <a href="https://atomiks.github.io/tippyjs/" target="_blank" rel="noopener noreferrer">Tippy.js</a> component to deliver clippies. To use in your project you must import the following:</p>
             <ul className="no-margin">
               <li><a href="https://github.com/atomiks/tippyjs" target="_blank" rel="noopener noreferrer">Tippy.js package</a></li>
-              <li><a href="https://github.com/atomiks/tippy.js-react" target="_blank" rel="noopener noreferrer">Tippy.js react component</a></li>
+              <li><a href="https://github.com/atomiks/tippyjs-react" target="_blank" rel="noopener noreferrer">Tippy.js react component</a></li>
               <li><a href="#defaultProps">Custom Paragon Clippy Component</a></li>
             </ul>
 
@@ -119,6 +119,7 @@ class ClippyCode extends React.Component {
               <CodeToggleJSX>
 {`export const Clippy = props => <Tippy {...props} />
 Clippy.defaultProps = {
+  arrow: false,
   boundary: 'viewport',
   animation: 'fade',
   interactiveBorder: 10,
