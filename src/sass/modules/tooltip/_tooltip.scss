@@ -36,7 +36,6 @@ span.paragon-tooltip { display: inline-block; }
 		border: 0;
 		border-radius: 5px;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-		// .tippy-backdrop { background-color: $tooltip-color; }
 
 		.tippy-content {
 			font-size: 0.9rem;
@@ -45,8 +44,8 @@ span.paragon-tooltip { display: inline-block; }
 			text-align: center;
 		}
 
-		.tippy-arrow {
-			color: $tooltip-color;
+		> .tippy-svg-arrow {
+			fill: $tooltip-color;
 		}
 	}
 
@@ -55,7 +54,6 @@ span.paragon-tooltip { display: inline-block; }
 		border: 2px solid $color-border;
 		border-radius: 5px;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
-		// .tippy-backdrop { background-color: $clippy-color; }
 
 		.tippy-content {
 			color: $color-text;

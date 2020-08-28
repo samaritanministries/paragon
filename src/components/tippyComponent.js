@@ -1,14 +1,15 @@
 import React from 'react';
 import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/svg-arrow.css';
+import {roundArrow} from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
 
 export const Tooltip = props => <Tippy {...props} />
 Tooltip.defaultProps = {
   animation: 'fade',
   boundary: 'viewport',
-  arrow: true,
+  arrow: roundArrow,
   theme: 'default',
-  arrowType: 'round',
   maxWidth: 250,
 }
 
@@ -18,7 +19,6 @@ Clippy.defaultProps = {
   boundary: 'viewport',
   animation: 'fade',
   interactiveBorder: 10,
-  interactive: true,
   theme: 'clippy',
   maxWidth: 350,
   hideOnClick: false,
