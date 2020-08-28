@@ -57,13 +57,12 @@ span.paragon-tooltip { display: inline-block; }
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
 		// .tippy-backdrop { background-color: $clippy-color; }
 
-		&.tippy-content {
+		.tippy-content {
 			color: $color-text;
 			font-size: 0.9rem;
 			font-weight: $font-weight-normal;
 			line-height: 1.2rem;
-			padding: 0;
-			padding: 0.2rem;
+			padding: $space-xs $space-s;
 			text-align: left;
 
 			h4,
