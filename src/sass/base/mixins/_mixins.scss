@@ -188,13 +188,8 @@
 			border-radius: 3px 3px 0 0;
 		}
 
-		&.logout {
+		&:last-of-type {
 			border-radius: 0 0 3px 3px;
-
-			a {
-				color: $color-red;
-				font-weight: $font-weight-semibold;
-			}
 		}
 	}
 }
