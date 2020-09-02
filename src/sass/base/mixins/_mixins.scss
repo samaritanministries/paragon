@@ -149,3 +149,47 @@
 		color: $text-color;
 	}
 }
+
+/* Dropdown Menu Mixin
+  =========================================================================== */
+@mixin dropdown-menu {
+	background-color: $color-white;
+	border-radius: 3px;
+	box-shadow: (0 4px 8px rgba(0, 0, 0, 0.3));
+	color: $color-black;
+	font-size: 1rem;
+	font-weight: $font-weight-normal;
+
+	position: absolute;
+	right: 1rem;
+	top: 3.5rem;
+	width: 200px;
+
+	hr { margin: 0; }
+
+	li {
+
+		cursor: pointer;
+
+		a {
+			color: $color-text !important;
+			display: block;
+			font-weight: $font-weight-normal !important;
+			padding: 0.5rem 1rem;
+			text-decoration: none;
+			&:hover { opacity: 1; }
+		}
+
+		&:hover {
+			background-color: $color-hover;
+		}
+
+		&:first-of-type {
+			border-radius: 3px 3px 0 0;
+		}
+
+		&:last-of-type {
+			border-radius: 0 0 3px 3px;
+		}
+	}
+}
