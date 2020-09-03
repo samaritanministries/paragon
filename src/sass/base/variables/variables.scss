@@ -11,6 +11,24 @@ $tablet-and-below: 'all and (max-width: 63.99em)' !default;
 $desktop: 'all and (min-width: 64em)' !default;
 $desktop-large: 'all and (min-width: 96em)' !default;
 
+
+/* Typography Variables
+  =========================================================================== */
+$font-size-xlarge: 1.953rem; //35px
+$font-size-large: 1.563rem; //28px
+$font-size-medium: 1.25rem;  //23px
+$font-size-normal: 1rem;     //18px
+$font-size-small: 0.9rem;   //16px
+$font-size-xsmall: 0.8rem;   //14px
+
+$font-weight-normal: 400 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+
+$font-family-header: 'Source Sans Pro', sans-serif !default;
+$font-family-body: 'Source Sans Pro', sans-serif !default;
+
+
 /* z-index
   =========================================================================== */
 $zindex-chat: 9000;

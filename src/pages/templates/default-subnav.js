@@ -7,7 +7,7 @@ import '../../sass/example-page/example-page.scss'
 import '../../sass/experimental/mobilemenu.scss'
 import '../../sass/experimental/placeholder.scss'
 
-class Default extends React.Component {
+class DefaultSubNav extends React.Component {
 
 	render() {
 		return (
@@ -33,7 +33,7 @@ class Default extends React.Component {
 
 				</header>
 
-				<SubNavigation>
+				<SubNavigation title="Settings">
 					<li><Link to={"/"} className="active">Option 1</Link></li>
 					<li><Link to={"/"}>Option 2</Link></li>
 					<li><Link to={"/"}>Option 3</Link></li>
@@ -60,4 +60,4 @@ class Default extends React.Component {
 	}
 }
 
-export default Default;
+export default DefaultSubNav;

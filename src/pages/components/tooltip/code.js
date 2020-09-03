@@ -39,7 +39,7 @@ class TooltipCode extends React.Component {
             <p className="no-margin--bottom">Paragon utilizes the <a href="https://atomiks.github.io/tippyjs/" target="_blank" rel="noopener noreferrer">Tippy.js</a> component to deliver tooltips. To use in your project you must import the following:</p>
             <ul className="no-margin">
               <li><a href="https://github.com/atomiks/tippyjs" target="_blank" rel="noopener noreferrer">Tippy.js package</a></li>
-              <li><a href="https://github.com/atomiks/tippy.js-react" target="_blank" rel="noopener noreferrer">Tippy.js react component</a></li>
+              <li><a href="https://github.com/atomiks/tippyjs-react" target="_blank" rel="noopener noreferrer">Tippy.js react component</a></li>
               <li><a href="#defaultProps">Custom Paragon Tooltip Component</a></li>
             </ul>
 
@@ -136,14 +136,13 @@ class TooltipCode extends React.Component {
 
             <div className="show-code">
               <CodeToggleJSX>
-{`/* Tooltip Default Props */ 
+{`/* Tooltip Default Props */
 export const Tooltip = props => <Tippy {...props} />
 Tooltip.defaultProps = {
   animation: 'fade',
   boundary: 'viewport',
-  arrow: true,
+  arrow: roundArrow,
   theme: 'default',
-  arrowType: 'round',
   maxWidth: 250,
 }
 

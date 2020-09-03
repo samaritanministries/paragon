@@ -33,7 +33,7 @@ $color-data-teal: #64ccc9;
 $color-data-purple: #9f8fca;
 
 /* Gradient */
-$color-gradient: linear-gradient(-45deg, $color-data-teal, $color-purple);
+$color-gradient: linear-gradient(to right, $color-purple, #5a89ad, $color-data-teal);
 
 /* Primary and Accent */
 $color-primary: $color-purple !default;

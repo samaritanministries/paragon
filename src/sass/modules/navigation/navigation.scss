@@ -167,6 +167,56 @@ body.has-footer {
 		z-index: $zindex-negative;
 	}
 
+	&.has-title {
+		align-items: center;
+		display: flex;
+		justify-content: flex-start;
+
+		@media #{$phone} {
+			ul {
+				@include dropdown-menu;
+
+				display: flex;
+				flex-direction: column;
+				height: auto;
+				left: 1rem;
+				top: calc(#{$sub-nav-height} - 0.2rem);
+
+				&.hide-menu { display: none !important; }
+
+				li {
+					margin: 0;
+
+					a::after { display: none; }
+				}
+			}
+		}
+	}
+
+	.sub-nav--title {
+		align-items: center;
+		color: $color-purple;
+		display: flex;
+		font-size: $font-size-medium;
+		font-weight: $font-weight-semibold;
+		height: 100%;
+		padding: 0 $grid-gutter 0 $grid-gutter;
+
+		.sub-nav--icon { display: none; }
+
+		@media #{$phone} {
+			cursor: pointer;
+			position: relative;
+
+			.sub-nav--icon {
+				display: inline-block;
+				left: 0.3rem;
+				position: relative;
+				top: 0.1rem;
+			}
+		}
+	}
+
 	ul,
 	li,
 	a {
@@ -275,3 +325,12 @@ body.has-footer {
 		}
 	}
 }
+
+//Had to use a mixin to share the styles within a media query
+// @media #{$phone} {
+// 	.subnav-dropdown {
+// 		@include dropdown-menu;
+//
+// 		&.hide-menu { display: none !important; }
+// 	}
+// }

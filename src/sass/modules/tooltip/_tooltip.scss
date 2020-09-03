@@ -30,39 +30,37 @@ span.paragon-tooltip { display: inline-block; }
 
 /* Custom Tippy.js Themes
   =========================================================================== */
-.tippy-tooltip {
-	&.default-theme {
+.tippy-box {
+	&[data-theme='default'] {
 		background-color: $tooltip-color;
 		border: 0;
 		border-radius: 5px;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-		.tippy-backdrop { background-color: $tooltip-color; }
 
 		.tippy-content {
 			font-size: 0.9rem;
 			font-weight: $font-weight-semibold;
 			line-height: 1.1rem;
+			text-align: center;
 		}
 
-		.tippy-roundarrow {
+		> .tippy-svg-arrow {
 			fill: $tooltip-color;
 		}
 	}
 
-	&.clippy-theme {
+	&[data-theme='clippy'] {
 		background-color: $clippy-color;
 		border: 2px solid $color-border;
 		border-radius: 5px;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
-		.tippy-backdrop { background-color: $clippy-color; }
 
 		.tippy-content {
 			color: $color-text;
 			font-size: 0.9rem;
 			font-weight: $font-weight-normal;
 			line-height: 1.2rem;
-			padding: 0;
-			padding: 0.2rem;
+			padding: $space-xs $space-s;
 			text-align: left;
 
 			h4,
