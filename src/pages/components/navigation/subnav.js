@@ -33,7 +33,6 @@ export default class SubNavigation extends React.Component {
         <ul
           className={cn({
           [listClassName]: !!listClassName,
-          "subnav-dropdown": title != null,
           "hide-menu": this.state.hideMenu
         })}>
           {children}

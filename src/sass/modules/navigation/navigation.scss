@@ -174,11 +174,15 @@ body.has-footer {
 
 		@media #{$phone} {
 			ul {
+				@include dropdown-menu;
+
 				display: flex;
 				flex-direction: column;
 				height: auto;
 				left: 1rem;
 				top: calc(#{$sub-nav-height} - 0.2rem);
+
+				&.hide-menu { display: none !important; }
 
 				li {
 					margin: 0;
@@ -323,10 +327,10 @@ body.has-footer {
 }
 
 //Had to use a mixin to share the styles within a media query
-@media #{$phone} {
-	.subnav-dropdown {
-		@include dropdown-menu;
-
-		&.hide-menu { display: none !important; }
-	}
-}
+// @media #{$phone} {
+// 	.subnav-dropdown {
+// 		@include dropdown-menu;
+//
+// 		&.hide-menu { display: none !important; }
+// 	}
+// }

@@ -119,7 +119,7 @@ class NavigationCode extends React.Component {
         				</SubNavigation>
 
                 <CodeToggle>
-  {`<header className="header">
+  {`<header class="header">
     <nav class="header-nav">
       <ul>
         <li><Link to={"/"} class="active">Page 1</Link></li>
@@ -130,7 +130,7 @@ class NavigationCode extends React.Component {
   </header>
   <nav class="sub-nav has-title">
     <div class="sub-nav--title">Settings</div>
-    <ul class="subnav-dropdown">
+    <ul>
       <li><Link to={"/"} class="active">Option 1</Link></li>
       <li><Link to={"/"}>Option 2</Link></li>
       <li><Link to={"/"}>Option 3</Link></li>
