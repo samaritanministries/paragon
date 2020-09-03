@@ -2,6 +2,14 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.4.0] - 2020-09-03
+### Updated
+- Update gradient color
+- Update Tippy.js to latest version
+
+### Added
+- Add title as an option to the sub navigation
+
 ## [2.3.0] - 2020-08-05
 ### Added
 - Add Loading Table code and component
