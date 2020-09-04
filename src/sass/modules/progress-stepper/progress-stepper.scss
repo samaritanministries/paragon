@@ -29,7 +29,7 @@ $progress-color: $color-green !default; //Override this variable to change the c
 .progress-label a {
 	color: $color-subtext;
 	display: flex;
-	flex-grow: 1;
+	flex: 1 1 0;
 	font-size: 0.8rem;
 	font-weight: $font-weight-semibold;
 	justify-content: center;
