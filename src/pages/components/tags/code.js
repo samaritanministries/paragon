@@ -89,18 +89,19 @@ class TagsCode extends React.Component {
 </div>`}
               </CodeToggle>
 
-              <h2 className="example-header" id="tagNoLink">Tag No Link
+              <h2 className="example-header" id="tagNoLink">Selectable Tag
                 <Link to={location.pathname + "/#tagNoLink"} className="button button--transparent button--copy-link"></Link>
               </h2>
+              <p>To make a tag clickable, apply the class <code className="example-text">.is-selectable</code> to the <code className="example-text">.tag</code>.</p>
         			<div className="row example-container">
             			<div className="column column--full ">
-            				<div className="tag tag--blue tag--no-link tag--solid" href=" ">Blue Tag</div>
-        					<div className="tag tag--gray tag--no-link tag--solid" href=" ">Gray Tag</div>
+            				<a className="tag tag--blue is-selectable tag--solid" href=" ">Blue Tag</a>
+        					<a className="tag tag--gray is-selectable tag--solid" href=" ">Gray Tag</a>
             			</div>
             		</div>
                 <CodeToggle>
-{`<a class="tag tag--blue tag--no-link tag--solid">Blue Tag</a>
-<a class="tag tag--gray tag--no-link tag--solid">Gray Tag</a>`}
+{`<a class="tag tag--blue is-selectable tag--solid">Blue Tag</a>
+<a class="tag tag--gray is-selectable tag--solid">Gray Tag</a>`}
                 </CodeToggle>
 
                 <h2 className="example-header" id="tagColors">Tag Colors

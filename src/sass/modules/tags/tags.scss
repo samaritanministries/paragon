@@ -2,7 +2,7 @@
   =========================================================================== */
 
 $tags: '.tag';
-$tag-hover-rules: '&:not(.tag--no-link):hover .tag, &:not(.tag--no-link):focus .tag';
+$tag-hover-rules: '.is-selectable';
 $tag-default-color: $color-gray-2;
 
 /* Tag Extendables
@@ -14,23 +14,21 @@ $tag-default-color: $color-gray-2;
 	border: 2px solid $tag-default-color;
 	border-radius: 3px;
 	color: $color-blue;
-	cursor: pointer;
 	display: inline-block;
 	font-size: $font-size-xsmall;
 	font-weight: $font-weight-semibold;
 	margin: 0.25rem;
 	min-width: 1rem;
 	padding: 0.1rem 0.25rem;
+	pointer-events: none;
 	text-decoration: none;
 	text-transform: capitalize;
 
-	&:not(.tag--no-link):hover,
-	&:not(.tag--no-link):focus {
-		border: 2px solid $color-blue;
-		color: $color-blue;
+	&:hover,
+	&:focus {
+		cursor: default;
 		opacity: 1;
 		text-decoration: none;
-		transition: border-color 0.1s ease-in-out;
 	}
 }
 
@@ -39,6 +37,20 @@ $tag-default-color: $color-gray-2;
 
 #{$tags} {
 	@extend %tag;
+
+	&.is-selectable {
+		cursor: pointer;
+		pointer-events: auto;
+
+		&:hover,
+		&:focus {
+			border: 2px solid $color-blue;
+			color: $color-blue;
+			opacity: 1;
+			text-decoration: none;
+			transition: border-color 0.1s ease-in-out;
+		}
+	}
 
 	&.tag--no-link { cursor: initial;
 		opacity: 1; }
@@ -110,11 +122,6 @@ $tag-default-color: $color-gray-2;
 		border-radius: 0 3px 3px 0;
 		color: $color-text;
 		margin-left: 0;
-
-		&:not(.tag--no-link):hover,
-		&:not(.tag--no-link):focus {
-			color: $color-text;
-		}
 	}
 }
 
