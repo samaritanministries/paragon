@@ -1,11 +1,13 @@
 @mixin fallback-grid($percent) {
-	@media #{$tablet} { float: left;
+	@media #{$tablet} {
+		float: left;
 		width: calc(#{$percent} - #{$grid-gutter});//SAFARI 9
 	}
 }
 
 @mixin fallback-grid_desktop($percent) {
-	@media #{$desktop} { float: left;
+	@media #{$desktop} {
+		float: left;
 		width: calc(#{$percent} - #{$grid-gutter});//SAFARI 9
 	}
 }
