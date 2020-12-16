@@ -325,12 +325,3 @@ body.has-footer {
 		}
 	}
 }
-
-//Had to use a mixin to share the styles within a media query
-// @media #{$phone} {
-// 	.subnav-dropdown {
-// 		@include dropdown-menu;
-//
-// 		&.hide-menu { display: none !important; }
-// 	}
-// }

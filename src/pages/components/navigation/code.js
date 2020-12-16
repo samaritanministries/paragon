@@ -32,6 +32,9 @@ class NavigationCode extends React.Component {
             <div className="example-container relative">
 
               <header className="header mb-space-m">
+                <button type="button" class="mobile-menu_toggle" style={{ position: "absolute" }}>
+                  <i data-id="menu-icon" class="dashing-icon no-margin dashing-icon--menu"></i>
+                </button>
             		<nav className="header-nav">
             			<ul>
             				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
@@ -60,6 +63,9 @@ class NavigationCode extends React.Component {
             <div className="example-container relative">
 
               <header className="header">
+                <button type="button" class="mobile-menu_toggle" style={{ position: "absolute" }}>
+                  <i data-id="menu-icon" class="dashing-icon no-margin dashing-icon--menu"></i>
+                </button>
             		<nav className="header-nav">
             			<ul>
             				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
@@ -104,6 +110,9 @@ class NavigationCode extends React.Component {
               <div className="example-container relative">
 
                 <header className="header">
+                  <button type="button" class="mobile-menu_toggle" style={{ position: "absolute" }}>
+                    <i data-id="menu-icon" class="dashing-icon no-margin dashing-icon--menu"></i>
+                  </button>
               		<nav className="header-nav">
               			<ul>
               				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
