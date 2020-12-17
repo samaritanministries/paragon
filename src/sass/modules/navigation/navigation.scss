@@ -193,6 +193,20 @@ body.has-footer {
 		}
 	}
 
+	&.sub-nav--back {
+		align-items: center;
+		display: flex;
+		padding: 0 $grid-gutter/2;
+
+		@media #{$tablet} {
+			padding: 0 $grid-gutter;
+		}
+
+		a {
+			height: auto; //make back link centered
+		}
+	}
+
 	.sub-nav--title {
 		align-items: center;
 		color: $color-purple;

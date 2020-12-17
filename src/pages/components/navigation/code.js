@@ -140,6 +140,46 @@ class NavigationCode extends React.Component {
                 </CodeToggle>
                 </div>
 
+                <h2 className="mt-space-xl" id="subnavigation">Subnavigation with Back Button
+                  <Link to={location.pathname + "/#subnavigation-with-back-button"} className="button button--transparent button--copy-link"></Link>
+                </h2>
+                <div className="example-container relative">
+
+                  <header className="header">
+                		<nav className="header-nav">
+                			<ul>
+                				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
+                				<li><Link to={"/components/navigation/code"}>Page 2</Link></li>
+                				<li><Link to={"/components/navigation/code"}>Page 3</Link></li>
+                			</ul>
+                		</nav>
+                	</header>
+                  <nav className="sub-nav sub-nav--back mb-space-m">
+          					<Link to={"/components/navigation/code"} className="button button--transparent">
+                      <i className="dashing-icon dashing-icon--arrow-left" />
+                      Back
+                    </Link>
+          				</nav>
+
+                  <CodeToggle>
+    {`<header class="header">
+      <nav class="header-nav">
+        <ul>
+          <li><Link to={"/"} class="active">Page 1</Link></li>
+          <li><Link to={"/"}>Page 2</Link></li>
+          <li><Link to={"/"}>Page 3</Link></li>
+        </ul>
+      </nav>
+    </header>
+    <nav class="sub-nav sub-nav--back">
+      <a class="button button--transparent">
+        <i class="dashing-icon dashing-icon--arrow-left"></i>
+        Back
+      </a>
+    </nav>`}
+                  </CodeToggle>
+                  </div>
+
             </div>
         </AppContent>
       </Layout>
