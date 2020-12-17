@@ -5,9 +5,6 @@ Standard sizes are named, non-standard sizes are numbered.
 -------------------------------- */
 $grid-gutter: 1rem !default;
 
-//TODO Consider making this a card class
-.grid { .card { margin: 0; } } //required to span cards 100%
-
 $gridConfig: '1'             '1',
 	'sixth'         '2',
 	'fourth'        '3',
