@@ -1115,3 +1115,7 @@ footer.example-footer {
 		position: absolute;
 	}
 }
+
+.disable-click {
+	pointer-events: none;
+}
