@@ -44,7 +44,3 @@ $gridConfig: '1'             '8.3333%',
 		width: 100%;//By default, content will span all 12 columns
 	}
 }
-
-.grid-padding {
-	@extend %fallback-padding;
-}
