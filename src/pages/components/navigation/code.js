@@ -7,6 +7,7 @@ import SubNav from '../../../components/subnavigation'
 import AppContent from '../../../components/appcontent'
 import CodeToggle from '../../../components/codetoggle'
 import SubNavigation from './subnav'
+import MobileMenu from './mobilemenu'
 
 const currentPageName = "Navigation";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -32,6 +33,7 @@ class NavigationCode extends React.Component {
             <div className="example-container relative">
 
               <header className="header mb-space-m">
+                <MobileMenu disableClick={true}/>
             		<nav className="header-nav">
             			<ul>
             				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
@@ -60,6 +62,7 @@ class NavigationCode extends React.Component {
             <div className="example-container relative">
 
               <header className="header">
+                <MobileMenu disableClick={true}/>
             		<nav className="header-nav">
             			<ul>
             				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>
@@ -104,6 +107,7 @@ class NavigationCode extends React.Component {
               <div className="example-container relative">
 
                 <header className="header">
+                  <MobileMenu disableClick={true}/>
               		<nav className="header-nav">
               			<ul>
               				<li><Link to={"/components/navigation/code"} className="active">Page 1</Link></li>

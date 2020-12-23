@@ -1,0 +1,132 @@
+$animation-time: 0.3s;
+$sidebar-highlight: $color-hover;
+$sidebar-text-color: $color-purple;
+$sidebar-background: $color-white;
+$sidebar-header-background: $color-gradient;
+$sidebar-header-text-color: $color-white;
+
+.mobile-menu_overlay {
+
+	background-color: rgba(0, 0, 0, 0.6);
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: width $animation-time;
+	width: 100%;
+	z-index: $zindex-mobilemenu;
+
+	* {
+		opacity: 1;
+		transition: opacity $animation-time;
+	}
+
+	&.is-collapsed {
+		overflow: hidden;
+		transition: width $animation-time;
+		width: 0px;
+
+		* {
+			opacity: 0;
+			transition: opacity $animation-time, visibility $animation-time;
+			visibility: hidden;
+		}
+	}
+
+	@media #{$tablet} {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.mobile-sidebar {
+	background-color: $sidebar-background;
+	bottom: 0;
+	position: absolute;
+	top: 0;
+	width: 90%;
+
+	.mobile-sidebar_header {
+		background: $sidebar-header-background;
+		height: $header-height;
+		width: 100%;
+	}
+
+	.mobile-sidebar_nav {
+		height: calc(100% - #{$header-height});
+		overflow-y: auto;
+		width: 100%;
+
+		ul,
+		ol {
+			list-style-type: none;
+			padding: 0;
+
+			li {
+
+				@extend %icon-white;
+				align-items: center;
+				display: flex;
+				height: 2.5rem;
+
+				a {
+					align-items: center;
+					color: $sidebar-text-color;
+					display: flex;
+					height: 100%;
+					padding-left: $grid-gutter;
+					text-decoration: none;
+					width: 100%;
+
+					&.sign-out {
+						color: $color-red;
+					}
+
+					&:hover {
+						background-color: $sidebar-highlight;
+						opacity: 1;
+					}
+
+					&.active {
+						background-color: $sidebar-highlight;
+						border-left: 4px solid $color-data-teal;
+					}
+				}
+			}
+		}
+	}
+}
+
+//Mobile menu button
+.mobile-menu_toggle {
+	left: 0.75rem;
+	position: fixed;
+	top: 0.75rem;
+	transition: all $animation-time ease-in;
+	z-index: 5001;
+
+	&.is-open {
+		background-color: transparent;
+		transition: all $animation-time ease-in;
+	}
+
+	@media #{$tablet} { display: none; }
+}
+
+//Push down mobile button when global banner is present
+.global-banner-container + .header {
+	.mobile-menu_container {
+		.mobile-menu_toggle {
+			top: calc(#{$global-banner-height_phone} + 0.75rem);
+		}
+
+		.mobile-sidebar_nav {
+			height: calc(100% - #{$header-height} - #{$global-banner-height_phone});
+		}
+
+		.mobile-sidebar_header {
+			padding-top: calc(#{$global-banner-height_phone} + #{$header-height});
+		}
+	}
+}
