@@ -120,8 +120,8 @@
 	border-color: $tag-color;
 	color: $color;
 
-	&:not(.tag--no-link):hover,
-	&:not(.tag--no-link):focus {
+	&.is-selectable:hover,
+	&.is-selectable:focus {
 		border-color: darken($tag-color, 20%);
 		color: lighten($color, 10%);
 	}
@@ -133,8 +133,8 @@
 	border-color: $color-gray-3;
 	color: $color;
 
-	&:not(.tag--no-link):hover,
-	&:not(.tag--no-link):focus {
+	&.is-selectable:hover,
+	&.is-selectable:focus {
 		border-color: $color;
 		color: lighten($color, 10%);
 	}

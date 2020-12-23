@@ -131,14 +131,88 @@ class Icons extends React.Component {
               </div>
             </div>
 
+            <h2 className="mt-space-xl" id="styles">Icon Sizing
+              <Link to={location.pathname + "/#icon-sizing"} className="button button--transparent button--copy-link"></Link>
+            </h2>
+            <div className="example-container">
+              <div className="card">
+                <div className="card-header">
+                  <h3>Custom sizing</h3>
+                </div>
+                <div className="card-content">
+                  <p>To change the size of an icon, add the class <code className="example-text">.dashing-icon--[size]</code>.</p>
+                  <i className="dashing-icon dashing-icon--info-filled dashing-icon--xs" style={{ marginRight: "0.25rem" }} />
+                  <i className="dashing-icon dashing-icon--info-filled dashing-icon--s" style={{ marginRight: "0.25rem" }} />
+                  <i className="dashing-icon dashing-icon--info-filled dashing-icon--m" style={{ marginRight: "0.25rem" }} />
+                  <i className="dashing-icon dashing-icon--info-filled dashing-icon--l" style={{ marginRight: "0.25rem" }} />
+                  <i className="dashing-icon dashing-icon--info-filled dashing-icon--xl" />
+                  <div className="show-code mt-space-xs mb-space-m">
+                    <CodeToggle>
+{`<i class="dashing-icon dashing-icon--info-filled dashing-icon--xs"></i>
+<i class="dashing-icon dashing-icon--info-filled dashing-icon--s"></i>
+<i class="dashing-icon dashing-icon--info-filled dashing-icon--m"></i>
+<i class="dashing-icon dashing-icon--info-filled dashing-icon--l"></i>
+<i class="dashing-icon dashing-icon--info-filled dashing-icon--xl"></i>
+`}
+                    </CodeToggle>
+                  </div>
+                  <div className="flex-table is-condensed font-small">
+                    <ol className="table-row--header">
+                      <li>Class</li>
+                      <li>Size</li>
+                    </ol>
+                    <ol className="table-row">
+                      <li><code className="example-text">dashing-icon--xs</code></li>
+                      <li>0.8rem</li>
+                    </ol>
+                    <ol className="table-row">
+                      <li><code className="example-text">dashing-icon--s</code></li>
+                      <li>0.9rem</li>
+                    </ol>
+                    <ol className="table-row">
+                      <li><code className="example-text">dashing-icon--m</code></li>
+                      <li>1.25rem</li>
+                    </ol>
+                    <ol className="table-row">
+                      <li><code className="example-text">dashing-icon--l</code></li>
+                      <li>1.563rem</li>
+                    </ol>
+                    <ol className="table-row">
+                      <li><code className="example-text">dashing-icon--xl</code></li>
+                      <li>1.953rem</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div className="card">
+                <div className="card-header">
+                  <h3>Relative sizing</h3>
+                </div>
+                <div className="card-content">
+                  <p>Nesting an icon inside of an element will make it take on the size of the parent container.</p>
+                  <h2 className="text-color--green">
+                    <i className="dashing-icon dashing-icon--checkmark-filled dashing-icon--green" />
+                    {" "}Success
+                  </h2>
+                  <div className="show-code mt-space-xs">
+                    <CodeToggle>
+{`<h2 class="text-color--green">
+  <i class="dashing-icon dashing-icon--checkmark-filled dashing-icon--green"></i>
+  Success
+</h2>`}
+                    </CodeToggle>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <h2 className="mt-space-xl" id="styles">Icons with Text
               <Link to={location.pathname + "/#icons-with-text"} className="button button--transparent button--copy-link"></Link>
             </h2>
             <div className="example-container">
               <div className="card">
                 <div className="card-header has-icon">
-                  <i className="dashing-icon dashing-icon--info-filled" />
-                  <h3>Card Header with Icon</h3>
+                  <h3><i className="dashing-icon dashing-icon--info-filled" />Card Header with Icon</h3>
                 </div>
                 <div className="card-content">
                   <p className="no-margin">This is an example of placing an icon in a card header</p>
