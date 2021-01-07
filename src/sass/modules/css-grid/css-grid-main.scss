@@ -65,4 +65,6 @@ $gridConfig: '1'             '1',
 			@include grid-column_desktop(#{nth($size, 2)});
 		}
 	}
+	
+	.card { margin: 0; }//remove margin for cards within grid
 }
