@@ -2,6 +2,10 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.5.1] - 2021-01-07
+### Fixed
+- Fix card margin within grid containers
+
 ## [2.5.0] - 2021-01-07
 ### Changed
 - Tag is now not selectable by default
