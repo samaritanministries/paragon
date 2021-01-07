@@ -1,84 +1,46 @@
 /* -----------------------------
-Fallback Classes (Must be First)
+Fallback Classes (Must be the first css-grid import)
+This file is required for support on IE11, Safari 9,
+and other browsers that do not fully implement grid
+
+Standard sizes are named, non-standard sizes are numbered.
+
 -------------------------------- */
 
-//12 10 9 8 6 4 3 2
-.grid { grid-template-columns: repeat(12, 1fr);
+$gridConfig: '1'             '8.3333%',
+	'sixth'         '16.6666%',
+	'fourth'        '25%',
+	'third'         '33.3333%',
+	'5'             '41.6666%',
+	'half'          '50%',
+	'7'             '58.3333%',
+	'two-thirds'    '66.6666%',
+	'three-fourths' '75%',
+	'five-sixths'   '83.3333%',
+	'11'            '91.6666%',
+	'full'          '100%';
 
-	.grid--full,
-	.grid-12 { @include fallback-grid(100%); }
+//Standard Grid Classes
+@each $size in $gridConfig {
+	.grid--#{nth($size, 1)} {
 
-	.grid--five-sixths,
-	.grid-10 { @include fallback-grid(83.3333%); }
-
-	.grid--three-fourths,
-	.grid-9 { @include fallback-grid(75%); }
-
-	.grid--two-thirds,
-	.grid-8 { @include fallback-grid(66.6666%); }
-
-	.grid--half,
-	.grid-6 { @include fallback-grid(50%); }
-
-	.grid--third,
-	.grid-4 { @include fallback-grid(33.3333%); }
-
-	.grid--fourth,
-	.grid-3 { @include fallback-grid(25%);  }
-
-	.grid--sixth,
-	.grid-2 { @include fallback-grid(16.6666%); }
-
-	.grid--full_desktop,
-	.grid-12_desktop { @include fallback-grid_desktop(100%); }
-
-	.grid--five-sixths_desktop,
-	.grid-10_desktop { @include fallback-grid_desktop(83.3333%); }
-
-	.grid--three-fourths_desktop,
-	.grid-9_desktop { @include fallback-grid_desktop(75%); }
-
-	.grid--two-thirds_desktop,
-	.grid-8_desktop { @include fallback-grid_desktop(66.6666%); }
-
-	.grid--half_desktop,
-	.grid-6_desktop { @include fallback-grid_desktop(50%); }
-
-	.grid--third_desktop,
-	.grid-4_desktop { @include fallback-grid_desktop(33.3333%); }
-
-	.grid--fourth_desktop,
-	.grid-3_desktop { @include fallback-grid_desktop(25%);  }
-
-	.grid--sixth_desktop,
-	.grid-2_desktop { @include fallback-grid_desktop(16.6666%); }
-
-	> * {
-		float: left;
-		width: 100%;//By default, content will span all 12 columns
+		@extend %fallback-gap;
+		@include fallback-grid(#{nth($size, 2)});
 	}
 }
 
-/* -----------------------------
-Fake "grid-gap" for Old Browsers
--------------------------------- */
-.grid {
-	.grid--full,
-	.grid--half,
-	.grid--three-fourths,
-	.grid--fourth,
-	.grid--two-thirds,
-	.grid--five-sixths,
-	.grid--third,
-	.grid--sixth,
-	.grid-12,
-	.grid-10,
-	.grid-9,
-	.grid-8,
-	.grid-6,
-	.grid-4,
-	.grid-3,
-	.grid-2 {
+//Desktop Only Grid Classes
+@each $size in $gridConfig {
+	.grid--#{nth($size, 1)}_desktop {
+
 		@extend %fallback-gap;
+		@include fallback-grid_desktop(#{nth($size, 2)});
+	}
+}
+
+.grid {
+	> * {
+		float: left;
+		width: 100%;//By default, content will span all 12 columns
 	}
 }
