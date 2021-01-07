@@ -2,8 +2,21 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.5.0] - 2021-01-07
+### Changed
+- Tag is now not selectable by default
+- Refactor CSS Grid
+
+### Added
+- Utility classes to resize paragon icons
+- Mobile menu code
+- Back button code to the navigation file
+
+### Fixed
+- Fix Progress Stepper labels so they now align properly regardless of the text length
+
 ## [2.4.0] - 2020-09-03
-### Updated
+### Changed
 - Update gradient color
 - Update Tippy.js to latest version
 
@@ -23,7 +36,7 @@ This changelog was started using [these conventions](http://keepachangelog.com/)
 ### Added
 - Add utility classes to change the display type
 
-### Updated
+### Changed
 - Update footer component
 
 ### Fixed
@@ -39,7 +52,7 @@ This changelog was started using [these conventions](http://keepachangelog.com/)
 ### Fixed
 - Fix broken link on card guidelines page
 
-### Updated
+### Changed
 - Update flex and spacing utilities
 
 ## [2.1.0] - 2019-12-18
