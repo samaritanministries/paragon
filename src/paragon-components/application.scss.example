@@ -1,0 +1,6 @@
+//Update this file to reflect a default application.scss as components are added.
+
+@import "node_modules/paragon-components/base/base";
+
+@import 'node_modules/paragon-components/Actions/actions';
+@import 'node_modules/paragon-components/Grid/grid';

@@ -1,0 +1,21 @@
+{
+  "name": "paragon-components",
+  "description": "React Components for Samaritan Ministries",
+  "version": "0.0.1",
+  "main": "index.js",
+  "keywords": [
+    "paragon",
+    "paragon-framework",
+    "paragon-components"
+  ],
+  "author": "Samaritan Ministries",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samaritanministries/paragon/issues"
+  },
+  "homepage": "http://developers.samaritanministries.org/paragon/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samaritanministries/paragon.git"
+  }
+}
