@@ -25,12 +25,12 @@ class CodeToggle extends React.Component {
 
   render() {
     const { children, language } = this.props;
-    const { showCode, toggleCode } = this.state;
+    const { showCode } = this.state;
     Prism.plugins.customClass.map({ tag: "exampletag" });
 
     return (
       <div className={showCode ? "group-open" : ""}>
-        <div onClick={toggleCode} className={showCode ? "code-toggle is-open" : "code-toggle"}>
+        <div onClick={this.toggleCode} className={showCode ? "code-toggle is-open" : "code-toggle"}>
           <i className="icon--code" />
         </div>
         {language === "html" &&
