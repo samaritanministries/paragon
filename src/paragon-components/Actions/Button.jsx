@@ -2,8 +2,9 @@ import { bool, node, string } from "prop-types";
 import { Display, Icon, Shape, Variants } from "./Variants";
 import cn from "classnames";
 import { Colors } from "./Colors";
+// Should these be additional component wrappers to pull in?
 // import { Link } from "gatsby"; //For Gatsby Projects
-import { NavLink } from "react-router-dom"; //For React App Projects
+// import { NavLink } from "react-router-dom"; //For React App Projects
 import React from "react";
 
 export function Button({
@@ -69,20 +70,20 @@ export function Button({
       );
     }
 
-    if (component === "button--anchor") {
-      return (
-        <NavLink
-          {...otherProps}
-          to={to}
-          activeClassName="active"
-          className={classes}
-          disabled={isDisabled}
-        >
-          {text !== null && text}
-          {children}
-        </NavLink>
-      )
-    }
+    // if (component === "button--anchor") {
+    //   return (
+    //     <NavLink
+    //       {...otherProps}
+    //       to={to}
+    //       activeClassName="active"
+    //       className={classes}
+    //       disabled={isDisabled}
+    //     >
+    //       {text !== null && text}
+    //       {children}
+    //     </NavLink>
+    //   )
+    // }
   };
   return renderElement();
 }
