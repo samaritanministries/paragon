@@ -1,6 +1,7 @@
 $example-global-content-width: 800px !default;
 
 @import '../paragon';
+// @import '../../paragon-components/paragon-components';
 @import '../base/colors/given-colors';
 @import 'typography';
 @import 'image';
