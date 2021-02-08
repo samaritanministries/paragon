@@ -7,8 +7,8 @@
     "start": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "deploy": "gatsby build && gh-pages -d public",
-    "stylelint": "stylelint 'src/sass/**/*.scss'",
-    "stylelint-fix": "stylelint 'src/sass/**/*.scss' --fix"
+    "stylelint": "stylelint 'src/paragon-framework/**/*.scss'",
+    "stylelint-fix": "stylelint 'src/paragon-framework/**/*.scss' --fix"
   },
   "pre-commit": "stylelint",
   "dependencies": {
@@ -40,12 +40,12 @@
     "webpack": "^4.46.0"
   },
   "files": [
-    "src/sass/base",
-    "src/sass/modules",
-    "src/sass/theme",
-    "src/sass/vendor",
-    "src/sass/paragon.scss",
-    "src/sass/package.json",
-    "src/sass/CHANGELOG.md"
+    "src/paragon-framework/base",
+    "src/paragon-framework/modules",
+    "src/paragon-framework/theme",
+    "src/paragon-framework/vendor",
+    "src/paragon-framework/paragon.scss",
+    "src/paragon-framework/package.json",
+    "src/paragon-framework/CHANGELOG.md"
   ]
 }
