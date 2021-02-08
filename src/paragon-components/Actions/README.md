@@ -1,39 +1,43 @@
-# Actions.jsx
+# Actions
 
-`Actions.jsx` provides the imports for any components in the "Actions" folder. Currently this is only "Button".
+`index.jsx` provides the imports for most commonly used components in the "Actions" folder. In this case index pulls in anything within `Button.jsx`. Additional components are `ButtonNavLink` and `ButtonLink` which provide support for react's `NavLink` and gatsby's `Link` respectively.
 
-### Import Button via `Actions.jsx`:
-
-`import { Button } from "[path]/paragon/actions/Actions";`
-
-### Import Button via `Button.jsx`:
-
-`import Button from "[path]/paragon/actions/Button";`
-
-## _actions.scss
-
-`_action.scss` is used to pull in all scss related to any component within the Actions folder.
-
-button.scss           : contains the structure of the button (no theme styles)
-
-button-theme-x.scss   : contains the style of the button (colors)
-
-button-mixins.scss    : repeatable code
-
-To use `_actions.scss`, it must be added to the list of imports within your `application.scss` file unless you've imported the `paragon-components.scss` from the root directory.
-
-## Other JSX
+## 1.0 File Overview
 Button.jsx     : The component to create buttons.
+
+ButtonNavLink  : Component to create a NavLink that is styled as a button (for react projects)
+
+ButtonLink     : Component to create a Link that is styled as a button (for gatsby projects)
 
 Colors.jsx     : Component containing valid color props.
 
 Variants.jsx   : Component containing valid variants, icon, display types, and shapes.
 
-### Table of Props
+### 1.1 Import Button:
+
+`import { Button } from "[path]/paragon/Actions";`
+
+or
+
+`import Button from "[path]/paragon/Actions/Button";`
+
+### 1.2 Import ButtonNavLink:
+
+`import Button from "[path]/paragon/Actions/ButtonNavLink";`
+
+### 1.3 Import ButtonLink:
+
+`import Button from "[path]/paragon/Actions/ButtonLink";`
+
+## 2.0 Styling
+
+Our components get their styles via our `paragon-framework` package. To use paragon styling, you must import the `_actions.scss` file into the `application.scss` file of your project.
+
+## 3.0 Props
 
 | Prop          | Values                                                                |
 |---------------|-----------------------------------------------------------------------|
-| ...otherProps | NA |
+| ...otherProps | NA                                                                    |
 | buttonColor   | black, blue, green, grey, orange, primary, purple, red, white, yellow |
 | buttonDisplay | block, block_mobile, large, small                                     |
 | buttonIcon    | icon, icon--main, icon-small                                          |
@@ -48,4 +52,4 @@ Variants.jsx   : Component containing valid variants, icon, display types, and s
 | isDisabled    | true/false                                                            |
 | isLoading     | true/false (see also "hasSpinner")                                    |
 | text          | (text to display on button)                                           |
-| to            | valid internal url (only available via NavLink or Link)
+| to            | valid internal url (only available via ButtonNavLink or ButtonLink)   |

@@ -6,8 +6,8 @@ import Layout from "../../../components/layout";
 import SubNav from "../../../components/subnavigation";
 import AppContent from "../../../components/appcontent";
 import CodeToggle from "../../../components/codetoggle";
-import CodeToggleSCSS from "../../../components/codetoggle-scss";
-import { Button } from "../../../paragon-components/Actions/Actions";
+// import CodeToggleSCSS from "../../../components/codetoggle-scss";
+import { Button } from "../../../paragon-components/Actions/";
 
 const currentPageName = "Actions - React";
 const currentPageNameLower = currentPageName.toLowerCase();

@@ -1,0 +1,13 @@
+// This file is specific to the paragon.samaritanministries.org application
+
+@use "../paragon-framework";//imports vendor and base (core)
+
+@use "../paragon-styleguide";//only for paragon documentation pages (this application)
+
+//@import "../paragon/experimental"; //We probably can kill this folder?
+
+// Import components here - this could reside in a "config" file?
+//@import "../paragon-framework/actions/actions";
+
+//Import modules here (before they are made official components)
+//@use "../paragon-framework/modules/modules";

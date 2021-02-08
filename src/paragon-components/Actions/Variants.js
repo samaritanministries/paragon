@@ -3,8 +3,6 @@ export const Variants = Object.freeze({
   TRANSPARENT: "transparent"
 });
 
-export default Variants;
-
 export const Icon = Object.freeze({
   ICON: "icon",
   ICON_MAIN: "icon--main",
@@ -23,3 +21,5 @@ export const Shape = Object.freeze({
   SMOOTH: "smooth",
   SQUARE: "square"
 });
+
+export default Variants;

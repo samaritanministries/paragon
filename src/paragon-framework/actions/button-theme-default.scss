@@ -14,22 +14,5 @@ $buttonConfig:
 //For each, read the color name.
 //Then use the other items in numbered order to supply the colored variables
 @each $color in $buttonConfig {
-  //theme name to apply is first, in this case "lightmode"
-  .lightmode {
-    #{$buttons} {
-      &.button--#{nth($color, 1)} { @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
-
-      &.button--border {
-        &.button--#{nth($color, 1)} {
-          @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border);
-        }
-      }
-
-      &.button--transparent {
-        &.button--#{nth($color, 1)} {
-          @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent);
-        }
-      }
-    }
-  }
+  @include button-setup;
 }

@@ -50,3 +50,21 @@
   -o-user-select: $value;
   user-select: $value;
 }
+
+@mixin button-setup { 
+  #{$buttons} {
+    &.button--#{nth($color, 1)} { @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
+
+    &.button--border {
+      &.button--#{nth($color, 1)} {
+        @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border);
+      }
+    }
+
+    &.button--transparent {
+      &.button--#{nth($color, 1)} {
+        @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent);
+      }
+    }
+  }
+}

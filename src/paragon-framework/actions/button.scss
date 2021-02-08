@@ -13,8 +13,9 @@ $action--focus: $color-focus !default;
 @import "./button-mixins.scss";
 
 //Available theme files
-@import "./button-theme-light.scss";
-@import "./button-theme-dark.scss";
+// @import "./button-theme-default.scss";//Use this file until additional themes are ready to be supported.
+// @import "./button-theme-light.scss";
+// @import "./button-theme-dark.scss";
 
 /* Actions Extendables
 ===========================================================================
