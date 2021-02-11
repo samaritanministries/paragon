@@ -14,5 +14,5 @@ $buttonConfig:
 //For each, read the color name.
 //Then use the other items in numbered order to supply the colored variables
 @each $color in $buttonConfig {
-  @include button-setup;
+  @include button-setup($color);
 }

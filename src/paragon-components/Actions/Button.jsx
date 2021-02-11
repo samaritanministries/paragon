@@ -22,7 +22,6 @@ export function Button({
   isDisabled,
   isLoading,
   text,
-  to,
   ...otherProps
 }) {
   const classes = cn({

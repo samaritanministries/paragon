@@ -4,7 +4,7 @@ Grid Classes
 Standard sizes are named, non-standard sizes are numbered.
 -------------------------------- */
 $grid-gutter: 1rem !default;
-//.grid { .card { margin: 0; } } //required to span cards 100%
+.grid { .card { margin: 0; } } //required to span cards 100%
 
 $gridConfig:
   "1"             "1",

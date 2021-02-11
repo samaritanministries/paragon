@@ -318,7 +318,7 @@ pre.line-numbers > code {
 	}
 
 	.icon--code {
-		background-image: url('../../img/icon--code_light.svg');
+		background-image: url('../img/icon--code_light.svg');
 		background-repeat: no-repeat;
 		background-size: 100%;
 		display: inline-block;
@@ -332,7 +332,7 @@ pre.line-numbers > code {
 		&::after { color: $color-white; }
 
 		.icon--code {
-			background-image: url('../../img/icon--code.svg');
+			background-image: url('../img/icon--code.svg');
 		}
 	}
 
@@ -345,7 +345,7 @@ pre.line-numbers > code {
 	&.is-open {
 		background-color: $code-toggle;
 		border-radius: 5px 5px 0 0;
-		.icon--code { background-image: url('../../img/icon--code.svg'); }
+		.icon--code { background-image: url('../img/icon--code.svg'); }
 
 		&::after {
 			color: $color-white;

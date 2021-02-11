@@ -51,7 +51,7 @@
   user-select: $value;
 }
 
-@mixin button-setup { 
+@mixin button-setup($color) {
   #{$buttons} {
     &.button--#{nth($color, 1)} { @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
 

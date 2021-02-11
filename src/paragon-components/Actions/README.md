@@ -3,17 +3,25 @@
 `index.jsx` provides the imports for most commonly used components in the "Actions" folder. In this case index pulls in anything within `Button.jsx`. Additional components are `ButtonNavLink` and `ButtonLink` which provide support for react's `NavLink` and gatsby's `Link` respectively.
 
 ## 1.0 File Overview
-Button.jsx     : The component to create buttons.
+Button.jsx         : The component to create buttons.
 
-ButtonNavLink  : Component to create a NavLink that is styled as a button (for react projects)
+ButtonNavLink.jsx  : Component to create a NavLink that is styled as a button (for react projects)
 
-ButtonLink     : Component to create a Link that is styled as a button (for gatsby projects)
+ButtonLink.jsx     : Component to create a Link that is styled as a button (for gatsby projects)
 
-Colors.jsx     : Component containing valid color props.
+Colors.js          : Component containing valid color props.
 
-Variants.jsx   : Component containing valid variants, icon, display types, and shapes.
+Variants.js        : Component containing valid variants, icon, display types, and shapes.
 
-### 1.1 Import Button:
+index.js           : Default file to import
+
+### 1.1 Naming Convention
+
+Files ending in `js` are javascript only files.
+
+Files ending in `jsx` are react files.
+
+### 1.2 Import Button
 
 `import { Button } from "[path]/paragon/Actions";`
 
@@ -21,11 +29,11 @@ or
 
 `import Button from "[path]/paragon/Actions/Button";`
 
-### 1.2 Import ButtonNavLink:
+### 1.3 Import ButtonNavLink
 
 `import Button from "[path]/paragon/Actions/ButtonNavLink";`
 
-### 1.3 Import ButtonLink:
+### 1.4 Import ButtonLink
 
 `import Button from "[path]/paragon/Actions/ButtonLink";`
 
@@ -53,3 +61,10 @@ Our components get their styles via our `paragon-framework` package. To use para
 | isLoading     | true/false (see also "hasSpinner")                                    |
 | text          | (text to display on button)                                           |
 | to            | valid internal url (only available via ButtonNavLink or ButtonLink)   |
+
+## 4.0 Example Usage
+```
+<Button buttonColor={green}>
+  Submit
+</Button>
+```

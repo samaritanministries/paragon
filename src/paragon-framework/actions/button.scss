@@ -1,3 +1,5 @@
+//@use "../base/colors/given-colors" as *; Example of how to use @use in files.
+
 /* Button Variables
 ===========================================================================
 */
@@ -10,12 +12,12 @@ $action--focus: $color-focus !default;
 ===========================================================================
 */
 
-@import "./button-mixins.scss";
+@import "./button-mixins";
 
 //Available theme files
-// @import "./button-theme-default.scss";//Use this file until additional themes are ready to be supported.
-// @import "./button-theme-light.scss";
-// @import "./button-theme-dark.scss";
+@import "./button-theme-default";//Use this file until additional themes are ready to be supported.
+//@import "./button-theme-light.scss";
+//@import "./button-theme-dark.scss";
 
 /* Actions Extendables
 ===========================================================================
