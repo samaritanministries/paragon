@@ -20,6 +20,7 @@ export function Button({
   hasSpinner,
   href,
   isDisabled,
+  name,
   isLoading,
   text,
   ...otherProps
@@ -69,20 +70,6 @@ export function Button({
       );
     }
 
-    // if (component === "button--anchor") {
-    //   return (
-    //     <NavLink
-    //       {...otherProps}
-    //       to={to}
-    //       activeClassName="active"
-    //       className={classes}
-    //       disabled={isDisabled}
-    //     >
-    //       {text !== null && text}
-    //       {children}
-    //     </NavLink>
-    //   )
-    // }
   };
   return renderElement();
 }
@@ -99,7 +86,7 @@ Button.propTypes = {
   hasSpinner: bool,
   href: string,
   isDisabled: bool,
-  isIcon: bool,
+  name: string,
   text: string,
   to: string
 };
@@ -116,7 +103,7 @@ Button.defaultProps = {
   hasSpinner: false,
   href: undefined,
   isDisabled: false,
-  isIcon: false,
+  name: undefined,
   text: null,
   to: undefined
 };

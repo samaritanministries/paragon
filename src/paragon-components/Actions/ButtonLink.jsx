@@ -17,6 +17,7 @@ export function Button({
   disabled,
   hasSpinner,
   isDisabled,
+  name,
   isLoading,
   text,
   to,
@@ -66,7 +67,7 @@ Button.propTypes = {
   hasSpinner: bool,
   href: string,
   isDisabled: bool,
-  isIcon: bool,
+  name: string,
   text: string,
   to: string
 };
@@ -83,7 +84,7 @@ Button.defaultProps = {
   hasSpinner: false,
   href: undefined,
   isDisabled: false,
-  isIcon: false,
+  name: undefined,
   text: null,
   to: undefined
 };

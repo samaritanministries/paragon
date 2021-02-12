@@ -17,6 +17,7 @@ export function Button({
   disabled,
   hasSpinner,
   isDisabled,
+  name,
   isLoading,
   text,
   to,
@@ -65,7 +66,7 @@ Button.propTypes = {
   component: string,
   hasSpinner: bool,
   isDisabled: bool,
-  isIcon: bool,
+  name: string,
   text: string,
   to: string
 };
@@ -81,7 +82,7 @@ Button.defaultProps = {
   component: "button",
   hasSpinner: false,
   isDisabled: false,
-  isIcon: false,
+  name: undefined,
   text: null,
   to: undefined
 };

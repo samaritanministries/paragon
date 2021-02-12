@@ -6,10 +6,10 @@ import Layout from "../../../components/layout";
 import SubNav from "../../../components/subnavigation";
 import AppContent from "../../../components/appcontent";
 import CodeToggle from "../../../components/codetoggle";
-// import CodeToggleSCSS from "../../../components/codetoggle-scss";
 import { Button } from "../../../paragon-components/Actions/";
+import ExampleCard from "../../../components/example-card";
 
-const currentPageName = "Actions - React";
+const currentPageName = "Actions";
 const currentPageNameLower = currentPageName.toLowerCase();
 
 class ActionsCode extends React.Component {
@@ -32,27 +32,50 @@ class ActionsCode extends React.Component {
               <Link to={`${location.pathname}/#styles`} className="button button--transparent button--copy-link" />
             </h2>
             <div className="example-container">
-              <div className="card">
-                <div className="card-content">
-                  <Button>Default</Button>
-                </div>
-              </div>
-              <div className="card">
-                <div className="card-content">
-                  <button type="button" className="button button--border">Border</button>
-                </div>
-              </div>
-              <div className="card">
-                <div className="card-content">
-                  <button type="button" className="button button--transparent">Transparent</button>
-                </div>
-              </div>
+              <ExampleCard>
+                <Button>Default</Button>
+              </ExampleCard>
+              <ExampleCard>
+                <Button buttonVariant="border">Border</Button>
+              </ExampleCard>
+              <ExampleCard>
+                <Button buttonVariant="transparent">Transparent</Button>
+              </ExampleCard>
               <CodeToggle language="jsx">
                 {`<Button>Default</Button>
 
 <Button buttonVariant="border">Default</Button>
 
 <Button buttonVariant="transparent">Default</Button>`}
+              </CodeToggle>
+            </div>
+          </div>
+
+          <div className="grid grid-padding">
+
+            <h2 id="styles">States
+              <Link to={`${location.pathname}/#styles`} className="button button--transparent button--copy-link" />
+            </h2>
+            <div className="example-container">
+              <ExampleCard>
+                <Button>Default</Button>
+                <Button buttonVariant="border">Border</Button>
+                <Button buttonVariant="transparent">Transparent</Button>
+              </ExampleCard>
+
+              <ExampleCard>
+                <Button isDisabled={true}>Default</Button>
+                <Button buttonVariant="border" isDisabled={true}>Border</Button>
+                <Button buttonVariant="transparent" isDisabled={true}>Transparent</Button>
+              </ExampleCard>
+              <CodeToggle language="jsx">
+                {`<Button>Default</Button>
+<Button buttonVariant="border">Default</Button>
+<Button buttonVariant="transparent">Default</Button>
+
+<Button isDisabled={true}>Default</Button>
+<Button buttonVariant="border" isDisabled={true}>Border</Button>
+<Button buttonVariant="transparent" isDisabled={true}>Transparent</Button>`}
               </CodeToggle>
             </div>
           </div>

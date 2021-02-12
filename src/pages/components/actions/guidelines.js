@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from '../../../components/layout'
-import SubNav from '../../../components/subnavigation'
-import AppContent from '../../../components/appcontent'
+import Layout from "../../../components/layout";
+import SubNav from "../../../components/subnavigation";
+import AppContent from "../../../components/appcontent";
 
 const currentPageName = "Actions";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -12,7 +12,7 @@ export default () => (
   <Layout>
     <header className="subnav">
       <h1>{currentPageName}</h1>
-      <SubNav pageName={currentPageNameLower}/>
+      <SubNav pageName={currentPageNameLower} />
     </header>
     <AppContent>
       <div className="grid grid-padding">
@@ -22,7 +22,7 @@ export default () => (
           <fieldset>
             <div className="flex-container pb-space-m">
               <div className="icon-container float-left">
-                <i className="dashing-icon dashing-icon--checkmark-filled dashing-icon--green"></i>
+                <i className="dashing-icon dashing-icon--checkmark-filled dashing-icon--green" />
               </div>
               <button>View Image</button>
               <button className="button button--secondary ml-space-l">Visit Guidelines</button>
@@ -30,7 +30,7 @@ export default () => (
             </div>
             <div className="flex-container">
               <div className="icon-container float-left">
-                <i className="dashing-icon dashing-icon--alert-filled dashing-icon--red"></i>
+                <i className="dashing-icon dashing-icon--alert-filled dashing-icon--red" />
               </div>
               <button>Go</button>
               <button className="button button--secondary ml-space-l">Click Here</button>
@@ -65,4 +65,4 @@ export default () => (
       </div>
     </AppContent>
   </Layout>
-)
+);
