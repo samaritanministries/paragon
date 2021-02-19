@@ -41,6 +41,8 @@ or
 
 Our components get their styles via our `paragon-framework` package. To use paragon styling, you must import the `_actions.scss` file into the `application.scss` file of your project.
 
+NOTE: `Button Group` is currently unsupported as an actions component.
+
 ## 3.0 Props
 
 | Prop          | Values                                                                |

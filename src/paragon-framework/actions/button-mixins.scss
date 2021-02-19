@@ -1,5 +1,5 @@
-@mixin button($background-color, $background-color-dark, $color, $button-type: default) {
-  @if $button-type == default {
+@mixin button($button-name, $background-color, $background-color-dark, $color, $button-type: button) {
+  @if $button-type == button {
     background-color: $background-color;
     color: $color;
     .dashing-icon::before { color: $color; }
@@ -14,9 +14,9 @@
   @if $button-type == border {
     background-color: transparent;
     border-color: $background-color;
-    color: $background-color;
+    color: text-color($button-name, $background-color);
 
-    .dashing-icon::before { color: $background-color; }
+    .dashing-icon::before { color: text-color($button-name, $background-color); }
 
     &:hover,
     &:focus,
@@ -34,12 +34,14 @@
 
   @if $button-type == transparent {
     background-color: transparent;
-    color: $background-color;
+    color: text-color($button-name, $background-color);
 
     &:hover,
     &:focus,
-    &:active { background-color: $color-gray-2; }
-    .dashing-icon::before { color: $background-color; }
+    &:active {
+      background-color: background-color($button-name);
+    }
+    .dashing-icon::before { color: text-color($button-name, $background-color); }
   }
 }
 
@@ -53,18 +55,80 @@
 
 @mixin button-setup($color) {
   #{$buttons} {
-    &.button--#{nth($color, 1)} { @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
+    &.button--#{nth($color, 1)} { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
 
     &.button--border {
       &.button--#{nth($color, 1)} {
-        @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border);
+        @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border);
       }
     }
 
     &.button--transparent {
       &.button--#{nth($color, 1)} {
-        @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent);
+        @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent);
       }
     }
+  }
+}
+
+@mixin button-setup($color) {
+  #{$buttons} {
+    @if #{nth($color, 1)} == 'primary' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
+    &.button--#{nth($color, 1)} { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
+
+    &.button--border {
+      @if #{nth($color, 1)} == 'primary' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border); }
+      &.button--#{nth($color, 1)} {
+        @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border);
+      }
+    }
+
+    &.button--transparent {
+      @if #{nth($color, 1)} == 'blue' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent); }
+      &.button--#{nth($color, 1)} {
+        @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent);
+      }
+    }
+  }
+}
+
+@mixin button-defaults($color) {
+  #{$buttons} {
+    background-color: $background-color;
+    color: $color;
+    .dashing-icon::before { color: $color; }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $background-color-dark;
+    }
+
+    &.button--border {
+
+    }
+
+    &.button--transparent {
+
+    }
+  }
+}
+
+//Hardcoded values because value checking would not work in a mixin.
+@function text-color($button-name, $background-color) {
+  @if $button-name == 'gray' {
+    @return $button-gray-text;
+  }
+  @else {
+    @return $background-color;
+  }
+}
+
+@function background-color($button-name) {
+  @if $button-name == 'white' {
+    @return rgba(0, 0, 0, 0.5);
+  }
+  @else {
+    @return $color-gray-2;
   }
 }

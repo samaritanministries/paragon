@@ -1,4 +1,4 @@
-//Dark Theme
+//Dark Theme - all colors must be specified, even if they are the same as another theme.
 $buttonConfig:
   'black'     $color-black       $color-black          $color-white,
   'blue'      $color-blue        $color-blue-dark      $color-white,
@@ -16,20 +16,6 @@ $buttonConfig:
 @each $color in $buttonConfig {
   //theme name to apply is first, in this case "darkmode"
   .darkmode {
-    #{$buttons} {
-      &.button--#{nth($color, 1)} { @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
-
-      &.button--border {
-        &.button--#{nth($color, 1)} {
-          @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border);
-        }
-      }
-
-      &.button--transparent {
-        &.button--#{nth($color, 1)} {
-          @include button(#{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent);
-        }
-      }
-    }
+    @include button-setup($color);
   }
 }

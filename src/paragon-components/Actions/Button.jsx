@@ -2,9 +2,6 @@ import { bool, node, string } from "prop-types";
 import { Display, Icon, Shape, Variants } from "./Variants";
 import cn from "classnames";
 import { Colors } from "./Colors";
-// Should these be additional component wrappers to pull in?
-// import { Link } from "gatsby"; //For Gatsby Projects
-// import { NavLink } from "react-router-dom"; //For React App Projects
 import React from "react";
 
 export function Button({
