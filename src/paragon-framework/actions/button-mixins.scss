@@ -92,28 +92,6 @@
   }
 }
 
-@mixin button-defaults($color) {
-  #{$buttons} {
-    background-color: $background-color;
-    color: $color;
-    .dashing-icon::before { color: $color; }
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $background-color-dark;
-    }
-
-    &.button--border {
-
-    }
-
-    &.button--transparent {
-
-    }
-  }
-}
-
 //Hardcoded values because value checking would not work in a mixin.
 @function text-color($button-name, $background-color) {
   @if $button-name == 'gray' {
