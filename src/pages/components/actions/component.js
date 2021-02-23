@@ -216,46 +216,6 @@ class ActionsCode extends React.Component {
 
             <div className="example-container">
               <ExampleCard>
-                <ul className="button-group button--blue">
-                  <li className="button--radio">
-                    <input type="radio" name="options-blue" id="blue1" defaultChecked={true} />
-                    <label htmlFor="blue1" className="button">Left</label>
-                  </li>
-                  <li className="button--radio">
-                    <input type="radio" name="options-blue" id="blue2" />
-                    <label htmlFor="blue2" className="button">Middle</label>
-                  </li>
-                  <li className="button--radio">
-                    <input type="radio" name="options-blue" id="blue3" />
-                    <label htmlFor="blue3" className="button">Right</label>
-                  </li>
-                </ul>
-              </ExampleCard>
-
-              <ExampleCard>
-                <ul className="button-group button-group--vertical button--green button--border">
-                  <li className="button--radio">
-                    <input type="radio" name="options-green" id="green1" defaultChecked={true} />
-                    <label htmlFor="green1" className="button">Left</label>
-                  </li>
-                  <li className="button--radio">
-                    <input type="radio" name="options-green" id="green2" />
-                    <label htmlFor="green2" className="button">Middle</label>
-                  </li>
-                  <li className="button--radio">
-                    <input type="radio" name="options-green" id="green3" />
-                    <label htmlFor="green3" className="button">Right</label>
-                  </li>
-                </ul>
-              </ExampleCard>
-
-              <CodeToggle language="jsx">
-                {"NA"}
-              </CodeToggle>
-            </div>
-
-            <div className="example-container">
-              <ExampleCard>
                 <ButtonGroup buttonColor={"blue"}>
                   <ButtonGroupItem isChecked={true} id="react-blue-1" name={"react-blue-options"}>
                     Left

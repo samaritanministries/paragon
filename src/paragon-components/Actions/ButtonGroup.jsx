@@ -14,18 +14,15 @@ export const ButtonGroupItem = ({ children, name, id, isChecked }) => (
   </li>
 );
 
-
 ButtonGroup.propTypes = {
   children: PropTypes.node.isRequired,
   buttonColor: PropTypes.string,
-  isChecked: PropTypes.bool,
   isBorder: PropTypes.bool,
   isVertical: PropTypes.bool
 };
 
 ButtonGroup.defaultProps = {
   buttonColor: "primary",
-  isChecked: false,
   isBorder: false,
   isVertical: false
 };
