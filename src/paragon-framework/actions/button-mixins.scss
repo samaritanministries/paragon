@@ -43,6 +43,87 @@
     }
     .dashing-icon::before { color: text-color($button-name, $background-color); }
   }
+
+  // Button Groups
+  @if $button-type == groupRadio {
+    .button-group {
+      &.button--#{$button-name} {
+        .button--radio {
+          .button {
+            background-color: $background-color;
+            color: $color;
+            .dashing-icon::before { color: $color; }
+
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: $background-color-dark;
+            }
+          }
+          input:checked ~ label { //active state of button-group
+            background-color: $background-color-dark;
+            border-color: $background-color-dark;
+          }
+        }
+
+        &.button--border {
+          .button--radio {
+            .button {
+              background-color: transparent;
+              color: text-color("gray", $background-color);
+
+              &:hover,
+              &:focus,
+              &:active {
+                background-color: background-color($button-name);
+              }
+              .dashing-icon::before { color: text-color($button-name, $background-color); }
+            }
+            input:checked ~ label { //active state of button-group
+              background-color: $background-color;
+              border-color: $background-color;
+              color: text-color($button-name, $color);
+              &:hover { background-color: $background-color; }
+              .dashing-icon::before { color: text-color($button-name, $color); }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin button-group--vertical {
+	display: inline-flex;
+	flex-direction: column;
+
+	.button--radio {
+		display: block;
+		&:first-of-type label { margin-top: 0; }
+
+		label {
+			border-width: 1px;
+			display: block !important;
+			margin: auto;
+			margin-top: -1px;
+		}
+	}
+}
+
+@mixin button-group--vertical-border {
+	//border radius for default vertical buttons
+	.button--radio:first-of-type label { border-radius: 10px 10px 0 0; }
+	.button--radio:last-of-type label { border-radius: 0 0 10px 10px; }
+
+	//border radius for smooth vertical buttons
+	&.button--smooth .button--radio {
+		&:first-of-type label { border-radius: 5px 5px 0 0; }
+		&:last-of-type label { border-radius: 0 0 5px 5px; }
+	}
+
+	//border radius for square vertical buttons
+	&.button--square .button--radio:first-of-type label,
+	&.button--square .button--radio:last-of-type label { border-radius: 0; }
 }
 
 @mixin user-select($value) {
@@ -53,30 +134,20 @@
   user-select: $value;
 }
 
+//Run a theme through button--setup to generate classes
 @mixin button-setup($color) {
+  //create button-group buttons
+  @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, groupRadio);
+  @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, groupRadioVertical);
+
+  //create regular buttons
   #{$buttons} {
-    &.button--#{nth($color, 1)} { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
-
-    &.button--border {
-      &.button--#{nth($color, 1)} {
-        @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border);
-      }
-    }
-
-    &.button--transparent {
-      &.button--#{nth($color, 1)} {
-        @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent);
-      }
-    }
-  }
-}
-
-@mixin button-setup($color) {
-  #{$buttons} {
+    //default color (primary)
     @if #{nth($color, 1)} == 'primary' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
     &.button--#{nth($color, 1)} { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
 
     &.button--border {
+      //default color (primary)
       @if #{nth($color, 1)} == 'primary' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border); }
       &.button--#{nth($color, 1)} {
         @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border);
@@ -84,6 +155,7 @@
     }
 
     &.button--transparent {
+      //default color (blue)
       @if #{nth($color, 1)} == 'blue' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent); }
       &.button--#{nth($color, 1)} {
         @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent);
@@ -92,6 +164,7 @@
   }
 }
 
+// Determine special cases for white and gray buttons
 //Hardcoded values because value checking would not work in a mixin.
 @function text-color($button-name, $background-color) {
   @if $button-name == 'gray' {

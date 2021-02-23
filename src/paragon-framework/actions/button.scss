@@ -1,5 +1,3 @@
-//@use "../base/colors/given-colors" as *; Example of how to use @use in files.
-
 /* Button Variables
 ===========================================================================
 */
@@ -22,6 +20,7 @@ $action--focus: $color-focus !default;
 /* Actions Extendables
 ===========================================================================
 */
+
 %button--round { border-radius: 50px; }
 %button--smooth { border-radius: 5px; }
 %button--square { border-radius: 0; }
@@ -43,8 +42,10 @@ $action--focus: $color-focus !default;
   &:focus { box-shadow: 0 0 0 4px $action--focus; opacity: 1; }
 }
 
-/* Actions Styles
-  =========================================================================== */
+/* Button Structure
+===========================================================================
+*/
+
 #{$buttons} {
   @extend %action;
   @extend %button--smooth;
@@ -134,4 +135,78 @@ $action--focus: $color-focus !default;
 
   //Fixes Firefox alignment
   .dashing-icon.flow-opposite { display: inline-block; }
+}
+
+/* Button-Group Structure
+===========================================================================
+*/
+
+.button-group {
+	@extend .button--smooth;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+
+  //border radius for default buttons
+	.button--radio:first-of-type label { border-radius: 50px 0 0 50px; }
+	.button--radio:last-of-type label { border-radius: 0 50px 50px 0; }
+
+	//border radius for smooth buttons
+	&.button--smooth {
+		.button--radio:first-of-type label { border-radius: 5px 0 0 5px; }
+		.button--radio:last-of-type label { border-radius: 0 5px 5px 0; }
+	}
+
+	//border radius for square buttons
+	&.button--square {
+		.button--radio:first-of-type label,
+		.button--radio:last-of-type label { border-radius: 0; }
+	}
+
+  &.button-group--vertical { @include button-group--vertical-border; }
+	&.button-group--vertical_phone { @media #{$phone} { @include button-group--vertical-border; } }
+	&.button-group--vertical_tablet { @media #{$tablet} { @include button-group--vertical-border; } }
+
+	//Border Button Groups
+	&.button--border {
+    .button {
+			background-color: transparent;
+			border: 1px solid $color-border;
+			color: $color-subtext;
+			display: inline-block;
+		}
+	}
+
+	.button--radio {
+		display: inline-block;
+		float: left;
+		&:first-of-type label { margin-left: 0; }
+		input { display: none; }
+
+		label {
+			border-radius: 0;
+			display: inline-block;
+			margin: 0 0 0 -1px;
+		}
+	}
+
+
+  &.button-group--vertical {
+  	@include button-group--vertical;
+  }
+
+  &.button-group--vertical_phone {
+  	@media #{$phone} {
+  		@include button-group--vertical;
+  	}
+  }
+
+  &.button-group--vertical_tablet {
+  	@media #{$tablet} {
+  		@include button-group--vertical;
+  	}
+  }
+
+	.dashing-icon { margin: 0 !important; }
+	.dashing-icon--arrow-left { width: 16px; } //fixes weird sizing difference between arrow-right and arrow-left
 }

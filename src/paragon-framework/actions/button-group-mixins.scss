@@ -1,0 +1,69 @@
+// BUTTON GROUP MIXINS
+
+@mixin button-group($background-color, $color) {
+	.button { @include button($background-color, darken($background-color, 10%), $color); }
+
+	input:checked ~ label { //active state of button-group
+		background-color: darken($background-color, 10%);
+		border-color: darken($background-color, 10%);
+	}
+}
+
+@mixin button-group--border($background-color, $checked-color) {
+	.button { @include transparent--button($color-gray-4); }
+
+	input:checked ~ label { //active state of button-group
+		background-color: $background-color;
+		border-color: $background-color;
+		color: $checked-color;
+		&:hover { background-color: $background-color; }
+		.dashing-icon::before { color: $checked-color; }
+	}
+}
+
+//Button-Group Vertical
+
+@mixin button-group--vertical {
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	display: -webkit-inline-box;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	-ms-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+	.button--radio {
+		display: block;
+		&:first-of-type label { margin-top: 0; }
+
+		label {
+			border-width: 1px;
+			display: block !important;
+			margin: auto;
+			margin-top: -1px;
+		}
+	}
+}
+
+//Button-Group Vertical Border
+
+@mixin button-group--vertical-border {
+	//border radius for default vertical buttons
+	.button--radio:first-of-type label { border-radius: 10px 10px 0 0; }
+	.button--radio:last-of-type label { border-radius: 0 0 10px 10px; }
+
+	//border radius for smooth vertical buttons
+	&.button--smooth .button--radio {
+		&:first-of-type label { border-radius: 5px 5px 0 0; }
+		&:last-of-type label { border-radius: 0 0 5px 5px; }
+	}
+
+	//border radius for square vertical buttons
+	&.button--square .button--radio:first-of-type label,
+	&.button--square .button--radio:last-of-type label { border-radius: 0; }
+}
