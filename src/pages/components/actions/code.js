@@ -7,43 +7,45 @@ import SubNav from "../../../components/subnavigation";
 import AppContent from "../../../components/appcontent";
 import CodeToggle from "../../../components/codetoggle";
 import CodeToggleSCSS from "../../../components/codetoggle-scss";
-
-const currentPageName = "Actions";
-const currentPageNameLower = currentPageName.toLowerCase();
+import ExampleHeader from "../../../components/example-header";
 
 class ActionsCode extends React.Component {
 
   static propTypes = { location: PropTypes.object.isRequired }
 
   render() {
+    //TODO - how can these 4 const be a component?
     const { location } = this.props;
+    const url = location.pathname;
+
+    // Uses regex to determine what name comes after "/components/"
+    const currentPageName = url.match("^/[^/]+/([^/]+)/")[1];
+    const currentPageNameLower = currentPageName.toLowerCase();
 
     return (
       <Layout>
         <header className="subnav">
-          <h1>{currentPageName}</h1>
-          <SubNav pageName={currentPageNameLower} />
+          <h1 style={{ textTransform: "capitalize" }}>{currentPageName}</h1>
+          <SubNav hasReact={true} pageName={currentPageNameLower} />
         </header>
         <AppContent>
           <div className="grid grid-padding">
 
-            <h2 id="styles">Styles
-              <Link to={`${location.pathname}/#styles`} className="button button--transparent button--copy-link" />
-            </h2>
+            <ExampleHeader text="Styles" url={url} />
             <div className="example-container">
               <div className="card">
                 <div className="card-content">
-                  <button className="button">Default</button>
+                  <button type="button" className="button">Default</button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--border">Border</button>
+                  <button type="button" className="button button--border">Border</button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--transparent">Transparent</button>
+                  <button type="button" className="button button--transparent">Transparent</button>
                 </div>
               </div>
               <CodeToggle>
@@ -55,22 +57,20 @@ class ActionsCode extends React.Component {
               </CodeToggle>
             </div>
 
-            <h2 className="mt-space-xl" id="states">States
-              <Link to={`${location.pathname}/#states`} className="button button--transparent button--copy-link" />
-            </h2>
+            <ExampleHeader text="States" url={url} />
             <div className="example-container">
               <div className="card">
                 <div className="card-content">
-                  <button className="button">Default</button>
-                  <button className="button button--border">Border</button>
-                  <button className="button button--transparent">Transparent</button>
+                  <button type="button" className="button">Default</button>
+                  <button type="button" className="button button--border">Border</button>
+                  <button type="button" className="button button--transparent">Transparent</button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button" disabled={true}>Disabled</button>
-                  <button className="button button--border" disabled={true}>Disabled</button>
-                  <button className="button button--transparent" disabled={true}>Disabled</button>
+                  <button type="button" className="button" disabled={true}>Disabled</button>
+                  <button type="button" className="button button--border" disabled={true}>Disabled</button>
+                  <button type="button" className="button button--transparent" disabled={true}>Disabled</button>
                 </div>
               </div>
               <CodeToggle>
@@ -84,33 +84,31 @@ class ActionsCode extends React.Component {
               </CodeToggle>
             </div>
 
-            <h2 className="mt-space-xl" id="sizes">Sizes
-              <Link to={`${location.pathname}/#sizes`} className="button button--transparent button--copy-link" />
-            </h2>
+            <ExampleHeader text="Sizes" url={url} />
             <div className="example-container">
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--small">Small</button>
+                  <button type="button" className="button button--small">Small</button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button">Default</button>
+                  <button type="button" className="button">Default</button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--large">Large</button>
+                  <button type="button" className="button button--large">Large</button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--block">Block</button>
+                  <button type="button" className="button button--block">Block</button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--block_mobile">Mobile Block</button>
+                  <button type="button" className="button button--block_mobile">Mobile Block</button>
                 </div>
               </div>
               <CodeToggle>
@@ -127,97 +125,95 @@ class ActionsCode extends React.Component {
               </CodeToggle>
             </div>
 
-            <h2 className="mt-space-xl" id="colors">Colors
-              <Link to={`${location.pathname}/#colors`} className="button button--transparent button--copy-link" />
-            </h2>
+            <ExampleHeader text="Colors" url={url} />
             <div className="example-container">
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--blue">Blue</button>
-                  <button className="button button--blue button--border">Blue</button>
-                  <button className="button button--blue button--transparent">Blue</button>
-                  <button className="button button--blue button--icon">
+                  <button type="button" className="button button--blue">Blue</button>
+                  <button type="button" className="button button--blue button--border">Blue</button>
+                  <button type="button" className="button button--blue button--transparent">Blue</button>
+                  <button type="button" className="button button--blue button--icon">
                     <i className="dashing-icon dashing-icon--pencil" />
                   </button>
-                  <button className="button button--blue button--icon button--transparent">
+                  <button type="button" className="button button--blue button--icon button--transparent">
                     <i className="dashing-icon dashing-icon--pencil" />
                   </button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--gray">Gray</button>
-                  <button className="button button--gray button--border">Gray</button>
-                  <button className="button button--gray button--transparent">Gray</button>
-                  <button className="button button--gray button--icon">
+                  <button type="button" className="button button--gray">Gray</button>
+                  <button type="button" className="button button--gray button--border">Gray</button>
+                  <button type="button" className="button button--gray button--transparent">Gray</button>
+                  <button type="button" className="button button--gray button--icon">
                     <i className="dashing-icon dashing-icon--close" />
                   </button>
-                  <button className="button button--icon button--transparent">
+                  <button type="button" className="button button--icon button--transparent">
                     <i className="dashing-icon dashing-icon--close" />
                   </button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--green">Green</button>
-                  <button className="button button--green button--border">Green</button>
-                  <button className="button button--green button--transparent">Green</button>
-                  <button className="button button--green button--icon">
+                  <button type="button" className="button button--green">Green</button>
+                  <button type="button" className="button button--green button--border">Green</button>
+                  <button type="button" className="button button--green button--transparent">Green</button>
+                  <button type="button" className="button button--green button--icon">
                     <i className="dashing-icon dashing-icon--plus" />
                   </button>
-                  <button className="button button--green button--icon button--transparent">
+                  <button type="button" className="button button--green button--icon button--transparent">
                     <i className="dashing-icon dashing-icon--plus" />
                   </button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--orange">Orange</button>
-                  <button className="button button--orange button--border">Orange</button>
-                  <button className="button button--orange button--transparent">Orange</button>
-                  <button className="button button--orange button--icon">
+                  <button type="button" className="button button--orange">Orange</button>
+                  <button type="button" className="button button--orange button--border">Orange</button>
+                  <button type="button" className="button button--orange button--transparent">Orange</button>
+                  <button type="button" className="button button--orange button--icon">
                     <i className="dashing-icon dashing-icon--comment" />
                   </button>
-                  <button className="button button--orange button--icon button--transparent">
+                  <button type="button" className="button button--orange button--icon button--transparent">
                     <i className="dashing-icon dashing-icon--comment" />
                   </button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--purple">Purple</button>
-                  <button className="button button--purple button--border">Purple</button>
-                  <button className="button button--purple button--transparent">Purple</button>
-                  <button className="button button--purple button--icon">
+                  <button type="button" className="button button--purple">Purple</button>
+                  <button type="button" className="button button--purple button--border">Purple</button>
+                  <button type="button" className="button button--purple button--transparent">Purple</button>
+                  <button type="button" className="button button--purple button--icon">
                     <i className="dashing-icon dashing-icon--phone" />
                   </button>
-                  <button className="button button--purple button--icon button--transparent">
+                  <button type="button" className="button button--purple button--icon button--transparent">
                     <i className="dashing-icon dashing-icon--phone" />
                   </button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--red">Red</button>
-                  <button className="button button--red button--border">Red</button>
-                  <button className="button button--red button--transparent">Red</button>
-                  <button className="button button--red button--icon">
+                  <button type="button" className="button button--red">Red</button>
+                  <button type="button" className="button button--red button--border">Red</button>
+                  <button type="button" className="button button--red button--transparent">Red</button>
+                  <button type="button" className="button button--red button--icon">
                     <i className="dashing-icon dashing-icon--trash" />
                   </button>
-                  <button className="button button--red button--icon button--transparent">
+                  <button type="button" className="button button--red button--icon button--transparent">
                     <i className="dashing-icon dashing-icon--trash" />
                   </button>
                 </div>
               </div>
               <div className="card" style={{ backgroundColor: "#28336d" }}>
                 <div className="card-content">
-                  <button className="button button--white">White</button>
-                  <button className="button button--white button--border">White</button>
-                  <button className="button button--white button--transparent">White</button>
-                  <button className="button button--white button--icon">
+                  <button type="button" className="button button--white">White</button>
+                  <button type="button" className="button button--white button--border">White</button>
+                  <button type="button" className="button button--white button--transparent">White</button>
+                  <button type="button" className="button button--white button--icon">
                     <i className="dashing-icon dashing-icon--settings" />
                   </button>
-                  <button className="button button--white button--icon button--transparent">
+                  <button type="button" className="button button--white button--icon button--transparent">
                     <i className="dashing-icon dashing-icon--settings" />
                   </button>
                 </div>
@@ -297,13 +293,11 @@ class ActionsCode extends React.Component {
               </CodeToggle>
             </div>
 
-            <h2 className="mt-space-xl" id="icons">Icons
-              <Link to={`${location.pathname}/#icons`} className="button button--transparent button--copy-link" />
-            </h2>
+            <ExampleHeader text="Icons" url={url} />
             <div className="example-container">
               <div className="card">
                 <div className="card-content">
-                  <button className="button">
+                  <button type="button" className="button">
                     <i className="dashing-icon dashing-icon--add" />
                   Default
                   </button>
@@ -311,7 +305,7 @@ class ActionsCode extends React.Component {
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--border">
+                  <button type="button" className="button button--border">
                     <i className="dashing-icon dashing-icon--pencil" />
                   Border
                   </button>
@@ -319,11 +313,11 @@ class ActionsCode extends React.Component {
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--transparent">
+                  <button type="button" className="button button--transparent">
                     <i className="dashing-icon dashing-icon--search" />
                   Transparent
                   </button>
-                  <button className="button button--gray button--transparent">
+                  <button type="button" className="button button--gray button--transparent">
                   Transparent
                     <i className="dashing-icon dashing-icon--new-tab flow-opposite" />
                   </button>
@@ -331,20 +325,20 @@ class ActionsCode extends React.Component {
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--icon">
+                  <button type="button" className="button button--icon">
                     <i className="dashing-icon dashing-icon--add" />
                   </button>
-                  <button className="button button--red button--icon">
+                  <button type="button" className="button button--red button--icon">
                     <i className="dashing-icon dashing-icon--trash" />
                   </button>
-                  <button className="button button--transparent button--icon">
+                  <button type="button" className="button button--transparent button--icon">
                     <i className="dashing-icon dashing-icon--question-filled" />
                   </button>
                 </div>
               </div>
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--icon button--icon--main">
+                  <button type="button" className="button button--icon button--icon--main">
                     <i className="dashing-icon dashing-icon--add" />
                   </button>
                 </div>
@@ -385,9 +379,7 @@ class ActionsCode extends React.Component {
               </CodeToggle>
             </div>
 
-            <h2 className="mt-space-xl">Button Group
-              <Link to={`${location.pathname}/#buttonGroup`} className="button button--transparent button--copy-link" />
-            </h2>
+            <ExampleHeader text="Button Group" url={url} />
             <div className="example-container">
               <div className="card">
                 <div className="card-content">
@@ -458,15 +450,13 @@ class ActionsCode extends React.Component {
               </CodeToggle>
             </div>
 
-            <h2 className="mt-space-xl" id="themeOptions">Theme Options
-              <Link to={`${location.pathname}/#themeOptions`} className="button button--transparent button--copy-link" />
-            </h2>
+            <ExampleHeader text="Theme Options" url={url} />
             <div className="example-container">
               <div className="card">
                 <div className="card-content">
-                  <button className="button button--round">Round</button>
-                  <button className="button button--smooth">Smooth</button>
-                  <button className="button button--square">Square</button>
+                  <button type="button" className="button button--round">Round</button>
+                  <button type="button" className="button button--smooth">Smooth</button>
+                  <button type="button" className="button button--square">Square</button>
                 </div>
               </div>
               <CodeToggle>
@@ -476,16 +466,14 @@ class ActionsCode extends React.Component {
               </CodeToggle>
             </div>
 
-            <h2 className="mt-space-xl" id="globalButtonThemes">Global Button Themes
-              <Link to={`${location.pathname}/#globalButtonThemes`} className="button button--transparent button--copy-link" />
-            </h2>
+            <ExampleHeader text="Global Button Themes" url={url} />
             <p>Apply one of the following extendables to apply a button theme your entire project.</p>
             <div className="example-container">
               <div className="card hide-HTML-code">
                 <div className="card-content">
-                  <button className="button button--round">Round</button>
-                  <button className="button button--smooth">Smooth</button>
-                  <button className="button button--square">Square</button>
+                  <button type="button" className="button button--round">Round</button>
+                  <button type="button" className="button button--smooth">Smooth</button>
+                  <button type="button" className="button button--square">Square</button>
                 </div>
               </div>
               <CodeToggle />

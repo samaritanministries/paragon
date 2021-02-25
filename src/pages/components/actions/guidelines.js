@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import Layout from "../../../components/layout";
 import SubNav from "../../../components/subnavigation";
 import AppContent from "../../../components/appcontent";
+import ExampleHeader from "../../../components/example-header";
 
 const currentPageName = "Actions";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -12,7 +13,7 @@ export default () => (
   <Layout>
     <header className="subnav">
       <h1>{currentPageName}</h1>
-      <SubNav pageName={currentPageNameLower} />
+      <SubNav hasReact={true} pageName={currentPageNameLower} />
     </header>
     <AppContent>
       <div className="grid grid-padding">

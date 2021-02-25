@@ -11,22 +11,24 @@ import { Grid } from "../../../paragon-components/Grid";
 import ExampleCard from "../../../components/example-card";
 import ExampleHeader from "../../../components/example-header";
 
-const currentPageName = "Actions";
-const currentPageNameLower = currentPageName.toLowerCase();
-
-class ActionsCode extends React.Component {
+class ActionsComponent extends React.Component {
 
   static propTypes = { location: PropTypes.object.isRequired }
 
   render() {
+    //TODO - how can these be a component?
     const { location } = this.props;
     const url = location.pathname;
+
+    // Uses regex to determine what name comes after "/components/"
+    const currentPageName = url.match("^/[^/]+/([^/]+)/")[1];
+    const currentPageNameLower = currentPageName.toLowerCase();
 
     return (
       <Layout>
         <header className="subnav">
-          <h1>{currentPageName}</h1>
-          <SubNav pageName={currentPageNameLower} />
+          <h1 style={{ textTransform: "capitalize" }}>{currentPageName}</h1>
+          <SubNav hasReact={true} pageName={currentPageNameLower} />
         </header>
         <AppContent>
           <Grid isContainer={true} hasPadding={true}>
@@ -244,7 +246,30 @@ class ActionsCode extends React.Component {
               </ExampleCard>
 
               <CodeToggle language="jsx">
-                {"NA"}
+                {`<ButtonGroup buttonColor={"blue"}>
+  <ButtonGroupItem isChecked={true} id="react-blue-1" name={"react-blue-options"}>
+    Left
+  </ButtonGroupItem>
+  <ButtonGroupItem id="react-blue-2" name={"react-blue-options"}>
+    Middle
+  </ButtonGroupItem>
+  <ButtonGroupItem id="react-blue-3" name={"react-blue-options"}>
+    Right
+  </ButtonGroupItem>
+</ButtonGroup>
+
+<ButtonGroup buttonColor={"green"} isVertical={true} isBorder={true}>
+  <ButtonGroupItem isChecked={true} id="react-green-1" name={"react-green-options"}>
+    Left
+  </ButtonGroupItem>
+  <ButtonGroupItem id="react-green-2" name={"react-green-options"}>
+    Middle
+  </ButtonGroupItem>
+  <ButtonGroupItem id="react-green-3" name={"react-green-options"}>
+    Right
+  </ButtonGroupItem>
+</ButtonGroup>
+`}
               </CodeToggle>
             </div>
           </Grid>
@@ -255,4 +280,4 @@ class ActionsCode extends React.Component {
 
 }
 
-export default ActionsCode;
+export default ActionsComponent;

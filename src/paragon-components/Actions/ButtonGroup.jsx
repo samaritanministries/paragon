@@ -2,7 +2,13 @@ import PropTypes from "prop-types";
 import React from "react";
 
 export const ButtonGroup = ({ children, buttonColor, isBorder, isVertical }) => (
-  <ul className={`button-group button--${buttonColor} ${isBorder ? "button--border" : ""} ${isVertical ? "button-group--vertical" : ""}`}>
+  <ul
+    className={`button-group 
+      button--${buttonColor}
+      ${isBorder ? "button--border" : ""}
+      ${isVertical ? "button-group--vertical" : ""}`
+    }
+  >
     {children}
   </ul>
 );
