@@ -3,23 +3,21 @@ import { Display, Icon, Shape, Variants } from "./Variants";
 import cn from "classnames";
 import { Colors } from "./Colors";
 import React from "react";
-
 export function Button({
-  buttonColor,
+  buttonColor = "primary",
   buttonDisplay,
   buttonIcon,
   buttonShape,
-  buttonVariant,
+  buttonVariant = "",
   children,
-  className,
-  component,
-  disabled,
-  hasSpinner,
+  className = "",
+  component = "button",
+  hasSpinner = false,
   href,
-  isDisabled,
+  isDisabled = false,
   name,
-  isLoading,
-  text,
+  isLoading = false,
+  text = null,
   ...otherProps
 }) {
   const classes = cn({
@@ -30,45 +28,39 @@ export function Button({
     [`button--${buttonShape}`]: Boolean(buttonShape) && Object.values(Shape).includes(buttonShape),
     [`button--${buttonIcon}`]: Boolean(buttonIcon) && Object.values(Icon).includes(buttonIcon),
     [className]: Boolean(className),
-    disabled,
+    disabled: isDisabled,
     "has-spinner": Boolean(hasSpinner || isLoading),
     [name]: Boolean(name)
   });
-
-  const renderElement = () => {
-    if (component === "button") {
-      return (
-        <button
-          {...otherProps}
-          className={classes}
-          disabled={isDisabled}
-          name={name}
-          type="button"
-        >
-          {text !== null && text}
-          {children}
-        </button>
-      );
-    }
-
-    if (component === "anchor") {
-      return (
-        <a
-          {...otherProps}
-          href={href}
-          className={classes}
-          disabled={isDisabled}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {text !== null && text}
-          {children}
-        </a>
-      );
-    }
-
-  };
-  return renderElement();
+  if (component === "button") {
+    return (
+      <button {...otherProps} className={classes} disabled={isDisabled} name={name} type="button">
+        {text}
+        {children}
+      </button>
+    );
+  }
+  if (component === "anchor") {
+    return (
+      <a
+        {...otherProps}
+        href={href}
+        className={classes}
+        disabled={isDisabled}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {text}
+        {children}
+      </a>
+    );
+  }
+  return (
+    <button {...otherProps} className={classes} disabled={isDisabled} name={name} type="button">
+      {text}
+      {children}
+    </button>
+  );
 }
 
 Button.propTypes = {
@@ -85,24 +77,8 @@ Button.propTypes = {
   isDisabled: bool,
   name: string,
   text: string,
-  to: string
-};
-
-Button.defaultProps = {
-  buttonColor: "primary",
-  buttonDisplay: undefined,
-  buttonIcon: undefined,
-  buttonShape: undefined,
-  buttonVariant: "",
-  children: undefined,
-  className: "",
-  component: "button",
-  hasSpinner: false,
-  href: undefined,
-  isDisabled: false,
-  name: undefined,
-  text: null,
-  to: undefined
+  to: string,
+  isLoading: bool
 };
 
 export default Button;
