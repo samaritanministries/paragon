@@ -6,21 +6,20 @@ import { Link } from "gatsby"; //For Gatsby Projects
 import React from "react";
 
 export function Button({
-  buttonColor,
+  buttonColor = "primary",
   buttonDisplay,
   buttonIcon,
   buttonShape,
-  buttonVariant,
+  buttonVariant = "",
   children,
-  className,
-  component,
-  disabled,
-  hasSpinner,
-  isDisabled,
-  name,
-  isLoading,
-  text,
+  className = "",
+  component = "button",
+  hasSpinner = false,
   to,
+  isDisabled = false,
+  name,
+  isLoading = false,
+  text = null,
   ...otherProps
 }) {
   const classes = cn({
@@ -31,7 +30,7 @@ export function Button({
     [`button--${buttonShape}`]: Boolean(buttonShape) && Object.values(Shape).includes(buttonShape),
     [`button--${buttonIcon}`]: Boolean(buttonIcon) && Object.values(Icon).includes(buttonIcon),
     [className]: Boolean(className),
-    disabled,
+    disabled: isDisabled,
     "has-spinner": Boolean(hasSpinner || isLoading),
     [name]: Boolean(name)
   });
@@ -70,23 +69,6 @@ Button.propTypes = {
   name: string,
   text: string,
   to: string
-};
-
-Button.defaultProps = {
-  buttonColor: "primary",
-  buttonDisplay: undefined,
-  buttonIcon: undefined,
-  buttonShape: undefined,
-  buttonVariant: "",
-  children: undefined,
-  className: "",
-  component: "button",
-  hasSpinner: false,
-  href: undefined,
-  isDisabled: false,
-  name: undefined,
-  text: null,
-  to: undefined
 };
 
 export default Button;

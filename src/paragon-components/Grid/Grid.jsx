@@ -8,8 +8,8 @@ export function Grid({
   children,
   className,
   gridType,
-  hasPadding,
-  isContainer,
+  hasPadding = false,
+  isContainer = false,
   size,
   ...otherProps
 }) {
@@ -18,7 +18,7 @@ export function Grid({
     ["grid-padding"]: hasPadding,
     [`grid--${size}`]: size,
     ["grid-type"]: gridType,
-    [className]: !!className
+    [className]: Boolean(className)
   });
 
   const renderElement = () => {
@@ -40,13 +40,6 @@ Grid.propTypes = {
   hasPadding: bool,
   isContainer: bool,
   size: string
-};
-
-Grid.defaultProps = {
-  gridType: "",
-  hasPadding: false,
-  isContainer: false,
-  size: ""
 };
 
 export default Grid;

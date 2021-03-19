@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-export const ButtonGroup = ({ children, buttonColor, isBorder, isVertical }) => (
+export const ButtonGroup = ({
+  children,
+  buttonColor = "primary",
+  isBorder = false,
+  isVertical = false
+}) => (
   <ul
-    className={`button-group 
+    className={`button-group
       button--${buttonColor}
       ${isBorder ? "button--border" : ""}
       ${isVertical ? "button-group--vertical" : ""}`
@@ -13,7 +18,12 @@ export const ButtonGroup = ({ children, buttonColor, isBorder, isVertical }) => 
   </ul>
 );
 
-export const ButtonGroupItem = ({ children, name, id, isChecked }) => (
+export const ButtonGroupItem = ({
+  children,
+  name,
+  id,
+  isChecked = false
+}) => (
   <li className="button--radio">
     <input type="radio" name={name} id={id} defaultChecked={isChecked} />
     <label htmlFor={id} className="button">{children}</label>
@@ -27,23 +37,11 @@ ButtonGroup.propTypes = {
   isVertical: PropTypes.bool
 };
 
-ButtonGroup.defaultProps = {
-  buttonColor: "primary",
-  isBorder: false,
-  isVertical: false
-};
-
 ButtonGroupItem.propTypes = {
   children: PropTypes.node.isRequired,
   isChecked: PropTypes.bool,
   name: PropTypes.string,
   id: PropTypes.string
-};
-
-ButtonGroupItem.defaultProps = {
-  isChecked: false,
-  id: "",
-  name: ""
 };
 
 export default ButtonGroup;
