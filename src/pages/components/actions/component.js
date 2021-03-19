@@ -199,15 +199,76 @@ class ActionsComponent extends React.Component {
               </ExampleCard>
 
               <CodeToggle language="jsx">
-                {`<Button buttonDisplay="small">Small</Button>
+                {`<Button buttonColor="blue">Blue</Button>
+<Button buttonColor="blue" buttonVariant="border">Blue</Button>
+<Button buttonColor="blue" buttonVariant="transparent">Blue</Button>
+<Button buttonColor="blue" buttonIcon="icon">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
+<Button buttonColor="blue" buttonIcon="icon" buttonVariant="transparent">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
 
-<Button>Default</Button>
+<Button buttonColor="gray">Gray</Button>
+<Button buttonColor="gray" buttonVariant="border">Gray</Button>
+<Button buttonColor="gray" buttonVariant="transparent">Gray</Button>
+<Button buttonColor="gray" buttonIcon="icon">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
+<Button buttonColor="gray" buttonIcon="icon" buttonVariant="transparent">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
 
-<Button buttonDisplay="large">Large</Button>
+<Button buttonColor="green">Green</Button>
+<Button buttonColor="green" buttonVariant="border">Green</Button>
+<Button buttonColor="green" buttonVariant="transparent">Green</Button>
+<Button buttonColor="green" buttonIcon="icon">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
+<Button buttonColor="green" buttonIcon="icon" buttonVariant="transparent">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
 
-<Button buttonDisplay="block">Block</Button>
+<Button buttonColor="orange">Orange</Button>
+<Button buttonColor="orange" buttonVariant="border">Orange</Button>
+<Button buttonColor="orange" buttonVariant="transparent">Orange</Button>
+<Button buttonColor="orange" buttonIcon="icon">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
+<Button buttonColor="orange" buttonIcon="icon" buttonVariant="transparent">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
 
-<Button buttonDisplay="block_mobile">Mobile Block</Button>
+<Button buttonColor="purple">Purple</Button>
+<Button buttonColor="purple" buttonVariant="border">Purple</Button>
+<Button buttonColor="purple" buttonVariant="transparent">Purple</Button>
+<Button buttonColor="purple" buttonIcon="icon">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
+<Button buttonColor="purple" buttonIcon="icon" buttonVariant="transparent">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
+
+<Button buttonColor="red">Red</Button>
+<Button buttonColor="red" buttonVariant="border">Red</Button>
+<Button buttonColor="red" buttonVariant="transparent">Red</Button>
+<Button buttonColor="red" buttonIcon="icon">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
+<Button buttonColor="red" buttonIcon="icon" buttonVariant="transparent">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
+
+<Button buttonColor="white">White</Button>
+<Button buttonColor="white" buttonVariant="border">White</Button>
+<Button buttonColor="white" buttonVariant="transparent">White</Button>
+<Button buttonColor="white" buttonIcon="icon">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
+<Button buttonColor="white" buttonIcon="icon" buttonVariant="transparent">
+  <i className="dashing-icon dashing-icon--comment" />
+</Button>
+
 `}
               </CodeToggle>
             </div>
