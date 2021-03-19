@@ -1,0 +1,8 @@
+// The needed core files, previously named "paragon-core.scss"
+@import 'vendor/vendor';
+@import 'base/base';
+
+@font-face {
+	font-family: 'dashing-icons';
+	src: url('https://assets.smchcn.net/dashing-icons.woff') format('woff');
+}

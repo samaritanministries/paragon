@@ -13,14 +13,14 @@ class CodeToggle extends React.Component {
     this.toggleCode = this.toggleCode.bind(this);
   }
 
+  componentDidMount() {
+    Prism.highlightAll();
+  }
+
   toggleCode() {
     this.setState((prevState) => ({
       showCode: !prevState.showCode
     }));
-  }
-
-  componentDidMount() {
-    Prism.highlightAll();
   }
 
   render() {
@@ -33,21 +33,9 @@ class CodeToggle extends React.Component {
         <div onClick={this.toggleCode} className={showCode ? "code-toggle is-open" : "code-toggle"}>
           <i className="icon--code" />
         </div>
-        {language === "html" &&
-        <pre className={showCode ? "language-html show" : "language-html"}>
-          <code className={showCode ? "language-html show" : "language-html"}>{children}</code>
+        <pre className={showCode ? `language-${language} show` : `language-${language}`}>
+          <code className={showCode ? `language-${language} show` : `language-${language}`}>{children}</code>
         </pre>
-        }
-        {language === "scss" &&
-        <pre className={showCode ? "language-scss show" : "language-scss"}>
-          <code className={showCode ? "language-scss show" : "language-scss"}>{children}</code>
-        </pre>
-        }
-        {language === "jsx" &&
-        <pre className={showCode ? "language-jsx show" : "language-jsx"}>
-          <code className={showCode ? "language-jsx show" : "language-jsx"}>{children}</code>
-        </pre>
-        }
       </div>
     );
   }
@@ -55,10 +43,12 @@ class CodeToggle extends React.Component {
 }
 
 CodeToggle.propTypes = {
+  children: PropTypes.string,
   language: PropTypes.string
 };
 
 CodeToggle.defaultProps = {
+  children: "Default",
   language: "html"
 };
 

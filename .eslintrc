@@ -179,7 +179,7 @@
     ],
     "react/boolean-prop-naming": "off",
     "react/button-has-type": "error",
-    "react/default-props-match-prop-types": "error",
+    "react/default-props-match-prop-types": "off",
     "react/destructuring-assignment": "off",
     "react/jsx-boolean-value": [
       "error",
@@ -244,7 +244,7 @@
     "react/no-will-update-set-state": "error",
     "react/prefer-es6-class": "error",
     "react/prefer-stateless-function": "off",
-    "react/require-default-props": "error",
+    "react/require-default-props": "off",
     "react/self-closing-comp": "error",
     "react/sort-comp": [
       "error",

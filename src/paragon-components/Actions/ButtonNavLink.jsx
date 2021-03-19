@@ -2,7 +2,9 @@ import { bool, node, string } from "prop-types";
 import { Display, Icon, Shape, Variants } from "./Variants";
 import cn from "classnames";
 import { Colors } from "./Colors";
+import { NavLink } from "react-router-dom";
 import React from "react";
+
 export function Button({
   buttonColor = "primary",
   buttonDisplay,
@@ -13,7 +15,7 @@ export function Button({
   className = "",
   component = "button",
   hasSpinner = false,
-  href,
+  to,
   isDisabled = false,
   name,
   isLoading = false,
@@ -32,35 +34,24 @@ export function Button({
     "has-spinner": Boolean(hasSpinner || isLoading),
     [name]: Boolean(name)
   });
-  if (component === "button") {
-    return (
-      <button {...otherProps} className={classes} disabled={isDisabled} name={name} type="button">
-        {text}
-        {children}
-      </button>
-    );
-  }
-  if (component === "anchor") {
-    return (
-      <a
-        {...otherProps}
-        href={href}
-        className={classes}
-        disabled={isDisabled}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {text}
-        {children}
-      </a>
-    );
-  }
-  return (
-    <button {...otherProps} className={classes} disabled={isDisabled} name={name} type="button">
-      {text}
-      {children}
-    </button>
-  );
+
+  const renderElement = () => {
+    if (component === "button--anchor") {
+      return (
+        <NavLink
+          {...otherProps}
+          to={to}
+          activeClassName="active"
+          className={classes}
+          disabled={isDisabled}
+        >
+          {text !== null && text}
+          {children}
+        </NavLink>
+      );
+    }
+  };
+  return renderElement();
 }
 
 Button.propTypes = {
@@ -73,12 +64,10 @@ Button.propTypes = {
   className: string,
   component: string,
   hasSpinner: bool,
-  href: string,
   isDisabled: bool,
   name: string,
   text: string,
-  to: string,
-  isLoading: bool
+  to: string
 };
 
 export default Button;

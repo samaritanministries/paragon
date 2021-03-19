@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import '../sass/example-page/example-page.scss'
+//import '../sass/example-page/example-page.scss'
 
 export default () => (
   <div className="follow-message">
@@ -8,4 +8,4 @@ export default () => (
       <h3>Coming soon!</h3>
     </div>
   </div>
-)
+);
