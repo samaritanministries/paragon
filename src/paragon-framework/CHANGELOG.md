@@ -2,6 +2,10 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.5.2] - 2021-04-01
+### Changed
+- Change scss structure for React component release
+
 ## [2.5.1] - 2021-01-07
 ### Fixed
 - Fix card margin within grid containers

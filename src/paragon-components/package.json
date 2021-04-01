@@ -1,7 +1,7 @@
 {
   "name": "paragon-components",
   "description": "React Components for Samaritan Ministries",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "keywords": [
     "paragon",
