@@ -1,0 +1,18 @@
+// This file is specific to the paragon.samaritanministries.org application
+
+@font-face {
+	font-family: 'dashing-icons';
+	src: url('https://assets.smchcn.net/dashing-icons.woff') format('woff');
+}
+
+@import "../paragon-framework";//imports vendor and base (core)
+// @import "../paragon-framework/paragon"; - legacy import, to enable kill all other imports except styleguide
+
+// Import components here - this could reside in a "config" file?
+@import "../paragon-framework/actions/actions"; //Component "Actions"
+@import "../paragon-framework/grid/grid"; //Component "Grid"
+
+//Import modules here (before they are made official components)
+@import "../paragon-framework/modules/modules-components";
+
+@import "../paragon-styleguide"; //only for paragon documentation pages (this application)

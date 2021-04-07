@@ -1,0 +1,20 @@
+{
+  "name": "paragon-framework",
+  "description": "Style Framework for Samaritan Ministries",
+  "version": "2.5.2",
+  "main": "index.js",
+  "keywords": [
+    "paragon",
+    "paragon-framework"
+  ],
+  "author": "Samaritan Ministries",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samaritanministries/paragon/issues"
+  },
+  "homepage": "http://developers.samaritanministries.org/paragon/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samaritanministries/paragon.git"
+  }
+}

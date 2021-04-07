@@ -1,5 +1,5 @@
-import React from 'react'
-import '../sass/example-page/example-page.scss'
+import React from "react";
+//import '../sass/example-page/example-page.scss'
 import logo from "../img/Dashing.svg";
 
 export default ({ children }) => (
@@ -24,4 +24,4 @@ export default ({ children }) => (
       </footer>
     </div>
   </div>
-)
+);

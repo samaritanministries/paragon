@@ -1,41 +1,34 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
 
-const SubNav = ({ pageName, sectionName }) => {
+const SubNav = ({ pageName, sectionName, hasReact }) => {
 
-  if (sectionName == null) {
-    sectionName = "components"
-  }
-  //For Component Names with a space
-  if (pageName === "css grid") {
-    pageName = "css-grid"
-  } else if (pageName === "progress stepper") {
-    pageName = "progress-stepper"
-  } else if (pageName === "radio buttons") {
-    pageName = "radio-buttons"
-  }
+  let getPageName = pageName;
+  let getSectionName = sectionName;
 
-  const getPageName = pageName;
-  const getSectionName = sectionName;
-
-  const isPartiallyActive = ({ isPartiallyCurrent }) => {
-  return isPartiallyCurrent
-    ? { className: 'active' }
-    : { className: '' }
-  }
-
-  const PartialNavLink = props => (
-    <Link getProps={isPartiallyActive} {...props}>
-      {props.children}
-    </Link>
-  )
+  sectionName === null ? getSectionName = "components" : sectionName;
+  getPageName = pageName.replace(/\s+/g, "-");
 
   return (
     <div className="subnav-links">
-        <PartialNavLink to={ getSectionName + "/" + getPageName  + "/code"}>Code</PartialNavLink>
-        <PartialNavLink to={ getSectionName + "/" + getPageName  + "/guidelines"}>Guidelines</PartialNavLink>
+      <Link partiallyActive={true} activeClassName="active" to={`/${getSectionName}/${getPageName}/code`}>Html</Link>
+      {hasReact && <Link partiallyActive={true} activeClassName="active" to={`/${getSectionName}/${getPageName}/component`}>React</Link>}
+      <Link partiallyActive={true} activeClassName="active" to={`/${getSectionName}/${getPageName}/guidelines`}>Guidelines</Link>
     </div>
   );
 };
 
-export default SubNav
+SubNav.propTypes = {
+  pageName: PropTypes.string,
+  sectionName: PropTypes.string,
+  hasReact: PropTypes.bool
+};
+
+SubNav.defaultProps = {
+  pageName: "/",
+  sectionName: null,
+  hasReact: false
+};
+
+export default SubNav;

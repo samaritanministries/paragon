@@ -1,12 +1,11 @@
 @import 'typography/typography';
 @import 'grid/grid';
-@import 'css-grid/css-grid';
-// @import "navigation/header";
+@import 'css-grid/css-grid'; // Replaced by component "grid"
 @import 'forms/forms';
 @import 'forms/themed-elements';
 @import 'forms/card-controls';
-@import 'actions/actions';
-@import 'actions/button-group';
+@import 'actions/actions'; // Replaced by component "actions"
+@import 'actions/button-group'; // Replaced by component "actions"
 @import 'pagination/pagination';
 @import 'tooltip/tooltip';
 @import 'card/card';

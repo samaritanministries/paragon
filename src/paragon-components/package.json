@@ -1,11 +1,12 @@
 {
-  "name": "paragon-framework",
-  "description": "Style Framework for Samaritan Ministries",
-  "version": "2.5.0",
+  "name": "paragon-components",
+  "description": "React Components for Samaritan Ministries",
+  "version": "0.1.0",
   "main": "index.js",
   "keywords": [
     "paragon",
-    "paragon-framework"
+    "paragon-framework",
+    "paragon-components"
   ],
   "author": "Samaritan Ministries",
   "license": "MIT",

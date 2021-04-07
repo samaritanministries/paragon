@@ -7,45 +7,45 @@
     "start": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "deploy": "gatsby build && gh-pages -d public",
-    "stylelint": "stylelint 'src/sass/**/*.scss'",
-    "stylelint-fix": "stylelint 'src/sass/**/*.scss' --fix"
+    "stylelint": "stylelint 'src/paragon-framework/**/*.scss'",
+    "stylelint-fix": "stylelint 'src/paragon-framework/**/*.scss' --fix"
   },
   "pre-commit": "stylelint",
   "dependencies": {
-    "@tippyjs/react": "^4.0.2",
-    "classnames": "^2.2.6",
-    "gatsby": "^2.19.45",
+    "@tippyjs/react": "^4.2.5",
+    "classnames": "^2.3.0",
+    "gatsby": "^2.32.11",
     "gatsby-plugin-google-fonts": "0.0.4",
-    "gatsby-plugin-manifest": "^2.0.20",
-    "gatsby-plugin-react-helmet": "^3.0.7",
-    "gatsby-plugin-sass": "^2.1.26",
-    "gatsby-remark-prismjs": "^3.3.28",
-    "gatsby-transformer-remark": "^2.3.0",
-    "jquery": "^3.4.1",
-    "node-sass": "^4.13.0",
+    "gatsby-plugin-manifest": "^2.12.1",
+    "gatsby-plugin-react-helmet": "^3.10.0",
+    "gatsby-plugin-sass": "^2.8.0",
+    "gatsby-remark-prismjs": "^3.13.0",
+    "gatsby-transformer-remark": "^2.16.1",
+    "jquery": "^3.6.0",
     "pre-commit": "^1.2.2",
-    "prismjs": "^1.17.1",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.2",
+    "prismjs": "^1.23.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-helmet": "^5.2.1",
     "react-prism": "^4.3.2",
+    "sass": "^1.32.8",
     "stylelint-config-sass-guidelines": "^6.2.0",
-    "tippy.js": "^6.2.3"
+    "tippy.js": "^6.3.1"
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",
     "prettier": "^1.19.1",
     "sass-loader": "^7.3.1",
     "stylelint": "^12.0.1",
-    "webpack": "^4.29.6"
+    "webpack": "^4.46.0"
   },
   "files": [
-    "src/sass/base",
-    "src/sass/modules",
-    "src/sass/theme",
-    "src/sass/vendor",
-    "src/sass/paragon.scss",
-    "src/sass/package.json",
-    "src/sass/CHANGELOG.md"
+    "src/paragon-framework/base",
+    "src/paragon-framework/modules",
+    "src/paragon-framework/theme",
+    "src/paragon-framework/vendor",
+    "src/paragon-framework/paragon.scss",
+    "src/paragon-framework/package.json",
+    "src/paragon-framework/CHANGELOG.md"
   ]
 }

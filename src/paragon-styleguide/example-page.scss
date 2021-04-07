@@ -1,12 +1,5 @@
 $example-global-content-width: 800px !default;
 
-@import '../paragon';
-@import '../base/colors/given-colors';
-@import 'typography';
-@import 'image';
-@import 'prism';
-@import 'example-css-grid';
-
 $sidebar-width: 13rem;
 
 //Give example pages gray background
@@ -273,7 +266,7 @@ $sidebar-width: 13rem;
 			margin: 0;
 
 			&:not(.dashing-icon--close) {
-				background-image: url('../../img/menu.svg');
+				background-image: url('../img/menu.svg');
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: 100%;
@@ -376,6 +369,10 @@ h2 {
 		font-weight: $font-weight-semibold;
 		margin-bottom: 0;
 	}
+}
+
+.card--example-white {
+	background-color: rgb(40, 51, 109);
 }
 
 /* Checkboxes Page
@@ -497,7 +494,7 @@ h2 {
 	}
 
 	@media #{$tablet} {
-		background-image: url('../../img/follow-message.svg');
+		background-image: url('../img/follow-message.svg');
 		height: 500px;
 		margin-top: -2rem;
 		padding-bottom: 0;
@@ -586,10 +583,10 @@ h2 {
 	overflow: hidden;
 
 
-	&.image--wireframe-kit .resource-image { background-image: url('../../img/wireframe-kit.png'); }
-	&.image--prototype-kit .resource-image { background-image: url('../../img/prototype-kit.png'); }
-	&.resources--github .resource-image { background-image: url('../../img/resources--github.svg'); }
-	&.resources--prototype .resource-image { background-image: url('../../img/resources--prototype.svg'); }
+	&.image--wireframe-kit .resource-image { background-image: url('../img/wireframe-kit.png'); }
+	&.image--prototype-kit .resource-image { background-image: url('../img/prototype-kit.png'); }
+	&.resources--github .resource-image { background-image: url('../img/resources--github.svg'); }
+	&.resources--prototype .resource-image { background-image: url('../img/resources--prototype.svg'); }
 
 	.resource-image {
 		background-position: 0 0;

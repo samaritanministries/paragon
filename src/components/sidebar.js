@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import $ from 'jquery';
+import React from "react";
+import { Link } from "gatsby";
+import $ from "jquery";
 
 import logo from "../img/nigel_2.svg";
 
@@ -8,10 +8,10 @@ class Sidebar extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {showSidebar: false,
-                  showParagon: true,
-                  showComponents: true,
-                  showStyle: true};
+    this.state = { showSidebar: false,
+      showParagon: true,
+      showComponents: true,
+      showStyle: true };
     this.handleClick = this.handleClick.bind(this);
     this.toggleParagon = this.toggleParagon.bind(this);
     this.toggleComponents = this.toggleComponents.bind(this);
@@ -22,43 +22,43 @@ class Sidebar extends React.Component {
     this.loadStateWithLocalStorage();
 
     //Loop through sidebar links and see if active
-    var url = window.location.href;
-    $(".menu-group a").each(function() {
-      var sidebarText = $(this).text().toLowerCase()
-        if (url.includes("css-grid")) {
-          $('#css-grid').addClass("active");
-        } else if (url.includes("progress-stepper")) {
-          $('#progress-stepper').addClass("active");
-        } else if (url.includes("radio-buttons")) {
-          $('#radio-buttons').addClass("active");
-        } else if ((url.includes(sidebarText))) {
-          $(this).addClass("active");
-        }
+    const url = window.location.href;
+    $(".menu-group a").each(function () {
+      const sidebarText = $(this).text().toLowerCase();
+      if (url.includes("css-grid")) {
+        $("#css-grid").addClass("active");
+      } else if (url.includes("progress-stepper")) {
+        $("#progress-stepper").addClass("active");
+      } else if (url.includes("radio-buttons")) {
+        $("#radio-buttons").addClass("active");
+      } else if ((url.includes(sidebarText))) {
+        $(this).addClass("active");
+      }
     });
   }
 
-   handleClick() {
-    this.setState(prevState => ({
+  handleClick() {
+    this.setState((prevState) => ({
       showSidebar: !prevState.showSidebar
     }));
   }
 
   toggleParagon() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       showParagon: !prevState.showParagon
     }));
     localStorage.setItem("showParagon", JSON.stringify(!this.state.showParagon));
   }
 
   toggleComponents() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       showComponents: !prevState.showComponents
     }));
     localStorage.setItem("showComponents", JSON.stringify(!this.state.showComponents));
   }
 
   toggleStyle() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       showStyle: !prevState.showStyle
     }));
     localStorage.setItem("showStyle", JSON.stringify(!this.state.showStyle));
@@ -66,7 +66,7 @@ class Sidebar extends React.Component {
 
   loadStateWithLocalStorage() {
     // for all items in state
-    for (let key in this.state) {
+    for (const key in this.state) {
       // if the key exists in localStorage
       if (localStorage.hasOwnProperty(key)) {
         // get the key's value from localStorage
@@ -90,22 +90,22 @@ class Sidebar extends React.Component {
 
       <div>
 
-        <div className={this.state.showSidebar ? 'example-mobile-sidebar expanded' : 'example-mobile-sidebar'}>
+        <div className={this.state.showSidebar ? "example-mobile-sidebar expanded" : "example-mobile-sidebar"}>
           <button className="button--gray button--sidebar-icon" onClick={this.handleClick}>
-            <i className={this.state.showSidebar ? 'dashing-icon dashing-icon--close' : 'dashing-icon'}></i>
+            <i className={this.state.showSidebar ? "dashing-icon dashing-icon--close" : "dashing-icon"} />
           </button>
         </div>
 
-        <div className={this.state.showSidebar ? 'example-sidebar show' : 'example-sidebar'}>
+        <div className={this.state.showSidebar ? "example-sidebar show" : "example-sidebar"}>
 
           <ul>
             <div className="logo-container">
               <img src={logo} alt="Paragon Logo" />
             </div>
 
-            <div className={this.state.showParagon ? 'group-container expanded' : 'group-container'}>
+            <div className={this.state.showParagon ? "group-container expanded" : "group-container"}>
               <h4 className="group-title no-margin" onClick={this.toggleParagon}>Get Started</h4>
-              <i className={this.state.showParagon ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
+              <i className={this.state.showParagon ? "dashing-icon dashing-icon--arrow-down" : "dashing-icon dashing-icon--arrow-right"} />
 
               <div className="menu-group">
                 <Link to="/" activeClassName="active">Principles</Link>
@@ -115,9 +115,9 @@ class Sidebar extends React.Component {
               </div>
             </div>
 
-            <div className={this.state.showStyle ? 'group-container expanded' : 'group-container'}>
+            <div className={this.state.showStyle ? "group-container expanded" : "group-container"}>
               <h4 className="group-title no-margin" onClick={this.toggleStyle}>Foundations</h4>
-              <i onClick={this.toggleStyle} className={this.state.showStyle ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
+              <i onClick={this.toggleStyle} className={this.state.showStyle ? "dashing-icon dashing-icon--arrow-down" : "dashing-icon dashing-icon--arrow-right"} />
 
               <div className="menu-group">
                 <Link to="/style/accessibility/guidelines">Accessibility</Link>
@@ -127,10 +127,10 @@ class Sidebar extends React.Component {
               </div>
             </div>
 
-            <div className={this.state.showComponents ? 'group-container expanded' : 'group-container'}>
+            <div className={this.state.showComponents ? "group-container expanded" : "group-container"}>
 
               <h4 className="group-title no-margin" onClick={this.toggleComponents}>Components</h4>
-              <i onClick={this.toggleComponents} className={this.state.showComponents ? 'dashing-icon dashing-icon--arrow-down' : 'dashing-icon dashing-icon--arrow-right'}></i>
+              <i onClick={this.toggleComponents} className={this.state.showComponents ? "dashing-icon dashing-icon--arrow-down" : "dashing-icon dashing-icon--arrow-right"} />
 
               <div className="menu-group">
                 <Link to="/components/accordion/code">Accordion</Link>
@@ -166,7 +166,8 @@ class Sidebar extends React.Component {
           </ul>
         </div>
       </div>
-    )
+    );
   }
+
 }
 export default Sidebar;
