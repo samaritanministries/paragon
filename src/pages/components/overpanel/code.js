@@ -30,7 +30,7 @@ class OverpanelCode extends React.Component {
             </h2>
             <div className="example-container">
 
-              <Link className="button button--primary" to="../../templates/overpanel-example" style={{ marginBottom: "1rem" }}>View Example Overpanel</Link>
+              <Link className="button button--primary" to="../../../templates/overpanel-example" style={{ marginBottom: "1rem" }}>View Example Overpanel</Link>
 
               <CodeToggle>
 {`<div class="overpanel">
