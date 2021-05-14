@@ -68,6 +68,8 @@ body.has-footer {
 	}
 
 	.header-nav {
+		display: none; //Hide header nav links on mobile
+
 		ul {
 			@extend %remove-list-style;
 
@@ -122,11 +124,43 @@ body.has-footer {
 				}
 			}
 		}
+		@media #{$tablet} {
+			display: flex;
+		}
 	}
+
 
 	.logo + .header-nav {
 		margin-left: $space-m;
 	}//IE wants this... okay IE. Here you are.
+}
+
+.logo {
+	align-items: center;
+	display: flex;
+	height: 4rem;
+	justify-content: center;
+	margin: 0 auto;
+	padding: $space-m;
+	padding: $space-xs;
+	width: 10.75rem;
+	@media #{$tablet} {
+		padding: $space-m;
+	}
+
+	@media #{$tablet} {
+		justify-content: center;
+		margin: 0;
+	}
+
+	img {
+		height: 4rem;
+		width: 100%;
+	}
+
+	a:hover {
+		opacity: 1;
+	}
 }
 
 .content {
@@ -291,6 +325,22 @@ body.has-footer {
 				}
 			}
 		}
+	}
+}
+
+// Profile Image
+.profile {
+	align-items: center;
+	border-radius: 5px;
+	color: $color-white;
+	cursor: pointer;
+	display: none;
+	justify-content: center;
+	padding: $space-xs;
+	width: auto;
+
+	@media #{$tablet} {
+		display: flex;
 	}
 }
 

@@ -1,4 +1,5 @@
 import { Link } from 'gatsby'
+import DefaultAvatar from "../../../img/Avatar.jpg";
 import React from 'react'
 import MobileMenu from './mobilemenu'
 import SubNavigation from './subnav'
@@ -33,7 +34,7 @@ export default class GlobalNavigation extends React.Component {
     return (
       <header className="header">
     		<MobileMenu />
-    		<div className="logo"><p className="text-color--purple">LOGO</p></div>
+    		<div className="logo"><p className="text-color--purple no-margin">LOGO</p></div>
 
     		<nav className="header-nav">
     			<ul>
@@ -43,12 +44,17 @@ export default class GlobalNavigation extends React.Component {
     			</ul>
     		</nav>
 
-    		<div className="alert"><i className="dashing-icon dashing-icon--notification"></i><div className="count">100</div></div>
-    		<div className="profile">
-    			<div className="profile-image"><span className="initials">RF</span></div>
-    			<span className="profile-name">Ryan Fitzgerald</span>
-    			<i className="dashing-icon dashing-icon--arrow-down dashing-icon--black"></i>
-    		</div>
+        <div
+        className="profile"
+        tabIndex="0"
+        style={{ marginLeft: "auto" }}
+        >
+          <div className="avatar-container center">
+            <img className="avatar" src={DefaultAvatar} />
+          </div>
+
+          <i className="dashing-icon dashing-icon--arrow-down" />
+        </div>
 
     	</header>
     );

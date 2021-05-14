@@ -1,0 +1,25 @@
+.avatar-container {
+	align-items: center;
+	border-radius: 50%;
+	display: flex;
+	height: 2.5rem;
+	margin-right: $space-xs;
+	overflow: hidden;
+	width: 2.5rem;
+
+	.avatar {
+		align-self: baseline;
+	}
+
+	&.center {
+		justify-content: center;
+	}
+}
+
+.avatar {
+	background-repeat: no-repeat;
+	background-size: cover;
+	bottom: 7px;
+	height: 3.5rem;
+	position: relative;
+}
