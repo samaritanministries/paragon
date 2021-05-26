@@ -1,96 +1,98 @@
 @mixin button($button-name, $background-color, $background-color-dark, $color, $button-type: button) {
-  @if $button-type == button {
-    background-color: $background-color;
-    color: $color;
-    .dashing-icon::before { color: $color; }
+	@if $button-type == button {
+		background-color: $background-color;
+		color: $color;
+		.dashing-icon::before { color: $color; }
 
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $background-color-dark;
-    }
-  }
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $background-color-dark;
+		}
+	}
 
-  @if $button-type == border {
-    background-color: transparent;
-    border-color: $background-color;
-    color: text-color($button-name, $background-color);
+	@if $button-type == border {
+		background-color: transparent;
+		border-color: $background-color;
+		color: text-color($button-name, $background-color);
 
-    .dashing-icon::before { color: text-color($button-name, $background-color); }
+		.dashing-icon::before { color: text-color($button-name, $background-color); }
 
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $background-color-dark;
-      border-color: transparent;
-      color: $color;
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $background-color-dark;
+			border-color: transparent;
+			color: $color;
 
-      .dashing-icon::before {
-        color: $color;
-        transition: all 50ms ease-in-out;
-      }
-    }
-  }
+			.dashing-icon::before {
+				color: $color;
+				transition: all 50ms ease-in-out;
+			}
+		}
+	}
 
-  @if $button-type == transparent {
-    background-color: transparent;
-    color: text-color($button-name, $background-color);
+	@if $button-type == transparent {
+		background-color: transparent;
+		color: text-color($button-name, $background-color);
 
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: background-color($button-name);
-    }
-    .dashing-icon::before { color: text-color($button-name, $background-color); }
-  }
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: background-color($button-name);
+		}
+		.dashing-icon::before { color: text-color($button-name, $background-color); }
+	}
 
-  // Button Groups
-  @if $button-type == groupRadio {
-    .button-group {
-      &.button--#{$button-name} {
-        .button--radio {
-          .button {
-            background-color: $background-color;
-            color: $color;
-            .dashing-icon::before { color: $color; }
+	// Button Groups
+	@if $button-type == groupRadio {
+		.button-group {
+			&.button--#{$button-name} {
+				.button--radio {
+					.button {
+						background-color: $background-color;
+						color: $color;
+						.dashing-icon::before { color: $color; }
 
-            &:hover,
-            &:focus,
-            &:active {
-              background-color: $background-color-dark;
-            }
-          }
-          input:checked ~ label { //active state of button-group
-            background-color: $background-color-dark;
-            border-color: $background-color-dark;
-          }
-        }
+						&:hover,
+						&:focus,
+						&:active {
+							background-color: $background-color-dark;
+						}
+					}
 
-        &.button--border {
-          .button--radio {
-            .button {
-              background-color: transparent;
-              color: text-color("gray", $background-color);
+					input:checked ~ label { //active state of button-group
+						background-color: $background-color-dark;
+						border-color: $background-color-dark;
+					}
+				}
 
-              &:hover,
-              &:focus,
-              &:active {
-                background-color: background-color($button-name);
-              }
-              .dashing-icon::before { color: text-color($button-name, $background-color); }
-            }
-            input:checked ~ label { //active state of button-group
-              background-color: $background-color;
-              border-color: $background-color;
-              color: text-color($button-name, $color);
-              &:hover { background-color: $background-color; }
-              .dashing-icon::before { color: text-color($button-name, $color); }
-            }
-          }
-        }
-      }
-    }
-  }
+				&.button--border {
+					.button--radio {
+						.button {
+							background-color: transparent;
+							color: text-color('gray', $background-color);
+
+							&:hover,
+							&:focus,
+							&:active {
+								background-color: background-color($button-name);
+							}
+							.dashing-icon::before { color: text-color($button-name, $background-color); }
+						}
+
+						input:checked ~ label { //active state of button-group
+							background-color: $background-color;
+							border-color: $background-color;
+							color: text-color($button-name, $color);
+							&:hover { background-color: $background-color; }
+							.dashing-icon::before { color: text-color($button-name, $color); }
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 @mixin button-group--vertical {
@@ -127,59 +129,61 @@
 }
 
 @mixin user-select($value) {
-  -webkit-user-select: $value;
-  -moz-user-select: $value;
-  -ms-user-select: $value;
-  -o-user-select: $value;
-  user-select: $value;
+	-webkit-user-select: $value;
+	-moz-user-select: $value;
+	-ms-user-select: $value;
+	-o-user-select: $value;
+	user-select: $value;
 }
 
 //Run a theme through button--setup to generate classes
 @mixin button-setup($color) {
-  //create button-group buttons
-  @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, groupRadio);
-  @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, groupRadioVertical);
+	//create button-group buttons
+	@include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, groupRadio);
+	@include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, groupRadioVertical);
 
-  //create regular buttons
-  #{$buttons} {
-    //default color (primary)
-    @if #{nth($color, 1)} == 'primary' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
-    &.button--#{nth($color, 1)} { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
+	//create regular buttons
+	#{$buttons} {
+		//default color (primary)
+		@if #{nth($color, 1)} == 'primary' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
+		&.button--#{nth($color, 1)} { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}); }
 
-    &.button--border {
-      //default color (primary)
-      @if #{nth($color, 1)} == 'primary' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border); }
-      &.button--#{nth($color, 1)} {
-        @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border);
-      }
-    }
+		&.button--border {
+			//default color (primary)
+			@if #{nth($color, 1)} == 'primary' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border); }
 
-    &.button--transparent {
-      //default color (blue)
-      @if #{nth($color, 1)} == 'blue' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent); }
-      &.button--#{nth($color, 1)} {
-        @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent);
-      }
-    }
-  }
+			&.button--#{nth($color, 1)} {
+				@include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, border);
+			}
+		}
+
+		&.button--transparent {
+			//default color (blue)
+			@if #{nth($color, 1)} == 'blue' { @include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent); }
+
+			&.button--#{nth($color, 1)} {
+				@include button(#{nth($color, 1)}, #{nth($color, 2)}, #{nth($color, 3)}, #{nth($color, 4)}, transparent);
+			}
+		}
+	}
 }
 
 // Determine special cases for white and gray buttons
 //Hardcoded values because value checking would not work in a mixin.
 @function text-color($button-name, $background-color) {
-  @if $button-name == 'gray' {
-    @return $button-gray-text;
-  }
-  @else {
-    @return $background-color;
-  }
+	@if $button-name == 'gray' {
+		@return $button-gray-text;
+	}
+	@else {
+		@return $background-color;
+	}
 }
 
 @function background-color($button-name) {
-  @if $button-name == 'white' {
-    @return rgba(0, 0, 0, 0.5);
-  }
-  @else {
-    @return $color-gray-2;
-  }
+	@if $button-name == 'white' {
+		@return rgba(0, 0, 0, 0.5);
+	}
+	@else {
+		@return $color-gray-2;
+	}
 }
