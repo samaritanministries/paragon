@@ -1,19 +1,29 @@
 body {
-  &.lightmode {
-    background-color: $color-background;
-    color: $color-text;
+	&.lightmode {
+		background-color: $color-background;
+		color: $color-text;
 
-    h1, h2, h3, h4, h5, h6 {
-      color: $color-text;
-    }
-  }
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: $color-text;
+		}
+	}
 
-  &.darkmode {
-    background-color: $color-background-darkmode;
-    color: $color-text-darkmode;
+	&.darkmode {
+		background-color: $color-background-darkmode;
+		color: $color-text-darkmode;
 
-    h1, h2, h3, h4, h5, h6 {
-      color: $color-text-darkmode;
-    }
-  }
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: $color-text-darkmode;
+		}
+	}
 }
