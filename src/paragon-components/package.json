@@ -1,7 +1,16 @@
 {
   "name": "paragon-components",
   "description": "React Components for Samaritan Ministries",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "private": false,
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "scripts": {
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/paragon-components -d dist --copy-files"
+  },
   "main": "index.js",
   "keywords": [
     "paragon",

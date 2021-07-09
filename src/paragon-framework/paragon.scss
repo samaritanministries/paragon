@@ -1,6 +1,18 @@
 @import 'vendor/vendor';
-@import 'base/base';
-@import 'modules/modules';
+@import 'base/colors/given-colors';
+@import 'base/mixins/mixins';
+@import 'base/variables/variables';
+
+@import 'base/utilities/utilities-less';
+@import 'base/extendables/extendables';
+
+@import 'modules/css-grid/css-grid';
+@import 'modules/actions/actions';
+@import 'modules/card/card';
+@import 'modules/forms/forms';
+@import 'modules/typography/typography';
+@import 'modules/icons/icons';
+
 
 @font-face {
 	font-family: 'dashing-icons';
