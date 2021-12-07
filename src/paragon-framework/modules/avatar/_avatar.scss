@@ -4,6 +4,8 @@
 	display: flex;
 	height: 2.5rem;
 	margin-right: $space-xs;
+	// Fixes safari issue
+	-webkit-mask-image: -webkit-radial-gradient($color-white, $color-black);
 	overflow: hidden;
 	width: 2.5rem;
 
