@@ -229,7 +229,7 @@ $flex-table--header-text: $color-white;
 		}
 
 		li {
-			margin-top: 0;
+			margin-top: 0 !important;
 			padding-right: 0 !important;
 			right: 0;
 
@@ -240,7 +240,7 @@ $flex-table--header-text: $color-white;
 				}
 			}
 			@media #{$tablet} {
-				margin-right: $space-xl;
+				margin-right: $space-m;
 			}
 		}
 	}
