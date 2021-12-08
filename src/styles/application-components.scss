@@ -10,17 +10,10 @@
 
 // Import components here - this could reside in a "config" file?
 @import "../paragon-framework/actions/actions"; //Component "Actions"
-@import "../paragon-framework/modules/grid/grid"; //Component "Grid"
+// @import "../paragon-framework/grid/grid"; //Component "Grid"
+
 
 //Import modules here (before they are made official components)
 @import "../paragon-framework/modules/modules-components";
-
-*,
-*::before,
-*::after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
 
 @import "../paragon-styleguide"; //only for paragon documentation pages (this application)
