@@ -9,7 +9,6 @@ $spinner-button: 24px; //1.2rem;
 	border: 6px solid rgba($spinner-color, 0.15);
 	border-radius: 100%;
 	border-top: 6px solid rgba($spinner-color, 1);
-	float: left;
 	height: $spinner-default;
 	left: calc(50% - (#{$spinner-default}/2));
 	position: relative;
