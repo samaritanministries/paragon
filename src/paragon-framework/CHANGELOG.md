@@ -2,6 +2,20 @@
 
 This changelog was started using [these conventions](http://keepachangelog.com/).
 
+## [2.5.3] - 2021-12-16
+### Fixed
+- Fix loading table margin for very specific tables
+- Fix profile image radius on Safari
+
+### Added
+- Add new utility classes
+- Add paragon.css to npm package
+
+### Removed
+- Remove extra navigation animation code
+- Remove float from dash-spinner
+- Remove IE fallbacks for CSS Grid
+
 ## [2.5.2] - 2021-04-01
 ### Changed
 - Change scss structure for React component release
