@@ -215,6 +215,19 @@ $display: (
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
+
+	&-stacked_mobile {
+		@media #{$phone} {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			margin-bottom: $space-xs;
+
+			> :first-child {
+				text-align: left;
+				width: 100%;
+			}
+		}
+	}
 }
 
 .flex { display: flex; }
@@ -255,4 +268,21 @@ $display: (
 	&_mobile { @media #{$phone} { flex: 1 100% !important; } }
 	&_tablet-and-below { @media #{$tablet-and-below} { flex: 1 100% !important; } }
 	&_tablet { @media #{$tablet} { flex: 1 100% !important; } }
+}
+
+//Horizontal Line
+hr.dashed {
+	border-top-style: dashed;
+}
+
+hr.full-width {
+	margin: 0 -#{$grid-gutter};
+}
+
+hr.small {
+	border-width: 1px;
+}
+
+.remove-list-style {
+	@extend %remove-list-style;
 }

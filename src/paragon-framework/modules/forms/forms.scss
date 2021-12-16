@@ -279,3 +279,8 @@ fieldset {
 		}
 	}
 }
+
+//Remove focus ring for inputMode on Firefox
+:-moz-ui-invalid {
+	box-shadow: none;
+}
