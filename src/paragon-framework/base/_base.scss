@@ -17,3 +17,11 @@ hr {
 	border: 0;
 	border-top: 2px solid $color-border;
 }
+
+*,
+*::before,
+*::after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}

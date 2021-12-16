@@ -77,42 +77,42 @@ export default () => (
               <tr>
                 <td>$xlarge</td>
                 <td>&lt;h1&gt;</td>
-                <td>35px</td>
+                <td>31.25px</td>
                 <td>1.953rem</td>
                 <td><h1>Source Sans Pro</h1></td>
               </tr>
               <tr>
                 <td>$large</td>
                 <td>&lt;h2&gt;</td>
-                <td>28px</td>
+                <td>25px</td>
                 <td>1.563rem</td>
                 <td><h2>Source Sans Pro</h2></td>
               </tr>
               <tr>
                 <td>$medium</td>
                 <td>&lt;h3&gt;</td>
-                <td>23px</td>
+                <td>20px</td>
                 <td>1.25rem</td>
                 <td><h3>Source Sans Pro</h3></td>
               </tr>
               <tr>
                 <td>$body</td>
                 <td>&lt;p&gt;</td>
-                <td>18px</td>
+                <td>16px</td>
                 <td>1rem</td>
                 <td><p>Source Sans Pro</p></td>
               </tr>
               <tr>
                 <td>$small</td>
                 <td>&lt;small&gt;</td>
-                <td>16px</td>
+                <td>14.4px</td>
                 <td>0.9rem</td>
                 <td><small>Source Sans Pro</small></td>
               </tr>
               <tr>
                 <td>$xsmall</td>
                 <td>&lt;label&gt;</td>
-                <td>14px</td>
+                <td>12.8px</td>
                 <td>0.8rem</td>
                 <td><fieldset><label>Source Sans Pro</label></fieldset></td>
               </tr>

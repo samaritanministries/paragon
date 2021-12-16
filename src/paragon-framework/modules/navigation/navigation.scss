@@ -68,6 +68,8 @@ body.has-footer {
 	}
 
 	.header-nav {
+		display: none; //Hide header nav links on mobile
+
 		ul {
 			@extend %remove-list-style;
 
@@ -86,8 +88,9 @@ body.has-footer {
 					text-decoration: none;
 
 					&::after {
-
 						@include transition(all 0.2s ease-out);
+						background-color: $color-data-teal;
+						border-radius: 10px;
 						bottom: calc(-#{$header-underline-width} - 2px);
 						content: '';
 						height: $header-underline-width;
@@ -105,13 +108,6 @@ body.has-footer {
 						opacity: 1;
 
 						&::after {
-
-							background-color: $color-data-teal;
-							border-radius: 10px;
-							bottom: calc(-#{$header-underline-width} - 2px);
-							height: $header-underline-width;
-							left: 0;
-							right: 0;
 							-webkit-transform: scaleX(1);
 							transform: scaleX(1);
 
@@ -122,11 +118,42 @@ body.has-footer {
 				}
 			}
 		}
+		@media #{$tablet} {
+			display: flex;
+		}
 	}
+
 
 	.logo + .header-nav {
 		margin-left: $space-m;
 	}//IE wants this... okay IE. Here you are.
+}
+
+.logo {
+	align-items: center;
+	display: flex;
+	height: 4rem;
+	justify-content: center;
+	margin: 0 auto;
+	padding: $space-xs;
+	width: 10.75rem;
+
+	img {
+		height: 4rem;
+		width: 100%;
+	}
+
+	a:hover {
+		opacity: 1;
+	}
+	@media #{$tablet} {
+		padding: $space-m;
+	}
+
+	@media #{$tablet} {
+		justify-content: center;
+		margin: 0;
+	}
 }
 
 .content {
@@ -198,12 +225,12 @@ body.has-footer {
 		display: flex;
 		padding: 0 $grid-gutter/2;
 
-		@media #{$tablet} {
-			padding: 0 $grid-gutter;
-		}
-
 		a {
 			height: auto; //make back link centered
+		}
+
+		@media #{$tablet} {
+			padding: 0 $grid-gutter;
 		}
 	}
 
@@ -257,8 +284,9 @@ body.has-footer {
 				text-decoration: none;
 
 				&::after {
-
 					@include transition(all 0.2s ease-out);
+					background-color: $color-data-teal;
+					border-radius: 10px;
 					bottom: 0;
 					content: '';
 					height: $header-underline-width;
@@ -276,13 +304,6 @@ body.has-footer {
 					opacity: 1;
 
 					&::after {
-
-						background-color: $color-data-teal;
-						border-radius: 10px;
-						bottom: 0;
-						height: $header-underline-width;
-						left: 0;
-						right: 0;
 						-webkit-transform: scaleX(1);
 						transform: scaleX(1);
 
@@ -291,6 +312,22 @@ body.has-footer {
 				}
 			}
 		}
+	}
+}
+
+// Profile Image
+.profile {
+	align-items: center;
+	border-radius: 5px;
+	color: $color-white;
+	cursor: pointer;
+	display: none;
+	justify-content: center;
+	padding: $space-xs;
+	width: auto;
+
+	@media #{$tablet} {
+		display: flex;
 	}
 }
 

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import Layout from '../../../components/layout'
-import SubNav from '../../../components/subnavigation'
-import AppContent from '../../../components/appcontent'
-import StillWorking from '../../../components/stillworking'
+import Layout from "../../../components/layout";
+import SubNav from "../../../components/subnavigation";
+import AppContent from "../../../components/appcontent";
+import StillWorking from "../../../components/stillworking";
 
 const currentPageName = "Grid";
 const currentPageNameLower = currentPageName.toLowerCase();
@@ -12,7 +12,7 @@ export default () => (
   <Layout>
     <header className="subnav">
       <h1>{currentPageName}</h1>
-      <SubNav pageName={currentPageNameLower}/>
+      <SubNav pageName={currentPageNameLower} />
     </header>
     <AppContent>
       <div className="row">
@@ -22,4 +22,4 @@ export default () => (
       </div>
     </AppContent>
   </Layout>
-)
+);

@@ -1,11 +1,11 @@
 @import 'typography/typography';
 @import 'grid/grid';
-@import 'css-grid/css-grid'; // Replaced by component "grid"
 @import 'forms/forms';
 @import 'forms/themed-elements';
 @import 'forms/card-controls';
-@import 'actions/actions'; // Replaced by component "actions"
-@import 'actions/button-group'; // Replaced by component "actions"
+@import 'actions/actions';
+@import 'actions/button-group';
+@import 'avatar/avatar';
 @import 'pagination/pagination';
 @import 'tooltip/tooltip';
 @import 'card/card';
@@ -14,7 +14,7 @@
 @import 'table/table';
 @import 'navigation/navigation';
 @import 'navigation/mobile-menu';
-@import 'overpanel/overpanel';//dependent on header being first
+@import 'overpanel/overpanel'; //dependent on header being first
 @import 'footer/footer';
 @import 'icons/icons';
 @import 'spinner/spinner';
