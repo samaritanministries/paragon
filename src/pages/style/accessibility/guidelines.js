@@ -84,7 +84,7 @@ export default () => (
         <h2 className="has-number has-number--two">Layout</h2>
         <div>
           <h3>Mobile First</h3>
-          <p>Samaritan products must be responsive and mobile-friendly. As of 2019, roughly 35% of our membership access the Dashboard from a touch device. For this reason, it is important that you offer a clean, consisent experience throughout every form factor. Utilize the <Link to="/components/css-grid/code">grid</Link> system built into the Paragon Framework to get a head start on designing a mobile first layout.</p>
+          <p>Samaritan products must be responsive and mobile-friendly. As of 2019, roughly 35% of our membership access the Dashboard from a touch device. For this reason, it is important that you offer a clean, consisent experience throughout every form factor. Utilize the <Link to="/components/grid/code">grid</Link> system built into the Paragon Framework to get a head start on designing a mobile first layout.</p>
         </div>
 
         <h2 className="has-number has-number--three">Icons & Images</h2>

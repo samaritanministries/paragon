@@ -81,7 +81,7 @@ fieldset {
 		resize: vertical;
 
 		.grid & {
-			width: 100%; //needed to support css-grid
+			width: 100%; //needed to support grid
 		}
 	}
 
@@ -89,7 +89,7 @@ fieldset {
 		cursor: pointer;
 
 		.grid & {
-			width: 100%; //needed to support css-grid
+			width: 100%; //needed to support grid
 		}
 	}
 

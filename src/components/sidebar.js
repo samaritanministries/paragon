@@ -25,8 +25,8 @@ class Sidebar extends React.Component {
     const url = window.location.href;
     $(".menu-group a").each(function () {
       const sidebarText = $(this).text().toLowerCase();
-      if (url.includes("css-grid")) {
-        $("#css-grid").addClass("active");
+      if (url.includes("grid")) {
+        $("#grid").addClass("active");
       } else if (url.includes("progress-stepper")) {
         $("#progress-stepper").addClass("active");
       } else if (url.includes("radio-buttons")) {
