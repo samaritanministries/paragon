@@ -12,6 +12,7 @@
   },
   "pre-commit": "stylelint",
   "dependencies": {
+    "@smi/design-tokens": "^0.0.3",
     "@tippyjs/react": "^4.2.5",
     "classnames": "^2.3.0",
     "gatsby": "^2.32.11",

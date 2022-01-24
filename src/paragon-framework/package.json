@@ -16,5 +16,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samaritanministries/paragon.git"
+  },
+  "dependencies": {
+    "@smi/design-tokens": "^0.0.1"
   }
 }

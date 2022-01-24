@@ -1,0 +1,97 @@
+:root {
+	/* Primary and Accent */
+	// $color-primary: $color-purple !default;
+	// $color-primary-light: $color-purple-light !default;
+	// $color-primary-dark: $color-purple-dark !default;
+
+	--color-primary: $color-purple;
+	--color-primary-light: $color-purple-light;
+	--color-primary-dark: $color-purple-light;
+
+	// $color-accent: $color-blue !default;
+	// $color-accent-light: $color-blue-light !default;
+	// $color-accent-dark: $color-blue-dark !default;
+
+	--color-accent: $color-blue;
+	--color-accent-light: $color-blue-light;
+	--color-accent-dark: $color-blue-dark;
+
+	/* Semantic */
+	// $color-success: $color-green;
+	// $color-warning: $color-orange;
+	// $color-error: $color-red;
+
+	--color-success: $color-green;
+	--color-warning: $color-orange;
+	--color-error: $color-red;
+
+	/* Border */
+	// $color-border: $color-gray-3;
+
+	--color-border: $color-gray-3;
+
+	/* Hover/Selectable */
+	// $color-hover: $color-gray-1;
+
+	--color-hover: $color-gray-1;
+
+	/* Body Background */
+	// $color-background: $color-gray-2;
+
+	--color-background: $color-gray-2;
+
+	/* Focus */
+	// $color-focus: rgba($color-blue-light, 0.6);
+
+	--color-focus: rgba($color-blue-light, 0.6);
+
+	/* Typography */
+	// $color-text: $color-black;
+	// $color-subtext: $color-gray-4;
+	// $color-link: $color-accent;
+
+	--color-text: $color-black;
+	--color-subtext: $color-gray-4;
+	--color-link: $color-accent;
+
+	/* Forms */
+	// $form-element-border: $color-border;
+	// $form-element-border-focus: $color-accent;
+	// $form-element-border-error: $color-error;
+	// $form-element-bg: $color-white;
+	// $form-text-placeholder: $color-subtext;
+
+	--form-element-border: $color-border;
+	--form-element-border-focus: $color-accent;
+	--form-element-border-error: $color-error;
+	--form-element-bg: $color-white;
+	--form-text-placeholder: $color-subtext;
+
+	/* Buttons */
+	// $button-primary-bg: $color-primary;
+	// $button-primary-hover: $color-primary-dark;
+	// $button-primary-text: $color-white;
+
+	--button-primary-bg: $color-primary;
+	--button-primary-hover: $color-primary-dark;
+	--button-primary-text: $color-white;
+
+	// $button-gray-bg: $color-gray-3;
+	// $button-gray-hover: $color-gray-3-dark;
+	// $button-gray-text: $color-black;
+
+	--button-gray-bg: $color-gray-3;
+	--button-gray-hover: $color-gray-3-dark;
+	--button-gray-text: $color-black;
+
+	/* Icons */
+	// $color-icon-primary: $color-gray-4;
+
+	--color-icon-primary: $color-gray-4;
+}
+
+[data-theme='dark'] {
+	--color-primary: $color-data-purple;
+	--color-primary-light: $color-purple-light;
+	--color-primary-dark: $color-purple-light;
+}

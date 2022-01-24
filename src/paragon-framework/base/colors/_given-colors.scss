@@ -1,89 +1,51 @@
+@use '/node_modules/@smi/design-tokens/dist/scss/tokens.css';
 
 /* Base Colors */
-$color-purple: #595478 !default;
+$color-purple: var(--color-purple) !default;
 $color-purple-light: lighten($color-purple, 10%) !default;
 $color-purple-dark: darken($color-purple, 10%) !default;
 
-$color-blue: #097cbf !default;
+$color-blue: var(--color-semantic-blue) !default;
 $color-blue-light: lighten($color-blue, 10%) !default;
 $color-blue-dark: darken($color-blue, 10%) !default;
 
-$color-green: #00875d !default;
+$color-green: var(--color-semantic-green) !default;
 $color-green-light: lighten($color-green, 10%) !default;
 $color-green-dark: darken($color-green, 10%) !default;
 
-$color-orange: #f8652a !default;
+$color-orange: var(--color-semantic-orange) !default;
 $color-orange-light: lighten($color-orange, 10%) !default;
 $color-orange-dark: darken($color-orange, 10%) !default;
 
-$color-red: #d1323f !default;
+$color-red: var(--color-semantic-red) !default;
 $color-red-light: lighten($color-red, 10%) !default;
 $color-red-dark: darken($color-red, 10%) !default;
 
-$color-black: #222228 !default;
-$color-gray-4: #6f6f75 !default;
-$color-gray-3: #e1e1e7 !default;
+$color-black: var(--color-black) !default;
+$color-gray-4: var(--color-gray-4) !default;
+$color-gray-3: var(--color-gray-3) !default;
 $color-gray-3-dark: darken($color-gray-3, 10%) !default;
-$color-gray-2: #eeeef4 !default;
-$color-gray-1: #f3f3f9 !default;
-$color-white: #fff !default;
+$color-gray-2: var(--color-gray-2) !default;
+$color-gray-1: var(--color-gray-1) !default;
+$color-white: var(--color-white) !default;
 
 /* Data Visuals */
-$color-data-teal: #64ccc9;
-$color-data-purple: #9f8fca;
+$color-data-teal: var(--color-data-teal);
+$color-data-purple: var(--color-purple);
+
+/* Dark Mode */
+// TODO: add light and dark versions
+$color-dark-semantic-blue: var(--color-dark-semantic-blue);
+$color-dark-semantic-green: var(--color-dark-semantic-green);
+$color-dark-semantic-red: var(--color-dark-semantic-red);
+$color-dark-semantic-orange: var(--color-dark-semantic-orange);
+
+$color-dark-gray-5: var(--color-dark-gray-5);
+$color-dark-gray-6: var(--color-dark-gray-6);
+$color-dark-gray-7: var(--color-dark-gray-7);
 
 /* Gradient */
 $color-gradient: linear-gradient(to right, $color-purple, #5a89ad, $color-data-teal);
-
-/* Primary and Accent */
-$color-primary: $color-purple !default;
-$color-primary-light: $color-purple-light !default;
-$color-primary-dark: $color-purple-dark !default;
-
-$color-accent: $color-blue !default;
-$color-accent-light: $color-blue-light !default;
-$color-accent-dark: $color-blue-dark !default;
-
-/* Semantic */
-$color-success: $color-green;
-$color-warning: $color-orange;
-$color-error: $color-red;
-
-/* Border */
-$color-border: $color-gray-3;
-
-/* Hover/Selectable */
-$color-hover: $color-gray-1;
-
-/* Body Background */
-$color-background: $color-gray-2;
-
-/* Focus */
-$color-focus: rgba($color-blue-light, 0.6);
-
-/* Typography */
-$color-text: $color-black;
-$color-subtext: $color-gray-4;
-$color-link: $color-accent;
-
-/* Forms */
-$form-element-border: $color-border;
-$form-element-border-focus: $color-accent;
-$form-element-border-error: $color-error;
-$form-element-bg: $color-white;
-$form-text-placeholder: $color-subtext;
-
-/* Buttons */
-$button-primary-bg: $color-primary;
-$button-primary-hover: $color-primary-dark;
-$button-primary-text: $color-white;
-
-$button-gray-bg: $color-gray-3;
-$button-gray-hover: $color-gray-3-dark;
-$button-gray-text: $color-black;
-
-/* Icons */
-$color-icon-primary: $color-gray-4;
 
 /* Shadows */
 $color-shadow: #3c4043;
