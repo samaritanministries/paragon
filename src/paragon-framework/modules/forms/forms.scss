@@ -1,6 +1,6 @@
-$color-input-border: var(--color-border);
-$color-input-border-focus: var(--color-accent);
-$color-input-disabled: var(--card-disabled-bg);
+// $color-input-border: var(--color-border);
+// $color-input-border-focus: var(--color-accent);
+// $color-input-disabled: var(--card-disabled-bg);
 
 $color-input-border-error: var(--color-error-light);
 $color-input-text-error: var(--color-error);
@@ -51,8 +51,8 @@ fieldset {
 
 		//Adds light gray background color to disabled inputs
 		&[disabled] {
-			background-color: $color-input-disabled !important;
-			border-color: $color-input-disabled !important;
+			background-color: var(--form-input-disabled) !important;
+			border-color: var(--form-input-disabled) !important;
 			cursor: default !important;
 		}
 	}

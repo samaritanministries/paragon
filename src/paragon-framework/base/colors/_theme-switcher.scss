@@ -4,7 +4,7 @@
 	--color-primary-light: $color-purple-light;
 	--color-primary-dark: $color-purple-dark;
 
-	--color-accent: var(--color-blue);
+	--color-accent: var(--color-semantic-blue);
 	--color-accent-light: $color-semantic-blue-light;
 	--color-accent-dark: $color-semantic-blue-dark;
 
@@ -42,12 +42,20 @@
 
 	--color-container-background: var(--color-white);
 
+	/* Card */
+	--card-disabled-bg: var(--color-gray-2);
+	--card-disabled-border: var(--color-gray-2);
+
+	--color-shadow: $color-shadow;
+
 	/* Forms */
 	--form-element-border: var(--color-border);
 	--form-element-border-focus: var(--color-accent);
 	--form-element-border-error: var(--color-error);
 	--form-element-bg: var(--color-white);
 	--form-text-placeholder: var(--color-subtext);
+
+	--form-input-disabled: var(--card-disabled-bg);
 
 	/* Buttons */
 	--button-primary-bg: var(--color-primary);
@@ -60,12 +68,6 @@
 
 	/* Icons */
 	--color-icon-primary: var(--color-gray-4);
-
-	/* Card */
-	--card-disabled-bg: var(--color-gray-2);
-	--card-disabled-border: var(--color-gray-2);
-
-	--color-shadow: $color-shadow;
 }
 
 // [data-theme='dark'] {
@@ -90,9 +92,9 @@ body.dark-mode {
 	--color-error-dark: $color-dark-semantic-red-dark;
 	--color-error-light: $color-dark-semantic-red-light;
 
-	--color-border: var(--color-gray-6);
+	--color-border: var(--color-dark-gray-6);
 
-	--color-hover: var(--color-gray-1);
+	--color-hover: var(--color-dark-gray-6);
 
 	--color-background: var(--color-black);
 
@@ -107,14 +109,20 @@ body.dark-mode {
 	//TODO: naming?
 	--color-text-invert: var(--color-black);
 
+	--card-disabled-bg: var(--color-dark-gray-8);
+	--card-disabled-border: var(--color-dark-gray-8);
+
 	--form-element-bg: var(--color-dark-gray-7);
+	--form-element-border: var(--color-border);
+	--form-element-border-focus: var(--color-accent);
+	--form-element-border-error: var(--color-error);
+	--form-text-placeholder: var(--color-subtext);
+
+	--form-input-disabled: var(--card-disabled-bg);
 
 	--button-gray-bg: var(--color-dark-gray-6);
 	--button-gray-hover: $color-dark-gray-6-dark;
 	--button-gray-text: var(--color-text);
-
-	--card-disabled-bg: rgba(var(--color-black), 0.5);
-	--card-disabled-border: rgba(var(--color-black), 0.5);
 
 	--color-shadow: transparent;
 }

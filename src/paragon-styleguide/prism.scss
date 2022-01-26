@@ -5,6 +5,15 @@
  * @author Lea Verou
  */
 
+:root {
+	--color-example-container-background: #fff;
+}
+
+body.dark-mode {
+	--color-example-container-background: rgb(46, 45, 56, 0.5);
+}
+
+
 $white: #fff;
 $gray-50: #f2f2f2;
 $gray-100: #ededed;
@@ -21,19 +30,19 @@ $code-toggle: #313538;
 $tablet: 'all and (min-width: 40em)' !default;
 
 .example-body {
-	background-color: var(--color-container-background);
+	background-color: var(--color-example-container-background);
 	font-size: 18px;
 	margin: auto;
 }
 
 .example-container {
-	background-color: var(--color-container-background);
+	background-color: var(--color-example-container-background);
 	border: 2px solid var(--color-border);
 	border-bottom: 0;
 	border-radius: 8px 8px 0 0;
 
 	.grid & {
-		background-color: var(--color-container-background);
+		background-color: var(--color-example-container-background);
 		border-color: transparent !important;
 		border-radius: 8px; //temp
 		padding: $space-l;

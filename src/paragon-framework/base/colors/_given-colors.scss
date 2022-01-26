@@ -1,28 +1,33 @@
 @use '/node_modules/@smi/design-tokens/dist/scss/tokens.scss' as token;
 @use '/node_modules/@smi/design-tokens/dist/css/tokens' as *;
 
-// :root{
-// --color-purple: #595478;
-// --color-semantic-blue: #097cbf;
-// --color-semantic-green: #00875d;
-// --color-semantic-red: #d1323f;
-// --color-semantic-orange: #f8652a;
-// --color-data-purple: #9f8fca;
-// --color-data-teal: #64ccc9;
-// --color-black: #222228;
-// --color-gray-4: #6f6f75;
-// --color-gray-3: #e1e1e7;
-// --color-gray-2: #eeeef4;
-// --color-gray-1: #f3f3f9;
-// --color-white: #ffffff;
-// --color-dark-semantic-blue: #30bbf7;
-// --color-dark-semantic-green: #3eb188;
-// --color-dark-semantic-orange: #f97b49;
-// --color-dark-semantic-red: #f34448;
-// --color-dark-gray-5: #898890;
-// --color-dark-gray-6: #56555c;
-// --color-dark-gray-7: #45434c;
-// }
+:root {
+	// --color-purple: #595478;
+	// --color-semantic-blue: #097cbf;
+	// --color-semantic-green: #00875d;
+	// --color-semantic-red: #d1323f;
+	// --color-semantic-orange: #f8652a;
+	// --color-data-purple: #9f8fca;
+	// --color-data-teal: #64ccc9;
+	// --color-black: #222228;
+	// --color-gray-4: #6f6f75;
+	// --color-gray-3: #e1e1e7;
+	// --color-gray-2: #eeeef4;
+	// --color-gray-1: #f3f3f9;
+	// --color-white: #ffffff;
+	// --color-dark-semantic-blue: #30bbf7;
+	// --color-dark-semantic-green: #3eb188;
+	// --color-dark-semantic-orange: #f97b49;
+	// --color-dark-semantic-red: #f34448;
+	// --color-dark-gray-5: #898890;
+	// --color-dark-gray-6: #56555c;
+
+	//need to adjust token color
+	--color-dark-gray-7: #2e2d38;
+
+	//added gray-8 for 50% of gray-7 (for disabled inputs)
+	--color-dark-gray-8: #25232b;
+}
 
 
 /* Variants of Base Colors */
