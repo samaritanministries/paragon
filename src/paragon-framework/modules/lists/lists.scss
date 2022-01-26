@@ -11,9 +11,9 @@
 		margin-bottom: $grid-gutter;
 
 		&::before {
-			background-color: $color-gray-3;
+			background-color: var(--color-border);
 			border-radius: 50%;
-			color: $color-black;
+			color: var(--color-text);
 			content: counter(step-counter); /* Displays the value of 'step-counter' */
 			font-size: 1rem;
 			font-weight: $font-weight-semibold;
@@ -31,6 +31,6 @@
 	}
 	//Example: Custom Colored Lists
 	&.ordered-list--color-blue {
-		@include ordered-list($color-blue, $color-white);
+		@include ordered-list(var(--color-accent), var(--color-white));
 	}
 }

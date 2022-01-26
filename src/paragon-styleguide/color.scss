@@ -103,7 +103,7 @@ $green10: #78c696;
 
 //small color card
 .card-color--small {
-	border-bottom: 2px solid $color-border;
+	border-bottom: 2px solid var(--color-border);
 	display: flex;
 	line-height: 1.7rem;
 	padding: 0.2rem 0 0.2rem 0.5rem;
@@ -215,7 +215,7 @@ $green10: #78c696;
 .color--pending { @include color-guide($color--pending, '#A1A1A1', '$color--pending'); .button--copy { color: $color-black !important;}}
 
 //UI THEME
-// .color--ui-blue     { @include color-guide($color-blue, "#3F70C9", "$blue"); }
+// .color--ui-blue     { @include color-guide(var(--color-accent), "#3F70C9", "$blue"); }
 // .color--ui-green    { @include color-guide($color-green, "#09AA66", "$green");}
 // .color--ui-orange   { @include color-guide($color-orange, "#FFA11F", "$orange");}
 // .color--ui-red      { @include color-guide($color-red, "#DA3D30", "$red");}
@@ -518,7 +518,7 @@ Code tab color sass
 	&.color-purple { background-color: $color-purple;
 		color: $color-white; }
 
-	&.color-blue { background-color: $color-blue;
+	&.color-blue { background-color: var(--color-accent);
 		color: $color-white; }
 
 	&.color-green { background-color: $color-green;

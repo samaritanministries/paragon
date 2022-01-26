@@ -5,9 +5,9 @@ $expandable-icon-space: 2.5rem;
 $expandable-left-border: 5px;
 
 $flex-table--border-width: 1px !default;
-$flex-table--border-color: $color-border !default;
-$flex-table--header-color: $color-purple;
-$flex-table--header-text: $color-white;
+$flex-table--border-color: var(--color-border) !default;
+$flex-table--header-color: var(--color-primary);
+$flex-table--header-text: var(--color-text);
 
 .flex-table {
 	@extend .card;
@@ -77,7 +77,7 @@ $flex-table--header-text: $color-white;
 			@extend %remove-list-style;
 			align-items: center;
 			border-bottom: $flex-table--border-width solid $flex-table--border-color;
-			color: $color-text;
+			color: var(--color-text);
 			cursor: pointer;
 			display: flex;
 			font-weight: $font-weight-normal;
@@ -87,7 +87,7 @@ $flex-table--header-text: $color-white;
 			text-decoration: none;
 			transition: background-color 0.2s ease-in-out;
 
-			&:hover { background-color: $color-hover;
+			&:hover { background-color: var(--color-hover);
 				opacity: 1; }
 
 			&:last-of-type {
@@ -121,7 +121,7 @@ $flex-table--header-text: $color-white;
 			padding-right: $expandable-icon-space;
 			position: relative;
 			transition: background-color 0.2s ease-in-out;
-			&:hover { background-color: $color-hover; }
+			&:hover { background-color: var(--color-hover); }
 
 			li:first-of-type {
 				padding: 0;
@@ -144,7 +144,7 @@ $flex-table--header-text: $color-white;
 
 			&.expanded {
 				border-bottom: 0;
-				border-left: 5px solid $color-data-teal;
+				border-left: 5px solid var(--color-data-teal);
 
 				+ .table-row--content {
 					border-bottom: $flex-table--border-width solid $flex-table--border-color;
@@ -176,7 +176,7 @@ $flex-table--header-text: $color-white;
 		//Custom table row content
 		.table-row--content {
 
-			background-color: $color-white;
+			background-color: var(--color-container-background);
 			bottom: 0;
 			left: 100%;
 			overflow: auto;
@@ -198,7 +198,7 @@ $flex-table--header-text: $color-white;
 			}
 
 			@media #{$tablet} {
-				border-left: 5px solid $color-data-teal;
+				border-left: 5px solid var(--color-data-teal);
 				height: 0;
 				overflow: hidden;
 				padding: 0;
@@ -261,16 +261,16 @@ $flex-table--header-text: $color-white;
 
 /* Default Table Styles
   =========================================================================== */
-$table--header-row: $color-white !default;
-$table--odd-row: $color-hover !default;
-$table--even-row: $color-white !default;
-$table--dividers: $color-border !default;
-$table--border: $color-gray-3-dark !default;
+$table--header-row: var(--color-primary) !default;
+$table--odd-row: var(--color-hover) !default;
+$table--even-row: var(--color-container-background) !default;
+$table--dividers: var(--color-border) !default;
+$table--border: var(--color-gray-3-dark) !default;
 
 .table--container,
 .card-table {
 	.table {
-		background-color: $color-white;
+		background-color: var(--color-white);
 		font-size: $font-size-small;
 		margin: 0;
 		max-width: 100%;
@@ -285,7 +285,7 @@ $table--border: $color-gray-3-dark !default;
 		}
 
 		td { vertical-align: middle; }
-		th { border-bottom: 2px solid $color-border; }
+		th { border-bottom: 2px solid var(--color-border); }
 	}
 }
 
@@ -315,17 +315,17 @@ $table--border: $color-gray-3-dark !default;
 	}
 	thead tr:nth-child(odd) { background-color: $table--header-row; }
 
-	//Adds specific hover styles for colored rows
-	&.has-hover {
-		tr:nth-child(odd):hover { td { background-color: darken($table--odd-row, 7%); }}
-		tr:nth-child(even):hover { td { background-color: darken($table--even-row, 7%); }}
-	}
+	//Adds specific hover styles for colored rows TODO: hover odd row
+	// &.has-hover {
+	// 	tr:nth-child(odd):hover { td { background-color: darken($table--odd-row, 7%); }}
+	// 	tr:nth-child(even):hover { td { background-color: darken($table--even-row, 7%); }}
+	// }
 }
 
 //Add hover table rows
 .table.has-hover {
 	td { @include transition(all 0.15s ease-in-out); }
-	tr:hover { td { background-color: $color-hover; } }
+	tr:hover { td { background-color: var(--color-hover); } }
 
 	tr.disabled {
 		&:hover {

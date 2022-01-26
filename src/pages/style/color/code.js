@@ -53,7 +53,7 @@ class ColorCode extends React.Component {
       <div className="mb-space-m">
         <h3 className="mb-space-xs">Semantic</h3>
         <div className="color-group">
-          <div className="color-square color-blue">$color-blue</div>
+          <div className="color-square color-blue">var(--color-accent)</div>
           <div className="color-square color-green">$color-green</div>
           <div className="color-square color-orange">$color-orange</div>
           <div className="color-square color-red">$color-red</div>

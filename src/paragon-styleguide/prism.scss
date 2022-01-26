@@ -21,19 +21,19 @@ $code-toggle: #313538;
 $tablet: 'all and (min-width: 40em)' !default;
 
 .example-body {
-	background-color: $color-white;
+	background-color: var(--color-container-background);
 	font-size: 18px;
 	margin: auto;
 }
 
 .example-container {
-	background-color: $color-white;
-	border: 2px solid $color-border;
+	background-color: var(--color-container-background);
+	border: 2px solid var(--color-border);
 	border-bottom: 0;
 	border-radius: 8px 8px 0 0;
 
 	.grid & {
-		background-color: $color-background;
+		background-color: var(--color-container-background);
 		border-color: transparent !important;
 		border-radius: 8px; //temp
 		padding: $space-l;
@@ -41,9 +41,9 @@ $tablet: 'all and (min-width: 40em)' !default;
 }
 
 .example-text {
-	background-color: $color-gray-3;
+	background-color: var(--color-background);
 	border-radius: 5px;
-	color: $color-text;
+	color: var(--color-text);
 	font-size: 0.9rem;
 	padding: 0.1rem 0.3rem;
 }
@@ -58,8 +58,8 @@ $tablet: 'all and (min-width: 40em)' !default;
 }
 
 .example-tip {
-	background-color: $color-background;
-	border: 2px solid $color-border;
+	background-color: var(--color-background);
+	border: 2px solid var(--color-border);
 	border-radius: 5px;
 	margin-bottom: 1rem;
 	padding: 0.5rem;
@@ -79,7 +79,7 @@ $tablet: 'all and (min-width: 40em)' !default;
 	text-align: center;
 
 	h1 {
-		color: $color-white;
+		color: var(--color-white);
 		font-weight: $font-weight-semibold;
 		margin: 0;
 	}
@@ -93,7 +93,7 @@ $tablet: 'all and (min-width: 40em)' !default;
 code[class*='language-'],
 pre[class*='language-'] {
 	border-radius: 5px;
-	color: $color-white;
+	color: var(--color-white);
 	display: none;
 	font-family: monaco, 'Inconsolata', sans-serif;
 	font-size: 0.8rem;
@@ -146,7 +146,7 @@ pre.language-scss {
 // }
 
 pre.language-html::before {
-	background-color: $color-gray-2;
+	background-color: var(--color-background);
 	content: 'html';
 }
 
@@ -156,12 +156,12 @@ pre.language-scss::before {
 }
 
 pre.language-jsx::before {
-	background-color: $color-orange;
+	background-color: var(--color-warning);
 	content: 'jsx';
 }
 
 pre.language-css::before {
-	background-color: $color-orange;
+	background-color: var(--color-warning);
 	content: 'css';
 }
 
@@ -303,7 +303,7 @@ pre.line-numbers > code {
 
 //code toggle
 .code-toggle {
-	background-color: $color-gray-3;
+	background-color: var(--button-gray-bg);
 	border-radius: 0 0 5px 5px;
 	cursor: pointer;
 	display: block;
@@ -329,7 +329,7 @@ pre.line-numbers > code {
 
 	&:hover {
 		background-color: $code-toggle;
-		&::after { color: $color-white; }
+		&::after { color: var(--color-white); }
 
 		.icon--code {
 			background-image: url('../img/icon--code.svg');
@@ -337,7 +337,7 @@ pre.line-numbers > code {
 	}
 
 	&::after {
-		color: $color-text;
+		color: var(--color-text);
 		content: 'SHOW CODE';
 		font-weight: $font-weight-semibold;
 	}
@@ -348,7 +348,7 @@ pre.line-numbers > code {
 		.icon--code { background-image: url('../img/icon--code.svg'); }
 
 		&::after {
-			color: $color-white;
+			color: var(--color-white);
 			content: 'HIDE CODE';
 			font-weight: $font-weight-semibold;
 		}

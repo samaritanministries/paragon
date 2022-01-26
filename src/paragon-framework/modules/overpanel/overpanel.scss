@@ -9,7 +9,7 @@
 }
 
 .overpanel {
-	background-color: $color-background;
+	background-color: var(--color-background);
 	bottom: 0;
 	left: 0;
 	-webkit-overflow-scrolling: touch;
@@ -21,8 +21,8 @@
 
 	.title-bar {
 		@include position(sticky);
-		background-color: $color-white;
-		box-shadow: $header-shadow;
+		background-color: var(--color-container-background);
+		box-shadow: var(--header-shadow);
 		top: 0;
 		z-index: $zindex-header;
 

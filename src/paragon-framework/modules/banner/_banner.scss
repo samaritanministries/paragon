@@ -7,18 +7,18 @@ $global-banner-height_phone: 4rem;
 @mixin shared-banner {
 	&.has-success,
 	&.has-error {
-		p { color: $color-white; }
-		.dashing-icon::before { color: $color-white;}
+		p { color: var(--color-text); }
+		.dashing-icon::before { color: var(--color-text);}
 	}
 
 	&.has-warning {
-		p { color: $color-black; }
-		.dashing-icon::before { color: $color-black;}
+		p { color: var(--color-black); }
+		.dashing-icon::before { color: var(--color-black);}
 	}
 
-	&.has-success { background-color: $color-green; }
-	&.has-warning { background-color: $color-orange; }
-	&.has-error { background-color: $color-red; }
+	&.has-success { background-color: var(--color-success); }
+	&.has-warning { background-color: var(--color-warning); }
+	&.has-error { background-color: var(--color-error); }
 
 	.dashing-icon {
 		margin-right: $space-xs;
@@ -50,7 +50,7 @@ $global-banner-height_phone: 4rem;
 /* Banner Styles
   =========================================================================== */
 .page-banner {
-	background-color: $color-gray-3;
+	background-color: var(--color-container-background);
 	left: 0;
 	padding: 2rem 1rem;
 	position: absolute;
@@ -59,7 +59,7 @@ $global-banner-height_phone: 4rem;
 	width: 100%;
 
 	h4 {
-		color: $color-subtext;
+		color: var(--color-subtext);
 		margin-top: 0.5rem;
 	}
 
@@ -75,7 +75,7 @@ $global-banner-height_phone: 4rem;
 .card-banner {
 	@include shared-banner;
 	align-items: baseline;
-	background-color: $color-gray-3;
+	background-color: var(--color-container-background);
 	display: flex;
 	margin: 0 -#{$grid-gutter};
 	padding: $grid-gutter;

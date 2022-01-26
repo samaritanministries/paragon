@@ -26,38 +26,38 @@
 	overflow: auto;
 	padding: 0;
 
-	.button--radio { @include button-group($color-blue, $color-white);} //default button-group style
-	&.button--blue { .button--radio { @include button-group($color-blue, $color-white); } }
-	&.button--green { .button--radio { @include button-group($color-green, $color-white); } }
-	&.button--orange { .button--radio { @include button-group($color-orange, $color-black); } }
-	&.button--purple { .button--radio { @include button-group($color-purple, $color-white); } }
-	&.button--red { .button--radio { @include button-group($color-red, $color-white); } }
+	.button--radio { @include button-group(var(--color-accent), var(--color-text-invert));} //default button-group style
+	&.button--blue { .button--radio { @include button-group(var(--color-accent), var(--color-text-invert)); } }
+	&.button--green { .button--radio { @include button-group(var(--color-success), var(--color-text-invert)); } }
+	&.button--orange { .button--radio { @include button-group(var(--color-warning), var(--color-black)); } }
+	&.button--purple { .button--radio { @include button-group(var(--color-primary), var(--color-text-invert)); } }
+	&.button--red { .button--radio { @include button-group(var(--color-error), var(--color-text-invert)); } }
 
 	&.button--gray,
 	&.button--grey {
-		.button--radio { @include button-group($color-gray-4, $color-white); }
-		.button { border-color: $color-gray-3 !important; }
+		.button--radio { @include button-group(var(--button-gray-bg), var(--color-white)); }
+		.button { border-color: var(--button-border) !important; }
 	}
 
 	//Border Button Groups
 	&.button--border {
-		.button--radio { @include button-group--border($color-blue, $color-white);} //default button-group--border style
-		&.button--blue { .button--radio { @include button-group--border($color-blue, $color-white); } }
-		&.button--green { .button--radio { @include button-group--border($color-green, $color-white); } }
-		&.button--orange { .button--radio { @include button-group--border($color-orange, $color-black); } }
-		&.button--purple { .button--radio { @include button-group--border($color-purple, $color-white); } }
-		&.button--red { .button--radio { @include button-group--border($color-red, $color-white); } }
+		.button--radio { @include button-group--border(var(--color-accent), var(--color-text-invert));} //default button-group--border style
+		&.button--blue { .button--radio { @include button-group--border(var(--color-accent), var(--color-text-invert)); } }
+		&.button--green { .button--radio { @include button-group--border(var(--color-success), var(--color-text-invert)); } }
+		&.button--orange { .button--radio { @include button-group--border(var(--color-warning), var(--color-black)); } }
+		&.button--purple { .button--radio { @include button-group--border(var(--color-primary), var(--color-text-invert)); } }
+		&.button--red { .button--radio { @include button-group--border($color-red, var(--color-text-invert)); } }
 
 		&.button--gray,
 		&.button--grey {
-			.button--radio { @include button-group--border($color-gray-3, $color-gray-4); }
-			.button { border-color: $color-gray-3 !important; }
+			.button--radio { @include button-group--border(var(--button-gray-bg), var(--button-gray-bg-hover)); }
+			.button { border-color: var(--color-border) !important; }
 		}
 
 		.button {
 			background-color: transparent;
-			border: 1px solid $color-border;
-			color: $color-subtext;
+			border: 1px solid var(--color-border);
+			color: var(--color-subtext);
 			display: inline-block;
 		}
 	}

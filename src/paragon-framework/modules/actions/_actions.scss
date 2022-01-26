@@ -3,7 +3,7 @@
 
 $buttons: ".button, button, input[type='submit'], input[type='reset']";
 $button-disabled: '&[disabled], &.disabled, &.button--disabled';
-$action--focus: $color-focus !default;
+$action--focus: var(--color-focus) !default;
 
 /* Actions Extendables
   =========================================================================== */
@@ -32,7 +32,7 @@ $action--focus: $color-focus !default;
 #{$buttons} {
 	@extend %action;
 	@extend %button--smooth;
-	@include button($button-primary-bg, $button-primary-hover, $button-primary-text);
+	@include button(var(--button-primary-bg), var(--button-primary-hover), var(--button-primary-text));
 
 	-webkit-font-smoothing: auto;
 	font-weight: $font-weight-normal;
@@ -85,42 +85,43 @@ $action--focus: $color-focus !default;
 	}
 
 	//Button Color Options
-	&.button--blue { @include button($color-blue, $color-blue-dark, $color-white); }
-	&.button--green { @include button($color-green, $color-green-dark, $color-white); }
-	&.button--orange { @include button($color-orange, $color-orange-dark, $color-black); }
-	&.button--purple { @include button($color-purple, $color-purple-dark, $color-white); }
-	&.button--red { @include button($color-red, $color-red-dark, $color-white); }
-	&.button--white { @include button($color-white, $color-hover, $color-black); }
-	&.button--black { @include button($color-black, $color-black, $color-white); }
+	&.button--blue { @include button(var(--color-accent), var(--color-accent-dark), var(--color-text-invert)); }
+	&.button--green { @include button(var(--color-success), var(--color-success-dark), var(--color-text-invert)); }
+	&.button--orange { @include button(var(--color-warning), var(--color-warning-dark), var(--color-black)); }
+	&.button--purple { @include button(var(--color-primary), var(--color-primary-dark), var(--color-text-invert)); }
+	&.button--red { @include button(var(--color-error), var(--color-error-dark), var(--color-text-invert)); }
+	//TODO: What to do with white and black buttons? Swap with color mode?
+	&.button--white { @include button(var(--color-white), var(--color-gray-1), var(--color-black)); }
+	// &.button--black { @include button($color-black, $color-black, $color-white); }
 
 	&.button--gray,
 	&.button--grey,
-	&.button--secondary { @include button($button-gray-bg, $button-gray-hover, $button-gray-text); }
+	&.button--secondary { @include button(var(button-gray-bg), var(button-gray-hover), var(button-gray-text)); }
 
 	//Used to display actions and icons with a transparent background
 	//transparentize(white, 1) used instead of transparent because "darken" requires an rgb color value
 	&.button--transparent {
-		@include transparent--button($color-blue);
+		@include transparent--button(var(--color-accent));
 
 		&:not(.button--icon) { //Retains button--icon padding
 			padding-left: 0.5rem;
 			padding-right: 0.5rem;
 		}
-		&.button--blue { @include transparent--button($color-blue); }
+		&.button--blue { @include transparent--button(var(--color-accent)); }
 
 		&.button--gray,
 		&.button--grey,
-		&.button--secondary { @include transparent--button($button-gray-text); }
+		&.button--secondary { @include transparent--button(var(--button-gray-text)); }
 
-		&.button--green { @include transparent--button($color-green);
+		&.button--green { @include transparent--button(var(--color-success));
 		}
-		&.button--red { @include transparent--button($color-red); }
-		&.button--orange { @include transparent--button($color-orange); }
-		&.button--purple { @include transparent--button($color-purple); }
+		&.button--red { @include transparent--button(var(--color-error)); }
+		&.button--orange { @include transparent--button(var(--color-warning)); }
+		&.button--purple { @include transparent--button(var(--color-primary)); }
 
 		&.button--white {
-			@include transparent--button($color-white);
-
+			@include transparent--button(var(--color-white));
+			//TODO: What color is this?
 			&:hover,
 			&:focus { background-color: rgba(0, 0, 0, 0.4) !important; } //custom hover override to better display on dark header color
 			&:active { background-color: rgba(0, 0, 0, 0.6) !important; } //custom hover override to better display on dark header color
@@ -128,7 +129,7 @@ $action--focus: $color-focus !default;
 	}
 
 	&.button--border {
-		@include border--button($button-primary-bg, $button-primary-hover);
+		@include border--button(var(--button-primary-bg), var(button-primary-hover));
 		border: 2px solid;
 		@media #{$tablet} {
 			padding-bottom: calc(0.5rem - 2px);
@@ -136,36 +137,37 @@ $action--focus: $color-focus !default;
 			padding-right: calc(1rem - 2px);
 			padding-top: calc(0.45rem - 2px);
 		}
-		&.button--blue { @include border--button($color-blue, $color-blue-dark); }
-		&.button--green { @include border--button($color-green, $color-green-dark); }
-		&.button--red { @include border--button($color-red, $color-red-dark); }
-		&.button--orange { @include border--button($color-orange, $color-orange-dark); }
-		&.button--purple { @include border--button($color-purple, $color-purple-dark); }
+		&.button--blue { @include border--button(var(--color-accent), var(--color-accent-dark)); }
+		&.button--green { @include border--button(var(--color-success), var(--color-success-dark)); }
+		&.button--red { @include border--button(var(--color-error), var(--color-error-dark)); }
+		&.button--orange { @include border--button(var(--color-warning), var(--color-warning-dark)); }
+		&.button--purple { @include border--button(var(--color-primary), var(--color-primary-dark)); }
 
 		&.button--gray {
-			@include border--button($button-gray-hover, $button-gray-hover);
-			color: $button-gray-text;
+			@include border--button(var(--button-gray-hover), var(--button-gray-hover));
+			color: var(button-gray-text);
 
 			&:hover,
 			&:focus {
-				color: $color-black !important;
+				//TODO: check this
+				color: var(--color-text) !important;
 
 				.dashing-icon::before {
-					color: $color-black !important;
+					color: var(--color-text) !important;
 					transition: all 50ms ease-in-out;
 				}
 			}
 		}
 
 		&.button--white {
-			@include border--button($color-white, $color-hover);
+			@include border--button(var(--color-white), var(--color-hover));
 
 			&:hover,
 			&:focus {
-				color: $color-black !important;
+				color: var(--color-black) !important;
 
 				.dashing-icon::before {
-					color: $color-black !important;
+					color: var(--color-black) !important;
 					transition: all 50ms ease-in-out;
 				}
 			}
@@ -222,7 +224,7 @@ $action--focus: $color-focus !default;
 	}
 
 	&.button--transparent { //makes default transparent button icon gray, rather than blue
-		@include transparent--button($color-icon-primary);
+		@include transparent--button(var(--color-icon-primary));
 	}
 }
 

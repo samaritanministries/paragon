@@ -1,4 +1,4 @@
-$spinner-color: $color-black !default;
+$spinner-color: var(--color-black) !default;
 
 $spinner-default: 90px; //5rem
 $spinner-small: 32px; //2rem
@@ -50,8 +50,8 @@ $spinner-button: 24px; //1.2rem;
 
 	&::after {
 		@extend .dash-spinner;
-		border-color: rgba($color-white, 0.15);
-		border-top-color: rgba($color-white, 1);
+		border-color: rgba(var(--color-white), 0.15);
+		border-top-color: rgba(var(--color-white), 1);
 		border-width: 3px;
 		content: '';
 		height: $spinner-button;

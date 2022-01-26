@@ -1,12 +1,13 @@
 /* Card Styles
   =========================================================================== */
+@use '/node_modules/@smi/design-tokens/dist/scss/tokens.scss' as token;
 
 //TODO remove .card--header, .card--content, .card--footer with major release
 
 .card,
 %card {
 	@extend %card-shadow;
-	background-color: $color-white;
+	background-color: var(--color-container-background);
 	border-radius: 5px;
 	margin: 1.5rem auto;
 
@@ -28,7 +29,7 @@
 		padding-bottom: 0;
 
 		&.has-border {
-			border-bottom: 2px solid $color-border;
+			border-bottom: 2px solid var(--color-border);
 			padding-bottom: $grid-gutter;
 
 			+.card--content .card-banner,
@@ -61,7 +62,7 @@
 		padding: 0 $grid-gutter $grid-gutter $grid-gutter;
 
 		&.has-border {
-			border-top: 2px solid $color-border;
+			border-top: 2px solid var(--color-border);
 			padding-top: $grid-gutter;
 		}
 	}
@@ -91,7 +92,7 @@
 	}
 
 	&.card--dashed {
-		border: 2px dashed $color-border;
+		border: 2px dashed var(--color-border);
 		box-shadow: none;
 	}
 
@@ -115,7 +116,7 @@
 				cursor: pointer;
 
 				&:hover {
-					background-color: $color-hover;
+					background-color: var(--color-hover);
 				}
 
 				a {
@@ -128,7 +129,7 @@
 
 		&.has-border {
 			li {
-				border-bottom: 1px solid $color-border;
+				border-bottom: 1px solid var(--color-border);
 				&:last-of-type { border: 0; }
 			}
 		}
@@ -144,8 +145,8 @@
 			margin-top: $grid-gutter !important;
 
 			th {
-				background-color: $color-background;
-				border-top: 2px solid $color-border;
+				background-color: var(--color-container-background);
+				border-top: 2px solid var(--color-border);
 				padding: $space-xs $space-m !important;
 			}
 
@@ -163,7 +164,7 @@
 					transition: $global-transition;
 
 					&:hover {
-						background-color: $color-hover;
+						background-color: var(--color-hover);
 						cursor: pointer;
 					}
 				}
@@ -174,15 +175,16 @@
 
 .card-info {
 	@extend %card;
-	background-color: lighten($color-blue, 55%);
-	border-left: 6px solid $color-blue;
+	// background-color: lighten(var(--color-accent), 55%);
+	background-color: lighten(token.$color-semantic-blue, 55%);
+	border-left: 6px solid var(--color-accent);
 	min-width: 100%;
 	overflow: hidden;
 
-	.dashing-icon::before { color: $color-blue; }
+	.dashing-icon::before { color: var(--color-accent); }
 
 	.card-info--title {
-		color: $color-blue;
+		color: var(--color-accent);
 		margin: 0;
 	}
 
@@ -203,26 +205,29 @@
 			button { white-space: nowrap; }
 		}
 	}
-
+	//TODO: lighten here...
 	&.has-warning {
-		background-color: lighten($color-orange, 40%);
-		border-left-color: $color-orange;
-		.card-info--title { color: $color-orange; }
-		.dashing-icon::before { color: $color-orange; }
+		// background-color: lighten(var(--color-warning), 40%);
+		background-color: lighten(token.$color-semantic-orange, 40%);
+		border-left-color: var(--color-warning);
+		.card-info--title { color: var(--color-warning); }
+		.dashing-icon::before { color: var(--color-warning); }
 	}
 
 	&.has-error {
-		background-color: lighten($color-red, 45%);
-		border-left-color: $color-red;
-		.card-info--title { color: $color-red; }
-		.dashing-icon::before { color: $color-red; }
+		// background-color: lighten($color-red, 45%);
+		background-color: lighten(token.$color-semantic-red, 45%);
+		border-left-color: var(--color-error);
+		.card-info--title { color: var(--color-error); }
+		.dashing-icon::before { color: var(--color-error); }
 	}
 
 	&.has-success {
-		background-color: lighten($color-green, 70%);
-		border-left-color: $color-green;
-		.card-info--title { color: $color-green; }
-		.dashing-icon::before { color: $color-green; }
+		// background-color: lighten(var(--color-success), 70%);
+		background-color: lighten(token.$color-semantic-green, 70%);
+		border-left-color: var(--color-success);
+		.card-info--title { color: var(--color-success); }
+		.dashing-icon::before { color: var(--color-success); }
 	}
 }
 

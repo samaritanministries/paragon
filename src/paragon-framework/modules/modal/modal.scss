@@ -14,7 +14,7 @@
 
 .dash-overlay,
 .modal-overlay {
-	background-color: rgba($color-black, 0.8);
+	background-color: rgba(var(--color-black), 0.8);
 	bottom: 0;
 	left: 0;
 	-webkit-overflow-scrolling: touch;
@@ -34,7 +34,7 @@
 .modal {
 
 	animation: openModal 0.3s ease-out;
-	background-color: $color-white;
+	background-color: var(--color-background);
 	border-radius: 15px;
 	cursor: default;
 	margin: 1.5rem auto;
@@ -58,7 +58,7 @@
 
 		hr {
 			border: 0;
-			border-bottom: 2px solid $color-border;
+			border-bottom: 2px solid var(--color-border);
 			margin: $grid-gutter (-$grid-gutter);
 		}
 	}
@@ -75,7 +75,7 @@
 	}
 
 	.modal-header {
-		border-bottom: 2px solid $color-border;
+		border-bottom: 2px solid var(--color-border);
 		text-align: center;
 	}
 
@@ -106,6 +106,6 @@
 		// p:last-of-type { margin-bottom: 0; }
 	}
 
-	.modal-footer { background-color: $color-background; }
-	.dashing-icon--close::before { color: $color-gray-4 !important; }
+	.modal-footer { background-color: var(--color-background); }
+	.dashing-icon--close::before { color: var(--color-icon-primary) !important; }
 }

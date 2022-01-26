@@ -40,8 +40,8 @@
 }
 
 body {
-	background-color: $color-background;
-	color: $color-text;
+	background-color: var(--color-background);
+	color: var(--color-text);
 	font-family: $font-family-body;
 	font-size: $font-size-normal;
 }
@@ -52,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: $color-text;
+	color: var(--color-text);
 	font-family: $font-family-header;
 	font-weight: $font-weight-semibold;
 	margin: 0;
@@ -76,7 +76,7 @@ small,
 .font-size--xsmall { font-size: $font-size-xsmall; }
 
 a {
-	color: $color-link;
+	color: var(--color-link);
 	cursor: pointer;
 	font-weight: $font-weight-semibold;
 	text-decoration: underline;
@@ -101,7 +101,7 @@ a {
 
 p,
 li.text-list_item {
-	color: $color-black;
+	color: var(--color-text);
 	font-size: $font-size-normal;
 	line-height: $space-l;
 	margin: 0;

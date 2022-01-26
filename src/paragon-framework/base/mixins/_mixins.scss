@@ -82,7 +82,9 @@
 
 //Border Button
 @mixin border--button($border-color, $background-color-dark) {
-	background-color: transparentize($color-white, 1);
+	//TODO: fix white
+	/* stylelint-disable-next-line */
+	background-color: transparentize(white, 1);
 	border-color: $border-color;
 	color: $border-color;
 	.dashing-icon::before { color: $border-color; }
@@ -91,11 +93,12 @@
 	&:focus,
 	&:active {
 		background-color: $background-color-dark;
-		border-color: transparentize($color-white, 1);
-		color: $color-white;
+		/* stylelint-disable-next-line */
+		border-color: transparentize(white, 1);
+		color: var(--color-white);
 
 		.dashing-icon::before {
-			color: $color-white;
+			color: var(--color-white);
 			transition: all 50ms ease-in-out;
 		}
 	}
@@ -103,12 +106,14 @@
 
 //Transparent Button
 @mixin transparent--button($color) {
-	background-color: transparentize($color-white, 1);
+	//TODO: fix white
+	/* stylelint-disable-next-line */
+	background-color: transparentize(white, 1);
 	color: $color;
 
 	&:hover,
 	&:focus,
-	&:active { background-color: $color-hover; }
+	&:active { background-color: var(--color-hover); }
 	.dashing-icon::before { color: $color; }
 }
 
@@ -122,21 +127,23 @@
 
 	&.is-selectable:hover,
 	&.is-selectable:focus {
-		border-color: darken($tag-color, 20%);
-		color: lighten($color, 10%);
+		//TODO: lighten and darken
+		// border-color: darken($tag-color, 20%);
+		// color: lighten($color, 10%);
 	}
 }
 
 //Action Tag
 @mixin tag--action($color) {
-	background-color: $color-gray-3;
-	border-color: $color-gray-3;
+	background-color: var(--button-gray-bg);
+	border-color: var(--button-gray-bg);
 	color: $color;
 
 	&.is-selectable:hover,
 	&.is-selectable:focus {
 		border-color: $color;
-		color: lighten($color, 10%);
+		// TODO Lighten
+		// color: lighten($color, 10%);
 	}
 }
 
@@ -153,10 +160,10 @@
 /* Dropdown Menu Mixin
   =========================================================================== */
 @mixin dropdown-menu {
-	background-color: $color-white;
+	background-color: var(--color-container-background);
 	border-radius: 3px;
 	box-shadow: (0 4px 8px rgba(0, 0, 0, 0.3));
-	color: $color-black;
+	color: var(--color-text);
 	font-size: 1rem;
 	font-weight: $font-weight-normal;
 
@@ -172,7 +179,7 @@
 		cursor: pointer;
 
 		a {
-			color: $color-text !important;
+			color: var(--color-text) !important;
 			display: block;
 			font-weight: $font-weight-normal !important;
 			padding: 0.5rem 1rem;
@@ -181,7 +188,7 @@
 		}
 
 		&:hover {
-			background-color: $color-hover;
+			background-color: var(--color-hover);
 		}
 
 		&:first-of-type {

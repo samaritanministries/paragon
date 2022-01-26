@@ -13,7 +13,7 @@
 .footer {
 	align-items: center;
 
-	border-top: 2px solid $color-border;
+	border-top: 2px solid var(--color-border);
 	margin: auto;
 	max-width: $global-content-width;
 	padding: $space-m $space-m 0 $space-m;

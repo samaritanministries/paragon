@@ -13,15 +13,15 @@ $footer-height: 6rem;
 $footer-height_phone: 6rem;
 
 //Theme
-$header-color: $color-white !default;
-$header-text-color: $color-purple !default;
+$header-color: var(--color-container-background) !default;
+$header-text-color: var(--color-primary) !default;
 $header-underline-width: 4px;
-$header-underline-color: $color-data-teal !default;
+$header-underline-color: var(--color-data-teal) !default;
 
-$sub-nav-color: $color-white !default;
-$sub-nav-text-color: $color-purple !default;
+$sub-nav-color: var(--color-container-background) !default;
+$sub-nav-text-color: var(--color-primary) !default;
 $sub-nav-underline-width: 4px;
-$sub-nav-underline-color: $color-data-teal !default;
+$sub-nav-underline-color: var(--color-data-teal) !default;
 
 $header-shadow: 0 1px 5px rgba(0, 0, 0, 0.5) !default;
 
@@ -57,7 +57,7 @@ body.has-footer {
 
 	&::after {
 		background: $header-color;
-		border-bottom: $nav-separator-width solid $color-border;
+		border-bottom: $nav-separator-width solid var(--color-border);
 		content: '';
 		height: calc(#{$header-height} + #{$nav-separator-width});
 		left: 0;
@@ -89,7 +89,7 @@ body.has-footer {
 
 					&::after {
 						@include transition(all 0.2s ease-out);
-						background-color: $color-data-teal;
+						background-color: var(--color-data-teal);
 						border-radius: 10px;
 						bottom: calc(-#{$header-underline-width} - 2px);
 						content: '';
@@ -236,7 +236,7 @@ body.has-footer {
 
 	.sub-nav--title {
 		align-items: center;
-		color: $color-purple;
+		color: var(--color-primary);
 		display: flex;
 		font-size: $font-size-medium;
 		font-weight: $font-weight-semibold;
@@ -285,7 +285,7 @@ body.has-footer {
 
 				&::after {
 					@include transition(all 0.2s ease-out);
-					background-color: $color-data-teal;
+					background-color: var(--color-data-teal);
 					border-radius: 10px;
 					bottom: 0;
 					content: '';
@@ -319,7 +319,7 @@ body.has-footer {
 .profile {
 	align-items: center;
 	border-radius: 5px;
-	color: $color-white;
+	color: var(--color-white);
 	cursor: pointer;
 	display: none;
 	justify-content: center;

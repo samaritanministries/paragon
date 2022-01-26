@@ -1,9 +1,9 @@
 $animation-time: 0.3s;
-$sidebar-highlight: $color-hover;
-$sidebar-text-color: $color-purple;
-$sidebar-background: $color-white;
+$sidebar-highlight: var(--color-hover);
+$sidebar-text-color: var(--color-primary);
+$sidebar-background: var(--color-white);
 $sidebar-header-background: $color-gradient;
-$sidebar-header-text-color: $color-white;
+$sidebar-header-text-color: var(--color-white);
 
 .mobile-menu_overlay {
 
@@ -80,7 +80,7 @@ $sidebar-header-text-color: $color-white;
 					width: 100%;
 
 					&.sign-out {
-						color: $color-red;
+						color: var(--color-error);
 					}
 
 					&:hover {
@@ -90,7 +90,7 @@ $sidebar-header-text-color: $color-white;
 
 					&.active {
 						background-color: $sidebar-highlight;
-						border-left: 4px solid $color-data-teal;
+						border-left: 4px solid var(--color-data-teal);
 					}
 				}
 			}

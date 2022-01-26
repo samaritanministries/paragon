@@ -43,7 +43,7 @@ $container-colors: transparent;//#413552
 	width: auto;
 
 	.profile-image {
-		background-color: $color-background;
+		background-color: var(--color-container-background);
 		border-radius: 50%;
 		height: 2rem;
 		margin-right: $space-xs;

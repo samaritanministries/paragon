@@ -1,11 +1,11 @@
-$color-input-border: $color-border;
-$color-input-border-focus: $color-blue;
-$color-input-disabled: $color-gray-2;
+$color-input-border: var(--color-border);
+$color-input-border-focus: var(--color-accent);
+$color-input-disabled: var(--card-disabled-bg);
 
-$color-input-border-error: $color-red-light;
-$color-input-text-error: $color-red;
-$color-input-border-warning: $color-orange-light;
-$color-input-text-warning: $color-orange;
+$color-input-border-error: var(--color-error-light);
+$color-input-text-error: var(--color-error);
+$color-input-border-warning: var(--color-warning-light);
+$color-input-text-warning: var(--color-warning);
 
 $inputs: 'select, textarea,input[type="date"],input[type="time"],input[type="email"],input[type="month"],input[type="number"],input[type="password"],input[type="tel"],input[type="text"]';
 
@@ -34,8 +34,8 @@ fieldset {
 	#{$inputs} {
 		-webkit-appearance: none;
 		-moz-appearance: none;
-		background-color: $color-white;
-		border: 2px solid $color-input-border;
+		background-color: var(--form-element-bg);
+		border: 2px solid var(--form-element-border);
 		border-radius: 5px;
 		font-size: $font-size-normal;
 		margin-bottom: $space-m;
@@ -44,7 +44,7 @@ fieldset {
 		width: 100%;
 
 		&:focus {
-			border-color: $color-input-border-focus;
+			border-color: var(--form-element-border-focus);
 			outline-color: transparent;
 			outline-style: none;
 		}
@@ -116,11 +116,11 @@ fieldset {
 			margin: 0;
 
 			&.button--border {
-				@include border--button($color-border, $color-gray-3-dark); //makes button border the same color as the input
-				color: $color-icon-primary;
+				@include border--button(var(--color-border), var(--button-gray-hover)); //makes button border the same color as the input
+				color: var(--color-icon-primary);
 
 				.dashing-icon::before {
-					color: $color-icon-primary;
+					color: var(--color-icon-primary);
 				}
 			}
 		}
@@ -136,7 +136,7 @@ fieldset {
 		}
 
 		&::after {
-			color: $color-icon-primary;
+			color: var(--color-icon-primary);
 			content: '\e800';
 			font-family: 'dashing-icons';
 			font-size: 12px;
@@ -171,7 +171,7 @@ fieldset {
 	//Add class to containing fieldset to display optional text
 	&.is-optional {
 		label::after {
-			color: $color-subtext;
+			color: var(--color-subtext);
 			content: '(Optional)';
 			font-weight: $font-weight-normal;
 			margin-left: $space-xxs;
@@ -184,7 +184,7 @@ fieldset {
 
 fieldset {
 	.message {
-		color: $color-subtext;
+		color: var(--color-subtext);
 		font-size: $font-size-small;
 		list-style: none;
 		margin: 0;

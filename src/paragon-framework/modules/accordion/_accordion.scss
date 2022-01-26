@@ -20,7 +20,7 @@
 		i.accordion-arrow {
 			@extend .dashing-icon--arrow-right;
 			transition: transform 0.1s linear;
-			&::before { color: $color-black; }
+			&::before { color: var(--color-text); }
 		}
 
 		.title,
@@ -36,7 +36,7 @@
 		}
 
 		&:hover {
-			background-color: $color-hover;
+			background-color: var(--color-hover);
 		}
 		@media #{$tablet} {
 			border-radius: 5px;
@@ -46,7 +46,7 @@
 
 	.accordion-content {
 		@extend .card-content;
-		border-top: 2px solid $color-border;
+		border-top: 2px solid var(--color-border);
 		display: none;
 	}
 

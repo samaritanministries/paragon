@@ -87,15 +87,15 @@ $icon-map: (
 
 // Icon color map
 $icon-color-map: (
-	'white': $color-white,
-	'black': $color-black,
-	'blue': $color-blue,
-	'gray': $color-gray-3,
-	'grey': $color-gray-3,
-	'green': $color-green,
-	'orange': $color-orange,
-	'red': $color-red,
-	'purple': $color-purple
+	'white': var(--color-white),
+	'black': var(--color-text),
+	'blue': var(--color-accent),
+	'gray': var(--color-icon-primary),
+	'grey': var(--color-icon-primary),
+	'green': var(--color-success),
+	'orange': var(--color-warning),
+	'red': var(--color-error),
+	'purple': var(--color-primary)
 );
 
 @each $name, $color in $icon-color-map {
@@ -129,7 +129,7 @@ $icon-size-map: (
 	line-height: 0;
 
 	&::before {
-		color: $color-icon-primary;
+		color: var(--color-icon-primary);
 		display: inline-block;
 		font-family: 'dashing-icons';
 		font-size: 1em; // Used em so icon takes the size of the parent

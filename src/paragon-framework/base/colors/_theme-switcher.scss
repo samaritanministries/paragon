@@ -1,97 +1,120 @@
 :root {
 	/* Primary and Accent */
-	// $color-primary: $color-purple !default;
-	// $color-primary-light: $color-purple-light !default;
-	// $color-primary-dark: $color-purple-dark !default;
-
-	--color-primary: $color-purple;
+	--color-primary: var(--color-purple);
 	--color-primary-light: $color-purple-light;
-	--color-primary-dark: $color-purple-light;
+	--color-primary-dark: $color-purple-dark;
 
-	// $color-accent: $color-blue !default;
-	// $color-accent-light: $color-blue-light !default;
-	// $color-accent-dark: $color-blue-dark !default;
-
-	--color-accent: $color-blue;
-	--color-accent-light: $color-blue-light;
-	--color-accent-dark: $color-blue-dark;
+	--color-accent: var(--color-blue);
+	--color-accent-light: $color-semantic-blue-light;
+	--color-accent-dark: $color-semantic-blue-dark;
 
 	/* Semantic */
-	// $color-success: $color-green;
-	// $color-warning: $color-orange;
-	// $color-error: $color-red;
+	--color-success: var(--color-semantic-green);
+	--color-success-dark: $color-semantic-green-dark;
+	--color-success-light: $color-semantic-green-light;
 
-	--color-success: $color-green;
-	--color-warning: $color-orange;
-	--color-error: $color-red;
+	--color-warning: var(--color-semantic-orange);
+	--color-warning-dark: $color-semantic-orange-dark;
+	--color-warning-light: $color-semantic-orange-light;
+
+	--color-error: var(--color-semantic-red);
+	--color-error-dark: $color-semantic-red-dark;
+	--color-error-light: $color-semantic-red-light;
 
 	/* Border */
-	// $color-border: $color-gray-3;
-
-	--color-border: $color-gray-3;
+	--color-border: var(--color-gray-3);
 
 	/* Hover/Selectable */
-	// $color-hover: $color-gray-1;
-
-	--color-hover: $color-gray-1;
+	--color-hover: var(--color-gray-1);
 
 	/* Body Background */
-	// $color-background: $color-gray-2;
-
-	--color-background: $color-gray-2;
+	--color-background: var(--color-gray-2);
 
 	/* Focus */
-	// $color-focus: rgba($color-blue-light, 0.6);
-
-	--color-focus: rgba($color-blue-light, 0.6);
+	--color-focus: rgba(var(--color-blue-light), 0.6);
 
 	/* Typography */
-	// $color-text: $color-black;
-	// $color-subtext: $color-gray-4;
-	// $color-link: $color-accent;
+	--color-text: var(--color-black);
+	--color-subtext: var(--color-gray-4);
+	--color-link: var(--color-semantic-blue);
 
-	--color-text: $color-black;
-	--color-subtext: $color-gray-4;
-	--color-link: $color-accent;
+	--color-text-invert: var(--color-white);
+
+	--color-container-background: var(--color-white);
 
 	/* Forms */
-	// $form-element-border: $color-border;
-	// $form-element-border-focus: $color-accent;
-	// $form-element-border-error: $color-error;
-	// $form-element-bg: $color-white;
-	// $form-text-placeholder: $color-subtext;
-
-	--form-element-border: $color-border;
-	--form-element-border-focus: $color-accent;
-	--form-element-border-error: $color-error;
-	--form-element-bg: $color-white;
-	--form-text-placeholder: $color-subtext;
+	--form-element-border: var(--color-border);
+	--form-element-border-focus: var(--color-accent);
+	--form-element-border-error: var(--color-error);
+	--form-element-bg: var(--color-white);
+	--form-text-placeholder: var(--color-subtext);
 
 	/* Buttons */
-	// $button-primary-bg: $color-primary;
-	// $button-primary-hover: $color-primary-dark;
-	// $button-primary-text: $color-white;
+	--button-primary-bg: var(--color-primary);
+	--button-primary-hover: var(--color-primary-dark);
+	--button-primary-text: var(--color-white);
 
-	--button-primary-bg: $color-primary;
-	--button-primary-hover: $color-primary-dark;
-	--button-primary-text: $color-white;
-
-	// $button-gray-bg: $color-gray-3;
-	// $button-gray-hover: $color-gray-3-dark;
-	// $button-gray-text: $color-black;
-
-	--button-gray-bg: $color-gray-3;
-	--button-gray-hover: $color-gray-3-dark;
-	--button-gray-text: $color-black;
+	--button-gray-bg: var(--color-gray-3);
+	--button-gray-hover: var(--color-gray-3-dark);
+	--button-gray-text: var(--color-black);
 
 	/* Icons */
-	// $color-icon-primary: $color-gray-4;
+	--color-icon-primary: var(--color-gray-4);
 
-	--color-icon-primary: $color-gray-4;
+	/* Card */
+	--card-disabled-bg: var(--color-gray-2);
+	--card-disabled-border: var(--color-gray-2);
+
+	--color-shadow: $color-shadow;
 }
 
-[data-theme='dark'] {
-	--color-primary: $color-data-purple;
-	--color-primary-light: $color-purple-light;
-	--color-primary-dark: $color-purple-light;
+// [data-theme='dark'] {
+body.dark-mode {
+	--color-primary: var(--color-data-purple);
+	--color-primary-light: $color-data-purple-light;
+	--color-primary-dark: $color-data-purple-dark;
+
+	--color-accent: var(--color-dark-semantic-blue);
+	--color-accent-light: $color-dark-semantic-blue-light;
+	--color-accent-dark: $color-dark-semantic-blue-dark;
+
+	--color-success: var(--color-dark-semantic-green);
+	--color-success-dark: $color-dark-semantic-green-dark;
+	--color-success-light: $color-dark-semantic-green-light;
+
+	--color-warning: var(--color-dark-semantic-orange);
+	--color-warning-dark: $color-dark-semantic-orange-dark;
+	--color-warning-light: $color-dark-semantic-orange-light;
+
+	--color-error: var(--color-dark-semantic-red);
+	--color-error-dark: $color-dark-semantic-red-dark;
+	--color-error-light: $color-dark-semantic-red-light;
+
+	--color-border: var(--color-gray-6);
+
+	--color-hover: var(--color-gray-1);
+
+	--color-background: var(--color-black);
+
+	--color-focus: rgba(var(--color-blue-light), 0.6);
+
+	--color-container-background: var(--color-dark-gray-7);
+
+	--color-text: var(--color-gray-1);
+	--color-subtext: var(--color-dark-gray-5);
+	--color-link: var(--color-dark-semantic-blue);
+
+	//TODO: naming?
+	--color-text-invert: var(--color-black);
+
+	--form-element-bg: var(--color-dark-gray-7);
+
+	--button-gray-bg: var(--color-dark-gray-6);
+	--button-gray-hover: $color-dark-gray-6-dark;
+	--button-gray-text: var(--color-text);
+
+	--card-disabled-bg: rgba(var(--color-black), 0.5);
+	--card-disabled-border: rgba(var(--color-black), 0.5);
+
+	--color-shadow: transparent;
 }

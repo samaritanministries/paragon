@@ -1,6 +1,6 @@
 //Default Theme
 $buttonConfig: 'black'     $color-black       $color-black          $color-white,
-	'blue'      $color-blue        $color-blue-dark      $color-white,
+	'blue'      var(--color-accent)        var(--color-accent)-dark      $color-white,
 	'gray'      $button-gray-bg    $button-gray-hover    $button-gray-text,
 	'green'     $color-green       $color-green-dark     $color-white,
 	'orange'    $color-orange      $color-orange-dark    $button-gray-text,
@@ -8,7 +8,7 @@ $buttonConfig: 'black'     $color-black       $color-black          $color-white
 	'purple'    $color-purple      $color-purple-dark    $color-white,
 	'red'       $color-red         $color-red-dark       $color-white,
 	'secondary' $button-gray-bg    $button-gray-hover    $button-gray-text,
-	'white'     $color-white       $color-hover          $button-gray-text;
+	'white'     $color-white       var(--color-hover)          $button-gray-text;
 
 //For each, read the color name.
 //Then use the other items in numbered order to supply the colored variables

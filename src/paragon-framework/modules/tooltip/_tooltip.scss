@@ -1,5 +1,5 @@
-$tooltip-color: $color-gray-4;
-$clippy-color: $color-white;
+$tooltip-color: var(--color-border);
+$clippy-color: var(--color-container-background);
 
 //STATE
 .has-tooltip { @include user-select(none); }
@@ -17,7 +17,7 @@ i.paragon-clippy {
 		border-radius: 50px;
 		margin: -0.6rem -0.4rem !important;
 		padding: 0.6rem;
-		&:hover { background-color: rgba($color-gray-4, 0.1); }
+		&:hover { background-color: rgba(var(--color-container-background), 0.1); }
 	}
 }
 
@@ -62,12 +62,12 @@ label {
 
 	&[data-theme='clippy'] {
 		background-color: $clippy-color;
-		border: 2px solid $color-border;
+		border: 2px solid var(--color-border);
 		border-radius: 5px;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
 
 		.tippy-content {
-			color: $color-text;
+			color: var(--color-text);
 			font-size: 0.9rem;
 			font-weight: $font-weight-normal;
 			line-height: 1.2rem;

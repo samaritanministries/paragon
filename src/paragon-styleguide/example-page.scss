@@ -3,7 +3,7 @@ $example-global-content-width: 800px !default;
 $sidebar-width: 13rem;
 
 //Give example pages gray background
-.app { background-color: $color-background; }
+.app { background-color: var(--color-background); }
 
 .content--example-page {
 	margin-top: $space-m !important;
@@ -21,8 +21,8 @@ $sidebar-width: 13rem;
 }
 
 .example-sidebar {
-	background-color: $color-background;
-	border-right: 2px solid $color-border;
+	background-color: var(--color-background);
+	border-right: 2px solid var(--color-border);
 	bottom: 0;
 	line-height: 2rem;
 	-webkit-overflow-scrolling: touch;
@@ -46,7 +46,7 @@ $sidebar-width: 13rem;
 		padding: 0; }
 
 	.logo {
-		background-color: $color-white;
+		background-color: var(--color-container-background);
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 		height: 81px;
 		margin: 1rem auto;
@@ -56,16 +56,17 @@ $sidebar-width: 13rem;
 	}
 
 	a {
-		color: lighten($color-text, 20%) !important;
+		color: var(--color-accent-light);
+		// color: lighten($color-text, 20%) !important;
 		display: block;
 		padding-left: 0.5rem;
 		text-decoration: none !important;
 	}
 
 	.active {
-		background-color: $color-purple;
+		background-color: var(--color-primary);
 		border-radius: 5px;
-		color: $color-white !important;
+		color: var(--color-text-invert) !important;
 		&:hover { opacity: 1; }
 	}
 
@@ -74,7 +75,7 @@ $sidebar-width: 13rem;
 		position: relative;
 
 		&:last-of-type {
-			border-bottom: 2px solid $color-border;
+			border-bottom: 2px solid var(--color-border);
 		}
 
 		&.expanded {
@@ -88,8 +89,8 @@ $sidebar-width: 13rem;
 
 	.group-title {
 		align-items: center;
-		background-color: $color-white;
-		border-top: 2px solid $color-border;
+		background-color: var(--color-text-invert);
+		border-top: 2px solid var(--color-border);
 		display: flex;
 		font-size: 1.1rem;
 		padding: 0.3rem 1rem;
@@ -102,8 +103,8 @@ $sidebar-width: 13rem;
 	}
 
 	.menu-group {
-		background-color: $color-background;
-		border-top: 2px solid $color-border;
+		background-color: var(--color-container-background);
+		border-top: 2px solid var(--color-border);
 		display: none;
 		font-size: 0.9rem;
 		line-height: 1.9rem;
@@ -138,12 +139,12 @@ $sidebar-width: 13rem;
 	}
 
 	.splash-image--title {
-		color: $color-white;
+		color: var(--color-text-invert);
 		margin-bottom: 0.5rem;
 	}
 
 	.splash-image--subtitle {
-		color: $color-white;
+		color: var(--color-text-invert);
 		margin-bottom: 1rem;
 	}
 	.splash-image--title { font-size: 3rem; }
@@ -161,15 +162,15 @@ $sidebar-width: 13rem;
 
 	.principles-icon {
 		@extend %shadow-50;
-		background-color: $color-gray-2;
+		background-color: var(--color-background);
 		border-radius: 10px;
 		display: none;
 		height: 90px;
 		margin-right: 1rem;
 		width: 90px;
-		&.consistent { background-color: $color-gray-2; }
-		&.clean { background-color: $color-blue; }
-		&.confident { background-color: $color-purple; }
+		&.consistent { background-color: var(--color-background); }
+		&.clean { background-color: var(--color-accent); }
+		&.confident { background-color: var(--color-primary); }
 		@media #{$tablet} {
 			display: block;
 		}
@@ -183,7 +184,7 @@ $sidebar-width: 13rem;
 }
 
 .app-content {
-	background-color: $color-white;
+	background-color: var(--color-background);
 	@media all and (min-width: 40em) {
 		margin-left: 13rem;
 	}
@@ -217,11 +218,11 @@ $sidebar-width: 13rem;
 }
 
 .subnav {
-	background-color: $color-purple;
-	box-shadow: 0 2px 6px $color-gray-3;
+	background-color: var(--color-primary);
+	box-shadow: 0 2px 6px var(--color-shadow);
 
 	h1 {
-		color: $color-white;
+		color: var(--color-text-invert);
 		margin: auto;
 		max-width: $example-global-content-width;
 		padding: 2rem 0;
@@ -235,14 +236,14 @@ $sidebar-width: 13rem;
 		padding-left: 1rem;
 
 		a {
-			color: $color-white !important;
+			color: var(--color-text-invert) !important;
 			margin-right: 1rem;
 			padding-bottom: 0.3rem;
 			text-decoration: none !important;
 			text-transform: uppercase;
 
 			&.active {
-				border-bottom: 4px solid $color-white;
+				border-bottom: 4px solid var(--color-text-invert);
 			}
 		}
 	}
@@ -253,7 +254,7 @@ $sidebar-width: 13rem;
 
 .example-mobile-sidebar {
 	.button--sidebar-icon {
-		background-color: $color-gray-2;
+		background-color: var(--color-background);
 		border-radius: 5px 0 0 5px;
 		padding: 0.8rem 0.9rem;
 		position: fixed;
@@ -320,7 +321,7 @@ h2 {
 
 			&:active,
 			&:focus {
-				color: $color-green;
+				color: var(--color-success);
 
 				&::after {
 					content: 'Added to URL';
@@ -399,7 +400,7 @@ h2 {
 
 .grid--example {
 	background-color: #6a8dd3;
-	color: $color-white;
+	color: var(--color-text-invert);
 	font-weight: $font-weight-semibold;
 	padding: 0.5rem;
 }
@@ -433,16 +434,16 @@ h2 {
 	width: 6rem;
 
 	&.active {
-		background-color: $color-background;
-		border: 2px solid $color-blue;
+		background-color: var(--color-container-background);
+		border: 2px solid var(--color-accent);
 	}
 }
 
-.example--icon-container:hover { background-color: $color-background; }
+.example--icon-container:hover { background-color: var(--color-container-background); }
 .example--icon-container .dashing-icon::before { font-size: 32px; }
 
 .example--caption {
-	color: $color-subtext;
+	color: var(--color-subtext);
 	display: block;
 	font-size: 12px;
 	margin-top: 1rem;
@@ -576,7 +577,7 @@ h2 {
 
 
 .resource-image-container {
-	background-color: $color-background;
+	background-color: var(--color-container-background);
 	border-radius: 8px;
 	display: none;
 	min-width: 94px;
@@ -603,7 +604,7 @@ h2 {
   ================================================== */
 
 footer.example-footer {
-	background-color: $color-background;
+	background-color: var(--color-background);
 	float: right;
 	position: relative;
 	text-align: center;
@@ -639,12 +640,12 @@ footer.example-footer {
 			z-index: $zindex-negative;
 		}
 	}
-	&.card--blue .card-content::after { background: $color-blue; }
-	&.card--green .card-content::after { background: $color-green; }
-	&.card--red .card-content::after { background: $color-red; }
-	&.card--orange .card-content::after { background: $color-orange; }
-	&.card--purple .card-content::after { background: $color-purple; }
-	&.card--gray .card-content::after { background: $color-gray-3; }
+	&.card--blue .card-content::after { background: var(--color-accent); }
+	&.card--green .card-content::after { background: var(--color-success); }
+	&.card--red .card-content::after { background: var(--color-error); }
+	&.card--orange .card-content::after { background: var(--color-warning); }
+	&.card--purple .card-content::after { background: var(--color-primary); }
+	&.card--gray .card-content::after { background: var(--color-background); }
 }
 
 .x-accessibility-group {
@@ -734,7 +735,7 @@ footer.example-footer {
 	.x-accessibility--white,
 	.x-accessibility--black {
 		align-items: center;
-		background-color: $color-gray-2;
+		background-color: var(--color-background);
 		border-radius: 3px;
 		display: inline-flex;
 		height: $space-xl;
@@ -810,38 +811,39 @@ footer.example-footer {
 }
 
 .x-accessibility-color-container {
-	border: 1px solid $color-border;
+	border: 1px solid var(--color-border);
 	border-radius: 5px;
 	grid-gap: 0;
 
 	.x-accessibility-color {
 		&White {
-			background-color: $color-white;
+			background-color: var(--color-white);
 		}
 
 		&Black {
-			background-color: $color-text;
+			background-color: var(--color-text);
 
 			h2,
-			p { color: $color-white; }
+			p { color: var(--color-text-invert); }
 		}
 	}
 
-	.x-accessibility-color {
-		&OffBlack {
-			background-color: $color-gray-3-dark;
-
-			h2,
-			p { color: $color-gray-3; }
-		}
-
-		&OffWhite {
-			background-color: $color-gray-3;
-
-			h2,
-			p { color: $color-gray-3-dark; }
-		}
-	}
+// TODO
+	// .x-accessibility-color {
+	// 	&OffBlack {
+	// 		background-color: $color-gray-3-dark;
+	//
+	// 		h2,
+	// 		p { color: $color-gray-3; }
+	// 	}
+	//
+	// 	&OffWhite {
+	// 		background-color: $color-gray-3;
+	//
+	// 		h2,
+	// 		p { color: $color-gray-3-dark; }
+	// 	}
+	// }
 
 	.x-accessibility-colorBlack,
 	.x-accessibility-colorWhite,
@@ -862,7 +864,7 @@ footer.example-footer {
 }
 
 .icon-code--container {
-	background-color: $color-blue;
+	background-color: var(--color-accent);
 	border-radius: 5px 5px 0 0;
 	bottom: -5rem;
 	left: 0.5rem;
@@ -916,7 +918,7 @@ footer.example-footer {
 				opacity: 1;
 
 				&.copied {
-					color: $color-green;
+					color: var(--color-success);
 				}
 			}
 		}
@@ -935,7 +937,7 @@ footer.example-footer {
 
 //SPACING
 .x-space { //spacing examples
-	background-color: $color-orange;
+	background-color: var(--color-warning);
 	display: inline-block;
 
 	&.x-space--xxs { height: $space-xxs;
@@ -960,46 +962,47 @@ footer.example-footer {
 		width: $space-xxl; }
 }
 
-.x-i-space { //individualSpacing examples
-	background-color: $color-gray-3;
-	display: block;
-	height: 2rem;
-	width: 2rem;
-
-	&--m { border: 8px solid $color-red;
-		box-sizing: content-box; }
-
-	&--mt { border-top: 8px solid $color-red;
-		box-sizing: content-box; }
-
-	&--mr { border-right: 8px solid $color-red;
-		box-sizing: content-box; }
-
-	&--mb { border-bottom: 8px solid $color-red;
-		box-sizing: content-box; }
-
-	&--ml { border-left: 8px solid $color-red;
-		box-sizing: content-box; }
-
-	&--mx { border-left: 8px solid $color-red;
-		border-right: 8px solid $color-red;
-		box-sizing: content-box; }
-
-	&--my { border-bottom: 8px solid $color-red;
-		border-top: 8px solid $color-red;
-		box-sizing: content-box; }
-	&--p { border: 8px solid $color-purple; }
-	&--pt { border-top: 8px solid $color-purple; }
-	&--pr { border-right: 8px solid $color-purple; }
-	&--pb { border-bottom: 8px solid $color-purple; }
-	&--pl { border-left: 8px solid $color-purple; }
-
-	&--px { border-left: 8px solid $color-purple;
-		border-right: 8px solid $color-purple; }
-
-	&--py { border-bottom: 8px solid $color-purple;
-		border-top: 8px solid $color-purple; }
-}
+// TODO
+// .x-i-space { //individualSpacing examples
+// 	background-color: $color-gray-3;
+// 	display: block;
+// 	height: 2rem;
+// 	width: 2rem;
+//
+// 	&--m { border: 8px solid $color-red;
+// 		box-sizing: content-box; }
+//
+// 	&--mt { border-top: 8px solid $color-red;
+// 		box-sizing: content-box; }
+//
+// 	&--mr { border-right: 8px solid $color-red;
+// 		box-sizing: content-box; }
+//
+// 	&--mb { border-bottom: 8px solid $color-red;
+// 		box-sizing: content-box; }
+//
+// 	&--ml { border-left: 8px solid $color-red;
+// 		box-sizing: content-box; }
+//
+// 	&--mx { border-left: 8px solid $color-red;
+// 		border-right: 8px solid $color-red;
+// 		box-sizing: content-box; }
+//
+// 	&--my { border-bottom: 8px solid $color-red;
+// 		border-top: 8px solid $color-red;
+// 		box-sizing: content-box; }
+// 	&--p { border: 8px solid $color-purple; }
+// 	&--pt { border-top: 8px solid $color-purple; }
+// 	&--pr { border-right: 8px solid $color-purple; }
+// 	&--pb { border-bottom: 8px solid $color-purple; }
+// 	&--pl { border-left: 8px solid $color-purple; }
+//
+// 	&--px { border-left: 8px solid $color-purple;
+// 		border-right: 8px solid $color-purple; }
+//
+// 	&--py { border-bottom: 8px solid $color-purple;
+// 		border-top: 8px solid $color-purple; }
+// }
 
 .h1-spacing,
 .input-spacing,
@@ -1010,7 +1013,7 @@ footer.example-footer {
 .h1-spacing::after,
 .p-spacing::after,
 .input-spacing::after {
-	background-color: $color-orange;
+	background-color: var(--color-warning);
 	bottom: -0.25rem;
 	content: '';
 	display: block;
@@ -1060,49 +1063,49 @@ footer.example-footer {
 		text-transform: uppercase;
 		width: 100%;
 	}
-
-	&.color-purple { background-color: $color-purple;
-		color: $color-white; }
-
-	&.color-blue { background-color: $color-blue;
-		color: $color-white; }
-
-	&.color-green { background-color: $color-green;
-		color: $color-white; }
-
-	&.color-orange { background-color: $color-orange;
-		color: $color-white; }
-
-	&.color-red { background-color: $color-red;
-		color: $color-white; }
-
-	&.color-black { background-color: $color-black;
-		color: $color-white; }
-
-	&.color-gray-4 { background-color: $color-gray-4;
-		color: $color-white; }
-
-	&.color-gray-3 { background-color: $color-gray-3;
-		color: $color-black; }
-
-	&.color-gray-2 { background-color: $color-gray-2;
-		color: $color-black; }
-
-	&.color-gray-1 { background-color: $color-gray-1;
-		color: $color-black; }
-
-	&.color-white { background-color: $color-white;
-		border: 2px solid $color-gray-2;
-		color: $color-black; }
-
-	&.color-data-teal { background-color: $color-data-teal;
-		color: $color-white; }
-
-	&.color-data-purple { background-color: $color-data-purple;
-		color: $color-white; }
-
-	&.color-gradient { background-image: $color-gradient;
-		color: $color-white; }
+//TODO
+	// &.color-purple { background-color: $color-purple;
+	// 	color: $color-white; }
+	//
+	// &.color-blue { background-color: var(--color-accent);
+	// 	color: $color-white; }
+	//
+	// &.color-green { background-color: $color-green;
+	// 	color: $color-white; }
+	//
+	// &.color-orange { background-color: $color-orange;
+	// 	color: $color-white; }
+	//
+	// &.color-red { background-color: $color-red;
+	// 	color: $color-white; }
+	//
+	// &.color-black { background-color: $color-black;
+	// 	color: $color-white; }
+	//
+	// &.color-gray-4 { background-color: $color-gray-4;
+	// 	color: $color-white; }
+	//
+	// &.color-gray-3 { background-color: $color-gray-3;
+	// 	color: $color-black; }
+	//
+	// &.color-gray-2 { background-color: $color-gray-2;
+	// 	color: $color-black; }
+	//
+	// &.color-gray-1 { background-color: $color-gray-1;
+	// 	color: $color-black; }
+	//
+	// &.color-white { background-color: $color-white;
+	// 	border: 2px solid $color-gray-2;
+	// 	color: $color-black; }
+	//
+	// &.color-data-teal { background-color: $color-data-teal;
+	// 	color: $color-white; }
+	//
+	// &.color-data-purple { background-color: $color-data-purple;
+	// 	color: $color-white; }
+	//
+	// &.color-gradient { background-image: $color-gradient;
+	// 	color: $color-white; }
 }
 
 .global-banner--example {

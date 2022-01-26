@@ -199,16 +199,16 @@ $display: (
 .fixed { position: fixed !important; }
 .relative { position: relative !important; }
 
-.text-color--white { color: $color-white; }
-.text-color--black { color: $color-black; }
+.text-color--white { color: var(--color-white); }
+.text-color--black { color: var(--color-text); }
 
 .text-color--gray,
-.text-color--grey { color: $color-subtext; }
-.text-color--blue { color: $color-blue; }
-.text-color--green { color: $color-green; }
-.text-color--orange { color: $color-orange; }
-.text-color--purple { color: $color-purple; }
-.text-color--red { color: $color-red; }
+.text-color--grey { color: var(--color-subtext); }
+.text-color--blue { color: var(--color-accent); }
+.text-color--green { color: var(--color-success); }
+.text-color--orange { color: var(--color-warning); }
+.text-color--purple { color: var(--color-primary); }
+.text-color--red { color: var(--color-error); }
 
 //Flex utilities
 .space-between {

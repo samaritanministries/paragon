@@ -1,51 +1,71 @@
-@use '/node_modules/@smi/design-tokens/dist/scss/tokens.css';
+@use '/node_modules/@smi/design-tokens/dist/scss/tokens.scss' as token;
+@use '/node_modules/@smi/design-tokens/dist/css/tokens' as *;
 
-/* Base Colors */
-$color-purple: var(--color-purple) !default;
-$color-purple-light: lighten($color-purple, 10%) !default;
-$color-purple-dark: darken($color-purple, 10%) !default;
+// :root{
+// --color-purple: #595478;
+// --color-semantic-blue: #097cbf;
+// --color-semantic-green: #00875d;
+// --color-semantic-red: #d1323f;
+// --color-semantic-orange: #f8652a;
+// --color-data-purple: #9f8fca;
+// --color-data-teal: #64ccc9;
+// --color-black: #222228;
+// --color-gray-4: #6f6f75;
+// --color-gray-3: #e1e1e7;
+// --color-gray-2: #eeeef4;
+// --color-gray-1: #f3f3f9;
+// --color-white: #ffffff;
+// --color-dark-semantic-blue: #30bbf7;
+// --color-dark-semantic-green: #3eb188;
+// --color-dark-semantic-orange: #f97b49;
+// --color-dark-semantic-red: #f34448;
+// --color-dark-gray-5: #898890;
+// --color-dark-gray-6: #56555c;
+// --color-dark-gray-7: #45434c;
+// }
 
-$color-blue: var(--color-semantic-blue) !default;
-$color-blue-light: lighten($color-blue, 10%) !default;
-$color-blue-dark: darken($color-blue, 10%) !default;
 
-$color-green: var(--color-semantic-green) !default;
-$color-green-light: lighten($color-green, 10%) !default;
-$color-green-dark: darken($color-green, 10%) !default;
+/* Variants of Base Colors */
+$color-purple-light: lighten(token.$color-purple, 10%);
+$color-purple-dark: darken(token.$color-purple, 10%);
 
-$color-orange: var(--color-semantic-orange) !default;
-$color-orange-light: lighten($color-orange, 10%) !default;
-$color-orange-dark: darken($color-orange, 10%) !default;
+$color-semantic-blue-light: lighten(token.$color-semantic-blue, 10%);
+$color-semantic-blue-dark: darken(token.$color-semantic-blue, 10%);
 
-$color-red: var(--color-semantic-red) !default;
-$color-red-light: lighten($color-red, 10%) !default;
-$color-red-dark: darken($color-red, 10%) !default;
+$color-semantic-green-light: lighten(token.$color-semantic-green , 10%);
+$color-semantic-green-dark: darken(token.$color-semantic-green, 10%);
 
-$color-black: var(--color-black) !default;
-$color-gray-4: var(--color-gray-4) !default;
-$color-gray-3: var(--color-gray-3) !default;
-$color-gray-3-dark: darken($color-gray-3, 10%) !default;
-$color-gray-2: var(--color-gray-2) !default;
-$color-gray-1: var(--color-gray-1) !default;
-$color-white: var(--color-white) !default;
+$color-semantic-orange-light: lighten(token.$color-semantic-orange, 10%);
+$color-semantic-orange-dark: darken(token.$color-semantic-orange, 10%);
+
+$color-semantic-red-light: lighten(token.$color-semantic-red, 10%);
+$color-semantic-red-dark: darken(token.$color-semantic-red, 10%);
 
 /* Data Visuals */
-$color-data-teal: var(--color-data-teal);
-$color-data-purple: var(--color-purple);
+$color-data-teal-light: lighten(token.$color-data-teal, 10%);
+$color-data-teal-dark: darken(token.$color-data-teal, 10%);
 
-/* Dark Mode */
-// TODO: add light and dark versions
-$color-dark-semantic-blue: var(--color-dark-semantic-blue);
-$color-dark-semantic-green: var(--color-dark-semantic-green);
-$color-dark-semantic-red: var(--color-dark-semantic-red);
-$color-dark-semantic-orange: var(--color-dark-semantic-orange);
+$color-data-purple-light: lighten(token.$color-data-purple, 10%);
+$color-data-purple-dark: darken(token.$color-data-purple, 10%);
 
-$color-dark-gray-5: var(--color-dark-gray-5);
-$color-dark-gray-6: var(--color-dark-gray-6);
-$color-dark-gray-7: var(--color-dark-gray-7);
+/* Variants of Dark Mode Colors */
+$color-dark-semantic-blue-light: lighten(token.$color-dark-semantic-blue, 10%);
+$color-dark-semantic-blue-dark: darken(token.$color-dark-semantic-blue, 10%);
+
+$color-dark-semantic-green-light: lighten(token.$color-dark-semantic-green, 10%);
+$color-dark-semantic-green-dark: darken(token.$color-dark-semantic-green, 10%);
+
+$color-dark-semantic-red-light: lighten(token.$color-dark-semantic-red, 10%);
+$color-dark-semantic-red-dark: darken(token.$color-dark-semantic-red, 10%);
+
+$color-dark-semantic-orange-light: lighten(token.$color-dark-semantic-orange, 10%);
+$color-dark-semantic-orange-dark: darken(token.$color-dark-semantic-orange, 10%);
+
+$color-dark-gray-6-light: lighten(token.$color-dark-gray-6, 10%);
+$color-dark-gray-6-dark: darken(token.$color-dark-gray-6, 10%);
 
 /* Gradient */
-$color-gradient: linear-gradient(to right, $color-purple, #5a89ad, $color-data-teal);
+$color-gradient: linear-gradient(to right, token.$color-purple, #5a89ad, token.$color-data-teal);
 
 /* Shadows */
 $color-shadow: #3c4043;

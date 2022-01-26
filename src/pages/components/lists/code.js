@@ -66,7 +66,7 @@ class ListsCode extends React.Component {
               <CodeToggleSCSS>
 {`//Example: Custom Colored Lists
 .ordered-list--color-blue {
-  @include ordered-list($color-blue, $color-white);
+  @include ordered-list(var(--color-accent), $color-white);
 }`}
               </CodeToggleSCSS>
 

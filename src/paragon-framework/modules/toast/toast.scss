@@ -8,7 +8,7 @@ $toast-bottom-position: 1rem;
 	animation-name: slideInUpThenOut;
 	animation-timing-function: ease-in-out;
 
-	background-color: $color-purple;
+	background-color: var(--color-primary);
 	border-radius: 5px;
 	bottom: $toast-bottom-position;
 	margin: $space-m $space-m 0 $space-m;
@@ -23,7 +23,7 @@ $toast-bottom-position: 1rem;
 		min-width: $toast-width;
 		width: $toast-width;
 	}
-	* { color: $color-white; }
+	* { color: var(--color-text); }
 
 	p {
 		font-weight: $font-weight-semibold;
@@ -42,7 +42,7 @@ $toast-bottom-position: 1rem;
 	}
 
 	&.success {
-		background-color: $color-green;
+		background-color: var(--color-success);
 
 		.toast-message--icon {
 			@extend .dashing-icon--checkmark-filled;
@@ -50,7 +50,7 @@ $toast-bottom-position: 1rem;
 	}
 
 	&.error {
-		background-color: $color-red;
+		background-color: var(--color-error);
 
 		.toast-message--icon {
 			@extend .dashing-icon--alert-filled;
