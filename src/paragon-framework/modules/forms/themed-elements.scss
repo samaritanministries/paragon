@@ -2,7 +2,7 @@
   =========================================================================== */
 //Custom checkbox color theme
 $checkbox--active: var(--color-accent) !default; //Color of checkbox when checked
-$checkbox--icon: var(--color-text) !default; //Color of check icon when checked
+$checkbox--icon: var(--color-text-invert) !default; //Color of check icon when checked
 $checkbox--focus: var(--form-element-border-focus) !default; //Color of border around checkbox when focused
 $checkbox--disabled: var(--card-disabled-bg) !default; //Color of checkbox when checked and disabled
 $checkbox--icon-disabled: var(--color-icon-primary) !default; //Color of check icon when checked and disabled

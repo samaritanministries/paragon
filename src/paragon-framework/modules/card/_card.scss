@@ -175,8 +175,7 @@
 
 .card-info {
 	@extend %card;
-	// background-color: lighten(var(--color-accent), 55%);
-	background-color: lighten(token.$color-semantic-blue, 55%);
+	background-color: var(--card-info-bg);
 	border-left: 6px solid var(--color-accent);
 	min-width: 100%;
 	overflow: hidden;
@@ -208,7 +207,8 @@
 	//TODO: lighten here...
 	&.has-warning {
 		// background-color: lighten(var(--color-warning), 40%);
-		background-color: lighten(token.$color-semantic-orange, 40%);
+		// background-color: lighten(token.$color-semantic-orange, 40%);
+		background-color: var(--card-warning-bg);
 		border-left-color: var(--color-warning);
 		.card-info--title { color: var(--color-warning); }
 		.dashing-icon::before { color: var(--color-warning); }
@@ -216,7 +216,8 @@
 
 	&.has-error {
 		// background-color: lighten($color-red, 45%);
-		background-color: lighten(token.$color-semantic-red, 45%);
+		// background-color: lighten(token.$color-semantic-red, 45%);
+		background-color: var(--card-error-bg);
 		border-left-color: var(--color-error);
 		.card-info--title { color: var(--color-error); }
 		.dashing-icon::before { color: var(--color-error); }
@@ -224,7 +225,8 @@
 
 	&.has-success {
 		// background-color: lighten(var(--color-success), 70%);
-		background-color: lighten(token.$color-semantic-green, 70%);
+		// background-color: lighten(token.$color-semantic-green, 70%);
+		background-color: var(--card-success-bg);
 		border-left-color: var(--color-success);
 		.card-info--title { color: var(--color-success); }
 		.dashing-icon::before { color: var(--color-success); }

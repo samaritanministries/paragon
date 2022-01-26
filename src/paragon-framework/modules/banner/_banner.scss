@@ -7,8 +7,8 @@ $global-banner-height_phone: 4rem;
 @mixin shared-banner {
 	&.has-success,
 	&.has-error {
-		p { color: var(--color-text); }
-		.dashing-icon::before { color: var(--color-text);}
+		p { color: var(--color-text-invert); }
+		.dashing-icon::before { color: var(--color-text-invert);}
 	}
 
 	&.has-warning {

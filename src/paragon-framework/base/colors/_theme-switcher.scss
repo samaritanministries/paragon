@@ -48,6 +48,11 @@
 
 	--color-shadow: $color-shadow;
 
+	--card-info-bg: var(--color-card-info-bg);
+	--card-success-bg: var(--color-card-success-bg);
+	--card-warning-bg: var(--color-card-warning-bg);
+	--card-error-bg: var(--color-card-error-bg);
+
 	/* Forms */
 	--form-element-border: var(--color-border);
 	--form-element-border-focus: var(--color-accent);
@@ -111,6 +116,11 @@ body.dark-mode {
 
 	--card-disabled-bg: var(--color-dark-gray-8);
 	--card-disabled-border: var(--color-dark-gray-8);
+
+	--card-info-bg: var(--color-dark-card-info-bg);
+	--card-success-bg: var(--color-dark-card-success-bg);
+	--card-warning-bg: var(--color-dark-card-warning-bg);
+	--card-error-bg: var(--color-dark-card-error-bg);
 
 	--form-element-bg: var(--color-dark-gray-7);
 	--form-element-border: var(--color-border);

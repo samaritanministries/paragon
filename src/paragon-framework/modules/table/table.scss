@@ -270,7 +270,8 @@ $table--border: var(--color-gray-3-dark) !default;
 .table--container,
 .card-table {
 	.table {
-		background-color: var(--color-white);
+		// background-color: var(--color-white);
+		background-color: var(--color-container-background);
 		font-size: $font-size-small;
 		margin: 0;
 		max-width: 100%;
