@@ -129,7 +129,7 @@ $action--focus: var(--color-focus) !default;
 	}
 
 	&.button--border {
-		@include border--button(var(--button-primary-bg), var(button-primary-hover));
+		@include border--button(var(--button-primary-bg), var(--button-primary-hover));
 		border: 2px solid;
 		@media #{$tablet} {
 			padding-bottom: calc(0.5rem - 2px);

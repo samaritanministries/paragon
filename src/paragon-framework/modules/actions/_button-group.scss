@@ -1,14 +1,19 @@
 @mixin button-group($background-color, $color) {
-	.button { @include button($background-color, darken($background-color, 10%), $color); }
+	// TODO: darken
+	// .button { @include button($background-color, darken($background-color, 10%), $color); }
+	.button { @include button($background-color, $background-color, $color); }
 
 	input:checked ~ label { //active state of button-group
-		background-color: darken($background-color, 10%);
-		border-color: darken($background-color, 10%);
+		// TODO: darken
+		// background-color: darken($background-color, 10%);
+		// border-color: darken($background-color, 10%);
+		background-color: $background-color;
+		border-color: $background-color;
 	}
 }
 
 @mixin button-group--border($background-color, $checked-color) {
-	.button { @include transparent--button($color-gray-4); }
+	.button { @include transparent--button(var(--button-gray-bg)); }
 
 	input:checked ~ label { //active state of button-group
 		background-color: $background-color;
@@ -46,7 +51,7 @@
 		&.button--green { .button--radio { @include button-group--border(var(--color-success), var(--color-text-invert)); } }
 		&.button--orange { .button--radio { @include button-group--border(var(--color-warning), var(--color-black)); } }
 		&.button--purple { .button--radio { @include button-group--border(var(--color-primary), var(--color-text-invert)); } }
-		&.button--red { .button--radio { @include button-group--border($color-red, var(--color-text-invert)); } }
+		&.button--red { .button--radio { @include button-group--border(var(--color-error), var(--color-text-invert)); } }
 
 		&.button--gray,
 		&.button--grey {
