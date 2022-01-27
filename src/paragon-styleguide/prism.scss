@@ -6,15 +6,14 @@
  */
 
 :root {
-	--color-example-container-background: #fff;
+	--color-example-container-background: rgb(255, 255, 255, 0.2);
 	--color-example-sidebar-background: var(--color-background);
 }
 
 body.dark-mode {
-	--color-example-container-background: rgb(46, 45, 56, 0.5);
-	--color-example-sidebar-background: var(--color-container-background)
+	--color-example-container-background: rgb(34, 34, 40, 0.2);
+	--color-example-sidebar-background: var(--color-container-background);
 }
-
 
 $white: #fff;
 $gray-50: #f2f2f2;
@@ -40,12 +39,12 @@ $tablet: 'all and (min-width: 40em)' !default;
 .example-container {
 	background-color: var(--color-example-container-background);
 	border: 2px solid var(--color-border);
-	border-bottom: 0;
+	// border-bottom: 0;
 	border-radius: 8px 8px 0 0;
 
 	.grid & {
 		background-color: var(--color-example-container-background);
-		border-color: transparent !important;
+		// border-color: transparent !important;
 		border-radius: 8px; //temp
 		padding: $space-l;
 	}

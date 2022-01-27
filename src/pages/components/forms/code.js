@@ -31,26 +31,26 @@ class FooterCode extends React.Component {
             </h2>
             <div className="example-container">
               <div className="card">
-                <div className="card-header has-border">
-                  <h2 className="no-margin">@result.EndpointMethod @result.EndpointDefinition</h2>
-                </div>
+                <div className="card-content">
+                  <fieldset>
+                    <label htmlFor="form-text">Text Input</label>
+                    <input type="text" id="form-text" />
+                  </fieldset>
 
-                <div className="card-content flex-content">
-                  <div className="flex-row">
-                    <p>
-                      <a href="@result.RepositoryUrl">
-                              @result.ProjectName <i className="dashing-icon dashing-icon--new-tab" />
-                      </a>
-                    </p>
-                    <p className="space-between" />
-                    <p>@result.EndpointBaseUrl</p>
-                  </div>
-                </div>
-                <div className="card-footer">
-                  <button className="button" href="@result.SplunkSearchUrl">Splunk <i className="dashing-icon dashing-icon--new-tab" /></button>
-                  <button className="button" href="@result.SwaggerUrl">Swagger <i className="dashing-icon dashing-icon--new-tab" /></button>
-                  <button className="button" href="@result.PipelineUrl">GitLab <i className="dashing-icon dashing-icon--new-tab" /></button>
-                  <button className="button" href="@result.OctopusJobUrl">Octopus <i className="dashing-icon dashing-icon--new-tab" /></button>
+                  <fieldset className="is-optional">
+                    <label htmlFor="form-text-optional">Text Input</label>
+                    <input type="text" id="form-text-optional" placeholder="This input is optional" />
+                  </fieldset>
+
+                  <fieldset>
+                    <label htmlFor="form-text-disabled">Text Input disabled</label>
+                    <input type="text" id="form-text-disabled" value="This input is disabled" disabled={true} />
+                  </fieldset>
+
+                  <fieldset>
+                    <label htmlFor="form-textarea">Textarea</label>
+                    <textarea id="form-textarea" />
+                  </fieldset>
                 </div>
               </div>
               <CodeToggle>
