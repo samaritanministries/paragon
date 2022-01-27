@@ -1,25 +1,25 @@
 :root {
 	/* Primary and Accent */
 	--color-primary: var(--color-purple);
-	--color-primary-light: $color-purple-light;
-	--color-primary-dark: $color-purple-dark;
+	--color-primary-light: #{$color-purple-light};
+	--color-primary-dark: #{$color-purple-dark};
 
 	--color-accent: var(--color-semantic-blue);
-	--color-accent-light: $color-semantic-blue-light;
-	--color-accent-dark: $color-semantic-blue-dark;
+	--color-accent-light: #{$color-semantic-blue-light};
+	--color-accent-dark: #{$color-semantic-blue-dark};
 
 	/* Semantic */
 	--color-success: var(--color-semantic-green);
-	--color-success-dark: $color-semantic-green-dark;
-	--color-success-light: $color-semantic-green-light;
+	--color-success-dark: #{$color-semantic-green-dark};
+	--color-success-light: #{$color-semantic-green-light};
 
 	--color-warning: var(--color-semantic-orange);
-	--color-warning-dark: $color-semantic-orange-dark;
-	--color-warning-light: $color-semantic-orange-light;
+	--color-warning-dark: #{$color-semantic-orange-dark};
+	--color-warning-light: #{$color-semantic-orange-light};
 
 	--color-error: var(--color-semantic-red);
-	--color-error-dark: $color-semantic-red-dark;
-	--color-error-light: $color-semantic-red-light;
+	--color-error-dark: #{$color-semantic-red-dark};
+	--color-error-light: #{$color-semantic-red-light};
 
 	/* Border */
 	--color-border: var(--color-gray-3);
@@ -46,7 +46,7 @@
 	--card-disabled-bg: var(--color-gray-2);
 	--card-disabled-border: var(--color-gray-2);
 
-	--color-shadow: $color-shadow;
+	--color-shadow: #{$color-shadow};
 
 	--card-info-bg: var(--color-card-info-bg);
 	--card-success-bg: var(--color-card-success-bg);
@@ -65,7 +65,7 @@
 	/* Buttons */
 	--button-primary-bg: var(--color-primary);
 	--button-primary-hover: var(--color-primary-dark);
-	--button-primary-text: var(--color-text);
+	--button-primary-text: var(--color-white);
 
 	--button-gray-bg: var(--color-gray-3);
 	--button-gray-hover: var(--color-gray-3-dark);
@@ -78,24 +78,24 @@
 // [data-theme='dark'] {
 body.dark-mode {
 	--color-primary: var(--color-data-purple);
-	--color-primary-light: $color-data-purple-light;
-	--color-primary-dark: $color-data-purple-dark;
+	--color-primary-light: #{$color-data-purple-light};
+	--color-primary-dark: #{$color-data-purple-dark};
 
 	--color-accent: var(--color-dark-semantic-blue);
-	--color-accent-light: $color-dark-semantic-blue-light;
-	--color-accent-dark: $color-dark-semantic-blue-dark;
+	--color-accent-light: #{$color-dark-semantic-blue-light};
+	--color-accent-dark: #{$color-dark-semantic-blue-dark};
 
 	--color-success: var(--color-dark-semantic-green);
-	--color-success-dark: $color-dark-semantic-green-dark;
-	--color-success-light: $color-dark-semantic-green-light;
+	--color-success-dark: #{$color-dark-semantic-green-dark};
+	--color-success-light: #{$color-dark-semantic-green-light};
 
 	--color-warning: var(--color-dark-semantic-orange);
-	--color-warning-dark: $color-dark-semantic-orange-dark;
-	--color-warning-light: $color-dark-semantic-orange-light;
+	--color-warning-dark: #{$color-dark-semantic-orange-dark};
+	--color-warning-light: #{$color-dark-semantic-orange-light};
 
 	--color-error: var(--color-dark-semantic-red);
-	--color-error-dark: $color-dark-semantic-red-dark;
-	--color-error-light: $color-dark-semantic-red-light;
+	--color-error-dark: #{$color-dark-semantic-red-dark};
+	--color-error-light: #{$color-dark-semantic-red-light};
 
 	--color-border: var(--color-dark-gray-6);
 
@@ -130,8 +130,12 @@ body.dark-mode {
 
 	--form-input-disabled: var(--card-disabled-bg);
 
+	--button-primary-bg: var(--color-data-purple);
+	--button-primary-hover: #{$color-data-purple-dark};
+	--button-primary-text: var(--color-black);
+
 	--button-gray-bg: var(--color-dark-gray-6);
-	--button-gray-hover: $color-dark-gray-6-dark;
+	--button-gray-hover: #{$color-dark-gray-6-dark};
 	--button-gray-text: var(--color-text);
 
 	--color-shadow: transparent;

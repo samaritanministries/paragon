@@ -7,10 +7,12 @@
 
 :root {
 	--color-example-container-background: #fff;
+	--color-example-sidebar-background: var(--color-background);
 }
 
 body.dark-mode {
 	--color-example-container-background: rgb(46, 45, 56, 0.5);
+	--color-example-sidebar-background: var(--color-container-background)
 }
 
 
@@ -50,7 +52,7 @@ $tablet: 'all and (min-width: 40em)' !default;
 }
 
 .example-text {
-	background-color: var(--color-background);
+	background-color: var(--color-container-background);
 	border-radius: 5px;
 	color: var(--color-text);
 	font-size: 0.9rem;

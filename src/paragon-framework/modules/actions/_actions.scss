@@ -96,7 +96,7 @@ $action--focus: var(--color-focus) !default;
 
 	&.button--gray,
 	&.button--grey,
-	&.button--secondary { @include button(var(button-gray-bg), var(button-gray-hover), var(button-gray-text)); }
+	&.button--secondary { @include button(var(--button-gray-bg), var(--button-gray-hover), var(--button-gray-text)); }
 
 	//Used to display actions and icons with a transparent background
 	//transparentize(white, 1) used instead of transparent because "darken" requires an rgb color value
@@ -145,7 +145,7 @@ $action--focus: var(--color-focus) !default;
 
 		&.button--gray {
 			@include border--button(var(--button-gray-hover), var(--button-gray-hover));
-			color: var(button-gray-text);
+			color: var(--button-gray-text);
 
 			&:hover,
 			&:focus {

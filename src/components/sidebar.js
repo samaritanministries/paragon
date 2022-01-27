@@ -4,8 +4,6 @@ import $ from "jquery";
 
 import logo from "../img/nigel_2.svg";
 
-const darkModeClass = "dark-mode";
-
 class Sidebar extends React.Component {
 
   constructor(props) {
@@ -18,7 +16,6 @@ class Sidebar extends React.Component {
     this.toggleParagon = this.toggleParagon.bind(this);
     this.toggleComponents = this.toggleComponents.bind(this);
     this.toggleStyle = this.toggleStyle.bind(this);
-    this.toggleDarkMode = this.toggleDarkMode.bind(this);
   }
 
   componentDidMount() {
@@ -44,10 +41,6 @@ class Sidebar extends React.Component {
     this.setState((prevState) => ({
       showSidebar: !prevState.showSidebar
     }));
-  }
-
-  toggleDarkMode() {
-    document.body.classList.toggle(darkModeClass);
   }
 
   toggleParagon() {
@@ -105,9 +98,9 @@ class Sidebar extends React.Component {
         <div className={this.state.showSidebar ? "example-sidebar show" : "example-sidebar"}>
 
           <ul>
-            <button className="button button--gray" onClick={this.toggleDarkMode}>
+            {/* <button className="button button--gray theme-switcher" onClick={this.toggleDarkMode}>
               Toggle Dark Mode
-            </button>
+            </button> */}
             <div className="logo-container">
               <img src={logo} alt="Paragon Logo" />
             </div>

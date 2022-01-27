@@ -7,7 +7,7 @@ $expandable-left-border: 5px;
 $flex-table--border-width: 1px !default;
 $flex-table--border-color: var(--color-border) !default;
 $flex-table--header-color: var(--color-primary);
-$flex-table--header-text: var(--color-text);
+$flex-table--header-text: var(--color-text-invert);
 
 .flex-table {
 	@extend .card;

@@ -85,7 +85,8 @@
 
 		&::after {
 			animation: loadingCard 1.2s infinite;
-			background: linear-gradient(90deg, transparent, rgba(var(--color-black), 0.07), transparent);
+			// background: linear-gradient(90deg, transparent, rgba(var(--color-black), 0.07), transparent);
+			background: linear-gradient(90deg, transparent, rgba($color-dark-gray-6-dark, 0.07), transparent);
 			content: '';
 			display: block;
 			height: 100%;

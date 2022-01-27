@@ -1,11 +1,13 @@
 import React from "react";
 
 import Sidebar from "./sidebar";
+import ToggleDarkMode from "./toggle-dark-mode";
 // import "../sass/example-page/example-page.scss";
 import "../styles/application.scss";
 
 const Layout = ({ children }) => (
   <div>
+    <ToggleDarkMode />
     <Sidebar />
     <div className="app-content">
       {children}

@@ -23,7 +23,7 @@ $toast-bottom-position: 1rem;
 		min-width: $toast-width;
 		width: $toast-width;
 	}
-	* { color: var(--color-text); }
+	* { color: var(--color-text-invert); }
 
 	p {
 		font-weight: $font-weight-semibold;
@@ -34,11 +34,12 @@ $toast-bottom-position: 1rem;
 	.toast-message--icon {
 		@extend .dashing-icon;
 		@extend .dashing-icon--info-filled;
-		@extend .dashing-icon--white;
 		left: $space-m;
 		position: absolute;
 		top: $space-m;
-		&::before { opacity: 1; }
+
+		&::before { color: inherit;
+			opacity: 1; }
 	}
 
 	&.success {
