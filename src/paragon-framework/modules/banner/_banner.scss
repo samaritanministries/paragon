@@ -82,7 +82,7 @@ $global-banner-height_phone: 4rem;
 
 	&.has-button {
 		align-items: center;
-		padding: $grid-gutter/2 $grid-gutter;
+		padding: calc($grid-gutter / 2) $grid-gutter;
 		button { white-space: nowrap; }
 		p { margin-right: $grid-gutter; }
 	}

@@ -17,7 +17,7 @@
 			content: counter(step-counter); /* Displays the value of 'step-counter' */
 			font-size: 1rem;
 			font-weight: $font-weight-semibold;
-			margin-right: $grid-gutter/2;
+			margin-right: calc($grid-gutter / 2);
 			padding: 0.3rem 0.7rem;
 		}
 

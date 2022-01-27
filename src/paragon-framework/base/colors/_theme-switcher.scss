@@ -29,29 +29,25 @@
 
 	/* Body Background */
 	--color-background: var(--color-gray-2);
+	--color-container-background: var(--color-white);
 
 	/* Focus */
-	--color-focus: rgba(var(--color-blue-light), 0.6);
+	--color-focus: var(--color-semantic-blue-lighter);
 
 	/* Typography */
 	--color-text: var(--color-black);
+	--color-text-invert: var(--color-white);
 	--color-subtext: var(--color-gray-4);
 	--color-link: var(--color-semantic-blue);
-
-	--color-text-invert: var(--color-white);
-
-	--color-container-background: var(--color-white);
 
 	/* Card */
 	--card-disabled-bg: var(--color-gray-2);
 	--card-disabled-border: var(--color-gray-2);
 
-	--color-shadow: #{$color-shadow};
-
-	--card-info-bg: var(--color-card-info-bg);
-	--card-success-bg: var(--color-card-success-bg);
-	--card-warning-bg: var(--color-card-warning-bg);
-	--card-error-bg: var(--color-card-error-bg);
+	--card-info-bg: var(--color-semantic-blue-lighter);
+	--card-success-bg: var(--color-semantic-green-lighter);
+	--card-warning-bg: var(--color-semantic-orange-lighter);
+	--card-error-bg: var(--color-semantic-red-lighter);
 
 	/* Forms */
 	--form-element-border: var(--color-border);
@@ -59,7 +55,6 @@
 	--form-element-border-error: var(--color-error);
 	--form-element-bg: var(--color-white);
 	--form-text-placeholder: var(--color-subtext);
-
 	--form-input-disabled: var(--card-disabled-bg);
 
 	/* Buttons */
@@ -73,10 +68,14 @@
 
 	/* Icons */
 	--color-icon-primary: var(--color-gray-4);
+
+	/* Shadow */
+	--color-shadow: #{$color-shadow};
 }
 
 // [data-theme='dark'] {
 body.dark-mode {
+	/* Primary and Accent */
 	--color-primary: var(--color-data-purple);
 	--color-primary-light: #{$color-data-purple-light};
 	--color-primary-dark: #{$color-data-purple-dark};
@@ -85,6 +84,7 @@ body.dark-mode {
 	--color-accent-light: #{$color-dark-semantic-blue-light};
 	--color-accent-dark: #{$color-dark-semantic-blue-dark};
 
+	/* Semantic */
 	--color-success: var(--color-dark-semantic-green);
 	--color-success-dark: #{$color-dark-semantic-green-dark};
 	--color-success-light: #{$color-dark-semantic-green-light};
@@ -97,39 +97,43 @@ body.dark-mode {
 	--color-error-dark: #{$color-dark-semantic-red-dark};
 	--color-error-light: #{$color-dark-semantic-red-light};
 
+	/* Border */
 	--color-border: var(--color-dark-gray-6);
 
+	/* Hover/Selectable */
 	--color-hover: var(--color-dark-gray-6);
 
+	/* Background */
 	--color-background: var(--color-black);
-
-	--color-focus: rgba(var(--color-blue-light), 0.6);
-
 	--color-container-background: var(--color-dark-gray-7);
 
+	/* Focus */
+	--color-focus: var(--color-dark-semantic-blue-darker);
+
+	/* Typography */
 	--color-text: var(--color-gray-1);
+	--color-text-invert: var(--color-black); //invert default color
 	--color-subtext: var(--color-dark-gray-5);
 	--color-link: var(--color-dark-semantic-blue);
 
-	//TODO: naming?
-	--color-text-invert: var(--color-black);
 
+	/* Card */
+	--card-info-bg: var(--color-dark-semantic-blue-darker);
+	--card-success-bg: var(--color-dark-semantic-green-darker);
+	--card-warning-bg: var(--color-dark-semantic-orange-darker);
+	--card-error-bg: var(--color-dark-semantic-red-darker);
 	--card-disabled-bg: var(--color-dark-gray-8);
 	--card-disabled-border: var(--color-dark-gray-8);
 
-	--card-info-bg: var(--color-dark-card-info-bg);
-	--card-success-bg: var(--color-dark-card-success-bg);
-	--card-warning-bg: var(--color-dark-card-warning-bg);
-	--card-error-bg: var(--color-dark-card-error-bg);
-
+	/* Forms */
 	--form-element-bg: var(--color-dark-gray-7);
 	--form-element-border: var(--color-border);
 	--form-element-border-focus: var(--color-accent);
 	--form-element-border-error: var(--color-error);
 	--form-text-placeholder: var(--color-subtext);
-
 	--form-input-disabled: var(--card-disabled-bg);
 
+	/* Buttons */
 	--button-primary-bg: var(--color-data-purple);
 	--button-primary-hover: #{$color-data-purple-dark};
 	--button-primary-text: var(--color-black);
@@ -138,5 +142,6 @@ body.dark-mode {
 	--button-gray-hover: #{$color-dark-gray-6-dark};
 	--button-gray-text: var(--color-text);
 
-	--color-shadow: transparent;
+	/* Shadow */
+	--color-shadow: transparent; //dark mode does not use shadow
 }

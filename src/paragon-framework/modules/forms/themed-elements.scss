@@ -3,7 +3,7 @@
 //Custom checkbox color theme
 $checkbox--active: var(--color-accent) !default; //Color of checkbox when checked
 $checkbox--icon: var(--color-text-invert) !default; //Color of check icon when checked
-$checkbox--focus: var(--form-element-border-focus) !default; //Color of border around checkbox when focused
+$checkbox--focus: var(--color-focus) !default; //Color of border around checkbox when focused
 $checkbox--disabled: var(--card-disabled-bg) !default; //Color of checkbox when checked and disabled
 $checkbox--icon-disabled: var(--color-icon-primary) !default; //Color of check icon when checked and disabled
 $checkbox--border: var(--form-element-border);
@@ -15,7 +15,7 @@ $checkbox--color-warning: var(--color-warning);
 //Custom radio button color theme
 $radio--active: var(--color-accent) !default; //Color of radio button when checked
 $radio--icon: var(--color-white) !default; //Color of radio icon when checked
-$radio--focus: var(--color-accent) !default; //Color of border around radio when focused
+$radio--focus: var(--color-focus) !default; //Color of border around radio when focused
 $radio--disabled: var(--card-disabled-bg) !default; //Color of radio when checked and disabled
 $radio--icon-disabled: var(--color-icon-primary) !default; //Color of radio icon when checked and disabled
 $radio--border: var(--color-border);

@@ -223,7 +223,7 @@ body.has-footer {
 	&.sub-nav--back {
 		align-items: center;
 		display: flex;
-		padding: 0 $grid-gutter/2;
+		padding: 0 calc($grid-gutter / 2);
 
 		a {
 			height: auto; //make back link centered

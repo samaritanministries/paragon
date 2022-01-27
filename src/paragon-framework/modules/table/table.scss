@@ -46,7 +46,7 @@ $flex-table--header-text: var(--color-text-invert);
 	}
 
 	&.is-condensed {
-		.table-row { padding: $grid-gutter/2 $grid-gutter; }
+		.table-row { padding: calc($grid-gutter / 2) $grid-gutter; }
 	}
 	&.font-small { font-size: 0.9rem; }
 
@@ -57,7 +57,7 @@ $flex-table--header-text: var(--color-text-invert);
 		color: $flex-table--header-text;
 		cursor: default;
 		font-weight: $font-weight-semibold;
-		padding: $grid-gutter/2 $grid-gutter;
+		padding: calc($grid-gutter / 2) $grid-gutter;
 	}
 
 	.table-row:last-of-type { border: 0; }
@@ -98,7 +98,7 @@ $flex-table--header-text: var(--color-text-invert);
 				margin-top: -11px; //half of icon height
 				padding: 0;
 				position: absolute;
-				right: $grid-gutter/2;
+				right: calc($grid-gutter / 2);
 				top: 50%;
 			}
 		}
@@ -134,7 +134,7 @@ $flex-table--header-text: var(--color-text-invert);
 				}
 				@media #{$phone} {
 					margin-top: -11px; //half of icon height
-					right: $grid-gutter/2;
+					right: calc($grid-gutter / 2);
 					top: 50%;
 				}
 				@media #{$tablet} {

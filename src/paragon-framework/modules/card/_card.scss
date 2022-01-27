@@ -215,8 +215,6 @@
 	}
 
 	&.has-error {
-		// background-color: lighten($color-red, 45%);
-		// background-color: lighten(token.$color-semantic-red, 45%);
 		background-color: var(--card-error-bg);
 		border-left-color: var(--color-error);
 		.card-info--title { color: var(--color-error); }
@@ -224,8 +222,6 @@
 	}
 
 	&.has-success {
-		// background-color: lighten(var(--color-success), 70%);
-		// background-color: lighten(token.$color-semantic-green, 70%);
 		background-color: var(--card-success-bg);
 		border-left-color: var(--color-success);
 		.card-info--title { color: var(--color-success); }
