@@ -17,8 +17,8 @@ class ToggleDarkMode extends React.Component {
   render() {
 
     return (
-      <button className="button button--orange button--icon theme-switcher" onClick={this.toggleDarkMode}>
-        <i className="dashing-icon dashing-icon--star-filled mr-space-xs" />Mode
+      <button className="button button--secondary button--icon theme-switcher" onClick={this.toggleDarkMode}>
+        <span />Mode
       </button>
 
     // <fieldset className="dark-mode-toggle">

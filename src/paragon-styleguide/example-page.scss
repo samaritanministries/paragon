@@ -22,6 +22,15 @@ $sidebar-width: 13rem;
 	right: 1rem;
 	top: 2rem;
 	z-index: 9999;
+
+	span {
+		border-radius: 50%;
+		box-shadow: -6px 3px 0 0 var(--color-text);
+		display: inline-block;
+		height: 14px;
+		margin-left: 8px;
+		width: 14px;
+	}
 }
 
 .logo-container {
@@ -221,12 +230,6 @@ $sidebar-width: 13rem;
 			top: 0;
 		}
 	}
-}
-
-.dark-mode-toggle {
-	position: absolute;
-	right: 1rem;
-	top: 1rem;
 }
 
 .toast-message--example {
