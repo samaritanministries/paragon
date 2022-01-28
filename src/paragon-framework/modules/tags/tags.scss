@@ -3,7 +3,7 @@
 
 $tags: '.tag';
 $tag-hover-rules: '.is-selectable';
-$tag-default-color: var(--color-container-background);
+$tag-default-color: var(--button-gray-bg);
 
 /* Tag Extendables
   =========================================================================== */
@@ -44,8 +44,8 @@ $tag-default-color: var(--color-container-background);
 
 		&:hover,
 		&:focus {
-			border: 2px solid var(--color-accent);
-			color: var(--color-accent);
+			border: 2px solid var(--color-focus);
+			// color: var(--color-accent);
 			opacity: 1;
 			text-decoration: none;
 			transition: border-color 0.1s ease-in-out;
@@ -76,7 +76,7 @@ $tag-default-color: var(--color-container-background);
 
 	&.tag--secondary,
 	&.tag--grey,
-	&.tag--gray { @include tag($tag-color: $tag-default-color, 	$color: var(--color-black)); }
+	&.tag--gray { @include tag($tag-color: $tag-default-color, 	$color: var(--color-text)); }
 	&.tag--green { @include tag($tag-color: var(--color-success), 				$color: var(--color-text-invert)); }
 	&.tag--orange { @include tag($tag-color: var(--color-warning), 			$color: var(--color-black)); }
 	&.tag--purple { @include tag($tag-color: var(--color-primary), 			$color: var(--color-text-invert)); }
@@ -118,7 +118,7 @@ $tag-default-color: var(--color-container-background);
 	}
 
 	.tag:last-child {
-		background-color: var(--color-white);
+		background-color: var(--color-container-background);
 		border-left: transparent;
 		border-radius: 0 3px 3px 0;
 		color: var(--color-text);

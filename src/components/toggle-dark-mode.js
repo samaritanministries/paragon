@@ -13,7 +13,6 @@ class ToggleDarkMode extends React.Component {
 
   setTheme(themeName) {
     localStorage.setItem('theme', themeName);
-    document.documentElement.className = themeName;
   }
 
   setDark() {
@@ -55,14 +54,16 @@ class ToggleDarkMode extends React.Component {
     const themeName = localStorage.getItem('theme');
     return (
       <>
-        {themeName === "theme-light" ?
-        <button className="button button--red button--icon theme-switcher" onClick={this.toggleDarkMode}>
-          <i className="dashing-icon dashing-icon--checkbox" /> Light
-        </button>
+        {themeName === "theme-dark" ?
+          <button className="button button--secondary button--icon theme-switcher" onClick={this.toggleDarkMode}>
+           <span />Mode
+          </button>
           :
-        <button className="button button--blue button--icon theme-switcher" onClick={this.toggleDarkMode}>
-          <i className="dashing-icon dashing-icon--checkbox" /> Dark
-        </button>
+          <button className="button button--secondary button--icon theme-switcher" onClick={this.toggleDarkMode}>
+            <div>
+             <span className="light-mode" />Mode
+           </div>
+          </button>
         }
       </>
     );
