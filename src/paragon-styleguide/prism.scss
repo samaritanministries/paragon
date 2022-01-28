@@ -6,13 +6,17 @@
  */
 
 :root {
-	--color-example-container-background: rgb(255, 255, 255, 0.2);
+	--color-example-container-background: var(--color-gray-2);
 	--color-example-sidebar-background: var(--color-background);
+	--color-example-border: var(--color-gray-2);
+	--color-example-text: var(--color-gray-1);
 }
 
 body.dark-mode {
 	--color-example-container-background: rgb(34, 34, 40, 0.2);
 	--color-example-sidebar-background: var(--color-container-background);
+	--color-example-border: var(--color-dark-gray-7);
+	--color-example-text: var(--color-dark-gray-7);
 }
 
 $white: #fff;
@@ -38,7 +42,7 @@ $tablet: 'all and (min-width: 40em)' !default;
 
 .example-container {
 	background-color: var(--color-example-container-background);
-	border: 2px solid var(--color-border);
+	border: 2px solid var(--color-example-border);
 	// border-bottom: 0;
 	border-radius: 8px 8px 0 0;
 
@@ -51,7 +55,7 @@ $tablet: 'all and (min-width: 40em)' !default;
 }
 
 .example-text {
-	background-color: var(--color-container-background);
+	background-color: var(--color-example-text);
 	border-radius: 5px;
 	color: var(--color-text);
 	font-size: 0.9rem;

@@ -20,6 +20,17 @@ class ToggleDarkMode extends React.Component {
       <button className="button button--orange button--icon theme-switcher" onClick={this.toggleDarkMode}>
         <i className="dashing-icon dashing-icon--star-filled mr-space-xs" />Mode
       </button>
+
+    // <fieldset className="dark-mode-toggle">
+    //   <label className="inline" htmlFor="switch1">Dark Mode</label>
+    //   <div className="switch">
+    //     <input name="switch" type="checkbox" className="switch--checkbox" id="switch1" onClick={this.toggleDarkMode} />
+    //     <label className="switch--label" htmlFor="switch1">
+    //       <span className="switch--inner" />
+    //       <span className="switch--handle" />
+    //     </label>
+    //   </div>
+    // </fieldset>
     );
   }
 

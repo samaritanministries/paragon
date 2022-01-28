@@ -71,6 +71,8 @@
 
 	/* Shadow */
 	--color-shadow: #{$color-shadow};
+
+	--color-loading: var(--color-gray-3);
 }
 
 // [data-theme='dark'] {
@@ -101,7 +103,7 @@ body.dark-mode {
 	--color-border: var(--color-dark-gray-6);
 
 	/* Hover/Selectable */
-	--color-hover: var(--color-dark-gray-6);
+	--color-hover: var(--color-dark-gray-6-dark); //TODO consider adding shade of purple
 
 	/* Background */
 	--color-background: var(--color-black);
@@ -144,4 +146,6 @@ body.dark-mode {
 
 	/* Shadow */
 	--color-shadow: transparent; //dark mode does not use shadow
+
+	--color-loading: var(--color-dark-gray-7); //is-loading animation
 }

@@ -1,3 +1,11 @@
+:root {
+	--color-example-background: var(--color-white);
+}
+
+body.dark-mode {
+	--color-example-background: var(--color-background);
+}
+
 $example-global-content-width: 800px !default;
 
 $sidebar-width: 13rem;
@@ -192,7 +200,7 @@ $sidebar-width: 13rem;
 }
 
 .app-content {
-	background-color: var(--color-background);
+	background-color: var(--color-example-background);
 	@media all and (min-width: 40em) {
 		margin-left: 13rem;
 	}
@@ -213,6 +221,12 @@ $sidebar-width: 13rem;
 			top: 0;
 		}
 	}
+}
+
+.dark-mode-toggle {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
 }
 
 .toast-message--example {
