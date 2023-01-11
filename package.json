@@ -20,7 +20,7 @@
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sass": "^2.8.0",
     "gatsby-remark-prismjs": "^3.13.0",
-    "gatsby-transformer-remark": "^2.16.1",
+    "gatsby-transformer-remark": "^5.25.1",
     "jquery": "^3.6.0",
     "pre-commit": "^1.2.2",
     "prismjs": "^1.23.0",
